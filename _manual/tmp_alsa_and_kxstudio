@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    alsa_and_kxstudio    [LinuxMusicians Wiki]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2008-05-05" />
+<meta name="robots" content="index,follow" />
+<meta name="date" content="2013-05-12T09:54:13-0400" />
+<meta name="keywords" content="alsa_and_kxstudio" />
+<link rel="search" type="application/opensearchdescription+xml" href="/lib/exe/opensearch.php" title="LinuxMusicians Wiki" />
+<link rel="start" href="/" />
+<link rel="contents" href="/doku.php?id=alsa_and_kxstudio&amp;do=index" title="Index" />
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/feed.php" />
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="/feed.php?mode=list&amp;ns=" />
+<link rel="alternate" type="text/html" title="Plain HTML" href="/doku.php?do=export_xhtml&amp;id=alsa_and_kxstudio" />
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="/doku.php?do=export_raw&amp;id=alsa_and_kxstudio" />
+<link rel="stylesheet" media="all" type="text/css" href="/lib/exe/css.php?s=all&amp;t=default" />
+<link rel="stylesheet" media="screen" type="text/css" href="/lib/exe/css.php?t=default" />
+<link rel="stylesheet" media="print" type="text/css" href="/lib/exe/css.php?s=print&amp;t=default" />
+<script type="text/javascript" charset="utf-8" src="/lib/exe/js.php?edit=0&amp;write=0" ></script>
+
+  <link rel="shortcut icon" href="/lib/tpl/default/images/favicon.ico" />
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="/doku.php?id=alsa_and_kxstudio&amp;do=backlink"  title="Backlinks">alsa_and_kxstudio</a>]]
+      </div>
+      <div class="logo">
+        <a href="/doku.php"  name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]">LinuxMusicians Wiki</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+        <form class="button btn_source" method="post" action="/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="rev" value="" /><input type="hidden" name="id" value="alsa_and_kxstudio" /><input type="submit" value="Show pagesource" class="button" accesskey="v" title="Show pagesource [ALT+V]" /></div></form>        <form class="button btn_revs" method="get" action="/doku.php"><div class="no"><input type="hidden" name="do" value="revisions" /><input type="hidden" name="id" value="alsa_and_kxstudio" /><input type="submit" value="Old revisions" class="button" accesskey="o" title="Old revisions [ALT+O]" /></div></form>      </div>
+
+      <div class="bar-right" id="bar__topright">
+        <form class="button btn_recent" method="get" action="/doku.php"><div class="no"><input type="hidden" name="do" value="recent" /><input type="hidden" name="id" value="" /><input type="submit" value="Recent changes" class="button" accesskey="r" title="Recent changes [ALT+R]" /></div></form>        <form action="/doku.php" accept-charset="utf-8" class="search" id="dw__search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[ALT+F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>&nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+        <div class="breadcrumbs">
+      <span class="bchead">Trace:</span> <span class="bcsep">&raquo;</span> <span class="curid"><a href="/doku.php?id=alsa_and_kxstudio"  class="breadcrumbs" title="alsa_and_kxstudio">alsa_and_kxstudio</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div class="tocheader toctoggle" id="toc__header">Table of Contents</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#alsa_and_kxstudio" class="toc">ALSA and KXStudio</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#kmix" class="toc">kmix</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#cadence_and_alsa" class="toc">Cadence and ALSA</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#non-jack_apps" class="toc">non-JACK apps</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#useful_alsa_commands" class="toc">Useful ALSA commands</a></span></div></li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="alsa_and_kxstudio" id="alsa_and_kxstudio">ALSA and KXStudio</a></h1>
+<div class="level1">
+
+<p>
+
+The Advanced Linux Sound Architecture is the primary sound system used by Linux. Even those who only plan to use JACK with the FFADO (FireWire) drivers should still have familiarity with ALSA.
+</p>
+
+</div>
+
+<h2><a name="kmix" id="kmix">kmix</a></h2>
+<div class="level2">
+
+<p>
+
+The main ALSA mixer included with KXStudio is called kmix. You can use kmix to adjust audio input and output levels, mute and unmute channels and change other non-FireWire audio device settings such as selecting between SPDIF and analog inputs if your device has such features. The kmix system tray icon looks like this:
+</p>
+
+<p>
+<a href="/lib/exe/detail.php?id=alsa_and_kxstudio&amp;cache=cache&amp;media=kmix-tray.png" class="media" title="kmix-tray.png"><img src="/lib/exe/fetch.php?w=&amp;h=&amp;cache=cache&amp;media=kmix-tray.png" class="media" title="The kmix icon" alt="The kmix icon" /></a>
+</p>
+
+<p>
+If you have a scrollwheel function on a mouse or trackpad, you can hover over the kmix tray icon and adjust the Master volume by moving the scrollwheel up and down. If you left-click on the kmix tray icon it will display a mini mixer. To see a full mixer with more controls, click the &#039;Mixer&#039; button within the mini mixer menu.
+</p>
+
+<p>
+<a href="/lib/exe/detail.php?id=alsa_and_kxstudio&amp;cache=cache&amp;media=kmixer.png" class="media" title="kmixer.png"><img src="/lib/exe/fetch.php?w=&amp;h=&amp;cache=cache&amp;media=kmixer.png" class="media" title="kmix mixer" alt="kmix mixer" /></a>
+</p>
+
+<p>
+Here we see the main kmix mixer window. kmix displays the controls for each ALSA device on its own separate tab. In this screenshot the &#039;HDA Intel&#039; onboard audio device is selected. The &#039;UAC3553B&#039; tab displays controls for a USB audio device whilst &#039;Playback Streams&#039; can be ignored unless you are using PulseAudio. 
+</p>
+
+<p>
+You will notice that each fader has a small speaker icon just below it. When these speaker icons display a small red cross on them, as &#039;Mic&#039; and &#039;Mic Boost&#039; do in the screenshot, that indicates the channel is currently muted. You can toggle muting simply by left-clicking on the speaker icons.
+</p>
+
+<p>
+In the bottom right corner of the mixer window there is a tool icon. This icon allows you to configure which channels are available to control for the currently selected kmix device tab. You may find that some controls you need are missing at first, so you may add them via this Configure Channels window.
+</p>
+
+<p>
+Whilst there is a standard defined for USB audio devices, relatively few devices fully comply with it. What this means for ALSA and USB devices is that sometimes you will see no controls under kmix for some USB devices or controls may not function as expected. Such issues may be worked around by inserting an app such as Non mixer or jack_mixer between an audio source and the problematic output device until the issue is fixed within ALSA.
+</p>
+
+</div>
+
+<h2><a name="cadence_and_alsa" id="cadence_and_alsa">Cadence and ALSA</a></h2>
+<div class="level2">
+
+<p>
+
+Cadence is primarily used to control and monitor the various Linux sound systems, including ALSA, under KXStudio. The main Cadence window has a &#039;JACK bridges&#039; section which contains two ALSA/JACK bridges - one for ALSA audio and one for MIDI. You will not hear audio produced by ALSA-only apps when JACK is running if the ALSA audio bridge is stopped. Likewise, you will be unable to access MIDI devices if the ALSA MIDI bridge isn&#039;t running when JACK is.
+</p>
+
+</div>
+
+<h2><a name="non-jack_apps" id="non-jack_apps">non-JACK apps</a></h2>
+<div class="level2">
+
+<p>
+
+As JACK increases in popularity, it is more widely supported. However, several apps are still ALSA-only. Such apps will have their audio channeled via the same ALSA to JACK bridge. These include:
+</p>
+
+<p>
+<strong>Adobe Flash Player</strong> (as used by Firefox and other browsers for sites such as YouTube)
+</p>
+
+<p>
+<strong>Many games and other various programs</strong>
+</p>
+
+<p>
+Some other apps have only partial JACK support. These work with JACK directly, have their own JACK connections, and function without the ALSA to JACK bridge, but their connections are not persistent. They will temporarily connect to JACK while playing but drop their connection as soon as playback is stopped. Examples of these apps are:
+</p>
+
+<p>
+<strong>Audacity</strong>
+</p>
+
+<p>
+<strong>SMPlayer</strong>
+</p>
+
+<p>
+<strong>VLC</strong>
+</p>
+
+<p>
+Hence, none of these offer the individual audio routing functionality or other features offered by fully JACK-native software.
+</p>
+
+</div>
+
+<h2><a name="useful_alsa_commands" id="useful_alsa_commands">Useful ALSA commands</a></h2>
+<div class="level2">
+
+<p>
+
+The following commands can be useful for troubleshooting ALSA issues in a terminal:
+
+</p>
+<pre class="code">alsamixer</pre>
+
+<p>
+
+The original ALSA mixer
+
+</p>
+<pre class="code">cat /proc/asound/cards</pre>
+
+<p>
+
+Displays attached ALSA devices
+
+</p>
+<pre class="code">cat ~/.asoundrc</pre>
+
+<p>
+
+Displays your ALSA configuration file
+
+</p>
+<pre class="code">sudo alsactl store 0</pre>
+
+<p>
+
+Saves the current settings for ALSA device 0
+</p>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+              </div>
+      <div class="doc">
+        alsa_and_kxstudio.txt &middot; Last modified: 2013/05/12 09:54 by danboid      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+        <form class="button btn_source" method="post" action="/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="rev" value="" /><input type="hidden" name="id" value="alsa_and_kxstudio" /><input type="submit" value="Show pagesource" class="button" accesskey="v" title="Show pagesource [ALT+V]" /></div></form>        <form class="button btn_revs" method="get" action="/doku.php"><div class="no"><input type="hidden" name="do" value="revisions" /><input type="hidden" name="id" value="alsa_and_kxstudio" /><input type="submit" value="Old revisions" class="button" accesskey="o" title="Old revisions [ALT+O]" /></div></form>      </div>
+      <div class="bar-right" id="bar__bottomright">
+                                <form class="button btn_login" method="get" action="/doku.php"><div class="no"><input type="hidden" name="do" value="login" /><input type="hidden" name="sectok" value="5fe9f263742930faa220a957b594406d" /><input type="hidden" name="id" value="alsa_and_kxstudio" /><input type="submit" value="Login" class="button" title="Login" /></div></form>        <form class="button btn_index" method="get" action="/doku.php"><div class="no"><input type="hidden" name="do" value="index" /><input type="hidden" name="id" value="alsa_and_kxstudio" /><input type="submit" value="Index" class="button" accesskey="x" title="Index [ALT+X]" /></div></form>        <a class="nolink" href="#dokuwiki__top"><input type="button" class="button" value="Back to top" onclick="window.scrollTo(0, 0)" title="Back to top" /></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="footerinc">
+  <a  href="/feed.php" title="Recent changes RSS feed"><img src="/lib/tpl/default/images/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" /></a>
+
+  <a  href="http://creativecommons.org/licenses/by-nc-sa/2.0/" rel="license" title="Creative Commons License"><img src="/lib/tpl/default/images/button-cc.gif" width="80" height="15" alt="Creative Commons License" /></a>
+
+  <a  href="http://wiki.splitbrain.org/wiki:donate" title="Donate"><img src="/lib/tpl/default/images/button-donate.gif" alt="Donate" width="80" height="15" /></a>
+
+  <a  href="http://www.php.net" title="Powered by PHP"><img src="/lib/tpl/default/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+
+  <a  href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="/lib/tpl/default/images/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" /></a>
+
+  <a  href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="/lib/tpl/default/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+
+  <a  href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="/lib/tpl/default/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+
+
+
+<!--
+
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+
+-->
+
+
+</div>
+
+<div class="no"><img src="/lib/exe/indexer.php?id=alsa_and_kxstudio&amp;1369167596" width="1" height="1" alt=""  /></div>
+</body>
+</html>

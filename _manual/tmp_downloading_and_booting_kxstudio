@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    downloading_and_booting_kxstudio    [LinuxMusicians Wiki]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2008-05-05" />
+<meta name="robots" content="index,follow" />
+<meta name="date" content="2013-05-04T02:06:02-0400" />
+<meta name="keywords" content="downloading_and_booting_kxstudio" />
+<link rel="search" type="application/opensearchdescription+xml" href="/lib/exe/opensearch.php" title="LinuxMusicians Wiki" />
+<link rel="start" href="/" />
+<link rel="contents" href="/doku.php?id=downloading_and_booting_kxstudio&amp;do=index" title="Index" />
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/feed.php" />
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="/feed.php?mode=list&amp;ns=" />
+<link rel="alternate" type="text/html" title="Plain HTML" href="/doku.php?do=export_xhtml&amp;id=downloading_and_booting_kxstudio" />
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="/doku.php?do=export_raw&amp;id=downloading_and_booting_kxstudio" />
+<link rel="stylesheet" media="all" type="text/css" href="/lib/exe/css.php?s=all&amp;t=default" />
+<link rel="stylesheet" media="screen" type="text/css" href="/lib/exe/css.php?t=default" />
+<link rel="stylesheet" media="print" type="text/css" href="/lib/exe/css.php?s=print&amp;t=default" />
+<script type="text/javascript" charset="utf-8" src="/lib/exe/js.php?edit=0&amp;write=0" ></script>
+
+  <link rel="shortcut icon" href="/lib/tpl/default/images/favicon.ico" />
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="/doku.php?id=downloading_and_booting_kxstudio&amp;do=backlink"  title="Backlinks">downloading_and_booting_kxstudio</a>]]
+      </div>
+      <div class="logo">
+        <a href="/doku.php"  name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]">LinuxMusicians Wiki</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+        <form class="button btn_source" method="post" action="/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="rev" value="" /><input type="hidden" name="id" value="downloading_and_booting_kxstudio" /><input type="submit" value="Show pagesource" class="button" accesskey="v" title="Show pagesource [ALT+V]" /></div></form>        <form class="button btn_revs" method="get" action="/doku.php"><div class="no"><input type="hidden" name="do" value="revisions" /><input type="hidden" name="id" value="downloading_and_booting_kxstudio" /><input type="submit" value="Old revisions" class="button" accesskey="o" title="Old revisions [ALT+O]" /></div></form>      </div>
+
+      <div class="bar-right" id="bar__topright">
+        <form class="button btn_recent" method="get" action="/doku.php"><div class="no"><input type="hidden" name="do" value="recent" /><input type="hidden" name="id" value="" /><input type="submit" value="Recent changes" class="button" accesskey="r" title="Recent changes [ALT+R]" /></div></form>        <form action="/doku.php" accept-charset="utf-8" class="search" id="dw__search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[ALT+F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>&nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+        <div class="breadcrumbs">
+      <span class="bchead">Trace:</span> <span class="bcsep">&raquo;</span> <span class="curid"><a href="/doku.php?id=downloading_and_booting_kxstudio"  class="breadcrumbs" title="downloading_and_booting_kxstudio">downloading_and_booting_kxstudio</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div class="tocheader toctoggle" id="toc__header">Table of Contents</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#downloading_booting_and_running_kxstudio_live" class="toc">Downloading, booting and running KXStudio &#039;live&#039;</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#or_64_bit" class="toc">32 or 64 bit?</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#dvd_or_usb_boot" class="toc">DVD or USB boot?</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#booting_kxstudio" class="toc">Booting KXStudio</a></span></div></li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="downloading_booting_and_running_kxstudio_live" id="downloading_booting_and_running_kxstudio_live">Downloading, booting and running KXStudio &#039;live&#039;</a></h1>
+<div class="level1">
+
+<p>
+
+The easiest way to try KXStudio and discover if it supports your hardware is to boot it directly off a DVD or a USB drive. You can easily do this on any computer without any effect on the currently installed system. Doing this is referred to as running a &#039;live&#039; system.
+</p>
+
+</div>
+
+<h2><a name="or_64_bit" id="or_64_bit">32 or 64 bit?</a></h2>
+<div class="level2">
+
+<p>
+
+Download the KXStudio Live-DVD images from:
+</p>
+
+<p>
+<a href="http://kxstudio.sourceforge.net/Downloads#LiveDVD" class="urlextern" title="http://kxstudio.sourceforge.net/Downloads#LiveDVD"  rel="nofollow">http://kxstudio.sourceforge.net/Downloads#LiveDVD</a>
+</p>
+
+<p>
+Note: the image files are .iso format (which is just the initials of the International Standards Organization which defined the format). These contain the complete KXStudio operating system as well as many applications.
+</p>
+
+<p>
+You&#039;ll notice there are both 32 and 64-bit versions. Unless you are installing KXStudio to multiple, different machines you will only need one image file. If your machine allows for it, the 64-bit version is recommended as it usually works faster. Note that you can still run 32-bit software under a 64-bit installation but not the other way around.
+</p>
+
+<p>
+With the exception of maybe a few (mainly Atom CPU-based) netbooks and tablets; most laptops, notebooks and desktops since the middle of the last decade will have a 64-bit capable CPU. One sure sign is if your machine is running a 64-bit version of Windows then you know you can run 64-bit KXStudio. If you&#039;re unsure, the easiest way to find out is just to try booting the 64-bit version. However, 64-bit machines can still use the 32-bit installation, so the 32-bit option is functional for all systems.
+</p>
+
+</div>
+
+<h2><a name="dvd_or_usb_boot" id="dvd_or_usb_boot">DVD or USB boot?</a></h2>
+<div class="level2">
+
+<p>
+
+If your machine has a DVD drive and you have a blank DVD to spare then the easiest way to boot KXStudio is to burn the .iso to a DVD. <a href="https://help.ubuntu.com/community/BurningIsoHowto" class="urlextern" title="https://help.ubuntu.com/community/BurningIsoHowto"  rel="nofollow">Full instructions</a> are available for burning an iso file to a DVD under Windows, Mac, and GNU/Linux. Booting from a USB drive is faster than from DVD. Also, a USB drive can be set to save updates and work and function as a working system; but you won&#039;t experience the full speed and capacity of KXStudio until you install it to a hard drive.
+</p>
+
+<p>
+If using USB, you will need a FAT32 formatted USB drive with at least 2 <acronym title="Gigabyte">GB</acronym> free space. You can then use the freely available <a href="http://unetbootin.sourceforge.net/" class="urlextern" title="http://unetbootin.sourceforge.net/"  rel="nofollow">unetbootin</a> under Windows, OSX or Linux to transfer the iso file and make it boot from your USB drive. Using Unetbootin is as simple as selecting the &#039;Diskimage&#039; option, browsing to and selecting your downloaded KXStudio iso file, selecting the correct USB drive from the &#039;Drive&#039; drop-down menu and then clicking OK. After a few minutes wait you will be told when your USB drive is safe to be removed and ready to be booted.
+</p>
+
+</div>
+
+<h2><a name="booting_kxstudio" id="booting_kxstudio">Booting KXStudio</a></h2>
+<div class="level2">
+
+<p>
+
+Reboot your machine with the KXStudio DVD in the drive or with the unetbootin modified USB drive attached. In rare cases, your computer will automatically boot KXStudio. Typically, however, you will need to find out how to enter the boot menu on your machine or enter the BIOS or UEFI menu to change the boot order so that the DVD and/or USB drive takes higher boot priority than the hard drive. Commonly, pressing F12 right at start up will bring up the boot options; pressing F2 will bring up the full BIOS menu. In other cases, DELETE or ESCAPE are used. If none of these work, refer to the manual for your computer or search online for machine-specific instructions.
+</p>
+
+<p>
+If you boot the DVD, you will first be prompted to choose the language to use. When this occurs, you can either do nothing and wait 30 seconds before the default of English is chosen and booting continues or you can use the arrow keys and ENTER to choose an alternate language. Booting off the USB via unetbootin does not bring up the language selection menu directly; instead you may change language settings under &#039;System Settings&#039;.
+
+</p>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+              </div>
+      <div class="doc">
+        downloading_and_booting_kxstudio.txt &middot; Last modified: 2013/05/04 02:06 by falktx      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+        <form class="button btn_source" method="post" action="/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="rev" value="" /><input type="hidden" name="id" value="downloading_and_booting_kxstudio" /><input type="submit" value="Show pagesource" class="button" accesskey="v" title="Show pagesource [ALT+V]" /></div></form>        <form class="button btn_revs" method="get" action="/doku.php"><div class="no"><input type="hidden" name="do" value="revisions" /><input type="hidden" name="id" value="downloading_and_booting_kxstudio" /><input type="submit" value="Old revisions" class="button" accesskey="o" title="Old revisions [ALT+O]" /></div></form>      </div>
+      <div class="bar-right" id="bar__bottomright">
+                                <form class="button btn_login" method="get" action="/doku.php"><div class="no"><input type="hidden" name="do" value="login" /><input type="hidden" name="sectok" value="30b11eed4bd0b7d8f1bdb6bbce0201fd" /><input type="hidden" name="id" value="downloading_and_booting_kxstudio" /><input type="submit" value="Login" class="button" title="Login" /></div></form>        <form class="button btn_index" method="get" action="/doku.php"><div class="no"><input type="hidden" name="do" value="index" /><input type="hidden" name="id" value="downloading_and_booting_kxstudio" /><input type="submit" value="Index" class="button" accesskey="x" title="Index [ALT+X]" /></div></form>        <a class="nolink" href="#dokuwiki__top"><input type="button" class="button" value="Back to top" onclick="window.scrollTo(0, 0)" title="Back to top" /></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="footerinc">
+  <a  href="/feed.php" title="Recent changes RSS feed"><img src="/lib/tpl/default/images/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" /></a>
+
+  <a  href="http://creativecommons.org/licenses/by-nc-sa/2.0/" rel="license" title="Creative Commons License"><img src="/lib/tpl/default/images/button-cc.gif" width="80" height="15" alt="Creative Commons License" /></a>
+
+  <a  href="http://wiki.splitbrain.org/wiki:donate" title="Donate"><img src="/lib/tpl/default/images/button-donate.gif" alt="Donate" width="80" height="15" /></a>
+
+  <a  href="http://www.php.net" title="Powered by PHP"><img src="/lib/tpl/default/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+
+  <a  href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="/lib/tpl/default/images/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" /></a>
+
+  <a  href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="/lib/tpl/default/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+
+  <a  href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="/lib/tpl/default/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+
+
+
+<!--
+
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+
+-->
+
+
+</div>
+
+<div class="no"><img src="/lib/exe/indexer.php?id=downloading_and_booting_kxstudio&amp;1369167588" width="1" height="1" alt=""  /></div>
+</body>
+</html>
