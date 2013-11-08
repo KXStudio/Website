@@ -1,0 +1,22 @@
+Options -Indexes
+
+Redirect 301 /cadence              http://kxstudio.sourceforge.net/Applications:Cadence
+Redirect 301 /cadence-jackmeter    http://kxstudio.sourceforge.net/Applications:Cadence-JackMeter
+Redirect 301 /cadence-jacksettings http://kxstudio.sourceforge.net/Applications:Cadence-JackSettings
+Redirect 301 /cadence-logs         http://kxstudio.sourceforge.net/Applications:Cadence-Logs
+Redirect 301 /cadence-render       http://kxstudio.sourceforge.net/Applications:Cadence-Render
+Redirect 301 /cadence-xycontroller http://kxstudio.sourceforge.net/Applications:Cadence-XYController
+Redirect 301 /catarina             http://kxstudio.sourceforge.net/Applications:Catarina
+Redirect 301 /catia                http://kxstudio.sourceforge.net/Applications:Catia
+Redirect 301 /claudia              http://kxstudio.sourceforge.net/Applications:Claudia
+Redirect 301 /claudia-launcher     http://kxstudio.sourceforge.net/Applications:Claudia-Launcher
+Redirect 301 /carla                http://kxstudio.sourceforge.net/Applications:Carla
+Redirect 301 /carla-control        http://kxstudio.sourceforge.net/Applications:Carla-Control
+
+Redirect 301 ^/KXStudio:(.*) /$1
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L,QSA]
