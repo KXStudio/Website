@@ -1,4 +1,0 @@
-kxstudio-web
-============
-
-KXStudio Website
