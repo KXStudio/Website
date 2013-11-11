@@ -4,6 +4,9 @@ $PAGE_TYPE     = "DONATIONS";
 $PAGE_SOURCE_1 = ARRAY("/Donations");
 $PAGE_SOURCE_2 = ARRAY("Donations");
 include_once("includes/header.php");
+
+require "donate/config.php";
+require "donate/connect.php";
 ?>
 
 <p>
@@ -19,6 +22,32 @@ include_once("includes/header.php");
     <br/>
 </p>
 
+<?php
+if ($db_link) {
+$cur_amount    = 0.0;
+$sql_donations = mysql_query("SELECT * FROM donations WHERE MONTH(dt) = MONTH(NOW()) AND YEAR(dt) = YEAR(NOW())");
+
+if (mysql_num_rows($sql_donations)) {
+    while ($sql_row = mysql_fetch_assoc($sql_donations)) {
+        $cur_amount += $sql_row["amount"];
+     }
+}
+
+$cur_percent = $cur_amount / 300.0 * 100.0;
+
+if ($cur_percent > 100.0) {
+    $cur_percent = 100.0;
+}
+?>
+
+<div id="donations_container">
+    This month donations: <?php print_r($cur_amount); ?> of 300.0 &euro; target<br/>
+    <div id="donations_bar"><div style="width:<?php print_r($cur_percent); ?>%"></div></div>
+    <p><br/></p>
+</div>
+
+<?php } /* $db_link */ ?>
+
 <table>
 <tr><td width="40px;">
 </td><td valign="bottom" width="150px">
@@ -31,6 +60,10 @@ include_once("includes/header.php");
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <input type="hidden" name="cmd" value="_s-xclick">
         <input type="hidden" name="hosted_button_id" value="A8QZW5UPVZGTW">
+        <input type="hidden" name="currency_code" value="EUR">
+        <input type="hidden" name="notify_url" value="<?php echo $ROOT; ?>/donate/ipn.php"/>
+        <input type="hidden" name="return" value="<?php echo $ROOT; ?>/donate/thankyou.php"/>
+        <input type="hidden" name="rm" value="2"/>
         <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal">
         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
@@ -50,6 +83,9 @@ include_once("includes/header.php");
             </td></tr>
         </table>
         <input type="hidden" name="currency_code" value="EUR">
+        <input type="hidden" name="notify_url" value="<?php echo $ROOT; ?>/donate/ipn.php" />
+        <input type="hidden" name="return" value="<?php echo $ROOT; ?>/donate/thankyou.php" />
+        <input type="hidden" name="rm" value="2"/>
         <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" alt="PayPal">
         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>

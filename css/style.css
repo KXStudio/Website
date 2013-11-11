@@ -432,6 +432,27 @@ fieldset table {
     background:none repeat scroll 0 0 transparent;
 }
 
+#donations_container {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+#donations_bar {
+    background-color: #1B1B1B;
+    border: solid 1px #222222;
+    border-radius: 4px;
+    padding: 0px;
+}
+
+#donations_bar > div {
+    background-color: #2C2C2C;
+    border: solid 1px #4A4A4A;
+    width: 0%; /* Adjust with JavaScript */
+    height: 20px;
+    border-radius: 4px;
+}
+
 .box-description {
     background: #0A0A0A;
     border: solid 1px #171717;

@@ -1,0 +1,10 @@
+<?php
+
+$db_hostname = "";
+$db_user_ro  = "";
+$db_user_rw  = "";
+$db_pass_ro  = "";
+$db_pass_rw  = "";
+$db_database = "";
+
+?>
