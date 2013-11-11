@@ -7,9 +7,15 @@ include_once("includes/header.php");
 ?>
 
 <p>
-    If you're looking for help regarding an Ubuntu feature, please search within the
+    If you're looking for help regarding an <b>Ubuntu</b> feature, please search within the
       <a href="http://ubuntuforums.org/" class="external text" rel="nofollow">Ubuntu Forums</a>.<br/>
-    You can also use IRC, channel #kxstudio, server irc.freenode.net (or irc.freenode.com).
+    For general <b>Linux Audio</b> help, use the
+      <a href="http://linuxmusicians.com/" class="external text" rel="nofollow">LinuxMusicians Forums</a> or
+      <a href="http://lists.linuxaudio.org/listinfo/linux-audio-user/" class="external text" rel="nofollow">LinuxAudio Mailing List</a>.<br/>
+    You can also use <b>IRC</b> on irc.freenode.net (or .com) server, channel
+      <a href="https://webchat.freenode.net/?channels=#kxstudio" class="external text" rel="nofollow">#kxstudio</a>,
+      <a href="https://webchat.freenode.net/?channels=#opensourcemusicians" class="external text" rel="nofollow">#opensourcemusicians</a> or
+      <a href="https://webchat.freenode.net/?channels=#kxstudio,#opensourcemusicians" class="external text" rel="nofollow">both</a>.<br/>
 </p>
 <p>
     Please note that documentation for KXStudio is a work in progress, if you need some information not available here, you can try:
