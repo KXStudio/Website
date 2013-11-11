@@ -39,14 +39,18 @@ if (! empty($_GET["id"]))
 }
 else if (! empty($_POST["paste_text"]))
 {
+    if ($_POST["paste_misc"]) {
+        die("Spam bot detected, get out of here!");
+    }
+
     $paste_code    = $_POST["paste_text"];
     $paste_format  = $_POST["paste_format"];
     $paste_name    = $_POST["paste_title"];
-    $paste_numbers = $_POST["paste_numbers"];
-    $paste_misc    = $_POST["paste_misc"];
 
-    if ($paste_misc) {
-        die("Spam bot detected, get out of here!");
+    if (array_key_exists("paste_numbers", $_POST)) {
+        $paste_numbers = $_POST["paste_numbers"];
+    } else {
+        $paste_numbers = "No";
     }
 
     $paste_id   = substr(str_shuffle(str_repeat('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',5)),0,5);
@@ -83,15 +87,15 @@ else if (! empty($_POST["paste_text"]))
     }
 
     $show_paste   = TRUE;
-    $show_numbers = $paste_numbers == "Yes";
+    $show_numbers = ($paste_numbers == "Yes");
 
-    header ("Location: " . $server_dir . $paste_id);
+    header("Location: " . $server_dir . $paste_id);
 }
 
 $PAGE_TITLE = "KXStudio Paste";
 $PAGE_TYPE  = "PASTE";
 
-if (!empty($paste_name))
+if (! empty($paste_name))
     $PAGE_TITLE = "KXStudio Paste - " . $paste_name;
 
 $PAGE_SOURCE_1 = ARRAY("/paste");
