@@ -124,6 +124,10 @@ else*/
         </ul>
     </div>
 <?php } else { ?>
+    <?php if ($PAGE_TYPE == "PASTE") { ?>
+    <a href="http://qbnz.com/highlighter" class="external text" rel="nofollow" target="_blank" style="position:absolute; top:37px; right:5%;"><img src="<?php echo $ROOT; ?>/images/powered-by-geshi.png" alt="Powered by GeSHi"/></a>
+    <?php } ?>
+
     <div id="subheader" class="container_16">
         <div id="breadcrump" class="grid_12 alpha">
             <a href="<?php echo $ROOT; ?>/" title="Home"><img src="<?php echo $ROOT; ?>/images/home_grey.png" width="16" height="16" alt="Home" /> KXStudio </a>
@@ -169,7 +173,6 @@ else*/
             </div>
             <div id="contentSub"></div>
             <!-- End: Box header -->
-
             <div class="alpha omega paste_canvas_area">
 <?php if ($PAGE_TYPE == "HOME") { ?>
                 <h1><span class="mw-headline"> About KXStudio </span></h1>
