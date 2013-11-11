@@ -21,7 +21,7 @@ if (! empty($_GET["id"]))
     $paste_file = $base_dir . "repo/" . $paste_id;
 
     if (! file_exists($paste_file)) {
-      $is_error = TRUE;
+        $is_error = TRUE;
     }
 
     $paste_info = $base_dir . "repo/" . $paste_id . ".inc";
@@ -32,7 +32,7 @@ if (! empty($_GET["id"]))
     $paste_numbers = "";
 
     if (file_exists($paste_info)) {
-      include_once($paste_info);
+        include_once($paste_info);
     }
 
     $show_numbers = ($paste_numbers == "Yes");
@@ -43,9 +43,9 @@ else if (! empty($_POST["paste_text"]))
         die("Spam bot detected, get out of here!");
     }
 
-    $paste_code    = $_POST["paste_text"];
-    $paste_format  = $_POST["paste_format"];
-    $paste_name    = $_POST["paste_title"];
+    $paste_code   = $_POST["paste_text"];
+    $paste_format = $_POST["paste_format"];
+    $paste_name   = htmlspecialchars($_POST["paste_title"]);
 
     if (array_key_exists("paste_numbers", $_POST)) {
         $paste_numbers = $_POST["paste_numbers"];
