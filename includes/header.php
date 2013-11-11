@@ -1,7 +1,7 @@
 <?php
 $SHOW_NOTE = TRUE;
 
-/*if (file_exists("/home/falktx/FOSS/GIT-mine/kxstudio-web"))
+/*if (file_exists("/var/www/kxstudio/paste/"))
 {
     $ROOT = "/kxstudio";
     $SHOW_NOTE = FALSE;

@@ -1,7 +1,9 @@
 <?php
 
-$base_dir = "/home/groups/k/kx/kxstudio/htdocs/paste/";
-// $base_dir = "/var/www/falktx/kxstudio-new/paste/";
+if (file_exists("/var/www/kxstudio/paste/"))
+    $base_dir = "/var/www/kxstudio/paste/";
+else
+    $base_dir = "/home/groups/k/kx/kxstudio/htdocs/paste/";
 
 function downloadFile($fullPath) {
     // Must be fresh start

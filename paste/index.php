@@ -1,10 +1,17 @@
 <?php
 include_once("geshi.php");
 
-$ROOT = "";
+if (file_exists("/var/www/kxstudio/paste/"))
+{
+    $server_dir   = "/paste/";
+    $base_dir     = "/var/www/kxstudio/paste/";
+}
+else
+{
+    $server_dir   = "/paste/";
+    $base_dir     = "/home/groups/k/kx/kxstudio/htdocs/paste/";
+}
 
-$server_dir   = "/paste/";
-$base_dir     = "/home/groups/k/kx/kxstudio/htdocs/paste/";
 $show_paste   = FALSE;
 $show_numbers = FALSE;
 $is_error     = FALSE;
