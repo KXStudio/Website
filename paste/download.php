@@ -1,18 +1,21 @@
 <?php
 
-if (file_exists("/var/www/kxstudio/paste/"))
+if (file_exists("/var/www/kxstudio/paste/")) {
     $base_dir = "/var/www/kxstudio/paste/";
-else
+} else {
     $base_dir = "/home/groups/k/kx/kxstudio/htdocs/paste/";
+}
 
 function downloadFile($fullPath) {
     // Must be fresh start
-    if(headers_sent())
+    if (headers_sent()) {
         die('Headers Sent');
+    }
 
     // Required for some browsers
-    if(ini_get('zlib.output_compression'))
+    if (ini_get('zlib.output_compression')) {
         ini_set('zlib.output_compression', 'Off');
+    }
 
     $fsize = filesize($fullPath);
 
@@ -29,11 +32,13 @@ function downloadFile($fullPath) {
     readfile($fullPath);
 }
 
-if (!empty($_GET["id"])) {
+if (! empty($_GET["id"])) {
     $paste_id   = htmlspecialchars($_GET["id"]);
     $paste_file = $base_dir . "repo/" . $paste_id;
 
-    if (!file_exists($paste_file)) die("File does not exist");
+    if (! file_exists($paste_file)) {
+        die("File does not exist");
+    }
 
     downloadFile($paste_file);
 }

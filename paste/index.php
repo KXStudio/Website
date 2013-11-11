@@ -1,13 +1,10 @@
 <?php
 include_once("geshi.php");
 
-if (file_exists("/var/www/kxstudio/paste/"))
-{
+if (file_exists("/var/www/kxstudio/paste/")) {
     $server_dir   = "/paste/";
     $base_dir     = "/var/www/kxstudio/paste/";
-}
-else
-{
+} else {
     $server_dir   = "/paste/";
     $base_dir     = "/home/groups/k/kx/kxstudio/htdocs/paste/";
 }
@@ -16,14 +13,14 @@ $show_paste   = FALSE;
 $show_numbers = FALSE;
 $is_error     = FALSE;
 
-if (!empty($_GET["id"]))
+if (! empty($_GET["id"]))
 {
     $paste_id   = htmlspecialchars($_GET["id"]);
     $show_paste = TRUE;
 
     $paste_file = $base_dir . "repo/" . $paste_id;
 
-    if (!file_exists($paste_file)) {
+    if (! file_exists($paste_file)) {
       $is_error = TRUE;
     }
 
@@ -38,9 +35,9 @@ if (!empty($_GET["id"]))
       include_once($paste_info);
     }
 
-    $show_numbers = $paste_numbers == "Yes";
+    $show_numbers = ($paste_numbers == "Yes");
 }
-else if (!empty($_POST["paste_text"]))
+else if (! empty($_POST["paste_text"]))
 {
     $paste_code    = $_POST["paste_text"];
     $paste_format  = $_POST["paste_format"];
@@ -52,8 +49,8 @@ else if (!empty($_POST["paste_text"]))
         die("Spam bot detected, get out of here!");
     }
 
-    $paste_id     = substr(str_shuffle(str_repeat('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',5)),0,5);
-    $paste_file   = $base_dir . "repo/" . $paste_id;
+    $paste_id   = substr(str_shuffle(str_repeat('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',5)),0,5);
+    $paste_file = $base_dir . "repo/" . $paste_id;
 
     while (file_exists($paste_file)) {
         $paste_id   = substr(str_shuffle(str_repeat('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',5)),0,5);
@@ -130,7 +127,7 @@ if ($show_paste)
 <?php
     }
 }
-else
+else // $show_paste
 {
 ?>
         <form enctype="multipart/form-data" method="post" action="" onsubmit="document.getElementById('paste_submit').disabled=true;document.getElementById('paste_submit').value='Please wait...';">
