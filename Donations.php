@@ -61,8 +61,8 @@ if ($cur_percent > 100.0) {
         <input type="hidden" name="cmd" value="_s-xclick">
         <input type="hidden" name="hosted_button_id" value="A8QZW5UPVZGTW">
         <input type="hidden" name="currency_code" value="EUR">
-        <input type="hidden" name="notify_url" value="<?php echo $ROOT; ?>/donate/ipn.php"/>
-        <input type="hidden" name="return" value="<?php echo $ROOT; ?>/donate/thankyou.php"/>
+        <input type="hidden" name="notify_url" value="http://kxstudio.sourceforge.net/donate/ipn.php"/>
+        <input type="hidden" name="return" value="http://kxstudio.sourceforge.net/donate/thankyou.php"/>
         <input type="hidden" name="rm" value="2"/>
         <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal">
         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
@@ -83,8 +83,8 @@ if ($cur_percent > 100.0) {
             </td></tr>
         </table>
         <input type="hidden" name="currency_code" value="EUR">
-        <input type="hidden" name="notify_url" value="<?php echo $ROOT; ?>/donate/ipn.php" />
-        <input type="hidden" name="return" value="<?php echo $ROOT; ?>/donate/thankyou.php" />
+        <input type="hidden" name="notify_url" value="http://kxstudio.sourceforge.net/donate/ipn.php" />
+        <input type="hidden" name="return" value="http://kxstudio.sourceforge.net/donate/thankyou.php" />
         <input type="hidden" name="rm" value="2"/>
         <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" alt="PayPal">
         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
