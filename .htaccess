@@ -13,7 +13,7 @@ Redirect 301 /claudia-launcher     http://kxstudio.sourceforge.net/Applications:
 Redirect 301 /carla                http://kxstudio.sourceforge.net/Applications:Carla
 Redirect 301 /carla-control        http://kxstudio.sourceforge.net/Applications:Carla-Control
 
-Redirect 301 ^/KXStudio:(.*) /$1
+RedirectMatch 301 ^/KXStudio:(.*)$ /$1
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
