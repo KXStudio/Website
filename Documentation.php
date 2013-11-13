@@ -21,8 +21,8 @@ include_once("includes/header.php");
     Please note that documentation for KXStudio is a work in progress, if you need some information not available here, you can try:
 </p>
 <ul>
-    <li><a href="http://www.wiki.linuxmusicians.com/doku.php" class="external text" rel="nofollow">LinuxMusicians Wiki</a></li>
-    <li><a href="https://help.ubuntu.com/community/UbuntuStudio/HowTos" class="external text" rel="nofollow">UbuntuStudio Community Documentation</a></li>
+    <li><a href="http://wiki.linuxaudio.org/wiki/start" class="external text" rel="nofollow" target="_blank">LinuxAudio Wiki</a></li>
+    <li><a href="https://help.ubuntu.com/community/UbuntuStudio/HowTos" class="external text" rel="nofollow" target="_blank">UbuntuStudio Community Documentation</a></li>
 </ul>
 
 <!-- TOPICS -->
@@ -36,6 +36,7 @@ include_once("includes/header.php");
     <b>KXStudio 12.04.3 Release</b>
 </p>
 <ul>
+<!--     <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio12043:About">About</a></li> -->
     <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio12043:ReleaseNotes">Release Notes</a></li>
 </ul>
 
@@ -45,9 +46,9 @@ include_once("includes/header.php");
     <b>KXStudio Distribution &amp; Repositories</b>
 </p>
 <ul>
-    <li><a href="<?php echo $ROOT; ?>/Documentation:Ubuntu:Meta-Packages">Available Meta-Packages</a></li>
-    <li><a href="<?php echo $ROOT; ?>/Documentation:Ubuntu:RegisterCommercial">Register/Activate your purchased software</a></li>
-    <li><a href="<?php echo $ROOT; ?>/Documentation:Ubuntu:Upgrade">Upgrade from an existing Ubuntu installation</a></li>
+    <li><a href="<?php echo $ROOT; ?>/Documentation:Repository:Meta-Packages">Available Meta-Packages</a></li>
+    <li><a href="<?php echo $ROOT; ?>/Documentation:Repository:RegisterCommercial">Register/Activate your purchased software</a></li>
+    <li><a href="<?php echo $ROOT; ?>/Documentation:Repository:Upgrade">Upgrade from an existing Debian/Ubuntu installation</a></li>
 </ul>
 
 <!-- KXSTUDIO MANUAL -->

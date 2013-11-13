@@ -1,8 +1,8 @@
 <?php
-$PAGE_TITLE    = "KXStudio Documentation";
+$PAGE_TITLE    = "KXStudio : Documentation";
 $PAGE_TYPE     = "NONKXSTUDIO";
-$PAGE_SOURCE_1 = ARRAY("/Documentation", "/Documentation", "/Documentation:Ubuntu:Upgrade");
-$PAGE_SOURCE_2 = ARRAY("Documentation", "Ubuntu", "Upgrade");
+$PAGE_SOURCE_1 = ARRAY("/Documentation", "/Documentation", "/Documentation:Repository:Upgrade");
+$PAGE_SOURCE_2 = ARRAY("Documentation", "Repository", "Upgrade");
 include_once("includes/header.php");
 ?>
 
