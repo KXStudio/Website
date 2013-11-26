@@ -159,12 +159,12 @@ class paypal_class {
       $post_string.="cmd=_notify-validate"; // append ipn command
 
       // open the connection to paypal
-      $fp = fsockopen($url_parsed["host"],"80",$err_num,$err_str,30);
+      $fp = fsockopen("https://$url_parsed[host]","80",$err_num,$err_str,30);
       if(!$fp) {
 
          // could not open the connection.  If loggin is on, the error message
          // will be in the log.
-         $this->last_error = "fsockopen error no. $errnum: $errstr";
+         $this->last_error = "fsockopen error no. $errnum: $errstr, host: $url_parsed[host]";
          $this->log_ipn_results(false);
          return false;
 
