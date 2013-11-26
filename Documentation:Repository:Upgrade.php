@@ -7,11 +7,8 @@ include_once("includes/header.php");
 ?>
 
 <p>
-    This section describes how to upgrade from a regular Ubuntu install (or variants), to a cool and fresh KXStudio Desktop.
-</p>
-<p>
-    This method will work in all supported Ubuntu versions since Lucid (10.04, 11.10, 12.04 and 12.10).<br />
-    The recommended version to use right now is 12.04.
+    This section describes how to upgrade from a regular Ubuntu 12.04 install (or variants), to a cool and fresh KXStudio Desktop.<br />
+    <span style="color:#fa3a3a;">This method will work *only* in Ubuntu 12.04 based systems</span>.
 </p>
 <p>
     KXStudio officially supports KDE4 and partially XFCE (on 12.04/12.10, KXStudio will use UbuntuStudio desktop as base as it uses XFCE).<br/>
