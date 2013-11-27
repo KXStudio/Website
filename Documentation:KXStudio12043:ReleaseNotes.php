@@ -8,9 +8,6 @@ include_once("includes/header.php");
 
 <p>
     These are the release notes related to the KXStudio 12.04.3 Release, based on Ubuntu 12.04.3 LTS.<br/>
-    We recommend you to take a look at the Ubuntu's 12.04 release notes too,
-        <a href="https://wiki.ubuntu.com/PrecisePangolin/ReleaseNotes" class="external text" rel="nofollow">here</a>.<br/>
-    (Read the 'Kubuntu' notes if you use KDE, 'Xubuntu' for XFCE and so on).
 </p>
 
 <p><br/></p>

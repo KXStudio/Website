@@ -13,6 +13,41 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; New releases and future plans</span><br/>
+    On <i>2013-11-27</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, there have been a couple of releases and changes on the KXStudio world.<br/>
+</p>
+<p>
+    First of, a new release of the <b>KXStudio Live-DVD</b> is now available.<br/>
+    This is a bug-fix for the 12.04.x series, which current users should already have if their systems are up to date.<br/>
+    Checkout the <a href="http://kxstudio.sourceforge.net/Documentation:KXStudio12043:About">About</a> or <a href="http://kxstudio.sourceforge.net/Documentation:KXStudio12043:ReleaseNotes">Release Notes</a> to find out more about this release.
+</p>
+<p>
+    Several <b>new versions of Carla</b> have been released since its first announcement, the last one currently being 1.2.2.<br/>
+    For a change-log you can check the <a href="https://github.com/falkTX/Carla/commits/stable">git log (stable branch)</a> in github.<br/>
+    This way you can see what actually changed in the code, instead of just seeing a description list.
+</p>
+<p>
+    A new <b>DISTRHO</b> release is planned for release next month, and a few minor plugins.<br/>
+    Hopefully the Plugin Toolkit will be ready by then, which should help the creation of new audio plugins (soon!).
+</p>
+<p>
+    Lastly, after much discussion and consideration, the <b>KXStudio repositories are moving to Debian</b>.<br/>
+    The current 12.04.x release is still fully supported, this is something that will happen slowly through 2014.<br/>
+    Having the KXStudio repos in Debian means any Debian based distribution can make use of KXStudio goods, and not just Ubuntu ones.<br/>
+    Although there are already happy users with Debian + KXStudio, this process is not yet complete.<br/>
+    We'll make a new announcement once the Debian repos are ready for wide use.
+</p>
+<p>
+    Oh, and the KXStudio website is currently being redone a little.<br/>
+    Give it a visit now! <a href="http://kxstudio.sourceforge.net/">http://kxstudio.sourceforge.net/</a>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla Plugin Host 1.0.0 released!</span><br/>
     On <i>2013-07-02</i> by<i> falkTX</i>
 </p>
