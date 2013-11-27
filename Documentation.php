@@ -43,7 +43,7 @@ include_once("includes/header.php");
 <!-- KXSTUDIO DISTRIBUTION -->
 <p>
     <br/>
-    <b>KXStudio Distribution &amp; Repositories</b>
+    <b>KXStudio Distribution &amp; Repositories</b> (outdated)
 </p>
 <ul>
     <li><a href="<?php echo $ROOT; ?>/Documentation:Repository:Meta-Packages">Available Meta-Packages</a></li>
