@@ -13,6 +13,9 @@ include_once("includes/header.php");
 <div class="box box-description">
     <p>
         This section lists the applications made by the KXStudio Team.<br/>
+        All applications are open-source and completely free.
+    </p>
+    <p>
         You might also want to check:
     </p>
     <ul>

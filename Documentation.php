@@ -36,7 +36,7 @@ include_once("includes/header.php");
     <b>KXStudio 12.04.3 Release</b>
 </p>
 <ul>
-<!--     <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio12043:About">About</a></li> -->
+    <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio12043:About">About</a></li>
     <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio12043:ReleaseNotes">Release Notes</a></li>
 </ul>
 

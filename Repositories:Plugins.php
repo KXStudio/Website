@@ -10,6 +10,9 @@ include_once("includes/header.php");
     <p>
         This section lists the audio plugins available in the repositories.<br/>
         Click on the green plugin name to install its respective package.<br/>
+        (If the links don't work, make sure you have the 'apturl-kde' or 'apturl' packages installed)
+    </p>
+    <p>
         You might also want to check:
     </p>
     <ul>

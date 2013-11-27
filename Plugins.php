@@ -8,7 +8,10 @@ include_once("includes/header.php");
 
 <div class="box box-description">
     <p>
-        This section lists the audio plugins made by the KXStudio Team.<br/>
+        This section lists the audio plugins made or forked by the KXStudio Team.<br/>
+        All plugins are open-source and completely free.
+    </p>
+    <p>
         You might also want to check:
     </p>
     <ul>

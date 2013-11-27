@@ -50,7 +50,6 @@ else*/
             color: white;
         }
         .paste_textarea_border {
-            /*width: 100% - 1px;*/
             height: 300px;
             border: 1px solid gray;
         }
@@ -118,9 +117,9 @@ else*/
 <?php if ($PAGE_TYPE == "HOME") { ?>
     <div id="rslides_container">
         <ul class="rslides" id="slider1">
-            <li><!--<a href="">--><img src="<?php echo $ROOT; ?>/images/slider-applications.jpg" alt=""/><!--</a>--></li>
-            <li><!--<a href="">--><img src="<?php echo $ROOT; ?>/images/slider-distribution.jpg" alt=""/><!--</a>--></li>
-            <li><!--<a href="">--><img src="<?php echo $ROOT; ?>/images/slider-plugins.jpg" alt=""/><!--</a>--></li>
+            <li><a href="<?php echo $ROOT; ?>/Repositories:Applications"><img src="<?php echo $ROOT; ?>/images/slider-applications.jpg" alt=""/></a></li>
+            <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio12043:About"><img src="<?php echo $ROOT; ?>/images/slider-distribution.jpg" alt=""/></a></li>
+            <li><a href="<?php echo $ROOT; ?>/Plugins"><img src="<?php echo $ROOT; ?>/images/slider-plugins.jpg" alt=""/></a></li>
         </ul>
     </div>
 <?php } else { ?>

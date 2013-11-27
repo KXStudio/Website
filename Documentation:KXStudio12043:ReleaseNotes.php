@@ -1,7 +1,7 @@
 <?php
 $PAGE_TITLE    = "KXStudio Documentation";
 $PAGE_TYPE     = "NONKXSTUDIO";
-$PAGE_SOURCE_1 = ARRAY("/Documentation", "/Documentation", "/Documentation:KXStudio12041:ReleaseNotes");
+$PAGE_SOURCE_1 = ARRAY("/Documentation", "/Documentation", "/Documentation:KXStudio12043:ReleaseNotes");
 $PAGE_SOURCE_2 = ARRAY("Documentation", "KXStudio 12.04.3", "Release Notes");
 include_once("includes/header.php");
 ?>
