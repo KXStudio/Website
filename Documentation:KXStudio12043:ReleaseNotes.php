@@ -18,8 +18,8 @@ include_once("includes/header.php");
     <li>Sometimes the keyboard layout is not set-up correctly on the live session. This can be manually fixed by running:<br/>
         <code>setxkbmap pt</code> <i>(replace 'pt' by the relevant keyboard layout/language).</i></li>
     <li>The list of packages installed on the Live-DVD is available
-            <a href="<?php echo $ROOT; ?>/Paste/GvxoV" class="external text" rel="nofollow">here</a> for 32bit and
-            <a href="<?php echo $ROOT; ?>/Paste/nUP7n" class="external text" rel="nofollow">here</a> for 64bit.</li>
+            <a href="<?php echo $ROOT; ?>/Paste/UEqO4" class="external text" rel="nofollow">here</a> for 32bit and
+            <a href="<?php echo $ROOT; ?>/Paste/NeFVA" class="external text" rel="nofollow">here</a> for 64bit.</li>
 </ul>
 
 <p><br/></p>
