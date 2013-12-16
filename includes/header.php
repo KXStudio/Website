@@ -51,7 +51,8 @@ else*/
 
             if (objSoftwareMenu.style.visibility != "visible")
             {
-                objSoftwareMenu.style.left       = "" + document.getElementById("item-soft").getBoundingClientRect().left + "px";
+                var leftPos = document.getElementById("item-soft").getBoundingClientRect().left - 1;
+                objSoftwareMenu.style.left       = "" + leftPos + "px";
                 objSoftwareMenu.style.visibility = "visible";
             }
             else
@@ -117,16 +118,15 @@ else*/
 </head>
 
 <?php if ($PAGE_TYPE == "HOME") { ?>
-<body class="mediawiki ltr ns-0 ns-subject skin-bentofluid" style="min-width:1076px" onClick="return bodyClicked();">
+<body class="mediawiki ltr ns-0 ns-subject skin-bentofluid" style="min-width:1080px" onClick="return bodyClicked();">
 <?php } else { ?>
-<body class="mediawiki ltr ns-0 ns-subject skin-bentofluid" onClick="return bodyClicked();">
+<body class="mediawiki ltr ns-0 ns-subject skin-bentofluid" style="min-width:1080px" onClick="return bodyClicked();">
 <?php } ?>
     <!-- Software sub menu -->
     <div id="div_menuSoftware">
-        <!--<ul>
-            <li id="item-apps">--><a href="<?php echo $ROOT; ?>/Applications"><img src="<?php echo $ROOT; ?>/images/ico_cadence.png" class="img_text_align" alt=""/>Applications</a><!--</li>--><br/>
-            <!--<li id="item-plugins">--><a href="<?php echo $ROOT; ?>/Plugins"><img src="<?php echo $ROOT; ?>/images/ico_distrho.png" class="img_text_align" alt=""/>Plugins</a><!--</li>-->
-        <!--</ul>-->
+        <p><a href="<?php echo $ROOT; ?>/Applications"><img src="<?php echo $ROOT; ?>/images/ico_cadence.png" alt=""/> &nbsp; Applications</a></p>
+<!--         <div></div> -->
+        <p><a href="<?php echo $ROOT; ?>/Plugins"><img src="<?php echo $ROOT; ?>/images/ico_distrho.png" alt=""/> &nbsp; Plugins</a></p>
     </div>
 
     <!-- Top link -->
@@ -140,7 +140,8 @@ else*/
             </a>
             <a id="header-home" href="<?php echo $ROOT; ?>/" style="font-size:1.2em">Home</a>
             <ul id="global-navigation">
-                <li id="item-soft"><a href="#" onClick="return itemSoftwareClicked(event);">Software ^</a></li>
+                <li id="item-news"><a href="<?php echo $ROOT; ?>/News">News</a></li>
+                <li id="item-soft"><a href="#" onClick="return itemSoftwareClicked(event);">Software &#9660;</a></li>
                 <li id="item-repos"><a href="<?php echo $ROOT; ?>/Repositories">Repositories</a></li>
                 <li id="item-docs"><a href="<?php echo $ROOT; ?>/Documentation">Documentation</a></li>
                 <li id="item-donate"><a href="<?php echo $ROOT; ?>/Donations">Donations</a></li>

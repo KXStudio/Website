@@ -437,16 +437,31 @@ fieldset table {
     top: 30px;
     left: 0px;
     background-color: #111111;
-    border: 1px solid #222222;
-    padding: 8px;
-    padding-top: 0px;
+    border-top: 1px solid #222222;
+    padding: 0px;
     visibility: hidden;
     text-decoration: none;
+    z-index: 99;
 }
 
-#div_menuSoftware img {
-    padding-right: 4px;
-    padding-top: 8px;
+#div_menuSoftware p {
+    color: #F0F0F0;
+    margin: 0 0 0 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: 1px solid #222222;
+    border-top: 0px;
+}
+
+#div_menuSoftware a {
+     color: #F0F0F0;
+     text-decoration: none;
+}
+
+#div_menuSoftware a:hover, #div_menuSoftware a:focus {
+     color: #6464E6;
 }
 
 #donations_container {
