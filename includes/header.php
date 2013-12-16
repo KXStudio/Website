@@ -27,14 +27,13 @@ else*/
     <link rel="stylesheet" href="<?php echo $ROOT; ?>/css/style.css" type="text/css" media="screen" />
     <link rel="icon" type="image/png" href="<?php echo $ROOT; ?>/images/ico_kxstudio.png" />
     <link rel="shortcut icon" href="<?php echo $ROOT; ?>/favicon.ico" />
-    <script type="text/javascript" src="includes/jquery-1.4.2.min.js"></script>
-    <script type="text/javascript">
-        var wasSoftwareMenuClicked = false;
-
-        $(window).load(function(){
-            var objSoftwareMenu = document.getElementById("div_menuSoftware");
-
 <?php if ($PAGE_TYPE == "HOME") { ?>
+    <script type="text/javascript" src="includes/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="includes/responsiveslides.min.js"></script>
+<?php } ?>
+    <script type="text/javascript">
+<?php if ($PAGE_TYPE == "HOME") { ?>
+        $(window).load(function(){
             $(".rslides").responsiveSlides({
                 auto:  true,
                 nav:   true,
@@ -43,43 +42,47 @@ else*/
                 timeout: 7500,
                 namespace: "large-btns"
             });
-<?php } ?>
-            $("html").click(function(){
-                if (objSoftwareMenu.style.visibility == "visible")
-                    objSoftwareMenu.style.visibility = "hidden";
-                return true;
-            });
-
-            $("#item-soft").click(function(event){
-                event.stopPropagation();
-                if (objSoftwareMenu.style.visibility != "visible")
-                {
-                    objSoftwareMenu.style.left       = "" + document.getElementById("item-soft").getBoundingClientRect().left + "px";
-                    objSoftwareMenu.style.visibility = "visible";
-                    wasSoftwareMenuClicked = true;
-                }
-                else
-                {
-                    objSoftwareMenu.style.visibility = "hidden";
-                }
-                return false;
-            });
         });
+<?php } ?>
+        function itemSoftwareClicked(event){
+            event.stopPropagation();
+
+            var objSoftwareMenu = document.getElementById("div_menuSoftware");
+
+            if (objSoftwareMenu.style.visibility != "visible")
+            {
+                objSoftwareMenu.style.left       = "" + document.getElementById("item-soft").getBoundingClientRect().left + "px";
+                objSoftwareMenu.style.visibility = "visible";
+            }
+            else
+            {
+                objSoftwareMenu.style.visibility = "hidden";
+            }
+
+            return false;
+        };
+
+        function bodyClicked(){
+            var objSoftwareMenu = document.getElementById("div_menuSoftware");
+
+            if (objSoftwareMenu.style.visibility == "visible")
+                objSoftwareMenu.style.visibility = "hidden";
+
+            return true;
+        };
     </script>
 <?php if ($PAGE_TYPE == "DONATIONS") { ?>
     <script type="text/javascript">
         /* <![CDATA[ */
         (function() {
             var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-            s.type = 'text/javascript';
+            s.type  = 'text/javascript';
             s.async = true;
-            s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+            s.src   = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
             t.parentNode.insertBefore(s, t);
         })();
         /* ]]> */
     </script>
-<?php } else if ($PAGE_TYPE == "HOME") { ?>
-    <script type="text/javascript" src="includes/responsiveslides.min.js"></script>
 <?php } else if ($PAGE_TYPE == "PASTE") { ?>
     <link rel="stylesheet" href="<?php echo $ROOT; ?>/paste/kxstudio.css" type="text/css" media="screen" />
     <!-- Special Paste CSS -->
@@ -114,9 +117,9 @@ else*/
 </head>
 
 <?php if ($PAGE_TYPE == "HOME") { ?>
-<body class="mediawiki ltr ns-0 ns-subject skin-bentofluid" style="min-width:1076px">
+<body class="mediawiki ltr ns-0 ns-subject skin-bentofluid" style="min-width:1076px" onClick="return bodyClicked();">
 <?php } else { ?>
-<body class="mediawiki ltr ns-0 ns-subject skin-bentofluid">
+<body class="mediawiki ltr ns-0 ns-subject skin-bentofluid" onClick="return bodyClicked();">
 <?php } ?>
     <!-- Software sub menu -->
     <div id="div_menuSoftware">
@@ -137,7 +140,7 @@ else*/
             </a>
             <a id="header-home" href="<?php echo $ROOT; ?>/" style="font-size:1.2em">Home</a>
             <ul id="global-navigation">
-                <li id="item-soft"><a href="#">Software ^</a></li>
+                <li id="item-soft"><a href="#" onClick="return itemSoftwareClicked(event);">Software ^</a></li>
                 <li id="item-repos"><a href="<?php echo $ROOT; ?>/Repositories">Repositories</a></li>
                 <li id="item-docs"><a href="<?php echo $ROOT; ?>/Documentation">Documentation</a></li>
                 <li id="item-donate"><a href="<?php echo $ROOT; ?>/Donations">Donations</a></li>
