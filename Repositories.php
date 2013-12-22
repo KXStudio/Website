@@ -47,8 +47,8 @@ include_once("includes/header.php");
 <pre class="code">
 <span style="color: rgb(110, 110, 110);"># Install needed tools</span>
 sudo apt-get install software-properties-common wget<br/>
-<span style="color: rgb(110, 110, 110);"># Enable KXStudio repo</span>
-sudo /usr/bin/add-apt-repository -y ppa:kxstudio-debian/kxstudio<br/>
+<span style="color: rgb(110, 110, 110);"># Enable KXStudio repo (press 'Enter' once asked)</span>
+sudo add-apt-repository ppa:kxstudio-debian/kxstudio<br/>
 <span style="color: rgb(110, 110, 110);"># Update software sources</span>
 sudo apt-get update<br/>
 <span style="color: rgb(110, 110, 110);"># Install kxstudio-repos</span>
