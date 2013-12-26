@@ -13,6 +13,28 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; Small Carla notice for JACK1 users (and 1.2.3 release)</span><br/>
+    On <i>2013-12-26</i> by<i> falkTX</i>
+</p>
+<p>
+    While I was doing a Carla video I got into a show-stopper bug in JACK2 (it kept crashing because of complex MIDI mixdown, see
+    <a href="https://github.com/jackaudio/jack2/issues/46" class="external free" rel="nofollow" target="_blank">this</a>).<br/>
+    So in the meantime I have to use JACK1, and while doing so I found a pretty nasty bug...<br/>
+    <b>No system connections</b> were shown in the patchbay canvas!<br/>
+<p>
+    I don't know if others suffered from the bug (I always run JACK2) or though it was how it really worked.<br/>
+    In any case, the Carla patchbay will show all JACK connections now - wherever they are from Carla plugins or system ones.
+</p>
+<p>
+    <b>Updating to version 1.2.3 is recommended</b>, specially if you use JACK1.<br/>
+    For a list of changes you can check the Carla stable git log
+     <a href="https://github.com/falkTX/Carla/commits/stable" class="external free" rel="nofollow" target="_blank">here</a>,
+    which allows to directly see what changed in the code.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.0 development progress report</span><br/>
     On <i>2013-12-17</i> by<i> falkTX</i>
 </p>

@@ -69,7 +69,7 @@ include_once("includes/header.php");
 <!-- Release Notes -->
 <h3><span class="mw-headline" id="ReleaseNotes"> Release Notes </span></h3>
 <p>
-    The following are the release notes for version 1.0.2:
+    The following are the release notes for 1.2.x:
 </p>
 <ul>
     <li>Canvas does not save or restore connections.<br/>
@@ -81,7 +81,7 @@ include_once("includes/header.php");
     <li>Rack mode is still a bit experimental, specially on non-JACK drivers.</li>
 
     <li>LV2 plugin support is incomplete (although already in a good state).<br/>
-        Plugins that use CV ports or Worker extension will not work right now.</li>
+        Plugins that use CV ports, multiple MIDI ports or Worker extension will not work right now.</li>
 
     <li>Carla will not work with non-native LV2 Plugin UIs that require the instance-data extension.<br/>
         This is by design and not a bug.</li>
@@ -104,15 +104,15 @@ include_once("includes/header.php");
          Debian/Ubuntu</a> (via KXStudio repositories)<br/>
 </p>
 <p>
-    Pre-compiled binaries are available for Linux and Windows.<br/>
+    Pre-compiled binaries are available for Linux and Windows (version 1.2.3).<br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.1.0-linux32.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.3-linux32.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 32bit</a><br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.1.0-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.3-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 64bit</a><br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.1.0-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.3-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 32bit</a><br/>
 </p>
 <p>

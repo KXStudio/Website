@@ -163,10 +163,10 @@ $dlSize = $SIZE_IDS[$dlId];
             <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence</a> (32bit, version 0.8.1)<br/>
         <a href="http://sourceforge.net/projects/kxstudio/files/Releases/cadence/Cadence-0.8.1-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
             <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence</a> (64bit, version 0.8.1)<br/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.1.0-linux32.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
-            <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla</a> (32bit, version 1.1.0)<br/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.1.0-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
-            <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla</a> (64bit, version 1.1.0)<br/>
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.3-linux32.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+            <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla</a> (32bit, version 1.2.3)<br/>
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.3-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+            <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla</a> (64bit, version 1.2.3)<br/>
         <a href="http://sourceforge.net/projects/kxstudio/files/Releases/festige/festige-1.0.2-x86.tar.gz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
             <img src="images/ico_festige.png" alt="" class="img_text_align"/> FeSTige</a> (32bit, version 1.0.2)<br/>
     </p>
@@ -174,8 +174,8 @@ $dlSize = $SIZE_IDS[$dlId];
         Windows Downloads:<br/>
         <a href="http://sourceforge.net/projects/kxstudio/files/Releases/cadence/Cadence-0.8.1-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
             <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence</a> (32bit, version 0.8.1)<br/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.1.0-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
-            <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla</a> (32bit, version 1.1.0)<br/>
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.3-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+            <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla</a> (32bit, version 1.2.3)<br/>
     </p>
 </ul>
 
