@@ -13,6 +13,65 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.0 development progress report</span><br/>
+    On <i>2013-12-17</i> by<i> falkTX</i>
+</p>
+<p>
+    This is a progress report for the new Carla, version 2.0.<br/>
+    It will take a while to get a release ready, but there are already a few things done and stuff to show.
+</p>
+<h3>Backend</h3>
+<p>
+    First, <b>the backend is being rewritten to not use any system toolkit</b>.<br/>
+    In 1.x series I've used Qt4 to handle graphics, but that might be a problem soon with Qt5 (cannot mix Qt4 and Qt5 stuff together).<br/>
+    Plus I want the Carla backend to be toolkit agnostic, so that in the future it may be re-usable for others no matter what their main toolkit is.<br/>
+    The main backend header files are now ANSI C compatible, thus increasing the chances of re-usability (as some Linux developers have a weird aversion to C++...).
+</p>
+<p>
+    Because Qt is no longer used in the backend code, I needed something else to handle graphics and other advanced stuff - Juce was selected for this.<br/>
+    Juce is a C++ framework focused on audio applications and plugins, which suits Carla nicely.<br/>
+    There's a lot of useful things inside it that will make developing new features much easier (like the internal patchbay mode).<br/>
+    Other things like AU and VST3 plugin hosting will be possible too thanks to Juce, although they are not relevant to Linux.
+</p>
+<p>
+    Loading <b>Carla as a plugin</b> is also being worked on.<br/>
+    There target two main targets with this:
+</p>
+<ul>
+    <li>Load entire Carla projects - rack or patchbay - as a single plugin in the graph (avoiding clutter);</li>
+    <li>Carla itself as an LV2 plugin;</li>
+</ul>
+<p>
+    If you been following the LinuxMusicians forums you know that internal Carla plugins are already available as LV2 plugins (yes, that includes zynaddsubfx-lv2!).<br/>
+    Once the Carla internal plugin work is complete, you automatically get an LV2 version of it as well! :D
+</p>
+<h3>Front-end</h3>
+<p>
+    There has been a few changes on the UI side as well.<br/>
+    For example, the <b>plugin edit dialog</b> now looks like this:
+</p>
+<p>
+    <img src="/screenshots/news/carla-2.0-report_edit-dialog.png" alt=""/>
+</p>
+<p>
+    As seen the image, the user will be able to use "Stereo Balance" or "Mono Panning".<br/>
+    The new layout also allows for a much <b>smaller window size</b>.<br/>
+</p>
+<p>
+    Lastly, there's plans to bring <b>custom skins to plugin "slots"</b>, in a similar way to Reason.<br/>
+    This is something I still have to investigate to find the best possible way to do it.<br/>
+    It should be expandable so that random plugins can also use skins, probably via a new LV2 extension.<br/>
+    More on this later.
+</p>
+<br/>
+<p>
+    That's all for now.<br/>
+    Soon there will be a new DISTRHO release, so stay tuned!
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; New releases and future plans</span><br/>
     On <i>2013-11-27</i> by<i> falkTX</i>
 </p>

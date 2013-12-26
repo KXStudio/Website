@@ -30,8 +30,10 @@ else*/
 <?php if ($PAGE_TYPE == "HOME") { ?>
     <script type="text/javascript" src="includes/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="includes/responsiveslides.min.js"></script>
+<?php } ?>
     <script type="text/javascript">
-        $(window).load(function() {
+<?php if ($PAGE_TYPE == "HOME") { ?>
+        $(window).load(function(){
             $(".rslides").responsiveSlides({
                 auto:  true,
                 nav:   true,
@@ -41,6 +43,46 @@ else*/
                 namespace: "large-btns"
             });
         });
+<?php } ?>
+        function itemSoftwareClicked(event){
+            event.stopPropagation();
+
+            var objSoftwareMenu = document.getElementById("div_menuSoftware");
+
+            if (objSoftwareMenu.style.visibility != "visible")
+            {
+                var leftPos = document.getElementById("item-soft").getBoundingClientRect().left - 1;
+                objSoftwareMenu.style.left       = "" + leftPos + "px";
+                objSoftwareMenu.style.visibility = "visible";
+            }
+            else
+            {
+                objSoftwareMenu.style.visibility = "hidden";
+            }
+
+            return false;
+        };
+
+        function bodyClicked(){
+            var objSoftwareMenu = document.getElementById("div_menuSoftware");
+
+            if (objSoftwareMenu.style.visibility == "visible")
+                objSoftwareMenu.style.visibility = "hidden";
+
+            return true;
+        };
+    </script>
+<?php if ($PAGE_TYPE == "DONATIONS") { ?>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        (function() {
+            var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+            s.type  = 'text/javascript';
+            s.async = true;
+            s.src   = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+            t.parentNode.insertBefore(s, t);
+        })();
+        /* ]]> */
     </script>
 <?php } else if ($PAGE_TYPE == "PASTE") { ?>
     <link rel="stylesheet" href="<?php echo $ROOT; ?>/paste/kxstudio.css" type="text/css" media="screen" />
@@ -72,26 +114,22 @@ else*/
             resize: none;
         }
     </style>
-<?php } else if ($PAGE_TYPE == "DONATIONS") { ?>
-    <script type="text/javascript">
-        /* <![CDATA[ */
-        (function() {
-            var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-            s.type = 'text/javascript';
-            s.async = true;
-            s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-            t.parentNode.insertBefore(s, t);
-        })();
-        /* ]]> */
-    </script>
 <?php } ?>
 </head>
 
 <?php if ($PAGE_TYPE == "HOME") { ?>
-<body class="mediawiki ltr ns-0 ns-subject skin-bentofluid" style="min-width:1076px">
+<body class="mediawiki ltr ns-0 ns-subject skin-bentofluid" style="min-width:1080px" onClick="return bodyClicked();">
 <?php } else { ?>
-<body class="mediawiki ltr ns-0 ns-subject skin-bentofluid">
+<body class="mediawiki ltr ns-0 ns-subject skin-bentofluid" style="min-width:1080px" onClick="return bodyClicked();">
 <?php } ?>
+    <!-- Software sub menu -->
+    <div id="div_menuSoftware">
+        <p><a href="<?php echo $ROOT; ?>/Applications"><img src="<?php echo $ROOT; ?>/images/ico_cadence.png" alt=""/> &nbsp; Applications</a></p>
+<!--         <div></div> -->
+        <p><a href="<?php echo $ROOT; ?>/Plugins"><img src="<?php echo $ROOT; ?>/images/ico_distrho.png" alt=""/> &nbsp; Plugins</a></p>
+    </div>
+
+    <!-- Top link -->
     <a name="Top" id="Top"></a>
 
     <!-- Start: Header -->
@@ -102,10 +140,10 @@ else*/
             </a>
             <a id="header-home" href="<?php echo $ROOT; ?>/" style="font-size:1.2em">Home</a>
             <ul id="global-navigation">
-                <li id="item-apps"><a href="<?php echo $ROOT; ?>/Applications">Applications</a></li>
-                <li id="item-plugins"><a href="<?php echo $ROOT; ?>/Plugins">Plugins</a></li>
+                <li id="item-news"><a href="<?php echo $ROOT; ?>/News">News</a></li>
+                <li id="item-soft"><a href="#" onClick="return itemSoftwareClicked(event);">Software &#9660;</a></li>
                 <li id="item-repos"><a href="<?php echo $ROOT; ?>/Repositories">Repositories</a></li>
-                <li id="item-documentation"><a href="<?php echo $ROOT; ?>/Documentation">Documentation</a></li>
+                <li id="item-docs"><a href="<?php echo $ROOT; ?>/Documentation">Documentation</a></li>
                 <li id="item-donate"><a href="<?php echo $ROOT; ?>/Donations">Donations</a></li>
                 <li id="item-downloads"><a href="<?php echo $ROOT; ?>/Downloads">Downloads</a></li>
                 <li id="item-paste"><a href="<?php echo $ROOT; ?>/Paste">Paste</a></li>
