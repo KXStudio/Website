@@ -33,6 +33,7 @@ include_once("../../includes/header.php");
         <li><a href="http://drumkv1.sourceforge.net/" target="_blank">drumkv1</a></li>
         <li><a href="http://www.linuxdsp.co.uk/" target="_blank">linuxDSP</a></li>
         <li><a href="https://github.com/x42/meters.lv2" target="_blank">meters.lv2</a></li>
+        <li><a href="https://www.pianoteq.com/pianoteq4" target="_blank">Pianoteq</a></li>
         <li><a href="http://samplv1.sourceforge.net/" target="_blank">samplv1</a></li>
         <li><a href="http://synthv1.sourceforge.net/" target="_blank">synthv1</a></li>
     </ul>
@@ -43,6 +44,7 @@ include_once("../../includes/header.php");
     <ul>
         <li><a href="http://ardour.org" target="_blank">Ardour</a></li>
         <li><a href="<?php echo $ROOT; ?>/Applications:Carla" target="_blank">Carla</a></i></li>
+        <li><a href="http://drobilla.net/software/jalv/" target="_blank">Jalv</a> (using <a href="jalv_extui_svn5273b.diff" target="_blank">this patch</a>)</li>
         <li><a href="http://qtractor.sourceforge.net" target="_blank">Qtractor</a></li>
     </ul>
 </p>
