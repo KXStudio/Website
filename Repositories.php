@@ -28,9 +28,9 @@ include_once("includes/header.php");
 <h3><span class="mw-headline" id="Debian"><img src="images/ico_debian.png" class="img_text_align" alt=""/> Debian</h3>
 <p>
     Debian users can enable our repositories by installing this deb file:
-        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_7.1.0%7Ekxstudio2_all.deb" class="external free" rel="nofollow" target="_blank">kxstudio-repos.deb</a>.<br/>
+        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_7.2.0%7Ekxstudio1_all.deb" class="external free" rel="nofollow" target="_blank">kxstudio-repos.deb</a>.<br/>
     If you're running Debian Wheezy, consider installing the backports repo package as well:
-        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-backports_7.1.0%7Ekxstudio2_all.deb" class="external free" rel="nofollow" target="_blank">kxstudio-repos-backports.deb</a>.
+        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-backports_7.2.0%7Ekxstudio1_all.deb" class="external free" rel="nofollow" target="_blank">kxstudio-repos-backports.deb</a>.
         (*<i>only</i>* for wheezy)<br/>
 </p>
 <p style="color:#fa3a3a;">
