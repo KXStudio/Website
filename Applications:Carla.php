@@ -104,15 +104,15 @@ include_once("includes/header.php");
          Debian/Ubuntu</a> (via KXStudio repositories)<br/>
 </p>
 <p>
-    Pre-compiled binaries are available for Linux and Windows (version 1.2.3).<br/>
+    Pre-compiled binaries are available for Linux and Windows (version 1.2.4).<br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.3-linux32.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.4-linux32.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 32bit</a><br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.3-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.4-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 64bit</a><br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.3-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.4-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 32bit</a><br/>
 </p>
 <p>

@@ -13,6 +13,32 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; The first Carla 2.0 beta</span><br/>
+    On <i>2014-02-27</i> by<i> falkTX</i>
+</p>
+<p>
+    new stuff:
+    - lv2 worker and cv ports implemented
+    - qt5 ready
+    - save&restore connections
+    - UI refresh
+    - plugin skins
+    - plugin bridges now working
+    - VST3 and AU support (soon)
+<p>
+    TODO here: https://raw.github.com/falkTX/Carla/master/doc/Carla-TODO
+</p>
+<p>
+    things not ready, no bugs wanted for them yet:
+    - plugin bridges
+    - plugin discovery
+    - plugin skins
+    - non-jack drivers
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Small Carla notice for JACK1 users (and 1.2.3 release)</span><br/>
     On <i>2013-12-26</i> by<i> falkTX</i>
 </p>
