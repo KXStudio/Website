@@ -17,14 +17,28 @@ include_once("includes/header.php");
     On <i>2014-02-27</i> by<i> falkTX</i>
 </p>
 <p>
-    new stuff:
-    - lv2 worker and cv ports implemented
-    - qt5 ready
-    - save&restore connections
-    - UI refresh
-    - plugin skins
-    - plugin bridges now working
-    - VST3 and AU support (soon)
+    The next Carla 2.0 will implement the missing features in the 1.x series,
+    making it a really fully-featured plugin host and somewhat session manager (for plugins).
+    
+    There has been a lot of changes behind the scenes, specially optimization.
+    
+    The backend now uses Juce to do some "audio things".
+    drivers and plugin support, more useful for Windows and Mac OS.
+    
+    The frontend is now compatible with Qt5.
+    Lots of small changes here and there.
+    ...
+    This forced the code to use a more python way to do things,
+    hmmm
+    
+    Highlights of the (future) 2.0 release:
+      - LV2 CV ports and Worker extension are now implemented
+      - Qt5 ready
+      - VST3 and AU support (soon)
+      - save&restore connections
+      - plugin skins
+      - plugin bridges now working
+
 <p>
     TODO here: https://raw.github.com/falkTX/Carla/master/doc/Carla-TODO
 </p>
