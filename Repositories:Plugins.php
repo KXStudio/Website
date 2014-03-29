@@ -21,19 +21,26 @@ include_once("includes/header.php");
     <br/>
 </div>
 
-<!-- TODO: -->
-<!-- avw.lv2 -->
-<!-- drmr -->
-<!-- drumgizmo -->
-<!-- eq10q -->
-<!-- hexter -->
-<!-- holap -->
-<!-- phasex -->
-<!-- pizmidi-plugins -->
-<!-- triceratops-lv2 -->
-<!-- whysynth -->
-<!-- wsynth-dssi -->
-<!-- zynaddsubfx -->
+<!--
+  TODO:
+    avw.lv2
+    drmr
+    drumgizmo
+    eq10q
+    hexter
+    holap
+    phasex
+    triceratops-lv2
+    pizmidi-plugins
+    whysynth
+    wsynth-dssi
+    zynaddsubfx
+    teragon-audio
+    oxbd
+    artyfx
+    fabla
+    sorcer
+ -->
 
 <!-- see later the non-free stuff, pianoteq, loomer, linuxdsp, etc -->
 

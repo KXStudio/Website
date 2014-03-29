@@ -6,6 +6,19 @@ $PAGE_SOURCE_2 = ARRAY("Repositories", "Applications");
 include_once("includes/header.php");
 ?>
 
+<!--
+  TODO:
+  - bitwig-studio
+  - tracktion
+  - spiralsynthmodular
+  - ams
+  - paulstretch
+  - arpage + zonage
+  - lmms
+  - jalv?
+  - protrekkr jack mention
+-->
+
 <div class="box box-description">
     <p>
         This section lists the applications available in the repositories.<br/>
@@ -20,6 +33,22 @@ include_once("includes/header.php");
     </ul>
     <br/>
 </div>
+
+<table>
+    <tr><td align="center">
+        <p><a href="<?php echo $ROOT; ?>/screenshots/ariamaestosa.jpg">
+           <img src="screenshots/thumb/ariamaestosa.jpg" alt="ariamaestosa" class="img_thumb_150"/>
+        </a></p>
+    </td><td>
+        <p>
+            <b><a href="apt://ariamaestosa" style="color: rgb(230,230,100);">Aria Maestosa</a></b> (MIDI Sequencer)<br/>
+            Aria Maestosa is an open-source midi sequencer/editor.<br/>
+            It lets you compose, edit and play midi files with a few clicks in a user-friendly interface offering score, keyboard, guitar, drum and controller views.<br/>
+            Homepage: <a href="http://ariamaestosa.sourceforge.net//" class="external text" rel="nofollow" target="_blank">http://ariamaestosa.sourceforge.net/</a><br/>
+            User Manual: <a href="http://ariamaestosa.sourceforge.net/man.html" class="external text" rel="nofollow" target="_blank">http://ariamaestosa.sourceforge.net/man.html</a><br/>
+        </p>
+    </td></tr>
+</table>
 
 <table>
     <tr><td align="center">
