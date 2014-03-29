@@ -23,6 +23,22 @@ include_once("includes/header.php");
 
 <table>
     <tr><td align="center">
+        <p><a href="<?php echo $ROOT; ?>/screenshots/ardour3.png">
+           <img src="screenshots/thumb/ardour3.png" alt="ardour3" class="img_thumb_150"/>
+        </a></p>
+    </td><td>
+        <p>
+            <b><a href="apt://ardour3" style="color: rgb(230,230,100);">Ardour3</a></b> (DAW)<br/>
+            Ardour is a multichannel hard disk recorder (HDR) and digital audio workstation (DAW).<br/>
+            It can be used to control, record, edit and run complex audio setups.<br/>
+            Homepage: <a href="http://ardour.org/" class="external text" rel="nofollow" target="_blank">http://ardour.org/</a><br/>
+            User Manual: <a href="http://manual.ardour.org/" class="external text" rel="nofollow" target="_blank">http://manual.ardour.org/</a><br/>
+        </p>
+    </td></tr>
+</table>
+
+<table>
+    <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/cadence1.png">
            <img src="screenshots/thumb/cadence.png" alt="cadence" class="img_thumb_150"/>
         </a></p>
@@ -32,6 +48,22 @@ include_once("includes/header.php");
             Collection of tools useful for audio production.<br/>
             This is the main app. It performs system checks, manages JACK, calls other tools and make system tweaks.<br/>
             Homepage and Documentation: <a href="http://kxstudio.sf.net/cadence" class="external text" rel="nofollow" target="_blank">http://kxstudio.sf.net/cadence</a><br/>
+        </p>
+    </td></tr>
+</table>
+
+<table>
+    <tr><td align="center">
+        <p><a href="<?php echo $ROOT; ?>/screenshots/carla.png">
+           <img src="screenshots/thumb/carla.png" alt="carla" class="img_thumb_150"/>
+        </a></p>
+    </td><td>
+        <p>
+            <b><a href="apt://carla" style="color: rgb(230,230,100);">Carla</a></b> (Plugin Host)<br/>
+            Carla is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
+            It has some nice features like automation of parameters via MIDI CC and full OSC control.<br/>
+            Currently supports LADSPA, DSSI, LV2, and VST plugin formats, and GIG, SF2 and SFZ sounds banks.<br/>
+            Homepage and Documentation: <a href="http://kxstudio.sf.net/carla" class="external text" rel="nofollow" target="_blank">http://kxstudio.sf.net/carla</a><br/>
         </p>
     </td></tr>
 </table>
@@ -84,6 +116,21 @@ include_once("includes/header.php");
 
 <table>
     <tr><td align="center">
+        <p><a href="<?php echo $ROOT; ?>/screenshots/luppp.png">
+           <img src="screenshots/thumb/luppp.png" alt="luppp" class="img_thumb_150"/>
+        </a></p>
+    </td><td>
+        <p>
+            <b><a href="apt://luppp" style="color: rgb(230,230,100);">Luppp</a></b> (Live Looper)<br/>
+            Luppp is a music creation tool, intended for live use.<br/>
+            It focuses on real time processing and a fast intuitive workflow.<br/>
+            Homepage and Documentation: <a href="http://openavproductions.com/luppp/" class="external text" rel="nofollow" target="_blank">http://openavproductions.com/luppp/</a><br/>
+        </p>
+    </td></tr>
+</table>
+
+<table>
+    <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/non-mixer.png">
            <img src="screenshots/thumb/non-mixer.png" alt="non-mixer" class="img_thumb_150"/>
         </a></p>
@@ -127,7 +174,26 @@ include_once("includes/header.php");
             It utilizes JACK for inter-application audio I/O and the NTK GUI toolkit for a fast and lightweight user interface.<br/>
             Non-Timeline can be used alone or in concert with Non-Mixer and Non-Sequencer to form a complete studio.<br/>
             Homepage: <a href="http://non.tuxfamily.org/wiki/Non%20Timeline" class="external text" rel="nofollow" target="_blank">http://non.tuxfamily.org/wiki/Non Timeline</a><br/>
-            User Manual: <a href="http://non-daw.tuxfamily.org/MANUAL.html" class="external text" rel="nofollow" target="_blank">http://non-daw.tuxfamily.org/MANUAL.html</a><br/>
+            User Manual: <a href="http://non.tuxfamily.org/timeline/doc/MANUAL.html" class="external text" rel="nofollow" target="_blank">http://non.tuxfamily.org/timeline/doc/MANUAL.html</a><br/>
+        </p>
+    </td></tr>
+</table>
+
+<table>
+    <tr><td align="center">
+        <p><a href="<?php echo $ROOT; ?>/screenshots/protrekkr.png">
+           <img src="screenshots/thumb/protrekkr.png" alt="protrekkr" class="img_thumb_150"/>
+        </a></p>
+    </td><td>
+        <p>
+            <b><a href="apt://protrekkr" style="color: rgb(230,230,100);">ProTrekkr</a></b> (Tracker) [*]<br/>
+            Tracker program combining a software synthesizer together with a traditional samples tracker<br/>
+            which can be used to create electronic music (like psytrance, trance goa, hard acid, IDM, chip, techno, etc)<br/>
+            for small sized intros, demos or games.<br/>
+            Homepage: <a href="http://code.google.com/p/protrekkr/" class="external text" rel="nofollow" target="_blank">http://code.google.com/p/protrekkr/</a><br/>
+            Wiki: <a href="http://code.google.com/p/protrekkr/wiki/introduction?tm=6" class="external text" rel="nofollow" target="_blank">http://code.google.com/p/protrekkr/wiki/introduction?tm=6</a><br/>
+            [*] This is a custom version with JACK audio support, see
+              <a href="https://github.com/falkTX/protrekkr" class="external text" rel="nofollow" target="_blank">this link</a>.
         </p>
     </td></tr>
 </table>
@@ -148,6 +214,38 @@ include_once("includes/header.php");
 
 <table>
     <tr><td align="center">
+        <p><a href="<?php echo $ROOT; ?>/screenshots/qtractor.png">
+           <img src="screenshots/thumb/qtractor.png" alt="qtractor" class="img_thumb_150"/>
+        </a></p>
+    </td><td>
+        <p>
+            <b><a href="apt://qtractor" style="color: rgb(230,230,100);">Qtractor</a></b> (DAW)<br/>
+            Qtractor is an Audio/MIDI multi-track sequencer application.<br/>
+            It evolves as a fairly-featured Linux desktop audio workstation GUI, specially dedicated to the personal home-studio.<br/>
+            Homepage: <a href="http://qtractor.sourceforge.net/" class="external text" rel="nofollow" target="_blank">http://qtractor.sourceforge.net/</a><br/>
+            User Manual (PDF): <a href="http://downloads.sourceforge.net/qtractor/qtractor-0.5.x-user-manual.pdf" class="external text" rel="nofollow" target="_blank">http://downloads.sourceforge.net/qtractor/qtractor-0.5.x-user-manual.pdf</a><br/>
+        </p>
+    </td></tr>
+</table>
+
+<table>
+    <tr><td align="center">
+        <p><a href="<?php echo $ROOT; ?>/screenshots/reaper.png">
+           <img src="screenshots/thumb/reaper.png" alt="reaper" class="img_thumb_150"/>
+        </a></p>
+    </td><td>
+        <p>
+            <b><a href="apt://reaper" style="color: rgb(230,230,100);">REAPER</a></b> (DAW, non-free)<br/>
+            REAPER is digital audio workstation software.<br/>
+            A complete multitrack audio and MIDI recording, editing, processing, mixing, and mastering environment.<br/>
+            Homepage: <a href="http://reaper.fm/" class="external text" rel="nofollow" target="_blank">http://reaper.fm/</a><br/>
+            User Guide and Books: <a href="http://reaper.fm/userguide.php" class="external text" rel="nofollow" target="_blank">http://reaper.fm/userguide.php</a><br/>
+        </p>
+    </td></tr>
+</table>
+
+<table>
+    <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/renoise.png">
            <img src="screenshots/thumb/renoise.png" alt="renoise" class="img_thumb_150"/>
         </a></p>
@@ -159,23 +257,6 @@ include_once("includes/header.php");
             It features a wide range of built-in audio processors, alongside support for all commonly used virtual instrument and effect plug-in formats.<br/>
             Homepage: <a href="http://www.renoise.com" class="external text" rel="nofollow" target="_blank">http://www.renoise.com</a><br/>
             User Manual: <a href="http://tutorials.renoise.com/wiki" class="external text" rel="nofollow" target="_blank">http://tutorials.renoise.com/wiki</a><br/>
-        </p>
-    </td></tr>
-</table>
-
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/screenshots/protrekkr.png">
-           <img src="screenshots/thumb/protrekkr.png" alt="protrekkr" class="img_thumb_150"/>
-        </a></p>
-    </td><td>
-        <p>
-            <b><a href="apt://protrekkr" style="color: rgb(230,230,100);">ProTrekkr</a></b> (Tracker)<br/>
-            Tracker program combining a software synthesizer together with a traditional samples tracker<br/>
-            which can be used to create electronic music (like psytrance, trance goa, hard acid, IDM, chip, techno, etc)<br/>
-            for small sized intros, demos or games.<br/>
-            Homepage: <a href="http://code.google.com/p/protrekkr/" class="external text" rel="nofollow" target="_blank">http://code.google.com/p/protrekkr/</a><br/>
-            Wiki: <a href="http://code.google.com/p/protrekkr/wiki/introduction?tm=6" class="external text" rel="nofollow" target="_blank">http://code.google.com/p/protrekkr/wiki/introduction?tm=6</a><br/>
         </p>
     </td></tr>
 </table>
