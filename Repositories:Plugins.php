@@ -40,6 +40,8 @@ include_once("includes/header.php");
     artyfx
     fabla
     sorcer
+    spiralsynthmodular
+    ams
  -->
 
 <!-- see later the non-free stuff, pianoteq, loomer, linuxdsp, etc -->

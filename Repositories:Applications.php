@@ -8,15 +8,11 @@ include_once("includes/header.php");
 
 <!--
   TODO:
-  - bitwig-studio
   - tracktion
-  - spiralsynthmodular
-  - ams
   - paulstretch
   - arpage + zonage
   - lmms
   - jalv?
-  - protrekkr jack mention
 -->
 
 <div class="box box-description">
@@ -62,6 +58,21 @@ include_once("includes/header.php");
             It can be used to control, record, edit and run complex audio setups.<br/>
             Homepage: <a href="http://ardour.org/" class="external text" rel="nofollow" target="_blank">http://ardour.org/</a><br/>
             User Manual: <a href="http://manual.ardour.org/" class="external text" rel="nofollow" target="_blank">http://manual.ardour.org/</a><br/>
+        </p>
+    </td></tr>
+</table>
+
+<table>
+    <tr><td align="center">
+        <p><a href="<?php echo $ROOT; ?>/screenshots/bitwig-studio.png">
+           <img src="screenshots/thumb/bitwig-studio.png" alt="bitwig-studio" class="img_thumb_150"/>
+        </a></p>
+    </td><td>
+        <p>
+            <b><a href="apt://bitwig-studio" style="color: rgb(230,230,100);">Bitwig Studio</a></b> (DAW)<br/>
+            Bitwig Studio is a multi-platform music-creation system for production, remixing and performance<br/>
+            with a focus on flexible editing tools and a super-fast workflow.<br/>
+            Homepage: <a href="http://www.bitwig.com/" class="external text" rel="nofollow" target="_blank">http://www.bitwig.com/</a><br/>
         </p>
     </td></tr>
 </table>
