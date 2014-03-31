@@ -33,9 +33,6 @@ include_once("includes/header.php");
         <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-backports_7.2.0%7Ekxstudio1_all.deb" class="external free" rel="nofollow" target="_blank">kxstudio-repos-backports.deb</a>.
         (*<i>only</i>* for wheezy)<br/>
 </p>
-<p style="color:#fa3a3a;">
-    NOTE: The Debian repositories are still a work-in-progress. Some KXStudio meta-packages are not installable right now.
-</p>
 
 <hr/>
 
