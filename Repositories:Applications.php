@@ -30,6 +30,7 @@ include_once("includes/header.php");
     <br/>
 </div>
 
+<!-- Aria Maestosa -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/ariamaestosa.jpg">
@@ -46,6 +47,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- Ardour3 -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/ardour3.png">
@@ -62,6 +64,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- Bitwig Studio -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/bitwig-studio.png">
@@ -77,6 +80,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- Cadence -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/cadence1.png">
@@ -92,6 +96,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- Carla -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/carla.png">
@@ -108,6 +113,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- Catia -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/catia.png">
@@ -123,6 +129,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- Claudia -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/claudia.png">
@@ -139,6 +146,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- LinuxSampler -->
 <table>
     <tr><td align="center">
         <p>
@@ -154,6 +162,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- Luppp -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/luppp.png">
@@ -169,6 +178,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- Non-Mixer -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/non-mixer.png">
@@ -186,6 +196,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- Non-Session-Manager -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/non-session-manager.png">
@@ -202,6 +213,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- Non-Timeline -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/non-timeline.png">
@@ -219,6 +231,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- ProTrekkr -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/protrekkr.png">
@@ -238,6 +251,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- QSampler -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/qsampler.png">
@@ -252,6 +266,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- Qtractor -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/qtractor.png">
@@ -268,6 +283,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- REAPER -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/reaper.png">
@@ -284,6 +300,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- Renoise -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/renoise.png">
@@ -301,6 +318,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- SunVox -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/sunvox.png">

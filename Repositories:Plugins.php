@@ -46,6 +46,7 @@ include_once("includes/header.php");
 
 <!-- see later the non-free stuff, pianoteq, loomer, linuxdsp, etc -->
 
+<!-- Add64 -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/add64.png">
@@ -61,6 +62,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- amsynth -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/amsynth.png">
@@ -75,6 +77,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- Calf -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/calf.jpg">
@@ -91,6 +94,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- CAPS -->
 <table>
     <tr><td align="center">
         <p>
@@ -106,6 +110,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- drumkv1 -->
 <table>
     <tr><td align="center">
         <p><a href="<?php echo $ROOT; ?>/screenshots/drumkv1.png">
@@ -120,6 +125,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- Fomp -->
 <table>
     <tr><td align="center">
         <p>
@@ -135,6 +141,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- LinuxSampler (DSSI) -->
 <table>
     <tr><td align="center">
         <p>
@@ -150,6 +157,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- LinuxSampler (LV2) -->
 <table>
     <tr><td align="center">
         <p>
@@ -165,6 +173,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- LinuxSampler (LV2, 32chan) -->
 <table>
     <tr><td align="center">
         <p>
@@ -180,6 +189,7 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
+<!-- LinuxSampler (VST) -->
 <table>
     <tr><td align="center">
         <p>
