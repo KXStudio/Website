@@ -22,15 +22,34 @@ include_once("includes/header.php");
 </div>
 
 <!--
-  TODO:
+  TODO: (no ui)
+    foo-plugins
+    leet-plugins
+    vcf-plugins
+    vocoder-ladspa
+    wasp-ladspa
+  TODO: (with ui)
     hexter
-    oxbd
+    ls16 ?
     phasex
     spiralsynthmodular
-    teragon-audio
     whysynth
     wsynth-dssi
     zynaddsubfx
+  TODO: (distrho)
+    oxbd
+    teragon-audio
+    arctican
+    cabbage
+    distrho
+    drowaudio
+    eqinox
+    drumsynth
+    klangfalter
+    pitcheddelay
+    tal
+    vex
+    wolpertinger
  -->
 
 <!-- XXXpp -->

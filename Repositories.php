@@ -54,18 +54,6 @@ sudo apt-get install kxstudio-repos<br/>
 sudo apt-get update
 </pre>
 
-<br/>
-
-<p>
-  If you're running <b>Linux Mint Maya</b> (based on Ubuntu 12.04), we need to correct for a bug in Mint's code. Run this <b>after</b> enabling the repos:
-</p>
-<pre class="code">
-<span style="color: rgb(110, 110, 110);"># Fix add-apt-repository olivia vs precise mixup</span>
-sudo sed -i "s/olivia/precise/" /etc/apt/sources.list.d/kxstudio*.list<br/>
-<span style="color: rgb(110, 110, 110);"># Update software sources yet again</span>
-sudo apt-get update
-</pre>
-
 <hr/>
 
 <h3><span class="mw-headline" id="Ubuntu"><img src="images/ico_linux.png" class="img_text_align" alt=""/> Others</span></h3>
