@@ -27,6 +27,7 @@ else
     <link rel="copyright" href="http://creativecommons.org/licenses/publicdomain/" />
     <link rel="stylesheet" href="<?php echo $ROOT; ?>/css/style.fluid.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php echo $ROOT; ?>/css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:200,700,800,400" type="text/css" media="screen" />
     <link rel="icon" type="image/png" href="<?php echo $ROOT; ?>/images/ico_kxstudio.png" />
     <link rel="shortcut icon" href="<?php echo $ROOT; ?>/favicon.ico" />
 <?php if ($PAGE_TYPE == "HOME") { ?>
