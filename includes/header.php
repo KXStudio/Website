@@ -1,12 +1,14 @@
 <?php
 $SHOW_NOTE = TRUE;
 
+/*
 if (file_exists("/var/www/kxstudio/paste/"))
 {
     $ROOT = "/kxstudio";
     $SHOW_NOTE = FALSE;
 }
 else
+*/
 {
     $ROOT = "";
     $SHOW_NOTE = FALSE;
@@ -44,33 +46,54 @@ else
             });
         });
 <?php } ?>
-        function itemSoftwareClicked(event){
+        function closeAllMenus(){
+            var objSoftwareMenu     = document.getElementById("div_menuSoftware");
+            var objRepositoriesMenu = document.getElementById("div_menuRepositories");
+            var objSupportMenu      = document.getElementById("div_menuSupport");
+            var objCommunityMenu    = document.getElementById("div_menuCommunity");
+
+            if (objSoftwareMenu.style.visibility == "visible")
+                objSoftwareMenu.style.visibility = "hidden";
+
+            if (objRepositoriesMenu.style.visibility == "visible")
+                objRepositoriesMenu.style.visibility = "hidden";
+
+            if (objSupportMenu.style.visibility == "visible")
+                objSupportMenu.style.visibility = "hidden";
+
+            if (objCommunityMenu.style.visibility == "visible")
+                objCommunityMenu.style.visibility = "hidden";
+        };
+
+        function menuItemClicked(event, menu, itemName){
             event.stopPropagation();
 
-            var objSoftwareMenu = document.getElementById("div_menuSoftware");
+            closeAllMenus();
 
-            if (objSoftwareMenu.style.visibility != "visible")
+            //if (menu.style.visibility != "visible")
             {
-                var leftPos = document.getElementById("item-soft").getBoundingClientRect().left - 1;
-                objSoftwareMenu.style.left       = "" + leftPos + "px";
-                objSoftwareMenu.style.visibility = "visible";
+                var leftPos = document.getElementById(itemName).getBoundingClientRect().left - 1;
+                menu.style.left       = "" + leftPos + "px";
+                menu.style.visibility = "visible";
             }
-            else
-            {
-                objSoftwareMenu.style.visibility = "hidden";
-            }
+            //else
+            //{
+            //    menu.style.visibility = "hidden";
+            //}
 
             return false;
         };
 
         function bodyClicked(){
-            var objSoftwareMenu = document.getElementById("div_menuSoftware");
-
-            if (objSoftwareMenu.style.visibility == "visible")
-                objSoftwareMenu.style.visibility = "hidden";
-
+            closeAllMenus();
             return true;
         };
+
+        function itemSoftwareClicked(event)    { return menuItemClicked(event, document.getElementById("div_menuSoftware"),     "item-soft");      };
+        function itemRepositoriesClicked(event){ return menuItemClicked(event, document.getElementById("div_menuRepositories"), "item-repos");     };
+        function itemSupportClicked(event)     { return menuItemClicked(event, document.getElementById("div_menuSupport"),      "item-support");   };
+        function itemCommunityClicked(event)   { return menuItemClicked(event, document.getElementById("div_menuCommunity"),    "item-community"); };
+
     </script>
 <?php if ($PAGE_TYPE == "DONATIONS") { ?>
     <script type="text/javascript">
@@ -123,10 +146,25 @@ else
 <body class="mediawiki ltr ns-0 ns-subject skin-bentofluid" style="min-width:1080px" onClick="return bodyClicked();">
 <?php } ?>
     <!-- Software sub menu -->
-    <div id="div_menuSoftware">
+    <div id="div_menuSoftware" class="div_menuDropdown">
         <p><a href="<?php echo $ROOT; ?>/Applications"><img src="<?php echo $ROOT; ?>/images/ico_cadence.png" alt=""/> &nbsp; Applications</a></p>
-<!--         <div></div> -->
         <p><a href="<?php echo $ROOT; ?>/Plugins"><img src="<?php echo $ROOT; ?>/images/ico_distrho.png" alt=""/> &nbsp; Plugins</a></p>
+    </div>
+    <!-- Repositories sub menu -->
+    <div id="div_menuRepositories" class="div_menuDropdown">
+        <p><a href="<?php echo $ROOT; ?>/Repositories">About</a></p>
+        <p><a href="<?php echo $ROOT; ?>/Repositories:Applications">Applications (in Repo)</a></p>
+        <p><a href="<?php echo $ROOT; ?>/Repositories:Plugins">Plugins (in Repo)</a></p>
+    </div>
+    <!-- Support sub menu -->
+    <div id="div_menuSupport" class="div_menuDropdown">
+        <p><a href="<?php echo $ROOT; ?>/Documentation">Documentation</a></p>
+    </div>
+    <!-- Community sub menu -->
+    <div id="div_menuCommunity" class="div_menuDropdown">
+        <p><a href="http://webchat.freenode.net/?channels=#kxstudio,#opensourcemusicians"><img src="<?php echo $ROOT; ?>/images/ico_chat.png" class="external" rel="nofollow" target="_blank" alt=""/> &nbsp; Chat</a></p>
+        <p><a href="http://linuxmusicians.com/viewforum.php?f=47"><img src="<?php echo $ROOT; ?>/images/ico_forum.png" class="external" rel="nofollow" target="_blank" alt=""/> &nbsp; Forum</a></p>
+        <p><a href="https://soundcloud.com/groups/kxstudio"><img src="<?php echo $ROOT; ?>/images/ico_soundcloud.png" class="external" rel="nofollow" target="_blank" alt=""/> &nbsp; Songs</a></p>
     </div>
 
     <!-- Top link -->
@@ -142,8 +180,9 @@ else
             <ul id="global-navigation">
                 <li id="item-news"><a href="<?php echo $ROOT; ?>/News">News</a></li>
                 <li id="item-soft"><a href="#" onClick="return itemSoftwareClicked(event);">Software &#9660;</a></li>
-                <li id="item-repos"><a href="<?php echo $ROOT; ?>/Repositories">Repositories</a></li>
-                <li id="item-docs"><a href="<?php echo $ROOT; ?>/Documentation">Documentation</a></li>
+                <li id="item-repos"><a href="#" onClick="return itemRepositoriesClicked(event);">Repositories &#9660;</a></li>
+                <li id="item-support"><a href="#" onClick="return itemSupportClicked(event);">Support &#9660;</a></li>
+                <li id="item-community"><a href="#" onClick="return itemCommunityClicked(event);">Community &#9660;</a></li>
                 <li id="item-donate"><a href="<?php echo $ROOT; ?>/Donations">Donations</a></li>
                 <li id="item-downloads"><a href="<?php echo $ROOT; ?>/Downloads">Downloads</a></li>
                 <li id="item-paste"><a href="<?php echo $ROOT; ?>/Paste">Paste</a></li>

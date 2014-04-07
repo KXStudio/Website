@@ -432,7 +432,7 @@ fieldset table {
     background:none repeat scroll 0 0 transparent;
 }
 
-#div_menuSoftware {
+.div_menuDropdown {
     position: absolute;
     top: 30px;
     left: 0px;
@@ -444,7 +444,7 @@ fieldset table {
     z-index: 99;
 }
 
-#div_menuSoftware p {
+.div_menuDropdown p {
     color: #F0F0F0;
     margin: 0 0 0 0;
     padding-top: 4px;
@@ -455,12 +455,12 @@ fieldset table {
     border-top: 0px;
 }
 
-#div_menuSoftware a {
+.div_menuDropdown a {
      color: #F0F0F0;
      text-decoration: none;
 }
 
-#div_menuSoftware a:hover, #div_menuSoftware a:focus {
+.div_menuDropdown a:hover, .div_menuDropdown a:focus {
      color: #6464E6;
 }
 
