@@ -25,9 +25,11 @@ include_once("includes/header.php");
 <h2>Highlights</h2>
 <p>Highlights of the (future) 2.0 release:</p>
 <ul>
-  <li>Carla internal plugins exported as LV2</li>
+  <li>New look</li>
 
-  <li>Carla itself as a plugin (rack-mode); this also means carla-rack as LV2</li>
+  <li>Carla itself as a plugin (rack-mode)</li>
+
+  <li>Carla internal plugins exported as LV2</li>
 
   <!-- ams-lv2, setbfree -->
   <li>LV2 CV ports and Worker extension are now implemented</li>

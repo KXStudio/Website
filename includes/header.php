@@ -1,7 +1,7 @@
 <?php
 $SHOW_NOTE = TRUE;
 
-if (file_exists("/var/www/kxstudio/paste/"))
+if (file_exists("/home/falk2/"))
 {
     $ROOT = "/kxstudio";
     $SHOW_NOTE = FALSE;
