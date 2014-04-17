@@ -1,14 +1,12 @@
 <?php
 $SHOW_NOTE = TRUE;
 
-/*
 if (file_exists("/var/www/kxstudio/paste/"))
 {
     $ROOT = "/kxstudio";
     $SHOW_NOTE = FALSE;
 }
 else
-*/
 {
     $ROOT = "";
     $SHOW_NOTE = FALSE;

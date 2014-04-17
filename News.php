@@ -13,51 +13,89 @@ include_once("includes/header.php");
 </div>
 
 <p>
-    <span style="font-size: 20px">&gt; KXStudio repositories now ready for Debian! (and all Debian/Ubuntu variants)</span><br/>
-    On <i>2014-04-03</i> by<i> falkTX</i>
-</p>
-<p>
-    The KXStudio repositories
-</p>
-
-<hr/>
-
-<p>
     <span style="font-size: 20px">&gt; The first Carla 2.0 beta</span><br/>
-    On <i>2014-02-27</i> by<i> falkTX</i>
+    On <i>2014-04-17</i> by<i> falkTX</i>
 </p>
 <p>
-    The next Carla 2.0 will implement the missing features in the 1.x series,
-    making it a really fully-featured plugin host and somewhat session manager (for plugins).
+    exciting, blah blah.
+    Carla 2.0 is a full rework of the first Carla release.<br/>
+    It will implement the missing features in the 1.x series,
+    making it a really fully-featured plugin host. <!-- and somewhat session manager for plugins--><br/>
+</p>
+<h2>Highlights</h2>
+<p>Highlights of the (future) 2.0 release:</p>
+<ul>
+  <li>Carla internal plugins exported as LV2</li>
 
-    There has been a lot of changes behind the scenes, specially optimization.
+  <li>Carla itself as a plugin (rack-mode); this also means carla-rack as LV2</li>
 
-    The backend now uses Juce to do some "audio things".
-    drivers and plugin support, more useful for Windows and Mac OS.
+  <!-- ams-lv2, setbfree -->
+  <li>LV2 CV ports and Worker extension are now implemented</li>
 
-    The frontend is now compatible with Qt5.
-    Lots of small changes here and there.
-    ...
-    This forced the code to use a more python way to do things,
-    hmmm
+  <!-- some AU stuff -->
+  <li>VST3 and AU plugin support</li>
 
-    Highlights of the (future) 2.0 release:
-      - LV2 CV ports and Worker extension are now implemented
-      - Qt5 ready
-      - VST3 and AU support (soon)
-      - save&restore connections
-      - plugin skins
-      - plugin bridges now working
-
+  <li>save&restore connections</li>
+  <li>plugin skins</li>
+  <li>plugin bridges, including 32bit on 64bit systems and Windows plugins on Linux</li>
+</ul>
+<h2>backend</h2>
+<p>
+    There has been a lot of changes behind the scenes, specially optimization.<br/>
+    The backend now uses Juce to do some "audio things" - drivers and plugin support, more useful for Windows and Mac OS.<br/>
+</p>
+<h2>frontend</h2>
+<p>
+    The frontend is now compatible with Qt5.<br/>
+    Lots of small changes here and there.<br/>
+</p>
 <p>
     TODO here: https://raw.github.com/falkTX/Carla/master/doc/Carla-TODO
 </p>
 <p>
     things not ready, no bugs wanted for them yet:
-    - plugin bridges
-    - plugin discovery
-    - plugin skins
-    - non-jack drivers
+</p>
+<ul>
+  <li>plugin bridges</li>
+  <li>plugin discovery</li>
+  <li>plugin skins</li>
+  <li>non-jack drivers</li>
+</ul>
+<p>
+</p>
+
+<hr/>
+
+<p>
+    <span style="font-size: 20px">&gt; KXStudio repositories now ready for Debian!</span><br/>
+    On <i>2014-04-10</i> by<i> falkTX</i>
+</p>
+<p>
+    <img src="http://kxstudio.sourceforge.net/images/repos.png" alt="" style="float:left;"/>
+    The KXStudio repositories are now ready for Debian and its derivatives (including the upcoming Ubuntu 14.04).<br/>
+    They should work for all Debian versions since Wheezy and Ubuntu 12.04 or above.<br/>
+    See the <a href="http://kxstudio.sourceforge.net/Repositories">Repositories section</a> for more information and how to enable them.<br/>
+</p>
+<p>
+    There's a list of available applications in the repository <a href="http://kxstudio.sourceforge.net/Repositories:Applications">here</a>
+        and plugins <a href="http://kxstudio.sourceforge.net/Repositories:Plugins">here</a>.<br/>
+    These 2 lists will quickly grow as more stuff is added in the repositories.<br/>
+</p>
+<p><br/></p>
+<p>
+    You can request new software to be packaged in this
+        <a href="https://linuxmusicians.com/viewtopic.php?f=47&t=10643" class="external free" rel="nofollow" target="_blank">LinuxMusicians forum topic</a>
+        (although things seems a bit slow now, we'll eventually get to everyone's requests).<br/>
+    Please report any issues regarding packages <a href="https://github.com/KXStudio/KXStudio/issues" class="external free" rel="nofollow" target="_blank">here</a>.<br/>
+</p>
+<p>
+    If you use the repositories, please donate to help keep packager(s) motivated. See <a href="http://kxstudio.sourceforge.net/Donations">http://kxstudio.sourceforge.net/Donations</a>.<br/>
+    All this month donations will go to ensure falkTX has a good trip to the Linux Audio Conference next month!<br/>
+    <br/>
+</p>
+<p>
+    PS: AVLinux users wanting to use the KXStudio repositories should be patient.<br/>
+    Something cool might come up when falkTX and GMaq meet in next month's LAC. ;)<br/>
 </p>
 
 <hr/>
