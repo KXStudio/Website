@@ -24,40 +24,33 @@ include_once("includes/header.php");
 </p>
 <h2>Highlights</h2>
 <p>
-  <img src="/screenshots/news/carla-2.0-beta_canvas-integration_crop.png" alt="new-look"/><br/>
-  canvas integration
+  <a href="/screenshots/news/carla-2.0-beta_canvas-integration.png"><img src="/screenshots/news/carla-2.0-beta_canvas-integration_crop.png" alt="new-look"/></a><br/>
+  ===> canvas integration.<br/>
 </p>
 <p>
-  <img src="/screenshots/news/carla-2.0-beta_newlook_crop.png" alt="new-look"/><br/>
-  New look
+  <a href="/screenshots/news/carla-2.0-beta_newlook.png"><img src="/screenshots/news/carla-2.0-beta_newlook_crop.png" alt="new-look"/></a><br/>
+  ===> New look.<br/>
 </p>
 <p>
-  <img src="/screenshots/news/carla-2.0-beta_carla-as-plugin_crop.png" alt="new-look"/><br/>
-  carla as plugin
+  <a href="/screenshots/news/carla-2.0-beta_carla-as-plugin.png"><img src="/screenshots/news/carla-2.0-beta_carla-as-plugin_crop.png" alt="new-look"/></a><br/>
+  ===> carla as plugin.<br/>
+  Carla itself as a plugin (rack-mode)<br/><br/>
 </p>
 <p>
-  <img src="/screenshots/news/carla-2.0-beta_carla-rack-lv2_crop.png" alt="new-look"/><br/>
-  carla-rack lv2
+  <a href="/screenshots/news/carla-2.0-beta_carla-rack-lv2.png"><img src="/screenshots/news/carla-2.0-beta_carla-rack-lv2_crop.png" alt="new-look"/></a><br/>
+  ===> carla-rack lv2.<br/>
+  Carla internal plugins exported as LV2<br/><br/>
 </p>
 <p>
-  <img src="/screenshots/news/carla-2.0-beta_win32-bridge_crop.png" alt="new-look"/><br/>
-  win32 bridge
+  <a href="/screenshots/news/carla-2.0-beta_win32-bridge.png"><img src="/screenshots/news/carla-2.0-beta_win32-bridge_crop.png" alt="new-look"/></a><br/>
+  ===> win32 bridge.<br/>
+  plugin bridges, including 32bit on 64bit systems and Windows plugins on Linux<br/><br/>
 </p>
-
-<!--   <li>Carla itself as a plugin (rack-mode)</li> -->
-
-<!--   <li>Carla internal plugins exported as LV2</li> -->
-
-  <!-- ams-lv2, setbfree -->
-<!--   <li>LV2 CV ports and Worker extension are now implemented</li> -->
-
-  <!-- some AU stuff -->
-<!--   <li>VST3 and AU plugin support</li> -->
-
-<!--   <li>save&restore connections</li> -->
-<!--   <li>plugin skins</li> -->
-<!--   <li>plugin bridges, including 32bit on 64bit systems and Windows plugins on Linux</li> -->
-<!-- </ul> -->
+<ul>
+  <li>LV2 CV ports and Worker extension are now implemented (ams-lv2, setbfree)</li>
+  <li>VST3 and AU plugin support</li>
+  <li>save&restore connections</li>
+</ul>
 <h2>backend</h2>
 <p>
     There has been a lot of changes behind the scenes, specially optimization.<br/>
@@ -71,15 +64,6 @@ include_once("includes/header.php");
 <p>
     TODO here: https://raw.github.com/falkTX/Carla/master/doc/Carla-TODO
 </p>
-<p>
-    things not ready, no bugs wanted for them yet:
-</p>
-<ul>
-  <li>plugin bridges</li>
-  <li>plugin discovery</li>
-  <li>plugin skins</li>
-  <li>non-jack drivers</li>
-</ul>
 <p>
 </p>
 
@@ -404,14 +388,13 @@ include_once("includes/header.php");
     The entire collection is already available in the KXStudio repos but yet part of the meta-packages (will be added shortly after the official release).<br/>
     Generic linux binaries will be made available for non-KXStudio users as before.
 </p>
--->
-
 <hr/>
 
 <p>
     Note: Since the KXStudio website has been internally reworked (removed mediawiki, much simpler PHP code now), the old news have been removed.<br/>
     <br/>
 </p>
+-->
 
 <?php
 include_once("includes/footer.php");
