@@ -23,24 +23,41 @@ include_once("includes/header.php");
     making it a really fully-featured plugin host. <!-- and somewhat session manager for plugins--><br/>
 </p>
 <h2>Highlights</h2>
-<p>Highlights of the (future) 2.0 release:</p>
-<ul>
-  <li>New look</li>
+<p>
+  <img src="/screenshots/news/carla-2.0-beta_canvas-integration_crop.png" alt="new-look"/><br/>
+  canvas integration
+</p>
+<p>
+  <img src="/screenshots/news/carla-2.0-beta_newlook_crop.png" alt="new-look"/><br/>
+  New look
+</p>
+<p>
+  <img src="/screenshots/news/carla-2.0-beta_carla-as-plugin_crop.png" alt="new-look"/><br/>
+  carla as plugin
+</p>
+<p>
+  <img src="/screenshots/news/carla-2.0-beta_carla-rack-lv2_crop.png" alt="new-look"/><br/>
+  carla-rack lv2
+</p>
+<p>
+  <img src="/screenshots/news/carla-2.0-beta_win32-bridge_crop.png" alt="new-look"/><br/>
+  win32 bridge
+</p>
 
-  <li>Carla itself as a plugin (rack-mode)</li>
+<!--   <li>Carla itself as a plugin (rack-mode)</li> -->
 
-  <li>Carla internal plugins exported as LV2</li>
+<!--   <li>Carla internal plugins exported as LV2</li> -->
 
   <!-- ams-lv2, setbfree -->
-  <li>LV2 CV ports and Worker extension are now implemented</li>
+<!--   <li>LV2 CV ports and Worker extension are now implemented</li> -->
 
   <!-- some AU stuff -->
-  <li>VST3 and AU plugin support</li>
+<!--   <li>VST3 and AU plugin support</li> -->
 
-  <li>save&restore connections</li>
-  <li>plugin skins</li>
-  <li>plugin bridges, including 32bit on 64bit systems and Windows plugins on Linux</li>
-</ul>
+<!--   <li>save&restore connections</li> -->
+<!--   <li>plugin skins</li> -->
+<!--   <li>plugin bridges, including 32bit on 64bit systems and Windows plugins on Linux</li> -->
+<!-- </ul> -->
 <h2>backend</h2>
 <p>
     There has been a lot of changes behind the scenes, specially optimization.<br/>
@@ -66,6 +83,7 @@ include_once("includes/header.php");
 <p>
 </p>
 
+<!--
 <hr/>
 
 <p>
@@ -386,6 +404,7 @@ include_once("includes/header.php");
     The entire collection is already available in the KXStudio repos but yet part of the meta-packages (will be added shortly after the official release).<br/>
     Generic linux binaries will be made available for non-KXStudio users as before.
 </p>
+-->
 
 <hr/>
 
