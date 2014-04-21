@@ -28,22 +28,22 @@ include_once("includes/header.php");
 
 <h2>Highlights</h2>
 
-<table><tr><td width="720px" valign="top">
+<table><tr><td>
+<a href="/screenshots/news/carla-2.0-beta_canvas-integration.png"><img src="/screenshots/news/carla-2.0-beta_canvas-integration_crop.png" alt="new-look"/></a>
+</td><td>
 <h3>Canvas Integration</h3>
 <p>
   When using the JACK multi-client mode, plugins will be mapped to their respective canvas group.<br/>
   Double-clicking the plugin group will show its UI, while pressing 'delete' will remove the actual plugin.<br/>
   There's extra right-click options, and the keyboard and meters will react accordingly.<br/>
 </p>
-</td><td>
-<a href="/screenshots/news/carla-2.0-beta_canvas-integration.png"><img src="/screenshots/news/carla-2.0-beta_canvas-integration_crop.png" alt="new-look"/></a>
 </td></tr></table>
 
 <p><br/></p>
 
-<table><tr><td width="720px">
+<table><tr><td>
 <a href="/screenshots/news/carla-2.0-beta_newlook.png"><img src="/screenshots/news/carla-2.0-beta_newlook_crop.png" alt="new-look"/></a>
-</td><td valign="top">
+</td><td>
 <h3>New Look</h3>
 <p>
   blah blah blah blah.<br/>
@@ -53,37 +53,37 @@ include_once("includes/header.php");
 
 <p><br/></p>
 
-<table><tr><td width="720px" valign="top">
+<table><tr><td>
+<a href="/screenshots/news/carla-2.0-beta_carla-as-plugin.png"><img src="/screenshots/news/carla-2.0-beta_carla-as-plugin_crop.png" alt="new-look"/></a>
+</td><td>
 <h3>Carla-Rack as Plugin</h3>
 <p>
   Carla itself as a plugin (rack-mode).<br/>
   This allows this and that<br/>
 </p>
-</td><td>
-<a href="/screenshots/news/carla-2.0-beta_carla-as-plugin.png"><img src="/screenshots/news/carla-2.0-beta_carla-as-plugin_crop.png" alt="new-look"/></a>
 </td></tr></table>
 
 <p><br/></p>
 
-<table><tr><td width="720px">
+<table><tr><td>
 <a href="/screenshots/news/carla-2.0-beta_carla-rack-lv2.png"><img src="/screenshots/news/carla-2.0-beta_carla-rack-lv2_crop.png" alt="new-look"/></a>
-</td><td valign="top">
+</td><td>
 <h3>Internal plugins as LV2</h3>
 <p>
-  Carla internal plugins exported as LV2<br/><br/>
+  Carla internal plugins exported as LV2<br/>
   This includes carla-rack and zynaddsubfx!<br/>
 </p>
 </td></tr></table>
 
 <p><br/></p>
 
-<table><tr><td width="720px" valign="top">
+<table><tr><td>
+<a href="/screenshots/news/carla-2.0-beta_win32-bridge.png"><img src="/screenshots/news/carla-2.0-beta_win32-bridge_crop.png" alt="new-look"/></a>
+</td><td>
 <h3>Plugin Bridges</h3>
 <p>
   plugin bridges, including 32bit on 64bit systems and Windows plugins on Linux<br/>
 </p>
-</td><td>
-<a href="/screenshots/news/carla-2.0-beta_win32-bridge.png"><img src="/screenshots/news/carla-2.0-beta_win32-bridge_crop.png" alt="new-look"/></a>
 </td></tr></table>
 
 <p><br/></p>
