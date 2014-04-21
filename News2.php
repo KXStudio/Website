@@ -13,58 +13,96 @@ include_once("includes/header.php");
 </div>
 
 <p>
-    <span style="font-size: 20px">&gt; The first Carla 2.0 beta</span><br/>
+    <span style="font-size: 20px">&gt; The first Carla 2.0 beta is here!</span><br/>
     On <i>2014-04-17</i> by<i> falkTX</i>
 </p>
 <p>
-    exciting, blah blah.
     Carla 2.0 is a full rework of the first Carla release.<br/>
-    It will implement the missing features in the 1.x series,
-    making it a really fully-featured plugin host. <!-- and somewhat session manager for plugins--><br/>
+    It's currently under development with a planned release later this year.<br/>
+    Today the first beta is released, and we'll show you what to expect when the final version arrives.<br/>
 </p>
+<p>
+    DISCLAIMER: This is a beta release! Although all features mentioned here are working right now, they may be incomplete, have bugs or even eat your cat!<br/>
+    You've been warned. ;)<br/>
+</p>
+
 <h2>Highlights</h2>
+
+<table><tr><td width="720px" valign="top">
+<h3>Canvas Integration</h3>
 <p>
-  <a href="/screenshots/news/carla-2.0-beta_canvas-integration.png"><img src="/screenshots/news/carla-2.0-beta_canvas-integration_crop.png" alt="new-look"/></a><br/>
-  ===> canvas integration.<br/>
+  When using the JACK multi-client mode, plugins will be mapped to their respective canvas group.<br/>
+  Double-clicking the plugin group will show its UI, while pressing 'delete' will remove the actual plugin.<br/>
+  There's extra right-click options, and the keyboard and meters will react accordingly.<br/>
 </p>
+</td><td>
+<a href="/screenshots/news/carla-2.0-beta_canvas-integration.png"><img src="/screenshots/news/carla-2.0-beta_canvas-integration_crop.png" alt="new-look"/></a>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td width="720px">
+<a href="/screenshots/news/carla-2.0-beta_newlook.png"><img src="/screenshots/news/carla-2.0-beta_newlook_crop.png" alt="new-look"/></a>
+</td><td valign="top">
+<h3>New Look</h3>
 <p>
-  <a href="/screenshots/news/carla-2.0-beta_newlook.png"><img src="/screenshots/news/carla-2.0-beta_newlook_crop.png" alt="new-look"/></a><br/>
-  ===> New look.<br/>
+  blah blah blah blah.<br/>
+  blah blah blah hahahah.<br/>
 </p>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td width="720px" valign="top">
+<h3>Carla-Rack as Plugin</h3>
 <p>
-  <a href="/screenshots/news/carla-2.0-beta_carla-as-plugin.png"><img src="/screenshots/news/carla-2.0-beta_carla-as-plugin_crop.png" alt="new-look"/></a><br/>
-  ===> carla as plugin.<br/>
-  Carla itself as a plugin (rack-mode)<br/><br/>
+  Carla itself as a plugin (rack-mode).<br/>
+  This allows this and that<br/>
 </p>
+</td><td>
+<a href="/screenshots/news/carla-2.0-beta_carla-as-plugin.png"><img src="/screenshots/news/carla-2.0-beta_carla-as-plugin_crop.png" alt="new-look"/></a>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td width="720px">
+<a href="/screenshots/news/carla-2.0-beta_carla-rack-lv2.png"><img src="/screenshots/news/carla-2.0-beta_carla-rack-lv2_crop.png" alt="new-look"/></a>
+</td><td valign="top">
+<h3>Internal plugins as LV2</h3>
 <p>
-  <a href="/screenshots/news/carla-2.0-beta_carla-rack-lv2.png"><img src="/screenshots/news/carla-2.0-beta_carla-rack-lv2_crop.png" alt="new-look"/></a><br/>
-  ===> carla-rack lv2.<br/>
   Carla internal plugins exported as LV2<br/><br/>
+  This includes carla-rack and zynaddsubfx!<br/>
 </p>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td width="720px" valign="top">
+<h3>Plugin Bridges</h3>
 <p>
-  <a href="/screenshots/news/carla-2.0-beta_win32-bridge.png"><img src="/screenshots/news/carla-2.0-beta_win32-bridge_crop.png" alt="new-look"/></a><br/>
-  ===> win32 bridge.<br/>
-  plugin bridges, including 32bit on 64bit systems and Windows plugins on Linux<br/><br/>
+  plugin bridges, including 32bit on 64bit systems and Windows plugins on Linux<br/>
 </p>
+</td><td>
+<a href="/screenshots/news/carla-2.0-beta_win32-bridge.png"><img src="/screenshots/news/carla-2.0-beta_win32-bridge_crop.png" alt="new-look"/></a>
+</td></tr></table>
+
+<p><br/></p>
+
+<h3>More stuff</h3>
 <ul>
-  <li>LV2 CV ports and Worker extension are now implemented (ams-lv2, setbfree)</li>
+  <li>LV2 CV ports and Worker extension are now implemented, allowing to load ams-lv2 and setBfree plugins</li>
   <li>VST3 and AU plugin support</li>
-  <li>save&restore connections</li>
+  <li>save&restore canvas connections</li>
+  <li>Qt5 ready</li>
 </ul>
-<h2>backend</h2>
 <p>
-    There has been a lot of changes behind the scenes, specially optimization.<br/>
-    The backend now uses Juce to do some "audio things" - drivers and plugin support, more useful for Windows and Mac OS.<br/>
+    There's some other things planned, but they might be delayed until 3.0 so that this release doesn't take too long to happen.<br/>
+    You can find the complete TODO list here: https://raw.github.com/falkTX/Carla/master/doc/Carla-TODO.<br/>
 </p>
-<h2>frontend</h2>
+
+<h2>Downloads</h2>
 <p>
-    The frontend is now compatible with Qt5.<br/>
-    Lots of small changes here and there.<br/>
-</p>
-<p>
-    TODO here: https://raw.github.com/falkTX/Carla/master/doc/Carla-TODO
-</p>
-<p>
+    experiment?, downloads here
 </p>
 
 <!--
