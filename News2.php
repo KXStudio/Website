@@ -22,14 +22,19 @@ include_once("includes/header.php");
     Today the first beta is released, and we'll show you what to expect when the final version arrives.<br/>
 </p>
 <p>
-    DISCLAIMER: This is a beta release! Although all features mentioned here are working right now, they may be incomplete, have bugs or even eat your cat!<br/>
-    You've been warned. ;)<br/>
+    To download binaries or source code, jump into the <a href="http://kxstudio.sourceforge.net/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" and "carla-plugins-lv2" instead.<br/>
+    Bug reports and feature requests are welcome! Jump into the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+<p>
+    <b class="error">DISCLAIMER:</b> This is a beta release! Although all features mentioned here are working right now, they may be incomplete, have bugs or even eat your cat!<br/>
+    <span  class="error">You've been warned.</span><br/>
 </p>
 
 <h2>Highlights</h2>
 
 <table><tr><td>
-<a href="/screenshots/news/carla-2.0-beta_canvas-integration.png"><img src="/screenshots/news/carla-2.0-beta_canvas-integration_crop.png" alt="new-look"/></a>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_canvas-integration.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_canvas-integration_crop.png" alt="new-look"/></a>
 </td><td>
 <h3>Canvas Integration</h3>
 <p>
@@ -42,47 +47,52 @@ include_once("includes/header.php");
 <p><br/></p>
 
 <table><tr><td>
-<a href="/screenshots/news/carla-2.0-beta_newlook.png"><img src="/screenshots/news/carla-2.0-beta_newlook_crop.png" alt="new-look"/></a>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_newlook.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_newlook_crop.png" alt="new-look"/></a>
 </td><td>
 <h3>New Look</h3>
 <p>
-  blah blah blah blah.<br/>
-  blah blah blah hahahah.<br/>
+  Each plugin gets his own slot skin.<br/>
+  Different colors are attributed to each kind of plugin (EQ, delay, distortion, etc).<br/>
+  Specialized skins that match the author/maker are used when appropriate.<br/>
 </p>
 </td></tr></table>
 
 <p><br/></p>
 
 <table><tr><td>
-<a href="/screenshots/news/carla-2.0-beta_carla-as-plugin.png"><img src="/screenshots/news/carla-2.0-beta_carla-as-plugin_crop.png" alt="new-look"/></a>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_carla-as-plugin.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_carla-as-plugin_crop.png" alt="new-look"/></a>
 </td><td>
-<h3>Carla-Rack as Plugin</h3>
+<h3>Carla-Rack as a Plugin</h3>
 <p>
-  Carla itself as a plugin (rack-mode).<br/>
-  This allows this and that<br/>
+  Carla itself working as a plugin (rack-mode).<br/>
+  This allows to use several rack instances inside a single Carla instance.<br/>
+  Internal patch-bay mode is also planned, but probably only for 3.0.<br/>
 </p>
 </td></tr></table>
 
 <p><br/></p>
 
 <table><tr><td>
-<a href="/screenshots/news/carla-2.0-beta_carla-rack-lv2.png"><img src="/screenshots/news/carla-2.0-beta_carla-rack-lv2_crop.png" alt="new-look"/></a>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_carla-rack-lv2.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_carla-rack-lv2_crop.png" alt="new-look"/></a>
 </td><td>
 <h3>Internal plugins as LV2</h3>
 <p>
-  Carla internal plugins exported as LV2<br/>
+  Carla internal plugins are now exported as LV2.<br/>
   This includes carla-rack and zynaddsubfx!<br/>
+  Plugins that released separately (such as DISTRHO and ZamAudio) are not included.<br/>
 </p>
 </td></tr></table>
 
 <p><br/></p>
 
 <table><tr><td>
-<a href="/screenshots/news/carla-2.0-beta_win32-bridge.png"><img src="/screenshots/news/carla-2.0-beta_win32-bridge_crop.png" alt="new-look"/></a>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_win32-bridge.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_win32-bridge_crop.png" alt="new-look"/></a>
 </td><td>
 <h3>Plugin Bridges</h3>
 <p>
-  plugin bridges, including 32bit on 64bit systems and Windows plugins on Linux<br/>
+  Running plugins in a separate process for crash-protection.<br/>
+  Using a separate process also makes it possible to load plugins with a different architecture from the host,<br/>
+  such as 32-bit plugins on 64-bit Carla and Windows plugins in Linux.<br/>
 </p>
 </td></tr></table>
 
@@ -90,20 +100,18 @@ include_once("includes/header.php");
 
 <h3>More stuff</h3>
 <ul>
-  <li>LV2 CV ports and Worker extension are now implemented, allowing to load ams-lv2 and setBfree plugins</li>
+  <li>Qt5 ready (already used in Windows builds)</li>
+  <li>Save and restore canvas connections</li>
+  <li>LV2 CV ports and Worker extension are now implemented, allowing to load ams-lv2 and setBfree among other plugins</li>
   <li>VST3 and AU plugin support</li>
-  <li>save&restore canvas connections</li>
-  <li>Qt5 ready</li>
 </ul>
 <p>
     There's some other things planned, but they might be delayed until 3.0 so that this release doesn't take too long to happen.<br/>
-    You can find the complete TODO list here: https://raw.github.com/falkTX/Carla/master/doc/Carla-TODO.<br/>
+    You can find the complete TODO list here:<br/>
+    <a href="https://raw.github.com/falkTX/Carla/master/doc/Carla-TODO" class="external free" rel="nofollow" target="_blank">https://raw.github.com/falkTX/Carla/master/doc/Carla-TODO</a>.<br/>
 </p>
 
-<h2>Downloads</h2>
-<p>
-    experiment?, downloads here
-</p>
+<p><br/></p>
 
 <!--
 <hr/>
@@ -203,7 +211,7 @@ include_once("includes/header.php");
     For example, the <b>plugin edit dialog</b> now looks like this:
 </p>
 <p>
-    <img src="/screenshots/news/carla-2.0-report_edit-dialog.png" alt=""/>
+    <img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-report_edit-dialog.png" alt=""/>
 </p>
 <p>
     As seen the image, the user will be able to use "Stereo Balance" or "Mono Panning".<br/>
