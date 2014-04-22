@@ -14,7 +14,7 @@ include_once("includes/header.php");
 
 <p>
     <span style="font-size: 20px">&gt; The first Carla 2.0 beta is here!</span><br/>
-    On <i>2014-04-17</i> by<i> falkTX</i>
+    On <i>2014-04-22</i> by<i> falkTX</i>
 </p>
 <p>
     Carla 2.0 is a full rework of the first Carla release.<br/>
@@ -51,7 +51,7 @@ include_once("includes/header.php");
 </td><td>
 <h3>New Look</h3>
 <p>
-  Each plugin gets his own slot skin.<br/>
+  Each plugin gets its own slot skin.<br/>
   Different colors are attributed to each kind of plugin (EQ, delay, distortion, etc).<br/>
   Specialized skins that match the author/maker are used when appropriate.<br/>
 </p>
@@ -93,6 +93,8 @@ include_once("includes/header.php");
   Running plugins in a separate process for crash-protection.<br/>
   Using a separate process also makes it possible to load plugins with a different architecture from the host,<br/>
   such as 32-bit plugins on 64-bit Carla and Windows plugins in Linux.<br/>
+  <br/>
+  <span class="error">NOTE:</span> This feature is currently only available within the KXStudio repos.<br/>
 </p>
 </td></tr></table>
 
@@ -111,9 +113,6 @@ include_once("includes/header.php");
     <a href="https://raw.github.com/falkTX/Carla/master/doc/Carla-TODO" class="external free" rel="nofollow" target="_blank">https://raw.github.com/falkTX/Carla/master/doc/Carla-TODO</a>.<br/>
 </p>
 
-<p><br/></p>
-
-<!--
 <hr/>
 
 <p>
@@ -440,7 +439,6 @@ include_once("includes/header.php");
     Note: Since the KXStudio website has been internally reworked (removed mediawiki, much simpler PHP code now), the old news have been removed.<br/>
     <br/>
 </p>
--->
 
 <?php
 include_once("includes/footer.php");
