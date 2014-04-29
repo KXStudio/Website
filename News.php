@@ -13,6 +13,16 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; Introducing JackAss</span><br/>
+    On <i>2014-04-29</i> by<i> falkTX</i>
+</p>
+<p>
+    stuff
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; The first Carla 2.0 beta is here!</span><br/>
     On <i>2014-04-22</i> by<i> falkTX</i>
 </p>
