@@ -65,25 +65,25 @@ include_once("includes/header.php");
 <hr/>
 
 <ul id="LiveDVD" name="LiveDVD">
-    <li><b>KXStudio 12.04.3 Live-DVD</b></li>
+    <li><b>KXStudio 14.04 Live-DVD</b></li>
     <p>
-        This is an Ubuntu 12.04.3 LTS based Live-DVD, used to test-drive KXStudio and/or install it to your HDD.<br/>
-        It contains a snapshot of the KXStudio features as of <b>Oct 17, 2013</b> or <b>17/10/2013</b>. It uses KDE4 as Desktop Environment.
+        This is an Ubuntu 14.04 LTS based Live-DVD, used to test-drive KXStudio and/or install it to your HDD.<br/>
+        It contains a snapshot of the KXStudio features as of <b>May 7th, 2014</b> or <b>07/05/2014</b>. It uses KDE4 as Desktop Environment.
     </p>
     <p class="p_extra_spaced">
         Downloads:<br/>
     </p>
     <p>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Live/KXStudio_12.04.3_32bit.iso/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
-            <img src="images/ico_disc.png" alt="" class="img_text_align"/> KXStudio 12.04.3 Live-DVD <strong>- 32bit</strong></a><br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;md5sum: 2e937f1249e6608369f9d17401b16887<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;size: 1.8 Gb
+        <a href="http://sourceforge.net/projects/kxstudio/files/Live/KXStudio_14.04b_32bit.iso/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+            <img src="images/ico_disc.png" alt="" class="img_text_align"/> KXStudio 14.04 Live-DVD <strong>- 32bit</strong></a><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;md5sum: f252eafbc293e04f6e914554957388bb<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;size: 1.4 GiB
     </p>
     <p>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Live/KXStudio_12.04.3_64bit.iso/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
-            <img src="images/ico_disc.png" alt="" class="img_text_align"/> KXStudio 12.04.3 Live-DVD <strong>- 64bit</strong></a><br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;md5sum: ecd0b53bfaddfdf96454c1840f05a90b<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;size: 1.9 Gb
+        <a href="http://sourceforge.net/projects/kxstudio/files/Live/KXStudio_14.04b_64bit.iso/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+            <img src="images/ico_disc.png" alt="" class="img_text_align"/> KXStudio 14.04 Live-DVD <strong>- 64bit</strong></a><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;md5sum: 4954d39a72292b0da911d734e1d661cf<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;size: 1.5 GiB
     </p>
     <p>
         <b>*Please* make sure to read the <a href="<?php echo $ROOT; ?>/Documentation:KXStudio12043:ReleaseNotes">Release Notes</a></b> before using this DVD.<br/>

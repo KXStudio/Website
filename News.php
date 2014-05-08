@@ -14,10 +14,27 @@ include_once("includes/header.php");
 
 <p>
     <span style="font-size: 20px">&gt; Introducing JackAss</span><br/>
-    On <i>2014-04-29</i> by<i> falkTX</i>
+    On <i>2014-05-02</i> by<i> falkTX</i>
 </p>
 <p>
-    stuff
+    JackAss is a VST plugin that provides JACK-MIDI support for VST hosts.<br/>
+    Load the plugin in your favourite host to get a JACK-MIDI port.<br/>
+    Each new plugin instance creates a new MIDI port.<br/>
+</p>
+<p>
+    JackAss sends the notes from the host to its JACK-MIDI port.<br/>
+    It also exposes 50 parameters, which send a MIDI CC message when changed.<br/>
+    You can use this to easily control external applications that accept JACK-MIDI input and possibly CC for automation (like Carla).<br/>
+</p>
+<p>
+    Additionally there's a JackAssFX plugin, which only exposes parameters to send as MIDI CC, in case you don't need notes.<br/>
+</p>
+<p>
+    JackAss currently has builds for Linux, MacOS and Windows, all 32bit and 64bit.<br/>
+    As a bonus, you also get special Wine builds - load it in a Windows application running in Linux via Wine and you get a real, native JACK-MIDI port from it!
+</p>
+<p>
+    PS: Why JackAss? Because it outputs to JACK. ;)
 </p>
 
 <hr/>
