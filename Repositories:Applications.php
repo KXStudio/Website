@@ -70,22 +70,6 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
-<!-- Bitwig Studio -->
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/screenshots/bitwig-studio.png">
-           <img src="screenshots/thumb/bitwig-studio.png" alt="bitwig-studio" class="img_thumb_150"/>
-        </a></p>
-    </td><td>
-        <p>
-            <b><a href="apt://bitwig-studio" style="color: rgb(230,230,100);">Bitwig Studio</a></b> (DAW, non-free)<br/>
-            Bitwig Studio is a multi-platform music-creation system for production, remixing and performance<br/>
-            with a focus on flexible editing tools and a super-fast workflow.<br/>
-            Homepage: <a href="http://www.bitwig.com/" class="external text" rel="nofollow" target="_blank">http://www.bitwig.com/</a><br/>
-        </p>
-    </td></tr>
-</table>
-
 <!-- Cadence -->
 <table>
     <tr><td align="center">
@@ -325,41 +309,6 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
-<!-- REAPER -->
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/screenshots/reaper.png">
-           <img src="screenshots/thumb/reaper.png" alt="reaper" class="img_thumb_150"/>
-        </a></p>
-    </td><td>
-        <p>
-            <b><a href="apt://reaper" style="color: rgb(230,230,100);">REAPER</a></b> (DAW, non-free)<br/>
-            REAPER is digital audio workstation software.<br/>
-            A complete multitrack audio and MIDI recording, editing, processing, mixing, and mastering environment.<br/>
-            Homepage: <a href="http://reaper.fm/" class="external text" rel="nofollow" target="_blank">http://reaper.fm/</a><br/>
-            User Guide and Books: <a href="http://reaper.fm/userguide.php" class="external text" rel="nofollow" target="_blank">http://reaper.fm/userguide.php</a><br/>
-        </p>
-    </td></tr>
-</table>
-
-<!-- Renoise -->
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/screenshots/renoise.png">
-           <img src="screenshots/thumb/renoise.png" alt="renoise" class="img_thumb_150"/>
-        </a></p>
-    </td><td>
-        <p>
-            <b><a href="apt://renoise" style="color: rgb(230,230,100);">Renoise</a></b> (Tracker, non-free)<br/>
-            Complete, expandable Digital Audio Workstation (DAW) with a refreshing twist.<br/>
-            It lets you record, compose, edit, process and render production-quality audio using a tracker-based approach.<br/>
-            It features a wide range of built-in audio processors, alongside support for all commonly used virtual instrument and effect plug-in formats.<br/>
-            Homepage: <a href="http://www.renoise.com" class="external text" rel="nofollow" target="_blank">http://www.renoise.com</a><br/>
-            User Manual: <a href="http://tutorials.renoise.com/wiki" class="external text" rel="nofollow" target="_blank">http://tutorials.renoise.com/wiki</a><br/>
-        </p>
-    </td></tr>
-</table>
-
 <!-- SunVox -->
 <table>
     <tr><td align="center">
@@ -373,21 +322,6 @@ include_once("includes/header.php");
             It is a tool for those people who like to compose music wherever they are, whenever they wish.<br/>
             Homepage: <a href="http://www.warmplace.ru/soft/sunvox/" class="external text" rel="nofollow" target="_blank">http://www.warmplace.ru/soft/sunvox/</a><br/>
             User Manual: <a href="http://www.warmplace.ru/wiki/sunvox:manual_en" class="external text" rel="nofollow" target="_blank">http://www.warmplace.ru/wiki/sunvox:manual_en</a><br/>
-        </p>
-    </td></tr>
-</table>
-
-<!-- Tracktion -->
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/screenshots/tracktion.png">
-           <img src="screenshots/thumb/tracktion.png" alt="tracktion" class="img_thumb_150"/>
-        </a></p>
-    </td><td>
-        <p>
-            <b><a href="apt://tracktion" style="color: rgb(230,230,100);">Tracktion</a></b> (DAW, non-free)<br/>
-            Tracktion is a powerful workstation for audio/midi recording and editing.<br/>
-            Homepage: <a href="http://tracktion.com/" class="external text" rel="nofollow" target="_blank">http://tracktion.com/</a><br/>
         </p>
     </td></tr>
 </table>
