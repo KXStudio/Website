@@ -35,7 +35,9 @@ include_once("../../includes/header.php");
         <li><a href="https://github.com/x42/meters.lv2" target="_blank">meters.lv2</a></li>
         <li><a href="https://www.pianoteq.com/pianoteq4" target="_blank">Pianoteq</a></li>
         <li><a href="http://samplv1.sourceforge.net/" target="_blank">samplv1</a></li>
+        <li><a href="https://github.com/x42/sisco.lv2" target="_blank">sisco.lv2</a></li>
         <li><a href="http://synthv1.sourceforge.net/" target="_blank">synthv1</a></li>
+        <li><a href="https://github.com/x42/tuna.lv2" target="_blank">tuna.lv2</a></li>
     </ul>
 </p>
 
