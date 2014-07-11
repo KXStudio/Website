@@ -23,11 +23,7 @@ include_once("includes/header.php");
 
 <!--
   TODO:
-    ingen
-    jack-keyboard
-    jack-midi-clock
     non-sequencer
-    rosegarden
  -->
 
 <!-- AMS -->
@@ -141,6 +137,54 @@ include_once("includes/header.php");
             It has a bit more features than the official LADISH GUI, with a nice preview of the main canvas in the bottom-left.<br/>
             It also implements the 'Claudia-Launcher' add-application style for LADISH.<br/>
             Homepage and Documentation: <a href="http://kxstudio.sf.net/claudia" class="external text" rel="nofollow" target="_blank">http://kxstudio.sf.net/claudia</a><br/>
+        </p>
+    </td></tr>
+</table>
+
+<!-- Ingen -->
+<table>
+    <tr><td align="center">
+        <p><a href="<?php echo $ROOT; ?>/screenshots/ingen.png">
+           <img src="screenshots/thumb/ingen.png" alt="ingen" class="img_thumb_150"/>
+        </a></p>
+    </td><td>
+        <p>
+            <b><a href="apt://ingen" style="color: rgb(230,230,100);">Ingen</a></b> (Modular Plugin Host)<br/>
+            Ingen is a modular audio processing system for Linux using the JACK audio server and LV2 plugins.<br/>
+            Any saved Ingen graph can be loaded as an LV2 plugin on any system where Ingen is installed.<br/>
+            This allows users to visually develop custom plugins for use in other applications without programming.<br/>
+            Homepage: <a href="http://drobilla.net/software/ingen/" class="external text" rel="nofollow" target="_blank">http://drobilla.net/software/ingen/</a><br/>
+        </p>
+    </td></tr>
+</table>
+
+<!-- jack-keyboard -->
+<table>
+    <tr><td align="center">
+        <p><a href="<?php echo $ROOT; ?>/screenshots/jack-keyboard.png">
+           <img src="screenshots/thumb/jack-keyboard.png" alt="qtractor" class="img_thumb_150"/>
+        </a></p>
+    </td><td>
+        <p>
+            <b><a href="apt://jack-keyboard" style="color: rgb(230,230,100);">jack-keyboard</a></b> (MIDI Utility)<br/>
+            jack-keyboard is a virtual MIDI keyboard - it allows you to send JACK MIDI events using your PC keyboard.<br/>
+            It uses the same layout as trackers (like Impulse Tracker) did, so you have two and half octaves under your fingers.<br/>
+            Homepage: <a href="http://jack-keyboard.sourceforge.net/" class="external text" rel="nofollow" target="_blank">http://jack-keyboard.sourceforge.net/</a><br/>
+        </p>
+    </td></tr>
+</table>
+
+<!-- jack-midi-clock -->
+<table>
+    <tr><td align="center">
+        <p><a href="<?php echo $ROOT; ?>/screenshots/nogui.png">
+           <img src="screenshots/thumb/nogui.png" alt="qtractor" class="img_thumb_150"/>
+        </a></p>
+    </td><td>
+        <p>
+            <b><a href="apt://jack-midi-clock" style="color: rgb(230,230,100);">jack-midi-clock</a></b> (MIDI Utility)<br/>
+            This is a command-line application that sends MIDI beat clock pulses based on the current tempo given by the JACK transport.<br/>
+            Homepage: <a href="http://www.teuton.org/~gabriel/jack_midi_clock/" class="external text" rel="nofollow" target="_blank">http://www.teuton.org/~gabriel/jack_midi_clock/</a><br/>
         </p>
     </td></tr>
 </table>
@@ -314,6 +358,23 @@ include_once("includes/header.php");
             It evolves as a fairly-featured Linux desktop audio workstation GUI, specially dedicated to the personal home-studio.<br/>
             Homepage: <a href="http://qtractor.sourceforge.net/" class="external text" rel="nofollow" target="_blank">http://qtractor.sourceforge.net/</a><br/>
             User Manual (PDF): <a href="http://downloads.sourceforge.net/qtractor/qtractor-0.5.x-user-manual.pdf" class="external text" rel="nofollow" target="_blank">http://downloads.sourceforge.net/qtractor/qtractor-0.5.x-user-manual.pdf</a><br/>
+        </p>
+    </td></tr>
+</table>
+
+<!-- Rosegarden -->
+<table>
+    <tr><td align="center">
+        <p><a href="<?php echo $ROOT; ?>/screenshots/rosegarden.png">
+           <img src="screenshots/thumb/rosegarden.png" alt="qtractor" class="img_thumb_150"/>
+        </a></p>
+    </td><td>
+        <p>
+            <b><a href="apt://rosegarden" style="color: rgb(230,230,100);">Rosegarden</a></b> (DAW)<br/>
+            Rosegarden is a music composition and editing environment based around a MIDI sequencer that<br/>
+            features a rich understanding of music notation and includes basic support for digital audio.<br/>
+            Homepage: <a href="http://www.rosegardenmusic.com/" class="external text" rel="nofollow" target="_blank">http://www.rosegardenmusic.com/</a><br/>
+            User Manual: <a href="http://www.rosegardenmusic.com/wiki/doc:manual-en" class="external text" rel="nofollow" target="_blank">http://www.rosegardenmusic.com/wiki/doc:manual-en</a><br/>
         </p>
     </td></tr>
 </table>
