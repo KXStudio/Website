@@ -24,30 +24,40 @@ include_once("includes/header.php");
 <!--
   TODO: (no ui)
     foo-plugins
+    jackass
     leet-plugins
+    midimsg-lv2
+    tap-plugins
     vcf-plugins
     vocoder-ladspa
     wasp-ladspa
   TODO: (with ui)
+    ams-lv2
+    beatslash-lv2
+    calf-git
+    cursynth
+    deteriorate-lv2
+    dssi-vst
+    guitarix (*)
     hexter
+    ir.lv2
     ls16 ?
     phasex
     spiralsynthmodular
     whysynth
     wsynth-dssi
     zynaddsubfx
-  TODO: (distrho)
-    oxbd
+  TODO: (distrho/juce)
     teragon-audio
-    arctican
-    cabbage
-    distrho
-    drowaudio
-    eqinox
-    drumsynth
+    arctican-plugins
+    dexed
+    drowaudio-plugins
+    juced-plugins
     klangfalter
+    oxbd
     pitcheddelay
-    tal
+    safe-plugins
+    tal-plugins
     vex
     wolpertinger
  -->
