@@ -13,6 +13,40 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; DISTRHO New release pack (2014-07-16)</span><br/>
+    On <i>2014-07-16</i> by<i> falkTX</i>
+</p>
+<p>
+    <b>DISTRHO has a new release!</b>
+</p>
+<p>
+    In this release we cleaned up all the plugins, added new ones and removed those that we not considered good enough.<br/>
+    Standalones are no longer available. Highlife was removed as a requested by its authors.
+</p>
+<p>
+    The plugins we added to Ports are:
+</p>
+<ul>
+    <li>Dexed</li>
+    <li>KlangFalter</li>
+    <li>MVerb</li>
+    <li>Nekobi</li>
+    <li>Obxd</li>
+    <li>PitchedDelay</li>
+</ul>
+<p>
+    Additionally we made a new plugin - <a href="https://github.com/DISTRHO/ProM" class="external free" rel="nofollow" target="_blank">ProM</a>
+      - a music visualizer as audio plugin based on projectm.
+</p>
+<p>
+    See the plugins and ports sections on <a href="http://distrho.sourceforge.net/" class="external free" rel="nofollow" target="_blank">
+      DISTRHO's website</a> for screenshots and downloads.<br/>
+    The complete source code is available at <a href="https://github.com/DISTRHO/" class="external free" rel="nofollow" target="_blank">https://github.com/DISTRHO/</a>.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Introducing JackAss</span><br/>
     On <i>2014-05-16</i> by<i> falkTX</i>
 </p>
