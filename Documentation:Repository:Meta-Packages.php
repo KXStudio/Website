@@ -1,4 +1,4 @@
-<<?php
+<?php
 $PAGE_TITLE    = "KXStudio : Documentation";
 $PAGE_TYPE     = "NONKXSTUDIO";
 $PAGE_SOURCE_1 = ARRAY("/Documentation", "/Documentation", "/Documentation:Repository:Meta-Packages");
