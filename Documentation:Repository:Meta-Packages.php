@@ -45,15 +45,10 @@ include_once("includes/header.php");
 </p>
 <ul>
     <li>kxstudio-meta-codecs <i>(12.04 only)</i></li>
-    <li>kxstudio-meta-non-free</li>
     <li>kxstudio-meta-restricted-extras</li>
 </ul>
 <p>
     The 'codecs' package is self-explanatory, it will install a collection of codecs for gstreamer, sox and xine.<br />
-</p>
-<p>
-    The 'non-free' will install some good but close-source software, like Renoise, energyXT, and Pianoteq.<br />
-    These applications come as demos, see <a href="<?php echo $ROOT; ?>/Documentation:Ubuntu:RegisterCommercial">Documentation:Ubuntu:RegisterCommercial</a> to activate them if you have a license.
 </p>
 <p>
     The 'restricted-extras' is simply a combination of '[k|x]ubuntu-restricted-extras', and some other minor "restricted" stuff.<br />
