@@ -41,7 +41,7 @@ include_once("includes/header.php");
     The result may not be as nice though.<br/>
 </p>
 <p>
-    The 'Patchbay' uses the same canvas engine that Catarina, Catia and Claudia do:
+    The 'Patchbay' uses the same canvas engine that Catarina, Catia and Claudia do:<br/>
     <a href="screenshots/carla-patchbay.png" class="external text" rel="nofollow"><img src="screenshots/carla-patchbay.png" alt="carla-patchbay.png" /></a>
 </p>
 <p>
