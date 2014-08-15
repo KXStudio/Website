@@ -12,7 +12,7 @@ include_once("includes/header.php");
     It has some nice features like automation of parameters via MIDI CC (and send output back as MIDI too) and full OSC control.<br/>
 </p>
 <p>
-    Carla currently supports LADSPA (including LRDF), DSSI, LV2, and VST plugin formats, plus GIG, SF2 and SFZ file support.<br/>
+    Carla currently supports LADSPA (including LRDF), DSSI, LV2, and VST2/3 and AU plugin formats, plus GIG, SF2 and SFZ file support.<br/>
     It uses JACK as the default and preferred audio driver but also supports native drivers like ALSA, DirectSound or CoreAudio.<br/>
 </p>
 <p>
@@ -31,9 +31,6 @@ include_once("includes/header.php");
         Plugins with non-stereo audio channels are not supported, but a forced-stereo option is available for Mono ones.
     </li>
 </ul>
-<p>
-    Note: The internal patchbay does not save/restore connections yet, so you'll want to run Carla under some kind of Session Management. LADISH level 1 and NSM are implemented.
-</p>
 
 <!-- Interface -->
 <h3><span class="mw-headline" id="Interface"> The Interface </span></h3>
@@ -69,57 +66,56 @@ include_once("includes/header.php");
 <!-- Release Notes -->
 <h3><span class="mw-headline" id="ReleaseNotes"> Release Notes </span></h3>
 <p>
-    The following are the release notes for 1.2.x:
+    The following are the release notes for 2.0-beta2:
 </p>
 <ul>
-    <li>Canvas does not save or restore connections.<br/>
-        You need to use external session management for now.</li>
-
-    <li>LADISH does not support multi-client JACK applications.<br/>
-        To prevent any issues Carla will switch to single-client mode automatically.</li>
-
-    <li>Rack mode is still a bit experimental, specially on non-JACK drivers.</li>
-
-    <li>LV2 plugin support is incomplete (although already in a good state).<br/>
-        Plugins that use CV ports, multiple MIDI ports or Worker extension will not work right now.</li>
-
-    <li>Carla will not work with non-native LV2 Plugin UIs that require the instance-data extension.<br/>
-        This is by design and not a bug.</li>
-
-    <li>OSC control seems to work well, but has not been tested in great detail.<br/>
-        Be sure to report any issues.</li>
-
-    <li>Carla "PRO" theme, Carla-Control and ZynAddSubFX internal plugin are not available for Windows at this point.</li>
+    <li>AU plugin support is available on MacOS, but the discovery mechanism fails to find them</li>
+    <li>Linux release has support for bridging Window plugins using Wine (32bit and 64bit).</li>
+    <li>Linux 32bit release will not load 64bit plugins even if ran on a 64bit system</li>
+    <li>MacOS Carla-Rack LV2 plugin fails to show UI</li>
+    <li>MacOS and Windows do not support native widgets in LV2 yet (Cocoa and HWND, respectively)</li>
+    <li>MacOS release is 64bit only but it can load 32bit plugins</li>
+    <li>Windows 64bit build doesn't provide GIG and SFZ support, use the 32bit build if you need those</li>
+    <li>Windows builds do not support bridges (ie, 32bit plugins on a 64bit Carla) or Carla as plugin</li>
 </ul>
 
 <!-- Download -->
 <h3><span class="mw-headline" id="Download"> Download </span></h3>
 <p>
-    Carla is available in the KXStudio repositories and ArchLinux AUR (both with 'carla' package name).<br/>
+    Carla is available in the KXStudio repositories and ArchLinux AUR (both with 'carla' or 'carla-git' package name).<br/>
     <img src="images/ico_arch.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://aur.archlinux.org/packages/carla/" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://aur.archlinux.org/packages/carla-git/" class="external text a_bigger_text" rel="nofollow" target="_blank">
          ArchLinux</a> (AUR)<br/>
     <img src="images/ico_debian.png" alt="" class="img_text_align_spaced"/>
-        <a href="apt://carla" class="external text a_bigger_text">
+        <a href="apt://carla-git" class="external text a_bigger_text">
          Debian/Ubuntu</a> (via KXStudio repositories)<br/>
 </p>
 <p>
-    Pre-compiled binaries are available for Linux and Windows (version 1.2.4).<br/>
+    Pre-compiled binaries are available for Linux, Mac and Windows (version 2.0-beta2).<br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.4-linux32.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta2b-linux32.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 32bit</a><br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.4-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta2b-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 64bit</a><br/>
+    <img src="images/ico_mac.png" alt="" class="img_text_align_spaced"/>
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta2b-mac.dmg/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+         MacOS 64bit</a><br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.4-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta2b-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 32bit</a><br/>
+    <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta2b-win64.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+         Windows 64bit</a><br/>
 </p>
 <p>
     The latest source code is hosted on github, together with bug reports, feature requests, etc.<br/>
      <img src="images/ico_github.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/tree/stable" class="external text a_bigger_text" rel="nofollow" target="_blank">
-         Source code</a><br/>
+        <a href="https://github.com/falkTX/Carla/" class="external text a_bigger_text" rel="nofollow" target="_blank">
+         Project page</a><br/>
+     <img src="images/ico_github.png" alt="" class="img_text_align_spaced"/>
+        <a href="https://github.com/falkTX/Carla/archive/master.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+         Source code (zip)</a><br/>
      <img src="images/ico_github.png" alt="" class="img_text_align_spaced"/>
         <a href="https://github.com/falkTX/Carla/issues?state=open" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Bug reports / Feature requests</a><br/>

@@ -13,6 +13,45 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; The 2nd beta of Carla 2.0 is here!</span><br/>
+    On <i>2014-08-15</i> by<i> falkTX</i>
+</p>
+<p>
+    The Carla Plugin Host 2.0 beta2 release is finally here!<br/>
+    This release was slightly delayed in order to ensure plugin bridges were working properly.<br/>
+    If you haven't heard about the Carla 2.x series do so <a href="http://kxstudio.sourceforge.net/News/?action=view&url=the-first-carla-20-beta-is-here" class="external free" rel="nofollow" target="_blank">here</a>.
+</p>
+<p>
+    In short, this release makes plugin bridges actually work and it's the first to support MacOS (>= 10.6).<br/>
+    The backend is now completely toolkit agnostic, only depending on the native window system (like X11 on Linux).<br/>
+    This release is much more stable when compared to the previous beta - it will no longer eat your cat! ;)<br/>
+    It should already be good enough for regular usage, if you can ignore some incomplete UI things.
+</p>
+<p>
+    Known issues / Release notes: (all to be fixed in the next beta)
+</p>
+<ul>
+    <li>All DPF and JUCE-based internal plugins were removed to reduce code size and complexity, they will be re-introduced later</li>
+    <li>AU plugin support is available on MacOS, but the discovery mechanism fails to find them</li>
+    <li>Linux release has support for bridging Window plugins using Wine (32bit and 64bit).</li>
+    <li>Linux 32bit release will not load 64bit plugins even if ran on a 64bit system</li>
+    <li>MacOS Carla-Rack LV2 plugin fails to show UI</li>
+    <li>MacOS and Windows do not support native widgets in LV2 yet (Cocoa and HWND, respectively)</li>
+    <li>MacOS release is 64bit only but it can load 32bit plugins</li>
+    <li>Windows 64bit build doesn't provide GIG and SFZ support, use the 32bit build if you need those</li>
+    <li>Windows builds do not support bridges (ie, 32bit plugins on a 64bit Carla) or Carla as plugin</li>
+</ul>
+<p>
+    The next beta will change a few things, specially UI-wise.<br/>
+    The discovery mechanism needs to be reworked for AU support and faster LV2 access.<br/>
+    Adding plugins and browsing presets will probably change too.<br/>
+    LMMS and VST plugin versions of Carla-Rack are also planned, but no promises for these.<br/>
+    We'll be posting more news as things are developed.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; DISTRHO New release pack (2014-07-16)</span><br/>
     On <i>2014-07-16</i> by<i> falkTX</i>
 </p>

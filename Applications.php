@@ -258,7 +258,7 @@ include_once("includes/header.php");
             <img src="images/ico_debian.png" alt=""/>
             <img src="images/ico_ubuntu.png" alt=""/>
             <img src="images/ico_linux.png" alt=""/>
-       <!-- <img src="images/ico_mac.png" alt=""/> -->
+            <img src="images/ico_mac.png" alt=""/>
             <img src="images/ico_windows.png" alt=""/>
         </p>
     </td><td>
@@ -267,7 +267,7 @@ include_once("includes/header.php");
             <b><a href="<?php echo $ROOT; ?>/Applications:Carla">Carla</a></b><br/>
             Carla is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
             It has some nice features like automation of parameters via MIDI CC and full OSC control.<br/>
-            Currently supports LADSPA, DSSI, LV2, and VST plugin formats, and GIG, SF2 and SFZ sounds banks.<br/>
+            Currently supports LADSPA, DSSI, LV2, and VST2/3 and AU plugin formats, plus GIG, SF2 and SFZ sounds banks.<br/>
             <br/>
         </p>
     </td></tr>
