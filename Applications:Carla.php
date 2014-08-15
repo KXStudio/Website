@@ -12,7 +12,7 @@ include_once("includes/header.php");
     It has some nice features like automation of parameters via MIDI CC (and send output back as MIDI too) and full OSC control.<br/>
 </p>
 <p>
-    Carla currently supports LADSPA (including LRDF), DSSI, LV2, and VST2/3 and AU plugin formats, plus GIG, SF2 and SFZ file support.<br/>
+    Carla currently supports LADSPA (including LRDF), DSSI, LV2, VST2/3 and AU plugin formats, plus GIG, SF2 and SFZ file support.<br/>
     It uses JACK as the default and preferred audio driver but also supports native drivers like ALSA, DirectSound or CoreAudio.<br/>
 </p>
 <p>
