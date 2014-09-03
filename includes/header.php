@@ -1,7 +1,7 @@
 <?php
 $SHOW_NOTE = TRUE;
 
-if (file_exists("/home/falk2/"))
+if (file_exists("/Shared/Personal/"))
 {
     $ROOT = "/kxstudio";
     $SHOW_NOTE = FALSE;
@@ -10,6 +10,30 @@ else
 {
     $ROOT = "";
     $SHOW_NOTE = FALSE;
+}
+
+if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS") {
+    require "donate/config.php";
+    require "donate/connect.php";
+
+    $cur_amount = 0.0;
+
+    if ($db_link) {
+        $sql_donations = mysql_query("SELECT * FROM donations WHERE MONTH(dt) = MONTH(NOW()) AND YEAR(dt) = YEAR(NOW())");
+
+        if (mysql_num_rows($sql_donations)) {
+            while ($sql_row = mysql_fetch_assoc($sql_donations)) {
+                $cur_amount += $sql_row["amount"];
+            }
+        }
+    }
+
+    $cur_percent = $cur_amount / 300.0 * 100.0;
+    $cur_amount  = intval($cur_amount);
+
+    if ($cur_percent > 100.0) {
+        $cur_percent = 100.0;
+    }
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -201,6 +225,13 @@ else
 <?php } else { ?>
     <?php if ($PAGE_TYPE == "PASTE") { ?>
     <a href="http://qbnz.com/highlighter" class="external text" rel="nofollow" target="_blank" style="position:absolute; top:37px; right:5%;"><img src="<?php echo $ROOT; ?>/images/powered-by-geshi.png" alt="Powered by GeSHi"/></a>
+    <?php } else if ($PAGE_TYPE != "DONATIONS") { ?>
+    <div id="donations_container" style="position:absolute; top:40px; right:5%; width: 250px; height: 10px; font-size: 0.8em;">
+        <div id="donations_bar"><div style="width:<?php print_r($cur_percent); ?>%"></div></div>
+    </div>
+    <div style="position:absolute; top:44px; right:5%; width: 270px; height: 10px; font-size: 0.8em; text-align: center;">
+        This month donations: <?php print_r($cur_amount); ?> / 300 &euro;
+    </div>
     <?php } ?>
 
     <div id="subheader" class="container_16">

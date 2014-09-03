@@ -23,8 +23,9 @@ require "donate/connect.php";
 </p>
 
 <?php
+$cur_amount = 0.0;
+
 if ($db_link) {
-$cur_amount    = 0.0;
 $sql_donations = mysql_query("SELECT * FROM donations WHERE MONTH(dt) = MONTH(NOW()) AND YEAR(dt) = YEAR(NOW())");
 
 if (mysql_num_rows($sql_donations)) {

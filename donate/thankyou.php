@@ -1,6 +1,6 @@
 <?php
 $PAGE_TITLE    = "KXStudio : Donations : Thank You";
-$PAGE_TYPE     = "NORMAL";
+$PAGE_TYPE     = "DONATIONS";
 $PAGE_SOURCE_1 = ARRAY("/Donations", "/donate/thankyou");
 $PAGE_SOURCE_2 = ARRAY("Donations", "Thank You");
 include_once("../includes/header.php");
