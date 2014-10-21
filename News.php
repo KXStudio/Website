@@ -13,6 +13,27 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; DISTRHO: New plugins and minor fixing</span><br/>
+    On <i>2014-08-26</i> by<i> falkTX</i>
+</p>
+<p>In this release we bring 4 new Linux plugin ports:<br>
+  - EasySSP<br>
+  - LUFS Meter<br>
+  - Luftikus<br>
+  - Stereo Source Separator<br>
+  (Go to <a href="http://distrho.sourceforge.net/ports" target="_blank">http://distrho.sourceforge.net/ports</a> to see the current list of Linux ports.)
+</p>
+<p>The DPF-based plugins also had some minor fixes:<br>
+  - 3BandEQ/Splitter had its sliders inverted, now fixed<br>
+  - ProM now has pre-compiled linux binaries; UI can be resized by using - and + keys<br>
+  - MVerb knobs order has been fixed<br>
+  - Allow to open UI in LV2 hosts that don't support options feature (Ingen)<br>
+  - Workaround for some VST hosts that don't set sample rate during init (Ardour3 and energyXT)<br>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; The 2nd beta of Carla 2.0 is here!</span><br/>
     On <i>2014-08-15</i> by<i> falkTX</i>
 </p>
