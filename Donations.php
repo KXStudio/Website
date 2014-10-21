@@ -19,6 +19,11 @@ require "donate/connect.php";
     Currently the KXStudio project accepts donations via Flattr or PayPal.<br/>
     You can do a one-time donation or subscribe monthly.<br/>
     In either case, we thank you in advance for any donation you make!<br/>
+</p>
+
+<p>
+    Note that PayPal takes a minimum 5% fee on all donations (10&euro; becomes 9.31&euro;).<br/>
+    You can bypass this fee by sending money directly to falktx@falktx.com as a friend.<br/>
     <br/>
 </p>
 
@@ -26,10 +31,11 @@ require "donate/connect.php";
 $cur_amount = 0.0;
 
 if ($db_link) {
-$sql_donations = mysql_query("SELECT * FROM donations WHERE MONTH(dt) = MONTH(NOW()) AND YEAR(dt) = YEAR(NOW())");
+$sql_donations_month = mysql_query("SELECT * FROM donations WHERE MONTH(dt) = MONTH(NOW()) AND YEAR(dt) = YEAR(NOW())");
+$sql_donations_last5 = mysql_query("SELECT * FROM donations ORDER BY dt DESC LIMIT 5");
 
-if (mysql_num_rows($sql_donations)) {
-    while ($sql_row = mysql_fetch_assoc($sql_donations)) {
+if (mysql_num_rows($sql_donations_month)) {
+    while ($sql_row = mysql_fetch_assoc($sql_donations_month)) {
         $cur_amount += $sql_row["amount"];
      }
 }
@@ -50,7 +56,14 @@ if ($cur_percent > 100.0) {
 <?php } /* $db_link */ ?>
 
 <table>
-<tr><td width="40px;">
+<tr><td width="40px">
+</td><td valign="bottom" width="200px">
+    <b>Last 5 donations:</b><br/>
+    <?php
+        while ($sql_row = mysql_fetch_assoc($sql_donations_last5)) {
+            echo "" . date("Y-m-d", strtotime($sql_row["dt"])) . " - " . $sql_row["amount"] . "&euro;<br/>";
+        }
+    ?>
 </td><td valign="bottom" width="150px">
     <a class="FlattrButton" style="display:none;" href="http://kxstudio.sourceforge.net/"></a>
     <noscript>
@@ -77,9 +90,9 @@ if ($cur_percent > 100.0) {
                 <input type="hidden" name="on0" value="Quantity">Quantity</td></tr>
             <tr><td>
                 <select name="os0">
-                    <option value="Small">Small : €5.00 EUR - monthly</option>
-                    <option value="Medium">Medium : €10.00 EUR - monthly</option>
-                    <option value="Large">Large : €25.00 EUR - monthly</option>
+                    <option value="Small">Small : &euro;5.00 EUR - monthly</option>
+                    <option value="Medium">Medium : &euro;10.00 EUR - monthly</option>
+                    <option value="Large">Large : &euro;25.00 EUR - monthly</option>
                 </select>
             </td></tr>
         </table>
