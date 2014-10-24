@@ -13,6 +13,35 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.0 beta3 something something</span><br/>
+    On <i>2014-10-21</i> by<i> falkTX</i>
+</p>
+<p>
+    internal patchbay mode
+    not available for non-jack drivers
+    for those use the internal carla-patchbay plugin
+    no CV yet sorry
+</p>
+<p>
+    time panel, very incomplete
+</p>
+<p>
+    new openav skin, updated calf and zyn
+    old mode is possible too
+</p>
+<p>
+    carla-lmms, both rack and patchbay
+</p>
+<p>
+    AU plugins working now
+</p>
+<p>
+    fast LV2 discovery, but without plugin checks or testing
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; DISTRHO: New plugins and minor fixing</span><br/>
     On <i>2014-08-26</i> by<i> falkTX</i>
 </p>

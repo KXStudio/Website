@@ -42,6 +42,9 @@ include_once("includes/header.php");
     As such, we recommend you to enable the repositories using the command-line instead. Just follow these steps:<br/>
 </p>
 <pre class="code">
+<span style="color: rgb(110, 110, 110);"># Cleanup previous installations if needed</span>
+sudo rm -f /var/kxstudio/*
+sudo apt-get purge kxstudio-repos<br/>
 <span style="color: rgb(110, 110, 110);"># Install needed tools</span>
 sudo apt-get install software-properties-common wget<br/>
 <span style="color: rgb(110, 110, 110);"># Enable KXStudio repo (press 'Enter' once asked)</span>
