@@ -16,19 +16,23 @@ include_once("includes/header.php");
     It uses JACK as the default and preferred audio driver but also supports native drivers like ALSA, DirectSound or CoreAudio.<br/>
 </p>
 <p>
-    There are 3 types of engine processing:
+    There are 4 types of engine processing:
 </p>
 <ul>
-    <li><b>Multi-client</b>: (JACK driver only)<br/>
-        Every single plugin is exposed as a new JACK client. Audio and MIDI ports are registered as needed.
-    </li>
     <li><b>Single-client</b>: (JACK driver only)<br/>
         Same as Multi-client, except that all JACK ports belong to a single master client.<br/>
         This is needed when a setup doesn't support multi-client JACK apps, such as LADISH.
     </li>
+    <li><b>Multi-client</b>: (JACK driver only)<br/>
+        Every single plugin is exposed as a new JACK client. Audio and MIDI ports are registered as needed.
+    </li>
     <li><b>Rack</b>:<br/>
         Plugins are processed in order, from top to bottom.<br/>
         Plugins with non-stereo audio channels are not supported, but a forced-stereo option is available for Mono ones.
+    </li>
+    <li><b>Patchbay</b>:<br/>
+        Modular patchbay mode, just like in JACK Multi-client and many other modular applications.<br/>
+        Every plugin gets its own canvas group and ports allowing you to interconnect plugin audio and MIDI.
     </li>
 </ul>
 
@@ -66,17 +70,14 @@ include_once("includes/header.php");
 <!-- Release Notes -->
 <h3><span class="mw-headline" id="ReleaseNotes"> Release Notes </span></h3>
 <p>
-    The following are the release notes for 2.0-beta2:
+    The following are the release notes for 2.0-beta3:
 </p>
 <ul>
-    <li>AU plugin support is available on MacOS, but the discovery mechanism fails to find them</li>
+    <li>Carla-Control is not available in the 2.0-beta versions yet.</li>
     <li>Linux release has support for bridging Window plugins using Wine (32bit and 64bit).</li>
     <li>Linux 32bit release will not load 64bit plugins even if ran on a 64bit system</li>
-    <li>MacOS Carla-Rack LV2 plugin fails to show UI</li>
-    <li>MacOS and Windows do not support native widgets in LV2 yet (Cocoa and HWND, respectively)</li>
     <li>MacOS release is 64bit only but it can load 32bit plugins</li>
-    <li>Windows 64bit build doesn't provide GIG and SFZ support, use the 32bit build if you need those</li>
-    <li>Windows builds do not support bridges (ie, 32bit plugins on a 64bit Carla) or Carla as plugin</li>
+    <li>Windows builds do not support bridges (ie, 32bit plugins on a 64bit Carla) or Carla as a plugin</li>
 </ul>
 
 <!-- Download -->
@@ -91,21 +92,21 @@ include_once("includes/header.php");
          Debian/Ubuntu</a> (via KXStudio repositories)<br/>
 </p>
 <p>
-    Pre-compiled binaries are available for Linux, Mac and Windows (version 2.0-beta2).<br/>
+    Pre-compiled binaries are available for Linux, Mac and Windows (version 2.0-beta3).<br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta2b-linux32.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta3b-linux32.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 32bit</a><br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta2b-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta3b-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 64bit</a><br/>
     <img src="images/ico_mac.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta2b-mac.dmg/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta3b-mac.dmg/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          MacOS 64bit</a><br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta2b-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta3c-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 32bit</a><br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta2b-win64.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta3c-win64.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 64bit</a><br/>
 </p>
 <p>

@@ -13,30 +13,112 @@ include_once("includes/header.php");
 </div>
 
 <p>
-    <span style="font-size: 20px">&gt; Carla 2.0 beta3 something something</span><br/>
-    On <i>2014-10-21</i> by<i> falkTX</i>
+    <span style="font-size: 20px">&gt; Carla 2.0 beta3 is here!</span><br/>
+    On <i>2014-10-24</i> by<i> falkTX</i>
 </p>
 <p>
-    internal patchbay mode
-    not available for non-jack drivers
-    for those use the internal carla-patchbay plugin
-    no CV yet sorry
+    Hello again everyone, we're glad to bring to you the 3rd beta of the upcoming Carla 2.0 release.<br/>
+    There have been quite a few nice features implemented since beta2; here are the highlights.
 </p>
+
+<h2>Highlights</h2>
+
+<table><tr><td>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_internal-patchbay.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_internal-patchbay_crop.png" alt="internal-patchbay"/></a>
+</td><td>
+<h3>Internal Patchbay</h3>
 <p>
-    time panel, very incomplete
+  This new engine processing mode is similar to what JACK does for all clients and what other modular applications do.<br/>
+  Every plugin gets its own canvas group and ports allowing you to interconnect plugin audio and MIDI.<br/>
+  You can use this mode to build complex plugin routing scenarios, perhaps involving several layers of rack and patchbays.<br/>
+  <br/>
+  <i>Note that this is currently not available for non-JACK drivers; but for those you can use the internal carla-patchbay plugin.<br/>
+  There's no support for LV2 Control-Voltage ports as of yet, this will be implemented in the next beta together with MIDI-OSC.</i><br/>
 </p>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_vst-plugin.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_vst-plugin_crop.png" alt="new-look"/></a>
+</td><td>
+<h3>Carla as VST plugin (Linux only)</h3>
 <p>
-    new openav skin, updated calf and zyn
-    old mode is possible too
+  With the first beta of Carla 2.0 we introduced Carla as a plugin, which worked as both internal and LV2.<br/>
+  Now Carla is available as a VST plugin too, allowing you to load it all DAWs released for Linux.<br/>
+  There are 4 variants: Rack-Synth, Rack-FX, Patchbay-Synth and Patchbay-FX.<br/>
 </p>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_lmms-plugin.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_lmms-plugin_crop.png" alt="lmms-plugin"/></a>
+</td><td>
+<h3>Carla LMMS Plugin</h3>
 <p>
-    carla-lmms, both rack and patchbay
+  Carla has an LMMS plugin too, as Carla-Patchbay and Carla-Rack instruments.<br/>
+  So finally you can use native softsynths within LMMS!<br/>
+  The carla-lmms plugin code is already in LMMS and will be part of its 1.1 release.<br/>
+  <br/>
+  If you're using the KXStudio repositories and feel like giving it a try simply install carla-git and lmms.<br/>
 </p>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_au-plugins.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_au-plugins_crop.png" alt="au-plugins"/></a>
+</td><td>
+<h3>AU Plugins (MacOS only)</h3>
 <p>
-    AU plugins working now
+  AU plugins are working in Carla now.<br/>
+  Carla's plugin compatibility increases once more.<br/>
 </p>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_updated-skins.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_updated-skins_crop.png" alt="updated-skins"/></a>
+</td><td>
+<h3>New and updated skins</h3>
 <p>
-    fast LV2 discovery, but without plugin checks or testing
+  There's a new OpenAV-style plugin slot skin.<br/>
+  Calf and ZynFX have been updated.<br/>
+  More to come soon.<br/>
+</p>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_no-skins.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_no-skins_crop.png" alt="no-skins"/></a>
+</td><td>
+<h3>Old non-skin mode</h3>
+<p>
+  You can now use the old non-skin mode from Carla 1.x series.<br/>
+  This saves space if you load lots of plugins at once.<br/>
+</p>
+</td></tr></table>
+
+<p><br/></p>
+
+<h3>More stuff</h3>
+<ul>
+  <li>New time panel added, but it's very incomplete.</li>
+  <li>LV2 plugin discovery is now automatic, but without plugin checks or testing.</li>
+  <li>LV2 plugins are fully working on MacOS and Windows, including their native UIs (Cocoa and HWND respectively).</li>
+</ul>
+<p>
+    There will still be 1 or 2 more beta releases before going for a release candidate, so expect more cool stuff soon!<br/>
+</p>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump into the <a href="http://kxstudio.sourceforge.net/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" instead (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump into the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
 </p>
 
 <hr/>
