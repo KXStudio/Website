@@ -30,7 +30,7 @@ include_once("includes/header.php");
     </p>
     <p class="p_extra_spaced">
         <b>MacOS Downloads:</b><br/>
-        &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta3b-mac.dmg/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/carla-2.0beta3b-osx.dmg/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (version 2.0-beta3 for 10.6 or higher)<br/>
     </p>
     <p class="p_extra_spaced">

@@ -100,7 +100,7 @@ include_once("includes/header.php");
         <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta3b-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 64bit</a><br/>
     <img src="images/ico_mac.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta3b-mac.dmg/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/carla-2.0beta3b-osx.dmg/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          MacOS 64bit</a><br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
         <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta3c-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
