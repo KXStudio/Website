@@ -12,7 +12,7 @@ else
     $SHOW_NOTE = FALSE;
 }
 
-if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS") {
+if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPACE") {
     require "donate/config.php";
     require "donate/connect.php";
 
