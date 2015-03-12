@@ -13,6 +13,45 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.0 beta4 is here!</span><br/>
+    On <i>2015-03-12</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone, we're glad to bring to you the 3rd beta of the upcoming Carla 2.0 release.<br/>
+    There have been quite a few nice features implemented since beta2; here are the highlights.
+</p>
+
+<h2>Highlights</h2>
+
+<p>
+    
+</p>
+
+<h3>Special Notes</h3>
+<p>
+    Renaming plugins is currently not safe (unless using Rack mode).
+
+    GIG/SF2/SFZ skin still to be done,
+    and some others...
+
+    Plugin bridges only work on Linux right now.
+    They used to be working for OSX but now stopped due to a OS limitation.
+    This will be fixed in the next beta.
+
+    Windows 64bit shows small console windows when discovering plugins.
+    This is not intended, will hopefully be fixed soon.
+</p>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump into the <a href="http://kxstudio.sourceforge.net/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" instead (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump into the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.0 beta3 is here!</span><br/>
     On <i>2014-10-24</i> by<i> falkTX</i>
 </p>
