@@ -83,7 +83,7 @@ include_once("includes/header.php");
 <!-- Download -->
 <h3><span class="mw-headline" id="Download"> Download </span></h3>
 <p>
-    Carla is available in the KXStudio repositories and ArchLinux AUR (both with 'carla' or 'carla-git' package name).<br/>
+    Carla is available in the KXStudio repositories and ArchLinux AUR (both with 'carla' or 'carla-git' package names).<br/>
     <img src="images/ico_arch.png" alt="" class="img_text_align_spaced"/>
         <a href="https://aur.archlinux.org/packages/carla-git/" class="external text a_bigger_text" rel="nofollow" target="_blank">
          ArchLinux</a> (AUR)<br/>
@@ -92,21 +92,21 @@ include_once("includes/header.php");
          Debian/Ubuntu</a> (via KXStudio repositories)<br/>
 </p>
 <p>
-    Pre-compiled binaries are available for Linux, Mac and Windows (version 2.0-beta3).<br/>
+    Pre-compiled binaries are available for Linux, Mac and Windows (version 2.0-beta4).<br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta3b-linux32.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta4-linux32.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 32bit</a><br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta3b-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta4-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 64bit</a><br/>
     <img src="images/ico_mac.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/carla-2.0beta3b-osx.dmg/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta4-mac.dmg/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          MacOS 64bit</a><br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta3c-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta4-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 32bit</a><br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta3c-win64.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta4-win64.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 64bit</a><br/>
 </p>
 <p>
