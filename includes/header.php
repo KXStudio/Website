@@ -1,7 +1,7 @@
 <?php
 $SHOW_NOTE = TRUE;
 
-if (file_exists("/Shared/Personal/"))
+if (file_exists("/home/falktx/Personal/"))
 {
     $ROOT = "/kxstudio";
     $SHOW_NOTE = FALSE;
@@ -16,7 +16,8 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
     require "donate/config.php";
     require "donate/connect.php";
 
-    $cur_amount = 0.0;
+    $cur_amount  = 0.0;
+    $cur_percent = 0.0;
 
     if ($db_link) {
         $sql_donations = mysql_query("SELECT * FROM donations WHERE MONTH(dt) = MONTH(NOW()) AND YEAR(dt) = YEAR(NOW())");
@@ -26,13 +27,13 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
                 $cur_amount += $sql_row["amount"];
             }
         }
-    }
 
-    $cur_percent = $cur_amount / 300.0 * 100.0;
-    $cur_amount  = intval($cur_amount);
+        $cur_percent = $cur_amount / 300.0 * 100.0;
+        $cur_amount  = intval($cur_amount);
 
-    if ($cur_percent > 100.0) {
-        $cur_percent = 100.0;
+        if ($cur_percent > 100.0) {
+            $cur_percent = 100.0;
+        }
     }
 }
 ?>
@@ -163,11 +164,7 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
 <?php } ?>
 </head>
 
-<?php if ($PAGE_TYPE == "HOME") { ?>
 <body class="mediawiki ltr ns-0 ns-subject skin-bentofluid" style="min-width:1080px" onClick="return bodyClicked();">
-<?php } else { ?>
-<body class="mediawiki ltr ns-0 ns-subject skin-bentofluid" style="min-width:1080px" onClick="return bodyClicked();">
-<?php } ?>
     <!-- Software sub menu -->
     <div id="div_menuSoftware" class="div_menuDropdown">
         <p><a href="<?php echo $ROOT; ?>/Applications"><img src="<?php echo $ROOT; ?>/images/ico_cadence.png" alt=""/> &nbsp; Applications</a></p>

@@ -9,7 +9,7 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <div style="position: absolute; top: 120px; right: 100px;">
-    <a href="http://feeds.launchpad.net/kxstudio/announcements.atom"><img src="images/rss.png" alt="RSS"/></a>
+    <a href="http://kxstudio.sourceforge.net/News/?action=feed"><img src="images/rss.png" alt="RSS"/></a>
 </div>
 
 <p>
@@ -17,30 +17,88 @@ include_once("includes/header.php");
     On <i>2015-03-12</i> by<i> falkTX</i>
 </p>
 <p>
-    Hello again everyone, we're glad to bring to you the 3rd beta of the upcoming Carla 2.0 release.<br/>
-    There have been quite a few nice features implemented since beta2; here are the highlights.
+    Hello again everyone, we're glad to bring to you the 4th beta of the upcoming Carla 2.0 release.<br/>
+    This release was mostly focused on bug-fixing, so there aren't many splashy new features to show compared to previous ones.<br/>
+    Still, here's the highlights.
 </p>
 
 <h2>Highlights</h2>
 
+<table><tr><td>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_internal-patchbay.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_internal-patchbay_crop.png" alt="internal-patchbay"/></a>
+</td><td>
+<h3>Reworked plugin skins</h3>
 <p>
-    
+  ....
+  can collapse
 </p>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_internal-patchbay.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_internal-patchbay_crop.png" alt="internal-patchbay"/></a>
+</td><td>
+<h3>Experimental plugins (new)</h3>
+<p>
+  ....
+</p>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_internal-patchbay.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_internal-patchbay_crop.png" alt="internal-patchbay"/></a>
+</td><td>
+<h3>Can show MOD GUIs</h3>
+<p>
+  ....
+  (on the right setups, not available on pre-compiled binaries)
+</p>
+</td></tr></table>
+
+<p><br/></p>
+
+<h3>More changes</h3>
+
+<ul>
+  <li>LinuxSampler code rework, exposes 2 output parameters, more to come
+    Needs a custom skin</li>
+  <li>OSC port can be static, using CARLA_OSC_TCP_PORT and CARLA_OSC_UDP_PORT environment variables.</li>
+  <li>Time panel can be shown/hidden as needed</li>
+  <li>Internal plugins are back</li>
+  <li>Bridge code rework, much more stable now, MIDI-out working.
+    Still needs some more work, but working nicely now.</li>
+  <li>carla-single is back, and working much better.
+    ....</li>
+  <li>allow new,open&amp;save-as(export) in carla-plugin.</li>
+  <li>start of midi-seq plugin.
+    still experimental, linux only</li>
+  <li>MIDI file saves the contents
+    you can share projects without worrying if the file exists on the other system.</li>
+  <li>zyn with 6 basic params</li>
+  <li>midi chan filter plugin,
+    explain midi-split patchbay.</li>
+  <li>reworked nsm code.</li>
+  <li>cached lv2&amp;au plugins, no need for scanning.
+    working via carla-plugin as well</li>
+  <li>patchbay mode working for non-jack drivers.
+    explain external midi connections.</li>
+  <li>save internal &amp; external connections.</li>
+  <li>lots and lots of bug fixes.</li>
+</ul>
 
 <h3>Special Notes</h3>
-<p>
-    Renaming plugins is currently not safe (unless using Rack mode).
-
-    GIG/SF2/SFZ skin still to be done,
-    and some others...
-
-    Plugin bridges only work on Linux right now.
+<ul>
+  <li>Renaming plugins is currently not safe (unless using Rack mode).</li>
+  <li>GIG/SF2/SFZ skin still to be done,
+    and some others...</li>
+  <li>Plugin bridges only work on Linux right now.
     They used to be working for OSX but now stopped due to a OS limitation.
-    This will be fixed in the next beta.
-
-    Windows 64bit shows small console windows when discovering plugins.
-    This is not intended, will hopefully be fixed soon.
-</p>
+    This will be fixed in the next beta.</li>
+  <li>Windows 64bit shows small console windows when discovering plugins.
+    This is not intended, will hopefully be fixed soon.</li>
+</ul>
 
 <h3>Downloads</h3>
 <p>
