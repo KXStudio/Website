@@ -27,10 +27,11 @@ include_once("includes/header.php");
 <table><tr><td>
 <a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_updated-skins.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_updated-skins_crop.png" alt="updated-skins"/></a>
 </td><td>
-<h3>Reworked plugin skins</h3>
+<h3>Updated plugin skins</h3>
 <p>
-  ....
-  can collapse
+  The plugin skins received some updates once again.<br/>
+  They can now be collapsed in order to take less space.<br/>
+  More to come soon.<br/>
 </p>
 </td></tr></table>
 
@@ -39,9 +40,12 @@ include_once("includes/header.php");
 <table><tr><td>
 <a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_experimental-plugins.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_experimental-plugins_crop.png" alt="experimental-plugins"/></a>
 </td><td>
-<h3>Experimental plugins (new)</h3>
+<h3>New experimental plugins</h3>
 <p>
-  ....
+  Some of the best linux-standalone tools are now working as internal Carla plugins.<br/>
+  And because Carla exports its internal plugins as LV2, you'll also get them as LV2.<br/>
+  Note that this is still experimental!<br/>
+  Also, there's no support whatsoever from the original authors...<br/>
 </p>
 </td></tr></table>
 
@@ -50,9 +54,9 @@ include_once("includes/header.php");
 <table><tr><td>
 <a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_mod-guis.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_mod-guis_crop.png" alt="mod-guis"/></a>
 </td><td>
-<h3>Can show MOD GUIs</h3>
+<h3>MOD GUI Support</h3>
 <p>
-  ....
+  Carla can now show LV2 MOD GUIs.
   (on the right setups, not available on pre-compiled binaries)
 </p>
 </td></tr></table>
