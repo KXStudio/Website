@@ -25,7 +25,7 @@ include_once("includes/header.php");
 <h2>Highlights</h2>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_internal-patchbay.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_internal-patchbay_crop.png" alt="internal-patchbay"/></a>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_updated-skins.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_updated-skins_crop.png" alt="updated-skins"/></a>
 </td><td>
 <h3>Reworked plugin skins</h3>
 <p>
@@ -37,7 +37,7 @@ include_once("includes/header.php");
 <p><br/></p>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_internal-patchbay.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_internal-patchbay_crop.png" alt="internal-patchbay"/></a>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_experimental-plugins.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_experimental-plugins_crop.png" alt="experimental-plugins"/></a>
 </td><td>
 <h3>Experimental plugins (new)</h3>
 <p>
@@ -48,7 +48,7 @@ include_once("includes/header.php");
 <p><br/></p>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_internal-patchbay.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_internal-patchbay_crop.png" alt="internal-patchbay"/></a>
+<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_mod-guis.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_mod-guis_crop.png" alt="mod-guis"/></a>
 </td><td>
 <h3>Can show MOD GUIs</h3>
 <p>
