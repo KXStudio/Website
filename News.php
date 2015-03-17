@@ -66,15 +66,12 @@ include_once("includes/header.php");
 <h3>More changes</h3>
 
 <ul>
-  <li>LinuxSampler code rework, exposes 2 output parameters, more to come
-    Needs a custom skin</li>
-  <li>OSC port can be static, using CARLA_OSC_TCP_PORT and CARLA_OSC_UDP_PORT environment variables.</li>
-  <li>Time panel can be shown/hidden as needed</li>
-  <li>Internal plugins are back</li>
-  <li>Bridge code rework, much more stable now, MIDI-out working.
-    Still needs some more work, but working nicely now.</li>
-  <li>carla-single is back, and working much better.
-    ....</li>
+  <li>LinuxSampler code has been reworked and its working better, it now exposes 2 output parameters.</li>
+  <li>OSC ports can be static, using CARLA_OSC_TCP_PORT and CARLA_OSC_UDP_PORT environment variables.</li>
+  <li>Time panel can be shown/hidden as needed.</li>
+  <li>DISTRHO-based internal plugins are back, specifically 3BandEQ/Splitter, PingPongPan, Nekobi, MVerb, VectorJuice and WoobleJuice.</li>
+  <li>The plugin bridge code has been reworked; bridges are much more stable and MIDI-out is now working.</li>
+  <li>carla-single script is back, allowing to quickly test and run all plugins carla can handle.</li>
   <li>allow new,open&amp;save-as(export) in carla-plugin.</li>
   <li>start of midi-seq plugin.
     still experimental, linux only</li>
