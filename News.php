@@ -56,8 +56,9 @@ include_once("includes/header.php");
 </td><td>
 <h3>MOD GUI Support</h3>
 <p>
-  Carla can now show LV2 MOD GUIs.
-  (on the right setups, not available on pre-compiled binaries)
+  Carla can now show LV2 MOD GUIs, handled like a regular LV2 UI type.<br/>
+  Note that this only works on the right setups (you need MOD-UIto be working first).<br/>
+  It's not available on pre-compiled binaries, but you can get it via the KXStudio repositories.<br/>
 </p>
 </td></tr></table>
 
@@ -67,45 +68,36 @@ include_once("includes/header.php");
 
 <ul>
   <li>LinuxSampler code has been reworked and its working better, it now exposes 2 output parameters.</li>
-  <li>OSC ports can be static, using CARLA_OSC_TCP_PORT and CARLA_OSC_UDP_PORT environment variables.</li>
+  <li>The plugin bridge code has been reworked; bridges are much more stable and MIDI-out is working.</li>
+  <li>NSM code has also been reworked, testers welcome.</li>
+  <li>OSC ports can be static by using CARLA_OSC_TCP_PORT and CARLA_OSC_UDP_PORT environment variables.</li>
   <li>Time panel can be shown/hidden as needed.</li>
   <li>DISTRHO-based internal plugins are back, specifically 3BandEQ/Splitter, PingPongPan, Nekobi, MVerb, VectorJuice and WoobleJuice.</li>
-  <li>The plugin bridge code has been reworked; bridges are much more stable and MIDI-out is now working.</li>
   <li>carla-single script is back, allowing to quickly test and run all plugins.</li>
-  <li>allow new,open&amp;save-as(export) in carla-plugin.</li>
-  <li>start of midi-seq plugin.
-    still experimental, linux only</li>
-  <li>MIDI file saves the contents
-    you can share projects without worrying if the file exists on the other system.</li>
-  <li>zyn with 6 basic params</li>
-  <li>midi chan filter plugin,
-    explain midi-split patchbay.</li>
-  <li>reworked nsm code.</li>
-  <li>cached lv2&amp;au plugins, no need for scanning.
-    working via carla-plugin as well</li>
-  <li>patchbay mode working for non-jack drivers.
-    explain external midi connections.</li>
-  <li>save internal &amp; external connections.</li>
-  <li>lots and lots of bug fixes.</li>
+  <li>Carla as plugin allows new, open and save-as (export) menu actions.</li>
+  <li>Start of new midi-sequencer plugin, still experimental and Linux only for now.</li>
+  <li>MIDI file internal plugin now saves the contents, so you can share projects without worrying if the file exists on the other system.</li>
+  <li>Added 6 basic parameters to the ZynAddSubFX internal plugin.</li>
+  <li>New MIDI channel filter plugin.</li>
+  <li>LV2 and AU plugins are cached and automatically updated when needed, no need for scanning.</li>
+  <li>Patchbay mode is now working for non-JACK drivers.</li>
+  <li>Carla saves internal and external connections, specially useful in patchbay mode.</li>
+  <li>Lots and lots of bug fixes.</li>
 </ul>
 
 <h3>Special Notes</h3>
 <ul>
   <li>Renaming plugins is currently not safe (unless using Rack mode).</li>
-  <li>GIG/SF2/SFZ skin still to be done,
-    and some others...</li>
-  <li>Plugin bridges only work on Linux right now.
-    They used to be working for OSX but now stopped due to a OS limitation.
-    This will be fixed in the next beta.</li>
-  <li>Windows 64bit shows small console windows when discovering plugins.
-    This is not intended, will hopefully be fixed soon.</li>
+  <li>GIG/SF2/SFZ skin still to be done, and some others...</li>
+  <li>Plugin bridges only work on Linux right now. They used to be working for OSX but stopped due to a OS limitation.</li>
+  <li>Windows 64bit builds a shows small console windows when discovering plugins. This is not intended and will hopefully be fixed soon.</li>
 </ul>
 
 <h3>Downloads</h3>
 <p>
     To download Carla binaries or source code, jump into the <a href="http://kxstudio.sourceforge.net/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
     If you're using the KXStudio repositories, you can simply install "carla-git" instead (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
-    Bug reports and feature requests are welcome! Jump into the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+    Bug reports and feature requests are welcome! Jump into the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's GitHub project</a> page for those.
 </p>
 
 <hr/>
