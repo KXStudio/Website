@@ -17,9 +17,9 @@ include_once("includes/header.php");
     On <i>2015-03-12</i> by<i> falkTX</i>
 </p>
 <p>
-    Hello again everyone, we're glad to bring to you the 4th beta of the upcoming Carla 2.0 release.<br/>
-    This release was mostly focused on bug-fixing, so there aren't many splashy new features to show compared to previous ones.<br/>
-    Still, here's the highlights.
+    Hello again everyone, we're glad to bring you the 4th beta of the upcoming Carla 2.0 release.<br/>
+    This release is mostly focused on bug-fixing, so there aren't many splashy new features to show compared to previous ones.<br/>
+    Still, here's the highlights:
 </p>
 
 <h2>Highlights</h2>
@@ -57,7 +57,7 @@ include_once("includes/header.php");
 <h3>MOD GUI Support</h3>
 <p>
   Carla can now show LV2 MOD GUIs, handled like a regular LV2 UI type.<br/>
-  Note that this only works on the right setups (you need MOD-UIto be working first).<br/>
+  Note that this only works on the right setups (you need MOD-UI to be working first).<br/>
   It's not available on pre-compiled binaries, but you can get it via the KXStudio repositories.<br/>
 </p>
 </td></tr></table>
@@ -67,15 +67,15 @@ include_once("includes/header.php");
 <h3>More changes</h3>
 
 <ul>
-  <li>LinuxSampler code has been reworked and its working better, it now exposes 2 output parameters.</li>
+  <li>LinuxSampler code has been reworked and it's working better, it now exposes 2 output parameters.</li>
   <li>The plugin bridge code has been reworked; bridges are much more stable and MIDI-out is working.</li>
   <li>NSM code has also been reworked, testers welcome.</li>
   <li>OSC ports can be static by using CARLA_OSC_TCP_PORT and CARLA_OSC_UDP_PORT environment variables.</li>
   <li>Time panel can be shown/hidden as needed.</li>
   <li>DISTRHO-based internal plugins are back, specifically 3BandEQ/Splitter, PingPongPan, Nekobi, MVerb, VectorJuice and WoobleJuice.</li>
-  <li>carla-single script is back, allowing to quickly test and run all plugins.</li>
+  <li>carla-single script is back, allowing you to quickly test and run all plugins.</li>
   <li>Carla as plugin allows new, open and save-as (export) menu actions.</li>
-  <li>Start of new midi-sequencer plugin, still experimental and Linux only for now.</li>
+  <li>Start of new midi-sequencer plugin, still experimental and Linux-only for now.</li>
   <li>MIDI file internal plugin now saves the contents, so you can share projects without worrying if the file exists on the other system.</li>
   <li>Added 6 basic parameters to the ZynAddSubFX internal plugin.</li>
   <li>New MIDI channel filter plugin.</li>
@@ -87,7 +87,7 @@ include_once("includes/header.php");
 
 <h3>Special Notes</h3>
 <ul>
-  <li>Renaming plugins is currently not safe (unless using Rack mode).</li>
+  <li>Renaming plugins currently is not safe (unless using Rack mode).</li>
   <li>GIG/SF2/SFZ skin still to be done, and some others...</li>
   <li>Plugin bridges only work on Linux right now. They used to be working for OSX but stopped due to a OS limitation.</li>
   <li>Windows 64bit builds a shows small console windows when discovering plugins. This is not intended and will hopefully be fixed soon.</li>
