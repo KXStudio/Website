@@ -8,7 +8,7 @@ include_once("includes/header.php");
 
 <div class="box box-description">
     <p>
-        The KXStudio repositories support all Debian versions since Wheezy and Ubuntu 12.04 or above.<br/>
+        The KXStudio repositories support all Debian versions since <b>Jessie</b> and Ubuntu <b>14.04</b> or above.<br/>
         They should work on all Debian-based distributions and variants, but the way to enable them will differ.<br/>
         After the repositories are enabled and the system updated, we recommend you to install the "kxstudio-default-settings" package.<br/>
     </p>
@@ -22,47 +22,43 @@ include_once("includes/header.php");
     <p>
         Below is information on how to enable the repositories.
     </p>
-    </div>
-<hr/>
-
-<h3><span class="mw-headline" id="Debian"><img src="images/ico_debian.png" class="img_text_align" alt=""/> Debian</h3>
-<p>
-    Debian users can enable our repositories by installing this deb file:
-        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_7.2.0%7Ekxstudio1_all.deb" class="external free" rel="nofollow" target="_blank">kxstudio-repos.deb</a>.<br/>
-    If you're running Debian Wheezy, consider installing the backports repo package as well:
-        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-backports_7.2.0%7Ekxstudio1_all.deb" class="external free" rel="nofollow" target="_blank">kxstudio-repos-backports.deb</a>.
-        (*<i>only</i>* for wheezy)<br/>
-</p>
+</div>
 
 <hr/>
 
-<h3><span class="mw-headline" id="Ubuntu"><img src="images/ico_ubuntu.png" class="img_text_align" alt=""/> Ubuntu</span></h3>
+<h3><span class="mw-headline">
+<img src="images/ico_debian.png" class="img_text_align" alt=""/> Debian / <img src="images/ico_ubuntu.png" class="img_text_align" alt=""/> Ubuntu
+</span></h3>
+
 <p>
-    Ubuntu users can also install deb files for the repositories, but different files are needed for each version.<br/>
-    As such, we recommend you to enable the repositories using the command-line instead. Just follow these steps:<br/>
+    All Debian and Ubuntu users can enable our repositories by installing this deb file:
+        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_8.1.0%7Ekxstudio1_all.deb" class="free" rel="nofollow">kxstudio-repos.deb</a>.<br/>
+    You can install it manually by running this:<br/>
 </p>
-<pre class="code">
-<span style="color: rgb(110, 110, 110);"># Cleanup previous installations if needed</span>
-sudo rm -f /var/kxstudio/*
-sudo apt-get purge kxstudio-repos<br/>
-<span style="color: rgb(110, 110, 110);"># Install needed tools</span>
-sudo apt-get install software-properties-common wget<br/>
-<span style="color: rgb(110, 110, 110);"># Enable KXStudio repo (press 'Enter' once asked)</span>
-sudo add-apt-repository ppa:kxstudio-debian/kxstudio<br/>
-<span style="color: rgb(110, 110, 110);"># Update software sources</span>
-sudo apt-get update<br/>
-<span style="color: rgb(110, 110, 110);"># Install kxstudio-repos</span>
-sudo apt-get install kxstudio-repos<br/>
-<span style="color: rgb(110, 110, 110);"># Update software sources again</span>
-sudo apt-get update
+<pre>
+<span style="color: rgb(110, 110, 110);"># Download package file</span>
+wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_8.1.0~kxstudio1_all.deb
+
+<span style="color: rgb(110, 110, 110);"># Install it</span>
+sudo dpkg -i kxstudio-repos_8.1.0~kxstudio1_all.deb
 </pre>
 
+<p><br/>
+    This package contains:
+</p>
+<ul>
+    <li>Various sources files that activates the separate repositories</li>
+    <li>GPG keys used for package and repository signing</li>
+    <li>A post-install script that enables an extra, Ubuntu-specific repository</li>
+</ul>
+
 <hr/>
 
-<h3><span class="mw-headline" id="Ubuntu"><img src="images/ico_linux.png" class="img_text_align" alt=""/> Others</span></h3>
 <p>
-    Users on other linux distributions should enable the repositories that best match their distro.<br/>
-    Remember that KXStudio offers repositories only for Debian and its based systems.<br/>
+    <b>NOTE:</b><br/>
+    Please do not copy these instructions to your own website, wiki, etc.<br/>
+    The package file link might change at anytime, and so the instructions themselves.<br/>
+    Always refer to this exact page for how-to enable the KXStudio repositories please.
 </p>
 
 <p><br/></p>

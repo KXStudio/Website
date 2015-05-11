@@ -67,19 +67,6 @@ include_once("includes/header.php");
 <!-- <li></li> -->
 <!-- </ul> -->
 
-<!-- Release Notes -->
-<h3><span class="mw-headline" id="ReleaseNotes"> Release Notes </span></h3>
-<p>
-    The following are the release notes for 2.0-beta3:
-</p>
-<ul>
-    <li>Carla-Control is not available in the 2.0-beta versions yet.</li>
-    <li>Linux release has support for bridging Window plugins using Wine (32bit and 64bit).</li>
-    <li>Linux 32bit release will not load 64bit plugins even if ran on a 64bit system</li>
-    <li>MacOS release is 64bit only but it can load 32bit plugins</li>
-    <li>Windows builds do not support bridges (ie, 32bit plugins on a 64bit Carla) or Carla as a plugin</li>
-</ul>
-
 <!-- Download -->
 <h3><span class="mw-headline" id="Download"> Download </span></h3>
 <p>
