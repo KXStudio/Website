@@ -32,15 +32,15 @@ include_once("includes/header.php");
 
 <p>
     All Debian and Ubuntu users can enable our repositories by installing this deb file:
-        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_8.2.2%7Ekxstudio1_all.deb" class="free" rel="nofollow">kxstudio-repos.deb</a>.<br/>
+        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_8.2.3%7Ekxstudio1_all.deb" class="free" rel="nofollow">kxstudio-repos.deb</a>.<br/>
     You can install it manually by running this:<br/>
 </p>
 <pre>
 <span style="color: rgb(110, 110, 110);"># Download package file</span>
-wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_8.2.2~kxstudio1_all.deb
+wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_8.2.3~kxstudio1_all.deb
 
 <span style="color: rgb(110, 110, 110);"># Install it</span>
-sudo dpkg -i kxstudio-repos_8.2.2~kxstudio1_all.deb
+sudo dpkg -i kxstudio-repos_8.2.3~kxstudio1_all.deb
 </pre>
 
 <p><br/>
