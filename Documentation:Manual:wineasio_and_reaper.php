@@ -54,7 +54,7 @@ WineASIO provides a few options that can be configured within Cadence. These opt
 
 <p>
 
-(Cadence WineASIO settings screenshot: <a href="http://kxstudio.sourceforge.net/screenshots/cadence4.png" class="urlextern" title="http://kxstudio.sourceforge.net/screenshots/cadence4.png"  rel="nofollow">http://kxstudio.sourceforge.net/screenshots/cadence4.png</a>)
+(Cadence WineASIO settings screenshot: <a href="<?php echo $ROOT; ?>/screenshots/cadence4.png" class="urlextern" title="<?php echo $ROOT; ?>/screenshots/cadence4.png"  rel="nofollow"><?php echo $ROOT; ?>/screenshots/cadence4.png</a>)
 </p>
 
 </div>

@@ -45,11 +45,6 @@ Some hardware manufacturers, particularly among wireless cards and graphics acce
 <div class="level2">
 
 <p>
-
-While all KXStudio PPA listings are otherwise strictly <acronym title="Free/Libre and Open Source Software">FLOSS</acronym>, KXStudio includes non-free extras kept in a segregated repository. The packages are listed in Muon Package Manager <em>By Origin</em> under “KXStudio (Extra)”. In the software sources, the repository is “<a href="http://kxstudio.sourceforge.net/repo/" class="urlextern" title="http://kxstudio.sourceforge.net/repo/"  rel="nofollow">http://kxstudio.sourceforge.net/repo/</a> precise free non-free”. 
-</p>
-
-<p>
 The KXStudio non-free repository includes the following:
 
 </p>
@@ -101,7 +96,7 @@ To remove non-free software from the package listings, choose “Configure Softw
 </p>
 
 <p>
-If you want to use strictly 100% Free Software, including even the strictly-<acronym title="Free/Libre and Open Source Software">FLOSS</acronym> Linux-libre kernel, consider <a href="http://trisquel.info/" class="urlextern" title="http://trisquel.info/"  rel="nofollow">Trisquel</a>, which is based on Ubuntu yet is certified by the Free Software Foundation. You can then add the main KXStudio-Team PPAs following the same <a href="http://kxstudio.sourceforge.net/Documentation:Ubuntu:Upgrade" class="urlextern" title="http://kxstudio.sourceforge.net/Documentation:Ubuntu:Upgrade"  rel="nofollow">instructions</a> as for other Ubuntu-based systems. Although this should work, it is not officially supported at this time.
+If you want to use strictly 100% Free Software, including even the strictly-<acronym title="Free/Libre and Open Source Software">FLOSS</acronym> Linux-libre kernel, consider <a href="http://trisquel.info/" class="urlextern" title="http://trisquel.info/"  rel="nofollow">Trisquel</a>, which is based on Ubuntu yet is certified by the Free Software Foundation. You can then add the main KXStudio-Team PPAs following the same <a href="<?php echo $ROOT; ?>/Documentation:Ubuntu:Upgrade" class="urlextern" title="<?php echo $ROOT; ?>/Documentation:Ubuntu:Upgrade"  rel="nofollow">instructions</a> as for other Ubuntu-based systems. Although this should work, it is not officially supported at this time.
 </p>
 
 <p>

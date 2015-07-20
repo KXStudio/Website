@@ -51,24 +51,24 @@ for page in manualPages:
 
     # custom mods
     readPart8 = readPart7.replace("http://www.wiki.linuxmusicians.com/lib/exe/detail.php?id=jack_configuration&amp;cache=cache&amp;media=cadence-jack-settings.png",
-                                  "http://kxstudio.sourceforge.net/screenshots/cadence-jacksettings2.png")
+                                  "<?php echo $ROOT; ?>/screenshots/cadence-jacksettings2.png")
     readPart8 = readPart8.replace("http://www.wiki.linuxmusicians.com/lib/exe/fetch.php?w=&amp;h=&amp;cache=cache&amp;media=cadence-jack-settings.png",
-                                  "http://kxstudio.sourceforge.net/screenshots/cadence-jacksettings2.png")
+                                  "<?php echo $ROOT; ?>/screenshots/cadence-jacksettings2.png")
 
     readPart8 = readPart8.replace("http://www.wiki.linuxmusicians.com/lib/exe/detail.php?id=cadence_introduction&amp;cache=cache&amp;media=cadence.png",
-                                  "http://kxstudio.sourceforge.net/screenshots/cadence1.png")
+                                  "<?php echo $ROOT; ?>/screenshots/cadence1.png")
     readPart8 = readPart8.replace("http://www.wiki.linuxmusicians.com/lib/exe/fetch.php?w=&amp;h=&amp;cache=cache&amp;media=cadence.png",
-                                  "http://kxstudio.sourceforge.net/screenshots/cadence1.png")
+                                  "<?php echo $ROOT; ?>/screenshots/cadence1.png")
 
     readPart8 = readPart8.replace("http://www.wiki.linuxmusicians.com/lib/exe/detail.php?id=simple_claudia_studio&amp;cache=cache&amp;media=claudia2.png",
-                                  "http://kxstudio.sourceforge.net/screenshots/claudia-qtractor.png")
+                                  "<?php echo $ROOT; ?>/screenshots/claudia-qtractor.png")
     readPart8 = readPart8.replace("http://www.wiki.linuxmusicians.com/lib/exe/fetch.php?w=&amp;h=&amp;cache=cache&amp;media=claudia2.png",
-                                  "http://kxstudio.sourceforge.net/screenshots/claudia-qtractor.png")
+                                  "<?php echo $ROOT; ?>/screenshots/claudia-qtractor.png")
 
     readPart8 = readPart8.replace("http://www.wiki.linuxmusicians.com/lib/exe/detail.php?id=alsa_and_kxstudio&amp;cache=cache&amp;media=kmixer.png",
-                                  "http://kxstudio.sourceforge.net/screenshots/kmix.png")
+                                  "<?php echo $ROOT; ?>/screenshots/kmix.png")
     readPart8 = readPart8.replace("http://www.wiki.linuxmusicians.com/lib/exe/fetch.php?w=&amp;h=&amp;cache=cache&amp;media=kmixer.png",
-                                  "http://kxstudio.sourceforge.net/screenshots/kmix.png")
+                                  "<?php echo $ROOT; ?>/screenshots/kmix.png")
 
     readPart8 = readPart8.replace(" The &#039;UAC3553B&#039; tab displays controls for a USB audio device whilst &#039;Playback Streams&#039; can be ignored unless you are using PulseAudio.",
                                   "")

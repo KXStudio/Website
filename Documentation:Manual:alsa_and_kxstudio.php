@@ -32,7 +32,7 @@ If you have a scrollwheel function on a mouse or trackpad, you can hover over th
 </p>
 
 <p>
-<a href="http://kxstudio.sourceforge.net/screenshots/kmix.png" class="media" title="kmixer.png"><img src="http://kxstudio.sourceforge.net/screenshots/kmix.png" class="media" title="kmix mixer" alt="kmix mixer" /></a>
+<a href="<?php echo $ROOT; ?>/screenshots/kmix.png" class="media" title="kmixer.png"><img src="<?php echo $ROOT; ?>/screenshots/kmix.png" class="media" title="kmix mixer" alt="kmix mixer" /></a>
 </p>
 
 <p>

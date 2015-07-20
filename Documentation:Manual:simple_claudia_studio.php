@@ -66,7 +66,7 @@ We want this studio to automatically connect the outputs of alsa2jack (which out
 </p>
 
 <p>
-<a href="http://kxstudio.sourceforge.net/screenshots/claudia-qtractor.png" class="media" title="claudia2.png"><img src="http://kxstudio.sourceforge.net/screenshots/claudia-qtractor.png" class="media" title="Simple Claudia Studio example config" alt="Simple Claudia Studio example config" /></a>
+<a href="<?php echo $ROOT; ?>/screenshots/claudia-qtractor.png" class="media" title="claudia2.png"><img src="<?php echo $ROOT; ?>/screenshots/claudia-qtractor.png" class="media" title="Simple Claudia Studio example config" alt="Simple Claudia Studio example config" /></a>
 </p>
 
 </div>

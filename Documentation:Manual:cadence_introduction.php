@@ -14,7 +14,7 @@ Cadence controls and monitors various Linux sound systems as well as audio-relat
 </p>
 
 <p>
-<a href="http://kxstudio.sourceforge.net/screenshots/cadence1.png" class="media" title="cadence.png"><img src="http://kxstudio.sourceforge.net/screenshots/cadence1.png" class="media" alt="" /></a>
+<a href="<?php echo $ROOT; ?>/screenshots/cadence1.png" class="media" title="cadence.png"><img src="<?php echo $ROOT; ?>/screenshots/cadence1.png" class="media" alt="" /></a>
 </p>
 
 </div>

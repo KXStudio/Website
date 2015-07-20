@@ -24,7 +24,7 @@ Download the KXStudio Live-DVD images from:
 </p>
 
 <p>
-<a href="http://kxstudio.sourceforge.net/Downloads#LiveDVD" class="urlextern" title="http://kxstudio.sourceforge.net/Downloads#LiveDVD"  rel="nofollow">http://kxstudio.sourceforge.net/Downloads#LiveDVD</a>
+<a href="<?php echo $ROOT; ?>/Downloads#LiveDVD" class="urlextern" title="<?php echo $ROOT; ?>/Downloads#LiveDVD"  rel="nofollow"><?php echo $ROOT; ?>/Downloads#LiveDVD</a>
 </p>
 
 <p>

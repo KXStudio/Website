@@ -24,7 +24,7 @@ For more info on the KXStudio applications such as Cadence, Claudia and Catia
 </p>
 
 <p>
-<a href="http://kxstudio.sourceforge.net/Applications" class="urlextern" title="http://kxstudio.sourceforge.net/Applications"  rel="nofollow">http://kxstudio.sourceforge.net/Applications</a>
+<a href="<?php echo $ROOT; ?>/Applications" class="urlextern" title="<?php echo $ROOT; ?>/Applications"  rel="nofollow"><?php echo $ROOT; ?>/Applications</a>
 </p>
 
 </div>

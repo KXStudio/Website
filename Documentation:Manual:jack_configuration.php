@@ -14,7 +14,7 @@ Most of JACK&#039;s important configuration options are set within the Driver ta
 </p>
 
 <p>
-<a href="http://kxstudio.sourceforge.net/screenshots/cadence-jacksettings2.png" class="media" title="cadence-jack-settings.png"><img src="http://kxstudio.sourceforge.net/screenshots/cadence-jacksettings2.png" class="media" title="JACK Settings" alt="JACK Settings" /></a>
+<a href="<?php echo $ROOT; ?>/screenshots/cadence-jacksettings2.png" class="media" title="cadence-jack-settings.png"><img src="<?php echo $ROOT; ?>/screenshots/cadence-jacksettings2.png" class="media" title="JACK Settings" alt="JACK Settings" /></a>
 </p>
 
 </div>

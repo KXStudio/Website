@@ -9,7 +9,7 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <div style="position: absolute; top: 120px; right: 100px;">
-    <a href="http://kxstudio.sourceforge.net/News/?action=feed"><img src="images/rss.png" alt="RSS"/></a>
+    <a href="<?php echo $ROOT; ?>/News/?action=feed"><img src="images/rss.png" alt="RSS"/></a>
 </div>
 
 <p>
@@ -25,7 +25,7 @@ include_once("includes/header.php");
 <h2>Highlights</h2>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_updated-skins.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_updated-skins_crop.png" alt="updated-skins"/></a>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta4_updated-skins.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta4_updated-skins_crop.png" alt="updated-skins"/></a>
 </td><td>
 <h3>Updated plugin skins</h3>
 <p>
@@ -38,7 +38,7 @@ include_once("includes/header.php");
 <p><br/></p>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_experimental-plugins.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_experimental-plugins_crop.png" alt="experimental-plugins"/></a>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta4_experimental-plugins.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta4_experimental-plugins_crop.png" alt="experimental-plugins"/></a>
 </td><td>
 <h3>New experimental plugins</h3>
 <p>
@@ -52,7 +52,7 @@ include_once("includes/header.php");
 <p><br/></p>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_mod-guis.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta4_mod-guis_crop.png" alt="mod-guis"/></a>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta4_mod-guis.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta4_mod-guis_crop.png" alt="mod-guis"/></a>
 </td><td>
 <h3>MOD GUI Support</h3>
 <p>
@@ -95,7 +95,7 @@ include_once("includes/header.php");
 
 <h3>Downloads</h3>
 <p>
-    To download Carla binaries or source code, jump into the <a href="http://kxstudio.sourceforge.net/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    To download Carla binaries or source code, jump into the <a href="<?php echo $ROOT; ?>/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
     If you're using the KXStudio repositories, you can simply install "carla-git" instead (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
     Bug reports and feature requests are welcome! Jump into the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's GitHub project</a> page for those.
 </p>
@@ -114,7 +114,7 @@ include_once("includes/header.php");
 <h2>Highlights</h2>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_internal-patchbay.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_internal-patchbay_crop.png" alt="internal-patchbay"/></a>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta3_internal-patchbay.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta3_internal-patchbay_crop.png" alt="internal-patchbay"/></a>
 </td><td>
 <h3>Internal Patchbay</h3>
 <p>
@@ -130,7 +130,7 @@ include_once("includes/header.php");
 <p><br/></p>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_vst-plugin.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_vst-plugin_crop.png" alt="new-look"/></a>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta3_vst-plugin.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta3_vst-plugin_crop.png" alt="new-look"/></a>
 </td><td>
 <h3>Carla as VST plugin (Linux only)</h3>
 <p>
@@ -143,7 +143,7 @@ include_once("includes/header.php");
 <p><br/></p>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_lmms-plugin.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_lmms-plugin_crop.png" alt="lmms-plugin"/></a>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta3_lmms-plugin.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta3_lmms-plugin_crop.png" alt="lmms-plugin"/></a>
 </td><td>
 <h3>Carla LMMS Plugin</h3>
 <p>
@@ -158,7 +158,7 @@ include_once("includes/header.php");
 <p><br/></p>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_au-plugins.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_au-plugins_crop.png" alt="au-plugins"/></a>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta3_au-plugins.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta3_au-plugins_crop.png" alt="au-plugins"/></a>
 </td><td>
 <h3>AU Plugins (MacOS only)</h3>
 <p>
@@ -170,7 +170,7 @@ include_once("includes/header.php");
 <p><br/></p>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_updated-skins.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_updated-skins_crop.png" alt="updated-skins"/></a>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta3_updated-skins.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta3_updated-skins_crop.png" alt="updated-skins"/></a>
 </td><td>
 <h3>New and updated skins</h3>
 <p>
@@ -183,7 +183,7 @@ include_once("includes/header.php");
 <p><br/></p>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_no-skins.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta3_no-skins_crop.png" alt="no-skins"/></a>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta3_no-skins.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta3_no-skins_crop.png" alt="no-skins"/></a>
 </td><td>
 <h3>Old non-skin mode</h3>
 <p>
@@ -206,7 +206,7 @@ include_once("includes/header.php");
 
 <h3>Downloads</h3>
 <p>
-    To download Carla binaries or source code, jump into the <a href="http://kxstudio.sourceforge.net/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    To download Carla binaries or source code, jump into the <a href="<?php echo $ROOT; ?>/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
     If you're using the KXStudio repositories, you can simply install "carla-git" instead (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
     Bug reports and feature requests are welcome! Jump into the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
 </p>
@@ -241,7 +241,7 @@ include_once("includes/header.php");
 <p>
     The Carla Plugin Host 2.0 beta2 release is finally here!<br/>
     This release was slightly delayed in order to ensure plugin bridges were working properly.<br/>
-    If you haven't heard about the Carla 2.x series do so <a href="http://kxstudio.sourceforge.net/News/?action=view&url=the-first-carla-20-beta-is-here" class="external free" rel="nofollow" target="_blank">here</a>.
+    If you haven't heard about the Carla 2.x series do so <a href="<?php echo $ROOT; ?>/News/?action=view&url=the-first-carla-20-beta-is-here" class="external free" rel="nofollow" target="_blank">here</a>.
 </p>
 <p>
     In short, this release makes plugin bridges actually work and it's the first to support MacOS (>= 10.6).<br/>
@@ -318,10 +318,10 @@ include_once("includes/header.php");
 </p>
 <p>
     <b>Here's JackAss loaded in FL Studio:</b><br/><br/>
-    <a href="http://kxstudio.sourceforge.net/screenshots/news/jackass_flstudio.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/jackass_flstudio_crop.png" alt=""/></a><br/><br/>
+    <a href="<?php echo $ROOT; ?>/screenshots/news/jackass_flstudio.png"><img src="<?php echo $ROOT; ?>/screenshots/news/jackass_flstudio_crop.png" alt=""/></a><br/><br/>
     <br/>
     <b>And an example setup in Carla for it:</b><br/><br/>
-    <a href="http://kxstudio.sourceforge.net/screenshots/news/jackass_carla.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/jackass_carla_crop.png" alt=""/></a><br/><br/>
+    <a href="<?php echo $ROOT; ?>/screenshots/news/jackass_carla.png"><img src="<?php echo $ROOT; ?>/screenshots/news/jackass_carla_crop.png" alt=""/></a><br/><br/>
 </p>
 <p>
     JackAss sends the notes from the host to its JACK-MIDI port.<br/>
@@ -355,7 +355,7 @@ include_once("includes/header.php");
     Today the first beta is released, and we'll show you what to expect when the final version arrives.<br/>
 </p>
 <p>
-    To download binaries or source code, jump into the <a href="http://kxstudio.sourceforge.net/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    To download binaries or source code, jump into the <a href="<?php echo $ROOT; ?>/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
     If you're using the KXStudio repositories, you can simply install "carla-git" and "carla-plugins-lv2" instead.<br/>
     Bug reports and feature requests are welcome! Jump into the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
 </p>
@@ -367,7 +367,7 @@ include_once("includes/header.php");
 <h2>Highlights</h2>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_canvas-integration.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_canvas-integration_crop.png" alt="new-look"/></a>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta_canvas-integration.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta_canvas-integration_crop.png" alt="new-look"/></a>
 </td><td>
 <h3>Canvas Integration</h3>
 <p>
@@ -380,7 +380,7 @@ include_once("includes/header.php");
 <p><br/></p>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_newlook.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_newlook_crop.png" alt="new-look"/></a>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta_newlook.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta_newlook_crop.png" alt="new-look"/></a>
 </td><td>
 <h3>New Look</h3>
 <p>
@@ -393,7 +393,7 @@ include_once("includes/header.php");
 <p><br/></p>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_carla-as-plugin.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_carla-as-plugin_crop.png" alt="new-look"/></a>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta_carla-as-plugin.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta_carla-as-plugin_crop.png" alt="new-look"/></a>
 </td><td>
 <h3>Carla-Rack as a Plugin</h3>
 <p>
@@ -406,7 +406,7 @@ include_once("includes/header.php");
 <p><br/></p>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_carla-rack-lv2.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_carla-rack-lv2_crop.png" alt="new-look"/></a>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta_carla-rack-lv2.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta_carla-rack-lv2_crop.png" alt="new-look"/></a>
 </td><td>
 <h3>Internal plugins as LV2</h3>
 <p>
@@ -419,7 +419,7 @@ include_once("includes/header.php");
 <p><br/></p>
 
 <table><tr><td>
-<a href="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_win32-bridge.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-beta_win32-bridge_crop.png" alt="new-look"/></a>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta_win32-bridge.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta_win32-bridge_crop.png" alt="new-look"/></a>
 </td><td>
 <h3>Plugin Bridges</h3>
 <p>
@@ -453,14 +453,14 @@ include_once("includes/header.php");
     On <i>2014-04-10</i> by<i> falkTX</i>
 </p>
 <p>
-    <img src="http://kxstudio.sourceforge.net/images/repos.png" alt="" style="float:left;"/>
+    <img src="<?php echo $ROOT; ?>/images/repos.png" alt="" style="float:left;"/>
     The KXStudio repositories are now ready for Debian and its derivatives (including the upcoming Ubuntu 14.04).<br/>
     They should work for all Debian versions since Wheezy and Ubuntu 12.04 or above.<br/>
-    See the <a href="http://kxstudio.sourceforge.net/Repositories">Repositories section</a> for more information and how to enable them.<br/>
+    See the <a href="<?php echo $ROOT; ?>/Repositories">Repositories section</a> for more information and how to enable them.<br/>
 </p>
 <p>
-    There's a list of available applications in the repository <a href="http://kxstudio.sourceforge.net/Repositories:Applications">here</a>
-        and plugins <a href="http://kxstudio.sourceforge.net/Repositories:Plugins">here</a>.<br/>
+    There's a list of available applications in the repository <a href="<?php echo $ROOT; ?>/Repositories:Applications">here</a>
+        and plugins <a href="<?php echo $ROOT; ?>/Repositories:Plugins">here</a>.<br/>
     These 2 lists will quickly grow as more stuff is added in the repositories.<br/>
 </p>
 <p><br/></p>
@@ -471,7 +471,7 @@ include_once("includes/header.php");
     Please report any issues regarding packages <a href="https://github.com/KXStudio/KXStudio/issues" class="external free" rel="nofollow" target="_blank">here</a>.<br/>
 </p>
 <p>
-    If you use the repositories, please donate to help keep packager(s) motivated. See <a href="http://kxstudio.sourceforge.net/Donations">http://kxstudio.sourceforge.net/Donations</a>.<br/>
+    If you use the repositories, please donate to help keep packager(s) motivated. See <a href="<?php echo $ROOT; ?>/Donations"><?php echo $ROOT; ?>/Donations</a>.<br/>
     All this month donations will go to ensure falkTX has a good trip to the Linux Audio Conference next month!<br/>
     <br/>
 </p>
@@ -543,7 +543,7 @@ include_once("includes/header.php");
     For example, the <b>plugin edit dialog</b> now looks like this:
 </p>
 <p>
-    <img src="http://kxstudio.sourceforge.net/screenshots/news/carla-2.0-report_edit-dialog.png" alt=""/>
+    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-report_edit-dialog.png" alt=""/>
 </p>
 <p>
     As seen the image, the user will be able to use "Stereo Balance" or "Mono Panning".<br/>
@@ -573,7 +573,7 @@ include_once("includes/header.php");
 <p>
     First of, a new release of the <b>KXStudio Live-DVD</b> is now available.<br/>
     This is a bug-fix for the 12.04.x series, which current users should already have if their systems are up to date.<br/>
-    Checkout the <a href="http://kxstudio.sourceforge.net/Documentation:KXStudio12043:About">About</a> or <a href="http://kxstudio.sourceforge.net/Documentation:KXStudio12043:ReleaseNotes">Release Notes</a> to find out more about this release.
+    Checkout the <a href="<?php echo $ROOT; ?>/Documentation:KXStudio12043:About">About</a> or <a href="<?php echo $ROOT; ?>/Documentation:KXStudio12043:ReleaseNotes">Release Notes</a> to find out more about this release.
 </p>
 <p>
     Several <b>new versions of Carla</b> have been released since its first announcement, the last one currently being 1.2.2.<br/>
@@ -593,7 +593,7 @@ include_once("includes/header.php");
 </p>
 <p>
     Oh, and the KXStudio website is currently being redone a little.<br/>
-    Give it a visit now! <a href="http://kxstudio.sourceforge.net/">http://kxstudio.sourceforge.net/</a>
+    Give it a visit now! <a href="<?php echo $ROOT; ?>/"><?php echo $ROOT; ?>/</a>
 </p>
 
 <hr/>
@@ -604,7 +604,7 @@ include_once("includes/header.php");
 </p>
 <p>
     After more than 2 years in development, here it is - the first stable release of Carla is now available!<br/>
-    <a href="http://kxstudio.sourceforge.net/screenshots/carla.png"><img src="http://kxstudio.sourceforge.net/screenshots/carla.png" alt="carla.png"/></a><br/>
+    <a href="<?php echo $ROOT; ?>/screenshots/carla.png"><img src="<?php echo $ROOT; ?>/screenshots/carla.png" alt="carla.png"/></a><br/>
 </p>
 <p>
     Carla Plugin Host, or just Carla, is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
@@ -616,18 +616,18 @@ include_once("includes/header.php");
 </p>
 <p>
     We currently release source code plus Windows and Linux binaries (focus goes into the Linux version).<br/>
-    Downloads available at the usual place, <a href="http://kxstudio.sourceforge.net/Downloads#Binaries">KXStudio Downloads</a>.<br/>
+    Downloads available at the usual place, <a href="<?php echo $ROOT; ?>/Downloads#Binaries">KXStudio Downloads</a>.<br/>
 </p>
 <p>
-    For more information about Carla check its own application page <a href="http://kxstudio.sourceforge.net/Applications:Carla">here</a>.<br/>
+    For more information about Carla check its own application page <a href="<?php echo $ROOT; ?>/Applications:Carla">here</a>.<br/>
     We'll be updating that page in the next few days, with some tutorials and workflow videos as well, so stay tuned!<br/>
 </p>
 <p>
     You can follow the release discussion over at <a href="https://linuxmusicians.com/viewtopic.php?f=24&t=11249" class="external free" rel="nofollow">LinuxMusicians forums</a>.<br/>
-    If you find this application useful and/or want to help further development, please consider a <a href="http://kxstudio.sourceforge.net/Donations">donation</a>.<br/>
+    If you find this application useful and/or want to help further development, please consider a <a href="<?php echo $ROOT; ?>/Donations">donation</a>.<br/>
 </p>
 
-<a href="http://kxstudio.sourceforge.net/"></a>
+<a href="<?php echo $ROOT; ?>/"></a>
 
 <hr/>
 
@@ -678,7 +678,7 @@ include_once("includes/header.php");
 </ul>
 <p>
     The DVD works properly now (no need to re-login to apply settings anymore) and also has an option to boot to RAM (requires at least 3Gb to work).<br/>
-    You can download the new ISOs at the KXStudio website, <a href="http://kxstudio.sourceforge.net/Downloads">http://kxstudio.sourceforge.net/Downloads</a>.
+    You can download the new ISOs at the KXStudio website, <a href="<?php echo $ROOT; ?>/Downloads"><?php echo $ROOT; ?>/Downloads</a>.
     <br/><br/>
 </p>
 <p>
@@ -715,7 +715,7 @@ include_once("includes/header.php");
     Then there's the small tools - JackMeter, JackSettings, Logs, Render and XY-Controller (their names give away their funtionality).<br/>
     <br/>
     Cadence and its tools are currently being documented, and pages will appear here: (incomplete)<br/>
-    <a href="http://kxstudio.sourceforge.net/Applications" class="external free" rel="nofollow" target="_blank">http://kxstudio.sourceforge.net/Applications</a><br/>
+    <a href="<?php echo $ROOT; ?>/Applications" class="external free" rel="nofollow" target="_blank"><?php echo $ROOT; ?>/Applications</a><br/>
     (There's a topic in the KXStudio forums discussing the documentation <a href="http://www.linuxmusicians.com/viewtopic.php?f=47&t=9135" class="external free" rel="nofollow" target="_blank">here</a>).<br/>
     <br/>
     If you're running KXStudio now, you either have updates or have recently updated Cadence and sub-packages.<br/>
