@@ -86,7 +86,7 @@ include_once("includes/header.php");
             <b><a href="apt://cadence" style="color: rgb(230,230,100);">Cadence</a></b> (JACK Toolbox)<br/>
             Collection of tools useful for audio production.<br/>
             This is the main app. It performs system checks, manages JACK, calls other tools and make system tweaks.<br/>
-            Homepage and Documentation: <a href="http://kxstudio.sf.net/cadence" class="external text" rel="nofollow" target="_blank">http://kxstudio.sf.net/cadence</a><br/>
+            Homepage and Documentation: <a href="<?php echo $ROOT; ?>/cadence" class="external text" rel="nofollow" target="_blank"><?php echo $ROOT; ?>/cadence</a><br/>
         </p>
     </td></tr>
 </table>
@@ -103,7 +103,7 @@ include_once("includes/header.php");
             Carla is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
             It has some nice features like automation of parameters via MIDI CC and full OSC control.<br/>
             Currently supports LADSPA, DSSI, LV2, and VST plugin formats, and GIG, SF2 and SFZ sounds banks.<br/>
-            Homepage and Documentation: <a href="http://kxstudio.sf.net/carla" class="external text" rel="nofollow" target="_blank">http://kxstudio.sf.net/carla</a><br/>
+            Homepage and Documentation: <a href="<?php echo $ROOT; ?>/carla" class="external text" rel="nofollow" target="_blank"><?php echo $ROOT; ?>/carla</a><br/>
         </p>
     </td></tr>
 </table>
@@ -119,7 +119,7 @@ include_once("includes/header.php");
             <b><a href="apt://catia" style="color: rgb(230,230,100);">Catia</a></b> (Patchbay)<br/>
             JACK Patchbay, with some neat features like A2J bridge support and JACK Transport.<br/>
             It's supposed to be as simple as possible, so it can work nicely on non-Linux platforms.<br/>
-            Homepage and Documentation: <a href="http://kxstudio.sf.net/catia" class="external text" rel="nofollow" target="_blank">http://kxstudio.sf.net/catia</a><br/>
+            Homepage and Documentation: <a href="<?php echo $ROOT; ?>/catia" class="external text" rel="nofollow" target="_blank"><?php echo $ROOT; ?>/catia</a><br/>
         </p>
     </td></tr>
 </table>
@@ -136,7 +136,7 @@ include_once("includes/header.php");
             LADISH frontend; just like Catia, but focused at session management through LADISH.<br/>
             It has a bit more features than the official LADISH GUI, with a nice preview of the main canvas in the bottom-left.<br/>
             It also implements the 'Claudia-Launcher' add-application style for LADISH.<br/>
-            Homepage and Documentation: <a href="http://kxstudio.sf.net/claudia" class="external text" rel="nofollow" target="_blank">http://kxstudio.sf.net/claudia</a><br/>
+            Homepage and Documentation: <a href="<?php echo $ROOT; ?>/claudia" class="external text" rel="nofollow" target="_blank"><?php echo $ROOT; ?>/claudia</a><br/>
         </p>
     </td></tr>
 </table>
