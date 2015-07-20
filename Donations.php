@@ -58,8 +58,9 @@ if ($cur_percent > 100.0) {
 <table>
 <tr><td width="40px">
 </td><td valign="bottom" width="200px">
+    <?php if ($db_link) { ?>
     <b>Last 5 donations:</b><br/>
-    <?php
+    <?php }
         while ($sql_row = mysql_fetch_assoc($sql_donations_last5)) {
             echo "" . date("Y-m-d", strtotime($sql_row["dt"])) . " - " . $sql_row["amount"] . "&euro;<br/>";
         }
