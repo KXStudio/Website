@@ -1,6 +1,8 @@
 <?php
 
-if (file_exists("/var/www/kxstudio/paste/")) {
+if (file_exists("/home/sites/kxstudio.linuxaudio.org/docroot/paste/")) {
+    $base_dir  = "/home/sites/kxstudio.linuxaudio.org/docroot/paste/";
+} else if (file_exists("/var/www/kxstudio/paste/")) {
     $base_dir = "/var/www/kxstudio/paste/";
 } else {
     $base_dir = "/home/groups/k/kx/kxstudio/htdocs/paste/";
@@ -34,7 +36,7 @@ function downloadFile($fullPath) {
 
 if (! empty($_GET["id"])) {
     $paste_id   = htmlspecialchars($_GET["id"]);
-    $paste_file = $base_dir . "repo/" . $paste_id;
+    $paste_file = $base_dir . "raw/" . $paste_id;
 
     if (! file_exists($paste_file)) {
         die("File does not exist");

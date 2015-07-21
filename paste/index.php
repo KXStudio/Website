@@ -21,13 +21,13 @@ if (! empty($_GET["id"]))
     $paste_id   = htmlspecialchars($_GET["id"]);
     $show_paste = TRUE;
 
-    $paste_file = $base_dir . "repo/" . $paste_id;
+    $paste_file = $base_dir . "raw/" . $paste_id;
 
     if (! file_exists($paste_file)) {
         $is_error = TRUE;
     }
 
-    $paste_info = $base_dir . "repo/" . $paste_id . ".inc";
+    $paste_info = $base_dir . "raw/" . $paste_id . ".inc";
 
     // default values
     $paste_name    = "";
@@ -57,11 +57,11 @@ else if (! empty($_POST["paste_text"]))
     }
 
     $paste_id   = substr(str_shuffle(str_repeat('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',5)),0,5);
-    $paste_file = $base_dir . "repo/" . $paste_id;
+    $paste_file = $base_dir . "raw/" . $paste_id;
 
     while (file_exists($paste_file)) {
         $paste_id   = substr(str_shuffle(str_repeat('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',5)),0,5);
-        $paste_file = $base_dir . "repo/" . $paste_id;
+        $paste_file = $base_dir . "raw/" . $paste_id;
     }
 
     $fp = fopen($paste_file, 'w');
@@ -74,7 +74,7 @@ else if (! empty($_POST["paste_text"]))
         $is_error   = TRUE;
     }
 
-    $paste_info = $base_dir . "repo/" . $paste_id . ".inc";
+    $paste_info = $base_dir . "raw/" . $paste_id . ".inc";
 
     $paste_info_content  = "<?php\n";
     $paste_info_content .= "\$paste_name    = \"$paste_name\";\n";
@@ -109,7 +109,7 @@ include_once("../includes/header.php");
 <?php
 if ($show_paste)
 {
-    $file_path = $base_dir . "repo/" . $paste_id;
+    $file_path = $base_dir . "raw/" . $paste_id;
 
     if (file_exists($file_path))
     {
