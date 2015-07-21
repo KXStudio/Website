@@ -20,7 +20,7 @@
 <?php } else if ($PAGE_TYPE == "PASTE") { ?>
                     <li><a href="<?php echo $ROOT; ?>/Paste" title="Create new paste">New Paste</a></li>
     <?php if ($show_paste && ! $is_error) { ?>
-                    <li><a href="<?php echo $ROOT; ?>/Paste/repo/<?php echo $paste_id; ?>" target="blank" title="View RAW">View RAW</a></li>
+                    <li><a href="<?php echo $ROOT; ?>/Paste/raw/<?php echo $paste_id; ?>" target="blank" title="View RAW">View RAW</a></li>
                     <li><a href="<?php echo $ROOT; ?>/Paste/download.php?id=<?php echo $paste_id; ?>" title="Download">Download</a></li>
     <?php } ?>
 <?php } ?>
