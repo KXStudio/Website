@@ -224,15 +224,14 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
 <?php } else { ?>
     <?php if ($PAGE_TYPE == "PASTE") { ?>
     <a href="http://qbnz.com/highlighter" class="external text" rel="nofollow" target="_blank" style="position:absolute; top:37px; right:5%;"><img src="<?php echo $ROOT; ?>/images/powered-by-geshi.png" alt="Powered by GeSHi"/></a>
-    <?php } else if ($PAGE_TYPE != "DONATIONS") { ?>
+    <?php } else if ($PAGE_TYPE != "DONATIONS" && $db_link) { ?>
     <div id="donations_container" style="position:absolute; top:40px; right:5%; width: 250px; height: 10px; font-size: 0.8em;">
         <div id="donations_bar"><div style="width:<?php print_r($cur_percent); ?>%"></div></div>
     </div>
-    <?php if ($db_link) { ?>
     <div style="position:absolute; top:44px; right:5%; width: 270px; height: 10px; font-size: 0.8em; text-align: center;">
         This month donations: <?php print_r($cur_amount); ?> / 300 &euro;
     </div>
-    <?php } } ?>
+    <?php } ?>
 
     <div id="subheader" class="container_16">
         <div id="breadcrump" class="grid_12 alpha">
