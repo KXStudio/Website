@@ -228,10 +228,11 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
     <div id="donations_container" style="position:absolute; top:40px; right:5%; width: 250px; height: 10px; font-size: 0.8em;">
         <div id="donations_bar"><div style="width:<?php print_r($cur_percent); ?>%"></div></div>
     </div>
+    <?php if ($db_link) {
     <div style="position:absolute; top:44px; right:5%; width: 270px; height: 10px; font-size: 0.8em; text-align: center;">
         This month donations: <?php print_r($cur_amount); ?> / 300 &euro;
     </div>
-    <?php } ?>
+    <?php } } ?>
 
     <div id="subheader" class="container_16">
         <div id="breadcrump" class="grid_12 alpha">
