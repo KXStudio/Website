@@ -1,7 +1,10 @@
 <?php
 include_once("geshi.php");
 
-if (file_exists("/var/www/kxstudio/paste/")) {
+if (file_exists("/home/sites/kxstudio.linuxaudio.org/docroot/paste/")) {
+    $server_dir   = "/paste/";
+    $base_dir     = "/home/sites/kxstudio.linuxaudio.org/docroot/paste/";
+} else if (file_exists("/var/www/kxstudio/paste/")) {
     $server_dir   = "/paste/";
     $base_dir     = "/var/www/kxstudio/paste/";
 } else {
