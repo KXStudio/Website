@@ -66,7 +66,7 @@ if ($cur_percent > 100.0) {
         }
     } ?>
 </td><td valign="bottom" width="150px">
-    <a class="FlattrButton" style="display:none;" href="http://kxstudio.linuxaudio.org/"></a>
+    <a class="FlattrButton" style="display:none;" href="http://kxstudio.sourceforge.net/"></a>
     <noscript>
         <a href="http://flattr.com/thing/1098067/KXStudio" target="_blank">
         <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
