@@ -1,5 +1,6 @@
 News_/
 News.chyrp.old/
 donate/config.php
+donate/insert-value.sh
 paste/repo/*
 repo/*
