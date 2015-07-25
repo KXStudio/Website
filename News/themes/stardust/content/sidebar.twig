@@ -1,0 +1,50 @@
+                <form action="$site.url" method="get" accept-charset="utf-8">
+                    <fieldset>
+                        <input type="hidden" name="action" value="search" id="action" />
+                        <input type="text" id="search" name="query" value="${ GET.query | escape }" />
+                    </fieldset>
+                </form>
+
+                {% if theme.pages_list %}
+                <h2 class="box-header">${ "Pages" | translate }</h2>
+                <ul>
+                    {% for item in theme.pages_list %}
+                    <li>
+                        <a href="$item.page.url">$item.page.title</a>
+
+                        {% if item.has_children %}<ul>{% endif %}
+                    {% if not item.has_children %}</li>{% endif %}
+                    {% for ul, li in item.end_tags %}
+                        $ul
+                    $li
+                    {% endfor %}
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+                <h2 class="box-header">${ "Welcome, %s!" | translate | format(visitor.login | fallback("Guest" | translate)) }</h2>
+                <ul class="navigation">
+                    {% if visitor.logged_in %}
+                    <li><a href="{% url "controls" %}">${ "User Controls" | translate }</a></li>
+                    <li><a href="{% url "logout" %}">${ "Log Out" | translate }</a></li>
+                    {% else %}
+                    <li><a href="{% url "login" %}">${ "Log In" | translate }</a></li>
+                    {% if site.can_register %}
+                    <li><a href="{% url "register" %}">${ "Register" | translate }</a></li>
+                    {% endif %}
+                    <li><a href="{% url "lost_password" %}">${ "Lost Password?" | translate }</a></li>
+                    {% endif %}
+                </ul>
+
+${ trigger.call("sidebar") }
+                {% if theme.archives_list %}
+                <h2 class="box-header">${ "Archives" | translate }</h2>
+                <ul class="navigation">
+                    {% for archive in theme.archives_list %}
+                    <li>
+                        <a href="$archive.url">${ archive.when | strftime("%B %Y" | translate) } ($archive.count)</a>
+                    </li>
+                    {% endfor %}
+                    <li><a href="{% url "archive" %}">${ "All &rarr;" | translate }</a></li>
+                </ul>
+                {% endif %}

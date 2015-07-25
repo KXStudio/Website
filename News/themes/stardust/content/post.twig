@@ -1,0 +1,18 @@
+                    <div class="post $post.feather" id="post_$post.id">
+                        {% block content %}{% endblock %}
+                        {% if route.action == "view" and post.paginated and post.paginated.pages > 1 %}
+                        <div class="clear"></div>
+                        $post.paginated.prev_link
+                        $post.paginated.next_link
+                        <span class="pages">${ "Page %d of %d" | translate | format(post.paginated.page, post.paginated.pages) }</span>
+                        {% endif %}
+                        <div class="clear"></div>
+                        <p class="info">
+                            {% if enabled_modules.comments %}
+                            <a href="$post.url#comments">${ "See %s Comment" | translate_plural("See %s Comments", post.comment_count) | format(post.comment_count) }</a>
+                            {% endif %}
+                        </p>
+                    </div>
+                    {% if route.action != "view" %}
+                    <hr/>
+                    {% endif %}
