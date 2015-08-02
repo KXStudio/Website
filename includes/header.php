@@ -175,9 +175,9 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
     </div>
     <!-- Community sub menu -->
     <div id="div_menuCommunity" class="div_menuDropdown">
-        <p><a href="http://webchat.freenode.net/?channels=#kxstudio,#opensourcemusicians"><img src="<?php echo $ROOT; ?>/images/ico_chat.png" class="external" rel="nofollow" target="_blank" alt=""/> &nbsp; Chat</a></p>
-        <p><a href="http://linuxmusicians.com/viewforum.php?f=47"><img src="<?php echo $ROOT; ?>/images/ico_forum.png" class="external" rel="nofollow" target="_blank" alt=""/> &nbsp; Forum</a></p>
-        <p><a href="https://soundcloud.com/groups/kxstudio"><img src="<?php echo $ROOT; ?>/images/ico_soundcloud.png" class="external" rel="nofollow" target="_blank" alt=""/> &nbsp; Songs</a></p>
+        <p><a href="http://webchat.freenode.net/?channels=#kxstudio,#opensourcemusicians" class="external" rel="nofollow" target="_blank"><img src="<?php echo $ROOT; ?>/images/ico_chat.png" alt=""/> &nbsp; Chat</a></p>
+        <p><a href="http://linuxmusicians.com/viewforum.php?f=47" class="external" rel="nofollow" target="_blank"><img src="<?php echo $ROOT; ?>/images/ico_forum.png" alt=""/> &nbsp; Forum</a></p>
+        <p><a href="https://soundcloud.com/groups/kxstudio" class="external" rel="nofollow" target="_blank"><img src="<?php echo $ROOT; ?>/images/ico_soundcloud.png" alt=""/> &nbsp; Songs</a></p>
     </div>
 
     <!-- Top link -->
