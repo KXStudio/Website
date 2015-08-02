@@ -33,14 +33,15 @@ include_once("includes/header.php");
 
 <!-- KXSTUDIO RELEASE -->
 <p>
-    <b>KXStudio 12.04.3 Release</b>
+    <b>KXStudio 14.04.2 Release</b>
 </p>
 <ul>
-    <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio12043:About">About</a></li>
-    <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio12043:ReleaseNotes">Release Notes</a></li>
+    <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio14042:About">About</a></li>
+    <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio14042:ReleaseNotes">Release Notes</a></li>
 </ul>
 
 <!-- KXSTUDIO DISTRIBUTION -->
+<!--
 <p>
     <br/>
     <b>KXStudio Distribution &amp; Repositories</b> (outdated)
@@ -50,6 +51,7 @@ include_once("includes/header.php");
     <li><a href="<?php echo $ROOT; ?>/Documentation:Repository:RegisterCommercial">Register/Activate your purchased software</a></li>
     <li><a href="<?php echo $ROOT; ?>/Documentation:Repository:Upgrade">Upgrade from an existing Debian/Ubuntu installation</a></li>
 </ul>
+-->
 
 <!-- KXSTUDIO MANUAL -->
 <p>
