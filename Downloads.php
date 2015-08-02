@@ -122,16 +122,6 @@ include_once("includes/header.php");
     </p>
 </ul>
 
-<hr/>
-
-<ul id="AllDownloads" name="AllDownloads">
-    <li><b>All Downloads</b></li>
-    <p>
-        You can access all the KXStudio downloads using the KXStudio SourceForge project page:<br/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/" class="external free" rel="nofollow" target="_blank">http://sourceforge.net/projects/kxstudio/files/</a>
-    </p>
-</ul>
-
 <p><br/></p>
 
 <?php
