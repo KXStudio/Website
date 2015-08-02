@@ -75,7 +75,6 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
         function closeAllMenus(){
             var objSoftwareMenu     = document.getElementById("div_menuSoftware");
             var objRepositoriesMenu = document.getElementById("div_menuRepositories");
-            var objSupportMenu      = document.getElementById("div_menuSupport");
             var objCommunityMenu    = document.getElementById("div_menuCommunity");
 
             if (objSoftwareMenu.style.visibility == "visible")
@@ -83,9 +82,6 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
 
             if (objRepositoriesMenu.style.visibility == "visible")
                 objRepositoriesMenu.style.visibility = "hidden";
-
-            if (objSupportMenu.style.visibility == "visible")
-                objSupportMenu.style.visibility = "hidden";
 
             if (objCommunityMenu.style.visibility == "visible")
                 objCommunityMenu.style.visibility = "hidden";
@@ -117,7 +113,6 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
 
         function itemSoftwareClicked(event)    { return menuItemClicked(event, document.getElementById("div_menuSoftware"),     "item-soft");      };
         function itemRepositoriesClicked(event){ return menuItemClicked(event, document.getElementById("div_menuRepositories"), "item-repos");     };
-        function itemSupportClicked(event)     { return menuItemClicked(event, document.getElementById("div_menuSupport"),      "item-support");   };
         function itemCommunityClicked(event)   { return menuItemClicked(event, document.getElementById("div_menuCommunity"),    "item-community"); };
 
     </script>
@@ -178,10 +173,6 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
         <p><a href="<?php echo $ROOT; ?>/Repositories:Applications">Applications (in Repo)</a></p>
         <p><a href="<?php echo $ROOT; ?>/Repositories:Plugins">Plugins (in Repo)</a></p>
     </div>
-    <!-- Support sub menu -->
-    <div id="div_menuSupport" class="div_menuDropdown">
-        <p><a href="<?php echo $ROOT; ?>/Documentation">Documentation</a></p>
-    </div>
     <!-- Community sub menu -->
     <div id="div_menuCommunity" class="div_menuDropdown">
         <p><a href="http://webchat.freenode.net/?channels=#kxstudio,#opensourcemusicians"><img src="<?php echo $ROOT; ?>/images/ico_chat.png" class="external" rel="nofollow" target="_blank" alt=""/> &nbsp; Chat</a></p>
@@ -203,8 +194,8 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
                 <li id="item-news"><a href="<?php echo $ROOT; ?>/News">News</a></li>
                 <li id="item-soft"><a href="#" onClick="return itemSoftwareClicked(event);">Software &#9660;</a></li>
                 <li id="item-repos"><a href="#" onClick="return itemRepositoriesClicked(event);">Repositories &#9660;</a></li>
-                <li id="item-support"><a href="#" onClick="return itemSupportClicked(event);">Support &#9660;</a></li>
                 <li id="item-community"><a href="#" onClick="return itemCommunityClicked(event);">Community &#9660;</a></li>
+                <li id="item-documentation"><a href="<?php echo $ROOT; ?>/Documentation">Documentation</a></li>
                 <li id="item-donate"><a href="<?php echo $ROOT; ?>/Donations">Donations</a></li>
                 <li id="item-downloads"><a href="<?php echo $ROOT; ?>/Downloads">Downloads</a></li>
                 <li id="item-paste"><a href="<?php echo $ROOT; ?>/Paste">Paste</a></li>
