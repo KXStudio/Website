@@ -32,19 +32,36 @@ include_once("includes/header.php");
 
 <p>
     All Debian and Ubuntu users can enable our repositories by installing this deb file:
-        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.1.0%7Ekxstudio1_all.deb" class="free" rel="nofollow">kxstudio-repos.deb</a>.<br/>
+        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.2.0%7Ekxstudio1_all.deb" class="free" rel="nofollow">kxstudio-repos.deb</a>.<br/>
     You can install it manually by running this:<br/>
 </p>
 <pre>
+<span style="color: rgb(110, 110, 110);"># Install required dependencies if needed</span>
+sudo apt-get install apt-transport-https software-properties-common wget
+
 <span style="color: rgb(110, 110, 110);"># Download package file</span>
-wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.1.0~kxstudio1_all.deb
+wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.2.0~kxstudio1_all.deb
 
 <span style="color: rgb(110, 110, 110);"># Install it</span>
-sudo dpkg -i kxstudio-repos_9.1.0~kxstudio1_all.deb
+sudo dpkg -i kxstudio-repos_9.2.0~kxstudio1_all.deb
 </pre>
 
 <p><br/>
-    This package contains:
+    If you're using a system <b>newer or equal</b> to <b>Debian Testing</b> or <b>Ubuntu 15.10</b> you'll need to enable GCC5 packages.<br/>
+    You can do so by installing this deb file -
+        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.2.0%7Ekxstudio1_all.deb" class="free" rel="nofollow">kxstudio-repos-gcc5.deb</a>,
+    or manually by running this:
+</p>
+<pre>
+<span style="color: rgb(110, 110, 110);"># Download package file</span>
+wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.2.0~kxstudio1_all.deb
+
+<span style="color: rgb(110, 110, 110);"># Install it</span>
+sudo dpkg -i kxstudio-repos-gcc5_9.2.0~kxstudio1_all.deb
+</pre>
+
+<p><br/>
+    These packages contain:
 </p>
 <ul>
     <li>Various sources files that activates the separate repositories</li>
@@ -57,7 +74,7 @@ sudo dpkg -i kxstudio-repos_9.1.0~kxstudio1_all.deb
 <p>
     <b>NOTE:</b><br/>
     Please do not copy these instructions to your own website, wiki, etc.<br/>
-    The package file link might change at anytime, and so the instructions themselves.<br/>
+    The packages file link might change at anytime, and so the instructions themselves.<br/>
     Always refer to this exact page for how-to enable the KXStudio repositories please.
 </p>
 
