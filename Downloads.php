@@ -14,7 +14,7 @@ include_once("includes/header.php");
     </p>
     <p class="p_extra_spaced">
         <b>Downloads:</b><br/>
-        &nbsp;<a href="http://download.linuxaudio.org/kxstudio/KXStudio_14.04b_32bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        &nbsp;<a href="http://download.linuxaudio.org/kxstudio/KXStudio_14.04.2_32bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_disc.png" alt="" class="img_text_align"/> KXStudio 14.04.2 Live-DVD <strong>- 32bit</strong></a>
               | <a href="https://github.com/KXStudio/KXStudio/releases/download/14.04.2/KXStudio_14.04.2_32bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #1<strong></strong></a>
               | <a href="https://drive.google.com/file/d/0B_uWSrIHpVoGLUxLYmdqQ3FtdHc/view" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #2<strong></strong></a>
@@ -23,7 +23,7 @@ include_once("includes/header.php");
               &nbsp;&nbsp;&nbsp;&nbsp;size: 1.5 GiB
     </p>
     <p>
-        &nbsp;<a href="http://download.linuxaudio.org/kxstudio/KXStudio_14.04b_64bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        &nbsp;<a href="http://download.linuxaudio.org/kxstudio/KXStudio_14.04.2_64bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_disc.png" alt="" class="img_text_align"/> KXStudio 14.04.2 Live-DVD <strong>- 64bit</strong></a>
               | <a href="https://github.com/KXStudio/KXStudio/releases/download/14.04.2/KXStudio_14.04.2_64bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #1<strong></strong></a>
               | <a href="https://drive.google.com/file/d/0B_uWSrIHpVoGeGthNUJWdl9lcVk/view" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #2<strong></strong></a>
