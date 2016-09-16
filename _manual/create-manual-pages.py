@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os
+import pdb
 
 manualPages = (
 "kxstudio_introduction",
@@ -23,8 +24,8 @@ manualPages = (
 for page in manualPages:
     print(page)
     tmppage = "tmp_%s" % page
-    webpage = "http://www.wiki.linuxmusicians.com/doku.php?id=%s" % page
-    #os.system("wget %s -O %s" % (webpage, tmppage))
+    webpage = "http://wiki.linuxaudio.org/wiki/%s" % page
+    os.system("wget %s -O %s" % (webpage, tmppage))
 
     tmppageFd   = open(tmppage, "r")
     tmppageRead = tmppageFd.read().strip()
@@ -37,8 +38,10 @@ for page in manualPages:
     # remove final html code
     readPart3 = readPart2.split("<!-- wikipage stop -->", 1)[0].strip()
 
-    # remove first part of the page, we want the title
-    readPart4 = readPart3.split("<h1><a name=", 1)[1].strip()
+#pdb.set_trace()
+
+# remove first part of the page, we want the title
+    readPart4 = readPart3.split("<h1 class=\"sectionedit1\"><a name=", 1)[1].strip()
     # get the title
     kxPageTitle = readPart4.split(">", 1)[1].split("</a>", 1)[0].strip()
 
@@ -100,3 +103,6 @@ for page in manualPages:
     pageFd = open("Documentation:Manual:%s.php" % page, "w")
     pageFd.write(kxPageContent)
     pageFd.close()
+
+    #removing temporary file
+    os.remove(tmppage)
