@@ -95,7 +95,8 @@ for page in manualPages:
                                   "")
     readPart5 = readPart5.replace("as &#039;Mic&#039; and &#039;Mic Boost&#039; do", "as &#039;Beep&#039; does")
 
-    readPart5 = readPart5.replace("http://kxstudio.linuxaudio.org/", "<?php echo $ROOT; ?>/")
+    readPart5 = readPart5.replace('href="http://kxstudio.linuxaudio.org/', 'href="<?php echo $ROOT; ?>/')
+    readPart5 = readPart5.replace('title="http://kxstudio.linuxaudio.org/', 'title="')
 
     kxPageContent  = '<?php\n'
     kxPageContent += '$PAGE_TITLE    = "KXStudio";\n'

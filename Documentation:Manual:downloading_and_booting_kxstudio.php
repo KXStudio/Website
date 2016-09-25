@@ -22,7 +22,7 @@ Download the KXStudio Live-DVD images from:
 </p>
 
 <p>
-<a href="<?php echo $ROOT; ?>/Downloads#LiveDVD" class="urlextern" title="<?php echo $ROOT; ?>/Downloads#LiveDVD"  rel="nofollow"><?php echo $ROOT; ?>/Downloads#LiveDVD</a>
+<a href="<?php echo $ROOT; ?>/Downloads#LiveDVD" class="urlextern" title="Downloads#LiveDVD"  rel="nofollow">http://kxstudio.linuxaudio.org/Downloads#LiveDVD</a>
 </p>
 
 <p>

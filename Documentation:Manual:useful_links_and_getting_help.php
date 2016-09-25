@@ -23,7 +23,7 @@ For more info on the KXStudio applications such as Cadence, Claudia and Catia
 </p>
 
 <p>
-<a href="<?php echo $ROOT; ?>/KXStudio:Applications" class="urlextern" title="<?php echo $ROOT; ?>/KXStudio:Applications"  rel="nofollow"><?php echo $ROOT; ?>/KXStudio:Applications</a>
+<a href="<?php echo $ROOT; ?>/KXStudio:Applications" class="urlextern" title="KXStudio:Applications"  rel="nofollow">http://kxstudio.linuxaudio.org/KXStudio:Applications</a>
 </p>
 
 </div>

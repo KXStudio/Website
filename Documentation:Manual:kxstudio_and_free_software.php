@@ -43,7 +43,7 @@ Some hardware manufacturers, particularly among wireless cards and graphics acce
 <div class="level2">
 
 <p>
-While all KXStudio PPA listings are otherwise strictly <acronym title="Free/Libre and Open Source Software">FLOSS</acronym>, KXStudio includes non-free extras kept in a segregated repository. The packages are listed in Muon Package Manager <em>By Origin</em> under “KXStudio (Extra)”. In the software sources, the repository is “<a href="<?php echo $ROOT; ?>/repo/" class="urlextern" title="<?php echo $ROOT; ?>/repo/"  rel="nofollow"><?php echo $ROOT; ?>/repo/</a> precise free non-free”. 
+While all KXStudio PPA listings are otherwise strictly <acronym title="Free/Libre and Open Source Software">FLOSS</acronym>, KXStudio includes non-free extras kept in a segregated repository. The packages are listed in Muon Package Manager <em>By Origin</em> under “KXStudio (Extra)”. In the software sources, the repository is “<a href="<?php echo $ROOT; ?>/repo/" class="urlextern" title="repo/"  rel="nofollow">http://kxstudio.linuxaudio.org/repo/</a> precise free non-free”. 
 </p>
 
 <p>
