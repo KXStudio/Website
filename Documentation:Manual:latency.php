@@ -14,7 +14,6 @@ include_once("includes/header.php");
 <div class="level2">
 
 <p>
-
 Although latency mostly refers to buffer size which delays immediate feedback of input, there is additional latency due to the basic processing of your audio interface. There is no way to reduce this “loopback” latency, but its existence will affect the timing of recorded overdubs. To address this, you can tell programs what the delay amount is so that compensation can be made, i.e. the recorded audio will be adjusted in time to account for this delay. Software alone cannot discover what the loopback latency is, so the following procedure is needed to determine the amount of compensation required:
 </p>
 
@@ -69,31 +68,32 @@ Because these settings are not saved in the software to go with the interface ch
 
 </div>
 
-<h3><a name="disable_wireless_internet_when_recording" id="disable_wireless_internet_when_recording">Disable wireless internet when recording</a></h3>
+<h3><span name="disable_wireless_internet" id="disable_wireless_internet">Disable wireless internet</span></h3>
 <div class="level3">
 
 <p>
-
 Wifi adapters have been known to cause random xruns. Some laptops have an external hardware switch to disable wifi. Otherwise, uncheck “enable wireless” in the KDE system tray&#039;s network control. If primarily using ethernet, consider disabling wifi (aka 802.11 a/b/g/n) in the BIOS or UEFI menu.
 </p>
 
 </div>
 
-<h3><a name="close_browsers_when_recording" id="close_browsers_when_recording">Close browsers when recording</a></h3>
+<h3><span name="close_unnecessary_programs" id="close_unnecessary_programs">Close unnecessary programs</span></h3>
 <div class="level3">
 
 <p>
+In general, avoid running unnecessary, CPU-intensive programs when recording.
+</p>
 
-Many pop-up ads and popular web sites make use of Adobe Flash. If you have any browser tabs open, it only takes one to be using a little bit of Flash to cause a big loss of CPU, lower latency and more xruns. You should try to avoid running unnecessary, CPU intensive programs when recording.
+<p>
+Many pop-up ads and popular web sites make use of Adobe Flash. If you have any browser tabs open, it only takes one to be using a little bit of Flash to cause a big loss of CPU, lower latency and more xruns. The easiest way to avoid this is to close any web browsers.
 </p>
 
 </div>
 
-<h3><a name="avoid_realtime_resampling" id="avoid_realtime_resampling">Avoid realtime resampling</a></h3>
+<h3><span name="avoid_realtime_resampling" id="avoid_realtime_resampling">Avoid realtime resampling</span></h3>
 <div class="level3">
 
 <p>
-
 When using Digital Audio Workstations and similar apps such as samplers etc, it is recommended you convert any sound files you wish to import to use the same sample rate as the one you are using for JACK. Many apps let you import and use sound files of different sample rates to the one you are running JACK with but then attempt to resample the audio &#039;on-the-fly&#039; and this leads to xruns if your CPU cannot keep up.
 </p>
 
@@ -103,20 +103,16 @@ You can check the sample rate of audio files using your favourite media player s
 
 </div>
 
-<h3><a name="check_for_irq_conflicts" id="check_for_irq_conflicts">Check for IRQ conflicts</a></h3>
+<h3><span name="check_for_irq_conflicts" id="check_for_irq_conflicts">Check for IRQ conflicts</span></h3>
 <div class="level3">
 
 <p>
-
 Open a terminal and run:
-
 </p>
 <pre class="code">cat /proc/interrupts</pre>
 
 <p>
-
-Ensure that your audio driver is not sharing an IRQ with another device. Fixing this can be as simple as changing which port a USB audio device is using, but otherwise <a href="http://www.wiki.linuxmusicians.com/doku.php?id=system_configuration#solve_irq_conflict_by_unbinding_devices" class="urlextern" title="http://www.wiki.linuxmusicians.com/doku.php?id=system_configuration#solve_irq_conflict_by_unbinding_devices"  rel="nofollow">see this guide to fixing IRQ conflicts.</a>
-
+Ensure that your audio driver is not sharing an IRQ with another device. Fixing this can be as simple as changing which port a USB audio device is using, but otherwise <a target="_blank" href="http://wiki.linuxaudio.org/wiki/system_configuration#solve_irq_conflict_by_unbinding_devices" class="wikilink1" target="_parent" title="system_configuration">see this guide to fixing IRQ conflicts.</a>
 </p>
 
 </div>

@@ -9,7 +9,6 @@ include_once("includes/header.php");
 <div class="level1">
 
 <p>
-
 In GNU/Linux, a “package” is a compressed file that usually contains a program or program data. The process of installing and removing software from packages is called package management.
 </p>
 
@@ -18,7 +17,7 @@ KXStudio is based upon Ubuntu which is itself based on Debian GNU/Linux, so as a
 </p>
 
 <p>
-In KXStudio 12.04.2, the main package manager is called <strong>Muon</strong>. Muon is the easiest way to manage your software under KXStudio. KXStudio previously used the Synaptic package manager instead but these instructions largely apply to that as well.
+In KXStudio 12.04.3, the main package manager is called <strong>Muon</strong>. Muon is the easiest way to manage your software under KXStudio. KXStudio also includes the older Synaptic package manager and these instructions largely apply to that as well.
 </p>
 
 </div>
@@ -27,7 +26,6 @@ In KXStudio 12.04.2, the main package manager is called <strong>Muon</strong>. M
 <div class="level2">
 
 <p>
-
 For increased system stability and security, it is recommended you keep all packages up-to-date. If your machine was not connected to the internet when you installed KXStudio, then the first thing you should do after installation is connect to the internet to perform a system upgrade. Note: you can always browse and remove packages from Muon but performing a system upgrade or installing new software from the repositories requires an internet connection.
 </p>
 
@@ -49,17 +47,15 @@ Most programs will be ready as soon as updating has finished. In the case of som
 <div class="level2">
 
 <p>
-
 There are two main ways to install a package. If the program you want is available from the repositories it is recommended you install it from there. Not only is that easier than having to find a standalone package, you can trust it more and it will get automtically updated when you do a system update, after an update becomes available.
 </p>
 
 </div>
 
-<h3><a name="installing_packages_via_muon" id="installing_packages_via_muon">Installing packages via Muon</a></h3>
+<h3><span name="installing_packages_via_muon" id="installing_packages_via_muon">Installing packages via Muon</span></h3>
 <div class="level3">
 
 <p>
-
 Start Muon Package Manager, then type either the name of the program you want or search using a descriptive term.
 </p>
 
@@ -68,7 +64,7 @@ When you have found the package you want, select it by clicking and then press t
 </p>
 
 <p>
-If the chosen app requires additional packages be installed for it to funtion, then you will be asked to confirm the installation of the required additional packages. These extra packages are referred to as <em>dependencies</em>, and most reasonably complex programs have multiple dependencies. You can proceed to mark additional packages for installation and whenever you are ready install click &#039;Apply Changes&#039; in the toolbar at the top. Muon will then ask you for your password before it downloads and installs the requested packages.
+If the chosen app requires additional packages be installed for it to function, then you will be asked to confirm the installation of the required additional packages. These extra packages are referred to as <em>dependencies</em>, and most reasonably complex programs have multiple dependencies. You can proceed to mark additional packages for installation and whenever you are ready install click &#039;Apply Changes&#039; in the toolbar at the top. Muon will then ask you for your password before it downloads and installs the requested packages.
 </p>
 
 <p>
@@ -77,16 +73,15 @@ If you install a graphical application you should be able to find and run it by 
 
 </div>
 
-<h3><a name="installing_from_a_.deb_package_file" id="installing_from_a_.deb_package_file">Installing from a .deb package file</a></h3>
+<h3><span name="installing_from_a_deb_package_file" id="installing_from_a_deb_package_file">Installing from a .deb package file</span></h3>
 <div class="level3">
 
 <p>
-
-There are many reasons why you should always try to install software from the repositories (or PPA&#039;s) rather than from .deb package files. Aside from saving time, using repositories ensures you are getting the correct packages for your distribution and will be automatically updated. In some cases, a .deb file will automatically install a repository to keep things updated, but not always. You will normally want to find repository versions or add PPA&#039;s to get software.
+There are many reasons why you should always try to install software from the repositories (or PPA&#039;s) rather than from .deb package files. Aside from saving time, using repositories ensures you are getting the correct packages for your distribution and then they will be automatically updated. In some cases, a .deb file will automatically install a repository to keep things updated, but not always. You will normally want to find repository versions or add PPA&#039;s to get software.
 </p>
 
 <p>
-Confusingly, there are multiple version of Ubuntu, many packages are available in 32- or 64-bit flavours. When installing software that is only available in .deb packages (named from Ubuntu&#039;s parent distro called Debian), look for the option that best matches your installed system. KXStudio is based upon Ubuntu 12.04 (codenamed Precise) so it is compatible with packages made for that distribution. Make sure you get the 32- or 64-bit package as appropriate. The main Cadence window tells you if you are running a 32 bit (aka i386 or i686) or 64 bit (amd64) system.
+Confusingly, there are multiple version of Ubuntu, many packages are available in 32- or 64-bit flavours. When installing software that is only available in .deb packages (named from Ubuntu&#039;s parent distro called Debian), look for the option that best matches your installed system. KXStudio is based upon kubuntu 12.04(.3) which is codenamed Precise so it is compatible with packages made for that distribution. Make sure you get the 32- or 64-bit package as appropriate. The main Cadence window tells you if you are running a 32 bit (aka i386 or i686) or 64 bit (amd64) system.
 </p>
 
 <p>
@@ -99,7 +94,6 @@ Finding the correct package version is often the hardest part of installing from
 <div class="level2">
 
 <p>
-
 In Muon, search for the package you wish to remove then select &#039;Removal&#039; or &#039;Purge&#039; from the “Mark for:” option within the package details tab or choose the corresponding option by right clicking on a package listing. If the program is already installed, the options will be either &#039;Mark for Removal&#039; which simply removes the package or &#039;Mark for Purge&#039; which also removes the programs settings. After having found and selected all the packages you wish to remove click &#039;Apply Changes&#039;. You will then be prompted for your password.
 </p>
 
@@ -109,7 +103,6 @@ In Muon, search for the package you wish to remove then select &#039;Removal&#03
 <div class="level2">
 
 <p>
-
 Removing a package will not remove the dependencies which may have been installed with it. To remove such extra packages if nothing else installed requires them, within Muon Package Manager, go to the Edit menu and choose “Remove unnecessary packages.” Then, as with all other procedures, you will have to click “Apply Changes” and enter your password.
 </p>
 
@@ -119,7 +112,6 @@ Removing a package will not remove the dependencies which may have been installe
 <div class="level2">
 
 <p>
-
 The KXStudio repositories are themselves PPA&#039;s. In some cases, you may want to add new PPA&#039;s to your system.
 </p>
 
@@ -128,7 +120,7 @@ PPA&#039;s are especially useful if you want to help do beta testing or try pre-
 </p>
 
 <p>
-If a PPA is available, it will be listed either on a software&#039;s website or their Launchpad.net page. For example, the latest stable release of LibreOffice isn&#039;t in the main repositories because it hasn&#039;t had completely thorough testing under this version of Ubuntu. LibreOffice offers a PPA for the stable version and another for beta testing. The address for the stable PPA is: ppa:libreoffice/ppa
+If a PPA is available, it will usually be listed on the projects website. For example, the latest stable release of LibreOffice isn&#039;t in the main repositories because it hasn&#039;t had completely thorough testing under this version of Ubuntu. LibreOffice offers a PPA for the stable version and another for beta testing. The address for the stable PPA is: ppa:libreoffice/ppa
 </p>
 
 <p>
@@ -145,9 +137,7 @@ The maintainers of each PPA will keep your software up-to-date, so you only need
 <div class="level2">
 
 <p>
-
 If a package installation fails or you have package management issues such as being unable to install additional packages due to unresolved dependencies then try running one (or both) of the following commands from a terminal, such as Konsole
-
 </p>
 <pre class="code">sudo apt-get install -f
 sudo dpkg --configure -a</pre>

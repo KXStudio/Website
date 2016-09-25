@@ -15,25 +15,23 @@ include_once("includes/header.php");
 
 </div>
 
-<h3><a name="kxstudio" id="kxstudio">KXStudio</a></h3>
+<h3><span name="kxstudio" id="kxstudio">KXStudio</span></h3>
 <div class="level3">
 
 <p>
-
 For more info on the KXStudio applications such as Cadence, Claudia and Catia
 </p>
 
 <p>
-<a href="<?php echo $ROOT; ?>/Applications" class="urlextern" title="<?php echo $ROOT; ?>/Applications"  rel="nofollow"><?php echo $ROOT; ?>/Applications</a>
+<a href="<?php echo $ROOT; ?>/KXStudio:Applications" class="urlextern" title="<?php echo $ROOT; ?>/KXStudio:Applications"  rel="nofollow"><?php echo $ROOT; ?>/KXStudio:Applications</a>
 </p>
 
 </div>
 
-<h3><a name="hardware_compatibility" id="hardware_compatibility">Hardware Compatibility</a></h3>
+<h3><span name="hardware_compatibility" id="hardware_compatibility">Hardware Compatibility</span></h3>
 <div class="level3">
 
 <p>
-
 To check to see if your sound device is supported by GNU/Linux, check the ALSA SoundCard Matrix
 </p>
 
@@ -67,11 +65,10 @@ To check for the compatibility of your printer with the GNU/Linux printing syste
 
 </div>
 
-<h3><a name="gnu_linux_software_resources" id="gnu_linux_software_resources">GNU/Linux software resources</a></h3>
+<h3><span name="gnulinux_software_resources" id="gnulinux_software_resources">GNU/Linux software resources</span></h3>
 <div class="level3">
 
 <p>
-
 The Ubuntu package archive search
 </p>
 
@@ -113,11 +110,10 @@ The Wine Application Database (AppDB) details the compatibility of Windows progr
 
 </div>
 
-<h3><a name="recommended_tutorials_and_guides" id="recommended_tutorials_and_guides">Recommended tutorials and guides</a></h3>
+<h3><span name="recommended_tutorials_and_guides" id="recommended_tutorials_and_guides">Recommended tutorials and guides</span></h3>
 <div class="level3">
 
 <p>
-
 To get the most out of Linux, you need to understand how to use the terminal (aka console). Here&#039;s the Ubuntu beginners guide to using the terminal
 </p>
 
@@ -142,7 +138,7 @@ JACK was created mainly for Ardour which remains the most popular open source DA
 </p>
 
 <p>
-Those who prefer the more lightweight DAW qtractor will be happy to hear it has one of the best free manuals available for a GNU/Linux app
+Those who prefer the more lightweight DAW qtractor will be happy to hear it has one of the best free manuals available for a free and open GNU/Linux app
 </p>
 
 <p>
@@ -155,18 +151,16 @@ Those who prefer the more lightweight DAW qtractor will be happy to hear it has 
 <div class="level2">
 
 <p>
-
-Remember that KXStudio the distribution is based upon Ubuntu 12.04 aka Precise so any instructions or software you find for Ubuntu (precise) will be compatible with KXStudio.
+Remember that KXStudio the distribution is based upon Ubuntu 12.04 aka Precise so any instructions or software you find for Ubuntu (precise) will be compatible with KXStudio. 
 </p>
 
 </div>
 
-<h3><a name="fora_and_wikis" id="fora_and_wikis">Fora and wikis</a></h3>
+<h3><span name="fora_and_wikis" id="fora_and_wikis">Fora and wikis</span></h3>
 <div class="level3">
 
 <p>
-
-If you get stuck, the first place to search for a solution is on the KXStudio forum
+If you get stuck, the first place to search for a solution is on the KXStudio forum 
 </p>
 
 <p>
@@ -182,20 +176,19 @@ If you suspect its more of a general Ubuntu issue it would be a good idea to sea
 </p>
 
 <p>
-The LinuxMusicians wiki contains all sorts of useful info for Linux audio users, including this manual
+The LinuxAudio wiki contains all sorts of useful info for Linux audio users, including this manual
 </p>
 
 <p>
-<a href="http://www.wiki.linuxmusicians.com" class="urlextern" title="http://www.wiki.linuxmusicians.com"  rel="nofollow">http://www.wiki.linuxmusicians.com</a>
+<a href="http://wiki.linuxaudio.org" class="urlextern" title="http://wiki.linuxaudio.org"  rel="nofollow">http://wiki.linuxaudio.org</a>
 </p>
 
 </div>
 
-<h3><a name="irc" id="irc">IRC</a></h3>
+<h3><span name="irc" id="irc">IRC</span></h3>
 <div class="level3">
 
 <p>
-
 If you can&#039;t find an answer to your question on the fora or with your favourite search engine, <acronym title="Internet Relay Chat">IRC</acronym> is going to be your best hope of getting help quickly.
 </p>
 

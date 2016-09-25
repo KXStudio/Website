@@ -9,7 +9,6 @@ include_once("includes/header.php");
 <div class="level1">
 
 <p>
-
 Cadence controls and monitors various Linux sound systems as well as audio-related system settings. Below is a screenshot of its main window and following that is an explanation of what it all means and how you use it.
 </p>
 
@@ -23,7 +22,6 @@ Cadence controls and monitors various Linux sound systems as well as audio-relat
 <div class="level2">
 
 <p>
-
 This tells you the operating system, kernel version, and whether you are running a 32 or 64 bit <acronym title="Operating System">OS</acronym>. The kernel could be said to be the engine of Linux and KXStudio includes a low-latency kernel which has been optimized to get the best performance from JACK.
 </p>
 
@@ -33,8 +31,7 @@ This tells you the operating system, kernel version, and whether you are running
 <div class="level2">
 
 <p>
-
-This lets you select the CPU Scaling Governor, a property of the Linux kernel which controls the CPU speed. In &#039;performance&#039; mode, your CPU will run at full speed all the time. This mode consumes the most power but ensures the best performance and minimum CPU-related sound issues. In many cases (especially on battery powered devices) using &#039;ondemand&#039; makes more sense as this ups the CPU speed when its needed but clocks it back down when the computer is idle which helps save power. <em>Note: to enable this option in KXStudio 12.04.1, you must first install “indicator-cpufreq” but this will be included on install in 12.04.2.</em>
+This lets you select the CPU Scaling Governor, a property of the Linux kernel which controls the CPU speed. In &#039;performance&#039; mode, your CPU will run at full speed all the time. This mode consumes the most power but ensures the best performance and minimum CPU-related sound issues. In many cases (especially on battery powered devices) using &#039;ondemand&#039; makes more sense as this ups the CPU speed when its needed but clocks it back down when the computer is idle which helps save power. <em>Note: to enable this option in KXStudio 12.04.1, you must first install “indicator-cpufreq” but this is included by default in 12.04.3.</em>
 </p>
 
 </div>
@@ -43,15 +40,16 @@ This lets you select the CPU Scaling Governor, a property of the Linux kernel wh
 <div class="level2">
 
 <p>
+Current kernel is a verification that you&#039;re running a realtime or lowlatency kernel. This check will be ticked already if you installed from the KXStudio <acronym title="International Organization for Standardization">ISO</acronym> as it includes a low latency kernel. The other check verifies that your user is included in the audio group. Being a member of the audio group is required for your user to run JACK in realtime mode for optimal performance and is also required to access FireWire devices. 
+</p>
 
-Current kernel is a verification that you&#039;re running a realtime or lowlatency kernel. This check will be ticked already if you installed from the KXStudio <acronym title="International Organization for Standardization">ISO</acronym> as it includes a low latency kernel. The other check verifies that your user is included in the audio group. Being a member of the audio group is required for your user to run JACK in realtime mode for optimal performance. You can add your user to the audio group by running:
-
+<p>
+The user created during installation of KXStudio 12.04.3 is automatically added into the audio and video groups but newly created users will not be part of these groups. You can add a user to the audio group by running:
 </p>
 <pre class="code">sudo adduser &lt;username&gt; audio</pre>
 
 <p>
-
-Replace &lt;username&gt; with your KXStudio user name when you run that command in a terminal. You will then need to log out and back in or reboot before your user will be recognised as being in the audio group.
+Replace &lt;username&gt; with a KXStudio user name when you run that command in a terminal. You will then need to log out and back in or reboot before the user will be recognised as being in the audio group. Alternately, you can manage users and groups using the graphical kuser tool which is included with 12.04.3.
 </p>
 
 </div>
@@ -60,7 +58,6 @@ Replace &lt;username&gt; with your KXStudio user name when you run that command 
 <div class="level2">
 
 <p>
-
 <strong>Server Status</strong> tells you if the JACK server is running or not. You cannot run any JACK-dependant software unless the JACK server is started beforehand.
 </p>
 
@@ -73,15 +70,15 @@ Replace &lt;username&gt; with your KXStudio user name when you run that command 
 </p>
 
 <p>
-<strong>Xruns</strong> For JACK to operate smoothly and without drop-outs it requires that its buffers (the memory used to transport audio) provide a continuous stream of data. Whenever this data fails to arrive in time to satisfy the requests of a JACK app it causes an xrun which is often accompanied by a disruption to the sound output. The key to success with JACK is to eliminate or avoid xruns.
+<strong>Xruns</strong> For JACK to operate smoothly and without drop-outs it requires that its buffers (the memory used to transport audio) provide a continuous stream of data. Whenever this data fails to arrive in time to satisfy the requests of a JACK app it causes an xrun which is often accompanied by a disruption to the sound output. The key to success with JACK is to eliminate (or at least minimize) xruns.
 </p>
 
 <p>
-<strong>Buffer</strong> size is measured in frames per second. It determines the latency between the audio being received by JACK and being sent to the output device. The smaller the buffer the lower the latency and, as a result, the higher the accuracy when monitoring audio for multitrack recording. 1024 is the default and is usually a safe value but smaller buffer sizes have less latency, i.e. less delay between the input and output. Try different settings to see how low you can go when recording without getting xruns. The functioning of lower size buffers depends on the power of your CPU and the specifics of your audio device. The lowest buffer most devices can handle well is 64.
+<strong>Buffer</strong> size is measured in frames per second. It determines the latency between the audio being received by JACK and being sent to the output device. The smaller the buffer the lower the latency and, as a result, the higher the accuracy when monitoring audio for multitrack recording. 1024 is the default and is usually a safe value but smaller buffer sizes have less latency, i.e. less delay between the input and output. Try different settings to see how low you can go when recording without getting xruns. The functioning of lower size buffers depends on the power of your CPU and the specifics of your audio device. The lowest buffer size most decent quality audio devices can handle well is 64.
 </p>
 
 <p>
-<strong>Sample rate</strong> is the frequency JACK will run and record audio at. 44.1kHz is the CD audio standard, but 48kHz is more common to go with video or for other typical audio. Higher sample rates allow for higher quality but take more disk space. Even for professional purposes, 48kHz is usually fine as the default.
+<strong>Sample rate</strong> is the frequency JACK will run and record audio at. 44.1kHz is the CD audio standard, but 48kHz is more common to go with video or for other typical audio. Higher sample rates allow for higher quality but require more disk space. Even for professional purposes, 48kHz is usually fine as the default. Additionally, 48 and 96Khz allow for lower latency than using 44.1 or 88.2 due to the way it is calculated.
 </p>
 
 <p>
@@ -94,7 +91,6 @@ Replace &lt;username&gt; with your KXStudio user name when you run that command 
 <div class="level2">
 
 <p>
-
 <strong>Start</strong> Starts the JACK server, if its not running. This is the recommended way to start JACK.
 </p>
 
@@ -124,8 +120,7 @@ Replace &lt;username&gt; with your KXStudio user name when you run that command 
 <div class="level2">
 
 <p>
-
-Cadences main window integrates the control of a few &#039;JACK bridges&#039; -services which enable alternate Linux sound systems to run seemlessly atop JACK.
+Cadence&#039;s main window integrates the control of a few &#039;JACK bridges&#039; -services which enable alternate Linux sound systems to run seemlessly atop JACK.
 </p>
 
 <p>
@@ -137,8 +132,7 @@ The ALSA MIDI bridge needs to be running if you want to use any MIDI hardware.
 </p>
 
 <p>
-PulseAudio is not included by default with KXStudio, and so the PulseAudio bridge will not function without PulseAudio.. Most applications which use PA also use ALSA directly so there is then no need for PA or the bridge. If needed for some reason, you can use PA with JACK via the bridge if PulseAudio is installed first.
-
+PulseAudio is not included by default with KXStudio and the PulseAudio bridge will not function until it has been installed. Most applications which use PA can use ALSA or JACK instead so there is often no need for PA and its bridge.
 </p>
 
 </div>

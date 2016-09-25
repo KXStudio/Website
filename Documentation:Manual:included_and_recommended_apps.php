@@ -9,7 +9,6 @@ include_once("includes/header.php");
 <div class="level1">
 
 <p>
-
 Listed below are recommended audio, video and productivity apps for GNU/Linux complete with a short description.
 </p>
 
@@ -27,7 +26,9 @@ Many of these apps are, or will be, included on the KXStudio DVD. Those not incl
 </li>
 <li class="level1"><div class="li"> <strong>Audacity</strong>		Popular cross-platform sound editor but with poor JACK support</div>
 </li>
-<li class="level1"><div class="li"> <strong>Avidemux</strong>            Simple video editing and conversion tool ala Virtualdub</div>
+<li class="level1"><div class="li"> <strong>Avidemux</strong>                Simple video editing and conversion tool ala Virtualdub</div>
+</li>
+<li class="level1"><div class="li"> <strong>Bitwig</strong>                  Proprietary commercial DAW geared towards electronic music production</div>
 </li>
 <li class="level1"><div class="li"> <strong>Blender 3D</strong>		Powerful 3D modelling, animation, rendering and compositing</div>
 </li>
@@ -37,7 +38,7 @@ Many of these apps are, or will be, included on the KXStudio DVD. Those not incl
 </li>
 <li class="level1"><div class="li"> <strong>cadence-xycontroller</strong>    Cadence-XY Controller is a simple XY widget that sends and receives data from Jack MIDI</div>
 </li>
-<li class="level1"><div class="li"> <strong>Carla</strong>			Audio plugin host (LADSPA, LV2, VST etc)</div>
+<li class="level1"><div class="li"> <strong>Carla</strong>			Audio plugin host (<acronym title="Linux Audio Developers Simple Plugin API">LADSPA</acronym>, LV2, VST etc)</div>
 </li>
 <li class="level1"><div class="li"> <strong>Catia</strong>                   Catia is a JACK Patchbay, with some neat features like A2J bridge support and JACK Transport</div>
 </li>
@@ -62,6 +63,8 @@ Many of these apps are, or will be, included on the KXStudio DVD. Those not incl
 <li class="level1"><div class="li"> <strong>gnumeric</strong>            A superior spreadsheet to the one included in LibreOffice or OpenOffice</div>
 </li>
 <li class="level1"><div class="li"> <strong>Guitarix</strong>		JACK virtual guitar amplifier</div>
+</li>
+<li class="level1"><div class="li"> <strong>gxtuner</strong>                 Instrument tuner</div>
 </li>
 <li class="level1"><div class="li"> <strong>Handbrake</strong>		Cross-platform DVD ripping and video transcoding</div>
 </li>
@@ -123,6 +126,8 @@ Many of these apps are, or will be, included on the KXStudio DVD. Those not incl
 </li>
 <li class="level1"><div class="li"> <strong>scribus</strong>			Professional layout and publishing software</div>
 </li>
+<li class="level1"><div class="li"> <strong>setBfree</strong>                Great sounding DSP B3 Hammond organ emulator LV2 plugin </div>
+</li>
 <li class="level1"><div class="li"> <strong>smplayer</strong>		Excellent audio and video playback app</div>
 </li>
 <li class="level1"><div class="li"> <strong>Soundkonverter</strong>		batch audio file conversion</div>
@@ -136,6 +141,10 @@ Many of these apps are, or will be, included on the KXStudio DVD. Those not incl
 <li class="level1"><div class="li"> <strong>synfig</strong>			Powerful 2D vector animation software</div>
 </li>
 <li class="level1"><div class="li"> <strong>TAL-Noisemaker</strong>		Superb sounding, fully automatable softsynth plugin</div>
+</li>
+<li class="level1"><div class="li"> <strong>Tracktion</strong>               Commercial DAW with unique interface and free Linux version</div>
+</li>
+<li class="level1"><div class="li"> <strong>Triceratops</strong>             Triple oscillator LV2 synth</div>
 </li>
 <li class="level1"><div class="li"> <strong>VLC</strong>			The famous VLC media player</div>
 </li>

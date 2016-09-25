@@ -9,8 +9,7 @@ include_once("includes/header.php");
 <div class="level1">
 
 <p>
-
-Along with its Ubuntu base and the whole GNU/Linux world, KXStudio has its roots in the <a href="http://www.gnu.org/philosophy/free-sw.html" class="urlextern" title="http://www.gnu.org/philosophy/free-sw.html"  rel="nofollow">Free Software</a> movement led by Richard Stallman and the GNU project. All of the custom KXStudio tools are <acronym title="Free/Libre and Open Source Software">FLOSS</acronym>, as is the vast majority of other included software.
+Along with the Debian and Ubuntu base systems and the whole GNU/Linux world, KXStudio has its roots in the <a href="http://www.gnu.org/philosophy/free-sw.html" class="urlextern" title="http://www.gnu.org/philosophy/free-sw.html"  rel="nofollow">Free Software</a> movement led by Richard Stallman and the GNU project. All of the custom KXStudio tools are <acronym title="Free/Libre and Open Source Software">FLOSS</acronym>, as is the vast majority of other included software.
 </p>
 
 <p>
@@ -23,12 +22,11 @@ As KXStudio&#039;s primary purpose is to make the installation of a GNU/Linux-ba
 <div class="level2">
 
 <p>
-
-KXStudio is based upon Ubuntu which includes select non-free software. The Ubuntu non-free software is listed in separate repositories marked as either “non-free”, “restricted”, or “multiverse”. See <a href="https://help.ubuntu.com/community/Repositories" class="urlextern" title="https://help.ubuntu.com/community/Repositories"  rel="nofollow">help.ubuntu.com/community/Repositories</a> for more information. Also, the standard Linux kernel includes some “binary blobs” — i.e. sections that have no source available (and so hamper the freedom to modify).
+The current KXStudio <acronym title="International Organization for Standardization">ISO</acronym> is based upon Ubuntu which includes select non-free software. The Ubuntu non-free software is listed in separate repositories marked as either “non-free”, “restricted”, or “multiverse”. See <a href="https://help.ubuntu.com/community/Repositories" class="urlextern" title="https://help.ubuntu.com/community/Repositories"  rel="nofollow">help.ubuntu.com/community/Repositories</a> for more information. Also, the standard Linux kernel includes some “binary blobs” — i.e. sections that have no source available (and so hamper the freedom to modify).
 </p>
 
 <p>
-The main non-free software that KXStudio includes from Ubuntu is <strong>Flash Player</strong>. Many websites still, unfortunately, depend upon Adobe Flash, so Flash Player provides the smoothest user experience. Thankfully, the <acronym title="Free/Libre and Open Source Software">FLOSS</acronym> standards Webm and HTML5 are becoming increasingly popular, and there is a <acronym title="Free/Libre and Open Source Software">FLOSS</acronym> Flash-replacement called GNASH. Hopefully there will be less reason for the non-free Flash Player in the future.
+The main non-free software that KXStudio includes from Ubuntu is <strong>Flash Player</strong>. Many websites still, unfortunately, depend upon Adobe Flash, so Flash Player provides the smoothest user experience. Thankfully, the <acronym title="Free/Libre and Open Source Software">FLOSS</acronym> standards Webm and HTML5 are becoming increasingly popular, and there is a <acronym title="Free/Libre and Open Source Software">FLOSS</acronym> Flash-replacement called GNASH. Hopefully there will be less need for the non-free Flash Player in the future.
 </p>
 
 <p>
@@ -36,7 +34,7 @@ Ubuntu also includes some non-free codecs for accessing proprietary file formats
 </p>
 
 <p>
-Some hardware manufacturers, particularly among wireless cards and graphics accelerators, do not make <acronym title="Free/Libre and Open Source Software">FLOSS</acronym> drivers for Linux but create proprietary <strong>non-free drivers</strong>. <acronym title="Free/Libre and Open Source Software">FLOSS</acronym> alternatives often function well enough, and KXStudio does not include proprietary drivers. However, because the proprietary drivers often provide superior performance, KXStudio includes a simple program to install them. See the separate page on <a href="<?php echo $ROOT; ?>/Documentation:Manual:video_drivers" class="wikilink1" title="video_drivers">installing non-free video drivers</a>.
+Some hardware manufacturers, particularly among wireless cards and graphics accelerators, do not make <acronym title="Free/Libre and Open Source Software">FLOSS</acronym> drivers for Linux but create proprietary <strong>non-free drivers</strong>. <acronym title="Free/Libre and Open Source Software">FLOSS</acronym> alternatives often function well enough, and KXStudio does not include proprietary drivers. However, because the proprietary drivers often provide superior performance, KXStudio includes a simple program to install them. See the separate page on <a target="_blank" href="http://wiki.linuxaudio.org/wiki/video_drivers" class="wikilink1" target="_parent" title="video_drivers">installing non-free video drivers</a>.
 </p>
 
 </div>
@@ -45,8 +43,11 @@ Some hardware manufacturers, particularly among wireless cards and graphics acce
 <div class="level2">
 
 <p>
-The KXStudio non-free repository includes the following:
+While all KXStudio PPA listings are otherwise strictly <acronym title="Free/Libre and Open Source Software">FLOSS</acronym>, KXStudio includes non-free extras kept in a segregated repository. The packages are listed in Muon Package Manager <em>By Origin</em> under “KXStudio (Extra)”. In the software sources, the repository is “<a href="<?php echo $ROOT; ?>/repo/" class="urlextern" title="<?php echo $ROOT; ?>/repo/"  rel="nofollow"><?php echo $ROOT; ?>/repo/</a> precise free non-free”. 
+</p>
 
+<p>
+The KXStudio non-free repository includes the following:
 </p>
 <ul>
 <li class="level1"><div class="li"> <strong>LightScribe support</strong> — LightScribe is a proprietary technology that uses specially made CDs and DVDs to allow users to burn direct-to-disc labels. </div>
@@ -87,21 +88,15 @@ The KXStudio non-free repository includes the following:
 <div class="level2">
 
 <p>
-
-Specific non-free software can be manually uninstalled, see the instructions for <a href="<?php echo $ROOT; ?>/Documentation:Manual:package_management" class="wikilink1" title="package_management">package management</a>. Aside from the items listed above, another way to quickly identify a good portion of installed non-free software is to install the program <em>vrms</em>, the Virtual Richard M Stallman. Running vrms will bring up a list of non-free issues on your system, although it does not catch everything.
+Specific non-free software can be manually uninstalled, see the instructions for <a target="_blank" href="http://wiki.linuxaudio.org/wiki/package_management" class="wikilink1" target="_parent" title="package_management">package management</a>. Aside from the items listed above, another way to quickly identify a good portion of installed non-free software is to install the program <em>vrms</em>, the Virtual Richard M Stallman. Running vrms will bring up a list of non-free issues on your system, although it does not catch everything.
 </p>
 
 <p>
-To remove non-free software from the package listings, choose “Configure Software Sources” under “Settings” in Muon Package Manager. There, you can uncheck the Proprietary drivers and multiverse (copyright or legally problematic) listings. On the “Other Software” tab, you can remove the Medibuntu and kxstudio.sourceforge.net repositories.
+To remove non-free software from the package listings, choose “Configure Software Sources” under “Settings” in Muon Package Manager. There, you can uncheck the Proprietary drivers and multiverse (copyright or legally problematic) listings. On the “Other Software” tab, you can remove the Medibuntu and kxstudio.linuxaudio.org repositories.
 </p>
 
 <p>
-If you want to use strictly 100% Free Software, including even the strictly-<acronym title="Free/Libre and Open Source Software">FLOSS</acronym> Linux-libre kernel, consider <a href="http://trisquel.info/" class="urlextern" title="http://trisquel.info/"  rel="nofollow">Trisquel</a>, which is based on Ubuntu yet is certified by the Free Software Foundation. You can then add the main KXStudio-Team PPAs following the same <a href="<?php echo $ROOT; ?>/Documentation:Ubuntu:Upgrade" class="urlextern" title="<?php echo $ROOT; ?>/Documentation:Ubuntu:Upgrade"  rel="nofollow">instructions</a> as for other Ubuntu-based systems. Although this should work, it is not officially supported at this time.
-</p>
-
-<p>
-There is also a long-term plan to potentially move the KXStudio repositories to Debian, which is more strictly <acronym title="Free/Libre and Open Source Software">FLOSS</acronym> than Ubuntu (although still not FSF-approved because it provides a mechanism for users to install non-free software).
-
+If you want to use strictly 100% Free Software, there are several options. Instead of using the KXStudio <acronym title="International Organization for Standardization">ISO</acronym>, KXStudio repositories can be added to any Debian-based system (which includes all Ubuntu-related systems) and you can leave out the separate non-free KXStudio repository. Debian itself is 100% Free (unless the user chooses to install extra non-free software). Additionally, FSF-endorsed distributions <a href="http://trisquel.info/" class="urlextern" title="http://trisquel.info/"  rel="nofollow">Trisquel</a> (based on Ubuntu) and <a href="http://www.gnewsense.org/" class="urlextern" title="http://www.gnewsense.org/"  rel="nofollow">gNewSense</a> (based on Debian) are also compatible with the KXStudioe repositories. Of these, only Debian is officially supported, but the others should work as well.
 </p>
 
 </div>

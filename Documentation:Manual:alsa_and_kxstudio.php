@@ -9,7 +9,6 @@ include_once("includes/header.php");
 <div class="level1">
 
 <p>
-
 The Advanced Linux Sound Architecture is the primary sound system used by Linux. Even those who only plan to use JACK with the FFADO (FireWire) drivers should still have familiarity with ALSA.
 </p>
 
@@ -19,12 +18,11 @@ The Advanced Linux Sound Architecture is the primary sound system used by Linux.
 <div class="level2">
 
 <p>
-
 The main ALSA mixer included with KXStudio is called kmix. You can use kmix to adjust audio input and output levels, mute and unmute channels and change other non-FireWire audio device settings such as selecting between SPDIF and analog inputs if your device has such features. The kmix system tray icon looks like this:
 </p>
 
 <p>
-<a href="http://www.wiki.linuxmusicians.com/lib/exe/detail.php?id=alsa_and_kxstudio&amp;cache=cache&amp;media=kmix-tray.png" class="media" title="kmix-tray.png"><img src="http://www.wiki.linuxmusicians.com/lib/exe/fetch.php?w=&amp;h=&amp;cache=cache&amp;media=kmix-tray.png" class="media" title="The kmix icon" alt="The kmix icon" /></a>
+<img src="http://wiki.linuxaudio.org/_media/wiki/kmix-tray.png" class="media" title="The kmix icon" alt="The kmix icon" />
 </p>
 
 <p>
@@ -44,7 +42,7 @@ You will notice that each fader has a small speaker icon just below it. When the
 </p>
 
 <p>
-In the bottom right corner of the mixer window there is a tool icon. This icon allows you to configure which channels are available to control for the currently selected kmix device tab. You may find that some controls you need are missing at first, so you may add them via this Configure Channels window.
+In the bottom right corner of the mixer window there is a tool icon. This icon allows you to configure which channels are available to control for the currently selected kmix device tab. You may find that some controls you need are missing at first, so you may add them via this Configure Channels window. A common example of when you might need to use the kmix Configure Channels window is if you are using any SPDIF (optical) ports, which are referred to as IEC958 devices under GNU/Linux, as such controls are often not displayed by default.
 </p>
 
 <p>
@@ -57,7 +55,6 @@ Whilst there is a standard defined for USB audio devices, relatively few devices
 <div class="level2">
 
 <p>
-
 Cadence is primarily used to control and monitor the various Linux sound systems, including ALSA, under KXStudio. The main Cadence window has a &#039;JACK bridges&#039; section which contains two ALSA/JACK bridges - one for ALSA audio and one for MIDI. You will not hear audio produced by ALSA-only apps when JACK is running if the ALSA audio bridge is stopped. Likewise, you will be unable to access MIDI devices if the ALSA MIDI bridge isn&#039;t running when JACK is.
 </p>
 
@@ -67,12 +64,15 @@ Cadence is primarily used to control and monitor the various Linux sound systems
 <div class="level2">
 
 <p>
-
 As JACK increases in popularity, it is more widely supported. However, several apps are still ALSA-only. Such apps will have their audio channeled via the same ALSA to JACK bridge. These include:
 </p>
 
 <p>
 <strong>Adobe Flash Player</strong> (as used by Firefox and other browsers for sites such as YouTube)
+</p>
+
+<p>
+<strong>Skype</strong> If you don&#039;t require webcam or video support then it is recommended you use Mumble instead of Skype for VOIP. Although Mumble doesn&#039;t yet officially support JACK, there is a build of Mumble with JACK support available from the KXStudio repositories. However, if you need to use Skype it works fine provided the ALSA audio bridge is running.
 </p>
 
 <p>
@@ -105,35 +105,26 @@ Hence, none of these offer the individual audio routing functionality or other f
 <div class="level2">
 
 <p>
-
 The following commands can be useful for troubleshooting ALSA issues in a terminal:
-
 </p>
 <pre class="code">alsamixer</pre>
 
 <p>
-
 The original ALSA mixer
-
 </p>
 <pre class="code">cat /proc/asound/cards</pre>
 
 <p>
-
 Displays attached ALSA devices
-
 </p>
 <pre class="code">cat ~/.asoundrc</pre>
 
 <p>
-
 Displays your ALSA configuration file
-
 </p>
 <pre class="code">sudo alsactl store 0</pre>
 
 <p>
-
 Saves the current settings for ALSA device 0
 </p>
 
