@@ -90,12 +90,11 @@ for page in manualPages:
     # FIXME: this should happen on the wiki
     readPart5 = readPart5.replace("kxstudio.sourceforge.net", "kxstudio.linuxaudio.org")
 
+    # final adjustment
     readPart5 = readPart5.replace(" The &#039;UAC3553B&#039; tab displays controls for a USB audio device whilst &#039;Playback Streams&#039; can be ignored unless you are using PulseAudio.",
                                   "")
-
     readPart5 = readPart5.replace("as &#039;Mic&#039; and &#039;Mic Boost&#039; do", "as &#039;Beep&#039; does")
 
-    readPart5 = readPart5.replace("<a href=\"/doku.php?id=", "<a href=\"<?php echo $ROOT; ?>/Documentation:Manual:")
     readPart5 = readPart5.replace("http://kxstudio.linuxaudio.org/", "<?php echo $ROOT; ?>/")
 
     kxPageContent  = '<?php\n'
