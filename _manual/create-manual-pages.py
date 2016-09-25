@@ -45,40 +45,62 @@ for page in manualPages:
     # remove initial bits of html code (title)
     readPart5 = readPart4.split("</h1>", 1)[1].strip()
 
-    # html cleanup
-    readPart6 = readPart5.replace("<h2><a name=", "<h2><span name=").replace("</a></h2>", "</span></h2>")
-    readPart7 = readPart6.replace("/lib/exe/", "http://www.wiki.linuxmusicians.com/lib/exe/")
-
-    # FIXME: this should happen on the wiki too
-    readPart7 = readPart7.replace("kxstudio.sourceforge.net", "kxstudio.linuxaudio.org")
-
     # custom mods
-    readPart8 = readPart7.replace("http://www.wiki.linuxmusicians.com/lib/exe/detail.php?id=jack_configuration&amp;cache=cache&amp;media=cadence-jack-settings.png",
-                                  "<?php echo $ROOT; ?>/screenshots/cadence-jacksettings2.png")
-    readPart8 = readPart8.replace("http://www.wiki.linuxmusicians.com/lib/exe/fetch.php?w=&amp;h=&amp;cache=cache&amp;media=cadence-jack-settings.png",
-                                  "<?php echo $ROOT; ?>/screenshots/cadence-jacksettings2.png")
-
-    readPart8 = readPart8.replace("http://www.wiki.linuxmusicians.com/lib/exe/detail.php?id=cadence_introduction&amp;cache=cache&amp;media=cadence.png",
+    readPart5 = readPart5.replace("/_detail/wiki/cadence.png?id=wiki%3Acadence_introduction",
                                   "<?php echo $ROOT; ?>/screenshots/cadence1.png")
-    readPart8 = readPart8.replace("http://www.wiki.linuxmusicians.com/lib/exe/fetch.php?w=&amp;h=&amp;cache=cache&amp;media=cadence.png",
+    readPart5 = readPart5.replace("/_media/wiki/cadence.png",
                                   "<?php echo $ROOT; ?>/screenshots/cadence1.png")
 
-    readPart8 = readPart8.replace("http://www.wiki.linuxmusicians.com/lib/exe/detail.php?id=simple_claudia_studio&amp;cache=cache&amp;media=claudia2.png",
+    readPart5 = readPart5.replace("/_detail/wiki/cadence-wineasio.png?id=wiki%3Awineasio_and_reaper",
+                                  "<?php echo $ROOT; ?>/screenshots/cadence3.png")
+    readPart5 = readPart5.replace("/_media/wiki/cadence-wineasio.png",
+                                  "<?php echo $ROOT; ?>/screenshots/cadence3.png")
+
+    readPart5 = readPart5.replace("/_detail/wiki/cadence-jack-settings.png?id=wiki%3Ajack_configuration",
+                                  "<?php echo $ROOT; ?>/screenshots/cadence-jacksettings2.png")
+    readPart5 = readPart5.replace("/_media/wiki/cadence-jack-settings.png",
+                                  "<?php echo $ROOT; ?>/screenshots/cadence-jacksettings2.png")
+
+    readPart5 = readPart5.replace("/_detail/wiki/claudia2.png?id=wiki%3Asimple_claudia_studio",
                                   "<?php echo $ROOT; ?>/screenshots/claudia-qtractor.png")
-    readPart8 = readPart8.replace("http://www.wiki.linuxmusicians.com/lib/exe/fetch.php?w=&amp;h=&amp;cache=cache&amp;media=claudia2.png",
+    readPart5 = readPart5.replace("/_media/wiki/claudia2.png",
                                   "<?php echo $ROOT; ?>/screenshots/claudia-qtractor.png")
 
-    readPart8 = readPart8.replace("http://www.wiki.linuxmusicians.com/lib/exe/detail.php?id=alsa_and_kxstudio&amp;cache=cache&amp;media=kmixer.png",
+    readPart5 = readPart5.replace("/_detail/wiki/kmixer.png?id=wiki%3Aalsa_and_kxstudio",
                                   "<?php echo $ROOT; ?>/screenshots/kmix.png")
-    readPart8 = readPart8.replace("http://www.wiki.linuxmusicians.com/lib/exe/fetch.php?w=&amp;h=&amp;cache=cache&amp;media=kmixer.png",
+    readPart5 = readPart5.replace("/_media/wiki/kmixer.png",
                                   "<?php echo $ROOT; ?>/screenshots/kmix.png")
 
-    readPart8 = readPart8.replace(" The &#039;UAC3553B&#039; tab displays controls for a USB audio device whilst &#039;Playback Streams&#039; can be ignored unless you are using PulseAudio.",
+    k1 = '<a href="/_detail/wiki/kmix-tray.png?id=wiki%3Aalsa_and_kxstudio" class="media" title="wiki:kmix-tray.png">'
+    k2 = '<img src="/_media/wiki/kmix-tray.png" class="media" title="The kmix icon" alt="The kmix icon" />'
+    k3 = '</a>'
+    readPart5 = readPart5.replace(k1+k2+k3, k2)
+    readPart5 = readPart5.replace('?w=500" class="mediacenter" alt="" width="500"', '" class="media" alt=""')
+
+    # html cleanup
+    for i in range(2, 10):
+        readPart5 = readPart5.replace(" class=\"sectionedit%i\"" % i, "")
+    readPart5 = readPart5.replace("<h2><a name=", "<h2><span name=").replace("</a></h2>", "</span></h2>")
+    readPart5 = readPart5.replace("<h3><a name=", "<h3><span name=").replace("</a></h3>", "</span></h3>")
+    readPart5 = readPart5.replace("/_detail/wiki/", "http://wiki.linuxaudio.org/_detail/wiki/")
+    readPart5 = readPart5.replace("/_media/wiki/", "http://wiki.linuxaudio.org/_media/wiki/")
+    readPart5 = readPart5.replace('href="/wiki/', 'target="_blank" href="http://wiki.linuxaudio.org/wiki/')
+    readPart5 = readPart5.replace('title="wiki:', 'title="')
+
+    # TODO: remove this
+    readPart5 = readPart5.replace('<acronym title="Advanced Linux Sound Architecture">ALSA</acronym>','ALSA')
+    readPart5 = readPart5.replace('<acronym title="Digital Signal Processing">DSP</acronym>','DSP')
+
+    # FIXME: this should happen on the wiki
+    readPart5 = readPart5.replace("kxstudio.sourceforge.net", "kxstudio.linuxaudio.org")
+
+    readPart5 = readPart5.replace(" The &#039;UAC3553B&#039; tab displays controls for a USB audio device whilst &#039;Playback Streams&#039; can be ignored unless you are using PulseAudio.",
                                   "")
 
-    readPart8 = readPart8.replace("as &#039;Mic&#039; and &#039;Mic Boost&#039; do", "as &#039;Beep&#039; does")
+    readPart5 = readPart5.replace("as &#039;Mic&#039; and &#039;Mic Boost&#039; do", "as &#039;Beep&#039; does")
 
-    readPart8 = readPart8.replace("<a href=\"/doku.php?id=", "<a href=\"<?php echo $ROOT; ?>/Documentation:Manual:")
+    readPart5 = readPart5.replace("<a href=\"/doku.php?id=", "<a href=\"<?php echo $ROOT; ?>/Documentation:Manual:")
+    readPart5 = readPart5.replace("http://kxstudio.linuxaudio.org/", "<?php echo $ROOT; ?>/")
 
     kxPageContent  = '<?php\n'
     kxPageContent += '$PAGE_TITLE    = "KXStudio";\n'
@@ -89,7 +111,7 @@ for page in manualPages:
     kxPageContent += '?>\n'
     kxPageContent += '\n'
 
-    kxPageContent += readPart8
+    kxPageContent += readPart5
     kxPageContent += '\n'
 
     kxPageContent += '\n'
