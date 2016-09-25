@@ -87,10 +87,6 @@ for page in manualPages:
     readPart5 = readPart5.replace('href="/wiki/', 'target="_blank" href="http://wiki.linuxaudio.org/wiki/')
     readPart5 = readPart5.replace('title="wiki:', 'title="')
 
-    # TODO: remove this
-    readPart5 = readPart5.replace('<acronym title="Advanced Linux Sound Architecture">ALSA</acronym>','ALSA')
-    readPart5 = readPart5.replace('<acronym title="Digital Signal Processing">DSP</acronym>','DSP')
-
     # FIXME: this should happen on the wiki
     readPart5 = readPart5.replace("kxstudio.sourceforge.net", "kxstudio.linuxaudio.org")
 

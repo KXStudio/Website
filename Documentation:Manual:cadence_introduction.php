@@ -66,7 +66,7 @@ Replace &lt;username&gt; with a KXStudio user name when you run that command in 
 </p>
 
 <p>
-<strong>DSP Load</strong> is the current CPU load estimated by JACK. If it gets too high you may experience performance issues.
+<strong><acronym title="Digital Signal Processing">DSP</acronym> Load</strong> is the current CPU load estimated by JACK. If it gets too high you may experience performance issues.
 </p>
 
 <p>
@@ -124,15 +124,15 @@ Cadence&#039;s main window integrates the control of a few &#039;JACK bridges&#0
 </p>
 
 <p>
-The ALSA audio bridge enables one or more ALSA audio applications to access your JACK device when it is started. Most everybody will want to ensure this is kept running alongside JACK as it enables audio for non-JACK apps such as Firefox. If you have chosen for JACK to start at boot then the ALSA audio bridge also gets started automatically.
+The <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> audio bridge enables one or more <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> audio applications to access your JACK device when it is started. Most everybody will want to ensure this is kept running alongside JACK as it enables audio for non-JACK apps such as Firefox. If you have chosen for JACK to start at boot then the <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> audio bridge also gets started automatically.
 </p>
 
 <p>
-The ALSA MIDI bridge needs to be running if you want to use any MIDI hardware.
+The <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> MIDI bridge needs to be running if you want to use any MIDI hardware.
 </p>
 
 <p>
-PulseAudio is not included by default with KXStudio and the PulseAudio bridge will not function until it has been installed. Most applications which use PA can use ALSA or JACK instead so there is often no need for PA and its bridge.
+PulseAudio is not included by default with KXStudio and the PulseAudio bridge will not function until it has been installed. Most applications which use PA can use <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> or JACK instead so there is often no need for PA and its bridge.
 </p>
 
 </div>

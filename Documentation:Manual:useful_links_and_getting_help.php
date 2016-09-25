@@ -32,7 +32,7 @@ For more info on the KXStudio applications such as Cadence, Claudia and Catia
 <div class="level3">
 
 <p>
-To check to see if your sound device is supported by GNU/Linux, check the ALSA SoundCard Matrix
+To check to see if your sound device is supported by GNU/Linux, check the <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> SoundCard Matrix
 </p>
 
 <p>

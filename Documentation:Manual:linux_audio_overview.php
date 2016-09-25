@@ -18,11 +18,11 @@ Anyone intending to use GNU/Linux as a platform for audio or video production wi
 <div class="level2">
 
 <p>
-<a href="http://www.alsa-project.org" class="urlextern" title="http://www.alsa-project.org"  rel="nofollow">ALSA</a>, the Advanced Linux Sound Architecture, is a collection of drivers and libraries that provide Linux with audio and MIDI support for onboard, PCI, and USB audio hardware. ALSA doesn&#039;t support FireWire audio devices — that requires FFADO and JACK (see below).
+<a href="http://www.alsa-project.org" class="urlextern" title="http://www.alsa-project.org"  rel="nofollow">ALSA</a>, the Advanced Linux Sound Architecture, is a collection of drivers and libraries that provide Linux with audio and MIDI support for onboard, PCI, and USB audio hardware. <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> doesn&#039;t support FireWire audio devices — that requires FFADO and JACK (see below).
 </p>
 
 <p>
-ALSA alone is insufficient for most AV production tasks because only one application can access an ALSA device at any one time. JACK and Pulseaudio were created mainly to overcome this restriction although they target different use cases. KXStudio includes an ALSA/JACK bridge program called “snd-aloop daemon” which enables the user to run ALSA-only apps alongside JACK and other JACK-native software. This bridge is turned on by default when JACK is started - see the <a target="_blank" href="http://wiki.linuxaudio.org/wiki/cadence_introduction" class="wikilink1" target="_parent" title="cadence_introduction">Cadence</a> instructions for more information.
+<acronym title="Advanced Linux Sound Architecture">ALSA</acronym> alone is insufficient for most AV production tasks because only one application can access an <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> device at any one time. JACK and Pulseaudio were created mainly to overcome this restriction although they target different use cases. KXStudio includes an <acronym title="Advanced Linux Sound Architecture">ALSA</acronym>/JACK bridge program called “snd-aloop daemon” which enables the user to run <acronym title="Advanced Linux Sound Architecture">ALSA</acronym>-only apps alongside JACK and other JACK-native software. This bridge is turned on by default when JACK is started - see the <a target="_blank" href="http://wiki.linuxaudio.org/wiki/cadence_introduction" class="wikilink1" target="_parent" title="cadence_introduction">Cadence</a> instructions for more information.
 </p>
 
 </div>
@@ -40,7 +40,7 @@ The <a href="http://jackaudio.org" class="urlextern" title="http://jackaudio.org
 <div class="level2">
 
 <p>
-<a href="http://ffado.org/" class="urlextern" title="http://ffado.org/"  rel="nofollow">FFADO</a> provides Free FireWire Audio Drivers (the “O” is for .Org). Unlike ALSA, FFADO depends upon JACK and does not work independently. Hence, when you select a FireWire audio device for use by JACK under the Cadence driver configuration, you are using the FFADO drivers.
+<a href="http://ffado.org/" class="urlextern" title="http://ffado.org/"  rel="nofollow">FFADO</a> provides Free FireWire Audio Drivers (the “O” is for .Org). Unlike <acronym title="Advanced Linux Sound Architecture">ALSA</acronym>, FFADO depends upon JACK and does not work independently. Hence, when you select a FireWire audio device for use by JACK under the Cadence driver configuration, you are using the FFADO drivers.
 </p>
 
 </div>
@@ -49,7 +49,7 @@ The <a href="http://jackaudio.org" class="urlextern" title="http://jackaudio.org
 <div class="level2">
 
 <p>
-<a href="http://pulseaudio.org" class="urlextern" title="http://pulseaudio.org"  rel="nofollow">PulseAudio</a> (PA) is a sound server which, like JACK, runs on top of ALSA to provide functions such as allowing more than one application to use an ALSA device simultaneously. Pulse is targetted at regular desktop and mobile users rather than low-latency audio production. Cadence includes a PulseAudio/JACK bridge enabling you to run PulseAudio apps under JACK, but there are very few apps which support PA without supporting JACK or ALSA. KXStudio does not include PulseAudio as part of the default installation, but it is easily installed with the package manager if required.
+<a href="http://pulseaudio.org" class="urlextern" title="http://pulseaudio.org"  rel="nofollow">PulseAudio</a> (PA) is a sound server which, like JACK, runs on top of <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> to provide functions such as allowing more than one application to use an <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> device simultaneously. Pulse is targetted at regular desktop and mobile users rather than low-latency audio production. Cadence includes a PulseAudio/JACK bridge enabling you to run PulseAudio apps under JACK, but there are very few apps which support PA without supporting JACK or <acronym title="Advanced Linux Sound Architecture">ALSA</acronym>. KXStudio does not include PulseAudio as part of the default installation, but it is easily installed with the package manager if required.
 </p>
 
 </div>

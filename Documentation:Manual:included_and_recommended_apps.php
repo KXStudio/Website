@@ -126,7 +126,7 @@ Many of these apps are, or will be, included on the KXStudio DVD. Those not incl
 </li>
 <li class="level1"><div class="li"> <strong>scribus</strong>			Professional layout and publishing software</div>
 </li>
-<li class="level1"><div class="li"> <strong>setBfree</strong>                Great sounding DSP B3 Hammond organ emulator LV2 plugin </div>
+<li class="level1"><div class="li"> <strong>setBfree</strong>                Great sounding <acronym title="Digital Signal Processing">DSP</acronym> B3 Hammond organ emulator LV2 plugin </div>
 </li>
 <li class="level1"><div class="li"> <strong>smplayer</strong>		Excellent audio and video playback app</div>
 </li>

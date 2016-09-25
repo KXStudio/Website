@@ -9,7 +9,7 @@ include_once("includes/header.php");
 <div class="level1">
 
 <p>
-The Advanced Linux Sound Architecture is the primary sound system used by Linux. Even those who only plan to use JACK with the FFADO (FireWire) drivers should still have familiarity with ALSA.
+The Advanced Linux Sound Architecture is the primary sound system used by Linux. Even those who only plan to use JACK with the FFADO (FireWire) drivers should still have familiarity with <acronym title="Advanced Linux Sound Architecture">ALSA</acronym>.
 </p>
 
 </div>
@@ -18,7 +18,7 @@ The Advanced Linux Sound Architecture is the primary sound system used by Linux.
 <div class="level2">
 
 <p>
-The main ALSA mixer included with KXStudio is called kmix. You can use kmix to adjust audio input and output levels, mute and unmute channels and change other non-FireWire audio device settings such as selecting between SPDIF and analog inputs if your device has such features. The kmix system tray icon looks like this:
+The main <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> mixer included with KXStudio is called kmix. You can use kmix to adjust audio input and output levels, mute and unmute channels and change other non-FireWire audio device settings such as selecting between SPDIF and analog inputs if your device has such features. The kmix system tray icon looks like this:
 </p>
 
 <p>
@@ -34,7 +34,7 @@ If you have a scrollwheel function on a mouse or trackpad, you can hover over th
 </p>
 
 <p>
-Here we see the main kmix mixer window. kmix displays the controls for each ALSA device on its own separate tab. In this screenshot the &#039;HDA Intel&#039; onboard audio device is selected. 
+Here we see the main kmix mixer window. kmix displays the controls for each <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> device on its own separate tab. In this screenshot the &#039;HDA Intel&#039; onboard audio device is selected. 
 </p>
 
 <p>
@@ -46,7 +46,7 @@ In the bottom right corner of the mixer window there is a tool icon. This icon a
 </p>
 
 <p>
-Whilst there is a standard defined for USB audio devices, relatively few devices fully comply with it. What this means for ALSA and USB devices is that sometimes you will see no controls under kmix for some USB devices or controls may not function as expected. Such issues may be worked around by inserting an app such as Non mixer or jack_mixer between an audio source and the problematic output device until the issue is fixed within ALSA.
+Whilst there is a standard defined for USB audio devices, relatively few devices fully comply with it. What this means for <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> and USB devices is that sometimes you will see no controls under kmix for some USB devices or controls may not function as expected. Such issues may be worked around by inserting an app such as Non mixer or jack_mixer between an audio source and the problematic output device until the issue is fixed within <acronym title="Advanced Linux Sound Architecture">ALSA</acronym>.
 </p>
 
 </div>
@@ -55,7 +55,7 @@ Whilst there is a standard defined for USB audio devices, relatively few devices
 <div class="level2">
 
 <p>
-Cadence is primarily used to control and monitor the various Linux sound systems, including ALSA, under KXStudio. The main Cadence window has a &#039;JACK bridges&#039; section which contains two ALSA/JACK bridges - one for ALSA audio and one for MIDI. You will not hear audio produced by ALSA-only apps when JACK is running if the ALSA audio bridge is stopped. Likewise, you will be unable to access MIDI devices if the ALSA MIDI bridge isn&#039;t running when JACK is.
+Cadence is primarily used to control and monitor the various Linux sound systems, including <acronym title="Advanced Linux Sound Architecture">ALSA</acronym>, under KXStudio. The main Cadence window has a &#039;JACK bridges&#039; section which contains two <acronym title="Advanced Linux Sound Architecture">ALSA</acronym>/JACK bridges - one for <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> audio and one for MIDI. You will not hear audio produced by <acronym title="Advanced Linux Sound Architecture">ALSA</acronym>-only apps when JACK is running if the <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> audio bridge is stopped. Likewise, you will be unable to access MIDI devices if the <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> MIDI bridge isn&#039;t running when JACK is.
 </p>
 
 </div>
@@ -64,7 +64,7 @@ Cadence is primarily used to control and monitor the various Linux sound systems
 <div class="level2">
 
 <p>
-As JACK increases in popularity, it is more widely supported. However, several apps are still ALSA-only. Such apps will have their audio channeled via the same ALSA to JACK bridge. These include:
+As JACK increases in popularity, it is more widely supported. However, several apps are still <acronym title="Advanced Linux Sound Architecture">ALSA</acronym>-only. Such apps will have their audio channeled via the same <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> to JACK bridge. These include:
 </p>
 
 <p>
@@ -72,7 +72,7 @@ As JACK increases in popularity, it is more widely supported. However, several a
 </p>
 
 <p>
-<strong>Skype</strong> If you don&#039;t require webcam or video support then it is recommended you use Mumble instead of Skype for VOIP. Although Mumble doesn&#039;t yet officially support JACK, there is a build of Mumble with JACK support available from the KXStudio repositories. However, if you need to use Skype it works fine provided the ALSA audio bridge is running.
+<strong>Skype</strong> If you don&#039;t require webcam or video support then it is recommended you use Mumble instead of Skype for VOIP. Although Mumble doesn&#039;t yet officially support JACK, there is a build of Mumble with JACK support available from the KXStudio repositories. However, if you need to use Skype it works fine provided the <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> audio bridge is running.
 </p>
 
 <p>
@@ -80,7 +80,7 @@ As JACK increases in popularity, it is more widely supported. However, several a
 </p>
 
 <p>
-Some other apps have only partial JACK support. These work with JACK directly, have their own JACK connections, and function without the ALSA to JACK bridge, but their connections are not persistent. They will temporarily connect to JACK while playing but drop their connection as soon as playback is stopped. Examples of these apps are:
+Some other apps have only partial JACK support. These work with JACK directly, have their own JACK connections, and function without the <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> to JACK bridge, but their connections are not persistent. They will temporarily connect to JACK while playing but drop their connection as soon as playback is stopped. Examples of these apps are:
 </p>
 
 <p>
@@ -105,27 +105,27 @@ Hence, none of these offer the individual audio routing functionality or other f
 <div class="level2">
 
 <p>
-The following commands can be useful for troubleshooting ALSA issues in a terminal:
+The following commands can be useful for troubleshooting <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> issues in a terminal:
 </p>
 <pre class="code">alsamixer</pre>
 
 <p>
-The original ALSA mixer
+The original <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> mixer
 </p>
 <pre class="code">cat /proc/asound/cards</pre>
 
 <p>
-Displays attached ALSA devices
+Displays attached <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> devices
 </p>
 <pre class="code">cat ~/.asoundrc</pre>
 
 <p>
-Displays your ALSA configuration file
+Displays your <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> configuration file
 </p>
 <pre class="code">sudo alsactl store 0</pre>
 
 <p>
-Saves the current settings for ALSA device 0
+Saves the current settings for <acronym title="Advanced Linux Sound Architecture">ALSA</acronym> device 0
 </p>
 
 </div>
