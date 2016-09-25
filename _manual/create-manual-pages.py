@@ -23,8 +23,8 @@ manualPages = (
 for page in manualPages:
     print(page)
     tmppage = "tmp_%s" % page
-    webpage = "http://www.wiki.linuxmusicians.com/doku.php?id=%s" % page
-    #os.system("wget %s -O %s" % (webpage, tmppage))
+    webpage = "http://wiki.linuxaudio.org/wiki/%s" % page
+    os.system("wget %s -O %s" % (webpage, tmppage))
 
     tmppageFd   = open(tmppage, "r")
     tmppageRead = tmppageFd.read().strip()
@@ -38,7 +38,7 @@ for page in manualPages:
     readPart3 = readPart2.split("<!-- wikipage stop -->", 1)[0].strip()
 
     # remove first part of the page, we want the title
-    readPart4 = readPart3.split("<h1><a name=", 1)[1].strip()
+    readPart4 = readPart3.split("<h1 class=\"sectionedit1\"><a name=", 1)[1].strip()
     # get the title
     kxPageTitle = readPart4.split(">", 1)[1].split("</a>", 1)[0].strip()
 
@@ -48,6 +48,9 @@ for page in manualPages:
     # html cleanup
     readPart6 = readPart5.replace("<h2><a name=", "<h2><span name=").replace("</a></h2>", "</span></h2>")
     readPart7 = readPart6.replace("/lib/exe/", "http://www.wiki.linuxmusicians.com/lib/exe/")
+
+    # FIXME: this should happen on the wiki too
+    readPart7 = readPart7.replace("kxstudio.sourceforge.net", "kxstudio.linuxaudio.org")
 
     # custom mods
     readPart8 = readPart7.replace("http://www.wiki.linuxmusicians.com/lib/exe/detail.php?id=jack_configuration&amp;cache=cache&amp;media=cadence-jack-settings.png",
@@ -100,3 +103,6 @@ for page in manualPages:
     pageFd = open("Documentation:Manual:%s.php" % page, "w")
     pageFd.write(kxPageContent)
     pageFd.close()
+
+    # removing temporary file
+    os.remove(tmppage)
