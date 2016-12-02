@@ -49,6 +49,11 @@ else if (! empty($_POST["paste_text"]))
     $paste_code   = $_POST["paste_text"];
     $paste_format = $_POST["paste_format"];
     $paste_name   = htmlspecialchars($_POST["paste_title"]);
+    $paste_pass   = htmlspecialchars($_POST["paste_password"]);
+
+    if (sha1($paste_pass) != "c3b5562b12495ac3ebaf0970a1fdb02d8823c0b3") {
+        die("This pastebin is now protected with a password due to users abusing it for copyright infringement");
+    }
 
     if (array_key_exists("paste_numbers", $_POST)) {
         $paste_numbers = $_POST["paste_numbers"];
@@ -219,6 +224,7 @@ else // $show_paste
 
                 <tr><td align="right">Paste Name / Title:</td><td>
                     <input type="text" name="paste_title" id="paste_title" />
+                    <input type="text" name="paste_password" id="paste_password" />
                     <input type="text" name="paste_misc" id="paste_misc" style="visibility: hidden;" />
                 </td></tr>
 
