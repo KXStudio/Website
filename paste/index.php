@@ -224,8 +224,11 @@ else // $show_paste
 
                 <tr><td align="right">Paste Name / Title:</td><td>
                     <input type="text" name="paste_title" id="paste_title" />
-                    <input type="text" name="paste_password" id="paste_password" />
                     <input type="text" name="paste_misc" id="paste_misc" style="visibility: hidden;" />
+                </td></tr>
+
+                <tr><td align="right">Password:</td><td>
+                    <input type="text" name="paste_password" id="paste_password" />
                 </td></tr>
 
                 <tr><td align="right">
