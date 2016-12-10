@@ -30,32 +30,32 @@
         <div class="column grid_3 alpha">
             <div class="box box-shadow alpha clear-both navigation">
                 <h2 class="box-header"> <a href="<?php echo $ROOT; ?>/News" style="color: #aaf;">News</a> </h2>
-                <a href="<?php echo $ROOT; ?>/News/?action=view&url=new-releases-and-future-plans">
-                    <b>New releases and future plans</b><br/>
+                <a href="<?php echo $ROOT; ?>/News/?action=view&url=changes-in-kxstudio-repositories">
+                    <b>Changes in KXStudio repositories</b><br/>
                 </a>
                 <p>
-                    New KXStudio DVD and Carla releases.<br/>
-                    KXStudio repositories moving to Debian.
+                    SHA1 keys issue fix coming soon.<br/>
+                    Qt5 audio packages coming afterwards.
                 </p>
                 <hr/>
 
-                <a href="<?php echo $ROOT; ?>/News/?action=view&url=carla-plugin-host-100-released">
-                    <b>Carla 1.0.0 released!</b><br/>
+                <a href="<?php echo $ROOT; ?>/News/?action=view&url=kxstudio-website-has-moved">
+                    <b>KXStudio Website has moved</b><br/>
+                </a>
+                <p>
+                    You can now find the KXStudio website at <a href="http://kxstudio.linuxaudio.org/">
+                        kxstudio.linuxaudio.org.</a><br/>
+                    Also the KXStudio repositories have do not use sourceforge anymore.
+                </p>
+                <hr/>
+
+                <a href="<?php echo $ROOT; ?>/News/?action=view&url=carla-20-beta4-is-here">
+                    <b>Carla 2.0-beta4 is finally out!</b><br/>
                     <img src="<?php echo $ROOT; ?>/screenshots/carla.png" alt="" width="150px"/>
                 </a>
-                <p>After more than 2 years in development, the first stable release of Carla is now available!</p>
-                <hr/>
-
-                <a href="<?php echo $ROOT; ?>/News/?action=view&url=kxstudio-mini-manual">
-                    <b>KXStudio Mini-Manual</b>
-                </a>
-                <p>Thanks for the hard work of danboid and wolftune, the KXStudio "Mini" Manual is now online.</p>
-                <hr/>
-
-                <a href="<?php echo $ROOT; ?>/News/?action=view&url=kxstudio-now-on-facebook-and-soundcloud">
-                    <b>Facebook and SoundCloud</b>
-                </a>
-                <p>There's now a Facebook and SoundCloud page for KXStudio.</p>
+                <p>
+                     The 4th beta of the upcoming Carla 2.0 release.
+                </p>
             </div>
         </div>
 <?php } ?>

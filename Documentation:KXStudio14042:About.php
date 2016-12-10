@@ -16,13 +16,12 @@ include_once("includes/header.php");
 </p>
 
 <p>
-    The Live-DVD contains a highly optimized KDE desktop (version 4.11.1), together with a low-latency kernel (version 3.8).<br/>
+    The Live-DVD contains a highly optimized KDE4 desktop, together with a low-latency kernel (version 3.8).<br/>
     There's a lot of audio-related applications inside, with even more available to install via the repositories.
 </p>
 
 <p>
-    The live system is based upon Kubuntu code with only a few tweaks (like auto-adding the live user to audio and video groups).<br/>
-    Due to a Kubuntu backports issue is not possible to use Ubuntu's "LTS Enablement Stack", so the regular Xorg version is used.
+    The live system is based upon Kubuntu code with only a few tweaks (like auto-adding the live user to audio and video groups).
 </p>
 
 <h3><span class="mw-headline" id="Apps"> Pre-installed applications </span></h3>
@@ -43,7 +42,7 @@ include_once("includes/header.php");
 <tr><td valign="top">
 <ul>
 <!--     <li>amsynth</li> -->
-    <li>Ardour3</li>
+    <li>Ardour</li>
     <li>Audacious</li>
     <li>Audacity</li>
     <li>Bristol</li>
@@ -105,7 +104,6 @@ include_once("includes/header.php");
     <li>SMPlayer</li>
     <li>Synaptic</li>
     <li>VLC</li>
-    <li>Wine</li>
 </ul>
 </td></tr>
 </table>
