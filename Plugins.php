@@ -22,34 +22,33 @@ include_once("includes/header.php");
 
 <h3><span class="mw-headline" id="DISTRHO"> <img src="images/distrho-big.png" alt="distrho-big.png" class="img_text_align"/> </span></h3>
 <p>
-    DISTRHO provides cross-platform plugins and Linux ports, including HighLife and TAL NoiseMaker.<br/>
-    The official website for DISTRHO is <a href="http://distrho.sourceforge.net/" class="external free" rel="nofollow" target="_blank">http://distrho.sourceforge.net/</a>, and its respective forums are located
-      <a href="http://www.kvraudio.com/forum/viewforum.php?f=191" class="external text" rel="nofollow" target="_blank">here</a>.
+    DISTRHO provides cross-platform plugins and Linux ports, including MVerb and TAL NoiseMaker.<br/>
+    The official website for DISTRHO is <a href="http://distrho.sourceforge.net/" class="external free" rel="nofollow" target="_blank">
+        http://distrho.sourceforge.net/</a>, and its respective forums are located
+    <a href="http://www.kvraudio.com/forum/viewforum.php?f=191" class="external text" rel="nofollow" target="_blank">here</a>.
 </p>
 <p>
-    NOTE: This is the project KXStudio uses to release original and Linux-ported audio plugins.<br/>
-    The split between projects allow us to make plugins non-dependent on KXStudio, but they are still made by the same team.<br/>
-</p>
-
-<hr/>
-
-<h3><span class="mw-headline" id="Calf"> <img src="images/calf.png" alt="calf.png" class="img_text_align"/> Calf Plugins </span></h3>
-<p>
-    This is a fork of the latest development code of the Calf plugin suite, originally available at <a href="http://repo.or.cz/w/calf.git/" class="external free" rel="nofollow" target="_blank">http://repo.or.cz/w/calf.git/</a>.<br/>
-</p>
-<p>
-    This fork was made to re-add purposefully removed features by Calf developers, which includes LADSPA, DSSI and LV2 External-UI support.<br/>
-    Additionally, LRDF typos were corrected and all DSSI GUIs work now.
-</p>
-<p>
-    The new source code is available <a href="https://github.com/falkTX/calf" class="external text" rel="nofollow" target="_blank">here</a>.
+    The
+    <a href="https://github.com/DISTRHO/DPF-Plugins" class="external text" rel="nofollow" target="_blank">
+        DPF-Plugins</a>
+    project contains mostly original plugins made with our own framework (dubbed
+    <a href="https://github.com/DISTRHO/DPF" class="external text" rel="nofollow" target="_blank">
+        DPF</a>),
+    <br/>
+    while
+    <a href="https://github.com/DISTRHO/DISTRHO-Ports" class="external text" rel="nofollow" target="_blank">
+        DISTRHO-Ports</a>
+    contains ports of 3rd party plugins made with
+    <a href="https://github.com/DISTRHO/juce" class="external text" rel="nofollow" target="_blank">
+        Juce</a>.
 </p>
 
 <hr/>
 
 <h3><span class="mw-headline" id="dssi-vst"> dssi-vst </span></h3>
 <p>
-    This is a fork of dssi-vst, initially based on "k_amlie"'s code updates (to make it more RT friendly), with additional fixes from falkTX which includes:
+    This was initially a fork of dssi-vst, based on "k_amlie"'s code updates (to make it more RT friendly),
+    with a few additional fixes including:
 </p>
 <ul>
     <li>Enabled compiler optimizations where possible (ie, -O2 -ffast-math etc)</li>
@@ -59,8 +58,37 @@ include_once("includes/header.php");
     <li>Update vestige header, to make more plugins load</li>
 </ul>
 <p>
-    The source code is available <a href="https://github.com/falkTX/dssi-vst" class="external text" rel="nofollow" target="_blank">here</a>.
-      There's a specific dssi-vst topic in the KXStudio forums <a href="http://linuxmusicians.com/viewtopic.php?f=47&t=8128" class="external text" rel="nofollow" target="_blank">here</a>.
+    falkTX is now the maintainer of this project.<br/>
+    The source code is available
+    <a href="https://github.com/falkTX/dssi-vst" class="external text" rel="nofollow" target="_blank">
+        here</a>.
+</p>
+
+<hr/>
+
+<h3><span class="mw-headline" id="fluidplug"> FluidPlug </span></h3>
+<p>
+    FluidPlug uses SoundFonts as LV2 plugins via FluidSynth.<br/>
+    Made for hosts that do not support desktop UIs or loading of external files.
+</p>
+<p>
+    The source code is available
+    <a href="https://github.com/falkTX/FluidPlug" class="external text" rel="nofollow" target="_blank">
+        here</a>.
+</p>
+
+<hr/>
+
+<h3><span class="mw-headline" id="jackass"> JackAss </span></h3>
+<p>
+    JackAss is a VST plugin that provides JACK-MIDI support for VST hosts.<br/>
+    Simply load the plugin in your favourite host to get a JACK-MIDI port.<br/>
+    Each new plugin instance creates a new MIDI port.
+</p>
+<p>
+    The source code is available
+    <a href="https://github.com/falkTX/JackAss" class="external text" rel="nofollow" target="_blank">
+        here</a>.
 </p>
 
 <hr/>
