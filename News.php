@@ -13,6 +13,63 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; Changes in KXStudio repositories</span><br>
+    On <i>2016-05-06</i> by<i> falkTX</i>
+</p>
+
+<p>
+    Hey everyone, just a small heads up about the KXStudio repositories.
+</p>
+
+<p>
+    If you use Debian Testing or the new Ubuntu 16.04 you probably saw some warnings regarding weak SHA1 keys when checking for updates.<br>
+    We're aware of this issue and a fix is coming soon, but it will require some changes in the repositories.<br>
+</p>
+
+<p>
+    First, we'll get rid of the 'lucid' builds and rebuild all of them in the 'trusty' series.<br>
+    For those of you that were using Debian 6 or something older than Ubuntu 14.04, the repositories will stop working for you later this month.
+</p>
+
+<p>
+    Second, the gcc5 specific packages will be migrated from 'wily' series to 'xenial'.<br>
+    This means you'll no longer be able to use the KXStudio repositories if you're running Ubuntu 15.10.<br>
+    If that's the case for you, please update to 16.04 as soon as possible. Note that 15.10 will be officially end-of-life in 2 months.
+</p>
+
+<p>
+    And finally, the gcc5 packages will begin using Qt5 instead of Qt4 for some applications.<br>
+    This will include Carla, Qtractor and the v1 series plugins.<br>
+    Hopefully this won't break anything, but if it does please let us know.
+</p>
+
+<p>
+    That's it for now. Have a nice weekend!
+</p>
+
+<hr/>
+
+<p>
+    <span style="font-size: 20px">&gt; KXStudio Website has moved</span><br>
+    On <i>2015-07-25</i> by<i> falkTX</i>
+</p>
+
+<p>
+    Hey all,
+</p>
+
+<p>
+    As you might have noticed sourceforge has been out of service for a while now.<br>
+    That, coupled together with the previous adware/spyware fiasco led to me look for alternatives.
+</p>
+
+<p>
+    So you can now find the KXStudio website at <a href="http://kxstudio.linuxaudio.org/">http://kxstudio.linuxaudio.org/</a>.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.0 beta4 is here!</span><br/>
     On <i>2015-03-12</i> by<i> falkTX</i>
 </p>
