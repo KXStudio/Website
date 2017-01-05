@@ -13,6 +13,105 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.0 beta5 is here!</span><br/>
+    On <i>2017-01-06</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone, we're glad to bring you the 5th beta of the upcoming Carla 2.0 release.<br/>
+    It has been more than 1 year since the last Carla release, this release fixes things that got broken in the mean time and continues the work towards Carla's 2.0 base features.<br/>
+    There's quite a lot of changes under the hood, mostly bugfixes and minor but useful additions.<br/>
+    With that being said, here are some of the highlights:
+</p>
+
+<table><tr><td>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta5_carla-control.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta5_carla-control_crop.png" alt="carla-control"/></a>
+</td><td>
+<h3>Carla-Control is back!</h3>
+<p>
+    Carla-Control is an application to remotely control a Carla instance via network, using OSC messages.<br/>
+    It stopped working shortly after Carla's move to 2.x development, but now it's back, and working a lot better.<br/>
+    Currently works on Linux and Mac OS.
+</p>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta5_logs-tab.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta5_logs-tab_crop.png" alt="logs-tab"/></a>
+</td><td>
+<h3>Logs tab</h3>
+<p>
+    This was also something that was brought back in this release.<br/>
+    It was initially removed from the 2.x series because it did not work so well.<br/>
+    Now the code has been fixed up and brought to life. You can disable it in the settings if you prefer your messages to go to the console as usual.<br/>
+    Sadly this does not work on Windows just yet, only for Linux and Mac OS.<br/>
+    But for Windows a Debug/Carla.exe file is included in this build (after you extract the exe as zip file), which can be used to see the console window.
+</p>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta5_midi-pattern.png"><img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta5_midi-pattern_crop.png" alt="midi-pattern"/></a>
+</td><td>
+<h3>MIDI Sequencer is dead, long live MIDI Pattern!</h3>
+<p>
+    The internal MIDI Sequencer plugin was renamed to MIDI Pattern, and received some needed attention.<br/>
+    Some menu actions and parameters were added, to make it more intuitive to use.<br/>
+    It's now exported as part of the Carla-LV2 plugins package, and available for Linux and Mac OS.
+</p>
+</td></tr></table>
+
+<p><br/></p>
+
+<h3>More stuff</h3>
+<ul>
+  <li>Add carla-jack-single/multi startup tools</li>
+  <li>Add 16 channel and 2+1 (sidechain) variant to Carla-Patchbay plugins</li>
+  <li>Add new custom menu when right-clicking empty rack &amp; patchbay areas</li>
+  <li>Add command-line option for help and version arguments</li>
+  <li>Add command-line option to run Carla without UI (requires project file)</li>
+  <li>Add X11 UI to Carla-LV2</li>
+  <li>Remove mverb as internal plugin (conflicting license)</li>
+  <li>Remove nekofilter internal plugin (use fil4.lv2 instead)</li>
+  <li>Implement plugin bridges for Mac OS and Windows</li>
+  <li>Implement Carla-LV2 MIDI out</li>
+  <li>Implement initial latency code, used for aligned dry/wet sound for now</li>
+  <li>Implement support for VST shell plugins under Linux</li>
+  <li>Implement sorting of LV2 scale points</li>
+  <li>Allow to scan and load 32bit AUs under Mac OS</li>
+  <li>Allow the same midi-cc in multiple parameters for the same plugin</li>
+  <li>Allow Carla-VST to be built with Qt5 (Linux only)</li>
+  <li>Bypass MIDI events on carla-rack plugin when rack is empty</li>
+  <li>Find plugin binary when saved filename doesn't exist</li>
+  <li>Force usage of custom theme under Mac OS</li>
+  <li>New option to wherever put UIs on top of carla (Linux only)</li>
+  <li>Options saved in plugins config</li>
+  <li>Make canvas draggable with mouse middle-click</li>
+  <li>Make it possible to force-refresh scan LV2 and AU plugins</li>
+  <li>Renaming plugins under JACK driver mode now keeps the patchbays connections</li>
+  <li>Update modgui code for latest mod-ui, supports control outputs now</li>
+  <li>Lots and lots of bug fixes.</li>
+</ul>
+<p>
+    There will still be 1 more beta release before going for a release candidate, so expect more cool stuff soon!<br/>
+</p>
+
+<h3>Special Notes</h3>
+<ul>
+  <li>Carla as plugin is still not available under Windows, to be done for the next beta.</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump into the <a href="<?php echo $ROOT; ?>/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump into the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Changes in KXStudio repositories</span><br>
     On <i>2016-05-06</i> by<i> falkTX</i>
 </p>
