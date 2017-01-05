@@ -62,8 +62,8 @@ include_once("includes/header.php");
     </p>
     <p class="p_extra_spaced">
         <b>MacOS Downloads:</b><br/>
-        &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta4-mac.dmg/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (version 2.0-beta4 for 10.6 or higher)<br/>
+        &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/1.9.7/Carla-2.0beta5-osx.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
+              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (version 2.0-beta5 for 10.8 or higher)<br/>
     </p>
     <p class="p_extra_spaced">
         <b>Windows Downloads:</b><br/>
@@ -71,10 +71,10 @@ include_once("includes/header.php");
               <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence </a> (32bit, version 0.8.1)<br/>
         &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.4-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla </a> (32bit, version 1.2.4)<br/>
-        &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta4-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (32bit, version 2.0-beta4)<br/>
-        &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta4-win64.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (64bit, version 2.0-beta4)<br/>
+        &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/1.9.7/Carla-2.0beta5-win32.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (32bit, version 2.0-beta5)<br/>
+        &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/1.9.7/Carla-2.0beta5-win64.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (64bit, version 2.0-beta5)<br/>
     </p>
 </ul>
 
