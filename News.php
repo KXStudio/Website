@@ -43,7 +43,10 @@ include_once("includes/header.php");
 <p>
     This was also something that was brought back in this release.<br/>
     It was initially removed from the 2.x series because it did not work so well.<br/>
-    Now the code has been fixed up and brought to life. You can disable it in the settings if you prefer your messages to go to the console as usual.<br/>
+    Now the code has been fixed up and brought to life.
+</p>
+<p>
+    You can disable it in the settings if you prefer your messages to go to the console as usual.<br/>
     Sadly this does not work on Windows just yet, only for Linux and Mac OS.<br/>
     But for Windows a Debug/Carla.exe file is included in this build (after you extract the exe as zip file), which can be used to see the console window.
 </p>
@@ -72,8 +75,8 @@ include_once("includes/header.php");
   <li>Add command-line option for help and version arguments</li>
   <li>Add command-line option to run Carla without UI (requires project file)</li>
   <li>Add X11 UI to Carla-LV2</li>
-  <li>Remove mverb as internal plugin (conflicting license)</li>
-  <li>Remove nekofilter internal plugin (use fil4.lv2 instead)</li>
+  <li>Remove MVerb internal plugin (conflicting license)</li>
+  <li>Remove Nekofilter internal plugin (use fil4.lv2 instead)</li>
   <li>Implement plugin bridges for Mac OS and Windows</li>
   <li>Implement Carla-LV2 MIDI out</li>
   <li>Implement initial latency code, used for aligned dry/wet sound for now</li>
@@ -86,9 +89,9 @@ include_once("includes/header.php");
   <li>Find plugin binary when saved filename doesn't exist</li>
   <li>Force usage of custom theme under Mac OS</li>
   <li>New option to wherever put UIs on top of carla (Linux only)</li>
-  <li>Options saved in plugins config</li>
   <li>Make canvas draggable with mouse middle-click</li>
-  <li>Make it possible to force-refresh scan LV2 and AU plugins</li>
+  <li>Make it possible to force-refresh scan of LV2 and AU plugins</li>
+  <li>Plugin settings (force stereo, send CC, etc) are now saved in the project file</li>
   <li>Renaming plugins under JACK driver mode now keeps the patchbays connections</li>
   <li>Update modgui code for latest mod-ui, supports control outputs now</li>
   <li>Lots and lots of bug fixes.</li>
