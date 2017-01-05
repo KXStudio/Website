@@ -83,7 +83,7 @@ include_once("includes/header.php");
   <li>Implement support for VST shell plugins under Linux</li>
   <li>Implement sorting of LV2 scale points</li>
   <li>Allow to scan and load 32bit AUs under Mac OS</li>
-  <li>Allow the same midi-cc in multiple parameters for the same plugin</li>
+  <li>Allow using the same midi-cc in multiple parameters for the same plugin</li>
   <li>Allow Carla-VST to be built with Qt5 (Linux only)</li>
   <li>Bypass MIDI events on carla-rack plugin when rack is empty</li>
   <li>Find plugin binary when saved filename doesn't exist</li>
