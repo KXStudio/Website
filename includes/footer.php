@@ -30,6 +30,15 @@
         <div class="column grid_3 alpha">
             <div class="box box-shadow alpha clear-both navigation">
                 <h2 class="box-header"> <a href="<?php echo $ROOT; ?>/News" style="color: #aaf;">News</a> </h2>
+                <a href="<?php echo $ROOT; ?>/News/?action=view&url=carla-20-beta5-is-here">
+                    <b>Carla 2.0-beta5 is here!</b><br/>
+                    <img src="<?php echo $ROOT; ?>/screenshots/carla.png" alt="" width="150px"/>
+                </a>
+                <p>
+                     The 5th beta of the upcoming Carla 2.0 release.
+                </p>
+                <hr/>
+
                 <a href="<?php echo $ROOT; ?>/News/?action=view&url=changes-in-kxstudio-repositories">
                     <b>Changes in KXStudio repositories</b><br/>
                 </a>
@@ -46,15 +55,6 @@
                     You can now find the KXStudio website at <a href="http://kxstudio.linuxaudio.org/">
                         kxstudio.linuxaudio.org.</a><br/>
                     Also the KXStudio repositories have do not use sourceforge anymore.
-                </p>
-                <hr/>
-
-                <a href="<?php echo $ROOT; ?>/News/?action=view&url=carla-20-beta4-is-here">
-                    <b>Carla 2.0-beta4 is finally out!</b><br/>
-                    <img src="<?php echo $ROOT; ?>/screenshots/carla.png" alt="" width="150px"/>
-                </a>
-                <p>
-                     The 4th beta of the upcoming Carla 2.0 release.
                 </p>
             </div>
         </div>
