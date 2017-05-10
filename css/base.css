@@ -75,7 +75,7 @@ blockquote{border-left:5px solid #690;color:#ddd;padding:10px;}
 #header{font-size:0.8em;font-weight:bold;margin:0 0 25px;border-bottom:1px solid #222222;}
 #header, #global-navigation li.selected{background: url('../images/gradient-dark-nav_mod.png') repeat-x scroll bottom left;}  /* background:#666 */
 #header, #global-navigation li{height:30px;font-family:"Raleway",sans-serif;}
-#header-content{}
+#header-content{display:inline;}
 #header ul#global-navigation{list-style:none inside;width:700px;float:left;}
 #header ul#global-navigation, #global-navigation li{border-color:#222222;border-style:solid;margin:0;}
 #global-navigation li:first-child{border-left-width:1px;}
