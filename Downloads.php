@@ -7,32 +7,32 @@ include_once("includes/header.php");
 ?>
 
 <ul id="LiveDVD" name="LiveDVD">
-    <li><b>KXStudio 14.04.2 Live-DVD</b></li>
+    <li><b>KXStudio 14.04.5 Live-DVD</b></li>
     <p>
-        This is an Ubuntu 14.04.2 LTS based Live-DVD, used to test-drive KXStudio and/or install it to your HDD.<br/>
-        It contains a snapshot of the KXStudio features as of <b>July 27th, 2015</b> or <b>27/07/2015</b>. It uses KDE4 as Desktop Environment.
+        This is an Ubuntu 14.04.5 LTS based Live-DVD, used to test-drive KXStudio and/or install it to your HDD.<br/>
+        It contains a snapshot of the KXStudio features as of <b>June 9th, 2017</b> or <b>09/06/2017</b>. It uses KDE4 as Desktop Environment.
     </p>
     <p class="p_extra_spaced">
         <b>Downloads:</b><br/>
-        &nbsp;<a href="http://download.linuxaudio.org/kxstudio/KXStudio_14.04.2_32bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_disc.png" alt="" class="img_text_align"/> KXStudio 14.04.2 Live-DVD <strong>- 32bit</strong></a>
-              | <a href="https://github.com/KXStudio/KXStudio/releases/download/14.04.2/KXStudio_14.04.2_32bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #1<strong></strong></a>
-              | <a href="https://drive.google.com/file/d/0B_uWSrIHpVoGLUxLYmdqQ3FtdHc/view" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #2<strong></strong></a>
+        &nbsp;<a href="http://download.linuxaudio.org/kxstudio/KXStudio_14.04.5_32bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">
+              <img src="images/ico_disc.png" alt="" class="img_text_align"/> KXStudio 14.04.5 Live-DVD <strong>- 32bit</strong></a>
+              <!--| <a href="https://github.com/KXStudio/KXStudio/releases/download/14.04.5/KXStudio_14.04.5_32bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #1<strong></strong></a>-->
+              <!--| <a href="https://drive.google.com/file/d/0B_uWSrIHpVoGLUxLYmdqQ3FtdHc/view" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #2<strong></strong></a>-->
               <br/>
-              &nbsp;&nbsp;&nbsp;&nbsp;md5sum: c6ce002cf92633efe4fbc8dd75852ec8<br/>
-              &nbsp;&nbsp;&nbsp;&nbsp;size: 1.5 GiB
+              &nbsp;&nbsp;&nbsp;&nbsp;md5sum: 86e9b4c24ea25fe1261ac0a452602d2a<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;size: 1.7 GiB
     </p>
     <p>
-        &nbsp;<a href="http://download.linuxaudio.org/kxstudio/KXStudio_14.04.2_64bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_disc.png" alt="" class="img_text_align"/> KXStudio 14.04.2 Live-DVD <strong>- 64bit</strong></a>
-              | <a href="https://github.com/KXStudio/KXStudio/releases/download/14.04.2/KXStudio_14.04.2_64bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #1<strong></strong></a>
-              | <a href="https://drive.google.com/file/d/0B_uWSrIHpVoGeGthNUJWdl9lcVk/view" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #2<strong></strong></a>
+        &nbsp;<a href="http://download.linuxaudio.org/kxstudio/KXStudio_14.04.5_64bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">
+              <img src="images/ico_disc.png" alt="" class="img_text_align"/> KXStudio 14.04.5 Live-DVD <strong>- 64bit</strong></a>
+              <!--| <a href="https://github.com/KXStudio/KXStudio/releases/download/14.04.5/KXStudio_14.04.5_64bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #1<strong></strong></a>-->
+              <!--| <a href="https://drive.google.com/file/d/0B_uWSrIHpVoGeGthNUJWdl9lcVk/view" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #2<strong></strong></a>-->
               <br/>
-              &nbsp;&nbsp;&nbsp;&nbsp;md5sum: a6f1ae7d700310e72eb050ee9ca6b71c<br/>
-              &nbsp;&nbsp;&nbsp;&nbsp;size: 1.5 GiB
+              &nbsp;&nbsp;&nbsp;&nbsp;md5sum: a249bb59f27312e69b3af8579b14e0a2<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;size: 1.7 GiB
     </p>
     <p>
-        <b>*Please* make sure to read the <a href="<?php echo $ROOT; ?>/Documentation:KXStudio14042:ReleaseNotes">Release Notes</a></b> before using this product.<br/>
+        <b>*Please* make sure to read the <a href="<?php echo $ROOT; ?>/Documentation:KXStudio14045:ReleaseNotes">Release Notes</a></b> before using this product.<br/>
     </p>
 </ul>
 
