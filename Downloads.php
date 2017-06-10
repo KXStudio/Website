@@ -16,7 +16,7 @@ include_once("includes/header.php");
         <b>Downloads:</b><br/>
         &nbsp;<a href="http://download.linuxaudio.org/kxstudio/KXStudio_14.04.5_32bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_disc.png" alt="" class="img_text_align"/> KXStudio 14.04.5 Live-DVD <strong>- 32bit</strong></a>
-              <!--| <a href="https://github.com/KXStudio/KXStudio/releases/download/14.04.5/KXStudio_14.04.5_32bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #1<strong></strong></a>-->
+              | <a href="https://github.com/KXStudio/KXStudio/releases/download/14.04.5/KXStudio_14.04.5_32bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #1<strong></strong></a>
               <!--| <a href="https://drive.google.com/file/d/0B_uWSrIHpVoGLUxLYmdqQ3FtdHc/view" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #2<strong></strong></a>-->
               <br/>
               &nbsp;&nbsp;&nbsp;&nbsp;md5sum: 86e9b4c24ea25fe1261ac0a452602d2a<br/>
@@ -25,7 +25,7 @@ include_once("includes/header.php");
     <p>
         &nbsp;<a href="http://download.linuxaudio.org/kxstudio/KXStudio_14.04.5_64bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_disc.png" alt="" class="img_text_align"/> KXStudio 14.04.5 Live-DVD <strong>- 64bit</strong></a>
-              <!--| <a href="https://github.com/KXStudio/KXStudio/releases/download/14.04.5/KXStudio_14.04.5_64bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #1<strong></strong></a>-->
+              | <a href="https://github.com/KXStudio/KXStudio/releases/download/14.04.5/KXStudio_14.04.5_64bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #1<strong></strong></a>
               <!--| <a href="https://drive.google.com/file/d/0B_uWSrIHpVoGeGthNUJWdl9lcVk/view" class="external text a_bigger_text" rel="nofollow" target="_blank">Mirror #2<strong></strong></a>-->
               <br/>
               &nbsp;&nbsp;&nbsp;&nbsp;md5sum: a249bb59f27312e69b3af8579b14e0a2<br/>

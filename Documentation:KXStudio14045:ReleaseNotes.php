@@ -7,10 +7,6 @@ include_once("includes/header.php");
 ?>
 
 <p>
-    <span style="color:#fa3a3a;">The information on this page is incomplete or outdated.</span>
-</p>
-
-<p>
     These are the release notes related to the KXStudio 14.04.5 Release, based on Ubuntu 14.04.5 LTS.<br/>
 </p>
 
@@ -19,15 +15,18 @@ include_once("includes/header.php");
 <h4><span class="mw-headline" id="LiveDVDNotes">KXStudio 12.04.5 Live-DVD Notes</span></h4>
 <ul>
     <li>The live session user name is "kxstudio" and has no password.</li>
+    <li>Synaptic is used for handling package management in the Live-DVD, users do not receive package update notifications.<br/>
+        Users should open synaptic (or a similar tool) and do system updates on a regular basis.</li>
     <li>Neither PulseAudio or Wine are included in the Live-DVD, they need to be installed if required.<br/>
         Because Firefox now requires PulseAudio, it will not produce any sound by default on this Live-DVD.
     </li>
-    <li>Sometimes the keyboard layout is not set-up correctly on the live session. This can be manually fixed by running:<br/>
-        <code>setxkbmap pt</code> <i>(replace 'pt' by the relevant keyboard layout/language).</i></li>
+    <li>Sometimes the keyboard layout is not set-up correctly on the live session. This can be manually fixed by running:
+        <pre>setxkbmap pt</pre>
+        <i>(replace '</i>pt<i>' by the relevant keyboard layout/language).</i>
+    </li>
     <li>The list of packages installed on the Live-DVD is available
-    --- TODO ---
-            <a href="<?php echo $ROOT; ?>/Paste/UEqO4" class="external text" rel="nofollow">here</a> for 32bit and
-            <a href="<?php echo $ROOT; ?>/Paste/NeFVA" class="external text" rel="nofollow">here</a> for 64bit.</li>
+            <a href="<?php echo $ROOT; ?>/Paste/c6i94" class="external text" rel="nofollow">here</a> for 32bit and
+            <a href="<?php echo $ROOT; ?>/Paste/MpWgT" class="external text" rel="nofollow">here</a> for 64bit.</li>
 </ul>
 
 <p><br/></p>

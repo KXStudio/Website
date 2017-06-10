@@ -7,16 +7,12 @@ include_once("includes/header.php");
 ?>
 
 <p>
-    <span style="color:#fa3a3a;">The information on this page is incomplete or outdated.</span>
-</p>
-
-<p>
     KXStudio 14.04.5 is an ISO release based on Ubuntu 14.04.5 LTS, made on 09/06/2017.<br/>
     Check the Live-DVD section in the Downloads page to download it (or just click <a href="<?php echo $ROOT; ?>/Downloads#LiveDVD">here</a>).
 </p>
 
 <p>
-    The Live-DVD contains a highly optimized KDE4 desktop, together with a low-latency kernel (version 3.8).<br/>
+    The Live-DVD contains a highly optimized KDE4 desktop, together with a low-latency kernel (version 3.13).<br/>
     There's a lot of audio-related applications inside, with even more available to install via the repositories.
 </p>
 
@@ -24,6 +20,18 @@ include_once("includes/header.php");
     The live system is based upon Kubuntu code with several tweaks
       (like disable file indexer and everything else that can introduce random xruns).
 </p>
+
+<p><br/></p>
+
+<h4><span class="mw-headline" id="CurrentNotes">Current 14.04.5 Notes</span></h4>
+<ul>
+    <li>Some applications and websites don't work nicely with dark themes, which KXStudio uses by default.<br/>
+        This is not a bug in the theme(s) but rather upstream (ie, app and website authors).<br/>
+        We encourage users to report such issues upstream so they can be fixed for everyone using dark themes.</li>
+    <li>The KXStudio GTK3 theme is unfinished. Applications that use GTK3 might appear slightly broken.</li>
+</ul>
+
+<p><br/></p>
 
 <h3><span class="mw-headline" id="Apps"> Pre-installed applications </span></h3>
 
@@ -57,9 +65,7 @@ include_once("includes/header.php");
     <li>Guitarix</li>
     <li>Hydrogen</li>
     <li>Jamin</li>
-    <li>Laborejo</li>
     <li>LinuxSampler</li>
-    <li>LisaloQt</li>
     <li>LMMS</li>
     <li>Mixxx</li>
     <li>MusE</li>
@@ -74,16 +80,13 @@ include_once("includes/header.php");
     <li>Qsynth</li>
     <li>Qtractor</li>
     <li>Rakarrack</li>
-    <li>Renoise</li>
     <li>Rosegarden</li>
 <!--     <li>Samplv1</li> -->
     <li>SEQ24</li>
     <li>SooperLooper</li>
 <!--     <li>Synthv1</li> -->
-    <li>Sunvox</li>
-    <li>VMPK</li>
     <li>xjadeo</li>
-    <li>ZynAddSubFX</li>
+<!--     <li>ZynAddSubFX</li> -->
 </ul>
 </td><td valign="top">
     &nbsp;&nbsp;&nbsp;
@@ -100,8 +103,6 @@ include_once("includes/header.php");
     <li>KDE base (ark, dolphin, gwenview, k3b, etc)</li>
     <li>Kdenlive</li>
     <li>LibreOffice (Impress and Writer)</li>
-    <li>Muon</li>
-    <li>QdvdAuthor</li>
     <li>SMPlayer</li>
     <li>Synaptic</li>
     <li>VLC</li>

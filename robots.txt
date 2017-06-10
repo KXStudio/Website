@@ -2,5 +2,5 @@ User-Agent: *
 Disallow: /.git/
 Disallow: /.gitignore
 Disallow: /.htaccess
-Disallow: /donate/config.php
+Disallow: /donate/*
 Disallow: /paste/repo/

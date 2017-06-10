@@ -33,11 +33,11 @@ include_once("includes/header.php");
 
 <!-- KXSTUDIO RELEASE -->
 <p>
-    <b>KXStudio 14.04.2 Release</b>
+    <b>KXStudio 14.04.5 Release</b>
 </p>
 <ul>
-    <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio14042:About">About</a></li>
-    <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio14042:ReleaseNotes">Release Notes</a></li>
+    <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio14045:About">About</a></li>
+    <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio14045:ReleaseNotes">Release Notes</a></li>
 </ul>
 
 <!-- KXSTUDIO DISTRIBUTION -->
