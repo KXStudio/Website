@@ -13,6 +13,41 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio 14.04.5 release and future plans</span><br/>
+    On <i>2017-06-10</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello there, it's time for another KXStudio ISO release! KXStudio 14.04.5 is here!<br/>
+</p>
+<p>
+    Lots have changed in the applications and plugins for Linux Audio (even in KXStudio itself), so it was about time to see those ISO images updated.<br/>
+    Behind the scenes, from what the user can see, it might appear as nothing has truly changed. After all, this is an updated image still based on Ubuntu 14.04, like those from 2 years ago.<br/>
+    But we had a really big amount of releases for our beloved software, enough to deserve this small ISO update.<br/>
+    There is no list of changes this time, sorry. The main thing worth mentioning is that base system is exactly the same, with only applications and plugins updated.<br/>
+    You know the saying - if ain't broken, don't fix it!
+</p>
+<p>
+    Before you ask.. no, there won't be a 16.04 based ISO release.<br/>
+    When 2016 started KDE5 was not in a good enough shape, and it would need a lot of work (and time) to port all the changes made for KDE4 into KDE5.<br/>
+    KDE5 is a lot better now than it used to be, but we missed the opportunity there.
+</p>
+<p>
+    The current plan is to slowly migrate everything we have into KDE5 (meta-packages, scripts, tweaks, artwork, etc) and do a new ISO release in May 2018.<br/>
+    (Yes, this means using Ubuntu 18.04 as base)<br/>
+    The choice of KDE Plasma as desktop environment is not set in stone, other (lighter) desktops have appeared recently that will be considered.<br/>
+    In the end it depends if it will be stable and good enough for audio production.
+</p>
+<p>
+    You can download the new ISOs on the KXStudio website, at <a href="http://kxstudio.linuxaudio.org/Downloads#LiveDVD" target="_blank">http://kxstudio.linuxaudio.org/Downloads#LiveDVD</a>.<br/>
+</p>
+<p>
+    And that's it for now.<br/>
+    We hope you enjoy KXStudio, being it the ISO "distribution" release or the repositories.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.0 beta5 is here!</span><br/>
     On <i>2017-01-05</i> by<i> falkTX</i>
 </p>
