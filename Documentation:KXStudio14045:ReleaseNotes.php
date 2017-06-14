@@ -24,6 +24,9 @@ include_once("includes/header.php");
         <pre>setxkbmap pt</pre>
         <i>(replace '</i>pt<i>' by the relevant keyboard layout/language).</i>
     </li>
+    <li>Installation for (U)EFI systems will fail due to missing packages if not connected to the internet.<br/>
+        If you need to install on such systems, make sure to connect to the internet before starting the installer.
+    </li>
     <li>The list of packages installed on the Live-DVD is available
             <a href="<?php echo $ROOT; ?>/Paste/c6i94" class="external text" rel="nofollow">here</a> for 32bit and
             <a href="<?php echo $ROOT; ?>/Paste/MpWgT" class="external text" rel="nofollow">here</a> for 64bit.</li>
