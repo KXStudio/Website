@@ -13,6 +13,34 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; DPF-Plugins v1.1 released</span><br/>
+    On <i>2017-06-17</i> by<i> falkTX</i>
+</p>
+<p>
+    intro here<br/>
+    <a href="<?php echo $ROOT; ?>/screenshots/news/dpf-plugins-1.1.png">
+        <img src="<?php echo $ROOT; ?>/screenshots/news/dpf-plugins-1.1_crop.png" alt=""/>
+    </a>
+</p>
+<p>
+    It's v1.1, but v1.0 not really adversited/publicized before.<br/>
+    1.0 was slightly rushed?<br/>
+<br/>
+    with all reported bugs squashed, it is time for a release.<br/>
+    also dpf might will get some changes, better to have this tagged<br/>
+<br/>
+    so, as this is the first time I show off the plugins here, let's go through them a little bit...<br/>
+<br/>
+    miniseries, nekobi, etc<br/>
+<br/>
+    changes since 1.0.<br/>
+<br/>
+    source and binaries can be downloaded here...
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio 14.04.5 release and future plans</span><br/>
     On <i>2017-06-10</i> by<i> falkTX</i>
 </p>
