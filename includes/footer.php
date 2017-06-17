@@ -30,31 +30,31 @@
         <div class="column grid_3 alpha">
             <div class="box box-shadow alpha clear-both navigation">
                 <h2 class="box-header"> <a href="<?php echo $ROOT; ?>/News" style="color: #aaf;">News</a> </h2>
+
+                <a href="<?php echo $ROOT; ?>/News/?action=view&url=dpf-plugins-v11-released">
+                    <b>DPF-Plugins v1.1</b><br/>
+                    <img src="<?php echo $ROOT; ?>/screenshots/news/dpf-plugins-1.1.png" alt="" width="150px"/>
+                </a>
+                <p>
+                    With all reported bugs squashed, it's time to tag a new release of DPF-Plugins.<br/>
+                </p>
+                <hr/>
+
+                <a href="<?php echo $ROOT; ?>/News/?action=view&url=kxstudio-14045-release-and-future-plans">
+                    <b>KXStudio 14.04.5 release and future plans</b><br/>
+                </a>
+                <p>
+                    It's time for another KXStudio ISO release!<br/>
+                    KXStudio 14.04.5 is here!
+                </p>
+                <hr/>
+
                 <a href="<?php echo $ROOT; ?>/News/?action=view&url=carla-20-beta5-is-here">
-                    <b>Carla 2.0-beta5 is here!</b><br/>
+                    <b>Carla 2.0-beta5</b><br/>
                     <img src="<?php echo $ROOT; ?>/screenshots/carla.png" alt="" width="150px"/>
                 </a>
                 <p>
                      The 5th beta of the upcoming Carla 2.0 release.
-                </p>
-                <hr/>
-
-                <a href="<?php echo $ROOT; ?>/News/?action=view&url=changes-in-kxstudio-repositories">
-                    <b>Changes in KXStudio repositories</b><br/>
-                </a>
-                <p>
-                    SHA1 keys issue fix coming soon.<br/>
-                    Qt5 audio packages coming afterwards.
-                </p>
-                <hr/>
-
-                <a href="<?php echo $ROOT; ?>/News/?action=view&url=kxstudio-website-has-moved">
-                    <b>KXStudio Website has moved</b><br/>
-                </a>
-                <p>
-                    You can now find the KXStudio website at <a href="http://kxstudio.linuxaudio.org/">
-                        kxstudio.linuxaudio.org.</a><br/>
-                    Also the KXStudio repositories have do not use sourceforge anymore.
                 </p>
             </div>
         </div>

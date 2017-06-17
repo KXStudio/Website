@@ -17,25 +17,100 @@ include_once("includes/header.php");
     On <i>2017-06-17</i> by<i> falkTX</i>
 </p>
 <p>
-    intro here<br/>
+    With some minor things finally done and all reported bugs squashed, it's time to tag a new release of DPF-Plugins.<br/>
     <a href="<?php echo $ROOT; ?>/screenshots/news/dpf-plugins-1.1.png">
         <img src="<?php echo $ROOT; ?>/screenshots/news/dpf-plugins-1.1_crop.png" alt=""/>
     </a>
 </p>
 <p>
-    It's v1.1, but v1.0 not really adversited/publicized before.<br/>
-    1.0 was slightly rushed?<br/>
-<br/>
-    with all reported bugs squashed, it is time for a release.<br/>
-    also dpf might will get some changes, better to have this tagged<br/>
-<br/>
-    so, as this is the first time I show off the plugins here, let's go through them a little bit...<br/>
-<br/>
-    miniseries, nekobi, etc<br/>
-<br/>
-    changes since 1.0.<br/>
-<br/>
-    source and binaries can be downloaded here...
+    The initial 1.0 version was not really advertised/publicized before, as there were still a few things I wanted done first
+      - but they were already usable as-is.<br/>
+    The base framework used by these plugins (DPF) will get some deep changes soon, so better to have this release out now.
+</p>
+<p>
+    I will not write a changelog here, it was just many small changes here and there for all the plugins since v1.0.<br/>
+    Just think of this release as the initial one. :P
+</p>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/DPF-Plugins/releases/tag/v1.1" target="_blank">
+          https://github.com/DISTRHO/DPF-Plugins/releases/tag/v1.1</a>.<br/>
+    The plugins are released as LADSPA, DSSI, LV2, VST2 and JACK standalone.<br/>
+</p>
+<p>
+    As this is the first time I show off the plugins like this, let's go through them a little bit...<br/>
+    The order shown is more or less the order in which they were made.<br/>
+    Note that most plugins here were made/ported as a learning exercise, so not everything is new.<br/>
+    Many thanks to Ant&oacute;nio Saraiva for the design of some of these interfaces!
+</p>
+
+<h3>Mini-Series</h3>
+<p>
+    This is a collection of small but useful plugins, based on the good old LOSER-Dev Plugins.<br/>
+    This collection currently includes 3 Band EQ, 3 Band Splitter and Ping Pong Pan.<br/>
+    <br/>
+    <img src="https://raw.githubusercontent.com/DISTRHO/DPF-Plugins/master/plugins/3BandEQ/Screenshot.png" alt="3bandeq"/>
+    <img src="https://raw.githubusercontent.com/DISTRHO/DPF-Plugins/master/plugins/3BandSplitter/Screenshot.png" alt="3bandsplitter"/>
+    <img src="https://raw.githubusercontent.com/DISTRHO/DPF-Plugins/master/plugins/PingPongPan/Screenshot.png" alt="pingpongpan"/>
+</p>
+
+<h3>MVerb</h3>
+<p>
+    Studio quality, open-source reverb.<br/>
+    Its release was intended to provide a practical demonstration of Dattorro’s figure-of-eight reverb structure and provide the open source community with a high quality reverb.<br/>
+    This is a DPF'ied build of the original
+      <a href="https://github.com/martineastwood/mverb/" target="_blank">MVerb</a>
+    plugin, allowing a proper Linux version with UI.<br/>
+    <br/>
+    <img src="https://raw.githubusercontent.com/DISTRHO/DPF-Plugins/master/plugins/MVerb/Screenshot.png" alt="mverb"/>
+</p>
+
+<h3>Nekobi</h3>
+<p>
+    Simple single-oscillator synth based on the Roland TB-303.<br/>
+    This is a DPF'ied build of the
+      <a href="https://github.com/gordonjcp/nekobee" target="_blank">nekobee</a>
+    project, allowing LV2 and VST builds of the plugin, plus a nicer UI with a simple cat animation. ;)<br/>
+    <br/>
+    <img src="https://raw.githubusercontent.com/DISTRHO/DPF-Plugins/master/plugins/Nekobi/Screenshot.png" alt="nekobi"/>
+</p>
+
+<h3>Kars</h3>
+<p>
+    Simple karplus-strong plucked string synth.<br/>
+    This is a DPF'ied build of the karplong DSSI example synth, written by Chris Cannam.<br/>
+    It implements the basic Karplus-Strong plucked-string synthesis algorithm (Kevin Karplus &amp; Alex Strong, "Digital Synthesis of Plucked-String and Drum Timbres", Computer Music Journal 1983).<br/>
+    <br/>
+    <img src="https://raw.githubusercontent.com/DISTRHO/DPF-Plugins/master/plugins/Kars/Screenshot.png" alt="kars"/>
+</p>
+
+<h3>ndc-Plugs</h3>
+<p>
+    DPF'ied ports of some plugins from Niall Moody.<br/>
+    See
+      <a href="http://www.niallmoody.com/ndcplugs/plugins.htm" target="_blank">http://www.niallmoody.com/ndcplugs/plugins.htm</a>
+    for the original author's page.<br/>
+    This collection currently includes Amplitude Imposer, Cycle Shifter and Soul Force plugins.<br/>
+    <br/>
+    <img src="https://raw.githubusercontent.com/DISTRHO/DPF-Plugins/master/plugins/AmplitudeImposer/Screenshot.png" alt="amplitudeimposer"/>
+    <img src="https://raw.githubusercontent.com/DISTRHO/DPF-Plugins/master/plugins/CycleShifter/Screenshot.png" alt="cycleshifter"/>
+    <img src="https://raw.githubusercontent.com/DISTRHO/DPF-Plugins/master/plugins/SoulForce/Screenshot.png" alt="soulforce"/>
+</p>
+
+<h3>ProM</h3>
+<p>
+    <a href="http://projectm.sourceforge.net/" target="_blank">projectM</a> is an awesome music visualizer.<br/>
+    This plugin makes it work as an audio plugin (LV2 and VST).<br/>
+    <img src="https://raw.githubusercontent.com/DISTRHO/DPF-Plugins/master/plugins/ProM/Screenshot.png" alt="prom"/>
+</p>
+
+<h3>glBars</h3>
+<p>
+    This is an OpenGL bars visualization plugin (as seen in XMMS and XBMC/Kodi).<br/>
+    Adapted from the
+      <a href="https://github.com/nedko/jack_glbars/">jack_glbars</a>
+    project by Nedko Arnaudov.<br/>
+    <img src="https://raw.githubusercontent.com/DISTRHO/DPF-Plugins/master/plugins/glBars/Screenshot.png" alt="glbars"/>
 </p>
 
 <hr/>
