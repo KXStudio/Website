@@ -10,7 +10,7 @@ include_once("includes/header.php");
     <p>
         The KXStudio repositories support all Debian versions since <b>Jessie</b> and Ubuntu <b>14.04</b> or above.<br/>
         They should work on all Debian-based distributions and variants, but the way to enable them will differ.<br/>
-        After the repositories are enabled and the system updated, we recommend you to install the "kxstudio-default-settings" package.<br/>
+        After the repositories are enabled and the system updated, we recommend you to install the "kxstudio-default-settings" package.
     </p>
     <p>
         You might also want to check:
@@ -19,6 +19,11 @@ include_once("includes/header.php");
         <li><a href="<?php echo $ROOT; ?>/Repositories:Applications">Applications in the repositories</a></li>
         <li><a href="<?php echo $ROOT; ?>/Repositories:Plugins">Plugins in the repositories</a></li>
     </ul>
+    <p>
+        Also consider taking a look at the
+          <a href="<?php echo $ROOT; ?>/Documentation:Repository:Meta-Packages">available meta-packages</a>
+            if you don't know what things to install just yet.
+    </p>
     <p>
         Below is information on how to enable the repositories.
     </p>

@@ -41,17 +41,17 @@ include_once("includes/header.php");
 </ul>
 
 <!-- KXSTUDIO DISTRIBUTION -->
-<!--
 <p>
     <br/>
-    <b>KXStudio Distribution &amp; Repositories</b> (outdated)
+    <b>KXStudio Distribution &amp; Repositories</b>
 </p>
 <ul>
     <li><a href="<?php echo $ROOT; ?>/Documentation:Repository:Meta-Packages">Available Meta-Packages</a></li>
+<!--
     <li><a href="<?php echo $ROOT; ?>/Documentation:Repository:RegisterCommercial">Register/Activate your purchased software</a></li>
     <li><a href="<?php echo $ROOT; ?>/Documentation:Repository:Upgrade">Upgrade from an existing Debian/Ubuntu installation</a></li>
-</ul>
 -->
+</ul>
 
 <!-- KXSTUDIO MANUAL -->
 <p>
