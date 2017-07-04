@@ -9,8 +9,13 @@ include_once("includes/header.php");
 <div class="box box-description">
     <p>
         The KXStudio repositories support all Debian versions since <b>Jessie</b> and Ubuntu <b>14.04</b> or above.<br/>
-        They should work on all Debian-based distributions and variants, but the way to enable them will differ.<br/>
-        After the repositories are enabled and the system updated, we recommend you to install the "kxstudio-default-settings" package.
+        They should work on all Debian-based distributions and variants.
+    </p>
+    <p>
+        Once you have the repos installed, you can either manually install individual packages from them or
+            add the meta-packages to automatically install large sets of recommended packages.<br/>
+        See the <a href="<?php echo $ROOT; ?>/Documentation:Repository:Meta-Packages">Meta-Packages</a> page for more details.<br/>
+        In either case, we always recommend to install the <b>kxstudio-default-settings</b> package after enabling the repositories.
     </p>
     <p>
         You might also want to check:
@@ -20,11 +25,8 @@ include_once("includes/header.php");
         <li><a href="<?php echo $ROOT; ?>/Repositories:Plugins">Plugins in the repositories</a></li>
     </ul>
     <p>
-        Also consider taking a look at the
-          <a href="<?php echo $ROOT; ?>/Documentation:Repository:Meta-Packages">available meta-packages</a>
-            if you don't know what things to install just yet.
-    </p>
-    <p>
+        Bug reports and package requests should be posted in the
+            <a href="https://github.com/KXStudio/Repository/issues" target="_blank">Repository project page</a>.<br/>
         Below is information on how to enable the repositories.
     </p>
 </div>
