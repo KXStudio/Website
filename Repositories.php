@@ -52,7 +52,7 @@ sudo dpkg -i kxstudio-repos_9.4.6~kxstudio1_all.deb
 </pre>
 
 <p><br/>
-    If you're using a system <b>newer or equal</b> to <b>Debian Testing</b> or <b>Ubuntu 15.10</b> you'll also need to enable GCC5 packages.<br/>
+    If you're using a system <b>newer or equal</b> to <b>Debian 9 (Stretch)</b> or <b>Ubuntu 16.04 (Xenial)</b> you'll also need to enable GCC5 packages.<br/>
     You can do so by installing this deb file -
         <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.4.6%7Ekxstudio1_all.deb" class="free" rel="nofollow">kxstudio-repos-gcc5.deb</a>,
     or manually by running this:
