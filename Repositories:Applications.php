@@ -379,23 +379,6 @@ include_once("includes/header.php");
     </td></tr>
 </table>
 
-<!-- SunVox -->
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/screenshots/sunvox.png">
-           <img src="screenshots/thumb/sunvox.png" alt="sunvox" class="img_thumb_150"/>
-        </a></p>
-    </td><td>
-        <p>
-            <b><a href="apt://sunvox" style="color: rgb(230,230,100);">SunVox</a></b> (Tracker, non-free)<br/>
-            Small, fast and powerful modular synthesizer with pattern based sequencer (tracker).<br/>
-            It is a tool for those people who like to compose music wherever they are, whenever they wish.<br/>
-            Homepage: <a href="http://www.warmplace.ru/soft/sunvox/" class="external text" rel="nofollow" target="_blank">http://www.warmplace.ru/soft/sunvox/</a><br/>
-            User Manual: <a href="http://www.warmplace.ru/wiki/sunvox:manual_en" class="external text" rel="nofollow" target="_blank">http://www.warmplace.ru/wiki/sunvox:manual_en</a><br/>
-        </p>
-    </td></tr>
-</table>
-
 <p><br/></p>
 
 <?php
