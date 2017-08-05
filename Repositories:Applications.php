@@ -4,6 +4,32 @@ $PAGE_TYPE     = "KXSTUDIO";
 $PAGE_SOURCE_1 = ARRAY("/Repositories", "/Repositories:Applications");
 $PAGE_SOURCE_2 = ARRAY("Repositories", "Applications");
 include_once("includes/header.php");
+
+function endsWith($haystack, $needle) {
+    return strrpos($haystack, $needle, 0) === (strlen($haystack) - strlen($needle));
+}
+
+function print_app($package, $screenshot, $name, $category, $details) {
+
+if (! endsWith($screenshot, '.jpg')) {
+    $screenshot = $screenshot . '.png';
+}
+
+echo
+'<table><tr><td align="center"><p>
+<a href="' . $ROOT . '/screenshots/' . $screenshot . '">
+<img src="screenshots/thumb/' . $screenshot . '" alt="' . $screenshot . '" class="img_thumb_150"/>
+</a></p></td><td><p><b>
+<a href="apt://' . $package . '" style="color: rgb(230,230,100);">' . $name . '</a></b> (' . $category . ')<br/>';
+
+for ($i = 0, $count = count($details); $i < $count; $i++) {
+    echo $details[$i] . '<br>';
+}
+
+echo '</p></td></tr></table>';
+
+}
+
 ?>
 
 <div class="box box-description">
@@ -26,103 +52,52 @@ include_once("includes/header.php");
     non-sequencer
  -->
 
-<!-- AMS -->
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/screenshots/ams.png">
-           <img src="screenshots/thumb/ams.png" alt="ams" class="img_thumb_150"/>
-        </a></p>
-    </td><td>
-        <p>
-            <b><a href="apt://ams" style="color: rgb(230,230,100);">AMS</a></b> (Modular Plugin Host)<br/>
-            AlsaModularSynth is a realtime modular synthesizer and effect processor.<br/>
-            Homepage: <a href="http://alsamodular.sourceforge.net/" class="external text" rel="nofollow" target="_blank">http://alsamodular.sourceforge.net/</a><br/>
-        </p>
-    </td></tr>
-</table>
+<?php
+/*
+print_app("pkg", "scr", "name", "cat", ARRAY(
+'txt1',
+'txt2'
+));
+*/
 
-<!-- Ardour3 -->
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/screenshots/ardour3.png">
-           <img src="screenshots/thumb/ardour3.png" alt="ardour3" class="img_thumb_150"/>
-        </a></p>
-    </td><td>
-        <p>
-            <b><a href="apt://ardour3" style="color: rgb(230,230,100);">Ardour3</a></b> (DAW)<br/>
-            Ardour is a multichannel hard disk recorder (HDR) and digital audio workstation (DAW).<br/>
-            It can be used to control, record, edit and run complex audio setups.<br/>
-            Homepage: <a href="http://ardour.org/" class="external text" rel="nofollow" target="_blank">http://ardour.org/</a><br/>
-            User Manual: <a href="http://manual.ardour.org/" class="external text" rel="nofollow" target="_blank">http://manual.ardour.org/</a><br/>
-        </p>
-    </td></tr>
-</table>
+print_app("ams", "ams", "AMS", "Modular Plugin Host", ARRAY(
+'AlsaModularSynth is a realtime modular synthesizer and effect processor.',
+'Homepage: <a href="http://alsamodular.sourceforge.net/" class="external text" rel="nofollow" target="_blank">http://alsamodular.sourceforge.net/</a>'
+));
 
-<!-- Aria Maestosa -->
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/screenshots/ariamaestosa.jpg">
-           <img src="screenshots/thumb/ariamaestosa.jpg" alt="ariamaestosa" class="img_thumb_150"/>
-        </a></p>
-    </td><td>
-        <p>
-            <b><a href="apt://ariamaestosa" style="color: rgb(230,230,100);">Aria Maestosa</a></b> (MIDI Sequencer)<br/>
-            Aria Maestosa is an open-source midi sequencer/editor.<br/>
-            It lets you compose, edit and play midi files with a few clicks in a user-friendly interface offering score, keyboard, guitar, drum and controller views.<br/>
-            Homepage: <a href="http://ariamaestosa.sourceforge.net//" class="external text" rel="nofollow" target="_blank">http://ariamaestosa.sourceforge.net/</a><br/>
-            User Manual: <a href="http://ariamaestosa.sourceforge.net/man.html" class="external text" rel="nofollow" target="_blank">http://ariamaestosa.sourceforge.net/man.html</a><br/>
-        </p>
-    </td></tr>
-</table>
+print_app("ardour", "ardour3", "Ardour", "DAW", ARRAY(
+'Ardour is a multichannel hard disk recorder (HDR) and digital audio workstation (DAW).',
+'It can be used to control, record, edit and run complex audio setups.',
+'Homepage: <a href="http://ardour.org/" class="external text" rel="nofollow" target="_blank">http://ardour.org/</a>',
+'User Manual: <a href="http://manual.ardour.org/" class="external text" rel="nofollow" target="_blank">http://manual.ardour.org/</a>'
+));
 
-<!-- Cadence -->
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/screenshots/cadence1.png">
-           <img src="screenshots/thumb/cadence.png" alt="cadence" class="img_thumb_150"/>
-        </a></p>
-    </td><td>
-        <p>
-            <b><a href="apt://cadence" style="color: rgb(230,230,100);">Cadence</a></b> (JACK Toolbox)<br/>
-            Collection of tools useful for audio production.<br/>
-            This is the main app. It performs system checks, manages JACK, calls other tools and make system tweaks.<br/>
-            Homepage and Documentation: <a href="<?php echo $ROOT; ?>/cadence" class="external text" rel="nofollow" target="_blank"><?php echo $ROOT; ?>/cadence</a><br/>
-        </p>
-    </td></tr>
-</table>
+print_app("ariamaestosa", "ariamaestosa.jpg", "Aria Maestosa", "MIDI Sequencer", ARRAY(
+'Aria Maestosa is an open-source midi sequencer/editor.',
+'It lets you compose, edit and play midi files with a few clicks in a user-friendly interface offering score, keyboard, guitar, drum and controller views.',
+'Homepage: <a href="http://ariamaestosa.sourceforge.net/" class="external text" rel="nofollow" target="_blank">http://ariamaestosa.sourceforge.net/</a>',
+'User Manual: <a href="http://ariamaestosa.sourceforge.net/man.html" class="external text" rel="nofollow" target="_blank">http://ariamaestosa.sourceforge.net/man.html</a>'
+));
 
-<!-- Carla -->
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/screenshots/carla.png">
-           <img src="screenshots/thumb/carla.png" alt="carla" class="img_thumb_150"/>
-        </a></p>
-    </td><td>
-        <p>
-            <b><a href="apt://carla" style="color: rgb(230,230,100);">Carla</a></b> (Modular Plugin Host)<br/>
-            Carla is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
-            It has some nice features like automation of parameters via MIDI CC and full OSC control.<br/>
-            Currently supports LADSPA, DSSI, LV2, and VST plugin formats, and GIG, SF2 and SFZ sounds banks.<br/>
-            Homepage and Documentation: <a href="<?php echo $ROOT; ?>/carla" class="external text" rel="nofollow" target="_blank"><?php echo $ROOT; ?>/carla</a><br/>
-        </p>
-    </td></tr>
-</table>
+print_app("cadence", "cadence", "Cadence", "JACK Toolbox", ARRAY(
+'Collection of tools useful for audio production.',
+'This is the main app. It performs system checks, manages JACK, calls other tools and make system tweaks.',
+'Homepage and Documentation: <a href="' . $ROOT . '/cadence" class="external text" rel="nofollow" target="_blank">' . $ROOT . '/cadence</a>'
+));
 
-<!-- Catia -->
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/screenshots/catia.png">
-           <img src="screenshots/thumb/catia.png" alt="catia" class="img_thumb_150"/>
-        </a></p>
-    </td><td>
-        <p>
-            <b><a href="apt://catia" style="color: rgb(230,230,100);">Catia</a></b> (Patchbay)<br/>
-            JACK Patchbay, with some neat features like A2J bridge support and JACK Transport.<br/>
-            It's supposed to be as simple as possible, so it can work nicely on non-Linux platforms.<br/>
-            Homepage and Documentation: <a href="<?php echo $ROOT; ?>/catia" class="external text" rel="nofollow" target="_blank"><?php echo $ROOT; ?>/catia</a><br/>
-        </p>
-    </td></tr>
-</table>
+print_app("carla", "carla", "Carla", "Modular Plugin Host", ARRAY(
+'Carla is an audio plugin host, with support for many audio drivers and plugin formats.',
+'It has some nice features like automation of parameters via MIDI CC and full OSC control.',
+'Currently supports LADSPA, DSSI, LV2, and VST plugin formats, and GIG, SF2 and SFZ sounds banks.',
+'Homepage and Documentation: <a href="' . $ROOT . '/carla" class="external text" rel="nofollow" target="_blank">' . $ROOT . '/carla</a>'
+));
+
+print_app("catia", "catia", "Catia", "Patchbay", ARRAY(
+'JACK Patchbay, with some neat features like A2J bridge support and JACK Transport.',
+'It\'s supposed to be as simple as possible, so it can work nicely on non-Linux platforms.',
+'Homepage and Documentation: ' . $ROOT . '/catia" class="external text" rel="nofollow" target="_blank">' . $ROOT . '/catia</a>'
+));
+?>
 
 <!-- Claudia -->
 <table>
