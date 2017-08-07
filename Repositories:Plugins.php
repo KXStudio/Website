@@ -4,6 +4,32 @@ $PAGE_TYPE     = "KXSTUDIO";
 $PAGE_SOURCE_1 = ARRAY("/Repositories", "/Repositories:Plugins");
 $PAGE_SOURCE_2 = ARRAY("Repositories", "Plugins");
 include_once("includes/header.php");
+
+function endsWith($haystack, $needle) {
+    return strrpos($haystack, $needle, 0) === (strlen($haystack) - strlen($needle));
+}
+
+function print_app($package, $screenshot, $name, $category, $details) {
+
+if (! endsWith($screenshot, '.jpg')) {
+    $screenshot = $screenshot . '.png';
+}
+
+echo
+'<table><tr><td align="center"><p>
+<a href="' . $ROOT . '/screenshots/' . $screenshot . '">
+<img src="screenshots/thumb/' . $screenshot . '" alt="' . $screenshot . '" class="img_thumb_150"/>
+</a></p></td><td><p><b>
+<a href="apt://' . $package . '" style="color: rgb(100,230,100);">' . $name . '</a></b> (' . $category . ')<br/>';
+
+for ($i = 0, $count = count($details); $i < $count; $i++) {
+    echo $details[$i] . '<br>';
+}
+
+echo '</p></td></tr></table>';
+
+}
+
 ?>
 
 <div class="box box-description">
@@ -62,70 +88,31 @@ include_once("includes/header.php");
     wolpertinger
  -->
 
-<!-- XXXpp -->
-<!--
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/screenshots/XXX.png">
-           <img src="screenshots/thumb/XXX.png" alt="XXX" class="img_thumb_150"/>
-        </a></p>
-    </td><td>
-        <p>
-            <b><a href="apt://XXX" style="color: rgb(100,230,100);">XXX</a></b> (Standalone)<br/>
-            <br/>
-            Homepage: <a href="WWW" class="external text" rel="nofollow" target="_blank">WWW</a><br/>
-        </p>
-    </td></tr>
-</table>
--->
+<?php
+/*
+print_app("pkg", "scr", "name", "cat", ARRAY(
+'txt1',
+'txt2'
+));
+*/
 
-<!-- see later the non-free stuff, pianoteq, loomer, linuxdsp, etc -->
+print_app("add64", "add64", "Add64", "Standalone", ARRAY(
+'Add64 is the result of experiments around additive synthesis and is intended for research purposes only.',
+'The spectral drawing scheme for the harmonics and envelopes has been inspired by the virtual pipe organ Aeolus by Fons Adriaensen.',
+'Project Page: <a href="https://sourceforge.net/projects/add64/" class="external text" rel="nofollow" target="_blank">https://sourceforge.net/projects/add64/</a>'
+));
 
-<!-- Add64 -->
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/screenshots/add64.png">
-           <img src="screenshots/thumb/add64.png" alt="add64" class="img_thumb_150"/>
-        </a></p>
-    </td><td>
-        <p>
-            <b><a href="apt://add64" style="color: rgb(100,230,100);">Add64</a></b> (Standalone)<br/>
-            Add64 is the result of experiments around additive synthesis and is intended for research purposes only.<br/>
-            The spectral drawing scheme for the harmonics and envelopes has been inspired by the virtual pipe organ Aeolus by Fons Adriaensen.<br/>
-            Project Page: <a href="https://sourceforge.net/projects/add64/" class="external text" rel="nofollow" target="_blank">https://sourceforge.net/projects/add64/</a><br/>
-        </p>
-    </td></tr>
-</table>
+print_app("amsynth", "amsynth", "amSynth", "Standalone + DSSI + LV2 + VST", ARRAY(
+'amsynth is a software synth that provides a classic subtractive synthesizer topology.',
+'Project Page: <a href="http://code.google.com/p/amsynth/" class="external text" rel="nofollow" target="_blank">http://code.google.com/p/amsynth/</a>',
+));
 
-<!-- amsynth -->
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/screenshots/amsynth.png">
-           <img src="screenshots/thumb/amsynth.png" alt="amsynth" class="img_thumb_150"/>
-        </a></p>
-    </td><td>
-        <p>
-            <b><a href="apt://amsynth" style="color: rgb(100,230,100);">amsynth</a></b> (Standalone + DSSI + LV2)<br/>
-            amsynth is a software synth that provides a classic subtractive synthesizer topology.<br/>
-            Project Page: <a href="http://code.google.com/p/amsynth/" class="external text" rel="nofollow" target="_blank">http://code.google.com/p/amsynth/</a><br/>
-        </p>
-    </td></tr>
-</table>
+print_app("arpage", "arpage", "Arpage + Zonage", "Standalone", ARRAY(
+'JACK MIDI arpeggiator with transport and tempo sync.',
+'Project Page: <a href="http://sourceforge.net/projects/arpage/" class="external text" rel="nofollow" target="_blank">http://sourceforge.net/projects/arpage/</a>'
+));
 
-<!-- Arpage + Zonage -->
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/screenshots/arpage.png">
-           <img src="screenshots/thumb/arpage.png" alt="arpage" class="img_thumb_150"/>
-        </a></p>
-    </td><td>
-        <p>
-            <b><a href="apt://arpage" style="color: rgb(100,230,100);">Arpage + Zonage</a></b> (Standalone)<br/>
-            JACK MIDI arpeggiator with transport and tempo sync.<br/>
-            Project Page: <a href="http://sourceforge.net/projects/arpage/" class="external text" rel="nofollow" target="_blank">http://sourceforge.net/projects/arpage/</a><br/>
-        </p>
-    </td></tr>
-</table>
+?>
 
 <!-- Arty FX -->
 <table>
