@@ -71,10 +71,7 @@ echo '</tr>';
 </p>
 
 <p>
-    This page contain statistics regarding donations made to the KXStudio project over time.<br/>
-    So far the KXStudio project has received <?php echo number_format($GLOBALS['total_ever'], 2); ?>&euro; in donations.<br/>
-    The biggest donation ever made was on <?php echo $GLOBALS['biggest_donation_date']; ?>, with a value of <?php echo number_format($GLOBALS['biggest_donation_value'], 2); ?>&euro;.<br/>
-    Thank you very much for your generosity!
+    This page contain statistics regarding donations made to the KXStudio project over time.
 </p>
 
 <div class="box box-description">
@@ -96,6 +93,12 @@ for ($year = strftime("%Y"); $year >= "2013"; $year -= 1) {
 ?>
 </table>
 </div>
+
+<p>
+    So far the KXStudio project has received <?php echo number_format($GLOBALS['total_ever'], 2); ?>&euro; in donations.<br/>
+    The biggest donation ever made was on <?php echo $GLOBALS['biggest_donation_date']; ?>, with a value of <?php echo number_format($GLOBALS['biggest_donation_value'], 2); ?>&euro;.<br/>
+    Thank you very much for your generosity!
+</p>
 
 <p><br/></p>
 
