@@ -14,7 +14,9 @@ $total_ever = 0.0;
 
 function print_donation_year($year) {
 
-if ($db_link == false) {
+global $db_link;
+
+if ($db_link === false) {
     echo '<tr><td colspan="6">DB connection failed</td></tr>';
     return;
 }
