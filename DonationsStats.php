@@ -80,7 +80,7 @@ echo '</tr>';
 
 <p>
     This page contain statistics regarding donations made to the KXStudio project over time.<br/>
-    So far the KXStudio project has received <?php echo number_format($total_ever, 2); ?>&euro; in donations.<br/>
+    So far the KXStudio project has received <?php global $total_ever; echo number_format($total_ever, 2); ?>&euro; in donations.<br/>
     The biggest donation ever made was on <?php echo $biggest_donation_date; ?>, with a value of <?php echo number_format($biggest_donation_value, 2); ?>&euro;.<br/>
     Thank you very much for your generosity!
 </p>
@@ -97,7 +97,7 @@ echo '</tr>';
 </tr>
 <?php
 
-for ($year = strftime("%Y"); $year >= "2012"; $year -= 1) {
+for ($year = strftime("%Y"); $year >= "2013"; $year -= 1) {
     print_donation_year($year);
 }
 
