@@ -8,26 +8,18 @@ include_once("includes/header.php");
 require "donate/config.php";
 require "donate/connect.php";
 
-global $biggest_donation_date;
-global $biggest_donation_value;
-global $total_ever;
-
-$biggest_donation_date  = "Unknown";
-$biggest_donation_value = 0.0;
-$total_ever = 0.0;
+$GLOBALS['biggest_donation_date']  = "Unknown";
+$GLOBALS['biggest_donation_value'] = 0.0;
+$GLOBALS['total_ever'] = 0.0;
 
 function print_donation_year($year) {
 
 global $db_link;
 
-if ($db_link === false) {
+if ($db_link === FALSE) {
     echo '<tr><td colspan="6">DB connection failed</td></tr>';
     return;
 }
-
-global $biggest_donation_date;
-global $biggest_donation_value;
-global $total_ever;
 
 $amount = 0.0;
 
@@ -44,16 +36,16 @@ if (mysql_num_rows($sql_donations)) {
         $donation_count += 1.0;
         if ($amount > $max_month) {
             $max_month = $amount;
-            if ($amount > $biggest_donation_value) {
-                $biggest_donation_date  = date("Y-m-d", strtotime($sql_row["dt"]));
-                $biggest_donation_value = $amount;
+            if ($amount > $GLOBALS['biggest_donation_value']) {
+                $GLOBALS['biggest_donation_date']  = date("Y-m-d", strtotime($sql_row["dt"]));
+                $GLOBALS['biggest_donation_value'] = $amount;
             }
         }
         $total_year += $amount;
     }
 }
 
-$total_ever += $total_year;
+$GLOBALS['total_ever'] += $total_year;
 
 echo '<tr>';
 echo '  <td>' . $year . '</td>';
@@ -80,8 +72,8 @@ echo '</tr>';
 
 <p>
     This page contain statistics regarding donations made to the KXStudio project over time.<br/>
-    So far the KXStudio project has received <?php global $total_ever; echo number_format($total_ever, 2); ?>&euro; in donations.<br/>
-    The biggest donation ever made was on <?php echo $biggest_donation_date; ?>, with a value of <?php echo number_format($biggest_donation_value, 2); ?>&euro;.<br/>
+    So far the KXStudio project has received <?php echo number_format($GLOBALS['total_ever'], 2); ?>&euro; in donations.<br/>
+    The biggest donation ever made was on <?php echo $GLOBALS['biggest_donation_date']; ?>, with a value of <?php echo number_format($GLOBALS['biggest_donation_value'], 2); ?>&euro;.<br/>
     Thank you very much for your generosity!
 </p>
 
