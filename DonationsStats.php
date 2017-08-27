@@ -8,6 +8,10 @@ include_once("includes/header.php");
 require "donate/config.php";
 require "donate/connect.php";
 
+global $biggest_donation_date;
+global $biggest_donation_value;
+global $total_ever;
+
 $biggest_donation_date  = "Unknown";
 $biggest_donation_value = 0.0;
 $total_ever = 0.0;
@@ -20,6 +24,10 @@ if ($db_link === false) {
     echo '<tr><td colspan="6">DB connection failed</td></tr>';
     return;
 }
+
+global $biggest_donation_date;
+global $biggest_donation_value;
+global $total_ever;
 
 $amount = 0.0;
 
@@ -50,14 +58,14 @@ $total_ever += $total_year;
 echo '<tr>';
 echo '  <td>' . $year . '</td>';
 echo '  <td>' . $donation_count . '</td>';
-echo '  <td>' . $total_year . '&euro;</td>';
+echo '  <td>' . number_format($total_year, 2) . '&euro;</td>';
 if ($donation_count > 0.0) {
-    echo '  <td>' . ($total_year/$donation_count) . '&euro;</td>';
+    echo '  <td>' . number_format($total_year/$donation_count, 2) . '&euro;</td>';
 } else {
     echo '  <td>0&euro;</td>';
 }
-echo '  <td>' . ($total_year/12.0) . '&euro;</td>';
-echo '  <td>' . $max_month . '&euro;</td>';
+echo '  <td>' . number_format($total_year/12.0, 2) . '&euro;</td>';
+echo '  <td>' . number_format($max_month, 2) . '&euro;</td>';
 echo '</tr>';
 
 }
@@ -72,8 +80,8 @@ echo '</tr>';
 
 <p>
     This page contain statistics regarding donations made to the KXStudio project over time.<br/>
-    So far the KXStudio project has received <?php echo $total_ever; ?>&euro; in donations.<br/>
-    The biggest donation ever made was on <?php echo $biggest_donation_date; ?>, with a value of <?php echo $biggest_donation_value; ?>&euro;.<br/>
+    So far the KXStudio project has received <?php echo number_format($total_ever, 2); ?>&euro; in donations.<br/>
+    The biggest donation ever made was on <?php echo $biggest_donation_date; ?>, with a value of <?php echo number_format($biggest_donation_value, 2); ?>&euro;.<br/>
     Thank you very much for your generosity!
 </p>
 
@@ -81,7 +89,7 @@ echo '</tr>';
 <table style="text-align:center;">
 <tr>
     <td>&nbsp;Year&nbsp;</td>
-    <td>&nbsp;Donations count&nbsp;</td>
+    <td>&nbsp;Donation count&nbsp;</td>
     <td>&nbsp;Total received&nbsp;</td>
     <td>&nbsp;Average per donation&nbsp;</td>
     <td>&nbsp;Average per month&nbsp;</td>
@@ -89,7 +97,7 @@ echo '</tr>';
 </tr>
 <?php
 
-for ($year = strftime("%Y"); $year >= "2014"; $year -= 1) {
+for ($year = strftime("%Y"); $year >= "2012"; $year -= 1) {
     print_donation_year($year);
 }
 
