@@ -10,8 +10,8 @@ require "donate/connect.php";
 ?>
 
 <p>
-    KXStudio is and always be a free and open-source project to everyone.<br/>
-    Donations will help ensure that developers have the needed enthusiasm and motivation to keep working hard on the project.<br/>
+    KXStudio is and always will be a free and open-source project to everyone.<br/>
+    Donations help ensure that developers have the needed enthusiasm and motivation to keep working on the project.<br/>
     Just because we're open-source doesn't mean we're allergic to money. ;)
 </p>
 
