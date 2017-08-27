@@ -14,34 +14,46 @@ $total_ever = 0.0;
 
 function print_donation_year($year) {
 
-if (! $db_link) {
-    return;
-}
-
 $amount = 0.0;
 
 $max_month  = 0.0;
 $total_year = 0.0;
 
-$sql_donations = mysql_query("SELECT * FROM donations WHERE YEAR(dt) = " . $year);
+$donation_count = 0.0;
 
-if (mysql_num_rows($sql_donations)) {
-    while ($sql_row = mysql_fetch_assoc($sql_donations)) {
-        $amount = $sql_row["amount"]
-        if ($amount > $max_month) {
-            $max_month = $amount;
-            if ($amount > $biggest_donation_value) {
-                $biggest_donation_date  = date("Y-m-d", strtotime($sql_row["dt"]));
-                $biggest_donation_value = $amount;
+if ($db_link) {
+    $sql_donations = mysql_query("SELECT * FROM donations WHERE YEAR(dt) = " . $year);
+
+    if (mysql_num_rows($sql_donations)) {
+        while ($sql_row = mysql_fetch_assoc($sql_donations)) {
+            $amount = $sql_row["amount"];
+            $donation_count += 1.0;
+            if ($amount > $max_month) {
+                $max_month = $amount;
+                if ($amount > $biggest_donation_value) {
+                    $biggest_donation_date  = date("Y-m-d", strtotime($sql_row["dt"]));
+                    $biggest_donation_value = $amount;
+                }
             }
+            $total_year += $amount;
         }
-        $total_year += $amount;
-     }
+    }
 }
 
 $total_ever += $total_year;
 
-echo '<tr><td>' . $year . '</td><td>' . ($total_year/12.0) . '&euro;</td><td>' . $max_month . '&euro;</td></tr>';
+echo '<tr>';
+echo '  <td>' . $year . '</td>';
+echo '  <td>' . $donation_count . '</td>';
+echo '  <td>' . $total_year . '&euro;</td>';
+if ($donation_count > 0.0) {
+    echo '  <td>' . ($total_year/$donation_count) . '&euro;</td>';
+} else {
+    echo '  <td>0&euro;</td>';
+}
+echo '  <td>' . ($total_year/12.0) . '&euro;</td>';
+echo '  <td>' . $max_month . '&euro;</td>';
+echo '</tr>';
 
 }
 
@@ -60,8 +72,16 @@ echo '<tr><td>' . $year . '</td><td>' . ($total_year/12.0) . '&euro;</td><td>' .
     Thank you very much for your generosity!
 </p>
 
-<table>
-<tr><th>Year></th><th>Total</th><th>Average per month</th><th>Biggest single donation</th></tr>
+<div class="box box-description">
+<table style="text-align:center;">
+<tr>
+    <td>&nbsp;Year&nbsp;</td>
+    <td>&nbsp;Donations count&nbsp;</td>
+    <td>&nbsp;Total received&nbsp;</td>
+    <td>&nbsp;Average per donation&nbsp;</td>
+    <td>&nbsp;Average per month&nbsp;</td>
+    <td>&nbsp;Biggest single donation&nbsp;</td>
+</tr>
 <?php
 
 for ($year = strftime("%Y"); $year >= "2014"; $year -= 1) {
@@ -70,6 +90,7 @@ for ($year = strftime("%Y"); $year >= "2014"; $year -= 1) {
 
 ?>
 </table>
+</div>
 
 <p><br/></p>
 
