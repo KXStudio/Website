@@ -47,25 +47,57 @@ echo '</p></td></tr></table>';
     <br/>
 </div>
 
+
 <!--
+  TODO: (no ui, broken?)
+
   TODO: (no ui)
-    foo-plugins
-    jackass
-    leet-plugins
-    midimsg-lv2
-    tap-plugins
-    vcf-plugins
-    vocoder-ladspa
-    wasp-ladspa
+midimsg-lv2
+
+rubberband-ladspa
+ste-plugins
+
+whysynth
+wsynth-dssi
+xsynth-dssi
+
+drmr
+ir.lv2 | ir.lv2-1.2
+linuxsampler-lv2 | linuxsampler-lv2-32chan
+caps-lv2
+invada-studio-plugins-lv2
+fomp
+mod-mda-lv2 | mda-lv2
+swh-lv2
+tap-lv2
+x42-plugins
+artyfx
+fabla
+sorcer
+arctican-plugins-lv2
+dexed-lv2
+distrho-plugin-ports-lv2
+drowaudio-plugins-lv2
+easyssp-lv2
+klangfalter-lv2
+luftikus-lv2
+obxd-lv2
+pitcheddelay-lv2
+tal-plugins-lv2
+teragonaudio-plugins-lv2
+mod-distortion
+mod-pitchshifter
+mod-utilities
+
+jackass
+pizmidi-plugins
+
   TODO: (with ui)
     ams-lv2
     beatslash-lv2
-    calf-git
-    cursynth
     deteriorate-lv2
     dssi-vst
     guitarix (*)
-    hexter
     ir.lv2
     ls16 ?
     phasex

@@ -13,6 +13,85 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; Breaking changes in Carla Plugin Host</span><br/>
+    On <i>2017-11-21</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, I have some bad and good news about Carla.<br/>
+    If you've been following the development on the git repository you likely know what his is about.<br/>
+    There were some major changes done to Carla's code base in the past few days.<br/>
+</p>
+<p>
+    The biggest change is the <b>removal of the Juce library</b>.<br/>
+    The reasons for this are well known by some developers, but I'll not write about them here.<br/>
+    After looking around for alternatives,
+    I decided to fork an older GPLv2 compatible version of Juce and strip it down to the really essential parts needed
+    to get Carla to build and run - even if it meant losing some of the features.<br/>
+    The possibility to change to an entirely different C++ framework crossed my mind,
+    but the amount of effort and breaking changes would be too big.<br/>
+    I called the end result 'water'. You can say Carla doesn't need Juce, water is fine ;)<br/>
+    There's only a few classes and files needed for I/O, XML and AudioGraph handling, everything else is gone. \o/
+</p>
+<p>
+    The implications for this change are not big for Linux users,
+    and is even a source of good news for other OpenSource Operating System users like FreeBSD and HaikuOS.<br/>
+    In short, because Juce is no longer there, we have <b>lost support for VST3 and AudioUnit plugins</b>.<br/>
+    Plus VST2 plugins on Windows and MacOS are now handled by Carla's code instead of relying on Juce.<br/>
+    This heavily reduces the amount of compatible plugins handled by Carla, because Juce had a lot of hacks in order
+    to make a lot of commercial plugins run properly.<br/>
+    Also Carla on Windows and MacOS used Juce to handle Audio and MIDI devices,
+    which now has been changed to RtAudio and RtMidi.<br/>
+    RtAudio &amp; RtMidi are not as fully-featured as Juce was (we lose dynamic MIDI ports, for example),
+    but I am glad to have Juce gone from the code-base.<br/>
+    (You can say that parts of it are still there, but my conscience is clear,
+    and Carla remains self-contained which was my main point since v2.0 development started)
+</p>
+<p>
+    The next breaking change relates to the internal plugins used in Carla.<br/>
+    The <b>plugins that already exist as LV2 will stop being exported with the carla.lv2</b> bundle.<br/>
+    Plus these plugins will soon be removed from the default build.<br/>
+    They quickly bloat the Carla binaries, as they include their artwork.
+    Not to mention increasing the clone and building times.<br/>
+    The plan is to have them disabled by default and moved into a new repository as submodule.<br/>
+    Oh and the "experimental" plugins are going away soon.
+    It was a mistake to make them Carla-specific in the first place, they should be regular audio plugins instead.
+<p>
+    Another breaking change is the removal of modgui support.<br/>
+    The code only worked for PyQt4, which is no longer the default for Carla source-based builds.<br/>
+    Plus it required webkit, which brings a bit list of dependencies.
+    I would have to port the code to webengine/chromium to make it work with PyQt5... no thanks.<br/>
+</p>
+<p>
+    The final breaking change is the introduction of the <b>Experimental option in Carla's settings</b>.<br/>
+    Everything that is not stable at the moment went there as an option, and got disabled by default. This includes:
+</p>
+<ul>
+    <li>Plugin bridges</li>
+    <li>Wine options</li>
+    <li>Force-stereo mode</li>
+    <li>Canvas eye-candy</li>
+    <li>Canvas with OpenGL</li>
+</ul>
+<p>
+    All new in-development / testing features will get introduced as experimental first.<br/>
+    This will speed up the release of 2.0, since not everything needs to be finished for it.<br/>
+    For example, plugin bridges can still be there and not fully implemented, and we still have 2.0-stable out!
+</p>
+<p>
+    That's it! Thanks for reading so far.<br/>
+    In other news, I gave a small presentation about Carla in this year's Sonoj Conference.<br/>
+    You can check it out here:<br/>
+    <a target="_blank" href="https://media.ccc.de/v/sonoj2017-1704-carla-plugin-host">
+      https://media.ccc.de/v/sonoj2017-1704-carla-plugin-host
+      </a>
+</p>
+<p>
+    Carla 2.0-beta6 will be out soon :)
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; DPF-Plugins v1.1 released</span><br/>
     On <i>2017-06-17</i> by<i> falkTX</i>
 </p>
