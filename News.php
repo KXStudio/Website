@@ -18,7 +18,7 @@ include_once("includes/header.php");
 </p>
 <p>
     Hello everyone, I have some bad and good news about Carla.<br/>
-    If you've been following the development on the git repository you likely know what his is about.<br/>
+    If you've been following the development on the git repository you likely know what this is about.<br/>
     There were some major changes done to Carla's code base in the past few days.<br/>
 </p>
 <p>
@@ -58,7 +58,7 @@ include_once("includes/header.php");
 <p>
     Another breaking change is the removal of modgui support.<br/>
     The code only worked for PyQt4, which is no longer the default for Carla source-based builds.<br/>
-    Plus it required webkit, which brings a bit list of dependencies.
+    Plus it required webkit, which brings a big list of dependencies.
     I would have to port the code to webengine/chromium to make it work with PyQt5... no thanks.<br/>
 </p>
 <p>
