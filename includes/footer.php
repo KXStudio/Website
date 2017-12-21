@@ -31,6 +31,14 @@
             <div class="box box-shadow alpha clear-both navigation">
                 <h2 class="box-header"> <a href="<?php echo $ROOT; ?>/News" style="color: #aaf;">News</a> </h2>
 
+                <a href="<?php echo $ROOT; ?>/News/?action=view&url=jack2-1912-release-and-future-plans">
+                    <b>JACK2 1.9.12 release and future plans</b><br/>
+                </a>
+                <p>
+                    A new version of JACK2 was released, and plans for 2018 defined.
+                </p>
+                <hr/>
+
                 <a href="<?php echo $ROOT; ?>/News/?action=view&url=breaking-changes-in-carla-plugin-host">
                     <b>Breaking changes in Carla Plugin Host</b><br/>
                 </a>
@@ -54,15 +62,6 @@
                 <p>
                     It's time for another KXStudio ISO release!<br/>
                     KXStudio 14.04.5 is here!
-                </p>
-                <hr/>
-
-                <a href="<?php echo $ROOT; ?>/News/?action=view&url=carla-20-beta5-is-here">
-                    <b>Carla 2.0-beta5</b><br/>
-                    <img src="<?php echo $ROOT; ?>/screenshots/carla.png" alt="" width="150px"/>
-                </a>
-                <p>
-                     The 5th beta of the upcoming Carla 2.0 release.
                 </p>
             </div>
         </div>
