@@ -35,7 +35,7 @@
                     <b>JACK2 1.9.12 release and future plans</b><br/>
                 </a>
                 <p>
-                    A new version of JACK2 was released, and plans for 2018 defined.
+                    A new version of JACK2 is out, and plans for 2018 defined.
                 </p>
                 <hr/>
 
