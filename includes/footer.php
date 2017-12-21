@@ -31,6 +31,14 @@
             <div class="box box-shadow alpha clear-both navigation">
                 <h2 class="box-header"> <a href="<?php echo $ROOT; ?>/News" style="color: #aaf;">News</a> </h2>
 
+                <a href="<?php echo $ROOT; ?>/News/?action=view&url=breaking-changes-in-carla-plugin-host">
+                    <b>Breaking changes in Carla Plugin Host</b><br/>
+                </a>
+                <p>
+                    There were some major changes done to Carla's code base in the past few days...
+                </p>
+                <hr/>
+
                 <a href="<?php echo $ROOT; ?>/News/?action=view&url=dpf-plugins-v11-released">
                     <b>DPF-Plugins v1.1</b><br/>
                     <img src="<?php echo $ROOT; ?>/screenshots/news/dpf-plugins-1.1.png" alt="" width="150px"/>
