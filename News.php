@@ -13,6 +13,140 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.0 beta6 is here!</span><br/>
+    On <i>2018-01-07</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone, we're glad to bring you the 6th beta of the upcoming Carla 2.0 release.<br/>
+    It has been more than 1 year since the last Carla release, this release fixes things that got broken in the mean time and continues the work towards Carla's 2.0 base features.<br/>
+    There's quite a lot of changes under the hood, mostly bugfixes and minor but useful additions.<br/>
+    With that being said, here are some of the highlights:
+</p>
+<p>
+    juce stuff, no more vst3 and au. win/osx audio + midi support through rtaudio+rtmidi.
+    has not been extensively tested.
+    jack support remains the same
+</p>
+<p>
+    Previous experimental plugins removed. carla-zyn no longer exported.
+    For final release, internal plugins won't be built by default
+    remove mod-ui
+</p>
+<p>
+Can now build on more systems than just linux/mac/windows
+BSD, Hurd and Haiku working, but realtime audio usage has not been tested by me personally.
+</p>
+
+<table><tr><td>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_lll.png">
+    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_carla-control_crop.png" alt="carla-control"/>
+</a>
+</td><td>
+<h3>tweak of settings page</h3>
+<p>
+wine options settings
+Experimental settings
+    ...
+</p>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_lll.png">
+    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_carla-control_crop.png" alt="carla-control"/>
+</a>
+</td><td>
+<h3>Transport controls (experimental)</h3>
+<p>
+    ...
+    also link
+</p>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_lll.png">
+    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_carla-control_crop.png" alt="carla-control"/>
+</a>
+</td><td>
+<h3>Load of JACK applications as plugins (experimental)</h3>
+<p>
+    ...
+</p>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_lll.png">
+    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_carla-control_crop.png" alt="carla-control"/>
+</a>
+</td><td>
+<h3>Export any loaded plugin or file as a single LV2 plugin (experimental)</h3>
+<p>
+    ...
+</p>
+</td></tr></table>
+
+? Add artwork and license to about dialog
+
+? Save and restore canvas positions in new sibling file to project
+
+<p><br/></p>
+
+Implement parameter text for plugin bridges, cache last render
+Linear controlled knobs
+Handle integer parameters on rack knobs
+Disable UI bridges on macOS (for now)
+Qt5 now default
+Automatically detect compile target
+Active peaks and keyboard for carla-rack group
+Add carla-rack no-midi-out mode as plugin
+Allow d-and-d of plugin binaries; Fix double-click folders on panel
+Place more parameters per tab in editor dialog
+Kill bridges (child processes) when main carla dies - linux only WIP
+Add prevent-bad-behaviour option, and make it work once again
+
+cleanup, etc etc
+
+NOTE - Rename plugin refresh 'start' to 'scan'  needs 2nd rename
+
+<h3>More stuff</h3>
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+<p>
+    The plan is to not make any more betas, but jump for a release candidate next.<br/>
+    So no new features for now, just polish and making the current Linux features work on other platforms.<br/>
+</p>
+
+<h3>Special Notes</h3>
+<ul>
+  <li>Carla as plugin is still not available under Windows, perhaps to be done for the next beta.</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump into the <a href="<?php echo $ROOT; ?>/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump into the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<hr/>
+
+
+
+
+
+
+<p>
     <span style="font-size: 20px">&gt; JACK2 1.9.12 release and future plans</span><br/>
     On <i>2017-12-21</i> by<i> falkTX</i>
 </p>
