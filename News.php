@@ -14,7 +14,7 @@ include_once("includes/header.php");
 
 <p>
     <span style="font-size: 20px">&gt; Carla 2.0 beta6 is here!</span><br/>
-    On <i>2018-01-07</i> by<i> falkTX</i>
+    On <i>2018-01-22</i> by<i> falkTX</i>
 </p>
 <p>
     Hello again everyone, we're glad to bring you the 6th beta of the upcoming Carla 2.0 release.<br/>
@@ -38,37 +38,20 @@ BSD, Hurd and Haiku working, but realtime audio usage has not been tested by me 
 </p>
 
 <table><tr><td>
-<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_lll.png">
-    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_carla-control_crop.png" alt="carla-control"/>
-</a>
-</td><td>
-<h3>tweak of settings page</h3>
-<p>
-wine options settings
-Experimental settings
-    ...
-</p>
-</td></tr></table>
-
-<p><br/></p>
-
-<table><tr><td>
-<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_lll.png">
-    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_carla-control_crop.png" alt="carla-control"/>
-</a>
+<img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_transport.png" alt="transport"/>
 </td><td>
 <h3>Transport controls (experimental)</h3>
 <p>
-    ...
-    also link
+    ...<br/>
+    also link<br/>
 </p>
 </td></tr></table>
 
 <p><br/></p>
 
 <table><tr><td>
-<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_lll.png">
-    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_carla-control_crop.png" alt="carla-control"/>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_jack-apps.png">
+    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_jack-apps_crop.png" alt="jack-apps"/>
 </a>
 </td><td>
 <h3>Load of JACK applications as plugins (experimental)</h3>
@@ -80,8 +63,8 @@ Experimental settings
 <p><br/></p>
 
 <table><tr><td>
-<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_lll.png">
-    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_carla-control_crop.png" alt="carla-control"/>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_export-lv2.png">
+    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_export-lv2_crop.png" alt="export-lv2"/>
 </a>
 </td><td>
 <h3>Export any loaded plugin or file as a single LV2 plugin (experimental)</h3>
@@ -90,28 +73,57 @@ Experimental settings
 </p>
 </td></tr></table>
 
-? Add artwork and license to about dialog
+<p><br/></p>
 
-? Save and restore canvas positions in new sibling file to project
+<table><tr><td>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_settings.png">
+    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_settings_crop.png" alt="settings"/>
+</a>
+</td><td>
+<h3>tweak of settings page</h3>
+<p>
+wine options settings<br/>
+Experimental settings<br/>
+...<br/>
+</p>
+</td></tr></table>
 
 <p><br/></p>
 
-Implement parameter text for plugin bridges, cache last render
-Linear controlled knobs
-Handle integer parameters on rack knobs
-Disable UI bridges on macOS (for now)
-Qt5 now default
-Automatically detect compile target
-Active peaks and keyboard for carla-rack group
-Add carla-rack no-midi-out mode as plugin
-Allow d-and-d of plugin binaries; Fix double-click folders on panel
-Place more parameters per tab in editor dialog
-Kill bridges (child processes) when main carla dies - linux only WIP
-Add prevent-bad-behaviour option, and make it work once again
+<table><tr><td>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_freebsd.png">
+    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_freebsd_crop.png" alt="freebsd"/>
+</a>
+</td><td>
+<h3>.. FreeBSD ...</h3>
+<p>
+    ...
+</p>
+</td></tr></table>
 
-cleanup, etc etc
+<p><br/></p>
 
-NOTE - Rename plugin refresh 'start' to 'scan'  needs 2nd rename
+<p>
+? Add artwork and license to about dialog<br/>
+? Save and restore canvas positions in new sibling file to project<br/>
+
+Implement parameter text for plugin bridges, cache last render<br/>
+Linear controlled knobs<br/>
+Handle integer parameters on rack knobs<br/>
+Disable UI bridges on macOS (for now)<br/>
+Qt5 now default<br/>
+Automatically detect compile target<br/>
+Active peaks and keyboard for carla-rack group<br/>
+Add carla-rack no-midi-out mode as plugin<br/>
+Allow d-and-d of plugin binaries; Fix double-click folders on panel<br/>
+Place more parameters per tab in editor dialog<br/>
+Kill bridges (child processes) when main carla dies - linux only WIP<br/>
+Add prevent-bad-behaviour option, and make it work once again<br/>
+Manage UIs now works on macOS and Windows<br/>
+Expand usable MIDI keyboard keys a little<br/>
+<br/>
+cleanup, etc etc<br/>
+</p>
 
 <h3>More stuff</h3>
 <ul>
