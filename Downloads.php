@@ -49,32 +49,26 @@ include_once("includes/header.php");
               <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence </a> (32bit, version 0.8.1)<br/>
         &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/cadence/Cadence-0.8.1-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence </a> (64bit, version 0.8.1)<br/>
-        &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.4-linux32.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla </a> (32bit, version 1.2.4)<br/>
-        &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.4-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla </a> (64bit, version 1.2.4)<br/>
-        &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/1.9.7/Carla-2.0beta5.1-linux32.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (32bit, version 2.0-beta5)<br/>
-        &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/1.9.7/Carla-2.0beta5.1-linux64.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (64bit, version 2.0-beta5)<br/>
+        &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/1.9.8/Carla_2.0-beta6-linux32.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
+              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (32bit, version 2.0-beta6)<br/>
+        &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/1.9.8/Carla_2.0-beta6-linux64.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
+              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (64bit, version 2.0-beta6)<br/>
         &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/festige/festige-1.0.2-x86.tar.gz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_festige.png" alt="" class="img_text_align"/> FeSTige </a> (32bit, version 1.0.2)<br/>
     </p>
     <p class="p_extra_spaced">
         <b>MacOS Downloads:</b><br/>
-        &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/1.9.7/Carla-2.0beta5-osx.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (version 2.0-beta5 for 10.8 or higher)<br/>
+        &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/1.9.8/Carla_2.0-beta6-macos.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
+              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (version 2.0-beta6 for macOS 10.8 or higher)<br/>
     </p>
     <p class="p_extra_spaced">
         <b>Windows Downloads:</b><br/>
         &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/cadence/Cadence-0.8.1-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence </a> (32bit, version 0.8.1)<br/>
-        &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.4-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla </a> (32bit, version 1.2.4)<br/>
-        &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/1.9.7/Carla-2.0beta5-win32.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (32bit, version 2.0-beta5)<br/>
-        &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/1.9.7/Carla-2.0beta5-win64.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (64bit, version 2.0-beta5)<br/>
+        &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/1.9.8/Carla_2.0-beta6-win32.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (32bit, version 2.0-beta6)<br/>
+        &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/1.9.8/Carla_2.0-beta6-win64.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (64bit, version 2.0-beta6)<br/>
     </p>
 </ul>
 
@@ -90,10 +84,8 @@ include_once("includes/header.php");
         <b>Downloads:</b><br/>
         &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/cadence/Cadence-0.8.1-src.tar.bz2/download" class="external free a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence </a> (version 0.8.1)<br/>
-        &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.2.4-src.tar.bz2/download" class="external free a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla </a> (version 1.2.4)<br/>
-        &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-2.0beta4.tar.bz2/download" class="external free a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (version 2.0-beta4)<br/>
+        &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/1.9.8/Carla_2.0-beta6-src.tar.gz" class="external free a_bigger_text" rel="nofollow" target="_blank">
+              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (version 2.0-beta6)<br/>
         &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/festige/festige-1.0.2-src.tar.gz/download" class="external free a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_festige.png" alt="" class="img_text_align"/> FeSTige </a> (version 1.0.2)<br/>
     </p>
