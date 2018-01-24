@@ -14,36 +14,55 @@ include_once("includes/header.php");
 
 <p>
     <span style="font-size: 20px">&gt; Carla 2.0 beta6 is here!</span><br/>
-    On <i>2018-01-22</i> by<i> falkTX</i>
+    On <i>2018-01-24</i> by<i> falkTX</i>
 </p>
 <p>
     Hello again everyone, we're glad to bring you the 6th beta of the upcoming Carla 2.0 release.<br/>
-    It has been more than 1 year since the last Carla release, this release fixes things that got broken in the mean time and continues the work towards Carla's 2.0 base features.<br/>
-    There's quite a lot of changes under the hood, mostly bugfixes and minor but useful additions.<br/>
-    With that being said, here are some of the highlights:
+    It has been more than 1 year since the last Carla release, it was about time. :)<br/>
+    This should be the last beta for the 2.0 series, the next one is planned to be release candidate 1.
 </p>
 <p>
-    juce stuff, no more vst3 and au. win/osx audio + midi support through rtaudio+rtmidi.
-    has not been extensively tested.
-    jack support remains the same
+    There were quite some changes under the hood, mostly in a good way.<br/>
+    Sadly for users this actually means losing some features, the biggest ones being VST3 and AU plugin support.<br/>
+    The way audio and MIDI devices are handled on Windows and macOS also changed, no longer having dynamic MIDI ports.<br/>
+    See the previous post about Carla to get more details on the "breaking changes".
 </p>
 <p>
-    Previous experimental plugins removed. carla-zyn no longer exported.
-    For final release, internal plugins won't be built by default
-    remove mod-ui
-</p>
-<p>
-Can now build on more systems than just linux/mac/windows
-BSD, Hurd and Haiku working, but realtime audio usage has not been tested by me personally.
+    But let's move on with the good stuff!<br/>
+    Here are some of the highlights for this release:
 </p>
 
 <table><tr><td>
 <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_transport.png" alt="transport"/>
 </td><td>
-<h3>Transport controls (experimental)</h3>
+<h3>Transport controls and Ableton Link support (experimental)</h3>
 <p>
-    ...<br/>
-    also link<br/>
+    Previous releases of Carla had basic time controls already,
+        but it was quite basic and lacked options for JACK transport and BPM control.<br/>
+    Now JACK transport is optional, transport works for non-JACK drivers and BPM can be adjusted manually.<br/>
+    Link support was added in was well, as another way to sync transport. It was not extensively tested though.<br/>
+    Also note that, due to compiler support, the current Carla macOS builds do not support Link.<br/>
+</p>
+<p>
+    Transport can misbehave when rolling back or forwards, so this feature is still classified as experimental.<br/>
+    The plan is to have transport working fully stable when the final 2.0 version is released.<br/>
+</p>
+</td></tr></table>
+
+<p><br/></p>
+
+<table><tr><td>
+<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_settings.png">
+    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_settings_crop.png" alt="settings"/>
+</a>
+</td><td>
+<h3>Tweak of settings page</h3>
+<p>
+    Carla's settings dialog got an overhaul.<br/>
+    Everything that was not deemed stable was moved into a new 'experimental' page, and disabled by default.<br/>
+    So in order to use plugin bridges for example, you need to first enable experimental features, then the bridges.<br/>
+    The (experimental) features mentioned on this article all have to be enabled in the same way too.<br/>
+    Last but not least, a page dedicated to Wine settings (wine-prefix, wine startup binary, RT variables) was added.<br/>
 </p>
 </td></tr></table>
 
@@ -54,9 +73,30 @@ BSD, Hurd and Haiku working, but realtime audio usage has not been tested by me 
     <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_jack-apps_crop.png" alt="jack-apps"/>
 </a>
 </td><td>
-<h3>Load of JACK applications as plugins (experimental)</h3>
+<h3>Load of JACK applications as plugins (Linux only, experimental)</h3>
 <p>
-    ...
+    This is a big one... :)<br/>
+    Initially just an idea, that became an ugly hack/test for private use, but that I soon realized to have great potential.<br/>
+    So I split the code used for plugin bridges and made it more generic so it could be re-used for such feature.<br/>
+    And here we have it, JACK applications running as regular plugins inside Carla - including showing/hiding their main interface.<br/>
+    Also applications receive JACK transport as rolling in the host.<br/>
+</p>
+<p>
+    In this mode Carla basically becomes a self-contained JACK server, and exposes a special libjack to the client.<br/>
+    The client connects to Carla believing it's actually connecting to "JACK", as Carla implements libjack API through its plugin bridge mechanism.<br/>
+    Within Carla you first define a fixed number of audio and midi ports at the start.<br/>
+    Ports are allocated dynamically on the plugin side, but get mixed down at the end to the number of outputs selected.<br/>
+    This is a nice workaround against clients that dynamically register their ports, sometimes with random names too.<br/>
+    With Carla jack-apps-as-plugins method, the client ports are persistent.<br/>
+</p>
+<p>
+    The full libjack API is not implemented though, only the important parts to get most applications running.<br/>
+    The most notable missing calls are related precise timing information and non-callback based processing.<br/>
+    But even without this, stuff like audacity, lmms, hydrogen, renoise and vlc work.<br/>
+    Also no session management is implemented at the moment.
+</p>
+<p>
+    This is a work in progress, but already working quite well considering how new it is.<br/>
 </p>
 </td></tr></table>
 
@@ -69,22 +109,18 @@ BSD, Hurd and Haiku working, but realtime audio usage has not been tested by me 
 </td><td>
 <h3>Export any loaded plugin or file as a single LV2 plugin (experimental)</h3>
 <p>
-    ...
+    Another big feature of this release is the possibility to export any plugin or sound file loaded in Carla
+        as its own self-contained (LV2) plugin.<br/>
+    This can really be any regular plugin, a sound bank (eg, SFZ file), a plugin bridge or even JACK application.<br/>
+    The exported plugin will run with the smallest amount of wrapping possible between the host and the carla loaded plugin.<br/>
+    Carla will not appear at all, triggering the "show ui" on the host will show the actual plugin UI.<br/>
+    Note that the exported plugins are not portable! They require Carla to be always installed on the same location.<br/>
 </p>
-</td></tr></table>
-
-<p><br/></p>
-
-<table><tr><td>
-<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_settings.png">
-    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_settings_crop.png" alt="settings"/>
-</a>
-</td><td>
-<h3>tweak of settings page</h3>
 <p>
-wine options settings<br/>
-Experimental settings<br/>
-...<br/>
+    Audio, MIDI, transport information, custom UI are fully working already.<br/>
+    The only missing feature at the moment is LV2 state, which needs to map to DSSI configures, VST chunks and other stuff.<br/>
+    Although working for non-Linux systems, this was not tested.<br/>
+    Testing of this feature in general is very appreciated.<br/>
 </p>
 </td></tr></table>
 
@@ -95,53 +131,43 @@ Experimental settings<br/>
     <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_freebsd_crop.png" alt="freebsd"/>
 </a>
 </td><td>
-<h3>.. FreeBSD ...</h3>
+<h3>FreeBSD and other non-Linux systems</h3>
 <p>
-    ...
+    After the removal of the juce library from the code-base (discussed before),
+        Carla was free to be able to support more than just the big 3 OSes.<br/>
+    With the help of the community, Carla is now available to install on FreeBSD through its ports system.<br/>
+    I was able to build and install it myself as well, and actually make good noise on a BSD system. Neat! :)<br/>
+    It's also now possible to build Carla for GNU/Hurd and HaikuOS as well, and I imagine for even more systems if one so desires.<br/>
+    If this is something you're interested in and need some help, let me know.
 </p>
 </td></tr></table>
 
 <p><br/></p>
 
+<h3>Other changes</h3>
 <p>
-? Add artwork and license to about dialog<br/>
-? Save and restore canvas positions in new sibling file to project<br/>
-
-Implement parameter text for plugin bridges, cache last render<br/>
-Linear controlled knobs<br/>
-Handle integer parameters on rack knobs<br/>
-Disable UI bridges on macOS (for now)<br/>
-Qt5 now default<br/>
-Automatically detect compile target<br/>
-Active peaks and keyboard for carla-rack group<br/>
-Add carla-rack no-midi-out mode as plugin<br/>
-Allow d-and-d of plugin binaries; Fix double-click folders on panel<br/>
-Place more parameters per tab in editor dialog<br/>
-Kill bridges (child processes) when main carla dies - linux only WIP<br/>
-Add prevent-bad-behaviour option, and make it work once again<br/>
-Manage UIs now works on macOS and Windows<br/>
-Expand usable MIDI keyboard keys a little<br/>
-<br/>
-cleanup, etc etc<br/>
+    There are quite a lot of other smaller changes made in Carla since beta5, these include:<br/>
 </p>
-
-<h3>More stuff</h3>
 <ul>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
+  <li>Added artwork and license to about dialog</li>
+  <li>Added carla-rack no-midi-out mode as plugin</li>
+  <li>Allow drag&amp;drop of plugin binaries into Rack view</li>
+  <li>Add "prevent bad plugin behaviour" option (experimental, Linux only)</li>
+  <li>Auto-detect wine-prefix for plugin bridges</li>
+  <li>Expand usable MIDI keyboard keys a little (Z-M plus Q-P for 2 full octaves and 5 extra keys)</li>
+  <li>Implement parameter text for plugin bridges</li>
+  <li>Implement "Manage UIs" option for macOS and Windows</li>
+  <li>Place more parameters per tab in editor dialog</li>
+  <li>Show active peaks and enable keyboard for carla-rack group in canvas</li>
+  <li>Knobs are now controlled in a linear way</li>
+  <li>Previous experimental plugins removed, and carla-zynaddsubfx no longer exported</li>
+  <li>Rack view can handle integeter knobs properly</li>
+  <li>Save and restore canvas positions (standalone only for now)</li>
 </ul>
-<p>
-    The plan is to not make any more betas, but jump for a release candidate next.<br/>
-    So no new features for now, just polish and making the current Linux features work on other platforms.<br/>
-</p>
 
 <h3>Special Notes</h3>
 <ul>
-  <li>Carla as plugin is still not available under Windows, perhaps to be done for the next beta.</li>
+  <li>Carla as plugin and Carla-Control are still not available for Windows, likely won't be done for v2.0.</li>
 </ul>
 
 <h3>Downloads</h3>
@@ -152,11 +178,6 @@ cleanup, etc etc<br/>
 </p>
 
 <hr/>
-
-
-
-
-
 
 <p>
     <span style="font-size: 20px">&gt; JACK2 1.9.12 release and future plans</span><br/>
