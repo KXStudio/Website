@@ -45,7 +45,7 @@ include_once("includes/header.php");
 </p>
 <p>
     Transport can misbehave when rolling back or forwards, so this feature is still classified as experimental.<br/>
-    The plan is to have transport working fully stable when the final 2.0 version is released.<br/>
+    The plan is to have transport working completely stable when the final 2.0 version is released.<br/>
 </p>
 </td></tr></table>
 
@@ -92,8 +92,8 @@ include_once("includes/header.php");
 <p>
     The full libjack API is not implemented though, only the important parts to get most applications running.<br/>
     The most notable missing calls are related precise timing information and non-callback based processing.<br/>
-    But even without this, stuff like audacity, lmms, hydrogen, renoise and vlc work.<br/>
-    Also no session management is implemented at the moment.
+    Also no session management is implemented at the moment.<br/>
+    But, even without this, stuff like audacity, lmms, hydrogen, renoise and vlc work.<br/>
 </p>
 <p>
     This is a work in progress, but already working quite well considering how new it is.<br/>
