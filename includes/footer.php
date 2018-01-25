@@ -31,6 +31,15 @@
             <div class="box box-shadow alpha clear-both navigation">
                 <h2 class="box-header"> <a href="<?php echo $ROOT; ?>/News" style="color: #aaf;">News</a> </h2>
 
+                <a href="<?php echo $ROOT; ?>/News/?action=view&url=carla-20-beta6-is-here">
+                    <b>Carla 2.0 beta6</b><br/>
+                    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_jack-apps.png" alt="" width="150px"/>
+                </a>
+                <p>
+                    The last beta for the 2.0 series is here!<br/>
+                </p>
+                <hr/>
+
                 <a href="<?php echo $ROOT; ?>/News/?action=view&url=jack2-1912-release-and-future-plans">
                     <b>JACK2 1.9.12 release and future plans</b><br/>
                 </a>
@@ -53,15 +62,6 @@
                 </a>
                 <p>
                     With all reported bugs squashed, it's time to tag a new release of DPF-Plugins.<br/>
-                </p>
-                <hr/>
-
-                <a href="<?php echo $ROOT; ?>/News/?action=view&url=kxstudio-14045-release-and-future-plans">
-                    <b>KXStudio 14.04.5 release and future plans</b><br/>
-                </a>
-                <p>
-                    It's time for another KXStudio ISO release!<br/>
-                    KXStudio 14.04.5 is here!
                 </p>
             </div>
         </div>

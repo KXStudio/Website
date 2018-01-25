@@ -14,7 +14,7 @@ include_once("includes/header.php");
 
 <p>
     <span style="font-size: 20px">&gt; Carla 2.0 beta6 is here!</span><br/>
-    On <i>2018-01-24</i> by<i> falkTX</i>
+    On <i>2018-01-25</i> by<i> falkTX</i>
 </p>
 <p>
     Hello again everyone, I am glad to bring you the 6th beta of the upcoming Carla 2.0 release.<br/>
