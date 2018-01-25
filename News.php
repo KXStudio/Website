@@ -17,7 +17,7 @@ include_once("includes/header.php");
     On <i>2018-01-24</i> by<i> falkTX</i>
 </p>
 <p>
-    Hello again everyone, we're glad to bring you the 6th beta of the upcoming Carla 2.0 release.<br/>
+    Hello again everyone, I am glad to bring you the 6th beta of the upcoming Carla 2.0 release.<br/>
     It has been more than 1 year since the last Carla release, it was about time. :)<br/>
     This should be the last beta for the 2.0 series, the next one is planned to be release candidate 1.
 </p>
