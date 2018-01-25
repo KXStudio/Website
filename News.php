@@ -18,12 +18,12 @@ include_once("includes/header.php");
 </p>
 <p>
     Hello again everyone, I am glad to bring you the 6th beta of the upcoming Carla 2.0 release.<br/>
-    It has been more than 1 year since the last Carla release, it was about time. :)<br/>
-    This should be the last beta for the 2.0 series, the next one is planned to be release candidate 1.
+    It has been over one year since the last Carla release, it was about time. :)<br/>
+    This should be the last beta for the 2.0 series, as next one is planned to be release candidate 1.
 </p>
 <p>
     There were quite some changes under the hood, mostly in a good way.<br/>
-    Sadly for users this actually means losing some features, the biggest ones being VST3 and AU plugin support.<br/>
+    The trade-off for users is that this means losing some features, the biggest ones being VST3 and AU plugin support.<br/>
     The way audio and MIDI devices are handled on Windows and macOS also changed, no longer having dynamic MIDI ports.<br/>
     See the previous post about Carla to get more details on the "breaking changes".
 </p>
@@ -40,12 +40,12 @@ include_once("includes/header.php");
     Previous releases of Carla had basic time controls already,
         but it was quite basic and lacked options for JACK transport and BPM control.<br/>
     Now JACK transport is optional, transport works for non-JACK drivers and BPM can be adjusted manually.<br/>
-    Link support was added in was well, as another way to sync transport. It was not extensively tested though.<br/>
+    Ableton Link support was added in was well, as another way to sync transport. It was not extensively tested though.<br/>
     Also note that, due to compiler support, the current Carla macOS builds do not support Link.<br/>
 </p>
 <p>
     Transport can misbehave when rolling back or forwards, so this feature is still classified as experimental.<br/>
-    The plan is to have transport working completely stable when the final 2.0 version is released.<br/>
+    The plan is to have transport stabilized when the final 2.0 version is released.<br/>
 </p>
 </td></tr></table>
 
@@ -58,8 +58,8 @@ include_once("includes/header.php");
 </td><td>
 <h3>Tweak of settings page</h3>
 <p>
-    Carla's settings dialog got an overhaul.<br/>
-    Everything that was not deemed stable was moved into a new 'experimental' page, and disabled by default.<br/>
+    Carla's settings dialog received an overhaul.<br/>
+    Everything that was deemed unstable was moved into a new 'experimental' page, and disabled by default.<br/>
     So in order to use plugin bridges for example, you need to first enable experimental features, then the bridges.<br/>
     The (experimental) features mentioned on this article all have to be enabled in the same way too.<br/>
     Last but not least, a page dedicated to Wine settings (wine-prefix, wine startup binary, RT variables) was added.<br/>
@@ -76,10 +76,10 @@ include_once("includes/header.php");
 <h3>Load of JACK applications as plugins (Linux only, experimental)</h3>
 <p>
     This is a big one... :)<br/>
-    Initially just an idea, that became an ugly hack/test for private use, but that I soon realized to have great potential.<br/>
-    So I split the code used for plugin bridges and made it more generic so it could be re-used for such feature.<br/>
+    Initially just an idea that became an ugly hack/test for private use only, I soon realized it had great potential.<br/>
+    So I split the code used for plugin bridges and made it more generic so it could be re-used for such features.<br/>
     And here we have it, JACK applications running as regular plugins inside Carla - including showing/hiding their main interface.<br/>
-    Also applications receive JACK transport as rolling in the host.<br/>
+    Applications also receive JACK transport as rolling in the host.<br/>
 </p>
 <p>
     In this mode Carla basically becomes a self-contained JACK server, and exposes a special libjack to the client.<br/>
@@ -90,7 +90,7 @@ include_once("includes/header.php");
     With Carla jack-apps-as-plugins method, the client ports are persistent.<br/>
 </p>
 <p>
-    The full libjack API is not implemented though, only the important parts to get most applications running.<br/>
+    The full libjack API is not implemented though, only the important parts, in order to get most applications running.<br/>
     The most notable missing calls are related precise timing information and non-callback based processing.<br/>
     Also no session management is implemented at the moment.<br/>
     But, even without this, stuff like audacity, lmms, hydrogen, renoise and vlc work.<br/>
@@ -111,10 +111,10 @@ include_once("includes/header.php");
 <p>
     Another big feature of this release is the possibility to export any plugin or sound file loaded in Carla
         as its own self-contained (LV2) plugin.<br/>
-    This can really be any regular plugin, a sound bank (eg, SFZ file), a plugin bridge or even JACK application.<br/>
+    This can really be any regular plugin, a sound bank (e.g. an SFZ file), a plugin bridge or even JACK application.<br/>
     The exported plugin will run with the smallest amount of wrapping possible between the host and the carla loaded plugin.<br/>
     Carla will not appear at all, triggering the "show ui" on the host will show the actual plugin UI.<br/>
-    Note that the exported plugins are not portable! They require Carla to be always installed on the same location.<br/>
+    ***Note that the exported plugins are not portable! They require Carla to be always installed on the same location.***<br/>
 </p>
 <p>
     Audio, MIDI, transport information, custom UI are fully working already.<br/>
@@ -133,8 +133,10 @@ include_once("includes/header.php");
 </td><td>
 <h3>FreeBSD and other non-Linux systems</h3>
 <p>
-    After the removal of the juce library from the code-base (discussed before),
-        Carla was free to be able to support more than just the big 3 OSes.<br/>
+    After the removal of the juce library from the code-base (as
+        <a href="http://kxstudio.linuxaudio.org/News/?action=view&url=breaking-changes-in-carla-plugin-host" target="_blank">
+            discussed before</a>),
+        Carla was free to support more than just the big 3 OSes.<br/>
     With the help of the community, Carla is now available to install on FreeBSD through its ports system.<br/>
     I was able to build and install it myself as well, and actually make good noise on a BSD system. Neat! :)<br/>
     It's also now possible to build Carla for GNU/Hurd and HaikuOS as well, and I imagine for even more systems if one so desires.<br/>
@@ -172,9 +174,9 @@ include_once("includes/header.php");
 
 <h3>Downloads</h3>
 <p>
-    To download Carla binaries or source code, jump into the <a href="<?php echo $ROOT; ?>/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    To download Carla binaries or source code, jump on over to the <a href="<?php echo $ROOT; ?>/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
     If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
-    Bug reports and feature requests are welcome! Jump into the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
 </p>
 
 <hr/>
