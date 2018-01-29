@@ -13,6 +13,14 @@ Redirect 301 /claudia-launcher     http://kxstudio.linuxaudio.org/Applications:C
 Redirect 301 /carla                http://kxstudio.linuxaudio.org/Applications:Carla
 Redirect 301 /carla-control        http://kxstudio.linuxaudio.org/Applications:Carla-Control
 
+Redirect 301 /applications  http://kxstudio.linuxaudio.org/Applications
+Redirect 301 /documentation http://kxstudio.linuxaudio.org/Documentation
+Redirect 301 /donations     http://kxstudio.linuxaudio.org/Donations
+Redirect 301 /downloads     http://kxstudio.linuxaudio.org/Downloads
+Redirect 301 /news          http://kxstudio.linuxaudio.org/News
+Redirect 301 /plugins       http://kxstudio.linuxaudio.org/Plugins
+Redirect 301 /repositories  http://kxstudio.linuxaudio.org/Repositories
+
 RedirectMatch 301 ^/KXStudio:(.*)$ /$1
 RedirectMatch 301 ^/Documentation:Ubuntu:(.*)$ /Documentation:Repository:$1
 
