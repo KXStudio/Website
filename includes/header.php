@@ -20,9 +20,9 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
     $cur_percent = 0.0;
 
     if ($db_link) {
-        $sql_donations = mysql_query("SELECT * FROM donations WHERE MONTH(dt) = MONTH(NOW()) AND YEAR(dt) = YEAR(NOW())");
+        $sql_donations = mysqli_query($db_link, "SELECT * FROM donations WHERE MONTH(dt) = MONTH(NOW()) AND YEAR(dt) = YEAR(NOW())");
 
-        if (mysql_num_rows($sql_donations)) {
+        if (mysqli_num_rows($sql_donations)) {
             while ($sql_row = mysql_fetch_assoc($sql_donations)) {
                 $cur_amount += $sql_row["amount"];
             }

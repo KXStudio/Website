@@ -31,11 +31,11 @@ require "donate/connect.php";
 $cur_amount = 0.0;
 
 if ($db_link) {
-$sql_donations_month = mysql_query("SELECT * FROM donations WHERE MONTH(dt) = MONTH(NOW()) AND YEAR(dt) = YEAR(NOW())");
-$sql_donations_last5 = mysql_query("SELECT * FROM donations ORDER BY dt DESC LIMIT 5");
+$sql_donations_month = mysqli_query($db_link, "SELECT * FROM donations WHERE MONTH(dt) = MONTH(NOW()) AND YEAR(dt) = YEAR(NOW())");
+$sql_donations_last5 = mysqli_query($db_link, "SELECT * FROM donations ORDER BY dt DESC LIMIT 5");
 
-if (mysql_num_rows($sql_donations_month)) {
-    while ($sql_row = mysql_fetch_assoc($sql_donations_month)) {
+if (mysqli_num_rows($sql_donations_month)) {
+    while ($sql_row = mysqli_fetch_assoc($sql_donations_month)) {
         $cur_amount += $sql_row["amount"];
      }
 }
@@ -61,7 +61,7 @@ if ($cur_percent > 100.0) {
     <?php if ($db_link) { ?>
     <b>Last 5 donations:</b><br/>
     <?php
-        while ($sql_row = mysql_fetch_assoc($sql_donations_last5)) {
+        while ($sql_row = mysqli_fetch_assoc($sql_donations_last5)) {
             echo "" . date("Y-m-d", strtotime($sql_row["dt"])) . " - " . $sql_row["amount"] . "&euro;<br/>";
         }
     } ?>
