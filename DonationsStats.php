@@ -28,10 +28,10 @@ $total_year = 0.0;
 
 $donation_count = 0.0;
 
-$sql_donations = mysql_query("SELECT * FROM donations WHERE YEAR(dt) = " . $year);
+$sql_donations = mysqli_query($db_link, "SELECT * FROM donations WHERE YEAR(dt) = " . $year);
 
-if (mysql_num_rows($sql_donations)) {
-    while ($sql_row = mysql_fetch_assoc($sql_donations)) {
+if (mysqli_num_rows($sql_donations)) {
+    while ($sql_row = mysqli_fetch_assoc($sql_donations)) {
         $amount = $sql_row["amount"];
         $donation_count += 1.0;
         if ($amount > $max_month) {

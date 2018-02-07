@@ -1,14 +1,10 @@
 <?php
-$SHOW_NOTE = TRUE;
+$SHOW_NOTE = FALSE;
+$ROOT = FALSE;
 
 if (file_exists("/home/falktx/.jackdrc") || file_exists("/home/daeavelwyn/public_html/kxstudio/"))
 {
     $ROOT = "/kxstudio";
-    $SHOW_NOTE = FALSE;
-}
-else
-{
-    $ROOT = "";
     $SHOW_NOTE = FALSE;
 }
 
@@ -23,7 +19,7 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
         $sql_donations = mysqli_query($db_link, "SELECT * FROM donations WHERE MONTH(dt) = MONTH(NOW()) AND YEAR(dt) = YEAR(NOW())");
 
         if (mysqli_num_rows($sql_donations)) {
-            while ($sql_row = mysql_fetch_assoc($sql_donations)) {
+            while ($sql_row = mysqli_fetch_assoc($sql_donations)) {
                 $cur_amount += $sql_row["amount"];
             }
         }
