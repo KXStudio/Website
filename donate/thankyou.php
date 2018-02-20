@@ -10,6 +10,10 @@ include_once("../includes/header.php");
     Thank you very much for your donation!<br/>
 </p>
 
+<p>
+    Your donated value will appear on the "last 5 donations" soon, maximum of 48 hours.<br/>
+</p>
+
 <p><br/></p>
 
 <?php
