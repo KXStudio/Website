@@ -39,7 +39,7 @@ include_once("includes/header.php");
 
 <p>
     All Debian and Ubuntu users can enable our repositories by installing this deb file:
-        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.4.9%7Ekxstudio1_all.deb" class="free" rel="nofollow">kxstudio-repos.deb</a>.<br/>
+        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.4.10%7Ekxstudio1_all.deb" class="free" rel="nofollow">kxstudio-repos.deb</a>.<br/>
     You can install it manually by running this:<br/>
 </p>
 <pre>
@@ -47,16 +47,16 @@ include_once("includes/header.php");
 sudo apt-get install apt-transport-https software-properties-common wget
 
 <span style="color: rgb(110, 110, 110);"># Download package file</span>
-wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.4.9~kxstudio1_all.deb
+wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.4.10~kxstudio1_all.deb
 
 <span style="color: rgb(110, 110, 110);"># Install it</span>
-sudo dpkg -i kxstudio-repos_9.4.9~kxstudio1_all.deb
+sudo dpkg -i kxstudio-repos_9.4.10~kxstudio1_all.deb
 </pre>
 
 <p><br/>
     If you're using a system <b>newer or equal</b> to <b>Debian 9 (Stretch)</b> or <b>Ubuntu 16.04 (Xenial)</b> you'll also need to enable GCC5 packages.<br/>
     You can do so by installing this deb file -
-        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.4.9%7Ekxstudio1_all.deb" class="free" rel="nofollow">kxstudio-repos-gcc5.deb</a>,
+        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.4.10%7Ekxstudio1_all.deb" class="free" rel="nofollow">kxstudio-repos-gcc5.deb</a>,
     or manually by running this:
 </p>
 <pre>
@@ -64,10 +64,10 @@ sudo dpkg -i kxstudio-repos_9.4.9~kxstudio1_all.deb
 sudo apt-get install libglibmm-2.4-1v5
 
 <span style="color: rgb(110, 110, 110);"># Download package file</span>
-wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.4.9~kxstudio1_all.deb
+wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.4.10~kxstudio1_all.deb
 
 <span style="color: rgb(110, 110, 110);"># Install it</span>
-sudo dpkg -i kxstudio-repos-gcc5_9.4.9~kxstudio1_all.deb
+sudo dpkg -i kxstudio-repos-gcc5_9.4.10~kxstudio1_all.deb
 </pre>
 
 <p><br/>
