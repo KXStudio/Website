@@ -304,7 +304,7 @@ diff -U 3 -H -w -E -d -r -N -- chyrp/themes/stardust/layouts/default.twig News/t
 +    <div id="div_menuCommunity" class="div_menuDropdown">
 +        <p><a href="http://webchat.freenode.net/?channels=#kxstudio,#opensourcemusicians"><img src="/images/ico_chat.png" class="external" rel="nofollow" target="_blank" alt=""/> &nbsp; Chat</a></p>
 +        <p><a href="http://linuxmusicians.com/viewforum.php?f=47"><img src="/images/ico_forum.png" class="external" rel="nofollow" target="_blank" alt=""/> &nbsp; Forum</a></p>
-+        <p><a href="https://soundcloud.com/groups/kxstudio"><img src="/images/ico_soundcloud.png" class="external" rel="nofollow" target="_blank" alt=""/> &nbsp; Songs</a></p>
++        <p><a href="https://soundcloud.com/search/sounds?q=kxstudio"><img src="/images/ico_soundcloud.png" class="external" rel="nofollow" target="_blank" alt=""/> &nbsp; Songs</a></p>
 +    </div>
 +
 +    <!-- Top link -->

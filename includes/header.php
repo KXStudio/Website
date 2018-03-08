@@ -171,7 +171,7 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
     <div id="div_menuCommunity" class="div_menuDropdown">
         <p><a href="http://webchat.freenode.net/?channels=#kxstudio,#opensourcemusicians" class="external" rel="nofollow" target="_blank"><img src="<?php echo $ROOT; ?>/images/ico_chat.png" alt=""/> &nbsp; Chat</a></p>
         <p><a href="http://linuxmusicians.com/viewforum.php?f=47" class="external" rel="nofollow" target="_blank"><img src="<?php echo $ROOT; ?>/images/ico_forum.png" alt=""/> &nbsp; Forum</a></p>
-        <p><a href="https://soundcloud.com/groups/kxstudio" class="external" rel="nofollow" target="_blank"><img src="<?php echo $ROOT; ?>/images/ico_soundcloud.png" alt=""/> &nbsp; Songs</a></p>
+        <p><a href="https://soundcloud.com/search/sounds?q=kxstudio" class="external" rel="nofollow" target="_blank"><img src="<?php echo $ROOT; ?>/images/ico_soundcloud.png" alt=""/> &nbsp; Songs</a></p>
     </div>
 
     <!-- Top link -->
