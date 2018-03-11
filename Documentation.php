@@ -16,6 +16,9 @@ include_once("includes/header.php");
       <a href="https://webchat.freenode.net/?channels=#kxstudio" class="external text" rel="nofollow" target="_blank">#kxstudio</a>,
       <a href="https://webchat.freenode.net/?channels=#opensourcemusicians" class="external text" rel="nofollow" target="_blank">#opensourcemusicians</a> or
       <a href="https://webchat.freenode.net/?channels=#kxstudio,#opensourcemusicians" class="external text" rel="nofollow" target="_blank">both</a>.<br/>
+    A <b>discord</b> server is also available
+      <a href="https://discord.gg/GHuycpX" class="external text" rel="nofollow" target="_blank">here</a>,
+      in case you prefer that over IRC.
 </p>
 <p>
     Please note that documentation for KXStudio is a work in progress, if you need some information not available here, you can try:
