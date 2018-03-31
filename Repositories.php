@@ -47,10 +47,10 @@ include_once("includes/header.php");
 sudo apt-get install apt-transport-https software-properties-common wget
 
 <span style="color: rgb(110, 110, 110);"># Download package file</span>
-wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.4.10~kxstudio1_all.deb
+wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.5.1~kxstudio2_all.deb
 
 <span style="color: rgb(110, 110, 110);"># Install it</span>
-sudo dpkg -i kxstudio-repos_9.4.10~kxstudio1_all.deb
+sudo dpkg -i kxstudio-repos_9.5.1~kxstudio2_all.deb
 </pre>
 
 <p><br/>
@@ -64,10 +64,10 @@ sudo dpkg -i kxstudio-repos_9.4.10~kxstudio1_all.deb
 sudo apt-get install libglibmm-2.4-1v5
 
 <span style="color: rgb(110, 110, 110);"># Download package file</span>
-wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.4.10~kxstudio1_all.deb
+wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.5.1~kxstudio2_all.deb
 
 <span style="color: rgb(110, 110, 110);"># Install it</span>
-sudo dpkg -i kxstudio-repos-gcc5_9.4.10~kxstudio1_all.deb
+sudo dpkg -i kxstudio-repos-gcc5_9.5.1~kxstudio2_all.deb
 </pre>
 
 <p><br/>
