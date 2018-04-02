@@ -13,6 +13,43 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; Cadence 0.9.0 release and KXStudio 18.04 preparations</span><br/>
+    On <i>2018-04-02</i> by<i> falkTX</i>
+</p>
+<p>
+    Cadence 0.9.0 has just been tagged in its
+      <a target="_blank" href="https://github.com/falkTX/Cadence">git repository</a>.<br/>
+    No new features have been added to the code-base.<br/>
+    The release is focused on the Qt5 port, and of course the fixes that have been added over time.<br/>
+    Qt4 is no longer supported; the code was updated to work with Qt5, without having a fallback Qt4 mode (unlike Carla).<br/>
+    Cadence Qt5 port is needed for a proper KXStudio 18.04 release, as we will be using KDE5 Plasma as desktop environment.<br/>
+</p>
+<p>
+    The
+      <a target="_blank" href="https://github.com/KXStudio/KXStudio/tree/master/welcome">KXStudio "Welcome" wizard</a>
+      has also been ported to Qt5.<br/>
+    This finalizes the Qt4 =&gt; Qt5 porting process, with all KXStudio tools now running in Qt5.<br/>
+</p>
+<p>
+    In other news, the preparations for KXStudio's 18.04 ISO release
+      <a target="_blank" href="https://github.com/KXStudio/KXStudio/commits/master">have started</a>.<br/>
+    The decision is to use
+      <a target="_blank" href="https://neon.kde.org/">Neon</a>
+      as the base distro for the next ISO images, with Breezy-Dark as default theme.<br/>
+    The KXStudio configuration files have been ported from KDE4 to KDE5, with only a few tweaks missing now.<br/>
+    If you're running the KXStudio repositories with Neon 16.04, you can already install the kxstudio-desktop-neon package. :)<br/>
+</p>
+<p>
+    Note that Ubuntu 18.04 (and thus Neon 18.04) is not out yet, so a release will of course have to wait for them first.<br/>
+    (Neon does not actually have their 18.04 repositories fully ready at this point)<br/>
+    We will have beta images first, to let users test and give feedback.<br/>
+    When everything seems to run fine, and I am happy with the results, the final image will released.<br/>
+    No estimation on the 'when' just yet though - it will be out when it's ready - so please don't keep asking. ;)<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.0 beta6 is here!</span><br/>
     On <i>2018-01-25</i> by<i> falkTX</i>
 </p>

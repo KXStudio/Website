@@ -31,6 +31,14 @@
             <div class="box box-shadow alpha clear-both navigation">
                 <h2 class="box-header"> <a href="<?php echo $ROOT; ?>/News" style="color: #aaf;">News</a> </h2>
 
+                <a href="<?php echo $ROOT; ?>/News/?action=view&url=cadence-090-release-and-kxstudio-1804-preparations">
+                    <b>Cadence 0.9.0 and KXStudio 18.04 preparations</b><br/>
+                </a>
+                <p>
+                    Cadence 0.9.0 has just been tagged in git, and preparations for KXStudio 18.04 ISO release have started.
+                </p>
+                <hr/>
+
                 <a href="<?php echo $ROOT; ?>/News/?action=view&url=carla-20-beta6-is-here">
                     <b>Carla 2.0 beta6</b><br/>
                     <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_jack-apps.png" alt="" width="150px"/>
@@ -53,15 +61,6 @@
                 </a>
                 <p>
                     There were some major changes done to Carla's code base in the past few days...
-                </p>
-                <hr/>
-
-                <a href="<?php echo $ROOT; ?>/News/?action=view&url=dpf-plugins-v11-released">
-                    <b>DPF-Plugins v1.1</b><br/>
-                    <img src="<?php echo $ROOT; ?>/screenshots/news/dpf-plugins-1.1.png" alt="" width="150px"/>
-                </a>
-                <p>
-                    With all reported bugs squashed, it's time to tag a new release of DPF-Plugins.<br/>
                 </p>
             </div>
         </div>
