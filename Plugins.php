@@ -15,7 +15,8 @@ include_once("includes/header.php");
         You might also want to check:
     </p>
     <ul>
-        <li><a href="<?php echo $ROOT; ?>/Repositories:Plugins">Plugins in the repositories</a></li>
+        <li><a href="<?php echo $ROOT; ?>/Applications">Applications from the KXStudio Team</a></li>
+        <li><a href="<?php echo $ROOT; ?>/Repositories:Plugins">Plugins in the KXStudio repositories</a></li>
     </ul>
     <br/>
 </div>

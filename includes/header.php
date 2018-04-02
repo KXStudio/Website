@@ -187,9 +187,9 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
             <a id="header-home" href="<?php echo $ROOT; ?>/" style="font-size:1.2em">Home</a>
             <ul id="global-navigation">
                 <li id="item-news"><a href="<?php echo $ROOT; ?>/News">News</a></li>
-                <li id="item-soft"><a href="#" onClick="return itemSoftwareClicked(event);">Software &#9660;</a></li>
-                <li id="item-repos"><a href="#" onClick="return itemRepositoriesClicked(event);">Repositories &#9660;</a></li>
-                <li id="item-community"><a href="#" onClick="return itemCommunityClicked(event);">Community &#9660;</a></li>
+                <li id="item-soft"><a href="<?php echo $ROOT; ?>/Applications" onClick="return itemSoftwareClicked(event);">Software &#9660;</a></li>
+                <li id="item-repos"><a href="<?php echo $ROOT; ?>/Repositories" onClick="return itemRepositoriesClicked(event);">Repositories &#9660;</a></li>
+                <li id="item-community"><a href="<?php echo $ROOT; ?>/Documentation" onClick="return itemCommunityClicked(event);">Community &#9660;</a></li>
                 <li id="item-documentation"><a href="<?php echo $ROOT; ?>/Documentation">Documentation</a></li>
                 <li id="item-donate"><a href="<?php echo $ROOT; ?>/Donations">Donations</a></li>
                 <li id="item-downloads"><a href="<?php echo $ROOT; ?>/Downloads">Downloads</a></li>
