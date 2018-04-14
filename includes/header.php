@@ -122,6 +122,33 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
         })();
         /* ]]> */
     </script>
+    <style type="text/css">
+        html > body .liberapay-btn {
+            background-color: #f6c915;
+            border-radius: 4px;
+            color: #1a171b;
+            display: inline-block;
+            font-family: Helvetica Neue, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 22px;
+            padding: 5px 7px 3px;
+            position: relative;
+            text-decoration: none;
+        }
+        html > body .liberapay-btn:hover {
+            background-color: #fbce1a;
+            color: #444;
+        }
+        .liberapay-btn > svg {
+            position: absolute;
+            left: 7px;
+            top: 7px;
+        }
+        .liberapay-btn > span {
+            margin-left: 19px;
+        }
+    </style>
 <?php } else if ($PAGE_TYPE == "PASTE") { ?>
     <link rel="stylesheet" href="<?php echo $ROOT; ?>/paste/kxstudio.css" type="text/css" media="screen" />
     <!-- Special Paste CSS -->
