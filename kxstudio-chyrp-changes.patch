@@ -203,7 +203,7 @@ diff -U 3 -H -w -E -d -r -N -- chyrp/themes/stardust/layouts/default.twig News/t
 +    <link rel="copyright" href="http://creativecommons.org/licenses/publicdomain/" />
 +    <link rel="stylesheet" href="../css/style.fluid.css" type="text/css" media="screen" />
 +    <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
-+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:200,700,800,400" type="text/css" media="screen" />
++    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200,700,800,400" type="text/css" media="screen" />
 +    <link rel="icon" type="image/png" href="../images/ico_kxstudio.png" />
 +    <link rel="shortcut icon" href="../favicon.ico" />
          {% if site.clean_urls %}<link rel="canonical" href="{% if (post.url) %}$post.clean{% elseif page.url %}$page.clean {% else %}$site.url{% endif %}" />{% endif %}

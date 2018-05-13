@@ -46,7 +46,7 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
     <link rel="copyright" href="http://creativecommons.org/licenses/publicdomain/" />
     <link rel="stylesheet" href="<?php echo $ROOT; ?>/css/style.fluid.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php echo $ROOT; ?>/css/style.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:200,700,800,400" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200,700,800,400" type="text/css" media="screen" />
     <link rel="icon" type="image/png" href="<?php echo $ROOT; ?>/images/ico_kxstudio.png" />
     <link rel="shortcut icon" href="<?php echo $ROOT; ?>/favicon.ico" />
 <?php if ($PAGE_TYPE == "HOME") { ?>
@@ -117,7 +117,7 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
             var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
             s.type  = 'text/javascript';
             s.async = true;
-            s.src   = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+            s.src   = 'https://api.flattr.com/js/0.6/load.js?mode=auto';
             t.parentNode.insertBefore(s, t);
         })();
         /* ]]> */
