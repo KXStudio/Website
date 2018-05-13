@@ -90,6 +90,7 @@ if ($cur_percent > 100.0) {
         <input type="hidden" name="cmd" value="_s-xclick">
         <input type="hidden" name="hosted_button_id" value="A8QZW5UPVZGTW">
         <input type="hidden" name="currency_code" value="EUR">
+        <input type="hidden" name="lc" value="US">
         <!--<input type="hidden" name="notify_url" value="https://kxstudio.linuxaudio.org/donate/ipn.php"/>-->
         <input type="hidden" name="return" value="https://kxstudio.linuxaudio.org/donate/thankyou.php"/>
         <input type="hidden" name="rm" value="2"/>
@@ -112,6 +113,7 @@ if ($cur_percent > 100.0) {
             </td></tr>
         </table>
         <input type="hidden" name="currency_code" value="EUR">
+        <input type="hidden" name="lc" value="US">
         <!--<input type="hidden" name="notify_url" value="https://kxstudio.linuxaudio.org/donate/ipn.php"/>-->
         <input type="hidden" name="return" value="https://kxstudio.linuxaudio.org/donate/thankyou.php"/>
         <input type="hidden" name="rm" value="2"/>
