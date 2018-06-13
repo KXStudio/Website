@@ -1,4 +1,7 @@
+<?php die("KXStudio pastebin is temporarily disabled"); ?>
+
 <?php
+
 include_once("geshi.php");
 
 if (file_exists("/home/sites/kxstudio.linuxaudio.org/docroot/paste/")) {
