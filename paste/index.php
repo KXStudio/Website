@@ -49,8 +49,8 @@ else if (! empty($_POST["paste_text"]))
         die("Spam bot detected, get out of here!");
     }
 
-    $paste_code   = $_POST["paste_text"];
-    $paste_format = $_POST["paste_format"];
+    $paste_code   = htmlspecialchars($_POST["paste_text"]);
+    $paste_format = htmlspecialchars($_POST["paste_format"]);
     $paste_name   = htmlspecialchars($_POST["paste_title"]);
     $paste_pass   = htmlspecialchars($_POST["paste_password"]);
 
@@ -59,7 +59,7 @@ else if (! empty($_POST["paste_text"]))
     }
 
     if (array_key_exists("paste_numbers", $_POST)) {
-        $paste_numbers = $_POST["paste_numbers"];
+        $paste_numbers = htmlspecialchars($_POST["paste_numbers"]);
     } else {
         $paste_numbers = "No";
     }
