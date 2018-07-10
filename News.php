@@ -13,6 +13,63 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; Bug-fix release for Carla 2.0 beta6</span><br/>
+    On <i>2018-04-02</i> by<i> falkTX</i>
+</p>
+<p>
+</p>
+
+Add confirmation dialog for quitting Carla
+Add confirmation dialog for Remove All and New File
+
+MIDI Channel A/B
+
+Increase polling rate for non-gui mode (30 Hz)
+Force-fix window position offset of Carla-embed mouse events
+Fix some bridge parameters ... not loading
+Fix file filter of MIDI file plugin, small cleanup
+Fix build with the clang compiler.
+Properly handle internal plugins with multi MIDI inputs
+
+LV2 export window is now a simple combo-box
+Save LV2 author name in exported LV2 plugin
+
+Fix assertion in LV2 utils, assume portNotification is float type
+
+Scale canvas with mouse anchor
+Fix box position after movement in scaled state
+Align box border to pixel grid (antialiasing fix)
+Cut connections by Control+MButton3
+
+Fix crash when closing session containing bridges with ctrl+c
+Stop waiting for engine post-rt ACK if it stops running (less time on close)
+Implement more libjack stubs, catia now loads inside carla
+Implement LV2 UI port notifications to feedback messages to UI
+Implement up/down plugins in rack (right-click menu)
+Fix NaN when controlling log params with MIDI CC
+Fix "MIDI CC 0x01" not selectable in some systems
+Fixes for carla-single under ladish, print state messages on start
+Simplify plugin slot skin code a little, set white color for artyfx
+
+Disable link and kits search UI elements if not compiled in  (hide stuff not enavled)
+Transport controls are now considered stable
+Add external plugins as optional submodule
+
+Fixup carla-patchbay/graph to work with variable buffer sizes
+
+Fix remaining issues regarding int parameter control
+Do not capture logs if running in nogui mode
+Prevent user from cross-compiling the wrong target
+
+add semitones parameter to midi-transpose plugin (PR)
+Do not use/check kVstParameterUsesIntegerMinMax vst property
+Fix crash when mmap returns error
+
+FIX CANVAS RIGHT CLICK and drag stuff
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Cadence 0.9.0 release and KXStudio 18.04 preparations</span><br/>
     On <i>2018-04-02</i> by<i> falkTX</i>
 </p>
