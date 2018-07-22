@@ -13,6 +13,75 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.0 beta7 is here!</span><br/>
+    On <i>2018-07-23</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone, I am glad to bring you the 7th beta of the upcoming Carla 2.0 release.<br/>
+    Last time I said beta6 would be the last beta, but let's ignore that for now... ;)<br/>
+</p>
+<p>
+    This release focuses on bug-fixes rather than new features.<br/>
+    Most of the new features were added because of contributions, which are very appreciated.<br/>
+    There are no big flashy screenshots this time, sorry.<br/>
+</p>
+<p>
+    One breaking change for this release is the removal of most of the plugins bundled in Carla's code.<br/>
+    They were moved into a separate repository, to keep Carla's code-base smaller.<br/>
+    If you are building Carla yourself and you want those extra internal plugins, make sure to enable git submodules.
+</p>
+<p>
+    Here is a list of the most relevant changes and fixes for this release:
+</p>
+<ul>
+  <li>Add confirmation dialog for quitting Carla</li>
+  <li>Add confirmation dialog for "Remove All" and "New File" actions</li>
+  <li>Add internal MIDI Channel A/B plugin</li>
+  <li>Add semitones parameter to internal midi-transpose plugin</li>
+  <li>Implement move up/down plugins in rack (right-click menu)</li>
+  <li>Implement LV2 UI port notifications to feedback messages to UI</li>
+  <li>Implement more libjack stubs, Catia now loads inside Carla :)</li>
+  <li>Transport controls are now considered stable and always enabled, no longer in experimental settings</li>
+  <li>Disable ableton-link and audio kits search UI elements if not built/enabled</li>
+  <li>Do not capture logs if running in nogui mode</li>
+  <li>Do not use or check for kVstParameterUsesIntegerMinMax VST property</li>
+  <li>Do not lockup on close in case audio driver stops working</li>
+  <li>Export LV2 window is now a simple combo-box, making it more usable</li>
+  <li>Save plugin author name in exported LV2 plugin</li>
+  <li>Increase polling rate for non-gui mode (30 Hz), fixes slow OSC handling</li>
+  <li>Fix mouse position offset of Carla-embed mouse events</li>
+  <li>Fix processing of internal plugins with multi MIDI inputs</li>
+  <li>Fix crash when closing a session containing bridges with Ctrl+C</li>
+  <li>Fix patchbay/graph to work with variable buffer sizes</li>
+  <li>Fix some issues regarding integer parameter control</li>
+  <li>Fix controlling logarithmic parameters with MIDI CC</li>
+  <li>Fix "MIDI CC 0x01" not selectable in some systems</li>
+  <li>Fix loading of VST plugin parameters and LV2 state for plugin bridges</li>
+  <li>Fix carla-single usage under ladish</li>
+  <li>Fix file dialog filter of the internal MIDI file plugin</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="<?php echo $ROOT; ?>/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<h3>Future</h3>
+<p>
+    The next Carla release is meant to close the 2.0 features, and focus on feature parity between all OSes.<br/>
+    It might take some time though (unless there is major regression that makes a new release required).
+</p>
+<p>
+    For now I plan to focus on other things that have been on the backlog for some time,
+      including DPF, KXStudio 18.04 ISO and JACK maintenance.<br/>
+    News on that will be published when something is ready, please be patient.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Cadence 0.9.0 release and KXStudio 18.04 preparations</span><br/>
     On <i>2018-04-02</i> by<i> falkTX</i>
 </p>

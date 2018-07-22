@@ -79,21 +79,21 @@ include_once("includes/header.php");
          Debian/Ubuntu</a> (via KXStudio repositories)<br/>
 </p>
 <p>
-    Pre-compiled binaries are available for Linux, Mac and Windows (version 2.0-beta6).<br/>
+    Pre-compiled binaries are available for Linux, Mac and Windows (version 2.0-beta7).<br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/1.9.8/Carla_2.0-beta6-linux32.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.9/Carla_2.0-beta7-linux32.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 32bit</a><br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/1.9.8/Carla_2.0-beta6-linux64.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.9/Carla_2.0-beta7-linux64.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 64bit</a><br/>
     <img src="images/ico_mac.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/1.9.8/Carla_2.0-beta6-macos.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.9/Carla_2.0-beta7-macos.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
          MacOS 64bit</a><br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/1.9.8/Carla_2.0-beta6-win32.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.9/Carla_2.0-beta7-win32.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 32bit</a><br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/1.9.8/Carla_2.0-beta6-win64.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.9/Carla_2.0-beta7-win64.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 64bit</a><br/>
 </p>
 <p>
