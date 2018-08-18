@@ -24,7 +24,7 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
             }
         }
 
-        $cur_percent = $cur_amount / 300.0 * 100.0;
+        $cur_percent = $cur_amount / 500.0 * 100.0;
         $cur_amount  = intval($cur_amount);
 
         if ($cur_percent > 100.0) {
