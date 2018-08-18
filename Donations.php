@@ -48,7 +48,7 @@ if ($cur_percent > 100.0) {
 ?>
 
 <div id="donations_container">
-    This month donations: <?php print_r($cur_amount); ?> of 300.0 &euro; target<br/>
+    This month donations: <?php print_r($cur_amount); ?> of 500.0 &euro; target<br/>
     <div id="donations_bar"><div style="width:<?php print_r($cur_percent); ?>%"></div></div>
     <p><br/></p>
 </div>
