@@ -13,6 +13,16 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.0 RC2 is here!</span><br/>
+    On <i>2018-10-27</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone, and surprise, the stable 2.0 version of Carla is coming!<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.0 RC1 is here!</span><br/>
     On <i>2018-09-16</i> by<i> falkTX</i>
 </p>
