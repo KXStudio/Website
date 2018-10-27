@@ -81,19 +81,19 @@ include_once("includes/header.php");
 <p>
     Pre-compiled binaries are available for Linux, Mac and Windows (version 2.0-RC2).<br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.11/Carla_2.0-RC2-linux32.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.12/Carla_2.0-RC2-linux32.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 32bit</a><br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.11/Carla_2.0-RC2-linux64.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.12/Carla_2.0-RC2-linux64.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 64bit</a><br/>
     <img src="images/ico_mac.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.11/Carla_2.0-RC2-macos.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.12/Carla_2.0-RC2-macos.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
          MacOS 64bit</a><br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.11/Carla_2.0-RC2-win32.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.12/Carla_2.0-RC2-win32.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 32bit</a><br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.11/Carla_2.0-RC2-win64.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.12/Carla_2.0-RC2-win64.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 64bit</a><br/>
 </p>
 <p>
