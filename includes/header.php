@@ -24,7 +24,7 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
             }
         }
 
-        $cur_percent = $cur_amount / 300.0 * 100.0;
+        $cur_percent = $cur_amount / 500.0 * 100.0;
         $cur_amount  = intval($cur_amount);
 
         if ($cur_percent > 100.0) {
@@ -240,7 +240,7 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
         <div id="donations_bar"><div style="width:<?php print_r($cur_percent); ?>%"></div></div>
     </div>
     <div style="position:absolute; top:44px; right:5%; width: 270px; height: 10px; font-size: 0.8em; text-align: center;">
-        This month donations: <?php print_r($cur_amount); ?> / 300 &euro;
+        This month donations: <?php print_r($cur_amount); ?> / 500 &euro;
     </div>
     <?php } ?>
 

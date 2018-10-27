@@ -13,59 +13,225 @@ include_once("includes/header.php");
 </div>
 
 <p>
-    <span style="font-size: 20px">&gt; Bug-fix release for Carla 2.0 beta6</span><br/>
-    On <i>2018-04-02</i> by<i> falkTX</i>
+    <span style="font-size: 20px">&gt; Carla 2.0 RC1 is here!</span><br/>
+    On <i>2018-09-16</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone, and surprise, the stable 2.0 version of Carla is coming!<br/>
+</p>
+<p>
+    This is the announcement of the first release candidate of Carla 2.0.<br/>
+    Very little features were added, focus went on stability instead.<br/>
+    The 'master' branch on Carla's source code is now for stable content, all new stuff will go to 'develop'.<br/>
+    My intention is to really let Carla on the side for now. If I can do it or not remains to be seen...<br/>
+</p>
+<p>
+    The list of changes is a little big, so let's split it by parts.<br/>
+    First, the highlights and major changes.<br/>
+</p>
+
+<h3>Highlights and major changes</h3>
+<h5>LinuxSampler removed, replaced by SFZero</h5>
+<p>
+    Basically I removed the code that interacted internally with LinuxSampler, and replaced it by SFZero.<br/>
+    There are a lot of reasons for this change, but we can resume it to 3 points:<br/>
+</p>
+<ul>
+    <li>LinuxSampler API being overcomplicated</li>
+    <li>SFZ handling not very reliable</li>
+    <li>Licensing issues</li>
+</ul>
+</p>
+<p>
+    Removing LinuxSampler means we lose support for GIG files, also SFZero loads the entire kit in RAM.<br/>
+    But, in return, SFZ files now always load without getting muted or having to do dirty workarounds.<br/>
+    Plus, with this, Carla can keep SFZ support while maintaining its GPLv2 license intact.<br/>
+</p>
+<p>
+    Note that SFZero does not support some opcodes, so the playback might sound different.<br/>
+    At a later date, a release will be made that will focus on SFZ support.<br/>
+</p>
+
+<h5>Big windows fixes</h5>
+<p>
+    Carla under has always a been a bit behind, compared to its Linux and macOS support.<br/>
+    Not anymore!<br/>
+</p>
+<p>
+    Carla can now run as a plugin in Windows, and also the PyQt-based big-meter, midi-pattern and notes plugins.<br/>
+    With this done, Carla as LV2 is now included in the Windows builds.<br/>
+</p>
+<p>
+    The export of a single plugin as LV2, though it is an experimental feature, now also works on Windows.<br/>
+    Because Windows does not handle symlinks very well, Carla copies its resources instead.<br/>
+</p>
+<p>
+    Scanning plugins will no longer show a console window.<br/>
+    The font engine was changed from native to freetype, which not only fixes the mini-canvas but gives a better presentation too.<br/>
+    Plugin bridges work once again, and now even better as Carla now initializes Windows resources on them (like static pthread and OLE).<br/>
+</p>
+
+<h5>UI changes</h5>
+<p>
+    The piano-keyboard widget got some attention, now has 4 different highlight colors, 3 input layouts (qwerty, qwertz and azerty) and allows to change the offset when using the PC keyboard to send notes.<br/>
+    Just right-click on a piano-keyboard widget to trigger these options.<br/>
+</p>
+<p>
+    The rack looks a bit different now, as the possible "skins" for the plugin slots are now exposed and can be changed at any time.<br/>
+    You can change the background color too. Because why not? :)<br/>
+</p>
+<p>
+    Make the knobs and rack buttons more white-theme friendly.<br/>
+    This was needed to get white backgrounds working correctly, so for those of you that prefer Carla in a more bright theme, it will behave better now (why would you do that though?)<br/>
+</p>
+
+<h3>Other changes</h3>
+<p>
+    Some changes that make sense or are useful enough, and that deserve to be mentioned.<br/>
+</p>
+<ul>
+    <li>Allow control output parameters to go out of bounds, thus displaying the correct value</li>
+    <li>Automatically restart plugin bridges when plugin is re-activated, using last saved state</li>
+    <li>Don't allow to disable jack transport if running in multi-client mode</li>
+    <li>Don't close and re-open VST plugin UIs on show/hide</li>
+    <li>Don't change any engine settings if it currently running</li>
+    <li>Don't list lv2 plugins that are not supported</li>
+    <li>Don't make Windows or macOS plugin UIs resizable for now</li>
+    <li>Implement loop-mode for audio-file plugin, turn it on by default</li>
+    <li>Implement support for buffer size changes in RtAudio JACK driver, and ignore JACK sample rate mismatch</li>
+    <li>Implement SF3 support (SF2 files with OGG audio files instead of raw WAV)</li>
+    <li>Force fftw thread-safe mode when starting Carla as standalone</li>
+    <li>Plugins with more than 2 audio ports can now be loaded in rack mode (the extra ports are just ignored)</li>
+    <li>Save and restore BPM with a project</li>
+    <li>Save and restore last used BPM, if not loading a project</li>
+</ul>
+
+<h3>Fixes</h3>
+<p>
+    Besides the ones already mentioned for Windows, we also have:
+</p>
+<ul>
+    <li>Big push to get transport working correctly</li>
+    <li>General fixes against dynamic buffer sizes</li>
+    <li>Several fixes to UI size and UI bridges under macOS</li>
+    <li>Fix all PNGs that triggered libpng warnings</li>
+    <li>Fix canvas rubberband being invisible after a canvas refresh</li>
+    <li>Fix embedded UI covering window controls under certain hosts (in a Qt5 Linux build)</li>
+    <li>Fix switching plugin positions in plugin mode</li>
+</ul>
+
+<h3>Notes for developers and packagers</h3>
+<ul>
+    <li>Base python scripts are no longer installed in dist-packages</li>
+    <li>Carla front-end code was moved to its own folder</li>
+    <li>FluidSynth version 1.1.7 is now required for soundfont support</li>
+    <li>UI bridges can now be started from CLI with just the plugin URI</li>
+    <li>New CarlaNativePlugin header and library exported, exposes Carla's Rack and Patchbay internals to 3rd party applications</li>
+</ul>
+<p>
+    Currently work-in-progress is a complete REST API of Carla's backend, allowing to have full control of a remote Carla instance.<br/>
+    (and not in a limited fashion like done with Carla-Control / OSC).<br/>
+    Initial code for it is already done, and tested to work.<br/>
+    If this interests you, let me know!<br/>
 </p>
 <p>
 </p>
 
-Add confirmation dialog for quitting Carla
-Add confirmation dialog for Remove All and New File
+<h3>Notes for users</h3>
+<p>
+    The code for scanning plugins had a little rework, making some internal data structures change.<br/>
+    Because of this, a full rescan of your plugins is needed after the update.<br/>
+</p>
+<p>
+    When running Patchbay mode in JACK, changing the buffer size might cause a crash.<br/>
+    This is not a common action to do, so not a priority to fix.<br/>
+</p>
 
-MIDI Channel A/B
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the KXStudio downloads section.
+    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).
+    Bug reports and feature requests are welcome! Jump on over to the Carla's Github project page for those.
 
-Increase polling rate for non-gui mode (30 Hz)
-Force-fix window position offset of Carla-embed mouse events
-Fix some bridge parameters ... not loading
-Fix file filter of MIDI file plugin, small cleanup
-Fix build with the clang compiler.
-Properly handle internal plugins with multi MIDI inputs
+    To download Carla binaries or source code, jump on over to the <a href="http://kxstudio.linuxaudio.org/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
 
-LV2 export window is now a simple combo-box
-Save LV2 author name in exported LV2 plugin
+<h3>Future</h3>
+<p>
+    With Carla done, next up is DPF handling and KXStudio 18.04 ISO release, while trying to get a new JACK2 release out too.<br/>
+    Note that after these 3 items are done, I plan to take a well-needed break from open-source project maintenance.
+</p>
 
-Fix assertion in LV2 utils, assume portNotification is float type
+<hr/>
 
-Scale canvas with mouse anchor
-Fix box position after movement in scaled state
-Align box border to pixel grid (antialiasing fix)
-Cut connections by Control+MButton3
+<p>
+    <span style="font-size: 20px">&gt; Carla 2.0 beta7 is here!</span><br/>
+    On <i>2018-07-23</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone, I am glad to bring you the 7th beta of the upcoming Carla 2.0 release.<br/>
+    Last time I said beta6 would be the last beta, but let's ignore that for now... ;)<br/>
+</p>
+<p>
+    This release focuses on bug-fixes rather than new features.<br/>
+    Most of the new features were added because of contributions, which are very appreciated.<br/>
+    There are no big flashy screenshots this time, sorry.<br/>
+</p>
+<p>
+    One breaking change for this release is the removal of most of the plugins bundled in Carla's code.<br/>
+    They were moved into a separate repository, to keep Carla's code-base smaller.<br/>
+    If you are building Carla yourself and you want those extra internal plugins, make sure to enable git submodules.
+</p>
+<p>
+    Here is a list of the most relevant changes and fixes for this release:
+</p>
+<ul>
+  <li>Add confirmation dialog for quitting Carla</li>
+  <li>Add confirmation dialog for "Remove All" and "New File" actions</li>
+  <li>Add internal MIDI Channel A/B plugin</li>
+  <li>Add semitones parameter to internal midi-transpose plugin</li>
+  <li>Implement move up/down plugins in rack (right-click menu)</li>
+  <li>Implement LV2 UI port notifications to feedback messages to UI</li>
+  <li>Implement more libjack stubs, Catia now loads inside Carla :)</li>
+  <li>Transport controls are now considered stable and always enabled, no longer in experimental settings</li>
+  <li>Disable ableton-link and audio kits search UI elements if not built/enabled</li>
+  <li>Do not capture logs if running in nogui mode</li>
+  <li>Do not use or check for kVstParameterUsesIntegerMinMax VST property</li>
+  <li>Do not lockup on close in case audio driver stops working</li>
+  <li>Export LV2 window is now a simple combo-box, making it more usable</li>
+  <li>Save plugin author name in exported LV2 plugin</li>
+  <li>Increase polling rate for non-gui mode (30 Hz), fixes slow OSC handling</li>
+  <li>Fix mouse position offset of Carla-embed mouse events</li>
+  <li>Fix processing of internal plugins with multi MIDI inputs</li>
+  <li>Fix crash when closing a session containing bridges with Ctrl+C</li>
+  <li>Fix patchbay/graph to work with variable buffer sizes</li>
+  <li>Fix some issues regarding integer parameter control</li>
+  <li>Fix controlling logarithmic parameters with MIDI CC</li>
+  <li>Fix "MIDI CC 0x01" not selectable in some systems</li>
+  <li>Fix loading of VST plugin parameters and LV2 state for plugin bridges</li>
+  <li>Fix carla-single usage under ladish</li>
+  <li>Fix file dialog filter of the internal MIDI file plugin</li>
+</ul>
 
-Fix crash when closing session containing bridges with ctrl+c
-Stop waiting for engine post-rt ACK if it stops running (less time on close)
-Implement more libjack stubs, catia now loads inside carla
-Implement LV2 UI port notifications to feedback messages to UI
-Implement up/down plugins in rack (right-click menu)
-Fix NaN when controlling log params with MIDI CC
-Fix "MIDI CC 0x01" not selectable in some systems
-Fixes for carla-single under ladish, print state messages on start
-Simplify plugin slot skin code a little, set white color for artyfx
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="<?php echo $ROOT; ?>/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
 
-Disable link and kits search UI elements if not compiled in  (hide stuff not enavled)
-Transport controls are now considered stable
-Add external plugins as optional submodule
-
-Fixup carla-patchbay/graph to work with variable buffer sizes
-
-Fix remaining issues regarding int parameter control
-Do not capture logs if running in nogui mode
-Prevent user from cross-compiling the wrong target
-
-add semitones parameter to midi-transpose plugin (PR)
-Do not use/check kVstParameterUsesIntegerMinMax vst property
-Fix crash when mmap returns error
-
-FIX CANVAS RIGHT CLICK and drag stuff
+<h3>Future</h3>
+<p>
+    The next Carla release is meant to close the 2.0 features, and focus on feature parity between all OSes.<br/>
+    It might take some time though (unless there is major regression that makes a new release required).
+</p>
+<p>
+    For now I plan to focus on other things that have been on the backlog for some time,
+      including DPF, KXStudio 18.04 ISO and JACK maintenance.<br/>
+    News on that will be published when something is ready, please be patient.
+</p>
 
 <hr/>
 
