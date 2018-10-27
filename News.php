@@ -17,7 +17,48 @@ include_once("includes/header.php");
     On <i>2018-10-27</i> by<i> falkTX</i>
 </p>
 <p>
-    Hello again everyone, and surprise, the stable 2.0 version of Carla is coming!<br/>
+    Hello everyone, this is the announcement for a Carla stable update.<br/>
+    Only 2 blocking issues remain, 1 of which needs testing to see if it still happens or not.<br/>
+</p>
+
+<h3>General fixes</h3>
+<ul>
+<li>Fix build against fludisynth 2.0</li>
+<li>Fix build on Haiku OS</li>
+<li>Fix build with external plugins enabled but no OpenGL available</li>
+<li>Fix detection of old Windows dll plugins</li>
+<li>Fix dynamic/split process cycle for plugin bridges</li>
+<li>Fix internal plugins receiving wrong frame position on split buffers</li>
+<li>Fix program changes coming through as bank changes in MIDI output</li>
+<li>Fix a possible race condition in plugin code</li>
+<li>Fix some warnings triggered by gcc-8</li>
+<li>Fix LV2 plugins with UI feedback ports in bridge mode not receiving feedback events</li>
+<li>Fix macOS specific note visible in settings when not running macOS</li>
+<li>libjack: Fix applications that register clients right after being started</li>
+</ul>
+
+<h3>Usability fixes</h3>
+<ul>
+<li>Always show keyboard in plugin edit dialog if plugin has midi inputs</li>
+<li>Always expand user home path (~/) when loading project from CLI</li>
+<li>Don't try to find binary type of certain plugins when loading project (avoid assertions)</li>
+<li>Use executable basename on jack apps as name when initial name is empty</li>
+<li>libjack: Catch window close when possible, and hide it instead closing entire application</li>
+<li>libjack: Implement basic session management via SIGUSR1 signal</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="http://kxstudio.linuxaudio.org/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<h3>Future</h3>
+<p>
+    Work for KXStudio 18.04 ISO is under way, should only take a few more weeks now.<br/>
+    Next JACK2 release will be quite nice, we we have meta-data now (thanks to Rui),
+    but that will be handled after KXStudio 18.04 ISO release.
 </p>
 
 <hr/>
@@ -159,10 +200,6 @@ include_once("includes/header.php");
 
 <h3>Downloads</h3>
 <p>
-    To download Carla binaries or source code, jump on over to the KXStudio downloads section.
-    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).
-    Bug reports and feature requests are welcome! Jump on over to the Carla's Github project page for those.
-
     To download Carla binaries or source code, jump on over to the <a href="http://kxstudio.linuxaudio.org/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
     If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
     Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
