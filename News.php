@@ -23,7 +23,7 @@ include_once("includes/header.php");
 
 <h3>General fixes</h3>
 <ul>
-<li>Fix build against fludisynth 2.0</li>
+<li>Fix build against fluidsynth 2.0</li>
 <li>Fix build on Haiku OS</li>
 <li>Fix build with external plugins enabled but no OpenGL available</li>
 <li>Fix detection of old Windows dll plugins</li>
@@ -57,7 +57,7 @@ include_once("includes/header.php");
 <h3>Future</h3>
 <p>
     Work for KXStudio 18.04 ISO is under way, should only take a few more weeks now.<br/>
-    Next JACK2 release will be quite nice, we we have meta-data now (thanks to Rui),
+    Next JACK2 release will be quite nice, we have meta-data now (thanks to Rui),
     but that will be handled after KXStudio 18.04 ISO release.
 </p>
 
