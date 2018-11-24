@@ -8,7 +8,7 @@ if (file_exists("/home/falktx/.jackdrc") || file_exists("/home/daeavelwyn/public
     $SHOW_NOTE = TRUE;
 }
 
-if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPACE") {
+if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPACE") {
     require "donate/config.php";
     require "donate/connect.php";
 
@@ -110,7 +110,7 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
         function itemCommunityClicked(event)   { return menuItemClicked(event, document.getElementById("div_menuCommunity"),    "item-community"); };
 
     </script>
-<?php if ($PAGE_TYPE == "DONATIONS") { ?>
+<?php if (false && $PAGE_TYPE == "DONATIONS") { ?>
     <script type="text/javascript">
         /* <![CDATA[ */
         (function() {
@@ -235,7 +235,7 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
         </ul>
     </div>
 <?php } else { ?>
-    <?php if ($PAGE_TYPE != "DONATIONS" && $db_link) { ?>
+    <?php if (false && $PAGE_TYPE != "DONATIONS" && $db_link) { ?>
     <div id="donations_container" style="position:absolute; top:40px; right:5%; width: 250px; height: 10px; font-size: 0.8em;">
         <div id="donations_bar"><div style="width:<?php print_r($cur_percent); ?>%"></div></div>
     </div>
