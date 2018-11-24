@@ -12,6 +12,11 @@ include_once("includes/header.php");
         This is an Ubuntu 14.04.5 LTS based Live-DVD, used to test-drive KXStudio and/or install it to your HDD.<br/>
         It contains a snapshot of the KXStudio features as of <b>June 9th, 2017</b> or <b>09/06/2017</b>. It uses KDE4 as Desktop Environment.
     </p>
+    <p>
+        NOTE: <b>This ISO is quite old now and will stop being supported in April 2019</b>, thus not recommended for new installs.<br/>
+        An 18.04 based ISO is expected to be released around Summer 2019.<br/>
+        Thanks for understanding.
+    </p>
     <p class="p_extra_spaced">
         <b>Downloads:</b><br/>
         &nbsp;<a href="http://download.linuxaudio.org/kxstudio/KXStudio_14.04.5_32bit.iso" class="external text a_bigger_text" rel="nofollow" target="_blank">

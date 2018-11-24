@@ -1,11 +1,11 @@
 <?php
-$SHOW_NOTE = FALSE;
+$SHOW_NOTE = TRUE;
 $ROOT = FALSE;
 
 if (file_exists("/home/falktx/.jackdrc") || file_exists("/home/daeavelwyn/public_html/kxstudio/"))
 {
     $ROOT = "/kxstudio";
-    $SHOW_NOTE = FALSE;
+    $SHOW_NOTE = TRUE;
 }
 
 if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPACE") {
@@ -311,7 +311,8 @@ if ($PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPA
 <?php } ?>
 <?php if ($PAGE_TYPE != "PASTE" && $SHOW_NOTE) { ?>
 <p style="color:#fa3a3a;">
-    NOTE: Parts of this website are currently being rewritten, some links might not work at the moment.
+    NOTE: The KXStudio project is currently on a break, regular development is expected to return later in 2019.
+    Thanks for understanding.
 </p>
 <?php } ?>
 <!-- - - - - - - - Begin Content Area - - - - - - - -->
