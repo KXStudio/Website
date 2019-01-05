@@ -32,6 +32,14 @@
                 <h2 class="box-header"> <a href="<?php echo $ROOT; ?>/News" style="color: #aaf;">News</a> </h2>
 
                 <a href="<?php echo $ROOT; ?>/News/?action=view&url=cadence-090-release-and-kxstudio-1804-preparations">
+                    <b>Carla 2.0 RC1 is here!</b><br/>
+                </a>
+                <p>
+                    The stable 2.0 version of Carla is coming!
+                </p>
+                <hr/>
+
+                <a href="<?php echo $ROOT; ?>/News/?action=view&url=cadence-090-release-and-kxstudio-1804-preparations">
                     <b>Cadence 0.9.0 and KXStudio 18.04 preparations</b><br/>
                 </a>
                 <p>
@@ -53,14 +61,6 @@
                 </a>
                 <p>
                     A new version of JACK2 is out, and plans for 2018 defined.
-                </p>
-                <hr/>
-
-                <a href="<?php echo $ROOT; ?>/News/?action=view&url=breaking-changes-in-carla-plugin-host">
-                    <b>Breaking changes in Carla Plugin Host</b><br/>
-                </a>
-                <p>
-                    There were some major changes done to Carla's code base in the past few days...
                 </p>
             </div>
         </div>

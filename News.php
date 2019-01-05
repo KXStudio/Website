@@ -13,6 +13,55 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.0 RC3 is here!</span><br/>
+    On <i>2018-10-27</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, this is a quick fix for the Carla Plugin Host (soon-to-be) stable series.<br/>
+    Only very small fixes here, and a change on how specific plugins load.<br/>
+    This release starts a "release early, release often" attitude, that hopefully I can maintain from now on.<br/>
+</p>
+
+<h3>Changelog</h3>
+<ul>
+<li>Fixes crash for bridge-lv2-x11 when manually started from CLI</li>
+<li>LV2: Don't prefer plugin bridges for certain hardcoded plugins (Calf, ir.lv2 and v1 series)</li>
+<li>VST: Do not call plugin effEditIdle on update display opcode, fixes crashes for a few plugins</li>
+</ul>
+
+<p>
+    Previously a few plugins were hardcoded to run as plugin bridges, as deemed unsafe because of how they use their plugin UIs (instance-access).<br/>
+    Carla automatically started these plugins as bridges, as to not crash the main process when Gtk and Qt gets in the way.<br/>
+    Plugin state in bridges have a few issues (as plugin bridges are experimental right now), which I was hoping to fix before 2.0 final is here.<br/>
+    But that will not happen it seems (not an easy fix), so now these plugins will run normally as all others do, in the same process.<br/>
+    This means the following possible breaking changes:<br/>
+</p>
+<ul>
+<li>If v1 plugin series are compiled with a Qt version different than the one Carla is using, expect a crash on load or soon afterwards</li>
+<li>Calf plugin UIs will be missing their graphs by default, unless you disable running plugin UIs in bridge mode in Carla settings</li>
+</ul>
+<p>
+    This is not an issue for other plugin UIs that use Qt or Gtk, as they do not use LV2 instance-access.<br/>
+    Carla runs Gtk and Qt LV2 UIs in a separate process, but because these UIs require direct access to the plugin instance, they cannot be bridged.<br/>
+</p>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="http://kxstudio.linuxaudio.org/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<h3>Future</h3>
+<p>
+    A "2.0-final" milestone is on GitHub, which lists the remaining issues to be fixed before 2.0 is considered "final".<br/>
+    New features already made its way to Carla, but sit on the develop branch.<br/>
+    When the "final" version is release, expect a 2.1-beta to come shortly afterwards.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.0 RC2 is here!</span><br/>
     On <i>2018-10-27</i> by<i> falkTX</i>
 </p>
