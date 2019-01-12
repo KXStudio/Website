@@ -14,25 +14,26 @@ include_once("includes/header.php");
 
 <p>
     <span style="font-size: 20px">&gt; Carla 2.0 RC3 is here!</span><br/>
-    On <i>2018-10-27</i> by<i> falkTX</i>
+    On <i>2019-01-15</i> by<i> falkTX</i>
 </p>
 <p>
-    Hello everyone, this is a quick fix for the Carla Plugin Host (soon-to-be) stable series.<br/>
+    Hello everyone, happy new year!<br/>
+    This is a quick fix for the Carla Plugin Host (soon-to-be) stable series.<br/>
     Only very small fixes here, and a change on how specific plugins load.<br/>
     This release starts a "release early, release often" attitude, that hopefully I can maintain from now on.<br/>
 </p>
 
 <h3>Changelog</h3>
 <ul>
-<li>Fixes crash for bridge-lv2-x11 when manually started from CLI</li>
+<li>Fix bridge-lv2-x11 crash when manually started from CLI</li>
 <li>LV2: Don't prefer plugin bridges for certain hardcoded plugins (Calf, ir.lv2 and v1 series)</li>
-<li>VST: Do not call plugin effEditIdle on update display opcode, fixes crashes for a few plugins</li>
+<li>VST: Do not call plugin effEditIdle on update display opcode, fixing crashes for a few plugins</li>
 </ul>
 
 <p>
-    Previously a few plugins were hardcoded to run as plugin bridges, as deemed unsafe because of how they use their plugin UIs (instance-access).<br/>
+    Previously a few plugins were hardcoded to run as plugin bridges, as they were deemed unsafe because of how they use their plugin UIs (instance-access).<br/>
     Carla automatically started these plugins as bridges, as to not crash the main process when Gtk and Qt gets in the way.<br/>
-    Plugin state in bridges have a few issues (as plugin bridges are experimental right now), which I was hoping to fix before 2.0 final is here.<br/>
+    Plugin state in bridges have a few issues (as plugin bridges are experimental right now), which I was hoping to fix before the final 2.0 is here.<br/>
     But that will not happen it seems (not an easy fix), so now these plugins will run normally as all others do, in the same process.<br/>
     This means the following possible breaking changes:<br/>
 </p>
@@ -47,16 +48,21 @@ include_once("includes/header.php");
 
 <h3>Downloads</h3>
 <p>
-    To download Carla binaries or source code, jump on over to the <a href="http://kxstudio.linuxaudio.org/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    To download Carla binaries or source code, jump on over to the <a href="https://kxstudio.linuxaudio.org/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
     If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
     Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
 </p>
 
 <h3>Future</h3>
 <p>
-    A "2.0-final" milestone is on GitHub, which lists the remaining issues to be fixed before 2.0 is considered "final".<br/>
-    New features already made its way to Carla, but sit on the develop branch.<br/>
-    When the "final" version is release, expect a 2.1-beta to come shortly afterwards.
+    A
+      <a href="https://github.com/falkTX/Carla/milestones/2.0-final" class="external free" rel="nofollow" target="_blank">
+        "2.0-final" milestone</a>
+      is on GitHub, which lists the remaining issues to be fixed before 2.0 is considered "final".<br/>
+    New features already made its way to Carla, but sit on the
+      <a href="https://github.com/falkTX/Carla/commits/develop" class="external free" rel="nofollow" target="_blank">
+        develop branch</a>.<br/>
+    When the "final" version is released, expect a 2.1-beta to come shortly afterwards.
 </p>
 
 <hr/>
