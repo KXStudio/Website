@@ -68,6 +68,25 @@ include_once("includes/header.php");
 <hr/>
 
 <p>
+    <span style="font-size: 20px">&gt; JackAss v1.1 release</span><br/>
+    On <i>2019-01-15</i> by<i> falkTX</i>
+</p>
+<p>
+    This is a tiny bugfix for JackAss, a VST plugin that provides JACK-MIDI support for VST hosts.<br/>
+</p>
+<p>
+    The only change is that <b>Wine 64bit builds work now</b>, so you can finally load it inside 64bit Windows applications running on GNU/Linux via Wine.<br/>
+    Tested to work with FL Studio 20.<br/>
+    <a href="/screenshots/news/jackass_flstudio_v1.1.png"><img src="/screenshots/news/jackass_flstudio_v1.1.png" alt=""/></a><br/>
+</p>
+<p>
+    You can find JackAss source code and bug tracker in Github,
+    at <a href="https://github.com/falkTX/JackAss/" class="external free" rel="nofollow" target="_blank">https://github.com/falkTX/JackAss/</a>.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.0 RC2 is here!</span><br/>
     On <i>2018-10-27</i> by<i> falkTX</i>
 </p>
