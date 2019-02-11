@@ -230,7 +230,6 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
     <div id="rslides_container">
         <ul class="rslides" id="slider1">
             <li><a href="<?php echo $ROOT; ?>/Repositories:Applications"><img src="<?php echo $ROOT; ?>/images/slider-applications.jpg" alt=""/></a></li>
-            <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio14042:About"><img src="<?php echo $ROOT; ?>/images/slider-distribution.jpg" alt=""/></a></li>
             <li><a href="<?php echo $ROOT; ?>/Plugins"><img src="<?php echo $ROOT; ?>/images/slider-plugins.jpg" alt=""/></a></li>
         </ul>
     </div>
