@@ -12,14 +12,15 @@ include_once("includes/header.php");
     For general <b>Linux Audio</b> help, use the
       <a href="http://linuxmusicians.com/" class="external text" rel="nofollow" target="_blank">LinuxMusicians Forums</a> or
       <a href="http://lists.linuxaudio.org/listinfo/linux-audio-user/" class="external text" rel="nofollow" target="_blank">LinuxAudio Mailing List</a>.<br/>
-    You can also use <b>IRC</b> on irc.freenode.net (or .com) server, channel
-      <a href="https://webchat.freenode.net/?channels=#kxstudio" class="external text" rel="nofollow" target="_blank">#kxstudio</a>,
-      <a href="https://webchat.freenode.net/?channels=#opensourcemusicians" class="external text" rel="nofollow" target="_blank">#opensourcemusicians</a> or
-      <a href="https://webchat.freenode.net/?channels=#kxstudio,#opensourcemusicians" class="external text" rel="nofollow" target="_blank">both</a>.<br/>
+    You can also use <b>IRC</b> on irc.freenode.net (or .com) server, channel <b>#kxstudio</b> or <b>#opensourcemusicians</b>.<br/>
     A <b>discord</b> server is also available
       <a href="https://discord.gg/GHuycpX" class="external text" rel="nofollow" target="_blank">here</a>,
-      in case you prefer that over IRC.
+      in case you prefer that over IRC.<br/>
+    (The discord server is going away quite soon though, as we do not want to encourage usage of proprietary systems)
 </p>
+
+<h2>Documentation</h2>
+
 <p>
     Please note that documentation for KXStudio is a work in progress, if you need some information not available here, you can try:
 </p>
@@ -34,19 +35,9 @@ include_once("includes/header.php");
     Some useful topics:
 </p>
 
-<!-- KXSTUDIO RELEASE -->
+<!-- KXSTUDIO REPOSITORIES -->
 <p>
-    <b>KXStudio 14.04.5 Release</b>
-</p>
-<ul>
-    <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio14045:About">About</a></li>
-    <li><a href="<?php echo $ROOT; ?>/Documentation:KXStudio14045:ReleaseNotes">Release Notes</a></li>
-</ul>
-
-<!-- KXSTUDIO DISTRIBUTION -->
-<p>
-    <br/>
-    <b>KXStudio Distribution &amp; Repositories</b>
+    <b>KXStudio Repositories</b>
 </p>
 <ul>
     <li><a href="<?php echo $ROOT; ?>/Documentation:Repository:Meta-Packages">Available Meta-Packages</a></li>

@@ -7,8 +7,8 @@ include_once("includes/header.php");
 ?>
 
 <p>
-    KXStudio is a collection of applications and plugins for professional audio production.<br/>
-    KXStudio provides Debian and Ubuntu compatible repositories and its own Linux Distribution currently based on Ubuntu 14.04.5 LTS.
+    KXStudio is a collection of applications and plugins for audio production.<br/>
+    KXStudio also provides Debian (and Ubuntu) compatible repositories.
 </p>
 
 <p>
