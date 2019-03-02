@@ -256,11 +256,7 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
 
     <!-- Start: Main Content Area -->
     <div id="content" class="container_16 content-wrapper">
-<?php if ($PAGE_TYPE == "HOME") { ?>
-        <div id="some-content" class="box box-shadow grid_13 clearfix">
-<?php } else { ?>
         <div id="some-content" class="box box-shadow grid_77 clearfix">
-<?php } ?>
             <!-- Start: Box header -->
             <div class="box-header header-tabs">
                 <ul>

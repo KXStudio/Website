@@ -26,45 +26,6 @@
                 </ul>
             </div>
         </div>
-<?php if ($PAGE_TYPE == "HOME") { ?>
-        <div class="column grid_3 alpha">
-            <div class="box box-shadow alpha clear-both navigation">
-                <h2 class="box-header"> <a href="<?php echo $ROOT; ?>/News" style="color: #aaf;">News</a> </h2>
-
-                <a href="<?php echo $ROOT; ?>/News/?action=view&url=cadence-090-release-and-kxstudio-1804-preparations">
-                    <b>Carla 2.0 RC1 is here!</b><br/>
-                </a>
-                <p>
-                    The stable 2.0 version of Carla is coming!
-                </p>
-                <hr/>
-
-                <a href="<?php echo $ROOT; ?>/News/?action=view&url=cadence-090-release-and-kxstudio-1804-preparations">
-                    <b>Cadence 0.9.0 and KXStudio 18.04 preparations</b><br/>
-                </a>
-                <p>
-                    Cadence 0.9.0 has just been tagged in git, and preparations for KXStudio 18.04 ISO release have started.
-                </p>
-                <hr/>
-
-                <a href="<?php echo $ROOT; ?>/News/?action=view&url=carla-20-beta6-is-here">
-                    <b>Carla 2.0 beta6</b><br/>
-                    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.0-beta6_jack-apps.png" alt="" width="150px"/>
-                </a>
-                <p>
-                    The last beta for the 2.0 series is here!<br/>
-                </p>
-                <hr/>
-
-                <a href="<?php echo $ROOT; ?>/News/?action=view&url=jack2-1912-release-and-future-plans">
-                    <b>JACK2 1.9.12 release and future plans</b><br/>
-                </a>
-                <p>
-                    A new version of JACK2 is out, and plans for 2018 defined.
-                </p>
-            </div>
-        </div>
-<?php } ?>
     </div>
     <!-- End: Main Content Area -->
 
