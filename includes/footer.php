@@ -12,7 +12,6 @@
                     <li><a href="#Interface">Interface</a></li>
                     <li><a href="#Download">Download</a></li>
 <?php } else if ($PAGE_TYPE == "DOWNLOADS") { ?>
-                    <li><a href="#LiveDVD">Live-DVD</a></li>
                     <li><a href="#Binaries">Binaries</a></li>
                     <li><a href="#SourceCode">Source Code</a></li>
                     <li><a href="#Artwork">Artwork</a></li>
