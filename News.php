@@ -13,6 +13,105 @@ include_once("includes/header.php");
 </div>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.0 RC4 is here!</span><br/>
+    On <i>2019-03-02</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone!<br/>
+    This is a quick fix for the Carla Plugin Host (soon-to-be) stable series.<br/>
+</p>
+
+<h3>Changelog</h3>
+<ul>
+    <li>carla-vst: Add Ardour workaround for its 'Analysis' window</li>
+    <li>carla-vst: Fix typo leading to buffer size of 1 during plugin activation</li>
+    <li>Fix for some stupid plugins messing up with global signals (restore original signals after creating plugin)</li>
+    <li>Fix dry/wet for VST plugins (by creating extra buffer for inline processing)</li>
+    <li>Fix crash in RtAudio when ALSA soundcard is listed but not available</li>
+    <li>Fix crash on JACK buffer size changes in patchbay mode</li>
+    <li>Fix crash when directly loading vst shell plugins (carla-single or drag&amp;drop dll file)</li>
+    <li>Fix loading multiple exported LV2 plugins (always copy full carla-plugin binary when exporting)</li>
+    <li>Fix missing transport information when Carla is not jack transport master</li>
+    <li>Fix opening a few VST2 UIs (we give up trying to follow VST spec, always assume UI opens nicely)</li>
+    <li>Fix plugin bridges not working under Fedora (RT threads were able to be setup, but not started)</li>
+    <li>Automatically terminate wine bridges if main carla dies</li>
+    <li>Calculate VST2 ppqPos in a more reliable way</li>
+    <li>Do not set up RtAudio in "hog device" mode</li>
+    <li>Do not build external plugins in debug or strict build</li>
+    <li>Handle more sources of VST2 automation via audioMasterAutomate</li>
+    <li>Handle worst-case scenario of carla-plugin buffer size being too low</li>
+</ul>
+<p>
+    I am not confident enough to call it the stable version just yet,
+      as some of these release changes actually introduced new code.<br/>
+    But the target date for the stable release is now set - middle of April.<br/>
+    There are no more release-blocker bugs for Carla v2,0 anymore, so it is just a matter of time now.<br/>
+</p>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kxstudio.linuxaudio.org/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<hr/>
+
+<p>
+    <span style="font-size: 20px">&gt; DPF-Plugins v1.2 released</span><br/>
+    On <i>2019-03-02</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, a new release of DPF-Plugins is here.<br/>
+    This is mostly a bugfix release, with a few little new things.<br/>
+    This is what changed compared to the last release:
+</p>
+<ul>
+    <li>Fix glBars and ProM plugins not being built and installed</li>
+    <li>Kars: Added release and volume parameters</li>
+    <li>Kars: Remove its useless UI</li>
+    <li>Nekobi: Add enum values for waveform parameter</li>
+    <li>Remove modguis, they are maintained in a separate repo</li>
+</ul>
+
+<h3>DPF changes</h3>
+<p>
+    DPF (the small framework behind these plugins) saw some important changes.<br/>
+    They are not all relevant to DPF-Plugins directly, but worth mentioning:
+</p>
+<ul>
+    <li>Fix samplerate property in lv2 UIs</li>
+    <li>Fix (implement) parent window for about dialogs for MacOS and Windows</li>
+    <li>Add get/set scaling to Window</li>
+    <li>Add option to automatically scale plugin UIs</li>
+    <li>Allow plugin UIs to be user-resizable, test with info and meters example</li>
+    <li>Implement basic effGetParameterProperties in vst plugins (boolean, integer and log flags)</li>
+    <li>Implement midi out</li>
+    <li>Implement enumerator style of parameters</li>
+    <li>Implement LV2-trigger-type parameters</li>
+    <li>Implement Shift-click to reset sliders</li>
+    <li>Report supported LV2 options in generated ttl</li>
+    <li>Render VST2 parameter-text integer, boolean and enum parameters</li>
+    <li>Rework calculation of VST transport/time info</li>
+    <li>Set _NET_WM_WINDOW_TYPE for our X11 windows</li>
+</ul>
+<p>
+    Other things worth noting is that 2 new exciting things are currently under development:
+      Cairo graphics support and AU plugin wrapper.<br/>
+    Eventually these will be part of core DPF, but for now they are being discussed and worked on with other developers.
+</p>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/DPF-Plugins/releases/tag/v1.2" target="_blank">
+          https://github.com/DISTRHO/DPF-Plugins/releases/tag/v1.1</a>.<br/>
+    The plugins are released as LADSPA, DSSI, LV2, VST2 and JACK standalone.<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.0 RC3 is here!</span><br/>
     On <i>2019-01-15</i> by<i> falkTX</i>
 </p>
