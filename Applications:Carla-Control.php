@@ -37,17 +37,32 @@ include_once("includes/header.php");
 <p>
     Pre-compiled binaries are available for Linux (part of the Carla bundle).<br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.1.0-linux32.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.14/Carla_2.0-RC4-linux32.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 32bit</a><br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="http://sourceforge.net/projects/kxstudio/files/Releases/carla/Carla-1.1.0-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.14/Carla_2.0-RC4-linux64.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 64bit</a><br/>
+    <img src="images/ico_mac.png" alt="" class="img_text_align_spaced"/>
+        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.14/Carla_2.0-RC4-macos.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
+         MacOS 64bit</a><br/>
+    <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
+        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.14/Carla_2.0-RC4-win32.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+         Windows 32bit (No SSE, for old PCs)</a><br/>
+    <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
+        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.14/Carla_2.0-RC4-win32-nosse.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+         Windows 32bit</a><br/>
+    <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
+        <a href="https://github.com/falkTX/Carla/releases/download/v1.9.14/Carla_2.0-RC4-win64.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+         Windows 64bit</a><br/>
 </p>
 <p>
     The latest source code is hosted on github, together with bug reports, feature requests, etc.<br/>
      <img src="images/ico_github.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/tree/stable" class="external text a_bigger_text" rel="nofollow" target="_blank">
-         Source code</a><br/>
+        <a href="https://github.com/falkTX/Carla/" class="external text a_bigger_text" rel="nofollow" target="_blank">
+         Project page</a><br/>
+     <img src="images/ico_github.png" alt="" class="img_text_align_spaced"/>
+        <a href="https://github.com/falkTX/Carla/archive/master.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+         Source code (zip)</a><br/>
      <img src="images/ico_github.png" alt="" class="img_text_align_spaced"/>
         <a href="https://github.com/falkTX/Carla/issues?state=open" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Bug reports / Feature requests</a><br/>
