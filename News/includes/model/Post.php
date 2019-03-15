@@ -496,7 +496,7 @@
             $visitor = Visitor::current();
 
             if (!$config->clean_urls)
-                return $config->url."/?action=view&amp;url=".urlencode($this->url);
+                return $config->url."/?action=view&url=".urlencode($this->url);
 
             $login = (strpos($config->post_url, "(author)") !== false) ? $this->user->login : null ;
             $vals = array(when("Y", $this->created_at),
