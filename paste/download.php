@@ -1,5 +1,3 @@
-<?php die("KXStudio pastebin is temporarily disabled"); ?>
-
 <?php
 
 if (file_exists("/home/sites/kxstudio.linuxaudio.org/docroot/paste/")) {

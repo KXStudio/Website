@@ -1,5 +1,3 @@
-<?php die("KXStudio pastebin is temporarily disabled"); ?>
-
 <?php
 
 include_once("geshi.php");
@@ -54,7 +52,7 @@ else if (! empty($_POST["paste_text"]))
     $paste_name   = htmlspecialchars($_POST["paste_title"]);
     $paste_pass   = htmlspecialchars($_POST["paste_password"]);
 
-    if (sha1($paste_pass) != "c3b5562b12495ac3ebaf0970a1fdb02d8823c0b3") {
+    if (sha256($paste_pass) != "fc41cad9d74d2529996dd7118537cd2d4b288f3d9737caa45c0f05f0f0c088c0") {
         die("This pastebin is now protected with a password due to users abusing it for copyright infringement");
     }
 
