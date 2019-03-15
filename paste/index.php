@@ -229,7 +229,7 @@ else // $show_paste
                 </td></tr>
 
                 <tr><td align="right">Password:</td><td>
-                    <input type="text" name="paste_password" id="paste_password" />
+                    <input type="password" name="paste_password" id="paste_password" />
                 </td></tr>
 
                 <tr><td align="right">
