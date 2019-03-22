@@ -1,6 +1,6 @@
 <?php
 $PAGE_TITLE    = "KXStudio News";
-$PAGE_TYPE     = "NORMAL";
+$PAGE_TYPE     = "NEWS";
 $PAGE_SOURCE_1 = ARRAY("/News");
 $PAGE_SOURCE_2 = ARRAY("News");
 include_once("includes/header.php");
@@ -8,9 +8,44 @@ include_once("includes/header.php");
 
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
-<div style="position: absolute; top: 120px; right: 100px;">
-    <a href="<?php echo $ROOT; ?>/News/?action=feed"><img src="images/rss.png" alt="RSS"/></a>
-</div>
+<p>
+    <span style="font-size: 20px">&gt; Changes in KXStudio repos, regarding Carla and JACK2</span><br/>
+    On <i>2019-03-22</i> by<i> falkTX</i>
+</p>
+<p>
+    This is a small notice to everyone using Carla and JACK2 with the KXStudio repos.
+</p>
+<p>
+    First, in preparation for Carla 2.0 release, the (really) old <b>carla</b> package is now the new v2.0 series,
+      while <b>carla-git</b> now contains the development/latest version.<br/>
+    If you are not interested in testing Carla's new stuff and prefer something known to be more stable,
+      install the <b>carla</b> package after the latest updates.
+</p>
+<p>
+    Second, a change in JACK2 code has made it so a restart of the server is required after the update.<br/>
+    (but for a good reason, as JACK2 is finally getting meta-data support; this update fixes client UUIDs)<br/>
+    If you use jackdbus (likely with KXStudio stuff), you will need to actually kill it.<br/>
+    If that does not work, good old restart is your friend. :)
+</p>
+<p>
+    One important thing to note is that the <b>lmms</b> package now conflicts with the <b>carla-git</b> one.<br/>
+    This is because some code has changed in latest Carla that makes v2.0 vs development/latest ABI-incompatible.<br/>
+    In simpler terms, LMMS can only either be compiled against the stable or development version of Carla.<br/>
+    The obvious choice is to use the stable version, so after the updates if you notice LMMS is missing, just install it again.<br/>
+    (If you have <b>carla-git</b> installed, <b>carla</b> will be installed/switched automatically)
+</p>
+<p>
+    I tried to make the transition of these updates as smooth as possible,
+      but note that you likely need to install updates twice to complete the process.<br/>
+</p>
+<p>
+    In other news, we got a new domain!^-^)/<br/>
+    Also Carla v2.0 release date has been set - 15th of April.<br/>
+    Unless a major issue is found, expect a release announcement on that day.<br/>
+    See you soon then! ;)
+</p>
+
+<hr/>
 
 <p>
     <span style="font-size: 20px">&gt; Carla 2.0 RC4 is here!</span><br/>

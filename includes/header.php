@@ -285,6 +285,11 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
             <div class="alpha omega paste_canvas_area">
 <?php if ($PAGE_TYPE == "HOME") { ?>
                 <h1><span class="mw-headline"> About KXStudio </span></h1>
+<?php } else if ($PAGE_TYPE == "NEWS") { ?>
+                <div style="float: right; padding-right: 16px;">
+                    <a href="<?php echo $ROOT; ?>/News/?action=feed"><img src="images/rss.png" alt="RSS"/></a>
+                </div>
+                <h1 style="margin-top: 0px"><span class="mw-headline"> KXStudio&nbsp;: News </span></h1>
 <?php } else if ($PAGE_TYPE != "PASTE") { ?>
                 <h1><span class="mw-headline"> <?php
                         for ($i = 0; $i < count($PAGE_SOURCE_2); $i++)
