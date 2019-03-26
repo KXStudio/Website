@@ -1,5 +1,0 @@
-.DS_Store
-feathers/photo/lib/cache/*
-uploads/*
-includes/config.yaml.php
-includes/database.yaml.php

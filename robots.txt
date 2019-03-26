@@ -1,6 +1,0 @@
-User-Agent: *
-Disallow: /.git/
-Disallow: /.gitignore
-Disallow: /.htaccess
-Disallow: /donate/*
-Disallow: /paste/repo/
