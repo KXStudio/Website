@@ -1,5 +1,7 @@
 <?php
 
+die('Not allowed');
+
 function downloadFile($dlFile, $dlSize) {
     // Must be fresh start
     if (headers_sent())
