@@ -70,7 +70,7 @@ include_once("includes/header.php");
 <!-- Download -->
 <h3><span class="mw-headline" id="Download"> Download </span></h3>
 <p>
-    Carla is available in the KXStudio repositories, Fedora and ArchLinux (all with 'carla' package names).
+    Carla is available in the KXStudio repositories, Fedora and ArchLinux (all with 'carla' package name).
 </p>
 <p>
     Pre-compiled binaries are available for Linux, macOS and Windows (version 2.0.0).<br/>
