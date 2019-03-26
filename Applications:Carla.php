@@ -70,13 +70,7 @@ include_once("includes/header.php");
 <!-- Download -->
 <h3><span class="mw-headline" id="Download"> Download </span></h3>
 <p>
-    Carla is available in the KXStudio repositories, Fedora and ArchLinux (all with 'carla' package names).<br/>
-    <img src="images/ico_arch.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://archlinux.org/packages/carla/" class="external text a_bigger_text" rel="nofollow" target="_blank">
-         ArchLinux</a> (AUR)<br/>
-    <img src="images/ico_debian.png" alt="" class="img_text_align_spaced"/>
-        <a href="apt://carla" class="external text a_bigger_text">
-         Debian/Ubuntu</a> (via KXStudio repositories)<br/>
+    Carla is available in the KXStudio repositories, Fedora and ArchLinux (all with 'carla' package names).
 </p>
 <p>
     Pre-compiled binaries are available for Linux, macOS and Windows (version 2.0.0).<br/>
