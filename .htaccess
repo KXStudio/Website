@@ -1,25 +1,25 @@
 Options -Indexes
 
-Redirect 301 /cadence              http://kxstudio.linuxaudio.org/Applications:Cadence
-Redirect 301 /cadence-jackmeter    http://kxstudio.linuxaudio.org/Applications:Cadence-JackMeter
-Redirect 301 /cadence-jacksettings http://kxstudio.linuxaudio.org/Applications:Cadence-JackSettings
-Redirect 301 /cadence-logs         http://kxstudio.linuxaudio.org/Applications:Cadence-Logs
-Redirect 301 /cadence-render       http://kxstudio.linuxaudio.org/Applications:Cadence-Render
-Redirect 301 /cadence-xycontroller http://kxstudio.linuxaudio.org/Applications:Cadence-XYController
-Redirect 301 /catarina             http://kxstudio.linuxaudio.org/Applications:Catarina
-Redirect 301 /catia                http://kxstudio.linuxaudio.org/Applications:Catia
-Redirect 301 /claudia              http://kxstudio.linuxaudio.org/Applications:Claudia
-Redirect 301 /claudia-launcher     http://kxstudio.linuxaudio.org/Applications:Claudia-Launcher
-Redirect 301 /carla                http://kxstudio.linuxaudio.org/Applications:Carla
-Redirect 301 /carla-control        http://kxstudio.linuxaudio.org/Applications:Carla-Control
+Redirect 301 /cadence              https://kx.studio/Applications:Cadence
+Redirect 301 /cadence-jackmeter    https://kx.studio/Applications:Cadence-JackMeter
+Redirect 301 /cadence-jacksettings https://kx.studio/Applications:Cadence-JackSettings
+Redirect 301 /cadence-logs         https://kx.studio/Applications:Cadence-Logs
+Redirect 301 /cadence-render       https://kx.studio/Applications:Cadence-Render
+Redirect 301 /cadence-xycontroller https://kx.studio/Applications:Cadence-XYController
+Redirect 301 /catarina             https://kx.studio/Applications:Catarina
+Redirect 301 /catia                https://kx.studio/Applications:Catia
+Redirect 301 /claudia              https://kx.studio/Applications:Claudia
+Redirect 301 /claudia-launcher     https://kx.studio/Applications:Claudia-Launcher
+Redirect 301 /carla                https://kx.studio/Applications:Carla
+Redirect 301 /carla-control        https://kx.studio/Applications:Carla-Control
 
-Redirect 301 /applications  http://kxstudio.linuxaudio.org/Applications
-Redirect 301 /documentation http://kxstudio.linuxaudio.org/Documentation
-Redirect 301 /donations     http://kxstudio.linuxaudio.org/Donations
-Redirect 301 /downloads     http://kxstudio.linuxaudio.org/Downloads
-Redirect 301 /news          http://kxstudio.linuxaudio.org/News
-Redirect 301 /plugins       http://kxstudio.linuxaudio.org/Plugins
-Redirect 301 /repositories  http://kxstudio.linuxaudio.org/Repositories
+Redirect 301 /applications  https://kx.studio/Applications
+Redirect 301 /documentation https://kx.studio/Documentation
+Redirect 301 /donations     https://kx.studio/Donations
+Redirect 301 /downloads     https://kx.studio/Downloads
+Redirect 301 /news          https://kx.studio/News
+Redirect 301 /plugins       https://kx.studio/Plugins
+Redirect 301 /repositories  https://kx.studio/Repositories
 
 RedirectMatch 301 ^/KXStudio:(.*)$ /$1
 RedirectMatch 301 ^/Documentation:Ubuntu:(.*)$ /Documentation:Repository:$1
