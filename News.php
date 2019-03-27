@@ -9,6 +9,51 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.0.0 is finally here!</span><br/>
+    On <i>2019-04-15</i> by<i> falkTX</i>
+</p>
+
+<p>
+    After many years, Carla version 2.0.0 is finally here!
+</p>
+<p>
+    ...
+</p>
+
+<h3>Changes since 2.0-RC4</h3>
+<ul>
+    <li>carla-vst: Add Ardour workaround for its 'Analysis' window</li>
+    <li>carla-vst: Fix typo leading to buffer size of 1 during plugin activation</li>
+    <li>Fix for some stupid plugins messing up with global signals (restore original signals after creating plugin)</li>
+    <li>Fix dry/wet for VST plugins (by creating extra buffer for inline processing)</li>
+    <li>Fix crash in RtAudio when ALSA soundcard is listed but not available</li>
+    <li>Fix crash on JACK buffer size changes in patchbay mode</li>
+    <li>Fix crash when directly loading vst shell plugins (carla-single or drag&amp;drop dll file)</li>
+    <li>Fix loading multiple exported LV2 plugins (always copy full carla-plugin binary when exporting)</li>
+    <li>Fix missing transport information when Carla is not jack transport master</li>
+    <li>Fix opening a few VST2 UIs (we give up trying to follow VST spec, always assume UI opens nicely)</li>
+    <li>Fix plugin bridges not working under Fedora (RT threads were able to be setup, but not started)</li>
+    <li>Automatically terminate wine bridges if main carla dies</li>
+    <li>Calculate VST2 ppqPos in a more reliable way</li>
+    <li>Do not set up RtAudio in "hog device" mode</li>
+    <li>Do not build external plugins in debug or strict build</li>
+    <li>Handle more sources of VST2 automation via audioMasterAutomate</li>
+    <li>Handle worst-case scenario of carla-plugin buffer size being too low</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the
+      <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    Carla v2.0.0 is available pre-packaged in the KXStudio repositories and UbuntuStudio backports, plus on ArchLinux and Ubuntu since 19.04.
+      On those you can simply install the <b>carla</b> package.<br/>
+    Bug reports and feature requests are welcome! Jump on over to the
+      <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Changes in KXStudio repos, regarding Carla and JACK2</span><br/>
     On <i>2019-03-22</i> by<i> falkTX</i>
 </p>

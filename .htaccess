@@ -21,6 +21,8 @@ Redirect 301 /news          https://kx.studio/News
 Redirect 301 /plugins       https://kx.studio/Plugins
 Redirect 301 /repositories  https://kx.studio/Repositories
 
+Redirect 302 /kxstudio/News/install.php /kxstudio/News2
+
 RedirectMatch 301 ^/KXStudio:(.*)$ /$1
 RedirectMatch 301 ^/Documentation:Ubuntu:(.*)$ /Documentation:Repository:$1
 
