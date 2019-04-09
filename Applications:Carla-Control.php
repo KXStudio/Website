@@ -8,7 +8,12 @@ include_once("includes/header.php");
 
 <!-- intro -->
 <p>
-    This is a dummy page, a placeholder for when the real page is written.
+    Carla is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
+    Carla-Control is a remote control application for Carla, providing the same interface but with the real backend running on a different machine.
+</p>
+<p>
+    As of version 2.0, Carla-Control is still quite limited.<br/>
+    Version 2.1 will bring full plugin (add, remove, clone, etc), patchbay and transport control.
 </p>
 
 <!-- Interface -->

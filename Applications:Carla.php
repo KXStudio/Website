@@ -12,7 +12,7 @@ include_once("includes/header.php");
     It has some nice features like automation of parameters via MIDI CC (and send output back as MIDI too) and full OSC control.<br/>
 </p>
 <p>
-    Carla currently supports LADSPA (including LRDF), DSSI, LV2, VST2/3 and AU plugin formats, plus GIG, SF2 and SFZ file support.<br/>
+    Carla currently supports LADSPA (including LRDF), DSSI, LV2, VST2/3 and AU plugin formats, plus SF2 and SFZ file support.<br/>
     It uses JACK as the default and preferred audio driver but also supports native drivers like ALSA, DirectSound or CoreAudio.<br/>
 </p>
 <p>
@@ -66,6 +66,20 @@ include_once("includes/header.php");
 <!-- <ul> -->
 <!-- <li></li> -->
 <!-- </ul> -->
+
+<!-- Videos -->
+<h3><span class="mw-headline" id="Videos"> Videos </span></h3>
+<p>
+    A few videos from falkTX, Carla's creator, showing off Carla's features and a few workflows.
+</p>
+<h6>Sonoj 2017</h6>
+<p>
+    <iframe width="1024" height="576" src="https://media.ccc.de/v/sonoj2017-1704-carla-plugin-host/oembed" frameborder="0" allowfullscreen></iframe>
+</p>
+<h6>LAC 2018</h6>
+<p>
+    <iframe width="1024" height="576" src="https://media.ccc.de/v/lac2018-24-carla_plugin_host_feature_overview_and_workflows/oembed" frameborder="0" allowfullscreen></iframe>
+</p>
 
 <!-- Download -->
 <h3><span class="mw-headline" id="Download"> Download </span></h3>
