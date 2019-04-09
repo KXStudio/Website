@@ -17,7 +17,17 @@ include_once("includes/header.php");
     After many years, Carla version 2.0.0 is finally here!
 </p>
 <p>
-    ...
+    Carla is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
+    It has some nice features like automation of parameters via MIDI CC (and send output back as MIDI too) and full OSC control.<br/>
+</p>
+<p>
+    Version 2.0 took this long because I was never truly happy with its current state, often pushing new features but not fully finishing them.<br/>
+    So the "solution" was to put everything that is not considered stable yet behind an experimental flag in the settings.<br/>
+    This way we can have our stable Carla faster, while upcoming features get developed and tagged as experimental during testing.<br/>
+</p>
+<p>
+    Preparations for version 2.1 are well under way, a beta for it will be out soon.<br/>
+    But that is a topic for another day.
 </p>
 
 <h3>Changes since 2.0-RC4</h3>
@@ -49,6 +59,21 @@ include_once("includes/header.php");
       On those you can simply install the <b>carla</b> package.<br/>
     Bug reports and feature requests are welcome! Jump on over to the
       <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<h3>Videos</h3>
+<p>
+    There is no manual or quick-start guide for Carla yet, apologies for that.<br/>
+    But there are some videos of presentations I did regarding Carla's features and workflows,
+    those should give you an introduction of its features and what you can do with it:<br/>
+</p>
+<h6>@ Sonoj 2017</h6>
+<p>
+    <iframe width="1024" height="576" src="https://media.ccc.de/v/sonoj2017-1704-carla-plugin-host/oembed" frameborder="0" allowfullscreen></iframe>
+</p>
+<h6>@ LAC 2018</h6>
+<p>
+    <iframe width="1024" height="576" src="https://media.ccc.de/v/lac2018-24-carla_plugin_host_feature_overview_and_workflows/oembed" frameborder="0" allowfullscreen></iframe>
 </p>
 
 <hr/>
