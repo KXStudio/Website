@@ -9,6 +9,30 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; 14.04 is End-Of-Life</span><br/>
+    On <i>2019-04-28</i> by<i> falkTX</i>
+</p>
+
+<p>
+    2014 was 5 years ago.<br/>
+    5 year LTS for official support from Canonical.<br/>
+</p>
+
+<p>
+    There are no new ISO images being prepared right now.<br/>
+    The repositories still keep working fine, though gcc5 now could be made mandatory.<br/>
+    There will be no more uploads for KXStudio repos on the non-gcc5 repo variant.<br/>
+</p>
+
+<p>
+    Currently in plans where to move forward, nothing decided yet, focus is on software rather than packages.<br/>
+    Expect usual releases.<br/>
+    jack2 coming next, and dpf stuff follows.<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.0.0 is finally here!</span><br/>
     On <i>2019-04-15</i> by<i> falkTX</i>
 </p>
@@ -32,23 +56,14 @@ include_once("includes/header.php");
 
 <h3>Changes since 2.0-RC4</h3>
 <ul>
-    <li>carla-vst: Add Ardour workaround for its 'Analysis' window</li>
-    <li>carla-vst: Fix typo leading to buffer size of 1 during plugin activation</li>
-    <li>Fix for some stupid plugins messing up with global signals (restore original signals after creating plugin)</li>
-    <li>Fix dry/wet for VST plugins (by creating extra buffer for inline processing)</li>
-    <li>Fix crash in RtAudio when ALSA soundcard is listed but not available</li>
-    <li>Fix crash on JACK buffer size changes in patchbay mode</li>
-    <li>Fix crash when directly loading vst shell plugins (carla-single or drag&amp;drop dll file)</li>
-    <li>Fix loading multiple exported LV2 plugins (always copy full carla-plugin binary when exporting)</li>
-    <li>Fix missing transport information when Carla is not jack transport master</li>
-    <li>Fix opening a few VST2 UIs (we give up trying to follow VST spec, always assume UI opens nicely)</li>
-    <li>Fix plugin bridges not working under Fedora (RT threads were able to be setup, but not started)</li>
-    <li>Automatically terminate wine bridges if main carla dies</li>
-    <li>Calculate VST2 ppqPos in a more reliable way</li>
-    <li>Do not set up RtAudio in "hog device" mode</li>
-    <li>Do not build external plugins in debug or strict build</li>
-    <li>Handle more sources of VST2 automation via audioMasterAutomate</li>
-    <li>Handle worst-case scenario of carla-plugin buffer size being too low</li>
+    <li>Fix missing argument in note-on/off osc example</li>
+    <li>Fix word-wrap in add-plugin dialog</li>
+    <li>Fix Windows README.txt line endings</li>
+    <li>Build windows binaries with -mstackrealign</li>
+    <li>Don't show side panel in carla-control</li>
+    <li>Show "Label/URI" instead of just "Label"</li>
+    <li>Keep application signals alive (so Ctrl+C works even while engine is closed)</li>
+    <li>Update copyright year</li>
 </ul>
 
 <h3>Downloads</h3>
