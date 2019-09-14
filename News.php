@@ -9,8 +9,8 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
-    <span style="font-size: 20px">&gt; 14.04 is End-Of-Life</span><br/>
-    On <i>2019-04-28</i> by<i> falkTX</i>
+    <span style="font-size: 20px">&gt; Current KXStudio status</span><br/>
+    On <i>2019-08-20</i> by<i> falkTX</i>
 </p>
 
 <p>
