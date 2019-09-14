@@ -11,22 +11,22 @@ function endsWith($haystack, $needle) {
 
 function print_app($package, $screenshot, $name, $category, $details) {
 
-if (! endsWith($screenshot, '.jpg')) {
-    $screenshot = $screenshot . '.png';
-}
+    if (! endsWith($screenshot, '.jpg')) {
+        $screenshot = $screenshot . '.png';
+    }
 
-echo
-'<table><tr><td align="center"><p>
-<a href="' . $ROOT . '/screenshots/' . $screenshot . '">
-<img src="screenshots/thumb/' . $screenshot . '" alt="' . $screenshot . '" class="img_thumb_150"/>
-</a></p></td><td><p><b>
-<a href="apt://' . $package . '" style="color: rgb(230,230,100);">' . $name . '</a></b> (' . $category . ')<br/>';
+    echo
+    '<table><tr><td align="center"><p>
+    <a href="' . $ROOT . '/screenshots/' . $screenshot . '">
+    <img src="screenshots/thumb/' . $screenshot . '" alt="' . $screenshot . '" class="img_thumb_150"/>
+    </a></p></td><td><p><b>
+    <a href="apt://' . $package . '" style="color: rgb(230,230,100);">' . $name . '</a></b> (' . $category . ')<br/>';
 
-for ($i = 0, $count = count($details); $i < $count; $i++) {
-    echo $details[$i] . '<br>';
-}
+    for ($i = 0, $count = count($details); $i < $count; $i++) {
+        echo $details[$i] . '<br>';
+    }
 
-echo '</p></td></tr></table>';
+    echo '</p></td></tr></table>';
 
 }
 
