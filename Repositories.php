@@ -4,11 +4,13 @@ $PAGE_TYPE     = "KXSTUDIO";
 $PAGE_SOURCE_1 = ARRAY("/Repositories");
 $PAGE_SOURCE_2 = ARRAY("Repositories");
 include_once("includes/header.php");
+
+$DEBIAN_PACKAGE_URL = "https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_10.0.2_all.deb";
 ?>
 
 <div class="box box-description">
     <p>
-        The KXStudio repositories support all Debian versions since <b>Jessie</b> and Ubuntu <b>14.04</b> or above.<br/>
+        The KXStudio repositories support all Debian versions since <b>Buster</b> and Ubuntu <b>18.04</b> or above.<br/>
         They should work on all Debian-based distributions and variants.
     </p>
     <p>
@@ -39,35 +41,18 @@ include_once("includes/header.php");
 
 <p>
     All Debian and Ubuntu users can enable our repositories by installing this deb file:
-        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.5.1%7Ekxstudio3_all.deb" class="free" rel="nofollow">kxstudio-repos.deb</a>.<br/>
+        <a href="<?php echo $DEBIAN_PACKAGE_URL; ?>" class="free" rel="nofollow">kxstudio-repos.deb</a>.<br/>
     You can install it manually by running this:<br/>
 </p>
 <pre>
 <span style="color: rgb(110, 110, 110);"># Install required dependencies if needed</span>
-sudo apt-get install apt-transport-https software-properties-common wget
+sudo apt-get install apt-transport-https gpgv
 
 <span style="color: rgb(110, 110, 110);"># Download package file</span>
-wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.5.1~kxstudio3_all.deb
+<?php echo $DEBIAN_PACKAGE_URL; ?>
 
 <span style="color: rgb(110, 110, 110);"># Install it</span>
 sudo dpkg -i kxstudio-repos_9.5.1~kxstudio3_all.deb
-</pre>
-
-<p><br/>
-    If you're using a system <b>newer or equal</b> to <b>Debian 9 (Stretch)</b> or <b>Ubuntu 16.04 (Xenial)</b> you'll also need to enable GCC5 packages.<br/>
-    You can do so by installing this deb file -
-        <a href="https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.5.1%7Ekxstudio3_all.deb" class="free" rel="nofollow">kxstudio-repos-gcc5.deb</a>,
-    or manually by running this:
-</p>
-<pre>
-<span style="color: rgb(110, 110, 110);"># Install required dependencies if needed</span>
-sudo apt-get install libglibmm-2.4-1v5
-
-<span style="color: rgb(110, 110, 110);"># Download package file</span>
-wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.5.1~kxstudio3_all.deb
-
-<span style="color: rgb(110, 110, 110);"># Install it</span>
-sudo dpkg -i kxstudio-repos-gcc5_9.5.1~kxstudio3_all.deb
 </pre>
 
 <p><br/>
@@ -76,7 +61,7 @@ sudo dpkg -i kxstudio-repos-gcc5_9.5.1~kxstudio3_all.deb
 <ul>
     <li>Various sources files that activates the separate repositories</li>
     <li>GPG keys used for package and repository signing</li>
-    <li>A post-install script that enables an extra, Ubuntu-specific repository</li>
+    <li>A post-install script that clears up legacy repository setup</li>
 </ul>
 
 <hr/>
