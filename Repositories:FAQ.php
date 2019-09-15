@@ -42,7 +42,7 @@ Bug reports and package requests should be posted in the Github tracker
 
 <h5>Can I make a request for this new awesome-super-great application?</h5>
 <p>
-You can, but likely will not be answered back. The KXStudio repositories focus on audio plugins, not general applications.
+You can, but it will likely not be answered. The KXStudio repositories focus on audio plugins, not general applications.
 </p>
 
 <h5>Why are applications not the focus for the KXStudio repos?</h5>
