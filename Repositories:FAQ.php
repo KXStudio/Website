@@ -65,7 +65,7 @@ As you likely already know, we run a lot of audio plugins at the same time, all 
 If a single plugin misbehaves or crashes, it usually brings down the entire host or DAW.<br/>
 </p>
 <p>
-So it vital that we build the plugins in a way to minimize issues.
+So it is vital that we build the plugins in a way to minimize issues.
 They must be self-contained and never conflict with each other (as much as possible anyway).
 This entails, for example:
 </p>
@@ -73,7 +73,7 @@ This entails, for example:
   <li><b>Building all plugin code and its dependencies with hidden symbols</b>, so only the plugin-format-defined entry-points are visible within a shared object.<br/>
       When this is not done, a plugin that uses a different audio library version from the host will crash.<br/>
       This is usually not a problem if one uses only binaries from the distributions, but we cannot assume that it will always be that way...<br/>
-      Note that this is not just about building plugins in a certain, but also <b>all of its dependencies</b>.<br/>
+      Note that this is not just about building plugins in a certain way, but also <b>all of its dependencies</b>.<br/>
       <br style="line-height:0.5em"/>
       For example: flatpaks, snaps, appimages and others include their own version of libraries needed by the application, which will publically expose symbols.<br/>
       In such cases, loading a plugin that uses a library also used by the host will result in a crash if their target versions don't match.<br/>
