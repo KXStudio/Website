@@ -5,4 +5,5 @@ donate/insert-value.sh
 paste/raw/*
 repo/*
 !repo/screenshots/
+!repo/generate-repo-page.sh
 _insert-value.sh
