@@ -20,7 +20,6 @@ include_once("includes/header.php");
         <li><a href="<?php echo $ROOT; ?>/Repositories:Applications">Applications in the repositories</a></li>
         <li><a href="<?php echo $ROOT; ?>/Repositories:FAQ">Frequent asked questions</a></li>
     </ul>
-    <br/>
 </div>
 
 <div class="repository-package-list">
