@@ -47,7 +47,7 @@ else if (! empty($_POST["paste_text"]))
         die("Spam bot detected, get out of here!");
     }
 
-    $paste_code   = htmlspecialchars($_POST["paste_text"]);
+    $paste_code   = $_POST["paste_text"];
     $paste_format = htmlspecialchars($_POST["paste_format"]);
     $paste_name   = htmlspecialchars($_POST["paste_title"]);
     $paste_pass   = htmlspecialchars($_POST["paste_password"]);
