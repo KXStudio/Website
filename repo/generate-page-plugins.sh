@@ -5,11 +5,11 @@ set -e
 cd $(dirname $0)
 
 PACKAGES_ARCHS=("amd64" "arm64" "armhf" "i386")
-PACKAGES_BLACKLIST=("calf-ladspa" "distrho-src" "lv2vst")
+PACKAGES_BLACKLIST=("calf-ladspa" "carla-lv2" "carla-vst" "carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" "lv2vst")
 PACKAGES_BASE_URL="http://ppa.launchpad.net/kxstudio-debian/plugins/ubuntu/"
 
 # rm -f Packages.gz Packages
-# 
+#
 # wget -q http://ppa.launchpad.net/kxstudio-debian/plugins/ubuntu/dists/bionic/main/binary-amd64/Packages.gz
 # gzip -d Packages.gz
 
@@ -19,6 +19,17 @@ function is_blacklisted() {
     local TEST="${1}"
     local PACKAGE
     for PACKAGE in ${PACKAGES_BLACKLIST[@]}; do
+        if [ ${TEST} = ${PACKAGE} ]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
+function has_data_package() {
+    local TEST="${1}-data"
+    local PACKAGE
+    for PACKAGE in ${PACKAGES[@]}; do
         if [ ${TEST} = ${PACKAGE} ]; then
             return 0
         fi
@@ -44,6 +55,7 @@ for PACKAGE in ${PACKAGES[@]}; do
         continue
     fi
 
+    PACKAGE_DATA=$(has_data_package "${PACKAGE}" && echo "${PACKAGE}-data" || echo)
     PACKAGE_DESCRIPTION=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Description: ","")')
     PACKAGE_PROVIDES=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Provides: ","")')
     PACKAGE_SIZE=$(echo "${PACKAGE_DETAILS}" | grep -v "Installed-Size:" | awk 'sub("Size: ","")')
@@ -70,11 +82,24 @@ for PACKAGE in ${PACKAGES[@]}; do
     echo "<tr><td>Package Name:</td><td>${PACKAGE}</td></tr>"
     echo "<tr><td>Description:</td><td>${PACKAGE_DESCRIPTION}</td></tr>"
     echo "<tr><td>Version:</td><td>${PACKAGE_VERSION}</td></tr>"
+    echo "<tr><td>Expected size:</td><td>"
     if [ ${PACKAGE_SIZE} -gt 999999 ]; then
-        echo "<tr><td>Expected size:</td><td>$((${PACKAGE_SIZE} / 1024 / 1024))Mb</td></tr>"
+        echo "$((${PACKAGE_SIZE} / 1024 / 1024))Mb"
     else
-        echo "<tr><td>Expected size:</td><td>$((${PACKAGE_SIZE} / 1024))Kb</td></tr>"
+        echo "$((${PACKAGE_SIZE} / 1024))Kb"
     fi
+    if [ -n "${PACKAGE_DATA}" ]; then
+        PACKAGE_DATA_LINESTART=$(cat Packages | grep -x -n "Package: ${PACKAGE_DATA}" | cut -d ':' -f 1)
+        PACKAGE_DATA_NUMLINES=$(cat Packages | tail -n +$((${PACKAGE_DATA_LINESTART} + 1)) | grep -n "Package: " | head -n 1 | cut -d ':' -f 1)
+        if [ -n "${PACKAGE_DATA_NUMLINES}" ]; then
+            PACKAGE_DATA_DETAILS=$(cat Packages | tail -n +${PACKAGE_DATA_LINESTART} | head -n ${PACKAGE_DATA_NUMLINES})
+        else
+            PACKAGE_DATA_DETAILS=$(cat Packages | tail -n +${PACKAGE_DATA_LINESTART})
+        fi
+        PACKAGE_DATA_SIZE=$(echo "${PACKAGE_DATA_DETAILS}" | grep -v "Installed-Size:" | awk 'sub("Size: ","")')
+        echo "+ $((${PACKAGE_DATA_SIZE} / 1024 / 1024))Mb (data)"
+    fi
+    echo "</td></tr>"
     if [ -z "${PACKAGE_PROVIDES}" ]; then
         echo "<tr><td>Provides:</td><td>??</td></tr>"
     else
@@ -104,6 +129,10 @@ for PACKAGE in ${PACKAGES[@]}; do
         PACKAGE_FILENAME_ARCHED=$(echo "${PACKAGE_FILENAME}" | sed "s/_amd64.deb/_${ARCH}.deb/g")
         echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME_ARCHED}\" target=\"_blank\">${ARCH}</a>&nbsp;&nbsp;"
     done
+    if [ -n "${PACKAGE_DATA}" ]; then
+        PACKAGE_FILENAME_DATA=$(echo "${PACKAGE_FILENAME}" | sed "s|/${PACKAGE}_|/${PACKAGE_DATA}_|g" | sed "s/_amd64.deb/_all.deb/g")
+        echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME_DATA}\" target=\"_blank\">data</a>"
+    fi
     echo "</tr>"
     echo "</table></div></div>"
 
@@ -111,9 +140,3 @@ for PACKAGE in ${PACKAGES[@]}; do
     echo "<br/>"
     echo
 done
-
-# print_plugin("add64", "add64", "Add64", "Standalone", ARRAY(
-# 'Add64 is the result of experiments around additive synthesis and is intended for research purposes only.',
-# 'The spectral drawing scheme for the harmonics and envelopes has been inspired by the virtual pipe organ Aeolus by Fons Adriaensen.',
-# 'Project Page: <a href="https://sourceforge.net/projects/add64/" class="external text" rel="nofollow" target="_blank">https://sourceforge.net/projects/add64/</a>'
-# ));
