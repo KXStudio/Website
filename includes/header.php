@@ -46,7 +46,6 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
     <link rel="copyright" href="http://creativecommons.org/licenses/publicdomain/" />
     <link rel="stylesheet" href="<?php echo $ROOT; ?>/css/style.fluid.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php echo $ROOT; ?>/css/style.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200,700,800,400" type="text/css" media="screen" />
     <link rel="icon" type="image/png" href="<?php echo $ROOT; ?>/images/ico_kxstudio.png" />
     <link rel="shortcut icon" href="<?php echo $ROOT; ?>/favicon.ico" />
 <?php if ($PAGE_TYPE == "HOME") { ?>
@@ -111,17 +110,6 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
 
     </script>
 <?php if (false && $PAGE_TYPE == "DONATIONS") { ?>
-    <script type="text/javascript">
-        /* <![CDATA[ */
-        (function() {
-            var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-            s.type  = 'text/javascript';
-            s.async = true;
-            s.src   = 'https://api.flattr.com/js/0.6/load.js?mode=auto';
-            t.parentNode.insertBefore(s, t);
-        })();
-        /* ]]> */
-    </script>
     <style type="text/css">
         html > body .liberapay-btn {
             background-color: #f6c915;

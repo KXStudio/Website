@@ -6,6 +6,10 @@ $PAGE_SOURCE_2 = ARRAY("Documentation", "Repository", "Meta-Packages");
 include_once("includes/header.php");
 ?>
 
+<p style="color:#fa3a3a;">
+    NOTE: The KXStudio repos are being reworked in a new setup, not all packages are available to install yet.
+</p>
+
 <p>
     This section describes all the meta-packages available in the KXStudio repositories, splitted by type.
 </p>
@@ -29,30 +33,17 @@ include_once("includes/header.php");
                     <li>kxstudio-meta-audio-plugins-ladspa</li>
                     <li>kxstudio-meta-audio-plugins-dssi</li>
                     <li>kxstudio-meta-audio-plugins-lv2</li>
-                    <li>kxstudio-meta-audio-plugins-vamp</li>
                     <li>kxstudio-meta-audio-plugins-vst</li>
                 </ul>
             </td></tr></table>
         </li>
-        <li>kxstudio-meta-graphics</li>
-        <li>kxstudio-meta-video</li>
     </ul></li>
-    <li>kxstudio-meta-restricted-extras</li>
-    <li>kxstudio-meta-wine</li>
 </ul>
 
 <h3><span class="mw-headline" id="MetaPackageDetails">Meta-Package Details</span></h3>
 <p>
     The main meta-packages are Audio, Audio-Plugins, Graphics and Video.<br/>
     The Audio-Plugins meta-package is also split into plugin categories, for anyone that wants more plugins, but not actually more applications.<br/>
-</p>
-<p>
-    The 'meta-restricted-extras' is simply a combination of '[k|x]ubuntu-restricted-extras', plus alsa-firmware and linux-firmware-nonfree.<br/>
-    (In this case, "restricted" means that it can't be installed in Ubuntu by default, but you're safe to do it afterwards).
-</p>
-<p>
-    The 'meta-wine' includes Wine audio stuff, useful to install if you want to use Windows plugins after installing the KXStudio ISO.<br/>
-    This includes carla's Windows bridges, dssi-vst, festige, LMMS VST support and WineASIO.
 </p>
 
 <h3><span class="mw-headline" id="Notes">Notes</span></h3>

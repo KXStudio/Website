@@ -10,8 +10,10 @@ $DEBIAN_PACKAGE_URL = "https://launchpad.net/~kxstudio-debian/+archive/kxstudio/
 
 <div class="box box-description">
     <p>
-        The KXStudio repositories support all Debian versions since <b>Buster</b> and Ubuntu <b>18.04</b> or above.<br/>
-        They should work on all Debian-based distributions and variants.
+        The KXStudio repositories support all Debian versions since <b>10 (Buster)</b> and Ubuntu <b>18.04 (Bionic)</b> or above.<br/>
+        They should work on all Debian-based distributions and variants.<br/>
+        A computer running intel-based 32bit or 64bit with SSE2 is required,
+        or alternatively an ARM-based system (32bit with neon-vfpv4 or 64bit).
     </p>
     <p>
         Once you have the repos installed, you can either manually install individual packages from them or
@@ -25,6 +27,7 @@ $DEBIAN_PACKAGE_URL = "https://launchpad.net/~kxstudio-debian/+archive/kxstudio/
     <ul>
         <li><a href="<?php echo $ROOT; ?>/Repositories:Applications">Applications in the repositories</a></li>
         <li><a href="<?php echo $ROOT; ?>/Repositories:Plugins">Plugins in the repositories</a></li>
+        <li><a href="<?php echo $ROOT; ?>/Repositories:FAQ">Frequent asked questions</a></li>
     </ul>
     <p>
         Bug reports and package requests should be posted in the
@@ -49,13 +52,13 @@ $DEBIAN_PACKAGE_URL = "https://launchpad.net/~kxstudio-debian/+archive/kxstudio/
 sudo apt-get install apt-transport-https gpgv
 
 <span style="color: rgb(110, 110, 110);"># Download package file</span>
-<?php echo $DEBIAN_PACKAGE_URL; ?>
+<?php echo $DEBIAN_PACKAGE_URL . "\n"; ?>
 
 <span style="color: rgb(110, 110, 110);"># Install it</span>
 sudo dpkg -i kxstudio-repos_9.5.1~kxstudio3_all.deb
 </pre>
 
-<p><br/>
+<p>
     These packages contain:
 </p>
 <ul>

@@ -9,14 +9,16 @@ include_once("includes/header.php");
 <div class="box box-description">
     <p>
         This section lists the applications available in the repositories.<br/>
-        Click on the yellow application name to install its respective package.<br/>
-        (If the links don't work, make sure you have the 'apturl-kde' or 'apturl' packages installed)
+        Click on the thumbnail to see the full-size image.<br/>
+        Individual deb files can be downloaded, requiring at least Debian 10 / Ubuntu 18.04 or superior.<br/>
+        If a "data" download is listed, it needs to be installed first before the architecture-dependent one.
     </p>
     <p>
         You might also want to check:
     </p>
     <ul>
         <li><a href="<?php echo $ROOT; ?>/Repositories:Plugins">Plugins in the repositories</a></li>
+        <li><a href="<?php echo $ROOT; ?>/Repositories:FAQ">Frequent asked questions</a></li>
     </ul>
     <br/>
 </div>
