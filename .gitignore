@@ -4,3 +4,4 @@ donate/config.php
 donate/insert-value.sh
 paste/raw/*
 repo/*
+!repo/screenshots/
