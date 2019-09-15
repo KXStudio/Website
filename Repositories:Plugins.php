@@ -1,6 +1,6 @@
 <?php
 $PAGE_TITLE    = "KXStudio : Repositories : Plugins";
-$PAGE_TYPE     = "KXSTUDIO";
+$PAGE_TYPE     = "REPOSITORY_PACKAGES";
 $PAGE_SOURCE_1 = ARRAY("/Repositories", "/Repositories:Plugins");
 $PAGE_SOURCE_2 = ARRAY("Repositories", "Plugins");
 include_once("includes/header.php");
@@ -120,7 +120,11 @@ pizmidi-plugins
     wolpertinger
  -->
 
+<div class="repository-package-list">
 <?php
+
+include_once("repo/plugins.html");
+
 /*
 print_plugin("pkg", "scr", "name", "cat", ARRAY(
 'txt1',
@@ -128,6 +132,7 @@ print_plugin("pkg", "scr", "name", "cat", ARRAY(
 ));
 */
 
+/*
 print_plugin("add64", "add64", "Add64", "Standalone", ARRAY(
 'Add64 is the result of experiments around additive synthesis and is intended for research purposes only.',
 'The spectral drawing scheme for the harmonics and envelopes has been inspired by the virtual pipe organ Aeolus by Fons Adriaensen.',
@@ -245,8 +250,10 @@ print_plugin("triceratops", "triceratops", "Triceratops", "LV2", ARRAY(
 'Triceratops is a polyphonic subtractive synthesizer plugin.',
 'Project Page: <a href="http://sourceforge.net/projects/triceratops/" class="external text" rel="nofollow" target="_blank">http://sourceforge.net/projects/triceratops/</a>'
 ));
+*/
 
 ?>
+</div>
 
 <p><br/></p>
 

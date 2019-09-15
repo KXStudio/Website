@@ -1,11 +1,11 @@
 <?php
-$SHOW_NOTE = TRUE;
+$SHOW_NOTE = FALSE;
 $ROOT = FALSE;
 
 if (file_exists("/home/falktx/.jackdrc") || file_exists("/home/daeavelwyn/public_html/kxstudio/"))
 {
     $ROOT = "/kxstudio";
-    $SHOW_NOTE = TRUE;
+    $SHOW_NOTE = FALSE;
 }
 
 if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE != "NAMESPACE") {
@@ -177,6 +177,35 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
             padding: 0;
             border-width: 0;
             resize: none;
+        }
+    </style>
+<?php } else if ($PAGE_TYPE == "REPOSITORY_PACKAGES") { ?>
+    <!-- Special Repository Packages CSS -->
+    <style type="text/css">
+        .repository-package-list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .repository-package {
+            display: flex;
+            flex-direction: row;
+            margin: 15px;
+            width: 485px;
+            /* max-width: calc(92% / 3 - 32px); */
+        }
+        .repository-package > div:first-child {
+            padding-top: calc(0.5em + 0.5px);
+        }
+        tr {
+            vertical-align: top;
+        }
+        tr > td:first-child {
+            font-weight: lighter;
+            white-space: nowrap;
+        }
+        tbody > tr:first-child > td:last-child {
+            font-weight: bold;
         }
     </style>
 <?php } ?>
