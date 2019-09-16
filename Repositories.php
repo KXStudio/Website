@@ -51,11 +51,14 @@ $DEBIAN_PACKAGE_URL = "https://launchpad.net/~kxstudio-debian/+archive/kxstudio/
 <span style="color: rgb(110, 110, 110);"># Install required dependencies if needed</span>
 sudo apt-get install apt-transport-https gpgv
 
+<span style="color: rgb(110, 110, 110);"># Remove legacy repos</span>
+sudo dpkg --purge kxstudio-repos-gcc5
+
 <span style="color: rgb(110, 110, 110);"># Download package file</span>
-<?php echo $DEBIAN_PACKAGE_URL . "\n"; ?>
+wget <?php echo $DEBIAN_PACKAGE_URL . "\n"; ?>
 
 <span style="color: rgb(110, 110, 110);"># Install it</span>
-sudo dpkg -i kxstudio-repos_9.5.1~kxstudio3_all.deb
+sudo dpkg -i <?php echo $DEBIAN_PACKAGE_URL . "\n"; ?>
 </pre>
 
 <p>
