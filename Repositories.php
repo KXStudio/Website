@@ -5,7 +5,7 @@ $PAGE_SOURCE_1 = ARRAY("/Repositories");
 $PAGE_SOURCE_2 = ARRAY("Repositories");
 include_once("includes/header.php");
 
-$DEBIAN_PACKAGE     = "kxstudio-repos_10.0.2_all.deb"
+$DEBIAN_PACKAGE     = "kxstudio-repos_10.0.2_all.deb";
 $DEBIAN_PACKAGE_URL = "https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/" . $DEBIAN_PACKAGE;
 ?>
 
