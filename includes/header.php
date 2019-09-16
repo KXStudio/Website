@@ -48,10 +48,6 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
     <link rel="stylesheet" href="<?php echo $ROOT; ?>/css/style.css" type="text/css" media="screen" />
     <link rel="icon" type="image/png" href="<?php echo $ROOT; ?>/images/ico_kxstudio.png" />
     <link rel="shortcut icon" href="<?php echo $ROOT; ?>/favicon.ico" />
-<?php if ($PAGE_TYPE == "HOME") { ?>
-    <script type="text/javascript" src="includes/jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="includes/responsiveslides.min.js"></script>
-<?php } ?>
     <script type="text/javascript">
 <?php if ($PAGE_TYPE == "HOME") { ?>
         $(window).load(function(){
@@ -243,22 +239,14 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
     </div>
     <!-- End: Header -->
 
-<?php if ($PAGE_TYPE == "HOME") { ?>
-    <div id="rslides_container">
-        <ul class="rslides" id="slider1">
-            <li><a href="<?php echo $ROOT; ?>/Repositories:Applications"><img src="<?php echo $ROOT; ?>/images/slider-applications.jpg" alt=""/></a></li>
-            <li><a href="<?php echo $ROOT; ?>/Plugins"><img src="<?php echo $ROOT; ?>/images/slider-plugins.jpg" alt=""/></a></li>
-        </ul>
-    </div>
-<?php } else { ?>
-    <?php if (false && $PAGE_TYPE != "DONATIONS" && $db_link) { ?>
+<?php if (false && $PAGE_TYPE != "DONATIONS" && $db_link) { ?>
     <div id="donations_container" style="position:absolute; top:40px; right:5%; width: 250px; height: 10px; font-size: 0.8em;">
         <div id="donations_bar"><div style="width:<?php print_r($cur_percent); ?>%"></div></div>
     </div>
     <div style="position:absolute; top:44px; right:5%; width: 270px; height: 10px; font-size: 0.8em; text-align: center;">
         This month donations: <?php print_r($cur_amount); ?> / 500 &euro;
     </div>
-    <?php } ?>
+<?php } ?>
 
     <div id="subheader" class="container_16">
         <div id="breadcrump" class="grid_12 alpha">
@@ -268,7 +256,6 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
 <?php       } ?>
         </div>
     </div>
-<?php } ?>
 
     <!-- Start: Main Content Area -->
     <div id="content" class="container_16 content-wrapper">
