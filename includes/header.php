@@ -141,7 +141,7 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
             display: block;
         }
         .img_clickable_overlay {
-            position: absolute;
+            position: fixed;
             top: 0px;
             left: 0px;
             width: 100%;
@@ -159,8 +159,18 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
             display: block;
         }
         .img_clickable_overlay > img {
+            /*
             display: block;
             margin: 0 auto;
+            */
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-width: 100%;
+            max-height: 100%;
         }
     </style>
 <?php } ?>
