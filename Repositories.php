@@ -5,7 +5,8 @@ $PAGE_SOURCE_1 = ARRAY("/Repositories");
 $PAGE_SOURCE_2 = ARRAY("Repositories");
 include_once("includes/header.php");
 
-$DEBIAN_PACKAGE_URL = "https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_10.0.2_all.deb";
+$DEBIAN_PACKAGE     = "kxstudio-repos_10.0.2_all.deb"
+$DEBIAN_PACKAGE_URL = "https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/" . $DEBIAN_PACKAGE;
 ?>
 
 <div class="box box-description">
@@ -58,7 +59,7 @@ sudo dpkg --purge kxstudio-repos-gcc5
 wget <?php echo $DEBIAN_PACKAGE_URL . "\n"; ?>
 
 <span style="color: rgb(110, 110, 110);"># Install it</span>
-sudo dpkg -i <?php echo $DEBIAN_PACKAGE_URL . "\n"; ?>
+sudo dpkg -i <?php echo $DEBIAN_PACKAGE . "\n"; ?>
 </pre>
 
 <p>
