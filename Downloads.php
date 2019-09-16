@@ -48,7 +48,9 @@ include_once("includes/header.php");
     <li><b>Source Code Releases</b></li>
     <p>
         Software developed by the KXStudio Team, released as source tarball so that distros other than Ubuntu (or advanced users) can pick it up.<br/>
-        If you're running a Debian or Ubuntu based system, please use the <a href="<?php echo $ROOT; ?>/Repositories">KXStudio Repositories</a> instead.
+        If you're running a Debian or Ubuntu based system, please use the <a href="/Repositories">KXStudio Repositories</a> instead.<br/>
+        If you rather see our git repos (for a list of commits for example) check out
+            <a href="https://git.kx.studio/" class="external" rel="nofollow" target="_blank">https://git.kx.studio/</a>.
     </p>
     <p class="p_extra_spaced">
         <b>Downloads:</b><br/>
@@ -80,7 +82,7 @@ include_once("includes/header.php");
     </p>
     <p>
         By using QtCurve, our theme can perfectly match Gtk2, Qt3, KDE3, Qt4 and KDE4 applications.<br/>
-        See the <a href="<?php echo $ROOT; ?>/Artwork">KXStudio Artwork</a> section for screenshots of various Desktop Environments using the KXStudio theme.<br/>
+        See the <a href="/Artwork">KXStudio Artwork</a> section for screenshots of various Desktop Environments using the KXStudio theme.<br/>
     </p>
     <p class="p_extra_spaced">
         <b>Downloads:</b><br/>
