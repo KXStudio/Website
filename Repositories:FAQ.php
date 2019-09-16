@@ -14,7 +14,6 @@ include_once("includes/header.php");
         You might also want to check:
     </p>
     <ul>
-        <li><a href="<?php echo $ROOT; ?>/Repositories">General information and how to activate</a></li>
         <li><a href="<?php echo $ROOT; ?>/Repositories:Applications">Applications in the repositories</a></li>
         <li><a href="<?php echo $ROOT; ?>/Repositories:Plugins">Plugins in the repositories</a></li>
     </ul>
