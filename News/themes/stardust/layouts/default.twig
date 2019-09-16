@@ -8,7 +8,7 @@
 
     <title>KXStudio News</title>
 
-    <link rel="copyright" href="http://creativecommons.org/licenses/publicdomain/" />
+    <link rel="copyright" href="https://creativecommons.org/publicdomain/zero/1.0/" />
     <link rel="stylesheet" href="../css/style.fluid.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
     <link rel="icon" type="image/png" href="../images/ico_kxstudio.png" />
@@ -18,76 +18,8 @@
     $theme.stylesheets
     $theme.javascripts
 ${ trigger.call("head") }
-    <script type="text/javascript">
-        function closeAllMenus(){
-            var objSoftwareMenu     = document.getElementById("div_menuSoftware");
-            var objRepositoriesMenu = document.getElementById("div_menuRepositories");
-            var objCommunityMenu    = document.getElementById("div_menuCommunity");
-
-            if (objSoftwareMenu.style.visibility == "visible")
-                objSoftwareMenu.style.visibility = "hidden";
-
-            if (objRepositoriesMenu.style.visibility == "visible")
-                objRepositoriesMenu.style.visibility = "hidden";
-
-            if (objCommunityMenu.style.visibility == "visible")
-                objCommunityMenu.style.visibility = "hidden";
-        };
-
-        function menuItemClicked(event, menu, itemName){
-            event.stopPropagation();
-
-            closeAllMenus();
-
-            //if (menu.style.visibility != "visible")
-            {
-                var leftPos = document.getElementById(itemName).getBoundingClientRect().left - 1;
-                menu.style.left       = "" + leftPos + "px";
-                menu.style.visibility = "visible";
-            }
-            //else
-            //{
-            //    menu.style.visibility = "hidden";
-            //}
-
-            return false;
-        };
-
-        function bodyClicked(){
-            closeAllMenus();
-            return true;
-        };
-
-        function itemSoftwareClicked(event)    { return menuItemClicked(event, document.getElementById("div_menuSoftware"),     "item-soft");      };
-        function itemRepositoriesClicked(event){ return menuItemClicked(event, document.getElementById("div_menuRepositories"), "item-repos");     };
-        function itemCommunityClicked(event)   { return menuItemClicked(event, document.getElementById("div_menuCommunity"),    "item-community"); };
-
-    </script>
 </head>
-<body class="mediawiki ltr ns-0 ns-subject skin-bentofluid" onClick="return bodyClicked();">
-    <!-- Software sub menu -->
-    <div id="div_menuSoftware" class="div_menuDropdown">
-        <p><a href="/Applications"><img src="/images/ico_cadence.png" alt=""/> &nbsp; Applications</a></p>
-        <p><a href="/Plugins"><img src="/images/ico_distrho.png" alt=""/> &nbsp; Plugins</a></p>
-    </div>
-    <!-- Repositories sub menu -->
-    <div id="div_menuRepositories" class="div_menuDropdown">
-        <p><a href="/Repositories">About</a></p>
-        <p><a href="/Repositories:Applications">Applications (in Repo)</a></p>
-        <p><a href="/Repositories:Plugins">Plugins (in Repo)</a></p>
-    </div>
-    <!-- Support sub menu -->
-    <div id="div_menuSupport" class="div_menuDropdown">
-        <p><a href="/Documentation">Documentation</a></p>
-    </div>
-    <!-- Community sub menu -->
-    <div id="div_menuCommunity" class="div_menuDropdown">
-        <p><a href="https://discord.gg/GHuycpX" class="external" rel="nofollow" target="_blank"><img src="/images/ico_discord.png" alt=""/> &nbsp; Discord Server</a></p>
-        <p><a href="http://webchat.freenode.net/?channels=#kxstudio,#opensourcemusicians" class="external" rel="nofollow" target="_blank"><img src="/images/ico_chat.png" alt=""/> &nbsp; IRC Channel</a></p>
-        <p><a href="http://linuxmusicians.com/viewforum.php?f=47" class="external" rel="nofollow" target="_blank"><img src="/images/ico_forum.png" alt=""/> &nbsp; Web Forums</a></p>
-        <p><a href="https://soundcloud.com/search/sounds?q=kxstudio" class="external" rel="nofollow" target="_blank"><img src="/images/ico_soundcloud.png" alt=""/> &nbsp; Songs</a></p>
-    </div>
-
+<body class="mediawiki ltr ns-0 ns-subject skin-bentofluid">
     <!-- Top link -->
     <a name="Top" id="Top"></a>
 
@@ -97,12 +29,45 @@ ${ trigger.call("head") }
             <a id="header-logo" href="/">
                 <img src="../images/header-logo_mod.png" width="46" height="26" alt="Header Logo"/>
             </a>
-            <a id="header-home" href="/" style="font-size:1.2em">Home</a>
+            <a id="header-home" href="/">Home</a>
             <ul id="global-navigation">
                 <li id="item-news"><a href="/News">News</a></li>
-                <li id="item-soft"><a href="/Applications" onClick="return itemSoftwareClicked(event);">Software &#9660;</a></li>
-                <li id="item-repos"><a href="/Repositories" onClick="return itemRepositoriesClicked(event);">Repositories &#9660;</a></li>
-                <li id="item-community"><a href="/Documentation" onClick="return itemCommunityClicked(event);">Community &#9660;</a></li>
+                <li id="item-soft" class="item-menu">
+                    <a href="/Applications">Software &#9660;</a>
+                    <div class="item-menu-children">
+                        <p><a href="/Applications"><img src="/images/ico_cadence.png" alt=""/> &nbsp; Applications</a></p>
+                        <p><a href="/Plugins"><img src="/images/ico_distrho.png" alt=""/> &nbsp; Plugins</a></p>
+                    </div>
+                </li>
+                <li id="item-repos" class="item-menu">
+                    <a href="/Repositories">Repositories &#9660;</a>
+                    <div class="item-menu-children">
+                        <p><a href="/Repositories">About / How-to</a></p>
+                        <p><a href="/Repositories:Applications">Applications (in Repo)</a></p>
+                        <p><a href="/Repositories:Plugins">Plugins (in Repo)</a></p>
+                        <p><a href="/Repositories:FAQ">FAQ</a></p>
+                    </div>
+                </li>
+                <li id="item-community" class="item-menu">
+                    <a href="/Documentation">Community &#9660;</a>
+                    <div class="item-menu-children">
+                        <p>
+                            <a href="https://webchat.freenode.net/?channels=#kxstudio,#opensourcemusicians" class="external" rel="nofollow" target="_blank">
+                                <img src="/images/ico_chat.png" width="16px" height="16px" alt=""/> &nbsp; IRC Channel
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://chat.kx.studio/" class="external" rel="nofollow" target="_blank">
+                                <img src="/images/ico_rocketchat.png" width="16px" height="16px" alt=""/> &nbsp; Rocket Chat
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://soundcloud.com/search/sounds?q=kxstudio" class="external" rel="nofollow" target="_blank">
+                                <img src="/images/ico_soundcloud.png" width="16px" height="16px" alt=""/> &nbsp; Songs
+                            </a>
+                        </p>
+                    </div>
+                </li>
                 <li id="item-documentation"><a href="/Documentation">Documentation</a></li>
                 <li id="item-donate"><a href="/Donations">Donations</a></li>
                 <li id="item-downloads"><a href="/Downloads">Downloads</a></li>

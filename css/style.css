@@ -432,35 +432,37 @@ fieldset table {
     background:none repeat scroll 0 0 transparent;
 }
 
-.div_menuDropdown {
-    position: absolute;
-    top: 30px;
-    left: 0px;
-    background-color: #111111;
-    border-top: 1px solid #222222;
-    padding: 0px;
-    visibility: hidden;
-    text-decoration: none;
-    z-index: 99;
+.item-menu:hover > .item-menu-children {
+    display: block;
 }
 
-.div_menuDropdown p {
+.item-menu-children {
+    position: absolute;
+    display: none;
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+    top: 30px;
+    background-color: #111111;
+    border-top: 1px solid #222222;
+}
+
+.item-menu-children p {
+    margin: 0;
     color: #F0F0F0;
-    margin: 0 0 0 0;
     padding-top: 4px;
     padding-bottom: 4px;
-    padding-left: 16px;
     padding-right: 16px;
     border: 1px solid #222222;
     border-top: 0px;
 }
 
-.div_menuDropdown a {
+.item-menu-children a {
      color: #F0F0F0;
      text-decoration: none;
 }
 
-.div_menuDropdown a:hover, .div_menuDropdown a:focus {
+.item-menu-children a:hover, .div_menuDropdown a:focus {
      color: #6464E6;
 }
 
