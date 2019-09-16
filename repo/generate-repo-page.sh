@@ -79,7 +79,7 @@ for PACKAGE in ${PACKAGES[@]}; do
         fi
     fi
     if [ -n "${SCREENSHOT}" ]; then
-        echo "<div class=\"img_clickable img_thumb_150\"><img src=\"/repo/screenshots/${SCREENSHOT}.png\" alt=\"${PACKAGE}\"/>"
+        echo "<div class=\"img_clickable img_thumb_150\"><img src=\"/repo/screenshots/${SCREENSHOT}.png\" alt=\"${PACKAGE}\">"
         echo "<div class=\"img_clickable_overlay\"><img src=\"/repo/screenshots/${SCREENSHOT}.png\" alt=\"${PACKAGE}\"/></div>"
         echo "</div>"
     else
