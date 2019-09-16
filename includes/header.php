@@ -134,6 +134,34 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
         tbody > tr:first-child > td:last-child {
             font-weight: bold;
         }
+        .img_clickable:hover {
+            cursor: pointer;
+        }
+        .img_clickable:active > .img_clickable_overlay {
+            display: block;
+        }
+        .img_clickable_overlay {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            min-height: 100%;
+            background-color: black;
+            background-color: rgba(11, 11, 11, 0.75);
+            z-index: 1;
+            display: none;
+        }
+        .img_clickable_overlay:active {
+            display: none !important;
+        }
+        .img_clickable_overlay:hover {
+            cursor: initial;
+            display: block;
+        }
+        .img_clickable_overlay > img {
+            display: block;
+            margin: 0 auto;
+        }
     </style>
 <?php } ?>
 </head>
