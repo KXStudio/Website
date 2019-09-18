@@ -13,6 +13,7 @@ fi
 
 PACKAGES_ARCHS=("amd64" "arm64" "armhf" "i386")
 PACKAGES_BLACKLIST=("cadence-unity-support" "calf-ladspa" "carla-lv2" "carla-vst" "carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" "lv2vst")
+PACKAGES_WHITELIST=("cadence" "catarina" "catia" "claudia")
 PACKAGES_BASE_URL="http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/"
 
 rm -f Packages.gz Packages
@@ -26,6 +27,17 @@ function is_blacklisted() {
     local TEST="${1}"
     local PACKAGE
     for PACKAGE in ${PACKAGES_BLACKLIST[@]}; do
+        if [ ${TEST} = ${PACKAGE} ]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
+function is_whitelisted() {
+    local TEST="${1}"
+    local PACKAGE
+    for PACKAGE in ${PACKAGES_WHITELIST[@]}; do
         if [ ${TEST} = ${PACKAGE} ]; then
             return 0
         fi
@@ -58,7 +70,7 @@ for PACKAGE in ${PACKAGES[@]}; do
     fi
     PACKAGE_FILENAME=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Filename: ","")')
 
-    if echo "${PACKAGE_FILENAME}" | grep -q "_all.deb"; then
+    if echo "${PACKAGE_FILENAME}" | grep -q "_all.deb" && ! is_whitelisted "${PACKAGE}"; then
         continue
     fi
 
@@ -136,10 +148,14 @@ for PACKAGE in ${PACKAGES[@]}; do
         fi
     fi
     echo "<tr><td>Downloads:</td><td>"
-    for ARCH in ${PACKAGES_ARCHS[@]}; do
-        PACKAGE_FILENAME_ARCHED=$(echo "${PACKAGE_FILENAME}" | sed "s/_amd64.deb/_${ARCH}.deb/g")
-        echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME_ARCHED}\" target=\"_blank\">${ARCH}</a>&nbsp;&nbsp;"
-    done
+    if echo "${PACKAGE_FILENAME}" | grep -q "_all.deb"
+            echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME}\" target=\"_blank\">all</a>&nbsp;&nbsp;"
+    else
+        for ARCH in ${PACKAGES_ARCHS[@]}; do
+            PACKAGE_FILENAME_ARCHED=$(echo "${PACKAGE_FILENAME}" | sed "s/_amd64.deb/_${ARCH}.deb/g")
+            echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME_ARCHED}\" target=\"_blank\">${ARCH}</a>&nbsp;&nbsp;"
+        done
+    fi
     if [ -n "${PACKAGE_DATA}" ]; then
         PACKAGE_FILENAME_DATA=$(echo "${PACKAGE_FILENAME}" | sed "s|/${PACKAGE}_|/${PACKAGE_DATA}_|g" | sed "s/_amd64.deb/_all.deb/g")
         echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME_DATA}\" target=\"_blank\">data</a>"
