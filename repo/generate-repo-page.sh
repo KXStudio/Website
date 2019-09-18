@@ -148,7 +148,7 @@ for PACKAGE in ${PACKAGES[@]}; do
         fi
     fi
     echo "<tr><td>Downloads:</td><td>"
-    if echo "${PACKAGE_FILENAME}" | grep -q "_all.deb"
+    if echo "${PACKAGE_FILENAME}" | grep -q "_all.deb"; then
             echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME}\" target=\"_blank\">all</a>&nbsp;&nbsp;"
     else
         for ARCH in ${PACKAGES_ARCHS[@]}; do
