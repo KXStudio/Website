@@ -13,7 +13,7 @@ fi
 
 PACKAGES_ARCHS=("amd64" "arm64" "armhf" "i386")
 PACKAGES_BLACKLIST=("cadence-unity-support" "calf-ladspa" "carla-lv2" "carla-vst" "carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" "lv2vst")
-PACKAGES_WHITELIST=("cadence" "catarina" "catia" "claudia")
+PACKAGES_WHITELIST=("cadence" "catia" "claudia")
 PACKAGES_BASE_URL="http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/"
 
 rm -f Packages.gz Packages
@@ -118,7 +118,11 @@ for PACKAGE in ${PACKAGES[@]}; do
             PACKAGE_DATA_DETAILS=$(cat Packages | tail -n +${PACKAGE_DATA_LINESTART})
         fi
         PACKAGE_DATA_SIZE=$(echo "${PACKAGE_DATA_DETAILS}" | grep -v "Installed-Size:" | awk 'sub("Size: ","")')
-        echo "+ $((${PACKAGE_DATA_SIZE} / 1024 / 1024))Mb (data)"
+        if [ ${PACKAGE_DATA_SIZE} -gt 999999 ]; then
+            echo "+ $((${PACKAGE_DATA_SIZE} / 1024 / 1024))Mb (data)"
+        else
+            echo "+ $((${PACKAGE_DATA_SIZE} / 1024))Kb (data)"
+        fi
     fi
     echo "</td></tr>"
     if [ ${REPO_TARGET} = "plugins" ]; then
