@@ -57,7 +57,7 @@ function has_data_package() {
 }
 
 for PACKAGE in ${PACKAGES[@]}; do
-    if is_blacklisted ${PACKAGE}; then
+    if is_blacklisted ${PACKAGE} || echo "${PACKAGE}" | grep -q "-static_"; then
         continue
     fi
 
