@@ -12,7 +12,7 @@ if [ -z "${REPO_TARGET}" ]; then
 fi
 
 PACKAGES_ARCHS=("amd64" "arm64" "armhf" "i386")
-PACKAGES_BLACKLIST=("cadence-unity-support" "calf-ladspa" "carla-lv2" "carla-vst" "carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" "lv2vst")
+PACKAGES_BLACKLIST=("cadence-unity-support" "calf-ladspa" "carla-lv2" "carla-vst" "carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" "lv2vst" "mod-ui-common")
 PACKAGES_WHITELIST=("cadence" "catia" "claudia")
 PACKAGES_BASE_URL="http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/"
 
