@@ -71,14 +71,14 @@ include_once("includes/header.php");
     This is to prevent breakage of existing systems, mostly for keeping "old" packages installable.<br/>
     Once you update to the new repositories, you will not be able to "apt-get install" packages that were present in the old repositories but are not yet in the new ones.<br/>
     This is intentional. There are quite a few packages that I will not be supporting anymore, and thus won't end up in the repos.<br/>
-    When you move to the new repos, you will be able to remove the kxstudio speciic version of package and then install whatever version someone else provides.<br/>
+    When you move to the new repos, you will be able to remove the KXStudio specific version of package and then install whatever version someone else provides.<br/>
     I will not be uploading packages to the new repositories that I do not intend to keep updated.
     </li>
 
     <li>
     armhf and arm64 are now supported targets, taking Raspberry Pi 3 as the minimum specs<br/>
     <br style="line-height:0.25em"/>
-    With this, the repos will support 32 and 64bit intel-based architecture, plus 32 and 64bit ARM.
+    With this, the repos will support 32 and 64bit Intel-based architecture, plus 32 and 64bit ARM.
     </li>
 
     <li>
@@ -120,7 +120,7 @@ include_once("includes/header.php");
 
 <p>
     PS: You might be wondering why I am writing this text in first person, contrary to other past posts.<br/>
-    This is mainly because, well, KSXtudio was and still is a one-person project (with the occasional help here and there for small things).<br/>
+    This is mainly because, well, KXStudio was and still is a one-person project (with the occasional help here and there for small things).<br/>
     I am making an effort to not write "marketing speech"-like anymore, just that.<br/>
 </p>
 
