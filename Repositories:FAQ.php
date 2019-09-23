@@ -89,6 +89,14 @@ This entails, for example:
       This is because old hardware does not always have SSE2 support, so it becomes risky to enable it.</li>
 </ul>
 
+<h5>Why are packages prefixed with "5:" that bumps it over regular packages from other sources?</h5>
+<p>
+This is for protection of those running the KXStudio repositories in rolling-release style distributions.<br/>
+An update from the distribution which does not follow KXStudio rules is a potential source of issues (see the points above).<br/>
+Better to have something stable that you know won't break during updates.<br/>
+(The focus on plugins in the repos means it is much less work to maintain them, and this critical. The KXStudio repos should be up-to-date as much as possible)
+</p>
+
 <p><br/></p>
 
 <?php

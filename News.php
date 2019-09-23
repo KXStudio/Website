@@ -9,25 +9,119 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
-    <span style="font-size: 20px">&gt; Current KXStudio status</span><br/>
-    On <i>2019-08-20</i> by<i> falkTX</i>
+    <span style="font-size: 20px">&gt; The KXStudio are (slowly) coming back</span><br/>
+    On <i>2019-09-23</i> by<i> falkTX</i>
 </p>
 
 <p>
-    2014 was 5 years ago.<br/>
-    5 year LTS for official support from Canonical.<br/>
+    Greetings from Portugal.<br/>
+    After some time setting up in a new country, thinking and planning, I (falkTX) decided a few things in regards to the KXStudio project.<br/>
 </p>
 
 <p>
-    There are no new ISO images being prepared right now.<br/>
-    The repositories still keep working fine, though gcc5 now could be made mandatory.<br/>
-    There will be no more uploads for KXStudio repos on the non-gcc5 repo variant.<br/>
+    First of all, if you have not noticed, the KXStudio ISO images were taken down.<br/>
+    They were using Ubuntu 14.04 as base, that while still works in many cases, starts to show its age.<br/>
+    The fact that I can no longer run it myself (due to a new GPU that is unsupported in its older OS stack) forced me to finally move to something new.<br/>
+    <br style="line-height:0.5em"/>
+    Wherever new ISOs will come back again is undecided at this point.<br/>
+    They are not a priority at all right now, so if I get to make them again it is not going to be this year or the beginning of the next.<br/>
+    I still like KDE/Plasma the best in terms of desktop experience, so that would remain.<br/>
+    Plasma and KDE ecosystem is changing too fast, it does not make it easy for what I want in KXStudio.<br/>
+    Perhaps when Qt6 is out, KDE/Plasma5 will slow down a bit, we'll see...<br/>
 </p>
 
 <p>
-    Currently in plans where to move forward, nothing decided yet, focus is on software rather than packages.<br/>
-    Expect usual releases.<br/>
-    jack2 coming next, and dpf stuff follows.<br/>
+    Anyway, the bigger news is that the KXStudio repositories are coming back!<br/>
+    (for those that do not know, KXStudio has repositories that sit on top of any Debian or Ubuntu system and provides updates and new packages related to audio/music production)<br/>
+    <br style="line-height:0.5em"/>
+    To be honest, they are already back right now :), but not in a state that matches what they used to be before.<br/>
+    I am in the process of bringing over all the relevant packages slowly. A few packages per day so in a few weeks we should be good again. :)<br/>
+    <br style="line-height:0.5em"/>
+    Anyway, a new repository setup was really needed.<br/>
+    Previously, the repositories were mixing packages built in 3 different Ubuntu versions and there was a separate gcc5 variant of the repos with a few packages that use the new libstc++ ABI introduced in gcc5.1.<br/>
+    This was a pain to manage, so better to rethink it.<br/>
+    I kept things somewhat updated over the years, and did not change/break the repositories in a meaningful way because 14.04 was still supported and what I used daily anyway.<br/>
+    Now that enough time has passed and 14.04 is officially EOL, perfect chance to rework the repositories for the future!<br/>
+</p>
+
+<p>
+    Here is the current situation:
+</p>
+    
+<ul>
+    <li>
+    The new repositories require at least Ubuntu 18.04 or Debian 10 (or equivalent)
+    </li>
+
+    <li>
+    There is a single deb file to be installed in order to activate the repositories.<br/>
+    <br style="line-height:0.25em"/>
+    (hopefully no more libstc++ ABI breakages again, please...?)
+    </li>
+
+    <li>
+    The old repositories are considered legacy and will no longer be updated.<br/>
+    <br style="line-height:0.25em"/>
+    Packages included on them will still remain available for some time.
+    </li>
+
+    <li>
+    You will not be automatically updated to the new repositories, it has to be done manually<br/>
+    <br style="line-height:0.25em"/>
+    This is to prevent breakage of existing systems, mostly for keeping "old" packages installable.<br/>
+    Once you update to the new repositories, you will not be able to "apt-get install" packages that were present in the old repositories but are not yet in the new ones.<br/>
+    This is intentional. There are quite a few packages that I will not be supporting anymore, and thus won't end up in the repos.<br/>
+    When you move to the new repos, you will be able to remove the kxstudio speciic version of package and then install whatever version someone else provides.<br/>
+    I will not be uploading packages to the new repositories that I do not intend to keep updated.
+    </li>
+
+    <li>
+    armhf and arm64 are now supported targets, taking Raspberry Pi 3 as the minimum specs<br/>
+    <br style="line-height:0.25em"/>
+    With this, the repos will support 32 and 64bit intel-based architecture, plus 32 and 64bit ARM.
+    </li>
+
+    <li>
+    Audio plugins (including standalone synths and FX) are the focus of the repos.<br/>
+    <br style="line-height:0.25em"/>
+    General applications and tools will not be supported anymore.<br/>
+    This is mainly to reduce the burden of maintaining the repos, as applications often have very complex dependencies compared to plugins (some are actually quite difficult to build).<br/>
+    I will be packaging a few that I personally use, or that have stalled in feature development.
+    </li>
+
+    <li>
+    All avaialable application and plugin packages are listed
+    <a href="https://kx.studio/Repositories:Applications" target="_blank">here</a>
+    and
+    <a href="https://kx.studio/Repositories:Plugins" target="_blank">here</a>
+    respectively.<br/>
+    <br style="line-height:0.25em"/>
+    There are direct deb files to download from those pages, for those that want something specific in the repos but do not want to enable the full thing.<br/>
+    These 2 pages are automatically generated, and fetch their contents directly from the repositories.<br/>
+    </li>
+
+    <li>
+    There is a page dedicated to questions about the repositories
+    <a href="https://kx.studio/Repositories:FAQ" target="_blank">here</a>.<br/>
+    <br style="line-height:0.25em"/>
+    I will be updating this page as more questions appear.
+    </li>
+</ul>
+
+<p>
+    Speaking of updates, the website needs some touches here and there...<br/>
+    Already started with a few, like removing the home carousel and all use of JavaScript, plus updating the pages related to the repositories obviously. :)<br/>
+    It is a moving target as pretty much all websites, so don't be surprised to see changes, though they won't be that substantial..
+</p>
+
+<p>
+    That is all for now, thank you.<br/>
+</p>
+
+<p>
+    PS: You might be wondering why I am writing this text in first person, contrary to other past posts.<br/>
+    This is mainly because, well, KSXtudio was and still is a one-person project (with the occasional help here and there for small things).<br/>
+    I am making an effort to not write "marketing speech"-like anymore, just that.<br/>
 </p>
 
 <hr/>
