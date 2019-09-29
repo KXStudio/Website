@@ -103,7 +103,7 @@ for PACKAGE in ${PACKAGES[@]}; do
     echo "<tr><td>Package Name:</td><td>${PACKAGE}</td></tr>"
     echo "<tr><td>Description:</td><td>${PACKAGE_DESCRIPTION}</td></tr>"
     echo "<tr><td>Version:</td><td>${PACKAGE_VERSION}</td></tr>"
-    echo "<tr><td>Installed size:</td><td>"
+    echo "<tr><td>Expected size:</td><td>"
     if [ ${PACKAGE_SIZE} -gt 999999 ]; then
         echo "$((${PACKAGE_SIZE} / 1024 / 1024))Mb"
     else
