@@ -12,7 +12,7 @@ if [ -z "${REPO_TARGET}" ]; then
 fi
 
 PACKAGES_ARCHS=("amd64" "arm64" "armhf" "i386")
-PACKAGES_BLACKLIST=("cadence-unity-support" "calf-ladspa" "carla-lv2" "carla-vst" "carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" "lv2vst" "mod-ui-common")
+PACKAGES_BLACKLIST=("carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" "lv2vst")
 PACKAGES_WHITELIST=("cadence" "catia" "claudia")
 PACKAGES_BASE_URL="http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/"
 
@@ -20,6 +20,7 @@ rm -f Packages.gz Packages
 
 wget -q http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/dists/bionic/main/binary-amd64/Packages.gz
 gzip -d Packages.gz
+echo "carla-bridge-win32" >> Packages
 
 PACKAGES=$(cat Packages | grep "Package: " | sed "s/Package: //g" | sort)
 
@@ -77,7 +78,7 @@ for PACKAGE in ${PACKAGES[@]}; do
     PACKAGE_DATA=$(has_data_package "${PACKAGE}" && echo "${PACKAGE}-data" || echo)
     PACKAGE_DESCRIPTION=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Description: ","")')
     PACKAGE_PROVIDES=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Provides: ","")')
-    PACKAGE_SIZE=$(echo "${PACKAGE_DETAILS}" | grep -v "Installed-Size:" | awk 'sub("Size: ","")')
+    PACKAGE_SIZE=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Installed-Size: ","")')
     PACKAGE_VERSION=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Version: ","")' | cut -d ':' -f 2 | cut -d '-' -f 1)
 
     echo "<div class=\"repository-package\">"
@@ -103,7 +104,7 @@ for PACKAGE in ${PACKAGES[@]}; do
     echo "<tr><td>Package Name:</td><td>${PACKAGE}</td></tr>"
     echo "<tr><td>Description:</td><td>${PACKAGE_DESCRIPTION}</td></tr>"
     echo "<tr><td>Version:</td><td>${PACKAGE_VERSION}</td></tr>"
-    echo "<tr><td>Expected size:</td><td>"
+    echo "<tr><td>Installed size:</td><td>"
     if [ ${PACKAGE_SIZE} -gt 999999 ]; then
         echo "$((${PACKAGE_SIZE} / 1024 / 1024))Mb"
     else
@@ -117,7 +118,7 @@ for PACKAGE in ${PACKAGES[@]}; do
         else
             PACKAGE_DATA_DETAILS=$(cat Packages | tail -n +${PACKAGE_DATA_LINESTART})
         fi
-        PACKAGE_DATA_SIZE=$(echo "${PACKAGE_DATA_DETAILS}" | grep -v "Installed-Size:" | awk 'sub("Size: ","")')
+        PACKAGE_DATA_SIZE=$(echo "${PACKAGE_DATA_DETAILS}" | awk 'sub("Installed-Size: ","")')
         if [ ${PACKAGE_DATA_SIZE} -gt 999999 ]; then
             echo "+ $((${PACKAGE_DATA_SIZE} / 1024 / 1024))Mb (data)"
         else
@@ -152,7 +153,11 @@ for PACKAGE in ${PACKAGES[@]}; do
         fi
     fi
     echo "<tr><td>Downloads:</td><td>"
-    if echo "${PACKAGE_FILENAME}" | grep -q "_all.deb"; then
+    if echo "${PACKAGE_FILENAME}" | grep -q "carla-bridge-win32_"; then
+            echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME}\" target=\"_blank\">i386</a>&nbsp;&nbsp;"
+    elif echo "${PACKAGE_FILENAME}" | grep -q "carla-bridge-win64_"; then
+            echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME}\" target=\"_blank\">amd64</a>&nbsp;&nbsp;"
+    elif echo "${PACKAGE_FILENAME}" | grep -q "_all.deb"; then
             echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME}\" target=\"_blank\">all</a>&nbsp;&nbsp;"
     else
         for ARCH in ${PACKAGES_ARCHS[@]}; do
