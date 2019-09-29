@@ -90,7 +90,7 @@ include_once("includes/header.php");
     </li>
 
     <li>
-    All avaialable application and plugin packages are listed
+    All available application and plugin packages are listed
     <a href="https://kx.studio/Repositories:Applications" target="_blank">here</a>
     and
     <a href="https://kx.studio/Repositories:Plugins" target="_blank">here</a>
