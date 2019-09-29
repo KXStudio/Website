@@ -20,7 +20,6 @@ rm -f Packages.gz Packages
 
 wget -q http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/dists/bionic/main/binary-amd64/Packages.gz
 gzip -d Packages.gz
-echo "carla-bridge-win32" >> Packages
 
 PACKAGES=$(cat Packages | grep "Package: " | sed "s/Package: //g" | sort)
 
