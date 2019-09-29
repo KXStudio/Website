@@ -78,7 +78,7 @@ for PACKAGE in ${PACKAGES[@]}; do
     PACKAGE_DATA=$(has_data_package "${PACKAGE}" && echo "${PACKAGE}-data" || echo)
     PACKAGE_DESCRIPTION=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Description: ","")')
     PACKAGE_PROVIDES=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Provides: ","")')
-    PACKAGE_SIZE=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Installed-Size: ","")')
+    PACKAGE_SIZE=$(echo "${PACKAGE_DETAILS}" | grep -v "Installed-Size:" | awk 'sub("Size: ","")')
     PACKAGE_VERSION=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Version: ","")' | cut -d ':' -f 2 | cut -d '-' -f 1)
 
     echo "<div class=\"repository-package\">"
@@ -118,7 +118,7 @@ for PACKAGE in ${PACKAGES[@]}; do
         else
             PACKAGE_DATA_DETAILS=$(cat Packages | tail -n +${PACKAGE_DATA_LINESTART})
         fi
-        PACKAGE_DATA_SIZE=$(echo "${PACKAGE_DATA_DETAILS}" | awk 'sub("Installed-Size: ","")')
+        PACKAGE_DATA_SIZE=$(echo "${PACKAGE_DATA_DETAILS}" | grep -v "Installed-Size:" | awk 'sub("Size: ","")')
         if [ ${PACKAGE_DATA_SIZE} -gt 999999 ]; then
             echo "+ $((${PACKAGE_DATA_SIZE} / 1024 / 1024))Mb (data)"
         else
