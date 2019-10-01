@@ -168,7 +168,7 @@ for PACKAGE in ${PACKAGES[@]}; do
         PACKAGE_FILENAME_DATA=$(echo "${PACKAGE_FILENAME}" | sed "s|/${PACKAGE}_|/${PACKAGE_DATA}_|g" | sed "s/_amd64.deb/_all.deb/g")
         echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME_DATA}\" target=\"_blank\">data</a>"
     fi
-    echo "</tr>"
+    echo "</td></tr>"
     echo "</table></div></div>"
 
     # separator
