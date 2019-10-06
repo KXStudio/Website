@@ -47,10 +47,16 @@ include_once("includes/header.php");
 <p>
     The situation regarding development of JACK and JACK1 considered legacy has not changed since last release 2 years ago.<br/>
     See
-    <a href="https://kx.studio/News/?action=view&amp;url=jack2-1912-release-and-future-plans" target="_blank">
+    <a href="https://kx.studio/News/?action=view&amp;url=jack2-1912-release-and-future-plans">
         https://kx.studio/News/?action=view&amp;url=jack2-1912-release-and-future-plans
     </a>
     for more information.
+</p>
+<p>
+    PS: I will be in Cologne for
+    <a href="https://www.sonoj.org/" target="_blank">Sonoj</a>,
+    giving a talk about "Past, Present and Future of JACK".<br/>
+    There is no registration fee, so please feel free to come by and say hello! :)
 </p>
 
 <hr/>
