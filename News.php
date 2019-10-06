@@ -9,7 +9,7 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
-    <span style="font-size: 20px">&gt; JACK v.1.9.13 release</span><br/>
+    <span style="font-size: 20px">&gt; JACK2 v1.9.13 release</span><br/>
     On <i>2019-10-06</i> by<i> falkTX</i>
 </p>
 <p>
