@@ -9,6 +9,63 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (November 2019)</span><br/>
+    On <i>2019-10-15</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, today is November 15, a Linux/Libre-Audio release day.<br/>
+    I do not have anything to actually release (that is ready anyway), so I thought to instead start something new.<br/>
+</p>
+<p>
+    Every month, starting with this one, we will have a monthly report regarding the latest stuff in KXStudio.<br/>
+    This will involve new releases, package updates to its repositories, important bug-fixes and short-term plans.<br/>
+    So let's begin...
+</p>
+<p>
+    First of all, in case you somehow missed it,
+    <a href="https://kx.studio/News/?action=view&amp;url=jack2-v1913-release">
+        a new JACK2 release is here</a>!<br/>
+    This finally brings meta-data support into JACK2. More information about meta-data in JACK can be found
+    <a href="https://jackaudio.org/metadata/" target="_blank">
+        here</a>.<br/>
+</p>
+<p>
+    On the repositories, "helm" package had an issue where the plugin could not find its own presets.<br/>
+    (This was caused due to KXStudio repositories going ahead on renaming "helm" to "Helm" as the former already exists)<br/>
+    <br style="line-height:0.5em"/>
+    ZynAddSubFX got (re-)added, using its nice and fancy Zyn-Fusion UI.<br/>
+    In the old repositories there was "zynaddsubfx" for old UI, and "zynaddsubfx-git" for the new one.<br/>
+    The "git" package is gone, only "zynaddsubfx" is there now and it has the new UI. +1 for progress!<br/>
+    <br style="line-height:0.5em"/>
+    x42-plugins got updated to 20191013 release, and Patroneo was added.<br/>
+    Patroneo was a tricky one since it uses python libraries. In order to make it a generic package I resorted to cxfreeze which makes it run independent of the system python.<br/>
+</p>
+<p>
+    Coming soon is Carla 2.1-beta1.<br/>
+    The actual software is ready for the beta1 release, but setting up the infrastructure for an updated Qt5 build is taking longer than expected.<br/>
+    The current 2.0 builds use quite an old Qt version: Qt5.5 on macOS, Qt4(!) on Linux, which I do not accept for new releases going forward.<br/>
+    Windows builds are ready to go though, you can find test binaries on Carla's
+    <a href="https://github.com/falkTX/Carla/releases">
+        github</a>.<br/>
+    Once I finish setting up the builds for Linux and macOS, I will make the announcement. Very likely in mid-November.
+</p>
+<p>
+    Finally,
+    <a href="https://www.sonoj.org/" target="_blank">
+        Sonoj
+    </a>
+    is coming!<br/>
+    Sonoj is an annual event/convention in Cologne, Germany, about music production with free and open source software.<br/>
+    It features demonstrations, talks and hands-on workshops.<br/>
+    You can meet like-minded people, learn insider knowledge and tricks, participate in their one-hour production challenge!<br/>
+    It is only a few days from now, so please get ready! :)<br/>
+    I will be doing a talk in Sonoj about the past, present and future of JACK.<br/>
+    So please come and say hi, registration is free!<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; JACK2 v1.9.13 release</span><br/>
     On <i>2019-10-06</i> by<i> falkTX</i>
 </p>
@@ -100,7 +157,7 @@ include_once("includes/header.php");
 <p>
     Here is the current situation:
 </p>
-    
+
 <ul>
     <li>
     The new repositories require at least Ubuntu 18.04 or Debian 10 (or equivalent)
