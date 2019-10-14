@@ -39,8 +39,8 @@ include_once("includes/header.php");
     <br style="line-height:0.5em"/>
     x42-plugins got updated to 20191013 release.<br/>
     <br style="line-height:0.5em"/>
-    Patroneo were added.<br/>
-    these last ones were tricky since they use python libraries.<br/>
+    Fluajho, Patroneo and Vico were added. (nice simple tools from Nils Hilbricht)<br/>
+    These last ones were tricky since they use python libraries.<br/>
     In order to make it a generic package I resorted to cxfreeze which makes it run independent of the system python.<br/>
 </p>
 <p>
