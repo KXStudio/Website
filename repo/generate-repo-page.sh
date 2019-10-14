@@ -153,11 +153,18 @@ for PACKAGE in ${PACKAGES[@]}; do
     fi
     echo "<tr><td>Downloads:</td><td>"
     if echo "${PACKAGE_FILENAME}" | grep -q "carla-bridge-win32_"; then
-            echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME}\" target=\"_blank\">i386</a>&nbsp;&nbsp;"
+        echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME}\" target=\"_blank\">i386</a>&nbsp;&nbsp;"
     elif echo "${PACKAGE_FILENAME}" | grep -q "carla-bridge-win64_"; then
-            echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME}\" target=\"_blank\">amd64</a>&nbsp;&nbsp;"
+        echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME}\" target=\"_blank\">amd64</a>&nbsp;&nbsp;"
+    elif echo "${PACKAGE_FILENAME}" | grep -q "carla-vst-wine_"; then
+        # amd64
+        echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME}\" target=\"_blank\">amd64</a>&nbsp;&nbsp;"
+        # i386
+        PACKAGE_FILENAME_ARCHED=$(echo "${PACKAGE_FILENAME}" | sed "s/_amd64.deb/_i386.deb/g")
+        echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME_ARCHED}\" target=\"_blank\">i386</a>&nbsp;&nbsp;"
+
     elif echo "${PACKAGE_FILENAME}" | grep -q "_all.deb"; then
-            echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME}\" target=\"_blank\">all</a>&nbsp;&nbsp;"
+        echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME}\" target=\"_blank\">all</a>&nbsp;&nbsp;"
     else
         for ARCH in ${PACKAGES_ARCHS[@]}; do
             PACKAGE_FILENAME_ARCHED=$(echo "${PACKAGE_FILENAME}" | sed "s/_amd64.deb/_${ARCH}.deb/g")

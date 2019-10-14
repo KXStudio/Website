@@ -9,6 +9,15 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (December 2019)</span><br/>
+    On <i>2019-11-15</i> by<i> falkTX</i>
+</p>
+
+This is a WIP list of stuff that changed since the last report.
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (November 2019)</span><br/>
     On <i>2019-10-15</i> by<i> falkTX</i>
 </p>
