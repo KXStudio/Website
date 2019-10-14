@@ -37,8 +37,11 @@ include_once("includes/header.php");
     In the old repositories there was "zynaddsubfx" for old UI, and "zynaddsubfx-git" for the new one.<br/>
     The "git" package is gone, only "zynaddsubfx" is there now and it has the new UI. +1 for progress!<br/>
     <br style="line-height:0.5em"/>
-    x42-plugins got updated to 20191013 release, and Patroneo was added.<br/>
-    Patroneo was a tricky one since it uses python libraries. In order to make it a generic package I resorted to cxfreeze which makes it run independent of the system python.<br/>
+    x42-plugins got updated to 20191013 release.<br/>
+    <br style="line-height:0.5em"/>
+    Patroneo were added.<br/>
+    these last ones were tricky since they use python libraries.<br/>
+    In order to make it a generic package I resorted to cxfreeze which makes it run independent of the system python.<br/>
 </p>
 <p>
     Coming soon is Carla 2.1-beta1.<br/>
