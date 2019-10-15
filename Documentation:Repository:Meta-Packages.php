@@ -36,6 +36,11 @@ include_once("includes/header.php");
         </li>
     </ul></li>
 </ul>
+<p>
+    The "collection" is a subset, focusing on just the highlights/best plugins to install out of all LADSPA, DSSI, LV2 and VSTs
+    (where LV2 format is preferred, if available).<br/>
+    Whereas the specific plugin format packages are more complete, they will install all individual packages that contain plugins in that format.
+</p>
 
 <h3><span class="mw-headline" id="RecommendedPackageList">Recommended Meta-Package List</span></h3>
 <p>

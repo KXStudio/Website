@@ -14,7 +14,7 @@ include_once("includes/header.php");
 </p>
 
 This is a WIP list of stuff that changed since the last report.
-
+moony updated to 0.30.0, enable inline display
 <hr/>
 
 <p>
