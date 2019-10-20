@@ -15,6 +15,7 @@ include_once("includes/header.php");
 
 This is a WIP list of stuff that changed since the last report.
 moony updated to 0.30.0, enable inline display
+sudo rm -rf /var/lib/apt/lists/*
 <hr/>
 
 <p>
