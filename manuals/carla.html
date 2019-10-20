@@ -1,0 +1,154 @@
+<div class="sect1">
+<h2 id="_introduction">Introduction</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_about_carla">About Carla</h3>
+<div class="paragraph"><p>Carla is a fully-featured modular audio plugin host, with support for many audio drivers and plugin formats.</p></div>
+<div class="paragraph"><p>It has some nice features like transport control, automation of parameters via MIDI CC and remote control over OSC.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_about_the_user_manual">About the User Manual</h3>
+<div class="paragraph"><p>This Manual was divided into several sections:</p></div>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+Introduction
+</dt>
+<dd>
+<p>
+is the first part of the Manual, we&#8217;re starting with an overview of the application and mowith a few simple tutorials to get the user hands-on with the synthesizer as fast as possible.
+</p>
+</dd>
+<dt class="hdlist1">
+Main Topics
+</dt>
+<dd>
+<p>
+is the second part where we start to cover everything from top to bottom. If you&#8217;re fairly new to Carla, this part should provide you with a comprehensive, yet not overwhelming instruction.
+</p>
+</dd>
+</dl></div>
+</div>
+<div class="sect2">
+<h3 id="_basic_concepts">Basic Concepts</h3>
+<div class="paragraph"><p>Carla is by design a modular audio plugin host.
+This means it will load audio plugins in a modular rather, where each plugin is a module inside a patchbay and you can connect between them and your hardware in order to send signals to the plugins and/or have them generate sound.</p></div>
+<div class="paragraph"><p>In a modular host, the simplest way to achieve sound is by using "generators" (something that either generates sound by itself, or based on user input).</p></div>
+<div class="paragraph"><p>Here is an example of a MIDI keyboard connected to a synth, which is then connected to the output speakers:</p></div>
+<div class="imageblock">
+<div class="content">
+<img src="screenshots/manual/basics_midi_synth.png" alt="screenshots/manual/basics_midi_synth.png" />
+</div>
+</div>
+<div class="sect3">
+<h4 id="_control_voltage">Control Voltage</h4>
+<div class="paragraph"><p>In modular hosts it is common to have CV (Control Voltage) signals.</p></div>
+<div class="paragraph"><p>These are similar to audio, in that they stream at regular intervals (contrary to events which only happen at specific points in time).
+CV are a good option for parameters that require very precise and fast control, as they provide infinite precision (CV changes are sample-accurate and not limited to a specific amount of steps)</p></div>
+</div>
+<div class="sect3">
+<h4 id="_carla_specifics">Carla specifics</h4>
+<div class="paragraph"><p>In Carla, audio and CV connections have blue color, while events (including MIDI) have red color.
+Events are merged into a single port, while audio and CV are separate. For example, stereo audio output consists of 2 independent audio ports.</p></div>
+<div class="paragraph"><p>Audio ports can be patched at will, from any port to any port.
+CV is treated similar to audio (because technically it really is), but you are not allowed to connect audio and CV ports together, for safety reasons.
+Audio and CV ports are constantly streaming data from one side to the other.
+An audio port streams data for a single mono audio channel, while a CV port streams data for a single control/parameter.</p></div>
+<div class="paragraph"><p>Event ports transmit events when they happen (for example, pressing a key on a MIDI keyboard).
+All of MIDI and OSC related events are bundled together in a single event port.</p></div>
+</div>
+<div class="sect3">
+<h4 id="_engine_modes">Engine modes</h4>
+<div class="paragraph"><p>There are 4 types of engine processing modes in Carla:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Single-client: (JACK driver only)
+    Same as Multi-client, except that all JACK ports belong to a single master client.
+    This is needed when a setup doesn&#8217;t support multi-client JACK apps, such as LADISH.
+</p>
+</li>
+<li>
+<p>
+Multi-client: (JACK driver only)
+    Every single plugin is exposed as a new JACK client. Audio, CV and event ports are registered as needed.
+</p>
+</li>
+<li>
+<p>
+Continuous Rack:
+    Plugins are processed in order, from top to bottom.
+</p>
+</li>
+<li>
+<p>
+Patchbay:
+    Modular patchbay mode, just like in JACK Multi-client and many other modular applications.
+    Every plugin gets its own canvas group and ports allowing you to interconnect plugin audio, cv and event ports.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_main_topics">Main Topics</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_user_interface">User Interface</h3>
+</div>
+<div class="sect2">
+<h3 id="_main_window">Main Window</h3>
+<div class="paragraph"><p>When you run Carla you&#8217;ll be presented with this window:</p></div>
+<div class="imageblock">
+<div class="content">
+<img src="screenshots/manual/ui_main.png" alt="screenshots/manual/ui_main.png" />
+</div>
+</div>
+<div class="paragraph"><p>You can see some familiar elements from other applications, like the menu-bar and tool-bar.
+Then you have a side-panel where you will find an integrated filesystem browser (with user bookmarks) and transport controls.</p></div>
+<div class="paragraph"><p>The bigger central area is the working space.
+Here you find the "Rack" where all plugin instances will be shown, the "Patchbay" where you can make connections between the plugins and hardware, and "Logs" where debug or warning messages are logged.</p></div>
+<div class="paragraph"><p>Please note that, under some systems or circunstances, these tabs will not be present.
+When Carla runs as a plugin or under Windows platform, the "Logs" is not visible.
+And when Carla runs as "Carla-Rack" plugin, the "Patchbay" tab is not shown.</p></div>
+<div class="paragraph"><p>The toolbar buttons can also be different depending on the occasion.
+For example, "Save" is not available when running as a plugin, since it is the host responsibility to do that instead.</p></div>
+<div class="sect3">
+<h4 id="_menus">Menus</h4>
+<div class="sect4">
+<h5 id="_file">File</h5>
+<div class="paragraph"><p>In the file menu you can start your project/session from scratch, open existing ones, save and quit/close Carla.</p></div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_engine">Engine</h4>
+<div class="paragraph"><p>In the engine menu you have the chance to start and stop the audio engine.</p></div>
+<div class="paragraph"><p>In the future it is planned to add a direct shortcut to engine settings here.</p></div>
+</div>
+<div class="sect3">
+<h4 id="_plugin">Plugin</h4>
+<div class="paragraph"><p>In the plugin menu is where you find the action to add new plugins into the session.
+You can also remove all plugins from this menu, and trigger a few action to all of them at once (for convenience).</p></div>
+</div>
+<div class="sect3">
+<h4 id="_canvas">Canvas</h4>
+<div class="paragraph"><p>In the canvas menu you find options related to the patchbay canvas view.
+These are to refresh, set zoom level and export the canvas as an image.</p></div>
+<div class="paragraph"><p>When running Carla&#8217;s engine in "Patchbay" mode, you will also find here a "Show Internal" and "Show External" switch.
+This allows to connect the internal patchbay graph into external devices, such as MIDI keyboards and other JACK clients.
+Using the "Show External" switch is how you usually will setup your MIDI devices.</p></div>
+</div>
+<div class="sect3">
+<h4 id="_settings">Settings</h4>
+<div class="paragraph"><p>In the settings menu you can find the action to open Carla&#8217;s settings, as well as a few on/off switches for what to show on screen.
+By default everything is visible, but you can hide stuff if you prefer.</p></div>
+</div>
+<div class="sect3">
+<h4 id="_about">About</h4>
+<div class="paragraph"><p>In the about menu you can open Carla&#8217;s about dialog.</p></div>
+<div class="paragraph"><p>In the future it is planned to have useful links here.</p></div>
+</div>
+</div>
+</div>
+</div>
