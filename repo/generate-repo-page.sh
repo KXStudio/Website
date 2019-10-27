@@ -14,6 +14,7 @@ fi
 PACKAGES_ARCHS=("amd64" "arm64" "armhf" "i386")
 PACKAGES_BLACKLIST=("carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" "lv2vst")
 PACKAGES_WHITELIST=("cadence" "catia" "claudia")
+PACKAGES_SEPARATE_DATA=("hybridreverb2")
 PACKAGES_BASE_URL="http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/"
 
 rm -f Packages.gz Packages
@@ -49,6 +50,17 @@ function has_data_package() {
     local TEST="${1}-data"
     local PACKAGE
     for PACKAGE in ${PACKAGES[@]}; do
+        if [ ${TEST} = ${PACKAGE} ]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
+function has_separate_data_package() {
+    local TEST="${1}"
+    local PACKAGE
+    for PACKAGE in ${PACKAGES_SEPARATE_DATA[@]}; do
         if [ ${TEST} = ${PACKAGE} ]; then
             return 0
         fi
@@ -178,7 +190,11 @@ for PACKAGE in ${PACKAGES[@]}; do
         done
     fi
     if [ -n "${PACKAGE_DATA}" ]; then
-        PACKAGE_FILENAME_DATA=$(echo "${PACKAGE_FILENAME}" | sed "s|/${PACKAGE}_|/${PACKAGE_DATA}_|g" | sed "s/_amd64.deb/_all.deb/g")
+        if has_separate_data_package ${PACKAGE}; then
+            PACKAGE_FILENAME_DATA=$(echo "${PACKAGE_FILENAME}" | sed "s|/${PACKAGE}|/${PACKAGE_DATA}|g" | sed "s/_amd64.deb/_all.deb/g")
+        else
+            PACKAGE_FILENAME_DATA=$(echo "${PACKAGE_FILENAME}" | sed "s|/${PACKAGE}_|/${PACKAGE_DATA}_|g" | sed "s/_amd64.deb/_all.deb/g")
+        fi
         echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME_DATA}\" target=\"_blank\">data</a>"
     fi
     echo "</td></tr>"
