@@ -18,6 +18,8 @@ meson 0.51.2, premake5
 carla-git updated
 drumgizmo updated to 0.8.1
 moony updated to 0.30.0, enable inline display
+surge added
+hybridreverb2 added
 sudo rm -rf /var/lib/apt/lists/*
 <hr/>
 
