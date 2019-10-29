@@ -20,6 +20,9 @@ drumgizmo updated to 0.8.1
 moony updated to 0.30.0, enable inline display
 surge added
 hybridreverb2 added
+wolf-shaper added
+wolf-spectrum added
+last 3 by librazik, many thanks
 sudo rm -rf /var/lib/apt/lists/*
 <hr/>
 
