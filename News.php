@@ -19,10 +19,11 @@ carla-git updated
 drumgizmo updated to 0.8.1
 moony updated to 0.30.0, enable inline display
 surge added
+dragonfly-reverb added
 hybridreverb2 added
 wolf-shaper added
 wolf-spectrum added
-last 3 by librazik, many thanks
+last 5 by librazik, many thanks. surge had to be adjusted to build on armhf/arm64 (armhf build does not succeed yet)
 sudo rm -rf /var/lib/apt/lists/*
 <hr/>
 
