@@ -119,6 +119,7 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
             flex-direction: row;
             margin: 15px;
             width: 485px;
+            line-height: 1.25em;
             /* max-width: calc(92% / 3 - 32px); */
         }
         .repository-package > div:first-child {

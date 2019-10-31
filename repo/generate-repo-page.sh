@@ -18,6 +18,7 @@ PACKAGES_SEPARATE_DATA=("hybridreverb2")
 PACKAGES_BASE_URL="http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/"
 
 rm -f Packages.gz Packages
+mkdir -p pool-cache
 
 wget -q http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/dists/bionic/main/binary-amd64/Packages.gz
 gzip -d Packages.gz
@@ -68,6 +69,38 @@ function has_separate_data_package() {
     return 1
 }
 
+function get_homepage() {
+    local SOURCE="${1}"
+    local VERSION="${2}"
+    local SRC_FILENAME="${SOURCE}_$(echo ${VERSION} | sed 's/:/./').dsc"
+    local SRC_LETTER=$(echo "${SOURCE}" | head -c 1)
+    if [ ! -f "pool-cache/${SRC_FILENAME}" ]; then
+        wget -q -O "pool-cache/${SRC_FILENAME}" "${PACKAGES_BASE_URL}/pool/main/${SRC_LETTER}/${SOURCE}/${SRC_FILENAME}"
+        if [ $? != 0 ]; then
+            rm -f "pool-cache/${SRC_FILENAME}"
+            return 1
+        fi
+    fi
+    cat "pool-cache/${SRC_FILENAME}" | awk 'sub("Homepage: ","")'
+    return 0
+}
+
+function get_vcs_page() {
+    local SOURCE="${1}"
+    local VERSION="${2}"
+    local SRC_FILENAME="${SOURCE}_$(echo ${VERSION} | sed 's/:/./').dsc"
+    local SRC_LETTER=$(echo "${SOURCE}" | head -c 1)
+    if [ ! -f "pool-cache/${SRC_FILENAME}" ]; then
+        wget -q -O "pool-cache/${SRC_FILENAME}" "${PACKAGES_BASE_URL}/pool/main/${SRC_LETTER}/${SOURCE}/${SRC_FILENAME}"
+        if [ $? != 0 ]; then
+            rm -f "pool-cache/${SRC_FILENAME}"
+            return 1
+        fi
+    fi
+    cat "pool-cache/${SRC_FILENAME}" | awk 'sub("Kxstudio-Vcs: ","")'
+    return 0
+}
+
 for PACKAGE in ${PACKAGES[@]}; do
     if is_blacklisted ${PACKAGE} || echo "${PACKAGE}" | grep -q -- "-static"; then
         continue
@@ -90,7 +123,14 @@ for PACKAGE in ${PACKAGES[@]}; do
     PACKAGE_DESCRIPTION=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Description: ","")')
     PACKAGE_PROVIDES=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Provides: ","")')
     PACKAGE_SIZE=$(echo "${PACKAGE_DETAILS}" | grep -v "Installed-Size:" | awk 'sub("Size: ","")')
-    PACKAGE_VERSION=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Version: ","")' | cut -d ':' -f 2 | cut -d '-' -f 1)
+    PACKAGE_RVERSION=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Version: ","")' | cut -d ':' -f 2)
+    PACKAGE_VERSION=$(echo "${PACKAGE_RVERSION}" | cut -d '-' -f 1)
+    PACKAGE_SOURCE=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Source: ","")')
+    if [ -z "${PACKAGE_SOURCE}" ]; then
+        PACKAGE_SOURCE="${PACKAGE}"
+    fi
+    PACKAGE_HOMEPAGE=$(get_homepage "${PACKAGE_SOURCE}" "${PACKAGE_RVERSION}")
+    PACKAGE_VCS_PAGE=$(get_vcs_page "${PACKAGE_SOURCE}" "${PACKAGE_RVERSION}")
 
     if echo "${PACKAGE_FILENAME}" | grep -q "carla-bridge-win64_"; then
         PACKAGE="carla-bridge-win"
@@ -119,8 +159,18 @@ for PACKAGE in ${PACKAGES[@]}; do
     echo "<div><table>"
     echo "<tr><td>Package Name:</td><td>${PACKAGE}</td></tr>"
     echo "<tr><td>Description:</td><td>${PACKAGE_DESCRIPTION}</td></tr>"
+    if [ -n "${PACKAGE_HOMEPAGE}" ] || [ -n "${PACKAGE_VCS_PAGE}" ]; then
+        echo "<tr><td>Useful links:</td><td>"
+        if [ -n "${PACKAGE_HOMEPAGE}" ]; then
+            echo "<a href=\"${PACKAGE_HOMEPAGE}\" target=\"_blank\">Homepage</a>&nbsp;&nbsp;"
+        fi
+        if [ -n "${PACKAGE_VCS_PAGE}" ]; then
+            echo "<a href=\"${PACKAGE_VCS_PAGE}\" target=\"_blank\">VCS</a>&nbsp;&nbsp;"
+        fi
+        echo "</td></tr>"
+    fi
     echo "<tr><td>Version:</td><td>${PACKAGE_VERSION}</td></tr>"
-    echo "<tr><td>Expected size:</td><td>"
+    echo "<tr><td>Package size:</td><td>"
     if [ ${PACKAGE_SIZE} -gt 999999 ]; then
         echo "$((${PACKAGE_SIZE} / 1024 / 1024))Mb"
     else
