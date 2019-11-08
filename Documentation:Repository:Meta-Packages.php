@@ -7,7 +7,7 @@ include_once("includes/header.php");
 ?>
 
 <p>
-    This section describes all the meta-packages available in the KXStudio repositories, splitted by type.
+    This section describes all the meta-packages available in the KXStudio repositories, split by type.
 </p>
 
 <h3><span class="mw-headline" id="MetaPackageList">KXStudio own package list</span></h3>

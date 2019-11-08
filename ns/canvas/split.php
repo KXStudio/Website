@@ -7,7 +7,7 @@ include_once("../../includes/header.php");
 ?>
 
 <p>
-    Wherever the group/client has a splitted box in the canvas
+    Wherever the group/client has a split box in the canvas
 </p>
 <p>
     <b>Default:</b> None/Unset.<br/>
