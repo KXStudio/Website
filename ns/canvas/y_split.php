@@ -7,7 +7,7 @@ include_once("../../includes/header.php");
 ?>
 
 <p>
-    Group/Client splitted-box position in the canvas (vertical)
+    Group/Client split-box position in the canvas (vertical)
 </p>
 <p>
     <b>Default:</b> None/Unset.<br/>
