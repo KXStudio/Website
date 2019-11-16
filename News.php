@@ -48,7 +48,7 @@ include_once("includes/header.php");
     I was able to update and build generic Windows and Linux binaries (with Qt 5.9), and macOS is mostly working but still needs some fixing.<br/>
     In the past I used to do a bunch of beta releases until the final one was declared stable.<br/>
     I am going against this now, and will directly do a "Release Candidate" where no more new stuff can be added, only bug-fixing.<br/>
-    The next "Linux Audio release day" is January 15, so that will be the target.<br/>
+    The next "Linux Audio release day" is January 15, so that will be the target date.<br/>
 </p>
 <p>
     PS: Many of the new packages were imported from the LibraZik project, for which I am extremely grateful for.<br/>
