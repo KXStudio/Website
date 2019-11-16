@@ -9,7 +9,7 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
-    <span style="font-size: 20px">&gt; KXStudio Monthly Report (December 2019)</span><br/>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (November 2019)</span><br/>
     On <i>2019-11-16</i> by<i> falkTX</i>
 </p>
 <p>
@@ -58,11 +58,11 @@ include_once("includes/header.php");
 <hr/>
 
 <p>
-    <span style="font-size: 20px">&gt; KXStudio Monthly Report (November 2019)</span><br/>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (October 2019)</span><br/>
     On <i>2019-10-15</i> by<i> falkTX</i>
 </p>
 <p>
-    Hello all, today is November 15, a Linux/Libre-Audio release day.<br/>
+    Hello all, today is October 15, a Linux/Libre-Audio release day.<br/>
     I do not have anything to actually release (that is ready anyway), so I thought to instead start something new.<br/>
 </p>
 <p>
