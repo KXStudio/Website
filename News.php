@@ -10,21 +10,51 @@ include_once("includes/header.php");
 
 <p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (December 2019)</span><br/>
-    On <i>2019-11-15</i> by<i> falkTX</i>
+    On <i>2019-11-16</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, it is time for another monthly report in regards to the KXStudio project.<br/>
+</p>
+<p>
+    First, the most important I think, some small repository changes have been made.<br/>
+    I added a "KXStudio" suffix to the repository names, so you get stuff like "KXStudio Plugins" in your package manager now.<br/>
+    This was requested by a user, and makes a lot of sense.<br/>
+    The bad news is that your package manager is likely to complain about the changes, as it thinks it is a sign of trouble.<br/>
+    That is not the case though, as I am here just informing you of that. :)<br/>
+    A quick "solution" to this is to simply delete the cached apt list information, so the package manager will not have the previous repository title, like so:<br/>
+    <code>
+    sudo rm -rf /var/lib/apt/lists/*
+    </code>
+</p>
+<p>
+    There were a few new packages added to the repositories.<br/>
+    First, for the basic infrastructure, we got meson 0.51.2 and premake5. A few projects need this in order to build, so we got to have them first.<br/>
+    The more exciting ones are added and updated application and plugins, the changes on that are:
+</p>
+<ul>
+    <li>drumgizmo updated to 0.8.1</i>
+    <li>fluajho updated to 1.4.1</i>
+    <li>moony updated to 0.30.0, enabled inline display</i>
+    <li>patroneo updated to 1.4.1</i>
+    <li>vico updated to 1.0.1</i>
+    <li>surge added</i>
+    <li>dragonfly-reverb added</i>
+    <li>hybridreverb2 added</i>
+    <li>wolf-shaper added</i>
+    <li>wolf-spectrum added</i>
+</ul>
+<p>
+    Lastly, preparations for the next Carla release are well under way.<br/>
+    I was able to update and build generic Windows and Linux binaries (with Qt 5.9), and macOS is mostly working but still needs some fixing.<br/>
+    In the past I used to do a bunch of beta releases until the final one was declared stable.<br/>
+    I am going against this now, and will directly do a "Release Candidate" where no more new stuff can be added, only bug-fixing.<br/>
+    The next "Linux Audio release day" is January 15, so that will be the target.<br/>
+</p>
+<p>
+    PS: Many of the new packages were imported from the LibraZik project, for which I am extremely grateful for.<br/>
+    The surge armhf build fails at this point, to be fixed soon.
 </p>
 
-This is a WIP list of stuff that changed since the last report.
-meson 0.51.2, premake5
-carla-git updated
-drumgizmo updated to 0.8.1
-moony updated to 0.30.0, enable inline display
-surge added
-dragonfly-reverb added
-hybridreverb2 added
-wolf-shaper added
-wolf-spectrum added
-last 5 by librazik, many thanks. surge had to be adjusted to build on armhf/arm64 (armhf build does not succeed yet)
-sudo rm -rf /var/lib/apt/lists/*
 <hr/>
 
 <p>
