@@ -48,7 +48,7 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
     <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" />
     <link rel="icon" type="image/png" href="/images/ico_kxstudio.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
-<?php if (false && $PAGE_TYPE == "DONATIONS") { ?>
+<?php if ($PAGE_TYPE == "DONATIONS") { ?>
     <style type="text/css">
         html > body .liberapay-btn {
             background-color: #f6c915;
