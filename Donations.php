@@ -18,18 +18,9 @@ include_once("includes/header.php");
 </p>
 
 <table>
-<tr><td width="20px">
+<tr><td width="30px">
 
-</td><td valign="bottom" width="80px">
-    <?php if (false && $db_link) { ?>
-    <b>Last 5 donations:</b><br/>
-    <?php
-        while ($sql_row = mysqli_fetch_assoc($sql_donations_last5)) {
-            echo "" . date("Y-m-d", strtotime($sql_row["dt"])) . " - " . $sql_row["amount"] . "&euro;<br/>";
-        }
-    } ?>
-
-</td><td valign="bottom" width="150px">
+</td><td valign="middle" width="150px" align="center">
     <script src="https://liberapay.com/falkTX/widgets/receiving.js"></script>
     <noscript>
         <a class="liberapay-btn" href="https://liberapay.com/falkTX" target="_blank">
@@ -43,15 +34,14 @@ include_once("includes/header.php");
         </a>
     </noscript>
 
-</td><td valign="bottom" width="150px" align="center">
-     <a href="https://www.patreon.com/bePatron?u=9065029" data-patreon-widget-type="become-patron-button">
-        Become a Patron!
+</td><td valign="middle" width="270px" align="center">
+     <a href="https://www.patreon.com/falktx" target="_blank">
+        <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="217px" height="51px" alt="Patreon"/>
      </a>
-     <script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
 
-</td><td valign="bottom" width="150px" align="center">
+</td><td valign="middle" width="150px" align="center">
     <a href="https://www.paypal.me/falkTX" target="_blank">
-        <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" alt="PayPal"/>
+        <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png" width="150px" height="38px" alt="PayPal"/>
     </a>
 </td></tr>
 
