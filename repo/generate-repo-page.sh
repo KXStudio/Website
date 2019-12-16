@@ -12,7 +12,7 @@ if [ -z "${REPO_TARGET}" ]; then
 fi
 
 PACKAGES_ARCHS=("amd64" "arm64" "armhf" "i386")
-PACKAGES_BLACKLIST=("carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" "lv2vst" "libjack-jackd2-0" "libjack-jackd2-dev")
+PACKAGES_BLACKLIST=("carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" "lv2vst" "jackd2" "jackd2-firewire" "libjack-jackd2-0" "libjack-jackd2-dev")
 PACKAGES_WHITELIST=("cadence" "catia" "claudia")
 PACKAGES_SEPARATE_DATA=("hybridreverb2")
 PACKAGES_BASE_URL="http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/"
