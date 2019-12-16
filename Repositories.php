@@ -29,6 +29,7 @@ $DEBIAN_PACKAGE_URL = "https://launchpad.net/~kxstudio-debian/+archive/kxstudio/
         <li><a href="<?php echo $ROOT; ?>/Repositories:Applications">Applications in the repositories</a></li>
         <li><a href="<?php echo $ROOT; ?>/Repositories:Plugins">Plugins in the repositories</a></li>
         <li><a href="<?php echo $ROOT; ?>/Repositories:FAQ">Frequent asked questions</a></li>
+        <li><a href="<?php echo $ROOT; ?>/Repositories:Extras">Extra repositories from the KXStudio project</a></li>
     </ul>
     <p>
         Bug reports and package requests should be posted in the

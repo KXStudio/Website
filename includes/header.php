@@ -204,6 +204,7 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
                         <p><a href="/Repositories:Applications">Applications (in Repo)</a></p>
                         <p><a href="/Repositories:Plugins">Plugins (in Repo)</a></p>
                         <p><a href="/Repositories:FAQ">FAQ</a></p>
+                        <p><a href="/Repositories:Extras">Extras</a></p>
                     </div>
                 </li>
                 <li id="item-community" class="item-menu">

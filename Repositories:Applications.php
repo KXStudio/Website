@@ -19,6 +19,7 @@ include_once("includes/header.php");
     <ul>
         <li><a href="<?php echo $ROOT; ?>/Repositories:Plugins">Plugins in the repositories</a></li>
         <li><a href="<?php echo $ROOT; ?>/Repositories:FAQ">Frequent asked questions</a></li>
+        <li><a href="<?php echo $ROOT; ?>/Repositories:Extras">Extra repositories from the KXStudio project</a></li>
     </ul>
 </div>
 
