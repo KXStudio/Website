@@ -13,14 +13,14 @@ include_once("includes/header.php");
     On <i>2019-12-16</i> by<i> falkTX</i>
 </p>
 <p>
-    Hello everyone, it is time for another monthly report in regards to the KXStudio project.<br/>
+    Hello all, another monthly report about the KXStudio project is here.<br/>
 </p>
 <p>
-    There is not a whole lot of news this time around, as most of the time was spent on Carla new features and bugfixing.<br/>
-    I am doing a push torwards CV support in Carla (a "MIDI to CV" internal plugin was added, for example),<br/>
+    There is not a whole lot of new exciting stuff this time around, as most of the time was spent on Carla new features and bug-fixing.<br/>
+    I am doing a push towards CV support in Carla (a "MIDI to CV" internal plugin was added, for example),<br/>
     with only 1 new feature to be implemented - allowing to automate any regular parameter with CV.<br/>
-    The idea is to make it easier to automate things in carla, by exposing individual parameters in the patchbay as CV ports.<br/>
-    There is only 1 month left for release, so going to be tight on time, but seems doable, specially with holidays coming.<br/>
+    The idea is to make it easier to automate things in Carla, by exposing individual parameters in the patchbay as CV ports.<br/>
+    There is only 1 month left for the planned release, so going to be tight on time, but still seems doable, specially with holidays coming.<br/>
     (so more free time to work on this)
 </p>
 <p>
@@ -29,22 +29,37 @@ include_once("includes/header.php");
 <ul>
     <li>x42-plugins updated to 20191215</i>
     <li>zam-plugins updated to 3.12</i>
-    <li>seq64 added (Qt5 build from git master)</i>
+    <li>sequencer64 added (Qt5 build from git master)</i>
 </ul>
 <p>
     A new small extra repository has been created, one I have been using for some time now.<br/>
-    This came out of the necessity to update JACK2, but JACK is not something we can distribute in generic packages like applications and plugins.<br/>
-    There are a few pieces of software, like JACK2, that cannot be made into generic deb packages.<br/>
-    So, I want to create a few small but nice repositories for basic utilities and nice-to-have things.
-    For now, I have created a small one for Ubuntu 18.04 users (which includes me, obviously :P) that contains an updated JACK2, Wine-RT, among other small things.<br/>
-</p>
-<p>
-    All the separate, extra repositories will be detailed at
+    This came out of the necessity to update JACK2, but JACK not being something we can distribute in generic packages like KXStudio does for applications and plugins.<br/>
+    A few pieces of software, like JACK2 and other libraries, cannot be made into generic deb packages.<br/>
+    So, I want to create a few small but nice repositories for basic utilities and nice-to-have things.<br/>
+    For now, I have created a first, small one for Ubuntu 18.04 users (which includes me, obviously :P) which contains an updated JACK2, Wine-RT, among other small things.<br/>
+    You can find more details about this repository and all future ones coming soon at
       <a href="https://kx.studio/Repositories:Extras">https://kx.studio/Repositories:Extras</a>.
 </p>
 <p>
-    donations
-
+    In some news regarding the JACK2 project, it
+      <a href="https://jackaudio.org/news/" target="_blank">has its own news page</a>
+    now, so I won't be posting JACK2 related stuff here anymore.<br/>
+    The latest about it, which is worth mentioning, is that its mailing list is back online once again! \o/
+</p>
+<p>
+    <a href="https://github.com/falkTX/Cadence/releases/tag/v0.9.1" target="_blank">Cadence v0.9.1</a> was released, just tagging it in its git repo so distributions can pick it up.<br/>
+    It was mostly needed due to an incompatibility with Python 3.8.
+</p>
+<p>
+    And finally, donations for the KXStudio project (basically myself) are open once again, now even with a Patreon page.<br/>
+    In the past I mentioned that, due to legal costs, it was not worth having them while in Germany and I would open them again once I moved.<br/>
+    That happened a few months ago, but I dislike dealing with these things, so it took some time...<br/>
+    They are open once again now, though I removed the PayPal subscription option and counter for now.<br/>
+    (I am intentionally not posting the link here, I trust that if you care enough, you know where to find it)
+</p>
+<p>
+    Next month hopefully a new Carla release will be here.<br/>
+    Catia will be made into a standalone project, leaving Cadence behind. But that is news for another time... :)
 </p>
 
 <hr/>
