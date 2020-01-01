@@ -9,6 +9,157 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (January 2019)</span><br/>
+    On <i>2019-01-30</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, another monthly report about the KXStudio project is here.<br/>
+</p>
+
+<hr/>
+
+<p>
+    <span style="font-size: 20px">&gt; Carla 2.1 RC1 is here!</span><br/>
+    On <i>2020-01-15</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone, and surprise, the stable 2.0 version of Carla is coming!<br/>
+</p>
+<p>
+    This is the announcement of the first release candidate of Carla 2.1.<br/>
+    I am skipping the beta phase as done for the 2.0 release and going straight into a Release Candidate.<br/>
+    This means there will be no more changes in the graphical user interface or engine/backend features, except when required for fixing bugs.<br/>
+</p>
+<p>
+    Carla projects/sessions are meant to be fully compatible between between 2.0 and 2.1 versions, except for features marked experimental.<br/>
+    The "native" API to access carla as plugin (as used by LMMS) is (ABI and API-wise) backwards compatible compatible with 2.0.<br/>
+    If this is not the case, consider it a bug that needs to be fixed.
+</p>
+<p>
+    As with the v2.0 release, the list of changes is a little big, so let's split it by parts.<br/>
+    First, the highlights and major changes.<br/>
+</p>
+
+<h3>Highlights and major changes</h3>
+
+<h5>...</h5>
+<p>
+    ...<br/>
+</p>
+
+<h5>High-DPI support</h5>
+<p>
+    ...<br/>
+</p>
+
+<h5>Proper theme and Carla-Control for Windows</h5>
+<p>
+    ...<br/>
+</p>
+
+<h5>UI changes</h5>
+<p>
+    ...<br/>
+</p>
+<p>
+    ...<br/>
+</p>
+<p>
+    ...<br/>
+</p>
+
+<h3>Other changes</h3>
+<p>
+    Some changes that make sense or are useful enough, and that deserve to be mentioned.<br/>
+</p>
+<ul>
+    <li>Drop Qt4 support</li>
+    <li>Official builds use...</li>
+    <li>________</li>
+    <li>________</li>
+    <li>________</li>
+    <li>________</li>
+</ul>
+
+canvas connect action
+small canvas, AA, cut connections, rework nick87720z
+colorize all slot skins?
+internal jack client
+Dynamically show knobs in rack view as much as possible
+carla-control and osc rework
+juce stuff again, but disabled by default on source builds, etc
+Implement clearing xrun count, bottom bar stuff
+Save and restore Session Manager type in add-jack-app dialog
+NSM support for JACK Applications
+Introducing "Cancelable actions"
+Initial support for LV2 params
+Ship vst plugin in windows builds
+Update READMEs to mention VST3 and AU support
+Working wine-native bridge, needs testing
+Respect X11 UIs size hints from plugins
+Build CarlaVstFxShell by default?
+libjack stuff
+internal client
+testing carla-vst exposed parameters
+inline display in canvas
+
+<h3>Fixes</h3>
+<p>
+    Besides the ones already mentioned for Windows, we also have:
+</p>
+<ul>
+    <li>Big push to get transport working correctly</li>
+    <li>General fixes against dynamic buffer sizes</li>
+    <li>Several fixes to UI size and UI bridges under macOS</li>
+    <li>Fix all PNGs that triggered libpng warnings</li>
+    <li>Fix canvas rubberband being invisible after a canvas refresh</li>
+    <li>Fix embedded UI covering window controls under certain hosts (in a Qt5 Linux build)</li>
+    <li>Fix switching plugin positions in plugin mode</li>
+</ul>
+
+<h3>Notes for developers and packagers</h3>
+<ul>
+    <li>Base python scripts are no longer installed in dist-packages</li>
+    <li>Carla front-end code was moved to its own folder</li>
+    <li>FluidSynth version 1.1.7 is now required for soundfont support</li>
+    <li>UI bridges can now be started from CLI with just the plugin URI</li>
+    <li>New CarlaNativePlugin header and library exported, exposes Carla's Rack and Patchbay internals to 3rd party applications</li>
+</ul>
+<p>
+    Currently work-in-progress is a complete REST API of Carla's backend, allowing to have full control of a remote Carla instance.<br/>
+    (and not in a limited fashion like done with Carla-Control / OSC).<br/>
+    Initial code for it is already done, and tested to work.<br/>
+    If this interests you, let me know!<br/>
+</p>
+<p>
+</p>
+
+<h3>Notes for users</h3>
+<p>
+    The code for scanning plugins had a little rework, making some internal data structures change.<br/>
+    Because of this, a full rescan of your plugins is needed after the update.<br/>
+</p>
+<p>
+    When running Patchbay mode in JACK, changing the buffer size might cause a crash.<br/>
+    This is not a common action to do, so not a priority to fix.<br/>
+</p>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="http://kxstudio.linuxaudio.org/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<h3>Future</h3>
+<p>
+    With Carla done, next up is DPF handling and KXStudio 18.04 ISO release, while trying to get a new JACK2 release out too.<br/>
+    Note that after these 3 items are done, I plan to take a well-needed break from open-source project maintenance.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (December 2019)</span><br/>
     On <i>2019-12-16</i> by<i> falkTX</i>
 </p>
@@ -172,6 +323,8 @@ include_once("includes/header.php");
 </p>
 
 <hr/>
+
+<!--
 
 <p>
     <span style="font-size: 20px">&gt; JACK2 v1.9.13 release</span><br/>
@@ -2286,7 +2439,10 @@ include_once("includes/header.php");
     The entire collection is already available in the KXStudio repos but yet part of the meta-packages (will be added shortly after the official release).<br/>
     Generic linux binaries will be made available for non-KXStudio users as before.
 </p>
+
 <hr/>
+
+-->
 
 <p>
     Note: Since the KXStudio website has been internally reworked (removed mediawiki, much simpler PHP code now), the old news have been removed.<br/>
