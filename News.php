@@ -10,10 +10,17 @@ include_once("includes/header.php");
 
 <p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (January 2019)</span><br/>
-    On <i>2019-01-30</i> by<i> falkTX</i>
+    On <i>2019-01-18</i> by<i> falkTX</i>
 </p>
 <p>
     Hello all, another monthly report about the KXStudio project is here.<br/>
+    Carla 2.1 released<br/>
+    Carla move to C++ started, explain why, and means frontend won't change much now, mainly the backend.<br/>
+    Office space setup, which took most of the time on the holidays<br/>
+</p>
+<p>
+    With Carla v2.1 "done", next up is some much needed DPF and then JACK2 handling.<br/>
+    But these will not be rushed, so next month progress report is expected to be smaller than usual.<br/>
 </p>
 
 <hr/>
@@ -23,7 +30,7 @@ include_once("includes/header.php");
     On <i>2020-01-15</i> by<i> falkTX</i>
 </p>
 <p>
-    Hello again everyone, and surprise, the stable 2.0 version of Carla is coming!<br/>
+    Hello again everyone, ...!<br/>
 </p>
 <p>
     This is the announcement of the first release candidate of Carla 2.1.<br/>
@@ -32,40 +39,84 @@ include_once("includes/header.php");
 </p>
 <p>
     Carla projects/sessions are meant to be fully compatible between between 2.0 and 2.1 versions, except for features marked experimental.<br/>
-    The "native" API to access carla as plugin (as used by LMMS) is (ABI and API-wise) backwards compatible compatible with 2.0.<br/>
+    The "native" API to access carla as plugin (as used by LMMS) is ABI and API-wise backwards compatible compatible with 2.0.<br/>
     If this is not the case, consider it a bug that needs to be fixed.
 </p>
 <p>
     As with the v2.0 release, the list of changes is a little big, so let's split it by parts.<br/>
-    First, the highlights and major changes.<br/>
+    First, the highlights and major changes, in no particular order of relevance.<br/>
 </p>
 
 <h3>Highlights and major changes</h3>
 
-<h5>...</h5>
+<h5>Better CV Support</h5>
 <p>
-    ...<br/>
+    In the patchbay<br/>
+    Expose parameters as CV ports<br/>
+    Added internal MIDI to CV plugin<br/>
+    More plugins will be added as needed, ams-lv2 and mod-cv-plugins already do a lot but a few things are likely to be missing<br/>
 </p>
 
-<h5>High-DPI support</h5>
+<h5>High-DPI support (work in progress)</h5>
 <p>
-    ...<br/>
+    Most of the icons changed to scalable format<br/>
+    UI will scale with the desktop automatically, as Qt takes care of that for us.<br/>
+    Some bitmaps still remain, to be replaced by vector images in a future release.
 </p>
 
 <h5>Proper theme and Carla-Control for Windows</h5>
 <p>
-    ...<br/>
+    The Windows build stack changed from using official Python and PyQt5 packages to msys ones, allowing us to link against them using mingw (Carla does not support MSVC)<br/>
+    This makes possible to use the proper "pro" theme like Linux and macOS already did, and also get Carla-Control finally working on Windows.<br/>
+    This brings feature parity for all 3 major desktop OSes. \o/
+</p>
+
+<h5>Canvas changes</h5>
+<p>
+    canvas connect action<br/>
+    small canvas, AA, cut connections, rework nick87720z<br/>
+    inline display in canvas, experimental<br/>
+</p>
+
+<h5>carla-control and osc rework</h5>
+<p>
+    Carla's OSC support has been reworked, now has its own dedicated page in the settings.<br/>
+    Carla-Control has been extended to support all non-local-dependent features of the main Carla (like patchbay management and transport controls).<br/>
+    This will be extended even further in future releases.<br/>
 </p>
 
 <h5>UI changes</h5>
 <p>
-    ...<br/>
+    Add-plugin dialog<br/>
+    Built-in plugin editor parameter list, with groupping<br/>
+    Dynamically show knobs in rack view as much as possible<br/>
+    colorize all slot skins?<br/>
+    Implement clearing xrun count, bottom bar stuff<br/>
 </p>
+
+<h5>juce stuff again, but disabled by default on source builds, etc</h5>
 <p>
-    ...<br/>
+    Disabled during a previous beta, support for the JUCE library was added back - but now completlt optional<br/>
+    This brings support for VST3 under macOS and Windows, and AU under macOS.<br/>
+    As a bonus, it is now possible to show the custom control panel of ASIO devices. :)<br/>
+    Support for JUCE is disabled by default under non macOS/Windows builds.<br/>
+    Also note that JUCE does not support VST3 under Linux at this point, so neither does Carla even if you build it yourself with JUCE enabled.<br/>
 </p>
+
+<h5>Wine-native bridge, sorta experimental</h5>
 <p>
-    ...<br/>
+    As a way to load Linux binaries under Windows applications running with Wine, in case you need that somehow<br/>
+    (personally, etc etc)<br/>
+    Already in the KXStudio repositories as "carla-vst-wine" package, you need to copy... to make it work<br/>
+    Presented at Sonoj last year, ...
+    Building it is kinda tricky, packager documentation will be added soon to Carla's source code repository<br/>
+</p>
+
+<h5>vst plugin for macOS and windows, plus exposed parameters</h5>
+<p>
+    What was missing for feature parity.<br/>
+    Embedding of the full GUI is not possible, so a small window is shown instead etc etc<br/>
+    100 parameters are exposed to the host, dynamically used in the order of the plugins loaded<br/>
 </p>
 
 <h3>Other changes</h3>
@@ -73,88 +124,39 @@ include_once("includes/header.php");
     Some changes that make sense or are useful enough, and that deserve to be mentioned.<br/>
 </p>
 <ul>
-    <li>Drop Qt4 support</li>
     <li>Official builds use...</li>
-    <li>________</li>
-    <li>________</li>
-    <li>________</li>
-    <li>________</li>
-</ul>
-
-canvas connect action
-small canvas, AA, cut connections, rework nick87720z
-colorize all slot skins?
-internal jack client
-Dynamically show knobs in rack view as much as possible
-carla-control and osc rework
-juce stuff again, but disabled by default on source builds, etc
-Implement clearing xrun count, bottom bar stuff
-Save and restore Session Manager type in add-jack-app dialog
-NSM support for JACK Applications
-Introducing "Cancelable actions"
-Initial support for LV2 params
-Ship vst plugin in windows builds
-Update READMEs to mention VST3 and AU support
-Working wine-native bridge, needs testing
-Respect X11 UIs size hints from plugins
-Build CarlaVstFxShell by default?
-libjack stuff
-internal client
-testing carla-vst exposed parameters
-inline display in canvas
-
-<h3>Fixes</h3>
-<p>
-    Besides the ones already mentioned for Windows, we also have:
-</p>
-<ul>
-    <li>Big push to get transport working correctly</li>
-    <li>General fixes against dynamic buffer sizes</li>
-    <li>Several fixes to UI size and UI bridges under macOS</li>
-    <li>Fix all PNGs that triggered libpng warnings</li>
-    <li>Fix canvas rubberband being invisible after a canvas refresh</li>
-    <li>Fix embedded UI covering window controls under certain hosts (in a Qt5 Linux build)</li>
-    <li>Fix switching plugin positions in plugin mode</li>
+    <li>internal jack client</li>
+    <li>NSM support for JACK Applications</li>
+    <li>Introducing "Cancelable actions"</li>
+    <li>Initial support for LV2 params</li>
+    <li>Respect X11 UIs size hints from plugins</li>
+    <li>More libjack stuff</li>
 </ul>
 
 <h3>Notes for developers and packagers</h3>
 <ul>
-    <li>Base python scripts are no longer installed in dist-packages</li>
-    <li>Carla front-end code was moved to its own folder</li>
-    <li>FluidSynth version 1.1.7 is now required for soundfont support</li>
-    <li>UI bridges can now be started from CLI with just the plugin URI</li>
-    <li>New CarlaNativePlugin header and library exported, exposes Carla's Rack and Patchbay internals to 3rd party applications</li>
+    <li>Drop Qt4 support</li>
+    <li>Link to jack directly with..., allows for internal client</li>
 </ul>
-<p>
-    Currently work-in-progress is a complete REST API of Carla's backend, allowing to have full control of a remote Carla instance.<br/>
-    (and not in a limited fashion like done with Carla-Control / OSC).<br/>
-    Initial code for it is already done, and tested to work.<br/>
-    If this interests you, let me know!<br/>
-</p>
-<p>
-</p>
 
 <h3>Notes for users</h3>
 <p>
     The code for scanning plugins had a little rework, making some internal data structures change.<br/>
     Because of this, a full rescan of your plugins is needed after the update.<br/>
 </p>
-<p>
-    When running Patchbay mode in JACK, changing the buffer size might cause a crash.<br/>
-    This is not a common action to do, so not a priority to fix.<br/>
-</p>
 
 <h3>Downloads</h3>
 <p>
-    To download Carla binaries or source code, jump on over to the <a href="http://kxstudio.linuxaudio.org/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
     If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
     Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
 </p>
 
 <h3>Future</h3>
 <p>
-    With Carla done, next up is DPF handling and KXStudio 18.04 ISO release, while trying to get a new JACK2 release out too.<br/>
-    Note that after these 3 items are done, I plan to take a well-needed break from open-source project maintenance.
+    in progress change of frontend coding language, from Python to C++ (for performance, reliability and debugging reasons).<br/>
+    Whenever this is finished a new release will be made.<br/>
+    But it is going to be something that, even though means a lot behind the scenes, visibly nothing will change (except performance)<br/>
 </p>
 
 <hr/>
