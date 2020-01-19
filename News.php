@@ -304,7 +304,7 @@ include_once("includes/header.php");
     It proved to be quite helpful for development too, as I had to justify why things are the way they are, and explain how they work too.<br/>
     Now that Carla UI should not change too much for a while, it is the right time for such thing.<br/>
     I personally dislike writing such things, but understand it can be quite useful.<br/>
-    The work-in-progress manual is at <a href=https://kx.studio/Documentation:Manual:Carla">https://kx.studio/Documentation:Manual:Carla</a>.<br/>
+    The work-in-progress manual is at <a href="https://kx.studio/Documentation:Manual:Carla">https://kx.studio/Documentation:Manual:Carla</a>.<br/>
     (Not much to see there at the moment though, give me time)
 </p>
 <p>
