@@ -50,8 +50,8 @@ include_once("includes/header.php");
 <br/>
 
 <table><tr><td width="50%">
-<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.1_cv-stuff.png">
-    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.1_cv-stuff.png" style="max-width:100%;height:auto;" alt="settings"/>
+<a href="/screenshots/news/carla-2.1_cv-stuff.png">
+    <img src="/screenshots/news/carla-2.1_cv-stuff.png" style="max-width:100%;height:auto;" alt="settings"/>
 </a>
 </td><td width="50%">
 <h3>Better CV Support</h3>
@@ -84,8 +84,8 @@ include_once("includes/header.php");
 <br/>
 
 <table><tr><td width="50%">
-<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.1_high-dpi.png">
-    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.1_high-dpi.png" style="max-width:100%;height:auto;" alt="settings"/>
+<a href="/screenshots/news/carla-2.1_high-dpi.png">
+    <img src="/screenshots/news/carla-2.1_high-dpi.png" style="max-width:100%;height:auto;" alt="settings"/>
 </a>
 </td><td width="50%">
 <h3>High-DPI support (work in progress)</h3>
@@ -107,10 +107,9 @@ include_once("includes/header.php");
 
 <br/>
 
-<!-- TODO -->
 <table><tr><td width="50%">
-<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.1_windows.png">
-    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.1_windows.png" style="max-width:100%;height:auto;" alt="settings"/>
+<a href="/screenshots/news/carla-2.1_windows.png">
+    <img src="/screenshots/news/carla-2.1_windows.png" style="max-width:100%;height:auto;" alt="settings"/>
 </a>
 </td><td width="50%">
 <h3>Proper theme and Carla-Control for Windows</h3>
@@ -133,8 +132,8 @@ include_once("includes/header.php");
 <br/>
 
 <table><tr><td width="50%">
-<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.1_mac-vst.png">
-    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.1_mac-vst.png" style="max-width:100%;height:auto;" alt="settings"/>
+<a href="/screenshots/news/carla-2.1_mac-vst.png">
+    <img src="/screenshots/news/carla-2.1_mac-vst.png" style="max-width:100%;height:auto;" alt="settings"/>
 </a>
 </td><td width="50%">
 <h3>VST2 plugin for macOS and Windows, plus exposed parameters</h3>
@@ -160,8 +159,8 @@ include_once("includes/header.php");
 <br/>
 
 <table><tr><td width="50%">
-<a href="<?php echo $ROOT; ?>/repo/screenshots/carla-vst-wine.png">
-    <img src="<?php echo $ROOT; ?>/repo/screenshots/carla-vst-wine.png" style="max-width:100%;height:auto;" alt="settings"/>
+<a href="/repo/screenshots/carla-vst-wine.png">
+    <img src="/repo/screenshots/carla-vst-wine.png" style="max-width:100%;height:auto;" alt="settings"/>
 </a>
 </td><td width="50%">
 <h3>Wine-native bridge, sorta experimental</h3>
@@ -183,8 +182,8 @@ include_once("includes/header.php");
 </td></tr></table>
 
 <table><tr><td width="50%">
-<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.1_add-plugin.png">
-    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.1_add-plugin.png" style="max-width:100%;height:auto;" alt="settings"/>
+<a href="/screenshots/news/carla-2.1_add-plugin.png">
+    <img src="/screenshots/news/carla-2.1_add-plugin.png" style="max-width:100%;height:auto;" alt="settings"/>
 </a>
 </td><td width="50%">
 <h3>Refreshed add-plugin dialog and favorite plugins</h3>
@@ -198,8 +197,8 @@ include_once("includes/header.php");
 </td></tr></table>
 
 <table><tr><td width="50%">
-<a href="<?php echo $ROOT; ?>/screenshots/news/carla-2.1_params.png">
-    <img src="<?php echo $ROOT; ?>/screenshots/news/carla-2.1_params.png" style="max-width:100%;height:auto;" alt="settings"/>
+<a href="/screenshots/news/carla-2.1_params.png">
+    <img src="/screenshots/news/carla-2.1_params.png" style="max-width:100%;height:auto;" alt="settings"/>
 </a>
 </td><td width="50%">
 <h3>Single-page and grouped plugin parameters</h3>
