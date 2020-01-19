@@ -18,9 +18,9 @@ include_once("includes/header.php");
         &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/cadence/Cadence-0.8.1-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence </a> (64bit, version 0.8.1)<br/>
         &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/v2.1-rc1/Carla_2.1-RC1-linux32.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (32bit, version 2.1-rc1)<br/>
+              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (32bit, version 2.1-rc1, requires Qt 5.9)<br/>
         &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/v2.1-rc1/Carla_2.1-RC1-linux64.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (64bit, version 2.1-rc1)<br/>
+              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (64bit, version 2.1-rc1, requires Qt 5.9)<br/>
         &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/festige/festige-1.0.2-x86.tar.gz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_festige.png" alt="" class="img_text_align"/> FeSTige </a> (32bit, version 1.0.2)<br/>
     </p>
