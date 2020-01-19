@@ -284,6 +284,7 @@ include_once("includes/header.php");
             <img src="images/ico_ubuntu.png" alt=""/>
             <img src="images/ico_linux.png" alt=""/>
             <img src="images/ico_mac.png" alt=""/>
+            <img src="images/ico_windows.png" alt=""/>
         </p>
     </td><td>
         <p>
