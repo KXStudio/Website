@@ -27,7 +27,7 @@ include_once("includes/header.php");
 
 <p>
     <span style="font-size: 20px">&gt; Carla 2.1 RC1 is here!</span><br/>
-    On <i>2020-01-15</i> by<i> falkTX</i>
+    On <i>2020-01-19</i> by<i> falkTX</i>
 </p>
 <p>
     Hello again everyone, it is release day! <i>(kinda, just a casual 4 days late...)</i><br/>
@@ -64,22 +64,22 @@ include_once("includes/header.php");
 </p>
 <ul>
     <li>Parameter changes are not sample accurate<br/>(in a later version, Carla will split buffer up to 32 frames for more fine-grained control changes)</li>
-    <li>Not all plugin formats and parameter types are allowed to be controlled this way<br/>(to be extended as we test compatibility)</li>
+    <li>Not all plugin formats and parameter types are allowed to be controlled this way<br/>(to be extended as I test more compatibility)</li>
     <li>Only available for parameter inputs, not outputs</li>
 </ul>
 <p>
-    In order to make CV more useful by default, we added a new internal "MIDI to CV" plugin, originally created by Bram Giesen.<br/>
-    More plugins will be added as needed, for now we recommend to use ams-lv2 and mod-cv-plugins as they already do a lot.<br/>
+    In order to make CV more useful by default, a new internal "MIDI to CV" plugin was added, originally created by Bram Giesen.<br/>
+    More plugins will be added as needed, for now I recommend to use
+    <a href="https://github.com/blablack/ams-lv2" target="_blank">ams-lv2</a>
+    and
+    <a href="https://github.com/moddevices/mod-cv-plugins" target="_blank">mod-cv-plugins</a>
+    as they already do a lot.<br/>
 </p>
 <p>
     Also, a new variant of Carla as plugin was created that provides audio, MIDI and 5 CV ports (for each side).<br/>
     This allows CV signals to flow in and out of Carla as a plugin.
 </p>
 </td></tr></table>
-
-<!-- TODO -->
-<!-- https://github.com/blablack/ams-lv2 -->
-<!-- https://github.com/moddevices/mod-cv-plugins -->
 
 <br/>
 
