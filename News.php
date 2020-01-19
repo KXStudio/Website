@@ -124,9 +124,6 @@ include_once("includes/header.php");
 <p>
     A small but important step towards cross-platform feature parity. \o/
 </p>
-<p>
-    Note: Carla plugins are not "notarized" yet, so they will not run under latest macOS 10.15/Catalina where this is a requirement.
-</p>
 </td></tr></table>
 
 <br/>
@@ -153,6 +150,9 @@ include_once("includes/header.php");
 <p>
     When Carla is loaded as an internal plugin, parameters will be dynamically available too.<br/>
     This feature is not available in the LV2 version of Carla though, at least not yet.
+</p>
+<p>
+    Note: Carla plugins are not "notarized" yet, so they will not run under latest macOS 10.15/Catalina where this is a requirement.
 </p>
 </td></tr></table>
 
