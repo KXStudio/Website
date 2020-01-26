@@ -171,7 +171,7 @@ for PACKAGE in ${PACKAGES[@]}; do
     fi
     echo "<tr><td>Version:</td><td>${PACKAGE_VERSION}</td></tr>"
     echo "<tr><td>Package size:</td><td>"
-    if [ ${PACKAGE_SIZE} -gt 999999 ]; then
+    if [ ${PACKAGE_SIZE} -gt 1048576 ]; then
         echo "$((${PACKAGE_SIZE} / 1024 / 1024))Mb"
     else
         echo "$((${PACKAGE_SIZE} / 1024))Kb"
@@ -185,7 +185,7 @@ for PACKAGE in ${PACKAGES[@]}; do
             PACKAGE_DATA_DETAILS=$(cat Packages | tail -n +${PACKAGE_DATA_LINESTART})
         fi
         PACKAGE_DATA_SIZE=$(echo "${PACKAGE_DATA_DETAILS}" | grep -v "Installed-Size:" | awk 'sub("Size: ","")')
-        if [ ${PACKAGE_DATA_SIZE} -gt 999999 ]; then
+        if [ ${PACKAGE_DATA_SIZE} -gt 1048576 ]; then
             echo "+ $((${PACKAGE_DATA_SIZE} / 1024 / 1024))Mb (data)"
         else
             echo "+ $((${PACKAGE_DATA_SIZE} / 1024))Kb (data)"
