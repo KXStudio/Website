@@ -9,18 +9,53 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
-    <span style="font-size: 20px">&gt; KXStudio Monthly Report (January 2019)</span><br/>
-    On <i>2019-01-18</i> by<i> falkTX</i>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (January 2020)</span><br/>
+    On <i>2020-01-28</i> by<i> falkTX</i>
 </p>
 <p>
     Hello all, another monthly report about the KXStudio project is here.<br/>
-    Carla 2.1 released<br/>
-    Carla move to C++ started, explain why, and means frontend won't change much now, mainly the backend.<br/>
-    Office space setup, which took most of the time on the holidays<br/>
 </p>
 <p>
-    With Carla v2.1 "done", next up is some much needed DPF and then JACK2 handling.<br/>
-    But these will not be rushed, so next month progress report is expected to be smaller than usual.<br/>
+    A few days ago, <a href="https://kx.studio/News/?action=view&url=carla-21-rc1-is-here">Carla 2.1-RC1 was announced</a>.<br/>
+    As mentioned in that post, Carla's frontend move to C++ has started, for performance, reliability and debugging reasons.<br/>
+    It is going to be something that, even though means a lot behind the scenes, visibly nothing will change. (except performance)<br/>
+    Because of this, do not expect many UI related changes in Carla for the time being.
+</p>
+<p>
+    There were more package updates in the repositories. Those are:
+</p>
+<ul>
+    <li>lsp-plugins updated to 1.1.13</i>
+    <li>x42-plugins updated to 20200114</i>
+    <li>distrho-ports updated (added Temper as LV2 and VST plugin)</i>
+    <li>bchoppr added</i>
+    <li>bslizr added</i>
+    <li>bsequencer added</i>
+    <li>bshapr added</i>
+    <li>geonkick added</i>
+    <li>mod-cv-plugins added</i>
+    <li>noise-repellent added</i>
+    <li>regrader added</i>
+</ul>
+<p>
+    A few of those were made possible thanks to LibraZik project, from which I imported a few.<br/>
+    I am quite grateful for them, and you should be too! :)
+</p>
+<p>
+    On a more personal side of things, I have started renting an office for work (both for employer and FLOSS stuff).<br/>
+    Its setup took most of the time on the holidays, and quite a fair bit in January too.<br/>
+    It is mostly done now, only final touches needed. It certainly helps as a kind of motivation boost, and as a way to keep focus too.
+</p>
+<p>
+    Next month will be slower than usual, as I plan to focus more on "boring" stuff like updating the website and documentation.<br/>
+    That is all for now.<br/>
+</p>
+<p>
+    Since I mentioned it, I leave you with a picture of the office (the working area).<br/>
+    See you next month!
+</p>
+<p>
+    <img src="/screenshots/news/office-2020-01_d2.jpg" alt="office"/>
 </p>
 
 <hr/>
