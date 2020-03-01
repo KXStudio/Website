@@ -9,6 +9,67 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (February 2020)</span><br/>
+    On <i>2020-02-29</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, it is time for another monthly report in regards to the KXStudio project.<br/>
+</p>
+<p>
+    First, there were many bugfixes made to Carla, we are very close to RC2.<br/>
+    I only have 2 things that I want to do before the RC2,
+    first being fixing multi-instance under multi-client mode and second is to finalize the last couple of bugfixes.<br/>
+    So the RC2 should be out in a few days, maximum weeks.
+</p>
+<p>
+    Second, something that came out of (re-)packaging WineASIO
+    (and moving away from Cadence, but that is a story for another day...).<br/>
+    I am taking over as maintainer of the WineASIO project.<br/>
+</p>
+<p>
+    WineASIO is something that is mostly "done", there is not much that we can add to it.<br/>
+    Since I have to keep it building in order to package it, I spoke with upstream and let them know I was available to take over.<br/>
+    (maintaince work is pretty minimal, just got to make it build basically)
+</p>
+<p>
+    We are trying to take over
+    <a href="https://github.com/WineASIO" target="_blank">github.com/WineASIO</a>
+    organization, so we can place the source code repository in there.<br/>
+    If that takes too long, the repository will just end up at
+    <a href="https://github.com/falkTX/WineASIO" target="_blank">github.com/falkTX/WineASIO</a>
+    as it is for the moment.<br/>
+    In any case, we will see v1.0.0 release of WineASIO quite soon!
+</p>
+<p>
+    The KXStudio repositories' armhf build of surge has been fixed.<br/>
+    I have opened a
+    <a href="https://github.com/surge-synthesizer/surge/pull/1606" target="_blank">pull request on upstream surge</a>
+    to discuss the armhf/arm64 needed changes (basically a SSE2 to NEON conversion).<br/>
+    They are quite open to it, which is nice to see.<br/>
+    We just need to fix some minor things now and that could likely be part of 1.7.0 release later on.<br/>
+</p>
+<p>
+    Finally, these are the package updates made in the repositories:
+</p>
+<ul>
+    <li>carla-git updated</i>
+    <li>mod-cv-plugins updated to latest git</i>
+    <li>sequencer64 updated to latest git, midi_control branch</i>
+    <li>surge updated to 1.6.6</i>
+    <li>cv-lfo-blender-lv2 added</i>
+    <li>g2reverb added</i>
+    <li>invada-studio-plugins (LADSPA) and invada-studio-plugins-lv2 added</i>
+    <li>setbfree added, including VST2 version through lv2vst</i>
+    <li>wineasio added</i>
+    <li>zlfo added</i>
+</ul>
+<p>
+    That is all for now. Have a great weekend everyone! :)
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (January 2020)</span><br/>
     On <i>2020-01-28</i> by<i> falkTX</i>
 </p>
