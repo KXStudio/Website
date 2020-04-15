@@ -66,7 +66,7 @@ include_once("includes/header.php");
 <p>
     To download Carla binaries or source code, jump on over to the
       <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
-    Carla v2.1 is available pre-packaged in the KXStudio repositories and UbuntuStudio backports, plus on ArchLinux and Ubuntu since 20.04.
+    Carla v2.1 is available pre-packaged in the KXStudio repositories, ArchLinux and Ubuntu since 20.04.
       On those you can simply install the <b>carla</b> package.<br/>
     Bug reports and feature requests are welcome! Jump on over to the
       <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
