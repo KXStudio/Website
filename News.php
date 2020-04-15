@@ -9,6 +9,72 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.1 is here!</span><br/>
+    On <i>2020-04-15</i> by<i> falkTX</i>
+</p>
+
+<p>
+    Exactly one year after 2.0, Carla version 2.1 is here!
+</p>
+<p>
+    Carla is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
+    It has some nice features like automation of parameters via MIDI CC (and send output back as MIDI too) and full OSC control.<br/>
+</p>
+<p>
+    This is a small but significant update that builds up on top of what was released in 2.0.<br/>
+    Please see the
+    <a href="https://kx.studio/News/?action=view&url=carla-21-rc1-is-here">
+      2.1-RC1 announcement
+    </a>
+    for details on what is is new in 2.1.<br/>
+</p>
+<p>
+    Unlike last time, there are no official plans for version 2.2 just yet, my focus will now be going into the DPF and JACK projects instead.<br/>
+    The <a href="https://github.com/falkTX/Carla/tree/master" target="_blank">
+      master branch of Carla's code repository
+    </a>
+    is now for 2.1, while the previous 2.0 master got renamed "hotfix-2.0.0".<br/>
+    No new features will be added to 2.1 series, only bugfixes.<br/>
+</p>
+
+<h3>Changes since 2.1-RC2</h3>
+<ul>
+    <li>Add a simple cv2audio plugin</li>
+    <li>Brown color for CV ports, to make them more easily recognizable</li>
+    <li>Fix crash loading LV2 plugin with CV and latency ports</li>
+    <li>Fix mingw/gcc-9 build</li>
+</ul>
+
+<h3>Changes between 2.1-RC2 and 2.1-RC1</h3>
+<ul>
+    <li>Fix crash on stack unwind for a few operations</li>
+    <li>Fix duplicate data (name, label, uid) used in VST synth/fx Shell plugin</li>
+    <li>Fix JACK metadata usage for multiple carla instances and plugin renames</li>
+    <li>Fix MIDI CC assignment showing wrong selected value (base 16 vs 10)</li>
+    <li>Fixup carla-control (was broken in RC1)</li>
+    <li>Optimize and reduce memory usage of UI bridges</li>
+    <li>Overall fix of postponed RT events</li>
+    <li>Give focus to bridged UIs when first shown</li>
+    <li>Ignore any LV2 patch:writable that is not an lv2:Parameter</li>
+    <li>Rename experimental "prevent bad things" option and give it a tool-tip</li>
+    <li>Support the new LV2 UI requestParameterValue API</li>
+    <li>Support the new LV2 UI background/foreground color API</li>
+    <li>Many other miscellaneous bug fixes, see the git log for details</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the
+      <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    Carla v2.1 is available pre-packaged in the KXStudio repositories and UbuntuStudio backports, plus on ArchLinux and Ubuntu since 20.04.
+      On those you can simply install the <b>carla</b> package.<br/>
+    Bug reports and feature requests are welcome! Jump on over to the
+      <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (February 2020)</span><br/>
     On <i>2020-02-29</i> by<i> falkTX</i>
 </p>
