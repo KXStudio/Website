@@ -106,7 +106,7 @@ for PACKAGE in ${PACKAGES[@]}; do
         continue
     fi
 
-    PACKAGE_LINESTART=$(cat Packages | grep -x -n "Package: ${PACKAGE}" | cut -d ':' -f 1)
+    PACKAGE_LINESTART=$(cat Packages | grep -x -n "Package: ${PACKAGE}" | cut -d ':' -f 1 | sort | tail -n 1)
     PACKAGE_NUMLINES=$(cat Packages | tail -n +$((${PACKAGE_LINESTART} + 1)) | grep -n "Package: " | head -n 1 | cut -d ':' -f 1)
     if [ -n "${PACKAGE_NUMLINES}" ]; then
         PACKAGE_DETAILS=$(cat Packages | tail -n +${PACKAGE_LINESTART} | head -n ${PACKAGE_NUMLINES})
@@ -177,7 +177,7 @@ for PACKAGE in ${PACKAGES[@]}; do
         echo "$((${PACKAGE_SIZE} / 1024))Kb"
     fi
     if [ -n "${PACKAGE_DATA}" ]; then
-        PACKAGE_DATA_LINESTART=$(cat Packages | grep -x -n "Package: ${PACKAGE_DATA}" | cut -d ':' -f 1)
+        PACKAGE_DATA_LINESTART=$(cat Packages | grep -x -n "Package: ${PACKAGE_DATA}" | cut -d ':' -f 1 | sort | tail -n 1)
         PACKAGE_DATA_NUMLINES=$(cat Packages | tail -n +$((${PACKAGE_DATA_LINESTART} + 1)) | grep -n "Package: " | head -n 1 | cut -d ':' -f 1)
         if [ -n "${PACKAGE_DATA_NUMLINES}" ]; then
             PACKAGE_DATA_DETAILS=$(cat Packages | tail -n +${PACKAGE_DATA_LINESTART} | head -n ${PACKAGE_DATA_NUMLINES})
