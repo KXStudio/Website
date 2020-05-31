@@ -9,6 +9,75 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (May 2020)</span><br/>
+    On <i>2020-05-31</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, another monthly report about the KXStudio project is here.<br/>
+    It has been a few months since one of these, which I apologise for.<br/>
+    It was wrong of me to assume I will have news every single month,
+    some are just a bit slow on news due to external circumstances.
+</p>
+<p>
+    Anyway, a lot of work is going into Carla,
+    <a href="https://github.com/falkTX/Carla/pull/1158" target="_blank">lots of bug-fixes</a>.<br/>
+    A good collection of them are piling up, which makes a v2.1.1 release worthy, so expect that in the next few days.
+</p>
+<p>
+    One of the new features in Carla is Linux VST3 support, already available if you use <b>carla-git</b>.<br/>
+    There is also a category filter in the add-plugin dialog now, and
+    <a href="https://kx.studio/tmp/scr_osx_highdpi.png" target="_blank">better handling of high-dpi mode</a>.<br/>
+    That is basically it in regards to frontend/GUI changes, everything else is on the backend/audio-host side.<br/>
+    All of this will be in Carla v2.2, with a tentative release date of July 15.
+</p>
+<p>
+    Other developments happening behind the scenes are a
+    <a href="https://github.com/DISTRHO/DISTRHO-Ports/tree/juce6" target="_blank">DISTRHO-Ports</a>
+    update
+    (setting old JUCE aside and using new
+    <a href="https://github.com/DISTRHO/juce/commits/juce6?after=5b18d44c570a061b1c7a074e5d86ac3d1b5d559a+0" target="_blank">juce6</a>
+    branch for Linux VST3 plugins), plus
+    <a href="https://github.com/DISTRHO/DISTRHO-Ports/pull/50" target="_blank">updating its build system to meson</a>.<br/>
+    The <a href="https://github.com/wineasio/wineasio" target="_blank">WineASIO</a>
+    project was finally given to me officially, so expect a release soon for that too.<br/>
+    There is also a big
+    <a href="https://github.com/DISTRHO/DPF/commits/pugl-upstream" target="_blank">DPF rework</a>
+    going on, and a new project for
+    <a href="https://github.com/DISTRHO/PawPaw" target="_blank">cross-platform LV2 plugin binaries</a>.<br/>
+    Those will be announced at a later point in time, once ready.
+</p>
+<p>
+    Regarding package updates in the repositories, there have been a few since the last monthly report. Those are:
+</p>
+<ul>
+    <li>element added</i>
+    <li>impro-visor added</i>
+    <li>ladish fixed to work on systems without python2</i>
+    <li>amsynth updated to 1.10.0</i>
+    <li>avldrums.lv2 updated to 0.4.1</i>
+    <li>bsequencer updated to 1.4.2</i>
+    <li>bshapr updated to 0.9</i>
+    <li>bslizr updated to 1.2.6</i>
+    <li>carla-git updated</i>
+    <li>fluajho updated to 1.5</i>
+    <li>geonkick updated to 2.1.1</i>
+    <li>lsp-plugins updated to 1.1.22</i>
+    <li>mod-host updated to latest git</i>
+    <li>patroneo updated to 1.5</i>
+    <li>vico updated to 1.1</i>
+    <li>x42-plugins updated to 20200411</i>
+</ul>
+<p>
+    Not so much work got done in regards to the website and documentation.<br/>
+    Perhaps for next time.
+</p>
+<p>
+    That is all for now, stay safe out there.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.1 is here!</span><br/>
     On <i>2020-04-15</i> by<i> falkTX</i>
 </p>
