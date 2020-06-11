@@ -144,24 +144,27 @@ include_once("includes/header.php");
     Carla is available in the KXStudio repositories, Fedora and ArchLinux (all with 'carla' package name).
 </p>
 <p>
-    Pre-compiled binaries are available for Linux, macOS and Windows (version 2.1).<br/>
+    Pre-compiled binaries are available for Linux, macOS and Windows (version 2.1.1).<br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/v2.1/Carla_2.1-linux32.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v2.1.1/Carla_2.1.1-linux32.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 32bit</a> (requires Qt 5.9 or higher)<br/>
     <img src="images/ico_linux.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/v2.1/Carla_2.1-linux64.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v2.1.1/Carla_2.1.1-linux64.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 64bit</a> (requires Qt 5.9 or higher)<br/>
     <img src="images/ico_mac.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/v2.1/Carla_2.1-macos.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
-         MacOS 64bit</a> (requires macOS 10.8 or higher)<br/>
+        <a href="https://github.com/falkTX/Carla/releases/download/v2.1.1/Carla_2.1.1-macos.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
+         MacOS compatible build</a> (requires macOS 10.8 or higher)<br/>
+    <img src="images/ico_mac.png" alt="" class="img_text_align_spaced"/>
+        <a href="https://github.com/falkTX/Carla/releases/download/v2.1.1/Carla_2.1.1-macos-10.12.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
+         MacOS newer build</a> (requires macOS 10.12 or higher)<br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/v2.1/Carla_2.1-win32-nosse.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v2.1.1/Carla_2.1.1-win32-nosse.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 32bit (No SSE, for old PCs)</a><br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/v2.1/Carla_2.1-win32.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v2.1.1/Carla_2.1.1-win32.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 32bit</a><br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/v2.1/Carla_2.1-win64.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v2.1.1/Carla_2.1.1-win64.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 64bit</a><br/>
 </p>
 <p>
