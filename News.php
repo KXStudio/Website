@@ -9,6 +9,51 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.1.1 has been released</span><br/>
+    On <i>2020-06-11</i> by<i> falkTX</i>
+</p>
+
+<p>
+    This is a bugfix for Carla version v2.1 series, fixing many bug reports and stuff I found along the way.
+</p>
+<p>
+    Carla is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
+    It has some nice features like automation of parameters via MIDI CC (and send output back as MIDI too) and full OSC control.<br/>
+</p>
+
+<h3>Changelog</h3>
+<ul>
+    <li>Fix carla-control not handling CLI argument for custom address</li>
+    <li>Fix carla-plugin not handling all callbacks</li>
+    <li>Fix carla-plugin LV2 UI not showing up if host supports touch feature</li>
+    <li>Fix for some plugin formats having 0 audio ports</li>
+    <li>Fix occasional crashes due to canvas shadow (Qt bug, shadow is disabled by now)</li>
+    <li>Fix canvas ports text width calculation with new Qt</li>
+    <li>Fix wrong assertion with size 1 MIDI messages</li>
+    <li>Fix errors in the icons</li>
+    <li>Fix incorrect base conversion for MIDI CC assignments</li>
+    <li>Fix rpath specification in pkg-config files</li>
+    <li>Fix build with Qt 5.15</li>
+    <li>Discovery: Force language to be "C" (English) so we can parse errors</li>
+    <li>Discovery: assume midi inputs = 1 if VST plugin is synth</li>
+    <li>Make canvas ports and groups ignore middle mouse clicks</li>
+    <li>Improve performance of canvas "inline display" rendering</li>
+    <li>Other miscellaneous bug fixes</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the
+      <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    Carla v2.1 is available pre-packaged in the KXStudio repositories, ArchLinux and Ubuntu since 20.04.
+      On those you can simply install the <b>carla</b> package.<br/>
+    Bug reports and feature requests are welcome! Jump on over to the
+      <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (May 2020)</span><br/>
     On <i>2020-05-31</i> by<i> falkTX</i>
 </p>
