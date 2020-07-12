@@ -11,7 +11,7 @@ $DEBIAN_PACKAGE_URL = "https://launchpad.net/~kxstudio-debian/+archive/kxstudio/
 
 <div class="box box-description">
     <p>
-        The KXStudio repositories support all Debian versions since <b>10 (Buster)</b> and Ubuntu <b>18.04 (Bionic)</b> or above.<br/>
+        The KXStudio repositories support all Debian versions since <b>10 (Buster)</b> and Ubuntu <b>18.04 (Bionic)</b> or above including Ubuntu 20.04.<br/>
         They should work on all Debian-based distributions and variants.<br/>
         A computer running intel-based 32bit or 64bit with SSE2 is required,
         or alternatively an ARM-based system (32bit with neon-vfpv4 or 64bit).
