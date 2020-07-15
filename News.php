@@ -9,6 +9,44 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; WineASIO v1.0.0 released</span><br/>
+    On <i>2020-07-15</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, a perhaps unexpected release is here.<br/>
+    This is a release of WineASIO, as a way to announce maintainer change as well as making it up to date with current Wine.
+</p>
+<p>
+    The previous maintainer, Joakim Hernberg, publicly said that he was looking for someone to take lead on the project.<br/>
+    When I was doing packaging of WineASIO to the KXStudio repositories, there were a couple of fixes needed... and eventually just decided to maintain it since I was in a way already doing that.<br/>
+    With the green-light for taking over the project, I did a couple of changes that seemed (to me) relevant and useful.<br/>
+    The Cadence-specific WineASIO settings were also split off to become a standalone tool, and it is now the ASIO "control panel" for the WineASIO driver.
+</p>
+<img src="https://raw.githubusercontent.com/wineasio/wineasio/master/screenshot.png" alt="screenshot"/>
+<p>
+    I do not plan to make new development for WineASIO, only maintain it to keep it alive and working.<br/>
+    The new "control panel" was an exception due to it being, in my opinion, a user experience fix.<br/>
+    (understanding the Windows registry can be hard, so the "panel" allows us to skip on having to deal with that)
+</p>
+<p>
+    This is what changed compared to the previous official release:
+</p>
+<ul>
+    <li>Add custom GUI for WineASIO settings, made in PyQt5 (taken from Cadence project code)</li>
+    <li>Add packaging script</li>
+    <li>Fix code to work with latest Wine</li>
+    <li>Fix control panel startup</li>
+    <li>Rework Makefile, common rules for 32 and 64bit builds</li>
+</ul>
+<p>
+    There are no pre-compiled binaries for WineASIO, though it is available as a package in the KXStudio repositories.<br/>
+    You can find this v1.0.0 release at <a href="https://github.com/wineasio/wineasio/releases/tag/v1.0.0" target="_blank">
+          github.com/wineasio/wineasio</a>.<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.1.1 has been released</span><br/>
     On <i>2020-06-11</i> by<i> falkTX</i>
 </p>
