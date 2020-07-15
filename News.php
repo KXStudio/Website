@@ -9,6 +9,44 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; A DISTRHO-Ports update</span><br/>
+    On <i>2020-07-15</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again, another release for the
+    <a href="https://libremusicproduction.com/dev/release/">Quarterly Release Pact</a> is here.<br/>
+    This one is a "small" update of the
+    <a href="https://github.com/DISTRHO/DISTRHO-Ports">DISTRHO-Ports</a> project.<br/>
+    It is a more packager-focused release rather than user-focused, because the (super old) build system was finally updated.<br/>
+    This alone warrants a new release by itself, as it finally becomes possible for the project to be packaged in regular linux distributions.
+</p>
+<p>
+    There are a few new plugins and fixes with this release, bigger changes are coming at a later date.<br/>
+    I want to update the DISTRHO-Ports website and have "nightly builds" of the plugin binaries, but this will take time.<br/>
+    For now, at least we have the plugins building and working on modern distributions.
+</p>
+<p>
+    Here is a resume of the full changes since last release in 2018:
+</p>
+<ul>
+    <li>Add HiReSam plugin port</li>
+    <li>Add ReFine plugin port</li>
+    <li>Add Temper plugin port</li>
+    <li>Fix build for ARM NEON target</li>
+    <li>Fix LV2 UI notifications happening in non-GUI thread</li>
+    <li>Fix LV2 meta-data to pass lv2lint errors</li>
+    <li>Update JUCE (current plugins frozen in a known good but slightly old version, with cherry-picked fixes)</li>
+    <li>Switch build system from premake3 to meson</li>
+</ul>
+<p>
+    There are no pre-compiled binaries for this release, though the plugins are fully up-to-date in the KXStudio repositories.<br/>
+    You can find this 2020-07-14 release at <a href="https://github.com/DISTRHO/DISTRHO-Ports/releases/tag/2020-07-14" target="_blank">
+          github.com/DISTRHO/DISTRHO-Ports/releases</a>.<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; WineASIO v1.0.0 released</span><br/>
     On <i>2020-07-15</i> by<i> falkTX</i>
 </p>
