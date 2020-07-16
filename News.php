@@ -9,6 +9,394 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.2 RC1 is here!</span><br/>
+    On <i>2020-07-16</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone, it is release day! <i>(casually late again, but only 1 day late this time, yay progress!)</i><br/>
+</p>
+<p>
+    This is the announcement of the first release candidate of Carla 2.2.<br/>
+    As done with 2.1, there is no beta release for v2.2 and we are going straight into a release candidate.
+</p>
+<p>
+    There are not many graphical changes, but many under the hood.<br/>
+    One very important note for developers is that the "native" API to access carla as plugin (as used by LMMS)
+    is still ABI and API-wise backwards compatible with 2.0, but ABI and API of Carla as a library is not.<br/>
+    All the host functions now have a "handle" prefix, so they can be reused for standalone, plugin and other variants.
+</p>
+<p>
+    With that said, let's go through what's new, first the bigger changes and small stuff for last.
+</p>
+
+
+linux vst3 plugin support
+
+patchbay positions
+Add 2x and 4x zoom save image actions, compress output
+Add action to copy canvas as image to clipboard
+
+Set correct Carla-VST UI size based on scale factor
+Fully Scalable UI Part 1 (leds, what else?
+Fixup icons
+
+Make pixmapkeyboard right-click menu a bit better
+Fix creation of a rack when one of the parameters is a NaN
+Some attention to inline display ?
+
+Use newlocale methods in CarlaScopedLocale to be thread-safe
+Ignore errors from non-native vst3 files
+Force discovery to be in "C" (english) so we can parse errors
+Fix for vst2 plugins that crash on init
+Check for updated program names during audioMasterUpdateDisplay
+Change the way plugins are deleted, ensure they are not being used
+
+Add --cnprefix arg, for client name prefix; Set it also when needed
+
+New internal CLI arg "--osc-gui="
+Add script used to test carla-plugin as standalone
+Add script to test carla-osc usage locally
+Start checking python code with pylint, adjust some already
+
+Implement NSM :optional-gui:
+libjack: Implement client name uuid stuff, port search requests, integrate with nsm optional-gui, fix under clang and maybe other systems
+
+Allow all MIDI options in jack-apps
+Make add-jack interposer work for builds without X11
+
+haiku working build, but no audio yet
+
+Better handle case of JACK server stop (or killed)
+Add API to know current project folder
+Better handle lv2 map/make path, now based on project dir
+
+
+More work for LV2 state path, symlinks and move/copy when needed
+Check for state:threadSafeRestore on lv2 plugins; More debug paths
+ Allow to set custom prefix for jack clients, use it under NSM
+
+
+Allow to change plugin window title dynamically
+
+Fix modguis for carla host changes and new tornado
+
+sfzero: fix crash on multi-line c-style comments
+
+Fix SFZ rescan adding all files again each time
+
+
+
+Raise limit of plugins that can be loaded (512 default, 64 in rack)
+
+Tweaks to loading external patchbay data into internal one
+
+
+carla-plugin: Only export exactly the symbols that we need
+
+Add a few more details to lv2 plugin version, passes lv2lint
+
+
+Fix SF2 default polyphony
+
+Add a 12400x9600 canvas size
+
+
+Keep current edit-dialog tab state while reloading parameters
+
+
+Always use maximum amount of channels for VST2 plugins
+
+
+Show current mapped type+value directly together with parameter
+
+
+Initial implementation of MIDI learn (per plugin, not global)
+
+
+Implement MIDI CC and CV source parameter changes for bridges
+
+
+Increase lfo max value, so we can get real slow
+
+
+Add desktop files with hidden status for all carla variants
+
+Show canvas tab in jack-single or multi modes under NSM
+
+Remove X-NSM-capable from main carla desktop file, forcing variants
+
+carla-jack-multi should always show canvas
+
+
+<br/>
+
+<table><tr><td width="50%">
+<a href="/screenshots/news/carla-2.1_high-dpi.png">
+    <img src="/screenshots/news/carla-2.1_high-dpi.png" style="max-width:100%;height:auto;" alt="settings"/>
+</a>
+</td><td width="50%">
+<h3>High-DPI support (work in progress)</h3>
+<p>
+    Initial work was done to support high-DPI screens.<br/>
+    Note that this was not tested very extensively, due to lack of proper hardware, but the requirements in terms of code are all there.<br/>
+    There are still a few "normal" resolution bitmaps in use, to be replaced in future releases.<br/>
+    You can click on the screenshot on the left to see Carla rendered at 3x the resolution.<br/>
+    <br style="line-height:0.75em"/>
+    So for now, the situation is:
+</p>
+<ul>
+    <li>Most of the icons changed to scalable format</li>
+    <li>UI will scale with the desktop automatically, as Qt takes care of that for us</li>
+    <li>Some bitmaps still remain, to be replaced by vector images in a future release</li>
+    <li>Not extensively tested, feedback is welcome</li>
+</ul>
+</td></tr></table>
+
+<br/>
+
+<table><tr><td width="50%">
+<a href="/screenshots/news/carla-2.1_cv-stuff.png">
+    <img src="/screenshots/news/carla-2.1_cv-stuff.png" style="max-width:100%;height:auto;" alt="settings"/>
+</a>
+</td><td width="50%">
+<h3>Better CV Support</h3>
+<p>
+    CV ports are now supported in the internal patchbay mode, meaning you do not need to use JACK with Carla in order to use CV plugins.
+</p>
+<p>
+    Automable parameters can now be exposed as a CV port, so they can be controlled by regular CV sources or other plugins.<br/>
+    This is a kinda feature preview, as there are some limitations at the moment:
+</p>
+<ul>
+    <li>Parameter changes are not sample accurate<br/>(in a later version, Carla will split buffer up to 32 frames for more fine-grained control changes)</li>
+    <li>Not all plugin formats and parameter types are allowed to be controlled this way<br/>(to be extended as I test more compatibility)</li>
+    <li>Only available for parameter inputs, not outputs</li>
+</ul>
+<p>
+    In order to make CV more useful by default, a new internal "MIDI to CV" plugin was added, originally created by Bram Giesen.<br/>
+    More plugins will be added as needed, for now I recommend to use
+    <a href="https://github.com/blablack/ams-lv2" target="_blank">ams-lv2</a>
+    and
+    <a href="https://github.com/moddevices/mod-cv-plugins" target="_blank">mod-cv-plugins</a>
+    as they already do a lot.<br/>
+</p>
+<p>
+    Also, a new variant of Carla as plugin was created that provides audio, MIDI and 5 CV ports (for each side).<br/>
+    This allows CV signals to flow in and out of Carla as a plugin.
+</p>
+</td></tr></table>
+
+<br/>
+
+<table><tr><td width="50%">
+<a href="/screenshots/news/carla-2.1_windows.png">
+    <img src="/screenshots/news/carla-2.1_windows.png" style="max-width:100%;height:auto;" alt="settings"/>
+</a>
+</td><td width="50%">
+<h3>Proper theme and Carla-Control for Windows</h3>
+<p>
+    The Windows build stack changed from using official Python and PyQt5 packages to msys ones, allowing us to link against them using mingw (Carla does not support MSVC)<br/>
+    This makes it possible to use the proper "pro" theme like Linux and macOS already did, and also get Carla-Control finally working on Windows.
+</p>
+<p>
+    Previously, the Carla Windows builds were using Qt's "fusion" theme (which the Carla "pro" theme is based on), which looks very similar but misses all of custom tweaks made for Carla.<br/>
+    This includes, for example, preventing pop-up menus from taking the entire screen or ugly thick lines being drawn where a small one was expected.
+</p>
+<p>
+    A small but important step towards cross-platform feature parity. \o/
+</p>
+</td></tr></table>
+
+<br/>
+
+<table><tr><td width="50%">
+<a href="/screenshots/news/carla-2.1_mac-vst.png">
+    <img src="/screenshots/news/carla-2.1_mac-vst.png" style="max-width:100%;height:auto;" alt="settings"/>
+</a>
+</td><td width="50%">
+<h3>VST2 plugin for macOS and Windows, plus exposed parameters</h3>
+<p>
+    This is the final item that was missing for cross-platform feature parity.<br/>
+    We now have Carla as VST2 plugin running on both macOS and Windows!
+</p>
+<p>
+    Embedding of the full GUI on these systems is not possible, so a small "middleware" window is shown as the plugin custom UI.<br/>
+    Not the best experience, but allows Carla to finally work as VST2.<br/>
+</p>
+<p>
+    Additionally, 100 parameters are exposed to the host, dynamically used in the order of the plugins loaded.<br/>
+    So for example, if the first plugin in the rack has 20 parameters, the first 20 parameters of carla-vst will be mapped to that plugin.<br/>
+    This continues in order for the remaining plugin parameters until we reach 100 of them.
+</p>
+<p>
+    When Carla is loaded as an internal plugin, parameters will be dynamically available too.<br/>
+    This feature is not available in the LV2 version of Carla though, at least not yet.
+</p>
+<p>
+    Note: Carla plugins are not "notarized" yet, so they will not run under latest macOS 10.15/Catalina where this is a requirement.
+</p>
+</td></tr></table>
+
+<br/>
+
+<table><tr><td width="50%">
+<a href="/repo/screenshots/carla-vst-wine.png">
+    <img src="/repo/screenshots/carla-vst-wine.png" style="max-width:100%;height:auto;" alt="settings"/>
+</a>
+</td><td width="50%">
+<h3>Wine-native bridge, sorta experimental</h3>
+<p>
+    This is a way to load Linux binaries under Windows applications running with Wine, in case you need that for some reason<br/>
+    Personally I made it so that I could run the native Carla inside FL Studio, which allows me to use its sequencer but not have to deal with Windows plugins.
+</p>
+<p>
+    This is available in the KXStudio repositories as "carla-vst-wine" package, you need to copy /usr/lib/winvst/Carla* into your Wine VST dll folder to make it work.<br/>
+    It requires Carla to be installed system-wide, so it cannot work if Carla is downloaded manually.
+</p>
+<p>
+    Building it is kinda tricky, as it requires building a native-windows dll first, and then a few things with winegcc...<br/>
+    Packager documentation will be added soon to Carla's source code repository, so other Linux distributions can pick it up.<br/>
+</p>
+<p>
+    I demoed this feature at Sonoj last year (2019), you can watch it as the 3rd part of <a href="https://media.ccc.de/v/sonoj2019-1914-carla-magic" target="_blank">this video</a>.
+</p>
+</td></tr></table>
+
+<table><tr><td width="50%">
+<a href="/screenshots/news/carla-2.1_add-plugin.png">
+    <img src="/screenshots/news/carla-2.1_add-plugin.png" style="max-width:100%;height:auto;" alt="settings"/>
+</a>
+</td><td width="50%">
+<h3>Refreshed add-plugin dialog and favorite plugins</h3>
+<p>
+    The add-plugin dialog had a major overhaul, now looking much better and with more content visible at once.<br/>
+    Target was to improve the user experience, making clear that there are filters available. (it was not so obvious in previous versions)
+</p>
+<p>
+    The star on the most-left section of the table is to mark a plugin as a favorite, which will add it as a shortcut to the right-click menus on empty rack and patchbay areas.
+</p>
+</td></tr></table>
+
+<table><tr><td width="50%">
+<a href="/screenshots/news/carla-2.1_params.png">
+    <img src="/screenshots/news/carla-2.1_params.png" style="max-width:100%;height:auto;" alt="settings"/>
+</a>
+</td><td width="50%">
+<h3>Single-page and grouped plugin parameters</h3>
+<p>
+    The dialog for the generic plugin parameter view also had an update.<br/>
+    All parameters are now placed in the same tab (separated only by input and output types), and grouped when supported by the plugin.<br/>
+    The options for mapping a parameter to a MIDI CC were taken out and replaced by a button that triggers a menu with the relevant options.
+</p>
+<p>
+    Note that, at the moment, only a few LV2 plugins support parameter groups.<br/>
+    This is because most hosts do not support this feature, so plugins do not have many incentives to support such a thing.<br/>
+    And with not a lot of plugins supporting it, hosts also do not care that much. The usual circular dependency deal...<br/>
+    But since the feature applies quite nicely to Carla, made sense to add it.
+</p>
+<p>
+    The group can be collapsed by clicking on it.
+</p>
+<p>
+    A similar feature will be added to the patchbay in a later release, so we can group audio ports too. :)
+</p>
+</td></tr></table>
+
+<h3>More UI changes</h3>
+<p>
+    The rack items will dynamically show as many knobs as possible<br/>
+    You can now change the "skin" and color of any rack item, making it easy to identify certain plugins<br/>
+    Added buffer-size, sample-rate and xrun information to the status; clicking on the xrun counter will reset it to zero<br/>
+</p>
+
+<h5>Canvas changes</h5>
+<p>
+    Right-clicking on a canvas group will show options for quickly connecting all ports to another group<br/>
+    Many small tweaks and fixes, plus a few extra actions, as contributed by Nikita Zlobin (to be documented on the user manual)<br/>
+    Support for Ardour-style inline-displays, marked experimental in this release (sadly cannot be made stable until Carla v3.0)<br/>
+</p>
+
+<h5>Carla-control and OSC rework</h5>
+<p>
+    Carla's OSC support has been reworked, now has its own dedicated page in the settings.<br/>
+    Carla-Control has been extended to support all non-local-dependent features of the main Carla (like patchbay management and transport controls).<br/>
+    This will be extended even further in future releases.<br/>
+</p>
+
+<h5>AU and VST3 support is back, by leveraging JUCE</h5>
+<p>
+    Disabled during a previous 2.0 beta release, support for the JUCE library was removed and replaced by a heavily stripped-down version of it. (while it was still GPlv2 licensed)<br/>
+    The reasons for that decision still remain relevant, but in order to keep in mind with Carla's goals, I decided to add back JUCE support - but now completely optional.<br/>
+    It will always be possible to build Carla without JUCE, it is only used for extra hardware and plugin format support.<br/>
+    In fact, Linux builds by default do not use it, as there is no need for it.
+</p>
+<p>
+    Anyway, the published macOS and Windows Carla builds do use JUCE, which means Carla supports VST3 under macOS and Windows, and AU under macOS.<br/>
+    As a bonus, it is now possible to show the custom control panel of ASIO devices. :)
+</p>
+<p>
+    Worth noting is that JUCE does not support VST3 under Linux at this point, so neither does Carla even if you build it yourself with JUCE enabled.
+</p>
+
+<h3>Other changes</h3>
+<p>
+    Within a bunch of small fixes and new implementations, here are some changes that deserve to be mentioned:<br/>
+</p>
+<ul>
+    <li>Carla now requires Qt5, can no longer work with Qt4; but can still use LV2 Qt4 UIs with its built-in bridges</li>
+    <li>NSM is now supported for JACK applications</li>
+    <li>Added a 16 MIDI port mode for JACK applications</li>
+    <li>Added "Cancelable actions" during project and plugin bridges load, so they will no longer time-out; instead the user has the option to cancel them at anytime</li>
+    <li>Initial support for LV2 parameter API</li>
+    <li>Initial support for LV2 file paths, assuming plugin has no custom UI (click on the show-gui button to open a file dialog)</li>
+</ul>
+
+<h3>Notes for developers and packagers</h3>
+<ul>
+    <li>Linking against the JACK library directly is now possible by using `make JACKBRIDGE_DIRECT=true`, which allows for building Carla as an internal client</li>
+</ul>
+
+<h3>Notes for users</h3>
+<p>
+    The code for scanning plugins had a little rework, again, making some internal data structures change.<br/>
+    Because of this, a full rescan of your plugins is needed after the update.<br/>
+</p>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<h3>Future and final notes</h3>
+<p>
+    I have started a change of the Carla's frontend coding language, from Python to C++ (for performance, reliability and debugging reasons).<br/>
+    There are a few canvas related things, currently experimental, that can never be made stable or fast due to how Python/PyQt works.<br/>
+    Also Carla is not scaling very well at the moment, and the addition of CV controlled parameters and inline-displays does not help its case.<br/>
+    So a move of the entire frontend to C++ makes quite a lot of sense.<br/>
+    Whenever this is finished a new release will be made.<br/>
+    But it is going to be something that, even though means a lot behind the scenes, visibly nothing will change. (except performance)<br/>
+    Because of this, do not expect many UI related changes in Carla for the time being.
+</p>
+<p>
+    A user manual for Carla has been started.<br/>
+    It proved to be quite helpful for development too, as I had to justify why things are the way they are, and explain how they work too.<br/>
+    Now that Carla UI should not change too much for a while, it is the right time for such thing.<br/>
+    I personally dislike writing such things, but understand it can be quite useful.<br/>
+    The work-in-progress manual is at <a href="https://kx.studio/Documentation:Manual:Carla">https://kx.studio/Documentation:Manual:Carla</a>.<br/>
+    (Not much to see there at the moment though, give me time)
+</p>
+<p>
+    That's it.<br/>
+    Please remember that this is a release candidate, and not the final release.<br/>
+    Some issues are expected, I will do my best to fix all reports that get to me.<br/>
+    If I don't know about the issues though, I can't fix them. So please report any issues you find, thanks!
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; A DISTRHO-Ports update</span><br/>
     On <i>2020-07-15</i> by<i> falkTX</i>
 </p>
