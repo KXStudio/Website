@@ -30,7 +30,6 @@ include_once("includes/header.php");
     Now with that said, let's go through what's new, first the bigger changes and smaller stuff for last.
 </p>
 
-
 <table><tr><td width="40%">
 <a href="/screenshots/news/carla-2.2_multi-client.png">
     <img src="/screenshots/news/carla-2.2_multi-client.png" style="max-width:100%;height:auto;" alt="settings"/>
@@ -133,10 +132,9 @@ include_once("includes/header.php");
         <li>Added a 12400x9600 canvas size</li>
         <li>Added a 2x and 4x canvas image export mode</li>
         <li>Added a menu action to save current Carla canvas as image in the clipboard</li>
+        <li>Added "Send MIDI notes" option to plugin built-in editor dialog</li>
         <li>Canvas positions are now always saved and restored, including in the plugin version</li>
         <li>Canvas positions are kept in sync across multiple Carla JACK instances and even Carla-Control</li>
-
-
         <li>Built-in plugin edit dialog tab state is kept when parameters are reloaded</li>
         <li>Implemented NSM "optional-gui"</li>
         <li>Plugin custom GUI Window title changes dynamically when renamed</li>
