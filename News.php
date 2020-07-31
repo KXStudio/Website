@@ -14,83 +14,107 @@ include_once("includes/header.php");
 </p>
 <p>
     Hello all, another monthly report about the KXStudio project is here.<br/>
-<!--     It has been a few months since one of these, which I apologise for.<br/> -->
-<!--     It was wrong of me to assume I will have news every single month, -->
-<!--     some are just a bit slow on news due to external circumstances. -->
-
-carla 2.2-rc1 got released, and wineasio.
-distrho-ports too, but that was mostly for packagers
-with disthro-ports migrated to meson, work started for legacy/new ports.
-legacy with vst/lv2, new with vst2/vst3 and lv2. Keeping the juce fork updated, even though upstream not interested on lv2 at all.
-
-work being done for automated builds, most of it already complete.
-not that useful for linux, because distros pick up stuff quickly, it is more for win/mac folks for which is much harder to build stuff.
-the automated builds will cover plugins (distrho-ports, dpf-plugins and more), carla and even jack.
-It is not completely ready yet, but very close. expect a few announcements regarding this in the coming weeks.
-
-I know people have been asking about ardour, will get to that eventually, sorry for the delay.
-Ardour is a different kind of build (I want to repackage the official binary, authors are ok with it),
-so I need to find a nice way of handling it. Previously it was all very manual work, want to avoid that.
-Focus in past few weeks has been on Carla and then the automated build setup, so packaging got pushed aside for now.
-
-package updates...
-
+    This actually covers June and July, since there was not much to tell during June.
 </p>
 <p>
-    Anyway, a lot of work is going into Carla,
-    <a href="https://github.com/falkTX/Carla/pull/1158" target="_blank">lots of bug-fixes</a>.<br/>
-    A good collection of them are piling up, which makes a v2.1.1 release worthy, so expect that in the next few days.
-</p>
-<p>
-    One of the new features in Carla is Linux VST3 support, already available if you use <b>carla-git</b>.<br/>
-    There is also a category filter in the add-plugin dialog now, and
-    <a href="https://kx.studio/tmp/scr_osx_highdpi.png" target="_blank">better handling of high-dpi mode</a>.<br/>
-    That is basically it in regards to frontend/GUI changes, everything else is on the backend/audio-host side.<br/>
-    All of this will be in Carla v2.2, with a tentative release date of July 15.
-</p>
-<p>
-    Other developments happening behind the scenes are a
-    <a href="https://github.com/DISTRHO/DISTRHO-Ports/tree/juce6" target="_blank">DISTRHO-Ports</a>
-    update
-    (setting old JUCE aside and using new
-    <a href="https://github.com/DISTRHO/juce/commits/juce6?after=5b18d44c570a061b1c7a074e5d86ac3d1b5d559a+0" target="_blank">juce6</a>
-    branch for Linux VST3 plugins), plus
-    <a href="https://github.com/DISTRHO/DISTRHO-Ports/pull/50" target="_blank">updating its build system to meson</a>.<br/>
-    The <a href="https://github.com/wineasio/wineasio" target="_blank">WineASIO</a>
-    project was finally given to me officially, so expect a release soon for that too.<br/>
-    There is also a big
-    <a href="https://github.com/DISTRHO/DPF/commits/pugl-upstream" target="_blank">DPF rework</a>
-    going on, and a new project for
-    <a href="https://github.com/DISTRHO/PawPaw" target="_blank">cross-platform LV2 plugin binaries</a>.<br/>
-    Those will be announced at a later point in time, once ready.
-</p>
-<p>
-    Regarding package updates in the repositories, there have been a few since the last monthly report. Those are:
+    So... first, for those that did not notice, there was quite a few linux/opensource-audio releases on July 15, for the
+    <a href="https://libremusicproduction.com/dev/release/">
+        Quarterly Release Pact</a>.<br/>
+    The "Quarterly Release Pact" is an informal agreement between developers to do releases of as much software as possible on a common day.<br/>
+    This is a nice way to:
 </p>
 <ul>
-    <li>element added</i>
-    <li>impro-visor added</i>
-    <li>ladish fixed to work on systems without python2</i>
-    <li>amsynth updated to 1.10.0</i>
-    <li>avldrums.lv2 updated to 0.4.1</i>
-    <li>bsequencer updated to 1.4.2</i>
-    <li>bshapr updated to 0.9</i>
-    <li>bslizr updated to 1.2.6</i>
-    <li>carla-git updated</i>
-    <li>fluajho updated to 1.5</i>
-    <li>geonkick updated to 2.1.1</i>
-    <li>lsp-plugins updated to 1.1.22</i>
-    <li>mod-host updated to latest git</i>
-    <li>patroneo updated to 1.5</i>
-    <li>vico updated to 1.1</i>
-    <li>x42-plugins updated to 20200411</i>
+    <li>Keep the software in the public eye</li>
+    <li>Increase trust, as people see that the software is in development and is cared for</li>
+    <li>Increase motivation of the developers, as seeing a group working (by their releases) is a good way to push them to do something too</li>
+    <li>Engage in a kind of "Swarm Marketing": A small release does not have much impact and won't get featured often by news sites,
+    but a whole group of software releases demands more attention.</li>
 </ul>
 <p>
-    Not so much work got done in regards to the website and documentation.<br/>
-    Perhaps for next time.
+    I can speak for myself that the release day is a great motivator to push releases.<br/>
+    When such date is near, everything that has reached a certain point where a release is perhaps worth doing
+    (but usually would be hold-off due to not being "perfect enough"), just gets released.<br/>
+    Because to be fair, there is no point on holding off a release for long periods of time.<br/>
+    If something really goes wrong, a quick bug-fix can be done, so why not. It is software, these things happen sometimes..
 </p>
 <p>
-    That is all for now, stay safe out there.
+    With that in mind, the
+    <a href="https://kx.studio/News/?action=view&url=a-distrho-ports-update" target="_blank">DISTRHO-Ports</a>
+    and
+    <a href="https://kx.studio/News/?action=view&url=wineasio-v100-released" target="_blank">WineASIO</a>
+    projects got new releases.<br/>
+    I worked (with some help) to move the DISTRHO-Ports build system from the super-old premake3 build system to meson.<br/>
+    While irrelevant for users, it is very important for Linux distribution packagers because premake3 is simply no longer maintained
+    (and thus not even installable in some cases).<br/>
+    The other changes were not really that substantial in my view, but why not release anyway?<br/>
+    As someone who has done a few packages myself, I can understand the pain of those that want to package something but have their work made difficult by this kind of problem.<br/>
+    (If all goes well, DISTRHO-Ports provided plugins will be installable as packages in the next Ubuntu version already!)
+</p>
+<p>
+    <a href="https://github.com/DISTRHO/DISTRHO-Ports" target="_blank">DISTRHO-Ports</a>
+    has been reworked in a way so that we can keep the existing plugins untouched,
+    while adding/supporting new plugins made with JUCE6.<br/>
+    The "legacy" plugins will have LV2 and VST2 formats, while new ones will support LV2, VST2 and VST3.<br/>
+    I plan to write a tutorial on how to add a plugin to this project, so that other people than me can contribute.<br/>
+    This will increase the number of ported plugins drastically, as it does not have to wait on me to to do it. (I have a lot on my plate already..)<br/>
+    Once we have a good number of new plugins, or the next release day comes (in 3 months), you can count on yet another release! :)
+</p>
+<p>
+    Regarding
+    The <a href="https://github.com/wineasio/wineasio" target="_blank">WineASIO</a>,
+    it was ready for release for some time, so I did the release in more of a "why not?" state.<br/>
+    You can read more about this release
+    <a href="https://kx.studio/News/?action=view&url=wineasio-v100-released">
+    here</a>,
+    but in short, I am now maintaining the WineASIO project. :)<br/>
+    This is because the previous maintainer wished to step down doing so, and I was already fixing WineASIO for packaging in the KXStudio repositories anyway,
+    which basically involves maintaining it.<br/>
+    It is important to note that it is really only maintaining the code (so that it keeps working on new Wine versions).<br/>
+    So there is not going to be any new features added to it, only bug-fixes.
+</p>
+<p>
+    In other news,
+    <a href="https://kx.studio/News/?action=view&url=carla-22-rc1-is-here">
+    Carla 2.2 Release Candidate 1 is out</a>.<br/>
+    It was a bit more rushed than I wished for, with a late release because I had to fight with some macOS incompatibility issues..
+    but that should not happen too much in the future.<br/>
+    I already have in mind what to focus on for version 2.3, but I really hope that with this 2.2 release I can kinda already leave Carla a bit on the side
+    (which was already supposed to have happened in version 2.1 by the way), because other projects really need my attention right now.<br/>
+    The final Carla 2.2 release is just siting on a timer now in a way.<br/>
+    My target is to make it available for Ubuntu 20.10, so I will fix whatever bugs I can until the time arrives for Ubuntu 20.10 package freeze.
+    (So final release in October 2020)
+</p>
+<p>
+    Unrelated to the release pact now, I am working on automated builds for a few projects, learning along the way how that is usually handled.<br/>
+    This is not that useful for Linux users, because distributions can build and package up stuff quickly; it is more for macOS and Windows users for whom it is much harder to build stuff.<br/>
+    The automated builds will cover plugins (distrho-ports, dpf-plugins and more), Carla and even JACK.<br/>
+    It is not completely ready yet, but very, very close to done. Expect a few announcements regarding this in the coming weeks!
+</p>
+<p>
+    Something I need to mention... I know people have been asking about an ardour package update (in KXStudio repositories).<br/>
+    I will get to it eventually, yes, sorry for the delay.<br/>
+    Ardour is a different kind of build, so I need to find a nice way of handling it.
+    (I want to repackage the official binary, as authors are ok with it)<br/>
+    Previously it was all very manual work, it is better to avoid that this time around.<br/>
+    My focus in the past few weeks has been on Carla and now the automated build setups, so packaging got put aside for now.
+</p>
+<p>
+    And speaking of packages, here is the list of updates and additions in regards to June and July 2020:
+</p>
+<ul>
+    <li>helio-workstation added</i>
+    <li>new-session-manager added, replaces non-session-manager</i>
+    <li>fluajho updated to 1.6.1</i>
+    <li>lsp-plugins updated to 1.1.24</i>
+    <li>mod-host updated to latest git</i>
+    <li>patroneo updated to 1.6.1</i>
+    <li>sequencer64 updated to 0.96.8</i>
+    <li>vico updated to 1.2.1</i>
+    <li>x42-plugins updated to 20200714</i>
+    <li>zam-plugins updated to 1.13</i>
+</ul>
+<p>
+    That is all for now, stay safe and sane out there!
 </p>
 
 <hr/>
