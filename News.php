@@ -9,6 +9,65 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.2 RC2 is here!</span><br/>
+    On <i>2020-09-07</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, this is an announcement for the next release candidate for Carla v2.2.<br/>
+    Comes after a few issues were reported and fixed, and as an exception a new plugin is added.
+</p>
+<p>
+    The new plugin is actually "XY Controller" from the Cadence project.<br/>
+    It works pretty much the same way, except that received MIDI data will not change the UI elements.<br/>
+    This is because this is a plugin now, not a standalone application anymore. But everything else remains.<br/>
+    As a bonus, the X and Y are now plugin parameters, and work as parameter outputs too, so they can control other stuff in Carla.<br/>
+</p>
+<p>
+    Why the plugin was added so suddenly will be explained in detail in a future Cadence release.<br/>
+    But in short, I am splitting Cadence into easier to manage sub-projects.<br/>
+    The "Meter" and "XY Controller" tools are now part of Carla, so they can be removed from Cadence.
+</p>
+<p>
+    Besides the new plugin (which again is an exception, due to Carla v2.2 already being in Release-Candidate state) we only have bug-fixes.<br/>
+    The full list of changes is:
+</p>
+<ul>
+    <li>Add xycontroller plugin</li>
+    <li>Auto-select text in plugin search entry when focused via shortcut</li>
+    <li>Compress canvas clipboard image saving (as PNG)</li>
+    <li>Disable OSC by default on macOS</li>
+    <li>Fix crash when receiving unexpected VST2 time information</li>
+    <li>Fix current project filename persistence after engine stop</li>
+    <li>Fix deadlock when using VST3 plugins inside Carla as plugin</li>
+    <li>Fix listing LV2 plugins on Windows (2.2 regression)</li>
+    <li>Fix oddities with MIDI learn</li>
+    <li>Fix potential crashes when opening or hiding plugin UIs</li>
+    <li>Fix some plugins not having all their audio ports exposed</li>
+    <li>Fix some plugin UIs not in front of Carla when first shown</li>
+    <li>Fix wine bridge build against winehq-stable and winehq-stable</li>
+    <li>Overall fix to midi pattern plugin</li>
+    <li>Package macOS plugin version, making Carla-Plugin usable with macOS 10.15</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<h3>Final note</h3>
+<p>
+    Just a reminder that this is a release candidate, and not the final release yet.<br/>
+    There are still a few known issues, but since they are specific to certain workflows, the amount of users affected is limited.<br/>
+    If you find any more of them, please let me know in the
+    <a href="https://github.com/falkTX/Carla/issues" class="external free" rel="nofollow" target="_blank">github issue tracker</a>,
+    thanks!
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (July 2020)</span><br/>
     On <i>2020-07-31</i> by<i> falkTX</i>
 </p>
