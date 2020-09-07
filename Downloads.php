@@ -29,8 +29,8 @@ include_once("includes/versions.php");
         <b>MacOS Downloads:</b><br/>
         &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla_<?php echo $VERSION_CARLA; ?>-macos.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (compatible build, version <?php echo $VERSION_CARLA; ?>, requires macOS 10.8 or higher)<br/>
-        &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla_<?php echo $VERSION_CARLA; ?>-macos-10.12.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (newer build, version <?php echo $VERSION_CARLA; ?>, requires macOS 10.12 or higher)<br/>
+        &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla_<?php echo $VERSION_CARLA; ?>-macos-10.15.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
+              <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (newer build, version <?php echo $VERSION_CARLA; ?>, requires macOS 10.15 or higher)<br/>
     </p>
     <p class="p_extra_spaced">
         <b>Windows Downloads:</b><br/>

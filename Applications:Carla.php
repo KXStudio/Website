@@ -156,8 +156,8 @@ include_once("includes/versions.php");
         <a href="https://github.com/falkTX/Carla/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla_<?php echo $VERSION_CARLA; ?>-macos.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
          MacOS compatible build</a> (requires macOS 10.8 or higher)<br/>
     <img src="images/ico_mac.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla_<?php echo $VERSION_CARLA; ?>-macos-10.12.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
-         MacOS newer build</a> (requires macOS 10.12 or higher)<br/>
+        <a href="https://github.com/falkTX/Carla/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla_<?php echo $VERSION_CARLA; ?>-macos-10.15.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
+         MacOS newer build</a> (requires macOS 10.15 or higher)<br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
         <a href="https://github.com/falkTX/Carla/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla_<?php echo $VERSION_CARLA; ?>-win32-nosse.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 32bit (No SSE, for old PCs)</a><br/>
