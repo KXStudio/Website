@@ -24,31 +24,34 @@ include_once("includes/header.php");
 <hr/>
 
 <h3><span class="mw-headline">
-<img src="images/ico_ubuntu.png" class="img_text_align" alt=""/> Ubuntu 18.04 specific extras
+<img src="images/ico_ubuntu.png" class="img_text_align" alt=""/> Ubuntu 18.04 and 20.04 specific extras
 </span></h3>
 
 <p>
     <span style="font-weight:lighter">Repository code:</span> ppa:kxstudio-debian/ubuntus
 </p>
 <p>
-    This is a repository/PPA for Ubuntu 18.04 users with a few goodies that cannot be made into generic packages.<br/>
-    All packages that require system integration or shared libraries that cannot be packaged in a generic way will be put in this repository.<br/>
-    This repository is also the base for a future Ubuntu-18.04 based KXStudio ISO image.<br/>
+    This is a repository/PPA for Ubuntu 18.04 and 20.04 users with a few goodies that cannot be made into generic packages.<br/>
+    All packages that require system integration or shared libraries that cannot be packaged in a generic way will be put in this repository.
 </p>
 <p>
-    <b>This repository is only for Ubuntu 18.04 users!</b>
+    <b>This repository is only for Ubuntu 18.04 and 20.04 users!</b>
 </p>
 <p>
-    The repository contains:
+    The repository contains: (for both 18.04 and 20.04)
 </p>
 <ul>
     <li>Up-to-date FFADO and JACK2</li>
+    <li>Patched alsa-driver source to prevent snd-aloop from being loaded as first soundcard</li>
+</ul>
+<p>
+    The repository also contains: (specifically for 18.04)
+</p>
+<ul>
     <li>Up-to-date GCC (version 9 at the moment)</li>
     <li>FAudio package, needed for Wine-Staging (also updated libstb and libsdl2 as required)</li>
     <li>Wine-RT package (an old version, for now)</li>
-    <li>Patched alsa-driver source to prevent snd-aloop from being loaded as first soundcard</li>
     <li>Patched pulseaudio source to always install pulseaudio-module-jack (needed for JACK+PulseAudio bridge)</li>
-    <li>Patched casper and ubiquity sources used in KXStudio ISO images</li>
 </ul>
 <p>
     Enabling this repository can be done with the following:
