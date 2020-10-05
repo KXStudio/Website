@@ -21,8 +21,6 @@ include_once("includes/header.php");
     </ul>
 </div>
 
-<hr/>
-
 <h3><span class="mw-headline">
 <img src="images/ico_ubuntu.png" class="img_text_align" alt=""/> Ubuntu 18.04 and 20.04 specific extras
 </span></h3>
