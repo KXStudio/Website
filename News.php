@@ -9,6 +9,203 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla Plugin Host v2.2 is finally here</span><br/>
+    On <i>2020-07-16</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, this is the announcement of the 2.2 version of the Carla Plugin Host.<br/>
+    If you do not know, Carla is a fully-featured cross-platform audio plugin host, which can also run as a plugin.
+</p>
+<p>
+    This release announcement comes quite a few days after it was initially tagged and builds uploaded.<br/>
+    I moved to a different place, everything got a bit delayed with that, and also me getting a small but well-needed break.<br/>
+    Anyway, back to the topic at hand...
+</p>
+<p>
+    Contrary to previous releases, there were not many graphical changes this time, but lots of stuff under the hood.<br/>
+    One very important note for developers is that the "native" API to access carla as plugin (as used by LMMS)
+    is still ABI and API-wise backwards compatible with 2.0, but the ABI and API of Carla as a library is not.<br/>
+    This is because all host functions now have a "handle" prefix, so they can be reused for standalone, plugin and other variants.
+</p>
+<p>
+    <b>Special thanks to everyone that did testing during the release candidate phase</b>, some with very complex setups! (as seen below)<br/>
+    <a href="/screenshots/news/carla-2.2_usage.png">
+        <img src="/screenshots/news/carla-2.2_usage.png" style="max-width:100%;height:auto;" alt="settings"/>
+    </a>
+</p>
+<p>
+    Now with that said, let's go through what's new, first the bigger changes and smaller stuff for last.
+</p>
+
+<table><tr><td width="40%">
+<a href="/screenshots/news/carla-2.2_multi-client.png">
+    <img src="/screenshots/news/carla-2.2_multi-client.png" style="max-width:100%;height:auto;" alt="settings"/>
+</a>
+</td><td width="60%">
+<h3>Multi-Client + multi-instance improvements</h3>
+<p>
+    In order to allow multiple instances of Carla to work without conflicts,
+    proper JACK multi-client multi-instance support was implemented.<br/>
+    What this means is that you can have a name prefix for all plugins when in JACK multi-client mode,
+    so that it is easier to understand where a plugin belongs to.<br/>
+</p>
+<p>
+    Starting with v2.2, extra Carla instances will get a dedicated JACK client name suffix.<br/>
+    On projects created with v2.2 and above, Carla will know which saved connections belong to which plugins,
+    making it possible to load a session correctly where multiple Carla instances are involved.
+</p>
+<p>
+    As a way to make this easier to manage and control, a new command-line argument was added, "--cnprefix=...".<br/>
+    So now you can have a dedicated Carla instance that has its created JACK clients more globally recognisable.
+</p>
+<p>
+    Also, when Carla runs under NSM, the JACK client name prefix is set automatically (coming from NSM).<br/>
+    This is not enabled when loading pre-2.2 projects though, in order to keep backwards compatibility.
+</p>
+</td></tr></table>
+
+<br/>
+
+<table><tr><td width="40%">
+<a href="/screenshots/news/carla-2.2_linux-vst3.png">
+    <img src="/screenshots/news/carla-2.2_linux-vst3.png" style="max-width:100%;height:auto;" alt="settings"/>
+</a>
+</td><td width="60%">
+<h3>Linux VST3 plugin support</h3>
+<p>
+    As new VST2 plugins can no longer be officially licensed and VST2 is very, very, very slowing being phased out, it is important to have VST3 support.</br>
+</p>
+<p>
+    So now you can now scan and load Linux VST3 plugins under Carla.</br>
+    It is no longer limited to macOS and Windows.</br>
+</p>
+<p>
+    Worth noting is that this is not a custom implementation, but leveraging JUCE VST3 host support on Linux.</br>
+    It recently got supported as part of their JUCE6 update.</br>
+    There are no plans for a custom implementation at this point.
+</p>
+</td></tr></table>
+
+<br/>
+
+<h3>Small UI/UX improvements all around</h3>
+
+<div style="display:flex;align-content:baseline;text-align:center;flex-wrap:wrap;">
+    <table style="width:420px;">
+    <tr><td>
+    <a href="/screenshots/news/carla-2.2_uiux-keyboard.png">
+        <img src="/screenshots/news/carla-2.2_uiux-keyboard.png" style="max-width:100%;height:auto;" alt="settings"/>
+    </a>
+    </td></tr>
+    <tr><td>
+    <p>
+        The built-in keyboard right-click menu got a bit better.<br/>
+        Everything is presented in a single menu, no more sub-menus are used.
+    </p>
+    </td></tr>
+    </table>
+
+    <table style="width:420px;">
+    <tr><td>
+    <a href="/screenshots/news/carla-2.2_uiux-mappedparam.png">
+        <img src="/screenshots/news/carla-2.2_uiux-mappedparam.png" style="max-width:100%;height:auto;" alt="settings"/>
+    </a>
+    </td></tr>
+    <tr><td>
+    <p>
+        The plugin built-in editor dialog now shows the currently mapped parameter type+value directly.<br/>
+        No more clicking around needed to find out what the parameter is mapped to.
+    </p>
+    </td></tr>
+    </table>
+
+    <table style="width:420px;">
+    <tr><td>
+    <a href="/screenshots/news/carla-2.2_uiux-midilearn.png">
+        <img src="/screenshots/news/carla-2.2_uiux-midilearn.png" style="max-width:100%;height:auto;" alt="settings"/>
+    </a>
+    </td></tr>
+    <tr><td>
+    <p>
+        MIDI learn implemented, triggered via parameter mapping menu.<br/>
+        Note that this is per plugin, not global, due to how Carla handles each plugin individually.
+    </p>
+    </td></tr>
+    </table>
+
+    <div style="width:390px;">
+        <h5>Other "quality of life" improvements:</h5>
+        <ul style="text-align:left;">
+        <li>Added a 12400x9600 canvas size</li>
+        <li>Added a 2x and 4x canvas image export mode</li>
+        <li>Added a menu action to save current Carla canvas as image in the clipboard</li>
+        <li>Added "Send MIDI notes" option to plugin built-in editor dialog</li>
+        <li>Canvas positions are now always saved and restored, including in the plugin version</li>
+        <li>Canvas positions are kept in sync across multiple Carla JACK instances and even Carla-Control</li>
+        <li>Built-in plugin edit dialog tab state is kept when parameters are reloaded</li>
+        <li>Implemented NSM "optional-gui"</li>
+        <li>Plugin custom GUI Window title changes dynamically when renamed</li>
+        <li>Package macOS plugin version, making Carla-Plugin usable with macOS 10.15</li>
+        </ul>
+    </div>
+</div>
+
+<br/>
+
+<h3>Other notable changes</h3>
+<ul>
+    <li>Added new xycontroller plugin</li>
+    <li>Added a "carla-osc-gui" script that starts a Carla instance in the background and connects to it using OSC.<br/>
+        Closing the GUI does not close the engine, and it can be run again to reconnect later on.
+    </li>
+    <li>Always use maximum amount of channels for VST2 plugins</li>
+    <li>Better handle the case of JACK server stop (or killed)</li>
+    <li>Better implementation of LV2 state path, now saving files in the same directory as the Carla project</li>
+    <li>Changed the way plugins are deleted, so they are now safely deleted only when no longer in use</li>
+    <li>Implement MIDI CC and CV source parameter changes for bridges</li>
+    <li>Improve the (still experimental) JACK-apps-as-plugins implementation,
+        now mapping show/hide gui to NSM commands, sending arbitrary MIDI events and making it work on more systems</li>
+    <li>Increase max value of the internal LFO plugin, so we can get reeeeeeeal slow</li>
+    <li>Raise limit of plugins that can be loaded (512 default, 64 in rack)</li>
+    <li>Tweaks for automatically converting internal Patchbay mode projects in JACK multi-client mode and vice-versa</li>
+    <li>Working HaikuOS build, but no audio support yet</li>
+</ul>
+<p>
+    Many other bug-fixes and small under-the-hood improvements (too many to list here).<br/>
+    See the
+    <a href="https://github.com/falkTX/Carla/commits/master?after=783352477fec5f135f2040afd09257d68211ca73+8" target="_blank">
+      git log</a>
+    for the full list of changes.
+</p>
+
+<h3>Notes for users</h3>
+<p>
+    When using JACK, the newly added features around the canvas require at least JACK v1.9.13.<br/>
+    This is because Carla relies on JACK meta-data in order to store information about each plugin/client,
+    and meta-data was only added to JACK2 in version 1.9.13.<br/>
+    Alternatively, you can use JACK1 instead of JACK2, which has meta-data support since a long time.<br/>
+    Note that the <a href="/Repositories:Extras">"extras" KXStudio repository</a> (which provides an updated JACK2) now supports Ubuntu 20.04 along-side 18.04.
+</p>
+<p>
+    The code for scanning plugins had a little rework yet again, making some internal data structures change.<br/>
+    Because of this, a full rescan of your plugins is needed after the update.<br/>
+    This should fix previously missing plugins that happened in v2.1.<br/>
+</p>
+<p>
+    The official Linux binary build does not provide native Linux-VST3 support.<br/>
+    Packages from regular Linux distributions do not have this issue.
+</p>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.2 RC2 is here!</span><br/>
     On <i>2020-09-07</i> by<i> falkTX</i>
 </p>

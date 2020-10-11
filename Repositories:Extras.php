@@ -41,6 +41,8 @@ include_once("includes/header.php");
 <ul>
     <li>Up-to-date FFADO and JACK2</li>
     <li>Patched alsa-driver source to prevent snd-aloop from being loaded as first soundcard</li>
+    <li>Patched audacious-plugins source to add "ignore-length" option to PSF plugin</li>
+    <li>Patched pulseaudio source to always install pulseaudio-module-jack (needed for JACK+PulseAudio bridge)</li>
 </ul>
 <p>
     The repository also contains: (specifically for 18.04)
@@ -49,7 +51,6 @@ include_once("includes/header.php");
     <li>Up-to-date GCC (version 9 at the moment)</li>
     <li>FAudio package, needed for Wine-Staging (also updated libstb and libsdl2 as required)</li>
     <li>Wine-RT package (an old version, for now)</li>
-    <li>Patched pulseaudio source to always install pulseaudio-module-jack (needed for JACK+PulseAudio bridge)</li>
 </ul>
 <p>
     Enabling this repository can be done with the following:
