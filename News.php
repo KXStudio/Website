@@ -10,7 +10,7 @@ include_once("includes/header.php");
 
 <p>
     <span style="font-size: 20px">&gt; Carla Plugin Host v2.2 is finally here</span><br/>
-    On <i>2020-07-16</i> by<i> falkTX</i>
+    On <i>2020-10-12</i> by<i> falkTX</i>
 </p>
 <p>
     Hello everyone, this is the announcement of the 2.2 version of the Carla Plugin Host.<br/>
