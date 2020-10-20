@@ -23,7 +23,7 @@ include_once("includes/header.php");
 <!-- Download -->
 <h3><span class="mw-headline" id="Download"> Download </span></h3>
 <p>
-    Claudia is available in the KXStudio repositories and ArchLinux AUR ('claudia' package in the KXStudio repositories, 'cadence-claudia' in ArchLinux).<br/>
+    Claudia is available in the KXStudio repositories and ArchLinux AUR ('claudia' package in the KXStudio repositories, 'cadence-claudia' in AUR).<br/>
     <img src="images/ico_arch.png" alt="" class="img_text_align_spaced"/>
         <a href="https://aur.archlinux.org/packages/cadence-claudia/" class="external text a_bigger_text" rel="nofollow" target="_blank">
          ArchLinux</a> (AUR)<br/>
