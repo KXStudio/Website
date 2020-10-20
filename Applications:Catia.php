@@ -22,10 +22,10 @@ include_once("includes/header.php");
 <!-- Download -->
 <h3><span class="mw-headline" id="Download"> Download </span></h3>
 <p>
-    Catia is available in the KXStudio repositories and ArchLinux AUR ('catia' package in the KXStudio repositories, 'cadence' in AUR).<br/>
+    Catia is available in the KXStudio repositories and ArchLinux ('catia' package in the KXStudio repositories, 'cadence' in ArchLinux).<br/>
     <img src="images/ico_arch.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://aur.archlinux.org/packages/cadence/" class="external text a_bigger_text" rel="nofollow" target="_blank">
-         ArchLinux</a> (AUR)<br/>
+        <a href="https://www.archlinux.org/packages/community/x86_64/cadence/" class="external text a_bigger_text" rel="nofollow" target="_blank">
+         ArchLinux</a> (Community)<br/>
     <img src="images/ico_debian.png" alt="" class="img_text_align_spaced"/>
         <a href="apt://catia" class="external text a_bigger_text">
          Debian/Ubuntu</a> (via KXStudio repositories)<br/>
