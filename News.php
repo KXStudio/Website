@@ -9,6 +9,56 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (November 2020)</span><br/>
+    On <i>2020-11-30</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, another "monthly" report about the KXStudio project is here.<br/>
+    There has not been once since July and even though there are not many new details to share, I did not want to let another month pass without one.
+</p>
+<p>
+    The main reason for the delay on writing is that my attention has been mostly focused on getting the
+    <a href="https://www.kickstarter.com/projects/modduo/mod-dwarf" target="_blank">
+    MOD Dwarf
+    </a>
+    software all ready for release, including new LV2 features on the MOD software stack.<br/>
+    This usually does not affect me working on other open-source stuff, but the race to get everything ready on time drains more energy than usual.<br/>
+    In order to not stress myself out, progress on other fronts has been a bit slower, though stuff like Carla 2.2 final release still happened.<br/>
+    Some of this MOD work involved understanding the LV2 spec better and fixing or making new test plugins, so this will be useful outside the MOD platform too.<br/>
+    (I already learned that the way Carla handles some LV2 features is wrong and started some work towards fixing that)
+</p>
+<p>
+    Last month (October 2020) marks
+    <a href="https://jackaudio.org/news/2020/10/15/jack2-v1915-release-and-current-status.html" target="_blank">
+    the first release of JACK2
+    </a>
+    with me as maintainer that provides
+    <a href="https://jackaudio.org/downloads/" target="_blank">
+    macOS and Windows binaries</a>.<br/>
+    I have been setting up automated builds for a few open-source projects for a bit of time now, and that is now re-used for JACK2.<br/>
+    There is progress to make this usable for cross-platform plugins, which I was hoping to have a release for by now, but the travis-ci is having some issues against homebrew...<br/>
+    Whenever that works again, I will make the official announcement of that
+    <a href="https://github.com/DISTRHO/PawPaw" target="_blank">
+    new project</a>.<br/>
+    Later on this will be used for automating the builds of my PyQt projects like Carla and Catia.
+</p>
+<p>
+    On the Cadence project, I began the work for splitting it into smaller, easier to maintain projects.<br/>
+    The idea is to allow Catia (the patchbay-only application) and the small tools to be packaged and maintained separately.<br/>
+    This will allow to have new releases of Catia, Cadence and its tools all separately.<br/>
+    There is only 1 nasty bug to fix in Catia use of JACK2 meta-data before an official release is made, but it is not an easy one, so I am leaving it for later.<br/>
+    Likely no public release on this until next year.
+</p>
+<p>
+    And that is it for now.<br/>
+    Usually I would write about the KXStudio repositories package update list, but there really has not been much happening there at all..<br/>
+    Christmas holidays are not too far off, which will bring some time to try to get a few more things out.<br/>
+    So expect some proper news again after that.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla Plugin Host v2.2 is finally here</span><br/>
     On <i>2020-10-12</i> by<i> falkTX</i>
 </p>
