@@ -9,6 +9,46 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; DIE-Plugins v1.0 released</span><br/>
+    On <i>2020-12-25</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, I would like to announce a new project: DIE-Plugins.<br/>
+    This is a collection of plugins imported into the DISTRHO project for easy packaging.<br/>
+</p>
+<p>
+    "DIE" stands for DISTRHO Imported Effect.<br/>
+    It is a play on words from the first imported plugins, "ACE", from the Ardour project.<br/>
+    These are LV2 plugins only. License is the same as the original plugins, so GPLv2+.<br/>
+    They are simply to die for ;)
+</p>
+<p>
+    Now, on a serious note, this project was created when I was looking to package the Ardour built-in plugins (a.k.a. Ardour Community Effect) for
+    <a href="https://pedalboards.moddevices.com/plugins" target="_blank">MOD</a>
+    and the (still to be announced) cross-platform LV2 plugin project
+    <a href="https://github.com/DISTRHO/PawPaw" target="_blank">PawPaw</a>.<br/>
+    The biggest difficulty was having to build the entire Ardour codebase to get these plugins.<br/>
+    While it seems possible to force the build of only the plugins, the build system still expects all sort of libraries for the main Ardour codebase.<br/>
+    Since I am quite comfortable setting up custom Makefiles for quick little projects, that is how it started...
+</p>
+<p>
+    Worth noting that all imported plugins have their bundle and URIs renamed, in order to make them compatible with the originals.<br/>
+    The source code fetching and patching is also scripted, so it is easy to keep in sync with upstream.
+</p>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus issue tracker is hosted at
+      <a href="https://github.com/DISTRHO/DIE-Plugins" target="_blank">
+          https://github.com/DISTRHO/DIE-Plugins</a>.<br/>
+    Only glib2.0 and sndfile are required to build.<br/>
+    If you have the KXStudio repositories enabled, you can install these with the package name "die-plugins".<br/>
+    They are not available in binary form anywhere else at the moment, as the project is brand new.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (November 2020)</span><br/>
     On <i>2020-11-30</i> by<i> falkTX</i>
 </p>
