@@ -41,6 +41,11 @@ include_once("includes/header.php");
     project, as we will soon have all these ports working as LV2 in macOS and Windows.<br/>
 </p>
 <p>
+    Here is a quick screenshot I just took on macOS, Ardour loading a couple LV2 versions of DISTRHO-Ports.<br/>
+    PS: This is a arm64/M1 build.<br/><br/>
+    <img src="/screenshots/news/distrho-ports-lv2-macos.png" alt="distrho-ports-lv2-macos"></img>
+</p>
+<p>
     Because everyone loves changelogs, here it is for the full changes since last release 5 months ago:
 </p>
 <ul>
