@@ -9,6 +9,59 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Another DISTRHO-Ports update</span><br/>
+    On <i>2020-12-28</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again, another release of the
+    <a href="https://github.com/DISTRHO/DISTRHO-Ports" target="_blank">DISTRHO-Ports</a> project is here.<br/>
+    DISTRHO is an open-source project with the goal of making cross-platform audio plugins and GNU/Linux + LV2 ports.<br/>
+    This release relates to the GNU/Linux and LV2 ports.
+</p>
+<p>
+    Just like last time, this is yet again a more packager-focused release rather than user-focused.<br/>
+    The biggest changes this time relate to bringing
+    <a href="https://github.com/DISTRHO/JUCE" target="_blank">DISTRHO's JUCE fork</a>
+    up to date with upstream, together with updating the
+    <a href="https://github.com/DISTRHO/DISTRHO-Ports/tree/master/libs/juce-current/source/modules/juce_audio_plugin_client/LV2" target="_blank">LV2 wrapper</a>.<br/>
+    Additionally, macOS and Windows support was fixed and tested to work, at least for LV2 plugins.<br/>
+    (most of these plugins already have VST2 or AU for those 2 platforms, so the focus in on LV2 here)
+</p>
+<p>
+    A new plugin was added,
+    <a href="https://github.com/Chowdhury-DSP/CHOW" target="_blank">CHOW</a>,
+    but mostly only because I required a fresh plugin to test the new JUCE codebase.<br/>
+    Do note that new plugins can now build as LV2, VST2 and VST3 for GNU/Linux, which is nice to see.<br/>
+    I want to create a little article/tutorial explaining how to port existing plugins into this project, but that will come at a later date.<br/>
+</p>
+<p>
+    For now, the intention is to have all the ground-work needed for fresh plugins and LV2 ports.<br/>
+    This ties up nicely with the upcoming
+    <a href="https://github.com/DISTRHO/PawPaw" target="_blank">PawPaw</a>
+    project, as we will soon have all these ports working as LV2 in macOS and Windows.<br/>
+</p>
+<p>
+    Because everyone loves changelogs, here it is for the full changes since last release 5 months ago:
+</p>
+<ul>
+    <li>Add CHOW plugin (used to test updated JUCE)</li>
+    <li>Include new and legacy JUCE in source code (legacy JUCE will only receive bug-fixes)</li>
+    <li>Rebase DISTRHO-Ports patches against JUCE6 codebase, available in
+        <a href="https://github.com/DISTRHO/DISTRHO-Ports/tree/master/libs/juce-current/patches" target="_blank">libs/juce-current/patches</a></li>
+    <li>Fix LV2 wrapper to build against latest JUCE</li>
+    <li>Fix build for macOS, including universal builds</li>
+    <li>Fix build for Windows (using mingw)</li>
+    <li>General cleanup to build system</li>
+</ul>
+<p>
+    There are no pre-compiled binaries for this release, though the plugins are fully up-to-date in the KXStudio repositories.<br/>
+    You can find this 2020-12-27 release at <a href="https://github.com/DISTRHO/DISTRHO-Ports/releases/tag/2020-07-14" target="_blank">
+          github.com/DISTRHO/DISTRHO-Ports/releases</a>.<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; DIE-Plugins v1.0 released</span><br/>
     On <i>2020-12-25</i> by<i> falkTX</i>
 </p>
