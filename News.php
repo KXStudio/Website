@@ -9,6 +9,157 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Announcing PawPaw: cross-platform LV2 ports for macOS and Windows</span><br/>
+    On <i>2021-01-15</i> by<i> falkTX</i>
+</p>
+<p>
+    <a href="https://github.com/DISTRHO/PawPaw" target="_blank">PawPaw</a>
+    is an open-source project that builds and packages <b>cross-platform LV2 audio plugins</b> (among other things, but let's focus on this now).<br/>
+</p>
+<p>
+    It was created out of the need of many open-source developers to easily build their stuff for macOS and Windows,
+    where usually dependencies are involved which need to be built manually.<br/>
+    In order to make audio plugins self-contained, these dependencies/libraries need to be built statically,
+    which most packaging projects do not do.<br/>
+    Also, most open-source audio plugin projects do not have binaries for macOS or Windows,
+    making it very difficult for users in these platforms to enjoy them.<br/>
+</p>
+<p>
+    That last part is crucial.<br/>
+    While on Linux LV2 is king, with so many plugins released as LV2, the same is not true for other platforms.<br/>
+    I want to change that, so that the usual excuse "but there are no plugins, we won't bother with LV2" of audio developers can no longer be used.<br/>
+    It is the typical circular-dependency problem. There are no hosts because there are no plugins and vice-versa.<br/>
+    Hopefully with a big set of plugins, the situation will change.
+</p>
+<p>
+    For the first release of PawPaw we have the following LV2 plugins: (note some of these are big collections of many plugins themselves)
+</p>
+<ul>
+    <li>abgate</li>
+    <li>artyfx</li>
+    <li>blop</li>
+    <li>caps</li>
+    <li>die-plugins</li>
+    <li>distrho-ports (arctican, dexed, drowaudio, klangfalter, luftikus, obxd, pitched-delay, refine, tal, temper, vex, wolpertinger)</li>
+    <li>dpf-plugins (glBars, kars, max-gen, mini-series, mverb, ndc-plugs, nekobi)</li>
+    <li>fomp</li>
+    <li>mda</li>
+</ul>
+<p>
+    Every single plugin has automated meta-data validation and runtime testing to make sure they work correctly.<br/>
+    The quality of the plugins depends on the respective developer and project of course, but they should be safe from crashes.
+</p>
+<p>
+    A big question now is "how can I use them?".<br/>
+    At this moment, from what I am aware, only Ardour/ Mixbus and Carla support LV2 plugins on these platforms.<br/>
+    Some applications like Audacity, Kushview Element and Mixxx support LV2, but usually only in Linux builds.<br/>
+    Carla works as a VST2 plugin, so you can use it as a way to bridge these to regular hosts, but obviously not ideal.<br/>
+    But hey, one step at a time. We have a few more LV2 plugins now on these platforms, and moving forward the list is only going to grow.
+</p>
+
+<h2>Screenshots</h2>
+<h6>Ardour + Windows</h6>
+<p>
+    <img src="/screenshots/news/pawpaw-1.0-win.png" alt="pawpaw-1.0-win"></img>
+</p>
+
+<h6>Mixxx + macOS, loading ArtyFX plugins</h6>
+<p>
+    <img src="/screenshots/news/pawpaw-1.0-mixxx.png" alt="pawpaw-1.0-mixxx"></img>
+</p>
+
+<h2>Downloads</h2>
+<p>
+    You can find the macOS and Windows installers at
+      <a href="https://github.com/DISTRHO/PawPaw/releases" target="_blank">
+          https://github.com/DISTRHO/PawPaw/releases</a>.<br/>
+    For macOS, 10.12 is required. These are universal builds that already support x64 and arm64 combined.<br/>
+    For Windows, Windows 7 or superior is recommended, and a CPU capable of doing SSE2 operations is required.
+</p>
+
+<h2>Future plans</h2>
+<p>
+    For the future, I plan to rework the DISTRHO website so it contains all these details.<br/>
+    Mainly so that it is a better overall presentation.<br/>
+    And of course more plugins, though pull-requests are also very welcome for those.<br/>
+    Carla is slowly in the process of using PawPaw for automated release builds, more on that at a later time.
+</p>
+
+<hr/>
+
+<p>
+    <span style="font-size: 20px">&gt; A small set of plugin updates</span><br/>
+    On <i>2021-01-15</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello hello, it is release day again!<br/>
+    Keeping up with the cool people, here is a set of plugin updates for the
+      <a href="https://libreav.org/article/quarterly-release-pact" target="_blank">Quarterly Release Pact</a>.<br/>
+
+    Do note that these are all source-only releases. For binaries, use your Linux distribution packages or the
+    <a href="https://github.com/DISTRHO/PawPaw" target="_blank">PawPaw project</a>.<br/>
+    With that said, let's begin...
+</p>
+<h4><a href="https://github.com/DISTRHO/DISTRHO-Ports/releases/tag/2021-01-15" target="_blank">DISTRHO-Ports 2021-01-14</a></h4>
+<p>
+    DISTRHO-Ports is a set of GNU/Linux and LV2 ports, imported into the codebase for easy packaging, maintaince and all that.<br/>
+    This is a bug-fix release, getting the project ready for cross-platform builds and automated validation/testing.<br/>
+    Changelog:
+</p>
+<ul>
+    <li>Fix out of bounds buffer write in drowaudio-reverb (leading to memory corruption and/or crashes)</li>
+    <li>Fix lv2 export preset meta-data validation</li>
+    <li>Fix lv2 ttl generation when cross-compiling (e.g. using mingw and wine within linux)</li>
+    <li>Fix exported symbols</li>
+    <li>Fix build/compatibility with macOS 11 / arm64</li>
+</ul>
+</p>
+
+<h4><a href="https://github.com/DISTRHO/DIE-Plugins/releases/tag/v1.1" target="_blank">DIE-Plugins v1.1</a></h4>
+<p>
+    DIE-Plugins is a collection of plugins imported into the DISTRHO project for easy packaging.<br/>
+    Currently has only Ardour (Community Effect) plugins, mainly so you no longer need to build the entire Ardour codebase to get these plugins.<br/>
+    Changelog:
+</p>
+<ul>
+    <li>Fix a-fluidsynth port names</li>
+    <li>Sync with upstream, now features are listed in ttl thus passing plugin checks/validation</li>
+    <li>Use -fopenmp for building internal fluidsynth (where possible)</li>
+</li>
+</ul>
+</p>
+
+<h4><a href="https://github.com/DISTRHO/DPF-Plugins/releases/tag/v1.4" target="_blank">DPF-Plugins v1.4</a></h4>
+<p>
+    DPF-Plugins is a collection of DPF-based plugins, including Kars, MVerb and Nekobi.<br/>
+    This is yet another bug-fix release, tagging a release before a big DPF overhaul planned for next month.<br/>
+    Changelog:
+</p>
+<p><b>DPF:</b></p>
+<ul>
+    <li>Auto-detect compiler target, fixing as-is build with ARM systems</li>
+    <li>Allow to use EXE_WRAPPER as makefile option, to help cross-compilation</li>
+    <li>Fix build with headers in custom path</li>
+    <li>Fix "make install" for macOS and Windows</li>
+    <li>Fix exported LV2 metadata to pass checks/validation</li>
+    <li>Make mouse-wheel delta independent of window size</li>
+</ul>
+<p><b>Kars:</b></p>
+<ul>
+    <li>Fix audio buffer reuse, causing bad audio in some hosts</li>
+</ul>
+<p><b>Nekobi:</b></p>
+<ul>
+    <li>Set default MIDI CC for all parameters</li>
+</ul>
+</p>
+<p>
+    More releases coming soon, stay tuned!
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Another DISTRHO-Ports update</span><br/>
     On <i>2020-12-28</i> by<i> falkTX</i>
 </p>
