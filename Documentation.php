@@ -13,10 +13,9 @@ include_once("includes/header.php");
       <a href="http://linuxmusicians.com/" class="external text" rel="nofollow" target="_blank">LinuxMusicians Forums</a> or
       <a href="http://lists.linuxaudio.org/listinfo/linux-audio-user/" class="external text" rel="nofollow" target="_blank">LinuxAudio Mailing List</a>.<br/>
     You can also use <b>IRC</b> on irc.freenode.net (or .com) server, channel <b>#kxstudio</b> or <b>#opensourcemusicians</b>.<br/>
-    A <b>discord</b> server is also available
-      <a href="https://discord.gg/GHuycpX" class="external text" rel="nofollow" target="_blank">here</a>,
-      in case you prefer that over IRC.<br/>
-    (The discord server is going away quite soon though, as we do not want to encourage usage of proprietary systems)
+    A self-hosted <b>Rocket.Chat</b> server is also available
+      <a href="https://char.kx.studio/" class="external text" rel="nofollow" target="_blank">here</a>,
+      in case you prefer that over IRC.
 </p>
 
 <h2>Documentation</h2>
