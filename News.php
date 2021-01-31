@@ -9,6 +9,91 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (January 2021)</span><br/>
+    On <i>2021-01-31</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, another monthly report about the KXStudio project is here.<br/>
+    Last month I completely forgot to write a report, with the end of year and preparations for all the releases.<br/>
+    Speaking of releases...
+</p>
+<p>
+    A few things were released just 2 weeks ago.<br/>
+
+    From a
+    <a href="https://kx.studio/News/?action=view&amp;url=a-small-set-of-plugin-updates" target="_blank">
+    quick update to DISTRHO/DPF-related
+    </a> plugins,
+    to announcing
+    <a href="https://kx.studio/News/?action=view&url=announcing-pawpaw-cross-platform-lv2-ports-for-macos-and-windows" target="_blank">PawPaw</a>
+    for cross-platform LV2 plugin builds.<br/>
+
+    I had an idea to release
+    <a href="https://github.com/falkTX/Carla" target="_blank">Carla</a>
+    v2.3 also at the same time, but a few things are still not ready.
+</p>
+<p>
+    And speaking of Carla now,
+    <a href="https://github.com/DISTRHO/PawPaw/blob/master/bootstrap-carla.sh" target="_blank">good progress has been made</a>
+    to setup automated builds, at least for macOS and Windows
+    (as those are the more annoying to build for, compared to Linux or BSD).<br/>
+    The dreadful issue of
+    <a href="https://github.com/falkTX/Carla/issues/1334" target="_blank">DLL</a>
+    <a href="https://github.com/falkTX/Carla/issues/1273" target="_blank">hell</a>
+    causing Carla not to start on Windows
+    <a href="https://github.com/falkTX/Carla/issues/1334#issuecomment-770314420" target="_blank">seems to be fixed</a>
+    with this new updated build setup.<br/>
+    There are a few things in progress that I plan to finish before calling it final:
+</p>
+<ul>
+    <li>macOS arm64 build loading Intel 64bit plugins (already working for VST2, but not VST3)</li>
+    <li>revised and rechecked LV2 patch/parameter support (seems good to me, just needs more testing)</li>
+    <li>expose/export the internal audio and midi file players as lv2 plugins (almost there, some bugs still present)</li>
+    <li>allow to use desktop theme icons (mostly finished, just a few dialogs need to be adjusted)</li>
+    <li>translations (but as other things take priority for me, this might skip v2.3)</li>
+</ul>
+<p>
+    I am not mentioning here things that are already completed, it is just to give you an overview of what is left.<br/>
+    Plan was to have it finished by the end of January, but obviously didn't happen, so we can say "coming soon", again. :P
+</p>
+<p>
+    Once more Carla stuff is finished and mostly only testing is left, I will begin some very much needed work and attention for
+    <a href="https://github.com/DISTRHO/DPF" target="_blank">DPF</a>.<br/>
+    DPF is using a very old
+    <a href="https://gitlab.com/lv2/pugl/" target="_blank">pugl</a>
+    version, modified along the way but mostly matching the version used in
+    <a href="https://github.com/x42/robtk/tree/master/pugl" target="_blank">x42-plugins</a>.<br/>
+    pugl API got revised and improved so much that feels worth the update.<br/>
+    I
+    <a href="https://github.com/DISTRHO/DPF/commits/pugl-upstream" target="_blank">started this already</a>,
+    but had to dedicate my attention to other things in the mean time.<br/>
+    Target is to not only update pugl, but an overall cleanup and minor reworks of the API where suitable/needed.<br/>
+    By end of next month I will try to give a summarized report of the update status.
+</p>
+<p>
+    Regarding packages in the KXStudio repositories, finally there has been some updates. Those are:
+</p>
+<ul>
+    <li>die-plugins added</i>
+    <li>adlplug updated to 1.0.2</i>
+    <li>dpf-plugins updated to 1.4</i>
+    <li>distrho-ports updated to 2021-01-14</i>
+    <li>drumgizmo updated to 0.9.19</i>
+    <li>lsp-plugins updated to 1.1.28</i>
+    <li>new-session-manager updated to 1.5.0</i>
+    <li>x42-plugins updated to 20210114</i>
+    <li>zam-plugins updated to 3.14</i>
+    <li>cmt fixed (symbol visibility issue)</i>
+    <li>setbfree small fix (removed unused b_conv vst)</i>
+    <li>whysynth fixed for newer distros</i>
+</ul>
+<p>
+    That is all for now, stay safe out there.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Announcing PawPaw: cross-platform LV2 ports for macOS and Windows</span><br/>
     On <i>2021-01-15</i> by<i> falkTX</i>
 </p>
