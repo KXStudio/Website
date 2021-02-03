@@ -54,7 +54,6 @@ include_once("includes/header.php");
 <ul>
     <li><a href="<?php echo $ROOT; ?>/Documentation:Manual:kxstudio_introduction">Introduction</a></li>
     <li><a href="<?php echo $ROOT; ?>/Documentation:Manual:kxstudio_and_free_software">KXStudio and Free Software</a></li>
-    <li><a href="<?php echo $ROOT; ?>/Documentation:Manual:downloading_and_booting_kxstudio">Downloading, booting and running KXStudio 'live'</a></li>
     <li><a href="<?php echo $ROOT; ?>/Documentation:Manual:installing_kxstudio">Installing KXStudio</a></li>
     <li><a href="<?php echo $ROOT; ?>/Documentation:Manual:package_management">Package Management</a></li>
     <li><a href="<?php echo $ROOT; ?>/Documentation:Manual:video_drivers">Installing non-free video drivers</a></li>

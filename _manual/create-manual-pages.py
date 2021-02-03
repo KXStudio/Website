@@ -5,7 +5,6 @@ import os
 manualPages = (
 "kxstudio_introduction",
 "kxstudio_and_free_software",
-"downloading_and_booting_kxstudio",
 "installing_kxstudio",
 "package_management",
 "video_drivers",
