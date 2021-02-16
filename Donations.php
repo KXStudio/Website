@@ -13,14 +13,21 @@ include_once("includes/header.php");
 </p>
 
 <p>
-    Currently, KXStudio's developer (falkTX) accepts donations via LiberaPay and PayPal.<br/>
+    Currently, KXStudio's single developer (falkTX) accepts GitHub Sponsorships, LiberaPay and PayPal donations and even Patreon subscriptions.<br/>
     Thank you in advance for any donation you make!<br/>
 </p>
 
 <table>
-<tr><td width="30px">
+<tr>
 
-</td><td valign="middle" width="150px" align="center">
+<td width="30px">
+</td>
+
+<td valign="middle" width="150px" align="center">
+    <iframe src="https://github.com/sponsors/falkTX/button" title="Sponsor falkTX" height="35" width="116" style="border: 0;"></iframe>
+</td>
+
+<td valign="middle" width="150px" align="center">
     <script src="https://liberapay.com/falkTX/widgets/receiving.js"></script>
     <noscript>
         <a class="liberapay-btn" href="https://liberapay.com/falkTX" target="_blank">
@@ -33,18 +40,21 @@ include_once("includes/header.php");
             <span>Donate</span>
         </a>
     </noscript>
+</td>
 
-</td><td valign="middle" width="270px" align="center">
-     <a href="https://www.patreon.com/falktx" target="_blank">
-        <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="217px" height="51px" alt="Patreon"/>
-     </a>
-
-</td><td valign="middle" width="150px" align="center">
+<td valign="middle" width="150px" align="center">
     <a href="https://www.paypal.me/falkTX" target="_blank">
         <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png" width="150px" height="38px" alt="PayPal"/>
     </a>
-</td></tr>
+</td>
 
+<td valign="middle" width="270px" align="center">
+     <a href="https://www.patreon.com/falktx" target="_blank">
+        <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="217px" height="51px" alt="Patreon"/>
+     </a>
+</td>
+
+</tr>
 </table>
 
 <p><br/></p>

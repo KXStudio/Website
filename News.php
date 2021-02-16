@@ -9,6 +9,173 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.3 RC1 is here!</span><br/>
+    On <i>2021-02-16</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone, a somewhat small but important Carla update is here!<br/>
+    As there were many changes behind the scenes (specially for Windows builds) I am tagging it as Release Candidate for now.
+</p>
+<p>
+    So this is the announcement of the first release candidate of Carla version 2.3.<br/>
+    Carla is a fully-featured cross-platform audio plugin host, which itself can also run as a plugin (LV2 and VST2).<br/>
+    It is a project slowly growing and maturing for over 10 years now!
+</p>
+<p>
+    This release is the first step for automated releases of Carla, and
+    <a href="https://github.com/falkTX/Cadence" target="_blank">other</a>
+    <a href="https://github.com/falkTX/Cadence-Tools" target="_blank">PyQt</a>
+    <a href="https://github.com/falkTX/Catia" target="_blank">projects</a>.
+    Might not seem like big news, but it is!<br/>
+    I don't make Carla releases very often as it tends to consume a lot of time,
+    besides writing the release announcement (like this one), there is a lot of manual building and uploading.<br/>
+    The situation got worse with 1 more build type for macOS universal support..<br/>
+    This makes it more difficult to do quick bug-fixes than it should, and thus they tend to not happen much.<br/>
+    There are still no automated Linux builds yet, I will take care of that at a later point.<br/>
+    I always keep the Carla package on the KXStudio repositories up to date, and ArchLinux is usually very quick on the updates too, so for Linux users this is not that big of a deal.
+</p>
+<p>
+    With that said, let's go through some of this release highlights.
+</p>
+
+<table><tr><td width="40%">
+<a href="/screenshots/news/carla-2.2_multi-client.png">
+    <img src="/screenshots/news/carla-2.2_multi-client.png" style="max-width:100%;height:auto;" alt="settings"/>
+</a>
+</td><td width="60%">
+<h3>macOS arm64/universal build support</h3>
+<p>
+    Starting with v2.3, Carla natively supports the new macOS arm64 architecture, used in the new M1 hardware models.<br/>
+    The Carla macOS universal build supports x86_64 and arm64 architectures at the same time, and should run on anything 10.12 or newer.
+</p>
+<p>
+    As Carla has support for plugin bridges (even across architectures), I took care to make sure that the arm64 version can load x86_64 plugins.<br/>
+    When a plugin fails to load in a specific way, Carla will try to load it again but now in x86_64 mode.<br/>
+    This is currently working for VST2 and VST3 plugins.
+</p>
+<p>
+    Additionally, for something that kept bothering me a lot, Carla will automatically remove plugins from macOS quarentine before loading them.<br/>
+    This is not possible to do for AudioUnits as we do not have the full path to the plugin binary, but valid for all other formats.<br/>
+    No more security theatre shenanigans here! :)
+</p>
+</td></tr></table>
+
+<br/>
+
+<table><tr><td width="40%">
+<a href="/screenshots/news/carla-2.3_audiofile.png">
+    <img src="/screenshots/news/carla-2.3_audiofile.png" style="max-width:100%;height:auto;" alt="audiofile"/>
+</a>
+</td><td width="60%">
+<h3>General improvements to AudioFile plugin</h3>
+<p>
+    The AudioFile internal plugin received some deserved attention this time around.<br/>
+    Besides basically reworking how its disk-streaming functionality (more robust and much less CPU usage),<br/>
+    it finally can do resampling so it will sound correctly no matter the sample rate.<br/>
+    Additionally mp3 support was added via
+    <a href="https://github.com/mackron/dr_libs/blob/master/dr_mp3.h" target="_blank">dr_mp3</a>,
+    as
+    <a href="http://www.mega-nerd.com/libsndfile/" target="_blank">libsndfile</a>
+    used by it does not yet officially support it.
+</p>
+<p>
+    Both Audio and MIDI file plugins are now exposed as LV2 plugins, allowing to load and use these plugins outside of Carla.<br/>
+    It supports file parameter plus patch Get/Set with State mapPath as expected for these kinds of plugins.<br/>
+    The experimental "inline-display" of the AudioFile is also exposed as an LV2 feature.
+</p>
+</td></tr></table>
+
+<br/>
+
+<table><tr><td width="40%">
+<a href="/screenshots/news/carla-2.3_windows.png">
+    <img src="/screenshots/news/carla-2.3_windows.png" style="max-width:100%;height:auto;" alt="windows"/>
+</a>
+</td><td width="60%">
+<h3>Reworked Windows builds</h3>
+<p>
+    The infrastructure used to build Windows binaries is now through
+    <a href="https://github.com/DISTRHO/PawPaw" target="_blank">PawPaw</a>,
+    as done with
+    <a href="https://github.com/jackaudio/jack2-releases" target="_blank">JACK2</a>
+    already.<br/>
+    With this, I have control over the whole toolchain and libraries that are used in Carla Windows binaries (previously msys2 packages were used).
+</p>
+<p>
+    For users, this means these binaries are more robust and with less dependencies.<br/>
+    (I am building with static libraries as much as possible, so no more ligcc/libstdc++6 mess).<br/>
+    The Windows zip file download no longer ships with a single Carla.exe, instead please run Carla.exe inside the Carla folder, should be easy to spot.
+</p>
+<p>
+    For developers, a nice side-effect is that we can finally tweak the behaviour of the startup executable, now allowing debug messages to be seen.
+    (though you need to run it in Console/PowerShell for that)<br/>
+    The libraries that allow to use and talk to Carla Host API are now provided on these builds.
+</p>
+<p>
+    Finally, it should be possible to build Carla under msys2 on Windows now.<br/>
+    I can make a quick tutorial if that is something that interests you, let me know if that is the case.
+</p>
+</td></tr></table>
+
+<br/>
+
+<table><tr><td width="40%">
+<a href="/screenshots/news/carla-2.3_icons.png">
+    <img src="/screenshots/news/carla-2.3_icons.png" style="max-width:100%;height:auto;" alt="icons"/>
+</a>
+</td><td width="60%">
+<h3>Use system/desktop theme icons (non-macOS/Windows only)</h3>
+<p>
+    Due to popular demand, there is now an option in the experimental settings to use system/desktop theme icons.<br/>
+    This will remain as experimental feature for 1 release, so we can catch potential issues in the mean time, and fix them.<br/>
+</p>
+<p>
+    Since I do not mind the default Carla icons (quite like them actually), this is not meant for me.<br/>
+    Feel free to use it and report back if you spot something weird or incorrect.
+</p>
+</td></tr></table>
+
+<br/>
+
+<h3>Other notable changes</h3>
+<ul>
+    <li>Allow to run CV plugins in rack mode, with CV connected to a dummy port</li>
+    <li>Clear up situation with nogui and carla-osc-gui script (explanation article to come later)</li>
+    <li>Disable OSC by default on macos (needs to ask permission to use network, which may look suspicious)</li>
+    <li>Do not build external plugins by default</li>
+    <li>General improvement to LV2 parameter API support</li>
+    <li>Many, many bug-fixes (not listed here, see the
+    <a href="https://github.com/falkTX/Carla/commits/main?after=713c78330da410a6feacadd6e5a32a8408b212ff+0" target="_blank">
+    git commit history
+    </a>
+    for the raw changes, including bug-fixes)</li>
+</ul>
+
+<h3>Notes for users</h3>
+<p>
+    There are no binary releases for Linux at the moment, and the old Windows 32bit No-SSE builds are gone.<br/>
+    On Linux, use the packages from your distribution or ask the package maintainer to update.
+</p>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<h3>Final note</h3>
+<p>
+    With finally the Carla release out of the way, I will start work on DPF very soon, as mentioned on the last monthly report.<br/>
+    If you appreciate the kind of work I do here, please consider a
+    <a href="https://kx.studio/Donations">donation</a>.<br/>
+    You can help to keep these projects alive and enthusiasm and motivation high by giving your support.<br/>
+    Thank you.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (January 2021)</span><br/>
     On <i>2021-01-31</i> by<i> falkTX</i>
 </p>
