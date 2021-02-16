@@ -1,3 +1,5 @@
 <?php
-$VERSION_CARLA = "2.2.0";
+$VERSION_CARLA = "2.3.0-RC1";
+$VERSION_CARLA_MAJ = "2.3";
+$VERSION_CARLA_OLD = "2.2.0";
 ?>
