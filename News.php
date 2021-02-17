@@ -140,6 +140,7 @@ include_once("includes/header.php");
 <h3>Other notable changes</h3>
 <ul>
     <li>Allow to run CV plugins in rack mode, with CV connected to a dummy port</li>
+    <li>Carla-Control no longer has return remote url option, no longer needed after some fixes</li>
     <li>Clear up situation with nogui and carla-osc-gui script (explanation article to come later)</li>
     <li>Disable OSC by default on macos (needs to ask permission to use network, which may look suspicious)</li>
     <li>Do not build external plugins by default</li>
