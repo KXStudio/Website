@@ -31,8 +31,8 @@ include_once("includes/header.php");
     besides writing the release announcement (like this one), there is a lot of manual building and uploading.<br/>
     The situation got worse with 1 more build type for macOS universal support..<br/>
     This makes it more difficult to do quick bug-fixes than it should, and thus they tend to not happen much.<br/>
-    There are still no automated Linux builds yet, I will take care of that at a later point.<br/>
-    I always keep the Carla package on the KXStudio repositories up to date, and ArchLinux is usually very quick on the updates too, so for Linux users this is not that big of a deal.
+    There are still no automated Linux builds though, I will take care of that at a later point.<br/>
+    In any case, I always keep the Carla package on the KXStudio repositories up to date, and ArchLinux is usually very quick on the updates too, so for Linux users this is not that big of a deal.
 </p>
 <p>
     With that said, let's go through some of this release highlights.
