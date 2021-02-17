@@ -171,7 +171,7 @@ include_once("includes/versions.php");
         <a href="https://github.com/falkTX/Carla/" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Project page</a><br/>
      <img src="images/ico_github.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla/archive/master.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/archive/main.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Source code (zip)</a><br/>
      <img src="images/ico_github.png" alt="" class="img_text_align_spaced"/>
         <a href="https://github.com/falkTX/Carla/issues?state=open" class="external text a_bigger_text" rel="nofollow" target="_blank">
