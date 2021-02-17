@@ -39,8 +39,8 @@ include_once("includes/header.php");
 </p>
 
 <table><tr><td width="40%">
-<a href="/screenshots/news/carla-2.2_multi-client.png">
-    <img src="/screenshots/news/carla-2.2_multi-client.png" style="max-width:100%;height:auto;" alt="settings"/>
+<a href="/screenshots/news/carla-2.3_macos-universal.png">
+    <img src="/screenshots/news/carla-2.3_macos-universal.png" style="max-width:100%;height:auto;" alt="macos-universal"/>
 </a>
 </td><td width="60%">
 <h3>macOS arm64/universal build support</h3>
