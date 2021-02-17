@@ -157,6 +157,10 @@ include_once("includes/header.php");
     There are no binary releases for Linux at the moment, and the old Windows 32bit No-SSE builds are gone.<br/>
     On Linux, use the packages from your distribution or ask the package maintainer to update.
 </p>
+<p>
+    The macOS and Windows binaries are not signed/notarized.<br/>
+    Carla-Control on macOS M1 fails to run natively, but is okay under rosetta2.
+</p>
 
 <h3>Downloads</h3>
 <p>
