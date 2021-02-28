@@ -9,6 +9,107 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (February 2021)</span><br/>
+    On <i>2021-02-28</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, another "monthly" report about the KXStudio project is here.<br/>
+    There is not a whole lot of stuff this time around, this being a short month and also me moving to a different place.<br/>
+    But there are still some things worth reporting, so let's get to that.
+</p>
+<p>
+    First, in case you missed it,
+    <a href="https://kx.studio/News/?action=view&url=carla-23-rc1-is-here" target="_blank">
+    Carla v2.3-RC1 was tagged and released</a>,
+    marking the first PyQt-based project of mine to have automated release binaries.<br/>
+    This is crucial for having more frequent releases, as it reduces the workload that each release requires.<br/>
+    It is now basically just
+    <a href="https://github.com/falkTX/Carla-Releases/commit/2d13259a24a1a397f480bf6ab56e0c51bf5039dd" target="_blank">
+    setting the commit hash
+    </a>
+    in the
+    <a href="https://github.com/falkTX/Carla-Releases" target="_blank">
+    Carla-Releases
+    </a>
+    project, and
+    <a href="https://travis-ci.org/github/falkTX/Carla-Releases/builds/760799724" target="_blank">
+    wait for the builds
+    </a>
+    to be done.<br/>
+    And speaking of Carla, a few small issues were found and already fixed, so you can expect RC2 to be out very soon.
+</p>
+<p>
+    On non-KXStudio related news,
+    <a href="https://github.com/mtytel/vital" target="_blank">
+    Vital is now open-source</a>.<br/>
+    Obviously I have interest on packaging it in the KXStudio repositories but,
+    even though the project is released under
+    <a href="https://github.com/mtytel/vital/blob/main/LICENSE" target="_blank">
+    GPLv3</a>, there are restrictions on the use of the name and its trademarks.<br/>
+    So the idea right now is to (im)port it over to
+    <a href="https://github.com/DISTRHO/DISTRHO-Ports" target="_blank">
+    DISTRHO-Ports
+    </a>
+    project, with a change of name to Vitalium and an alternative icon made by unfa.<br/>
+    This is already on-going, with one change required which was to update the
+    <a href="https://github.com/DISTRHO/JUCE" target="_blank">
+    DISTRHO JUCE fork
+    </a>
+    to the latest upstream v6.0.7 -
+    this is
+    <a href="https://github.com/DISTRHO/DISTRHO-Ports/commit/9dc5ca5cb5b4211441d579bfe86317eea3957919" target="_blank">
+    done now
+    </a> (including rebasing all of
+    <a href="https://github.com/DISTRHO/DISTRHO-Ports/tree/master/libs/juce-current/patches" target="_blank">
+    DISTRHO JUCE patches</a>).<br/>
+    I will write something when the porting process is over, likely doing another release of
+    <a href="https://github.com/DISTRHO/PawPaw" target="_blank">
+    PawPaw
+    </a>
+    since simply having Vitalium as cross-platform LV2 plugin is worth an update.
+</p>
+<p>
+    Package updates in the KXStudio repositories are very few this time.<br/>
+    Basically soundtracker was added (as a special request from a friend) and Helio was updated to v3.3 (which served as a way to test the updated JUCE).
+</p>
+<p>
+    On a final note, I am experimenting with a
+    <a href="https://board.kx.studio/" target="_blank">
+    public kanban-style board</a>.<br/>
+    Not just to organize myself a bit better, but also as a way to let everyone know what I am working on at the moment and things that I will start to do relatively soon.<br/>
+    You can see what has already been done this month so far (let's pretend we are already in March) and what might be coming soon.<br/>
+    I am still playing with colors and tags, but general idea on the colors at the moment is:
+</p>
+<ul>
+    <li><strong>yellow</strong>: packaging stuff or something related to kxstudio repositories</li>
+    <li><strong>orange</strong>: articles or things to write (usually releases or news)</li>
+    <li><strong>green</strong>: coding task which is similar to something I did before, so "easy" to do</li>
+    <li><strong>red</strong>: bug-fixes</li>
+    <li><strong>blue</strong>: porting over something that already exists/was done before. involves boring, copy, paste and adjust work</li>
+    <li><strong>pink</strong>: brand new projects or things to do, which usually involve learning, research, testing, etc. can take long</li>
+</ul>
+<p>
+    I have recently been trying to get some sort of
+    <a href="https://mastodon.falktx.com/web/statuses/105731231590785248" target="_blank">
+    crowd-funding going
+    </a>
+    (to help in terms of financial support).<br/>
+    If you are a sponsor/subscriber, you might have felt that these monthly updates are too spread out and too few.<br/>
+    So a public work-tracking board seems like a nice middle-ground, a way to indicate what is happening on a specific moment without having to wait for monthly reports or big splashy news.<br/>
+    For now you can access the board at <a href="https://board.kx.studio/" target="_blank">board.kx.studio</a>; later on I will see if it can be embed into the main website.
+</p>
+<p>
+    If you see anything you like in there or just simply appreciate the kind of work I do, please consider a
+    <a href="https://kx.studio/Donations">donation</a>.<br/>
+    I am not taking feature requests at the moment, as there is quite a few things in the backlog already, but once most of the
+    <a href="https://github.com/DISTRHO/DPF" target="_blank">DPF</a>-related
+    work is complete, I will revisit this idea.<br/>
+    Thank you in advance for your support, stay safe out there!
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.3 RC1 is here!</span><br/>
     On <i>2021-02-16</i> by<i> falkTX</i>
 </p>
