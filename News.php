@@ -9,6 +9,52 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.3 RC2 is here!</span><br/>
+    On <i>2021-03-16</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, this is an announcement for the next release candidate for Carla v2.3.<br/>
+    Comes after a few issues were reported and fixed,
+    specially important for Windows users where plugin discovery did not work.<br/>
+    The audiofile and midifile plugins were also finalized, the task I was waiting to finish before publishing this RC2.
+</p>
+<p>
+    For the changes made in v2.3 (compared to v2.2) please see the
+    <a href="https://kx.studio/News/?action=view&url=carla-23-rc1-is-here" target="_blank">
+    Carla v2.3-RC1
+    </a>
+    announcement.<br/>
+    The full list of changes in v2.3-RC2 is:
+</p>
+<ul>
+    <li>Add audio and MIDI file information as parameter outputs</li>
+    <li>Make audio and MIDI file host sync optional, enabled by default</li>
+    <li>Accept oga and opus audio files</li>
+    <li>Fix wine bridge build for certain systems</li>
+    <li>Fix (native) plugin discovery under Windows</li>
+    <li>Fix plugin search listing AU as possible type on Windows</li>
+    <li>Fix loading project with VST3 plugin bridges</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<h3>Final note</h3>
+<p>
+    Just a reminder that this is a release candidate, and not the final release yet.<br/>
+    There are a few known issues I want to fix before tagging v2.3 as stable, but it is very very close.<br/>
+    And of course, if you appreciate the kind of work I do, please consider a
+    <a href="https://kx.studio/Donations">donation</a>.<br/>
+    Thank you.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; DISTRHO-Ports 2021-03-15 and PawPaw v1.1 releases</span><br/>
     On <i>2021-03-16</i> by<i> falkTX</i>
 </p>
