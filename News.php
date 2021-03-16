@@ -27,7 +27,7 @@ include_once("includes/header.php");
     a spectral warping wavetable synth that has recently being made
     <a href="https://github.com/mtytel/vital" target="_blank">open-source</a>.<br/>
     We cannot use the Vital brand or connect to its vital.audio online services,
-    so this fully disabled within the Vitalium source code with an alternative name and icon.
+    so this is completely removed from the Vitalium source code, with an alternative name and icon.
 </p>
 <p>
     So with this release, I updated PawPaw so it
