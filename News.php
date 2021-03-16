@@ -9,6 +9,56 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; DISTRHO-Ports 2021-03-15 and PawPaw v1.1 releases</span><br/>
+    On <i>2021-03-16</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, I am happy to announce a new release for <a href="https://github.com/DISTRHO/DISTRHO-Ports/releases" target="_blank">DISTRHO-Ports</a>,
+    and subsequently an update to <a href="https://github.com/DISTRHO/PawPaw" target="_blank">PawPaw</a> that adds the new plugins.<br/>
+    In this DISTRHO-Ports release we now have 2 new plugins: SwankyAmp and Vitalium.
+</p>
+<p>
+    <b>SwankyAmp</b> appears as a direct port contribution from Jean Pierre Cimalando, you can find the original plugin
+    <a href="https://github.com/resonantdsp/SwankyAmp" target="_blank">here</a>.
+</p>
+<p>
+    As for <b>Vitalium</b>, this is an open-source and redistributable version of
+    <a href="https://vital.audio/" target="_blank">Vital</a>,
+    a spectral warping wavetable synth that has recently being made
+    <a href="https://github.com/mtytel/vital" target="_blank">open-source</a>.<br/>
+    We cannot use the Vital brand or connect to its vital.audio online services,
+    so this fully disabled within the Vitalium source code with an alternative name and icon.
+</p>
+<p>
+    So with this release, I updated PawPaw so it
+    <a href="https://github.com/DISTRHO/PawPaw/releases/tag/v1.1" target="_blank">now includes SwankyAmp and Vitalium</a>.<br/>
+    In case you forgot or are not aware, PawPaw is a little project to build and package LV2 plugins for macOS and Windows.<br/>
+    Sadly due to technical difficulties I had to drop Windows 32-bit builds, which I imagine most will not care anyway.
+</p>
+<p>
+    So now you can enjoy 2 new plugins, no matter if you use Linux, macOS or Windows.<br/>
+    (for Linux builds, please refer to your distribution of choice, or grab them from the KXStudio repositories)
+</p>
+<p>
+    Oh, and some screenshots of course, everybody loves those.
+</p>
+<h6>Reaper with SwankyAmp on Windows</h6>
+<p>
+    <img src="/screenshots/news/pawpaw-1.1-swankyamp.png" alt="pawpaw-1.1-swankyamp"></img>
+</p>
+
+<h6>Zrythm with Vitalium on macOS</h6>
+<p>
+    <img src="/screenshots/news/pawpaw-1.1-vitalium.png" alt="pawpaw-1.1-vitalium"></img>
+</p>
+
+<p>
+    PS: Yes, Reaper supports LV2 now. And yes, Zrythm is quickly becoming a nice DAW too.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (February 2021)</span><br/>
     On <i>2021-02-28</i> by<i> falkTX</i>
 </p>
