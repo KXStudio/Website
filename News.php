@@ -9,6 +9,104 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (March 2021)</span><br/>
+    On <i>2021-03-31</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, another monthly report about the KXStudio project is here.<br/>
+</p>
+<p>
+    If you have been paying attention to these reports, you likely already know what is going to be covered here.<br/>
+    Starting late February, I began using a
+    <a href="https://board.kx.studio/" target="_blank">
+    public kanban-style board</a>
+    in order to show/list the things I am working on and plan to do on the short and medium term.<br/>
+    In a few days I will delete the "done" items related to March, so that the "done" stuff actually relates to the current month.
+</p>
+<p>
+    Now getting to the news..<br/>
+    First, in case you missed it,
+    DISTRHO-Ports and PawPaw
+    <a href="https://kx.studio/News/?action=view&url=distrho-ports-2021-03-15-and-pawpaw-v11-releases" target="_blank">
+    had a new release</a>,
+    which finalizes the custom/redistributable Vitalium fork of <a href="https://github.com/mtytel/vital" target="_blank">Vital</a>.<br/>
+    While testing, a few issues on the JUCE LV2 wrapper
+    <a href="https://github.com/DISTRHO/JUCE/commit/a385a08755e360b290b699abe210fbeee7d756ff" target="_blank">were</a>
+    <a href="https://github.com/DISTRHO/JUCE/commit/c5757368162300ff5afa0ddb001afaed1d6826c1" target="_blank">found</a>
+    <a href="https://github.com/DISTRHO/JUCE/commit/c38ea34e7cd82d50709a487fbea7a00e57abe845" target="_blank">and</a>
+    <a href="https://github.com/DISTRHO/JUCE/commit/d790bc8f2cc55a50948288ddbb1ac1632bd5c92a" target="_blank">fixed</a>.<br/>
+    To the point of, at least on Linux, we now have the LV2 version behaving better than the VST3 one.<br/>
+    Additionally, this
+    <a href="https://github.com/DISTRHO/PawPaw" target="_blank">PawPaw</a>
+    release automates the macOS-universal builds, something that is being applied for Carla and jack2 next releases.
+</p>
+<p>
+    Speaking of Carla, the
+    <a href="https://kx.studio/News/?action=view&url=carla-23-rc2-is-here" target="_blank">
+    2.3-RC2
+    </a>
+    version was tagged, with the final v2.3 release scheduled for April 15.<br/>
+    The remaining things to check and fix are all very minor, so we are all good for a release anyway.
+</p>
+<p>
+    And speaking of jack2, current plans are to fix the macOS-universal meta-data situation among other minor things where possible.<br/>
+    I began fetching the zita-a2j/j2a code to work as internal client (just like jack1 does) but found a few issues while testing.<br/>
+    It already works well if the internal client is not unloaded, which is good enough for the setup I had in mind for it first - using it to
+    <a href="https://wiki.moddevices.com/wiki/Audio_Through_USB#Using_USB_Audio_Gadget" target="_blank">
+    expose USB audio gadget mode
+    </a>
+    in a MOD device.<br/>
+    You can already grab the code from
+    <a href="https://github.com/moddevices/jack2/commits/master" target="_blank">
+    moddevices jack2 fork
+    </a>
+    though I will try fix the last things so it is good to add in next jack2 release, expected at April 15 as well.
+</p>
+<p>
+    There is a big
+    <a href="https://github.com/DISTRHO/DPF/commits/pugl-upstream-v2" target="_blank">
+    DPF overhaul
+    </a>
+    of its graphic handling, mostly triggered from updating to latest pugl (used for window and event handling).<br/>
+    There is nothing to show just yet, as the code does not even build right now.<br/>
+    I am still on the phase of reworking some core C++ code, so yeah, nothing to show yet.
+</p>
+<p>
+    On a small note, I also patched eg-sampler (LV2 example sampler) to
+    <a href="https://github.com/lv2/lv2/pull/54" target="_blank">
+    be able to load non-mono files
+    </a>
+    and
+    <a href="https://github.com/lv2/lv2/pull/55" target="_blank">
+    resample the audio sample to the host sample-rate</a>.<br/>
+    There was a race condition when loading new files,
+    <a href="https://github.com/lv2/lv2/pull/53" target="_blank">
+    which is now fixed and merged upstream</a>.<br/>
+    This work was mainly done in order to have a quick usable plugin using files for MOD, but overall everyone benefits.
+</p>
+<p>
+    Regarding packages in the KXStudio repositories, there are a few updates. Those are:
+</p>
+<ul>
+    <li>airwindows added</i>
+    <li>melmatcheq.lv2 added (reusing LibraZik package, much appreciated!)</i>
+    <li>distrho-ports updated to 2021-03-15</i>
+    <li>lsp-plugins updated to 1.1.29</i>
+    <li>sequencer64 updated to latest git</i>
+</ul>
+<p>
+    And that is it for now.<br/>
+    If you appreciate the kind of work I do, please consider a
+    <a href="https://kx.studio/Donations">donation</a>.<br/>
+    Thank you in advance for your support and stay safe out there!<br/>
+</p>
+<p>
+    PS: 2 of the package updates above appear as a result of a Patreon perk ;)
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.3 RC2 is here!</span><br/>
     On <i>2021-03-16</i> by<i> falkTX</i>
 </p>
