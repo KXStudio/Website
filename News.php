@@ -9,6 +9,194 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla Plugin Host v2.3 is here</span><br/>
+    On <i>2021-04-15</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, this is the announcement of the 2.3 version of the Carla Plugin Host.<br/>
+    If you do not know, Carla is a fully-featured cross-platform audio plugin host, which can also run as a plugin.
+</p>
+<p>
+    This specific release, compared to v2.3-RC2, brings some much needed fixes to the MIDI Pattern plugin - it finally works as expected.<br/>
+    There were some fixes done on the patchcanvas side, and for other stuff as reported by users.<br/>
+    The full list of changes for v2.3 (coming from v2.3-RC2) are:
+</p>
+<ul>
+    <li>Fix a float vs int usage, which will break in python soon</li>
+    <li>Fix cancelling plugin discovery</li>
+    <li>Fix main client name for multiple carlas inside NSM</li>
+    <li>Fix missing vst3 poly aftertouch</li>
+    <li>Fix patchcanvas use of keyboard modifiers</li>
+    <li>Fix project filename/folder only set after saving once</li>
+    <li>Fix recursive VST2 audioMasterAutomate parameter changes</li>
+    <li>Fix sorting plugins by favorite</li>
+    <li>Do not run 2nd instance of lv2 plugin if it has event output(s)</li>
+    <li>Read lv2 midi:binding on control ports and parameters</li>
+    <li>Use Ctrl+P to open/close side panel</li>
+    <li>Use fixed buffers on standalone bridge mode</li>
+    <li>midipattern: overall fix up</li>
+    <li>midipattern: use Esc key to close UI</li>
+</ul>
+<p>
+    The v2.3-RC1 announcement already listed the new features that v2.3 brings (compared to v2.2),
+    but let's go through the release highlights again.
+</p>
+
+<table><tr><td width="40%">
+<a href="/screenshots/news/carla-2.3_macos-universal.png">
+    <img src="/screenshots/news/carla-2.3_macos-universal.png" style="max-width:100%;height:auto;" alt="macos-universal"/>
+</a>
+</td><td width="60%">
+<h3>macOS arm64/universal build support</h3>
+<p>
+    Starting with v2.3, Carla natively supports the new macOS arm64 architecture, used in the new M1 hardware models.<br/>
+    The Carla macOS universal build supports x86_64 and arm64 architectures at the same time, and should run on anything 10.12 or newer.
+</p>
+<p>
+    As Carla has support for plugin bridges (even across architectures), I took care to make sure that the arm64 version can load x86_64 plugins.<br/>
+    When a plugin fails to load in a specific way, Carla will try to load it again but now in x86_64 mode.<br/>
+    This is currently working for VST2 and VST3 plugins.
+</p>
+<p>
+    Additionally, for something that kept bothering me a lot, Carla will automatically remove plugins from macOS quarentine before loading them.<br/>
+    This is not possible to do for AudioUnits as we do not have the full path to the plugin binary, but valid for all other formats.<br/>
+    No more security theatre shenanigans here! :)
+</p>
+</td></tr></table>
+
+<br/>
+
+<table><tr><td width="40%">
+<a href="/screenshots/news/carla-2.3_audiofile.png">
+    <img src="/screenshots/news/carla-2.3_audiofile.png" style="max-width:100%;height:auto;" alt="audiofile"/>
+</a>
+</td><td width="60%">
+<h3>General improvements to AudioFile plugin</h3>
+<p>
+    The AudioFile internal plugin received some deserved attention this time around.<br/>
+    Besides basically reworking how its disk-streaming functionality (more robust and much less CPU usage),<br/>
+    it finally can do resampling so it will sound correctly no matter the sample rate.<br/>
+    Additionally mp3 support was added via
+    <a href="https://github.com/mackron/dr_libs/blob/master/dr_mp3.h" target="_blank">dr_mp3</a>,
+    as
+    <a href="http://www.mega-nerd.com/libsndfile/" target="_blank">libsndfile</a>
+    used by it does not yet officially support it.
+</p>
+<p>
+    Both Audio and MIDI file plugins are now exposed as LV2 plugins, allowing to load and use these plugins outside of Carla.<br/>
+    It supports file parameter plus patch Get/Set with State mapPath as expected for these kinds of plugins.<br/>
+    The experimental "inline-display" of the AudioFile is also exposed as an LV2 feature.
+</p>
+</td></tr></table>
+
+<br/>
+
+<table><tr><td width="40%">
+<a href="/screenshots/news/carla-2.3_audiofile.png">
+    <img src="/screenshots/news/carla-2.3_midipattern.png" style="max-width:100%;height:auto;" alt="midipattern"/>
+</a>
+</td><td width="60%">
+<h3>General improvements to MIDI Pattern plugin</h3>
+<p>
+    Not just the AudioFile plugin, but the MIDI Pattern one also received some much needed attention.<br/>
+    The piano-roll UI code was reworked to ensure it worked well, as previously moving notes around just didn't work at all.<br/>
+    Many precautions were added against edge-cases.
+</p>
+<p>
+    Hovering notes will change the mouse cursor to better indicate the potential action in case of mouse press.<br/>
+    And as with pretty much all other plugins in Carla, using Escape key will now close the plugin UI too.
+</p>
+</td></tr></table>
+
+<br/>
+
+<table><tr><td width="40%">
+<a href="/screenshots/news/carla-2.3_windows.png">
+    <img src="/screenshots/news/carla-2.3_windows.png" style="max-width:100%;height:auto;" alt="windows"/>
+</a>
+</td><td width="60%">
+<h3>Reworked Windows builds</h3>
+<p>
+    The infrastructure used to build Windows binaries is now through
+    <a href="https://github.com/DISTRHO/PawPaw" target="_blank">PawPaw</a>,
+    as done with
+    <a href="https://github.com/jackaudio/jack2-releases" target="_blank">JACK2</a>
+    already.<br/>
+    With this, I have control over the whole toolchain and libraries that are used in Carla Windows binaries (previously msys2 packages were used).
+</p>
+<p>
+    For users, this means these binaries are more robust and with less dependencies.<br/>
+    (I am building with static libraries as much as possible, so no more ligcc/libstdc++6 mess).<br/>
+    The Windows zip file download no longer ships with a single Carla.exe, instead please run Carla.exe inside the Carla folder, should be easy to spot.
+</p>
+<p>
+    For developers, a nice side-effect is that we can finally tweak the behaviour of the startup executable, now allowing debug messages to be seen.
+    (though you need to run it in Console/PowerShell for that)<br/>
+    The libraries that allow to use and talk to Carla Host API are now provided on these builds.
+</p>
+<p>
+    Finally, it should be possible to build Carla under msys2 on Windows now.<br/>
+    I can make a quick tutorial if that is something that interests you, let me know if that is the case.
+</p>
+</td></tr></table>
+
+<br/>
+
+<table><tr><td width="40%">
+<a href="/screenshots/news/carla-2.3_icons.png">
+    <img src="/screenshots/news/carla-2.3_icons.png" style="max-width:100%;height:auto;" alt="icons"/>
+</a>
+</td><td width="60%">
+<h3>Use system/desktop theme icons (non-macOS/Windows only)</h3>
+<p>
+    Due to popular demand, there is now an option in the experimental settings to use system/desktop theme icons.<br/>
+    This will remain as experimental feature for 1 release, so we can catch potential issues in the mean time, and fix them.<br/>
+</p>
+<p>
+    Since I do not mind the default Carla icons (quite like them actually), this is not meant for me.<br/>
+    Feel free to use it and report back if you spot something weird or incorrect.
+</p>
+</td></tr></table>
+
+<br/>
+
+<h3>Other notable changes</h3>
+<ul>
+    <li>Allow to run CV plugins in rack mode, with CV connected to a dummy port</li>
+    <li>Carla-Control no longer has return remote url option, not needed after some fixes</li>
+    <li>Clear up situation with nogui and carla-osc-gui script (explanation article to come later)</li>
+    <li>Disable OSC by default on macOS (needs to ask permission to use network, which may look suspicious)</li>
+    <li>Do not build external plugins by default</li>
+    <li>General improvement to LV2 parameter API support</li>
+    <li>Many, many, many bug-fixes</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla-git" (plus "carla-lv2" and "carla-vst" if you're so inclined).<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<h3>Notes for users</h3>
+<p>
+    This was already the case for v2.2 but it is worth reiterating:<br/>
+    When using JACK2, the canvas - plugin integrations requires at least JACK2 v1.9.13.<br/>
+    This is because Carla relies on JACK meta-data in order to store information about each plugin/client,
+    and meta-data was only added to JACK2 in version 1.9.13.<br/>
+    Alternatively, you can use JACK1 instead of JACK2, which has meta-data support since a long time.<br/>
+    Note that the <a href="/Repositories:Extras">"extras" KXStudio repository</a> (which provides an updated JACK2) supports both Ubuntu 18.04 and 20.04.<br/>
+    The UbuntuStudio backports PPA also provides updated JACK2 packages.
+</p>
+<p>
+    There are no official Linux binary builds for v2.3 at this point.<br/>
+    Since v2.3 the official builds are automated, but I did not bother setting that up for Linux yet as it is easier to get a working Linux build compared to macOS and Windows.<br/>
+    Carla v2.3 is provided in the KXStudio repositories and in many official Linux distribution repositories too anyway.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (March 2021)</span><br/>
     On <i>2021-03-31</i> by<i> falkTX</i>
 </p>
