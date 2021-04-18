@@ -137,7 +137,7 @@ for PACKAGE in ${PACKAGES[@]}; do
         PACKAGE_DESCRIPTION="carla windows bridge"
     fi
 
-    echo "<div class=\"repository-package\">"
+    echo "<div class=\"repository-package\" id=\"${PACKAGE}\">"
 
     # screenshot
     SCREENSHOT=${PACKAGE}
