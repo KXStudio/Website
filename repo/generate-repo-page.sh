@@ -157,7 +157,7 @@ for PACKAGE in ${PACKAGES[@]}; do
 
     # full table
     echo "<div><table>"
-    echo "<tr><td>Package Name:</td><td><a href=\"#${PACKAGE}\">${PACKAGE}</a></td></tr>"
+    echo "<tr><td>Package Name:</td><td><a href=\"#${PACKAGE}\" style=\"text-decoration:none;color:#D6D6D6;\">${PACKAGE}</a></td></tr>"
     echo "<tr><td>Description:</td><td>${PACKAGE_DESCRIPTION}</td></tr>"
     if [ -n "${PACKAGE_HOMEPAGE}" ] || [ -n "${PACKAGE_VCS_PAGE}" ]; then
         echo "<tr><td>Useful links:</td><td>"
