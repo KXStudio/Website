@@ -193,7 +193,7 @@ If you can&#039;t find an answer to your question on the fora or with your favou
 </p>
 
 <p>
-KXStudio includes the <strong>Konversation</strong> KDE <acronym title="Internet Relay Chat">IRC</acronym> client which you can use to connect to the following channels on irc.freenode.net
+KXStudio includes the <strong>Konversation</strong> KDE <acronym title="Internet Relay Chat">IRC</acronym> client which you can use to connect to the following channels on irc.libera.chat
 </p>
 
 <p>
@@ -205,7 +205,7 @@ KXStudio includes the <strong>Konversation</strong> KDE <acronym title="Internet
 </p>
 
 <p>
-<strong>#ardour</strong> has its own official <acronym title="Internet Relay Chat">IRC</acronym> support channel on freenode.net as do many other popular open source projects
+<strong>#ardour</strong> has its own official <acronym title="Internet Relay Chat">IRC</acronym> support channel on libera.chat as do many other popular open source projects
 </p>
 
 <p>

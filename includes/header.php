@@ -211,11 +211,6 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
                     <a href="/Documentation">Community &#9660;</a>
                     <div class="item-menu-children">
                         <p>
-                            <a href="https://webchat.freenode.net/?channels=#kxstudio,#opensourcemusicians" class="external" rel="nofollow" target="_blank">
-                                <img src="/images/ico_chat.png" width="16px" height="16px" alt=""/> &nbsp; IRC Channel
-                            </a>
-                        </p>
-                        <p>
                             <a href="https://chat.kx.studio/" class="external" rel="nofollow" target="_blank">
                                 <img src="/images/ico_rocketchat.png" width="16px" height="16px" alt=""/> &nbsp; Rocket Chat
                             </a>
