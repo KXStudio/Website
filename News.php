@@ -9,6 +9,178 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (May 2021)</span><br/>
+    On <i>2021-05-31</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, another monthly report about the KXStudio project is here.<br/>
+    I skipped last month as there was not much to report.<br/>
+    Mainly there were new releases, but those had their own announcement (specifically,
+    <a href="https://kx.studio/News/?action=view&url=carla-plugin-host-v23-is-here" target="_blank">
+    Carla v2.3</a>
+    and
+    <a href="https://jackaudio.org/news/2021/04/15/jack2-v1918-release.html" target="_blank">
+    JACK2 v1.9.18</a>).<br/>
+    Afterwards there was a small personal situation (that is still unfolding) that took all my free time, so that was it.<br/>
+    There are a few updates related to the month of May though!
+</p>
+<h3>DPF updates</h3>
+<p>
+    The main thing to report today is all the work that I've been putting in
+    <a href="https://github.com/DISTRHO/DPF" target="_blank">DPF</a>
+    recently.<br/>
+    This has been a long-time coming, but better late than never.<br/>
+    For those unaware, DPF is a very small C++ framework to create audio plugins with.<br/>
+    It has UI support, but it is intentionally not a fully-fledged UI toolkit, same for its DSP side.<br/>
+    It can export as LV2, VST2 and other plugin formats, but it does not try to do much more than that.<br/>
+    Native OS events is handled behind the scenes via
+    <a href="https://gitlab.com/lv2/pugl" target="_blank">pugl</a>.
+</p>
+<p>
+    One major task to do was updating to
+    <a href="https://drobilla.net/files/pugl_docs/overview.html" target="_blank">latest pugl</a>,
+    because it supports many more things compared to old versions.<br/>
+    pugl had its event system completely reworked though, so we can't just update and use it as-is.<br/>
+    In the end, this update work is something that
+    <a href="https://github.com/DISTRHO/DPF/pull/272" target="_blank">took several weeks</a>.<br/>
+    I took the chance to rework some core components of DPF UI handling together with this,
+    as there were a few parts of the code that
+    <a href="https://github.com/DISTRHO/DPF/issues/68" target="_blank">proved confusing</a>
+    to
+    <a href="https://github.com/DISTRHO/DPF/issues/136" target="_blank">other developers</a>.<br/>
+    Also added in
+    <a href="https://github.com/DISTRHO/DPF/tree/develop/tests" target="_blank">testing units and demo applications</a>
+    to help test several parts of DPF, though this is still very much work-in-progress.<br/>
+    This was specially useful to ensure core parts were working before proceeding with the rework.<br/>
+    Related to pugl update and rework, the Cairo backend of DPF is now pretty much on-par with its OpenGL one.<br/>
+    The Demo tool (where we test images, events, resizing, etc) has consistent behaviour between the two.<br/>
+    <br/>
+    <img src="/screenshots/news/dpf-demo-2021-05.png" alt="dpf-demo"/>
+</p>
+<p>
+    Continuing with the rework,
+    <a href="https://github.com/DISTRHO/DPF/pull/281" target="_blank">special attention was given to resizing</a>.<br/>
+    Resizing in LV2 UIs has always been something very painful, which still does not work correctly in many hosts.<br/>
+    One culprit of this was the bad initial decision to use an LV2 extension to deal with UI resizing.<br/>
+    Turns out,
+    <a href="https://github.com/lv2/pugl/issues/42" target="_blank">we do not need this at all</a>!<br/>
+    So the next version of DPF will
+    <a href="https://github.com/DISTRHO/DPF/commit/0d6f63e9b284207efe27e798ccdfbb307ee56302" target="_blank">no longer make use</a>
+    of
+    <a href="https://github.com/DISTRHO/DPF/commit/d2b96431b2a5790e9d281f97e09e42ab2f90a927" target="_blank">LV2 UI resize extensions</a>.<br/>
+    We will need to accommodate hosts to this, which is a breaking change.<br/>
+    But it is not like LV2 plugin-side resizing was working well in the first place anyway.<br/>
+    I already
+    <a href="https://github.com/falkTX/Carla/commit/75ea9f5b2d184151c696f1dc648dfb700959c876" target="_blank">did this for Carla</a>.
+    Likely will do similar things to
+    <a href="http://drobilla.net/software/suil" target="_blank">suil</a>
+    if no one else does.
+</p>
+<p>
+    On even more DPF news, I created a new
+    <a href="https://github.com/DISTRHO/DPF-Widgets" target="_blank">open-source code repository meant for reusable DPF UI widgets</a>.<br/>
+    It has come to my attention that developers struggle with DPF having very little common widgets they are used to.<br/>
+    I have made a few ones based on images for the
+    <a href="https://github.com/DISTRHO/DPF-Plugins/" target="_blank">DPF-Plugins collection</a>,
+    but some developers struggle to create individual widgets from scratch.<br/>
+    This code repository will evolve over time, obviously as a new project which is only a few days old there is not much to see.<br/>
+    One common request has been a resize handle, so that for plugin formats like VST2 which do not allow user-side resizing we still have a way for the user to resize the UI.<br/>
+    There is one
+    <a href="https://github.com/DISTRHO/DPF-Widgets/blob/main/generic/ResizeHandle.hpp" target="_blank">generic resize handle in the repository now</a>,
+    usable for both Cairo and OpenGL backends.<br/>
+    The first real widgets I am contributing to the repository are a port of
+    <a href="https://github.com/IceDragon200/oui-blendish" target="_blank">oui-blendish</a>
+    which provides blender-style looking widgets.<br/>
+    I am still setting up the whole thing, but initial impressions are very good. It even works with High-DPI / custom scale factors!<br/>
+    (ignore the bitmap icons on the screenshot below, those are only used in testing, I will later either replace them or remove them)<br/>
+    <br/>
+    <img src="/screenshots/news/dpf-widgets-blendish-2021-05.png" alt="dpf-widgets-blendish"/>
+</p>
+<p>
+    Finally on DPF side, as contributions by Jean Pierre Cimalando,
+    <a href="https://github.com/DISTRHO/DPF/pull/269" target="_blank">CMake is now supported</a>
+    for building DPF and using it in plugins targeting DPF.<br/>
+    As a second step on top of CMake, it is now possible to
+    <a href="https://github.com/DISTRHO/DPF/pull/278" target="_blank">build DPF with MSVC on Windows</a>.<br/>
+    I tried this myself and was able to build a DPF VST2 plugin with MSVC and run the output binary inside Carla.<br/>
+    This is not my development workflow by any means (it was the first time I used MSVC!) but it opens up the process for many more people, which always great.<br/>
+    <br/>
+    <img src="/screenshots/news/dpf-msvc-2021-05.png" alt="dpf-msvc"/>
+</p>
+<p>
+    One last bit of news regarding DPF is that I started testing the waters for VST3 support.<br/>
+    There is almost nothing to see just yet, as there is enough to do in DPF regarding polishing, fixing bugs and handling requests so that VST3 work is not a priority.<br/>
+    It is something that I have took an interest on lately though, as a potential way to attract commercial developers/vendors to DPF.<br/>
+    (and perhaps some well needed funding? who knows..)
+</p>
+<p>
+    Work on DPF will continue, you can grab all these changes from its
+    <a href="https://github.com/DISTRHO/DPF/tree/develop" target="_blank">develop branch</a>.<br/>
+    Expect more news about it next month.
+</p>
+
+<h3>Other updates</h3>
+<p>
+    While most of my time and attention was given to DPF, a few other things happened.<br/>
+    There is the whole "Audacity was bought up by Muse Group and added CLA, plus telemetry coming soon" thing...<br/>
+    I did some tests with building Audacity with mingw, and succeeded in setting up scripts to
+    <a href="https://github.com/DISTRHO/PawPaw/blob/master/bootstrap-audacity.sh" target="_blank">build required dependencies</a>
+    and then
+    <a href="https://github.com/DISTRHO/PawPaw/blob/master/build-audacity.sh" target="_blank">build audacity itself</a>.<br/>
+    From what I tested on Windows everything seems to work.<br/>
+    (screenshot below is from Wine, but I also tested on real Windows via Virtual Machine)<br/>
+    <br/>
+    <img src="/screenshots/news/audacity-win32-build-2021-05.png" alt="audacity-win32-build"/>
+    <br/>
+    Most mingw needed fixes were
+    <a href="https://github.com/audacity/audacity/pull/881" target="_blank">submitted upstream</a>,
+    but them now requiring a CLA means the PR will likely stay open indefinitely.<br/>
+    Also did some tests with
+    <a href="https://github.com/audacity/audacity/discussions/877" target="_blank">building Audacity with wxQt</a>
+    and while it kinda works, still has some obvious issues - the wxWidgets Qt backend is not feature complete so it is normal for those to happen.<br/>
+    It is very likely I will end up maintaining some custom builds for Audacity once more network features creep in
+    (analytics is coming to Audacity for sure, it is just a matter of when and how).<br/>
+    I am not interested on a fork, only in a way for casual users to get similar builds to the official ones without user-data tracking.
+</p>
+<p>
+    There are some other random things too, for example adding a new "-w" argument to the new jack2 zalsa tools so that it
+    <a href="https://github.com/jackaudio/jack2/commit/23b9fb71b943595db90eb6e8dd48294600cfb0bb" target="_blank">waits until the requested soundcard is available</a>
+    instead of failing to start.<br/>
+    This is very handy when adding it as part of some boot process.
+</p>
+<p>
+    Carla has also seen some
+    <a href="https://github.com/falkTX/Carla/commit/c777cd02d92ba8a61adb29d61fd39f84e3d1bc55" target="_blank">pipewire-related</a>
+    <a href="https://github.com/falkTX/Carla/commit/62a6410171c4b88b0b5a76cd0681d16152f9c9d1" target="_blank">fixes</a>.<br/>
+    It is still not working 100%, but already know of a solution for them, just need to put that into code.<br/>
+    Expect a v2.3.1 release soon with these fixes, and also the LV2 UI resize handling mentioned above.
+</p>
+<p>
+    Finally I added support for
+    <a href="https://github.com/falkTX/FFmpeg/commits/n4.4-jackoutdev" target="_blank">FFmpeg JACK output</a>.
+    Seems to work well from what I tested, but I no longer have a need for it.<br/>
+    Once I am done with DPF and other things, I will try to submit this upstream.
+</p>
+<p>
+    Regarding packages in the KXStudio repositories, there are some small updates. Those are:
+</p>
+<ul>
+    <li>Added bjumblr</i>
+    <li>Added bslizr-uwu (custom skin to bslizr)</i>
+    <li>bslizr updated to 1.2.14</i>
+    <li>lsp-plugins updated to 1.1.30</i>
+</ul>
+<p>&nbsp;</p>
+<p>
+    That is all for now.<br/>
+    If you appreciate the kind of work I do, please
+    <a href="https://kx.studio/Donations">consider a donation</a>.<br/>
+    Thank you in advance for your support, and stay safe out there!<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla Plugin Host v2.3 is here</span><br/>
     On <i>2021-04-15</i> by<i> falkTX</i>
 </p>
