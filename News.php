@@ -9,6 +9,92 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (June 2021) and a Little Personal Note</span><br/>
+    On <i>2021-06-31</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, another monthly report about the KXStudio project is here.<br/>
+    I skipped last month as there was not much to report.<br/>
+</p>
+</p>
+<p>
+
+dpf update to upstream pugl finished (feature parity with old pugl)
+plus:
+- vst2 parameter groups
+- load libjack dynamically
+- Fallback to RtAudio when JACK fails
+- port groups
+- start of event handler helper code, now in use for internal image widgets and also blendish widgets (WIP)
+Allow UI_TYPE = generic, so UI can be opengl or cairo, whichever is available
+Initial work for VST3 compatible plugins, lots to do..
+Implement Window::openFileBrowser() fallback for state files
+
+future plans:
+- ensure high-dpi works always and for all plugins in dpf-plugins suite
+- svg support
+- freeze features and begin all around bugfixing
+- slowly get vst3 to work
+- keep going at documentation
+</p>
+<p>
+
+OneKnob series WIP
+goal for this, upcoming plans
+</p>
+<p>
+
+carla new release incoming, in 15 days for the release pact once again.
+going to be bugfix release, more details later but these are the changes so far:
+- pipewire connections fixup attempt
+- vst2 paramter groups (linux vsts only)
+- Fix initial size for LV2 macOS UIs with no UI resize extension
+- allow canvas eyecandy for >= qt5.12
+Fix canvas split/join action
+Remove favorite plugins from list when they fail to load
+Use posix_spawn for macOS bridge mode scanning
+Fix bridged plugin UIs appearing behind main carla window on macOS
+Fix default rack "skin" for a few plugins
+midipattern: always kill all notes on reposition
+Improve countDecimalPoints
+Make some macOS dialogs modal, hack around edit dialog on top
+</p>
+<p>
+
+mod-live-usb mention
+done on free time, even though related to work, might be useful for other projects later on
+- based on archiso
+- single qt tool running fullscreen.
+using linux framebuffer, no x11 or wayland
+- puts cpu in performance mode, has RT kernel, other common tweaks for audio
+- has options for picking soundcard
+- spawns a container matching MOD system, so libs, jack, plugins, everything matches
+- different tabs for ..., main thing in 1st tab. can open terminal with ctrl+alt+t
+- very barebones, intentionally. no internet.
+- not optimized in size yet, problem coming from archlinux
+</p>
+<p>
+
+now, into personal notes...
+- a little frustrated, perhaps disappointed, that pushing for donations doesnt work.
+number of subcriptions has been going down, not up.
+while I want to keep doing these things, being realistic, it is really not sustainable.
+all the free time is basically spent on this, but it does not pay off.
+
+it seems that (opinion), in order to make it really pay off, a whole lot more effort would be needed.
+not just the coding, but more regular interaction with community, basically a whole lot of reporting and being present?
+or maybe is not feasible at all, this is all very very niche, so who knows.
+but it is clear that keeping this up is not possible, a lot of life stuff was ignored or put on hold (it was lockdown anyway, so not much of a problem).
+
+so going forward, for the next 6 months (rest of the year), plan is:
+- no more new-feature developments, bugfixes only (the svg and vst3 support in dpf being the exception, I feel like they are essential)
+- will restrict time spent working on floss stuff to whatever is left from main job, no more weekends
+- when bugfixes get boring, try packaging, website updates or writting user manual
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (May 2021)</span><br/>
     On <i>2021-05-31</i> by<i> falkTX</i>
 </p>
