@@ -14,82 +14,148 @@ include_once("includes/header.php");
 </p>
 <p>
     Hello all, another monthly report about the KXStudio project is here.<br/>
-    I skipped last month as there was not much to report.<br/>
+    A bit late this time, but let's ignore that. :)<br/>
 </p>
+<h3>DPF updates</h3>
+<p>
+    <a href="https://github.com/DISTRHO/DPF" target="_blank">
+    DPF
+    </a>
+    got most of the attention again.<br/>
+    Things are progressing, not as fast as I hoped, but there is progress.
+    (I really underestimated the amount of time DPF would take)<br/>
+    The main reason for the DPF attention and rework
+    - updating its
+    <a href="https://github.com/lv2/pugl" target="_blank">pugl graphics backend</a>
+    to latest upstream with no patches - is complete.<br/>
+    Only 1 small change is still custom, related to using
+    <a href="https://github.com/x42/sofd/" target="_blank">sofd</a>
+    as a fallback file browser dialog on Linux.<br/>
+    After
+    <a href="https://github.com/lv2/pugl/pull/49" target="_blank">some discussion with the author</a>,
+    I realized such a change/patch doesn't belong in pugl.
+    I will change this part of DPF at a later time.<br/>
+    There are some small additions made on DPF-side of the code for pugl, but nothing that requires changing pugl itself.
 </p>
 <p>
-
-dpf update to upstream pugl finished (feature parity with old pugl)
-plus:
-- vst2 parameter groups
-- load libjack dynamically
-- Fallback to RtAudio when JACK fails
-- port groups
-- start of event handler helper code, now in use for internal image widgets and also blendish widgets (WIP)
-Allow UI_TYPE = generic, so UI can be opengl or cairo, whichever is available
-Initial work for VST3 compatible plugins, lots to do..
-Implement Window::openFileBrowser() fallback for state files
-
-future plans:
-- ensure high-dpi works always and for all plugins in dpf-plugins suite
-- svg support
-- freeze features and begin all around bugfixing
-- slowly get vst3 to work
-- keep going at documentation
+    New stuff was added in DPF of course, first we have a complete
+    <a href="https://github.com/DISTRHO/DPF/commit/495dcc4f03d6a2ed0d30c56c885e4eb7476f4488" target="_blank">port groups</a>
+    implementation, based on an
+    <a href="https://github.com/DISTRHO/DPF/pull/193" target="_blank">initial PR from Jean Pierre Cimalando</a>.<br/>
+    It is supported on LV2, VST2 and JACK targets, wherever is possible on those anyway.<br/>
+    For LV2, port groups are set in the meta-data for both audio/CV ports and parameters.<br/>
+    For VST2, parameter groups are supported (named categories in VST world)<br/>
+    For JACK, lv2-like meta-data is set on the audio and CV ports.<br/>
 </p>
 <p>
-
-OneKnob series WIP
-goal for this, upcoming plans
+    Next, the JACK target can now always be built, by including
+    <a href="https://github.com/DISTRHO/DPF/tree/develop/distrho/src/jackbridge" target="_blank">jackbridge</a>
+    code from Carla (adapted to make fit DPF better, also liberally licensed).<br/>
+    This makes it so that:
+</p>
+<ol>
+    <li>JACK headers and libraries are not needed at build-time</li>
+    <li>Compiled binaries to not link to libjack</li>
+    <li>libjack is loaded dynamically at runtime, printing an error if not found</li>
+</ol>
+<p>
+    As a 2nd step on top of this,
+    <a href="https://github.com/thestk/rtaudio" target="_blank">RtAudio</a>
+    is used as fallback in case JACK is not available or connecting to the JACK server fails
+    (usually because it is simply not running)<br/>
+    This has been requested a few times, and it is finally here.<br/>
+    DPF will setup RtAudio so it opens the default audio input and output as needed. MIDI is not supported yet.<br/>
+    In any case, such fallback makes testing of DPF plugins much easier, specially on systems that do not have JACK.
 </p>
 <p>
-
-carla new release incoming, in 15 days for the release pact once again.
-going to be bugfix release, more details later but these are the changes so far:
-- pipewire connections fixup attempt
-- vst2 paramter groups (linux vsts only)
-- Fix initial size for LV2 macOS UIs with no UI resize extension
-- allow canvas eyecandy for >= qt5.12
-Fix canvas split/join action
-Remove favorite plugins from list when they fail to load
-Use posix_spawn for macOS bridge mode scanning
-Fix bridged plugin UIs appearing behind main carla window on macOS
-Fix default rack "skin" for a few plugins
-midipattern: always kill all notes on reposition
-Improve countDecimalPoints
-Make some macOS dialogs modal, hack around edit dialog on top
+    Moving on, I started some
+    <a href="https://github.com/DISTRHO/DPF/blob/develop/dgl/EventHandlers.hpp" target="_blank">
+    classes that simply do event handling</a>,
+    split off from the ImageButton and ImageKnob into something generic.<br/>
+    The idea here is to make it easier for developers to get a working widget from scratch.<br/>
+    Maybe this will help DPF based plugins to be more consistent on their behaviour too.<br/>
+    Note that this work is not yet finalized, so these classes are not yet documented.<br/>
+    I am using them on a new set of plugins, coding on a as-needed basis, so this will keep evolving over time.
 </p>
 <p>
+    More stuff was added too, though not as substantial, including (in no particular order):
+</p>
+<ul>
+    <li>Allow UI_TYPE = generic, so UI can be opengl or cairo, whichever is available</li>
+    <li>Initial work for VST3 compatible plugins, lots to do.. (nothing to see just yet)</li>
+    <li>Implemented Window::openFileBrowser() fallback for state files, so you always get a file browser</li>
+</ul>
+<p>
+    DPF is now at a point where I want to focus on stability and testing.<br/>
+    Out of all feature requests, only SVG support is deemed important and "breakage-worthy" (if that makes sense).<br/>
+    Once SVG support is in, there will be a feature freeze and then getting everything to work at least as good as before.
+</p>
 
-mod-live-usb mention
-done on free time, even though related to work, might be useful for other projects later on
-- based on archiso
-- single qt tool running fullscreen.
-using linux framebuffer, no x11 or wayland
-- puts cpu in performance mode, has RT kernel, other common tweaks for audio
-- has options for picking soundcard
-- spawns a container matching MOD system, so libs, jack, plugins, everything matches
-- different tabs for ..., main thing in 1st tab. can open terminal with ctrl+alt+t
-- very barebones, intentionally. no internet.
-- not optimized in size yet, problem coming from archlinux
+<h3>One-Knob Series</h3>
+<p>
+    As a way to stress-test the new DPF and also start having some usable
+    <a href="https://github.com/DISTRHO/DPF-Widgets" target="_blank">DPF-Widgets</a>
+    I began a
+    <a href="https://github.com/DISTRHO/OneKnob-Series" target="_blank">new project called One-Knob Series</a>
+    that is going to be slowly brewing for the upcoming months.<br/>
+    I am not taking a rush on this one, its initial purpose is to test DPF but it so happens that it is also a nice, fun and useful project.<br/>
+    The idea here is to make a collection of stupidly simple but well-polished and visually pleasing audio plugins,
+    with as little controls as possible, often just one knob and a few options.<br/>
+    Eventually they will be not just as a test for DPF, but also as a show-case of what it can do, plus give an example of good practices within DPF.
 </p>
 <p>
+    <img src="/screenshots/news/ok-series-2021-07.png" alt="ok-series"/>
+</p>
+<p>
+    The guidelines for the collection are:
+</p>
+<ul>
+    <li>Must have one main control/knob (linear or logarithmic), with one auxiliary slider/knob allowed but discouraged</li>
+    <li>Can have maximum 3 auxiliary options (list of values or toggles)</li>
+    <li>Parameter changes must be click-free</li>
+    <li>GUI must be cleanly scalable (no bitmaps allowed or blurred resources when scaled)</li>
+    <li>GUI must follow the same style</li>
+</ul>
+<p>
+    I have a few ideas for useful one-knob style of plugins, to slowly be put into action throughout the year.<br/>
+    Before you ask, you can already build and use them yes.<br/>
+    I don't recommend doing so right now though.
+</p>
 
-now, into personal notes...
-- a little frustrated, perhaps disappointed, that pushing for donations doesnt work.
-number of subcriptions has been going down, not up.
-while I want to keep doing these things, being realistic, it is really not sustainable.
-all the free time is basically spent on this, but it does not pay off.
-
-it seems that (opinion), in order to make it really pay off, a whole lot more effort would be needed.
-not just the coding, but more regular interaction with community, basically a whole lot of reporting and being present?
-or maybe is not feasible at all, this is all very very niche, so who knows.
-but it is clear that keeping this up is not possible, a lot of life stuff was ignored or put on hold (it was lockdown anyway, so not much of a problem).
-
-so going forward, for the next 6 months (rest of the year), plan is:
-- no more new-feature developments, bugfixes only (the svg and vst3 support in dpf being the exception, I feel like they are essential)
-- will restrict time spent working on floss stuff to whatever is left from main job, no more weekends
-- when bugfixes get boring, try packaging, website updates or writting user manual
+<h3>Other</h3>
+<p>
+    A new Carla release is coming very soon, for the quarterly release pact once again.<br/>
+    It is going to be a bugfix release, I will write more details about it in 13 days for the 15th of July.<br/>
+    JACK2 will very likely see a new version too, pretty minimal but keeping with the spirit of doing regular releases.
+</p>
+<p>
+    Now, into some personal notes...<br/>
+    I am a little frustrated, perhaps disappointed, that pushing for donations doesn't work.<br/>
+    The number of subcriptions has been going down, not up.<br/>
+    While I want to keep doing these kinda of things, being realistic, it is really not sustainable.<br/>
+    All the free time is basically spent on this, but it does not pay off.<br/>
+    Perhaps that should have been expected..<br/>
+    It seems that (in my opinion), in order to make it really pay off, a whole lot more effort would be needed.<br/>
+    Not just with coding, but more regular interaction with community, basically a whole lot of reporting and being present.<br/>
+    The projects that really succeed in such funding pretty much always have someone very "present" and visible within their community.<br/>
+    It is tough, and maybe was just not feasible at all. We know audio development, specially on Linux or open-source, is very very niche.
+</p>
+<p>
+    So it is clear that keeping this up as-is is not possible, a lot of my life stuff was ignored or put on hold (it was lockdown anyway, so not much of a problem).<br/>
+    For the sake of sanity and balance, going forward for the next 6 months (so the rest of the year), plan is now:
+</p>
+<ul>
+    <li>no more new-feature developments, bugfixes only (the svg and vst3 support in dpf being the exception, I feel like they are essential)</li>
+    <li>will restrict time spent working on floss stuff to whatever is left from main job, no more weekends, max 40h/week</li>
+    <li>when bugfixes get boring, will do packaging, website updates or writting user manuals</li>
+</ul>
+<p>
+    And that's all for now.<br/>
+    Obviously I will still keep working on these things, don't worry.<br/>
+    Specially Carla and DPF have my main attention, but will be on a more reasonable pace from now on.<br/>
+    As always, if you appreciate the kind of work I do, please
+    <a href="https://kx.studio/Donations">consider a donation</a>.<br/>
+    Thank you in advance for your support, and stay safe out there! See you soon!<br/>
 </p>
 
 <hr/>
