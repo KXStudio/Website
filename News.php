@@ -9,6 +9,41 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Changes in the extra KXStudio repositories regarding JACK2</span><br/>
+    On <i>2021-07-05</i> by<i> falkTX</i>
+</p>
+<p>
+    This is a small notice to everyone using JACK2 with the extra KXStudio repositories.
+    (those for Ubuntu 18.04 and 20.04)
+</p>
+<p>
+    A change in the JACK2 code has made it so a restart of the server is required after the update.<br/>
+    The technical reason for this is an internal ABI change due to forced-alignment in a few struct/classes.<br/>
+    This change is required for some ARM platforms where non-aligned access results in a bus error.
+</p>
+<p>
+    If you use jackdbus (likely with KXStudio stuff), you will need to actually kill it. (or use the usual <b>cadence-session-start -s</b> command.<br/>
+    If that does not work, good old restart is your friend. :)
+</p>
+<p>
+    This small update brings JACK2 v1.9.19 early, as a way to get a little more testing before official release.<br/>
+    That said release is planned for April 15.
+</p>
+
+<hr/>
+
+<p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (June 2021) and a Little Personal Note</span><br/>
+    On <i>2021-06-31</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, another monthly report about the KXStudio project is here.<br/>
+    A bit late this time, but let's ignore that. :)<br/>
+</p>
+
+cadence-session-start -s
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (June 2021) and a Little Personal Note</span><br/>
     On <i>2021-06-31</i> by<i> falkTX</i>
 </p>
