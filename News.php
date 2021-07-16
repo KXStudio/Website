@@ -9,6 +9,72 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.3.1 has been released</span><br/>
+    On <i>2021-07-16</i> by<i> falkTX</i>
+</p>
+
+<p>
+    This is a bugfix for Carla version v2.3 series, fixing many bug reports and stuff I found along the way.
+</p>
+<p>
+    Carla is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
+    It has some nice features like automation of parameters via MIDI CC (and send output back as MIDI too) and full OSC control.<br/>
+</p>
+
+<h3>Changelog</h3>
+<ul>
+    <li>Add NSLocalNetworkUsageDescription and NSMicrophoneUsageDescription in macOS builds</li>
+    <li>Allow canvas eyecandy for Qt >= 5.12</li>
+    <li>Alternative approach to deal with JACK postponed events (improves PipeWire usage)</li>
+    <li>Implement parameter groups for VST2 plugins</li>
+    <li>Ignore hosts calling Carla-VST effOpen twice (don't print errors)</li>
+    <li>Listen to Windows and X11 plugin UI resize events (without extensions)</li>
+    <li>Make some macOS dialogs modal</li>
+    <li>Remove favorite plugins from list when they fail to load</li>
+    <li>Update JUCE plugin code to new APIs, hook into VST2 for feature parity with native implementation</li>
+    <li>Use new tick_double for JACK transport</li>
+    <li>Use posix_spawn to launch macOS bridges</li>
+    <li>Fix available decimal points on a few dialogs being incorrect</li>
+    <li>Fix bridged plugin UIs appearing behind main carla window on macOS</li>
+    <li>Fix canvas auto-refreshing on exit, potentially leading to crash</li>
+    <li>Fix canvas split/join action</li>
+    <li>Fix carla-vst-wine symbol visibility</li>
+    <li>Fix default rack "skin" for a few plugins</li>
+    <li>Fix initial size for LV2 UIs with no UI resize extension (all OSes)</li>
+    <li>Fix loading state of Windows/macOS VST2 plugins without chunk</li>
+    <li>Fix macOS binaries not being debug/symbol stripped</li>
+    <li>Fix midi-pattern plugin having double notes on transport reposition</li>
+    <li>Fix race condition (and potential crash) around postponed RT events</li>
+    <li>Fix Qt >= 5.10 version checks</li>
+    <li>Fix unused JACK latency callbacks (removed)</li>
+    <li>Fix X11 UIs not having keyboard focus</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla".<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<h3>Notes for users</h3>
+<p>
+    This was already the case for v2.2 and v2.3 but it is worth reiterating:<br/>
+    When using JACK2, the canvas - plugin integrations requires at least JACK2 v1.9.13.<br/>
+    This is because Carla relies on JACK meta-data in order to store information about each plugin/client,
+    and meta-data was only added to JACK2 in version 1.9.13.<br/>
+    Alternatively, you can use JACK1 instead of JACK2, which has meta-data support since a long time.<br/>
+    Note that the <a href="/Repositories:Extras">"extras" KXStudio repository</a> (which provides an updated JACK2) supports both Ubuntu 18.04 and 20.04.<br/>
+    The UbuntuStudio backports PPA also provides updated JACK2 packages.
+</p>
+<p>
+    There are no official Linux binary builds for v2.3.1 at this point.<br/>
+    Carla v2.3.1 is provided in the KXStudio repositories and in many official Linux distribution repositories too anyway.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Changes in the extra KXStudio repositories regarding JACK2</span><br/>
     On <i>2021-07-05</i> by<i> falkTX</i>
 </p>
