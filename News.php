@@ -9,6 +9,109 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (July 2021)</span><br/>
+    On <i>2021-07-31</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, another monthly report about the KXStudio project is here.<br/>
+    First, in case you missed it,
+    <a href="https://kx.studio/News/?action=view&url=carla-231-has-been-released" target="_blank">Carla v2.3.1</a>
+    and
+    <a href="https://jackaudio.org/news/2021/07/16/jack2-v1919-release.html" target="_blank">JACK2 v1.9.19</a>
+    have been released.<br/>
+    A few issues were reported against this latest Carla release (regressions) so expect a v2.3.2 very soon.<br/>
+    Due to travis-ci.org shutting down (and the replacement travis-ci.com being absolutely terrible) the binaries for these releases were not automated.<br/>
+    Which brings me to this month's first topic.
+</p>
+
+<h3>Automated builds &amp; artifacts</h3>
+<p>
+    Since travis became unusable, and manually doing builds everytime is a bit of a pain, I began looking for alternatives.<br/>
+    GitHub Actions seems to be what most developers have run to, but I am not really happy putting yet more stuff into GitHub.<br/>
+    While there are some alternatives, even self-hosting, in the end being pragmatic I threw the towel and just let GitHub handle it.<br/>
+    For projects that already have a presence on GitHub, the integration just makes sense.
+</p>
+<p>
+    One of the issues with travis was the lack of daily/latest build binaries.<br/>
+    While it was possible to setup, it usually required creating a tag or release to upload the binaries into.<br/>
+    GitHub Actions can have "artifacts" associated with any build, with no special setup required from contributors.<br/>
+    This was the main thing that pushed me to just stick with GitHub for this.<br/>
+    If someone external to a project submits a pull-request, there will be automated builds with the proposed changes ready for testing.<br/>
+    The fact that builds start immediately (instead of sometimes having to wait several hours like in other services) is super nice to see.
+</p>
+<p>
+    But are there any benefits to users, you may ask.<br/>
+    Well, take for the example JACK, for which I already added automated builds.<br/>
+    If you open the
+    <a href="https://github.com/jackaudio/jack2/actions" target="_blank">JACK2 GitHub Actions</a>
+    page, there will be macOS and Windows installers for each build going forwards.<br/>
+    When there comes a time where a change requires testing, there is no longer a need to build things manually.
+</p>
+<p>
+    Automated builds via GitHub Actions (and the resulting artifacts) also fit nicely for DPF.<br/>
+    I was able to create a "workflow" file (that is, a file that describes what to build and how) for DPF-based plugins,
+    where it builds and publishes linux-armhf, linux-arm64, linux-x64, macOS (universal), win32 and win64 binaries,
+    all in a single file.<br/>
+    So you can basically take
+    <a href="https://github.com/DISTRHO/DPF-Plugins/blob/master/.github/workflows/build.yml" target="_blank">
+    this file</a>,
+    place it in your own repository, and directly have all those linux, macOS and windows builds right away.<br/>
+    I already have this setup for pretty all of DPF-based plugins under the
+    <a href="https://github.com/DISTRHO/" target="_blank">DISTRHO GitHub organization</a>.<br/>
+    As an experiment, I
+    <a href="https://github.com/michaelwillis/dragonfly-reverb/pull/106" target="_blank">added the same support to dragonfly-reverb project</a>.<br/>
+    So now if you go to its
+    <a href="https://github.com/michaelwillis/dragonfly-reverb/actions" target="_blank">GitHub Actions</a>
+    page and click on the latest commit, you will be able to download and install/use the build artifacts.
+</p>
+<p>
+    This is extremely valuable, as not everyone has a macOS or Windows machine in order to do builds for those.<br/>
+    Or maybe the other way around, someone on macOS or Windows without a Linux machine, etc etc.<br/>
+    I also think of the situation of people wanting to try out a change in the code but don't have the developer tools needed to build the project themselves.<br/>
+    While maybe not a big issue for DPF/Plugin projects (as they tend to be small in size),
+    for things like Carla where build dependencies are a lot more involved, almost no one will have everything needed to make binaries alike the official ones.<br/>
+    With these automated builds, you can basically create a pull request and just enjoy the build - which will follow the same exact conventions as official builds.
+</p>
+<p>
+    Now, this is not in place for Carla just yet, but it is in progress.<br/>
+    Currently DPF (plus the plugins made with them under DISTRHO) and JACK2 have automated builds via GitHub Actions.<br/>
+    More will follow soon.
+</p>
+
+<h3>Packaging</h3>
+<p>
+    There are no updates regarding packages in the KXStudio repositories at this time.<br/>
+    Even though some packaged plugins are out-of-date, yes..<br/>
+</p>
+<p>
+    Thinking of packages, I might just do a whole month focused on them soon.<br/>
+    There has been quite some nice releases of open-source audio plugins lately that would be great to have packaged,
+    but lack of proper time for them is a problem.<br/>
+    As the last details on DPF new release are being resolved, packaging might be the next thing to focus on.
+</p>
+<p>
+    Special attention is needed on JUCE things though, because the LV2 wrapper is still somewhat of a pain for external developers to integrate properly.<br/>
+    (If only JUCE devs made the LV2 wrapper official! errr...)
+</p>
+<p>
+    Anyway, this packaging thing is not so much of news but more of wishes.<br/>
+    Before new JUCE-based plugins get packaged, I want to sort out the LV2 wrapper mess, make it as easy as possible for developers to have official LV2 variants.<br/>
+    Only me building LV2 versions (for the KXStudio repositories) is not something I want to push for anymore,
+    rather it would be best for everyone to have said LV2 versions.
+</p>
+
+<p>&nbsp;</p>
+
+<p>
+    That is all for now.<br/>
+    If you appreciate the kind of work I do, please
+    <a href="https://kx.studio/Donations">consider a donation</a>.<br/>
+    Thank you in advance for your support, and stay safe out there!<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.3.1 has been released</span><br/>
     On <i>2021-07-16</i> by<i> falkTX</i>
 </p>
