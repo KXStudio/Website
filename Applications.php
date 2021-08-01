@@ -25,31 +25,34 @@ include_once("includes/header.php");
     <br/>
 </div>
 
-<table>
-    <tr><td align="center">
-        <p><a href="<?php echo $ROOT; ?>/Applications:Cadence#Interface">
-           <img src="screenshots/thumb/cadence.png" alt="cadence" class="img_thumb_150"/>
-        </a></p>
+<div class="responsive-item thumb-150">
+    <div>
         <p>
-            <img src="images/ico_arch.png" alt=""/>
-            <img src="images/ico_debian.png" alt=""/>
-            <img src="images/ico_ubuntu.png" alt=""/>
-            <img src="images/ico_linux.png" alt=""/>
+            <a href="<?php echo $ROOT; ?>/Applications:Cadence#Interface">
+                <img src="<?php echo $ROOT; ?>/screenshots/thumb/cadence.png" alt="cadence" class="img_thumb_150"/>
+            </a>
         </p>
-    </td><td>
         <p>
-            <img src="images/ico_cadence.png" class="img_text_align" alt=""/>
+            <img src="<?php echo $ROOT; ?>/images/ico_arch.png" alt=""/>
+            <img src="<?php echo $ROOT; ?>/images/ico_debian.png" alt=""/>
+            <img src="<?php echo $ROOT; ?>/images/ico_ubuntu.png" alt=""/>
+            <img src="<?php echo $ROOT; ?>/images/ico_linux.png" alt=""/>
+        </p>
+    </div>
+    <div>
+        <p>
+            <img src="<?php echo $ROOT; ?>/images/ico_cadence.png" class="img_text_align" alt=""/>
             <b><a href="<?php echo $ROOT; ?>/Applications:Cadence">Cadence</a></b><br/>
             Cadence is a set of tools useful for audio production.<br/>
             This is the main app. It performs system checks, manages JACK, calls other tools and make system tweaks.<br/>
             <i>(Most of the tools below are part of the Cadence suite)</i>.
             <br/><br/><br/>
         </p>
-    </td></tr>
-</table>
+    </div>
+</div>
 
-<table>
-    <tr><td align="center">
+<div class="responsive-item thumb-150">
+    <div>
         <p><a href="<?php echo $ROOT; ?>/Applications:Cadence-JackMeter#Interface">
            <img src="screenshots/thumb/cadence-jackmeter.png" alt="cadence-jackmeter" class="img_thumb_150"/></p>
         </a><p>
@@ -60,7 +63,8 @@ include_once("includes/header.php");
        <!-- <img src="images/ico_mac.png" alt=""/> -->
             <img src="images/ico_windows.png" alt=""/>
         </p>
-    </td><td>
+    </div>
+    <div>
         <p>
             <img src="images/ico_cadence.png" class="img_text_align" alt=""/>
             <b><a href="<?php echo $ROOT; ?>/Applications:Cadence-JackMeter">Cadence-JackMeter</a></b><br/>
@@ -68,11 +72,11 @@ include_once("includes/header.php");
             It automatically connects itself to all application JACK output ports that are also connected to the system output.<br/>
             <br/>
         </p>
-    </td></tr>
-</table>
+    </div>
+</div>
 
-<table>
-    <tr><td align="center">
+<div class="responsive-item thumb-150">
+    <div>
         <p><a href="<?php echo $ROOT; ?>/Applications:Cadence-JackSettings#Interface">
            <img src="screenshots/thumb/cadence-jacksettings.png" alt="cadence-jacksettings" class="img_thumb_150"/></p>
         </a><p>
@@ -81,7 +85,8 @@ include_once("includes/header.php");
             <img src="images/ico_ubuntu.png" alt=""/>
             <img src="images/ico_linux.png" alt=""/>
         </p>
-    </td><td>
+    </div>
+    <div>
         <p>
             <img src="images/ico_cadence.png" class="img_text_align" alt=""/>
             <b><a href="<?php echo $ROOT; ?>/Applications:Cadence-JackSettings">Cadence-JackSettings</a></b><br/>
@@ -89,11 +94,11 @@ include_once("includes/header.php");
             It can configure JACK's driver and engine parameters, and it also supports LADISH studios.<br/>
             <br/>
         </p>
-    </td></tr>
-</table>
+    </div>
+</div>
 
-<table>
-    <tr><td align="center">
+<div class="responsive-item thumb-150">
+    <div>
         <p><a href="<?php echo $ROOT; ?>/Applications:Cadence-Logs#Interface">
            <img src="screenshots/thumb/cadence-logs.png" alt="cadence-logs" class="img_thumb_150"/></p>
         </a><p>
@@ -102,7 +107,8 @@ include_once("includes/header.php");
             <img src="images/ico_ubuntu.png" alt=""/>
             <img src="images/ico_linux.png" alt=""/>
         </p>
-    </td><td>
+    </div>
+    <div>
         <p>
             <img src="images/ico_cadence.png" class="img_text_align" alt=""/>
             <b><a href="<?php echo $ROOT; ?>/Applications:Cadence-Logs">Cadence-Logs</a></b><br/>
@@ -110,11 +116,11 @@ include_once("includes/header.php");
             This is very similar to the the 'ladilog' app but here the logs are viewed in a text box, making it easy to browse and extract status messages using copy and paste commands.<br/>
             <br/>
         </p>
-    </td></tr>
-</table>
+    </div>
+</div>
 
-<table>
-    <tr><td align="center">
+<div class="responsive-item thumb-150">
+    <div>
         <p><a href="<?php echo $ROOT; ?>/Applications:Cadence-Render#Interface">
            <img src="screenshots/thumb/cadence-render.png" alt="cadence-render" class="img_thumb_150"/></p>
         </a><p>
@@ -123,7 +129,8 @@ include_once("includes/header.php");
             <img src="images/ico_ubuntu.png" alt=""/>
             <img src="images/ico_linux.png" alt=""/>
         </p>
-    </td><td>
+    </div>
+    <div>
         <p>
             <img src="images/ico_cadence.png" class="img_text_align" alt=""/>
             <b><a href="<?php echo $ROOT; ?>/Applications:Cadence-Render">Cadence-Render</a></b><br/>
@@ -131,11 +138,11 @@ include_once("includes/header.php");
             It supports a vast number of file types and can render in both realtime and freewheel modes.<br/>
             <br/>
         </p>
-    </td></tr>
-</table>
+    </div>
+</div>
 
-<table>
-    <tr><td align="center">
+<div class="responsive-item thumb-150">
+    <div>
         <p><a href="<?php echo $ROOT; ?>/Applications:Cadence-XYController#Interface">
            <img src="screenshots/thumb/cadence-xycontroller.png" alt="cadence-xycontroller" class="img_thumb_150"/></p>
         </a><p>
@@ -146,7 +153,8 @@ include_once("includes/header.php");
        <!-- <img src="images/ico_mac.png" alt=""/> -->
             <img src="images/ico_windows.png" alt=""/>
         </p>
-    </td><td>
+    </div>
+    <div>
         <p>
             <img src="images/ico_cadence.png" class="img_text_align" alt=""/>
             <b><a href="<?php echo $ROOT; ?>/Applications:Cadence-XYController">Cadence-XY Controller</a></b><br/>
@@ -154,11 +162,11 @@ include_once("includes/header.php");
             It can send data through specific channels and has a MIDI Keyboard too.<br/>
             <br/><br/>
         </p>
-    </td></tr>
-</table>
+    </div>
+</div>
 
-<table>
-    <tr><td align="center">
+<div class="responsive-item thumb-150">
+    <div>
         <p><a href="<?php echo $ROOT; ?>/Applications:Catarina#Interface">
            <img src="screenshots/thumb/catarina.png" alt="catarina" class="img_thumb_150"/></p>
         </a><p>
@@ -169,7 +177,8 @@ include_once("includes/header.php");
        <!-- <img src="images/ico_mac.png" alt=""/> -->
             <img src="images/ico_windows.png" alt=""/>
         </p>
-    </td><td>
+    </div>
+    <div>
         <p>
             <img src="images/ico_catarina.png" class="img_text_align" alt=""/>
             <b><a href="<?php echo $ROOT; ?>/Applications:Catarina">Catarina</a></b><br/>
@@ -178,11 +187,11 @@ include_once("includes/header.php");
             You can save &amp; load patchbay configurations too.<br/>
             <br/>
         </p>
-    </td></tr>
-</table>
+    </div>
+</div>
 
-<table>
-    <tr><td align="center">
+<div class="responsive-item thumb-150">
+    <div>
         <p><a href="<?php echo $ROOT; ?>/Applications:Catia#Interface">
            <img src="screenshots/thumb/catia.png" alt="catia" class="img_thumb_150"/></p>
         </a><p>
@@ -193,7 +202,8 @@ include_once("includes/header.php");
        <!-- <img src="images/ico_mac.png" alt=""/> -->
             <img src="images/ico_windows.png" alt=""/>
         </p>
-    </td><td>
+    </div>
+    <div>
         <p>
             <img src="images/ico_catia.png" class="img_text_align" alt=""/>
             <b><a href="<?php echo $ROOT; ?>/Applications:Catia">Catia</a></b><br/>
@@ -204,11 +214,11 @@ include_once("includes/header.php");
             <br/>
             <br/>
         </p>
-    </td></tr>
-</table>
+    </div>
+</div>
 
-<table>
-    <tr><td align="center">
+<div class="responsive-item thumb-150">
+    <div>
         <p><a href="<?php echo $ROOT; ?>/Applications:Claudia#Interface">
            <img src="screenshots/thumb/claudia.png" alt="claudia" class="img_thumb_150"/></p>
         </a><p>
@@ -217,7 +227,8 @@ include_once("includes/header.php");
             <img src="images/ico_ubuntu.png" alt=""/>
             <img src="images/ico_linux.png" alt=""/>
         </p>
-    </td><td>
+    </div>
+    <div>
         <p>
             <img src="images/ico_claudia.png" class="img_text_align" alt=""/>
             <b><a href="<?php echo $ROOT; ?>/Applications:Claudia">Claudia</a></b><br/>
@@ -226,11 +237,11 @@ include_once("includes/header.php");
             It also implements the 'Claudia-Launcher' add-application style for LADISH.<br/>
             <br/>
         </p>
-    </td></tr>
-</table>
+    </div>
+</div>
 
-<table>
-    <tr><td align="center">
+<div class="responsive-item thumb-150">
+    <div>
         <p><a href="<?php echo $ROOT; ?>/Applications:Claudia-Launcher#Interface">
            <img src="screenshots/thumb/claudia-launcher.png" alt="claudia-launcher" class="img_thumb_150"/></p>
         </a><p>
@@ -238,7 +249,8 @@ include_once("includes/header.php");
             <img src="images/ico_debian.png" alt=""/>
             <img src="images/ico_ubuntu.png" alt=""/>
         </p>
-    </td><td>
+    </div>
+    <div>
         <p>
             <img src="images/ico_claudia-launcher.png" class="img_text_align" alt=""/>
             <b><a href="<?php echo $ROOT; ?>/Applications:Claudia-Launcher">Claudia-Launcher</a></b><br/>
@@ -247,11 +259,11 @@ include_once("includes/header.php");
             The content is got through an hardcoded database, created and/or modified to suit the target distribution.<br/>
             <br/>
         </p>
-    </td></tr>
-</table>
+    </div>
+</div>
 
-<table>
-    <tr><td align="center">
+<div class="responsive-item thumb-150">
+    <div>
         <p><a href="<?php echo $ROOT; ?>/Applications:Carla#Interface">
            <img src="screenshots/thumb/carla.png" alt="carla" class="img_thumb_150"/></p>
         </a><p>
@@ -262,7 +274,8 @@ include_once("includes/header.php");
             <img src="images/ico_mac.png" alt=""/>
             <img src="images/ico_windows.png" alt=""/>
         </p>
-    </td><td>
+    </div>
+    <div>
         <p>
             <img src="images/ico_carla.png" class="img_text_align" alt=""/>
             <b><a href="<?php echo $ROOT; ?>/Applications:Carla">Carla</a></b><br/>
@@ -271,11 +284,11 @@ include_once("includes/header.php");
             Currently supports LADSPA, DSSI, LV2, VST2/3 and AU plugin formats, plus GIG, SF2 and SFZ sounds banks.<br/>
             <br/>
         </p>
-    </td></tr>
-</table>
+    </div>
+</div>
 
-<table>
-    <tr><td align="center">
+<div class="responsive-item thumb-150">
+    <div>
         <p><a href="<?php echo $ROOT; ?>/Applications:Carla-Control#Interface">
            <img src="screenshots/thumb/carla.png" alt="carla-control" class="img_thumb_150"/></p>
         </a><p>
@@ -286,15 +299,16 @@ include_once("includes/header.php");
             <img src="images/ico_mac.png" alt=""/>
             <img src="images/ico_windows.png" alt=""/>
         </p>
-    </td><td>
+    </div>
+    <div>
         <p>
             <img src="images/ico_carla.png" class="img_text_align" alt=""/>
             <b><a href="<?php echo $ROOT; ?>/Applications:Carla-Control">Carla-Control</a></b><br/>
             TODO.<br/>
             <br/>
         </p>
-    </td></tr>
-</table>
+    </div>
+</div>
 
 <hr/>
 
@@ -302,22 +316,22 @@ include_once("includes/header.php");
 
 <table>
     <tr>
-        <td align="right"><img src="images/ico_arch.png" alt=""/> - </td>
+        <td align="right"><img src="images/ico_arch.png" alt=""/></td>
         <td>Supports ArchLinux (Available in <a href="https://aur.archlinux.org" class="external text" rel="nofollow" target="_blank">AUR</a>)</td>
     </tr><tr>
-        <td align="right"><img src="images/ico_debian.png" alt=""/> - </td>
+        <td align="right"><img src="images/ico_debian.png" alt=""/></td>
         <td>Supports Debian (Available at the <a href="<?php echo $ROOT; ?>/Repositories#Debian">KXStudio Repositories</a>)</td>
     </tr><tr>
-        <td align="right"><img src="images/ico_ubuntu.png" alt=""/> - </td>
+        <td align="right"><img src="images/ico_ubuntu.png" alt=""/></td>
         <td>Supports Ubuntu (Available at the <a href="<?php echo $ROOT; ?>/Repositories#Ubuntu">KXStudio Repositories</a>)</td>
     </tr><tr>
-        <td align="right"><img src="images/ico_linux.png" alt=""/> - </td>
+        <td align="right"><img src="images/ico_linux.png" alt=""/></td>
         <td>Supports all GNU/Linux systems in general (Binaries and Source Code available in the <a href="<?php echo $ROOT; ?>/Downloads">Downloads</a> page)</td>
     </tr><tr>
-        <td align="right"><img src="images/ico_mac.png" alt=""/> - </td>
+        <td align="right"><img src="images/ico_mac.png" alt=""/></td>
         <td>Supports Mac OS (Package available in the <a href="<?php echo $ROOT; ?>/Downloads">Downloads</a> page)</td>
     </tr><tr>
-        <td align="right"><img src="images/ico_windows.png" alt=""/> - </td>
+        <td align="right"><img src="images/ico_windows.png" alt=""/></td>
         <td>Supports Windows (Binaries available in the <a href="<?php echo $ROOT; ?>/Downloads">Downloads</a> page)</td>
     </tr>
 </table>

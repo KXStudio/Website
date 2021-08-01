@@ -15,11 +15,13 @@ include_once("includes/header.php");
     The KXStudio project is divided into 3 main sections:
 </p>
 
-<div class="responsive-item">
+<div class="responsive-item thumb-128">
     <div>
-        <a href="<?php echo $ROOT; ?>/Applications">
-            <img src="images/cadence.png" alt="cadence.png" class="img_thumb_128"/>
-        </a>
+        <p>
+            <a href="<?php echo $ROOT; ?>/Applications">
+                <img src="images/cadence.png" alt="cadence.png" class="img_thumb_128"/>
+            </a>
+        </p>
     </div>
     <div>
         <p>
@@ -31,11 +33,13 @@ include_once("includes/header.php");
     </div>
 </div>
 
-<div class="responsive-item">
+<div class="responsive-item thumb-128">
     <div>
-        <a href="<?php echo $ROOT; ?>/Plugins">
-            <img src="images/distrho.png" alt="distrho.png" class="img_thumb_128"/>
-        </a>
+        <p>
+            <a href="<?php echo $ROOT; ?>/Plugins">
+                <img src="images/distrho.png" alt="distrho.png" class="img_thumb_128"/>
+            </a>
+        </p>
     </div>
     <div>
         <p>
@@ -46,11 +50,13 @@ include_once("includes/header.php");
     </div>
 </div>
 
-<div class="responsive-item last">
+<div class="responsive-item thumb-128 last">
     <div>
-        <a href="<?php echo $ROOT; ?>/Repositories">
-            <img src="images/repos.png" alt="repos.png" class="img_thumb_128"/>
-        </a>
+        <p>
+            <a href="<?php echo $ROOT; ?>/Repositories">
+                <img src="images/repos.png" alt="repos.png" class="img_thumb_128"/>
+            </a>
+        </p>
     </div>
     <div>
         <p>
