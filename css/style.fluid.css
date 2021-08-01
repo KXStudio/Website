@@ -23,3 +23,43 @@
     padding: 0;
   }
 }
+
+@media only screen and (min-width: 540px) {
+  .responsive-item {
+    margin: 15px;
+  }
+  .responsive-item > div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .responsive-item > div:first-child {
+    width: 160px;
+  }
+  .responsive-item > div:last-child {
+    width: calc(100% - 180px);
+  }
+  .responsive-item > div:first-child > a {
+    display: inline-block;
+    width: 130px;
+    margin: 15px;
+  }
+  .responsive-item > div:first-child > a > img {
+    padding: 1px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .responsive-item {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .responsive-item.last {
+    margin-bottom: 0px;
+  }
+  .responsive-item b {
+    margin: 5px;
+  }
+  .responsive-item p {
+    margin: 0px;
+  }
+}
