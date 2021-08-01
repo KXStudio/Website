@@ -43,6 +43,9 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
 
     <title><?php echo $PAGE_TITLE; ?></title>
 
+    <meta name="theme-color" content="#111111">
+    <meta name="viewport" content="width=device-width">
+
     <link rel="copyright" href="https://creativecommons.org/publicdomain/zero/1.0/" />
     <link rel="stylesheet" href="<?php echo $ROOT; ?>/css/style.fluid.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php echo $ROOT; ?>/css/style.css" type="text/css" media="screen" />
