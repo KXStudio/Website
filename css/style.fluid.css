@@ -31,7 +31,7 @@
   text-align: center;
 }
 
-@media only screen and (min-width: 540px) {
+@media only screen and (min-width: 541px) {
   .responsive-item {
     margin: 15px;
   }

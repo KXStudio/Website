@@ -128,6 +128,31 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
         .repository-package > div:first-child {
             padding-top: calc(0.5em + 0.5px);
         }
+        @media only screen and (max-width: 540px) {
+          .repository-package {
+            flex-direction: column;
+            width: 100%;
+          }
+          .repository-package > div:first-child {
+            padding-top: 0;
+            text-align: center;
+          }
+          .repository-package table {
+            width: 100%;
+            margin-left: 10%;
+          }
+          .repository-package tr > td:first-child {
+            width: 100px;
+          }
+          .img_clickable {
+            margin-bottom: 5px;
+          }
+        }
+        @media only screen and (max-width: 380px) {
+          .repository-package table {
+            margin-left: 5%;
+          }
+        }
         tr {
             vertical-align: top;
         }
