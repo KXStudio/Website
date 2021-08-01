@@ -75,15 +75,15 @@ blockquote{border-left:5px solid #690;color:#ddd;padding:10px;}
 #header{font-size:0.8em;font-weight:bold;margin:0 0 25px;border-bottom:1px solid #222222;}
 #header, #global-navigation li.selected{background: url('../images/gradient-dark-nav_mod.png') repeat-x scroll bottom left;}  /* background:#666 */
 #header, #global-navigation li{height:30px;font-family:sans-serif;}
-#header-content{display:inline;}
-#header ul#global-navigation{list-style:none inside;width:700px;float:left;}
+#header-content{display:flex;justify-content:center;}
+#header ul#global-navigation{list-style:none inside;overflow:hidden;height:30px;}
 #header ul#global-navigation, #global-navigation li{border-color:#222222;border-style:solid;margin:0;}
 #global-navigation li:first-child{border-left-width:1px;}
 #global-navigation li{float:left;border-right-width:1px;}
 #global-navigation li a{color:#F0F0F0;display:block;height:100%;margin:0 15px;line-height:2em;text-decoration:none;width:100%;font-size:1.2em;font-weight:800;}
 #global-navigation li a:hover, #global-navigation li a:focus{color:#6464E6;}
 #global-favorites{float:right !important;border-left-width:1px;}
-#header-logo{float:left;margin-top:2px;margin-right:25px;}
+#header-logo{float:left;margin-top:2px;}
 #header-home{float:left;margin:0 0px;color:#F0F0F0;line-height:2em;font-size:1.2em;text-decoration:none;}
 #header-home:hover, #header-home:focus{color:#6464E6;}
 #header #global-search-form{color:#F0F0F0;float:right;margin-top:4px;position:relative;}

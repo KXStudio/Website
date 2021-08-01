@@ -9,3 +9,17 @@
 @import url("grid.css"); 	/* add fluid 960 Grid System */
 @import url("base.css");	/* Basic CSS - Common styles */
 @import url("base.fluid.fix.css");	/* Fixes for Bento with fluid 960gs */
+
+@media only screen and (max-width: 870px) {
+  #content {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  #header-home {
+    display: none;
+  }
+  #global-navigation {
+    padding: 0;
+  }
+}

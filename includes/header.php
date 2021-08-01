@@ -44,10 +44,10 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
     <title><?php echo $PAGE_TITLE; ?></title>
 
     <link rel="copyright" href="https://creativecommons.org/publicdomain/zero/1.0/" />
-    <link rel="stylesheet" href="/css/style.fluid.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" />
-    <link rel="icon" type="image/png" href="/images/ico_kxstudio.png" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="<?php echo $ROOT; ?>/css/style.fluid.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?php echo $ROOT; ?>/css/style.css" type="text/css" media="screen" />
+    <link rel="icon" type="image/png" href="<?php echo $ROOT; ?>/images/ico_kxstudio.png" />
+    <link rel="shortcut icon" href="<?php echo $ROOT; ?>/favicon.ico" />
 <?php if ($PAGE_TYPE == "DONATIONS") { ?>
     <style type="text/css">
         html > body .liberapay-btn {
@@ -77,7 +77,7 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
         }
     </style>
 <?php } else if ($PAGE_TYPE == "PASTE") { ?>
-    <link rel="stylesheet" href="/paste/kxstudio.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?php echo $ROOT; ?>/paste/kxstudio.css" type="text/css" media="screen" />
     <!-- Special Paste CSS -->
     <style type="text/css">
         html, body {
@@ -183,49 +183,33 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
 
     <!-- Start: Header -->
     <div id="header">
-        <div id="header-content" class="container_12">
-            <a id="header-logo" href="/">
-                <img src="/images/header-logo_mod.png" width="46" height="26" alt="Header Logo"/>
+        <div id="header-content">
+            <a id="header-logo" href="<?php echo $ROOT; ?>/">
+                <img src="<?php echo $ROOT; ?>/images/header-logo_mod.png" width="46" height="26" alt="Header Logo"/>
             </a>
-            <a id="header-home" href="/">Home</a>
+            <a id="header-home" href="<?php echo $ROOT; ?>/">Home</a>
             <ul id="global-navigation">
-                <li id="item-news"><a href="/News">News</a></li>
+                <li id="item-news"><a href="<?php echo $ROOT; ?>/News">News</a></li>
                 <li id="item-soft" class="item-menu">
-                    <a href="/Applications">Software &#9660;</a>
+                    <a href="<?php echo $ROOT; ?>/Applications">Software &#9660;</a>
                     <div class="item-menu-children">
-                        <p><a href="/Applications"><img src="/images/ico_cadence.png" alt=""/> &nbsp; Applications</a></p>
-                        <p><a href="/Plugins"><img src="/images/ico_distrho.png" alt=""/> &nbsp; Plugins</a></p>
+                        <p><a href="<?php echo $ROOT; ?>/Applications"><img src="<?php echo $ROOT; ?>/images/ico_cadence.png" alt=""/> &nbsp; Applications</a></p>
+                        <p><a href="<?php echo $ROOT; ?>/Plugins"><img src="<?php echo $ROOT; ?>/images/ico_distrho.png" alt=""/> &nbsp; Plugins</a></p>
                     </div>
                 </li>
                 <li id="item-repos" class="item-menu">
-                    <a href="/Repositories">Repositories &#9660;</a>
+                    <a href="<?php echo $ROOT; ?>/Repositories">Repositories &#9660;</a>
                     <div class="item-menu-children">
-                        <p><a href="/Repositories">About / How-to</a></p>
-                        <p><a href="/Repositories:Applications">Applications (in Repo)</a></p>
-                        <p><a href="/Repositories:Plugins">Plugins (in Repo)</a></p>
-                        <p><a href="/Repositories:FAQ">FAQ</a></p>
-                        <p><a href="/Repositories:Extras">Extras</a></p>
+                        <p><a href="<?php echo $ROOT; ?>/Repositories">About / How-to</a></p>
+                        <p><a href="<?php echo $ROOT; ?>/Repositories:Applications">Applications (in Repo)</a></p>
+                        <p><a href="<?php echo $ROOT; ?>/Repositories:Plugins">Plugins (in Repo)</a></p>
+                        <p><a href="<?php echo $ROOT; ?>/Repositories:FAQ">FAQ</a></p>
+                        <p><a href="<?php echo $ROOT; ?>/Repositories:Extras">Extras</a></p>
                     </div>
                 </li>
-                <li id="item-community" class="item-menu">
-                    <a href="/Documentation">Community &#9660;</a>
-                    <div class="item-menu-children">
-                        <p>
-                            <a href="https://chat.kx.studio/" class="external" rel="nofollow" target="_blank">
-                                <img src="/images/ico_rocketchat.png" width="16px" height="16px" alt=""/> &nbsp; Rocket Chat
-                            </a>
-                        </p>
-                        <p>
-                            <a href="https://soundcloud.com/search/sounds?q=kxstudio" class="external" rel="nofollow" target="_blank">
-                                <img src="/images/ico_soundcloud.png" width="16px" height="16px" alt=""/> &nbsp; Songs
-                            </a>
-                        </p>
-                    </div>
-                </li>
-                <li id="item-documentation"><a href="/Documentation">Documentation</a></li>
-                <li id="item-donate"><a href="/Donations">Donations</a></li>
-                <li id="item-downloads"><a href="/Downloads">Downloads</a></li>
-                <li id="item-paste"><a href="/Paste">Paste</a></li>
+                <li id="item-documentation"><a href="<?php echo $ROOT; ?>/Documentation">Documentation</a></li>
+                <li id="item-downloads"><a href="<?php echo $ROOT; ?>/Downloads">Downloads</a></li>
+                <li id="item-donate"><a href="<?php echo $ROOT; ?>/Donations">Donations</a></li>
             </ul>
         </div>
     </div>
@@ -242,7 +226,7 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
 
     <div id="subheader" class="container_16">
         <div id="breadcrump" class="grid_12 alpha">
-            <a href="/" title="Home"><img src="/images/home_grey.png" width="16" height="16" alt="Home" /> KXStudio </a>
+            <a href="<?php echo $ROOT; ?>/" title="Home"><img src="<?php echo $ROOT; ?>/images/home_grey.png" width="16" height="16" alt="Home" /> KXStudio </a>
 <?php       for ($i = 0; $i < count($PAGE_SOURCE_1); $i++) { ?>
                 &gt; <a href="<?php echo $ROOT . $PAGE_SOURCE_1[$i]; ?>"><?php echo $PAGE_SOURCE_2[$i]; ?></a>
 <?php       } ?>
@@ -268,10 +252,10 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
                     <li><a href="#SourceCode">Source Code</a></li>
                     <li><a href="#Artwork">Artwork</a></li>
 <?php } else if ($PAGE_TYPE == "PASTE") { ?>
-                    <li><a href="/Paste" title="Create new paste">New Paste</a></li>
+                    <li><a href="<?php echo $ROOT; ?>/Paste" title="Create new paste">New Paste</a></li>
     <?php if ($show_paste && ! $is_error) { ?>
-                    <li><a href="/Paste/raw/<?php echo $paste_id; ?>" target="blank" title="View RAW">View RAW</a></li>
-                    <li><a href="/Paste/download.php?id=<?php echo $paste_id; ?>" title="Download">Download</a></li>
+                    <li><a href="<?php echo $ROOT; ?>/Paste/raw/<?php echo $paste_id; ?>" target="blank" title="View RAW">View RAW</a></li>
+                    <li><a href="<?php echo $ROOT; ?>/Paste/download.php?id=<?php echo $paste_id; ?>" title="Download">Download</a></li>
     <?php } ?>
 <?php } ?>
                 </ul>
