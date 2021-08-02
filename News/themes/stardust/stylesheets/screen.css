@@ -10,3 +10,4 @@
 @import url("../../../../css/base.css");	/* Basic CSS - Common styles */
 @import url("../../../../css/base.fluid.fix.css");	/* Fixes for Bento with fluid 960gs */
 @import url("../../../../css/style.css");
+@import url("../../../../css/style.fluid.css");
