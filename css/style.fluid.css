@@ -10,6 +10,17 @@
 @import url("base.css");	/* Basic CSS - Common styles */
 @import url("base.fluid.fix.css");	/* Fixes for Bento with fluid 960gs */
 
+.container_16 {
+  max-width: 1600px;
+  margin-left: calc(50% - 800px);
+}
+
+@media only screen and (max-width: 1750px) {
+  .container_16 {
+    margin-left: 4%;
+  }
+}
+
 @media only screen and (max-width: 870px) {
   #content {
     width: 96%;

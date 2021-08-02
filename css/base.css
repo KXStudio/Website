@@ -80,8 +80,13 @@ blockquote{border-left:5px solid #690;color:#ddd;padding:10px;}
 #header ul#global-navigation, #global-navigation li{border-color:#222222;border-style:solid;margin:0;}
 #global-navigation li:first-child{border-left-width:1px;}
 #global-navigation li{float:left;border-right-width:1px;}
-#global-navigation li a{color:#F0F0F0;display:block;height:100%;margin:0 15px;line-height:2em;text-decoration:none;width:100%;font-size:1.2em;font-weight:800;}
-#global-navigation li a:hover, #global-navigation li a:focus{color:#6464E6;}
+#global-navigation li a,
+#global-navigation li span{color:#F0F0F0;display:block;height:100%;margin:0;padding:0 15px;line-height:2em;text-decoration:none;width:100%;font-size:1.2em;font-weight:800;}
+#global-navigation li a:hover,
+#global-navigation li a:focus,
+#global-navigation li span:hover,
+#global-navigation li span:focus{color:#6464E6;}
+#global-navigation li span{cursor:pointer;}
 #global-favorites{float:right !important;border-left-width:1px;}
 #header-logo{float:left;margin-top:2px;}
 #header-home{float:left;margin:0 0px;color:#F0F0F0;line-height:2em;font-size:1.2em;text-decoration:none;}

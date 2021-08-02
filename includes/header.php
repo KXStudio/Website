@@ -32,6 +32,11 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
         }
     }
 }
+
+function isMobile() {
+    return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i",
+                      $_SERVER["HTTP_USER_AGENT"]);
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
@@ -219,14 +224,22 @@ if (false && $PAGE_TYPE != "PASTE" && $PAGE_TYPE != "DONATIONS" && $PAGE_TYPE !=
             <ul id="global-navigation">
                 <li id="item-news"><a href="<?php echo $ROOT; ?>/News">News</a></li>
                 <li id="item-soft" class="item-menu">
+                    <?php if (isMobile()) { ?>
+                    <span>Software &#9660;</span>
+                    <?php } else { ?>
                     <a href="<?php echo $ROOT; ?>/Applications">Software &#9660;</a>
+                    <?php } ?>
                     <div class="item-menu-children">
                         <p><a href="<?php echo $ROOT; ?>/Applications"><img src="<?php echo $ROOT; ?>/images/ico_cadence.png" alt=""/> &nbsp; Applications</a></p>
                         <p><a href="<?php echo $ROOT; ?>/Plugins"><img src="<?php echo $ROOT; ?>/images/ico_distrho.png" alt=""/> &nbsp; Plugins</a></p>
                     </div>
                 </li>
                 <li id="item-repos" class="item-menu">
+                    <?php if (isMobile()) { ?>
+                    <span>Repositories &#9660;</span>
+                    <?php } else { ?>
                     <a href="<?php echo $ROOT; ?>/Repositories">Repositories &#9660;</a>
+                    <?php } ?>
                     <div class="item-menu-children">
                         <p><a href="<?php echo $ROOT; ?>/Repositories">About / How-to</a></p>
                         <p><a href="<?php echo $ROOT; ?>/Repositories:Applications">Applications (in Repo)</a></p>
