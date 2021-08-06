@@ -66,7 +66,7 @@ function isMobile() {
         }
         #board-colors p,
         #board-colors ul {
-            line-height: 100%;
+            line-height: unset;
             margin: 0;
             padding: 0;
         }
