@@ -248,6 +248,7 @@ function isMobile() {
                         <p><a href="<?php echo $ROOT; ?>/Repositories:Extras">Extras</a></p>
                     </div>
                 </li>
+                <li id="item-board"><a href="<?php echo $ROOT; ?>/Board">Board</a></li>
                 <li id="item-documentation"><a href="<?php echo $ROOT; ?>/Documentation">Documentation</a></li>
                 <li id="item-downloads"><a href="<?php echo $ROOT; ?>/Downloads">Downloads</a></li>
                 <li id="item-donate"><a href="<?php echo $ROOT; ?>/Donations">Donations</a></li>
