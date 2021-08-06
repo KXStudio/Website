@@ -59,16 +59,10 @@ function isMobile() {
 <?php if ($PAGE_TYPE == "BOARD") { ?>
     <!-- Special Board CSS -->
     <style type="text/css">
-        .omega {
-            position: relative;
-        }
         #board-colors {
-            float: right;
             display: flex;
             flex-direction: row;
-            position: absolute;
-            top: 0px;
-            right: 0px;
+            margin-bottom: 20px;
         }
         #board-colors p,
         #board-colors ul {
@@ -80,8 +74,12 @@ function isMobile() {
         #board-colors span {
             margin: auto;
         }
+        #board-colors p {
+            margin-left: 8px;
+        }
         #board-colors ul {
             display: inline-flex;
+            flex: 1;
             list-style: none inside;
             margin-right: 8px;
             overflow: hidden;
@@ -95,6 +93,22 @@ function isMobile() {
             width: 16px;
             height: 16px;
             margin: 4px;
+        }
+        @media only screen and (max-width: 1000px) {
+            #board-colors p {
+                display: none;
+            }
+        }
+        @media only screen and (min-width: 1200px) {
+            .omega {
+                position: relative;
+            }
+            #board-colors {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                margin-bottom: 0px;
+            }
         }
     </style>
 <?php } else if ($PAGE_TYPE == "DONATIONS") { ?>
