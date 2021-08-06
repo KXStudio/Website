@@ -9,6 +9,7 @@ include_once("includes/header.php");
 <script type="text/javascript">
 function resizeIframe()
 {
+    document.domain = board.kx.studio;
     var board = document.getElementById("iframe-board");
     var height = board.contentWindow.document.body.scrollHeight;
     board.style.height = height;
