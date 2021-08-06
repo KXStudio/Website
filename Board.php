@@ -1,10 +1,48 @@
 <?php
 $PAGE_TITLE    = "KXStudio : Board";
-$PAGE_TYPE     = "KXSTUDIO";
+$PAGE_TYPE     = "BOARD";
 $PAGE_SOURCE_1 = ARRAY("/Board");
 $PAGE_SOURCE_2 = ARRAY("Board");
 include_once("includes/header.php");
 ?>
+
+<div id="board-colors">
+    <p>
+        <b>Color mapping:</b>
+    </p>
+    <ul>
+        <li class="board-color">
+            <div style="background-color:rgba(255, 187, 187, 0.9);border:1px solid rgba(255, 151, 151, 0.2);">
+            </div>
+            <span>Bug fixing</span>
+        </li>
+        <li class="board-color">
+            <div style="background-color:rgb(255,172,98);border:1px solid rgb(255,172,98);">
+            </div>
+            <span>Write up / Releases</span>
+        </li>
+        <li class="board-color">
+            <div style="background-color:rgba(245, 247, 196, 0.9);border:1px solid rgba(223, 227, 45, 0.2);">
+            </div>
+            <span>Packaging</span>
+        </li>
+        <li class="board-color">
+            <div style="background-color:rgba(189, 244, 203, 0.9);border:1px solid rgba(74, 227, 113, 0.2);">
+            </div>
+            <span>Easy or quick tasks</span>
+        </li>
+        <li class="board-color">
+            <div style="background-color:rgba(219, 235, 255, 0.9);border:1px solid rgba(168, 207, 255, 0.2);">
+            </div>
+            <span>Regular tasks</span>
+        </li>
+        <li class="board-color">
+            <div style="background-color:rgba(223, 176, 255, 0.9);border:1px solid rgba(205, 133, 254, 0.2);">
+            </div>
+            <span>New projects / long tasks</span>
+        </li>
+    </ul>
+</div>
 
 <script type="text/javascript">
 function resizeIframe() {

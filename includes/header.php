@@ -56,7 +56,48 @@ function isMobile() {
     <link rel="stylesheet" href="<?php echo $ROOT; ?>/css/style.css" type="text/css" media="screen" />
     <link rel="icon" type="image/png" href="<?php echo $ROOT; ?>/images/ico_kxstudio.png" />
     <link rel="shortcut icon" href="<?php echo $ROOT; ?>/favicon.ico" />
-<?php if ($PAGE_TYPE == "DONATIONS") { ?>
+<?php if ($PAGE_TYPE == "BOARD") { ?>
+    <!-- Special Board CSS -->
+    <style type="text/css">
+        .omega {
+            position: relative;
+        }
+        #board-colors {
+            float: right;
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+        #board-colors p,
+        #board-colors ul {
+            line-height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #board-colors p,
+        #board-colors span {
+            margin: auto;
+        }
+        #board-colors ul {
+            display: inline-flex;
+            list-style: none inside;
+            margin-right: 8px;
+            overflow: hidden;
+        }
+        #board-colors li {
+            display: inline-flex;
+            margin: 0px 4px;
+        }
+        .board-color > div {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin: 4px;
+        }
+    </style>
+<?php } else if ($PAGE_TYPE == "DONATIONS") { ?>
     <style type="text/css">
         html > body .liberapay-btn {
             background-color: #f6c915;
@@ -282,7 +323,7 @@ function isMobile() {
             <div class="box-header header-tabs">
                 <ul>
                     <li><a href="#Top">Top</a></li>
-<?php if ($PAGE_TYPE == "APPLICATION") { ?>
+<?php /*  */ if ($PAGE_TYPE == "APPLICATION") { ?>
                     <li><a href="#Interface">Interface</a></li>
                     <li><a href="#Usage">Usage</a></li>
                     <li><a href="#Download">Download</a></li>
@@ -305,7 +346,7 @@ function isMobile() {
             <div id="contentSub"></div>
             <!-- End: Box header -->
             <div class="alpha omega paste_canvas_area">
-<?php if ($PAGE_TYPE == "HOME") { ?>
+<?php /*  */ if ($PAGE_TYPE == "HOME") { ?>
                 <h1><span class="mw-headline"> About KXStudio </span></h1>
 <?php } else if ($PAGE_TYPE == "NEWS") { ?>
                 <div style="float: right; padding-right: 16px;">
