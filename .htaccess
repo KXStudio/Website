@@ -14,6 +14,7 @@ Redirect 301 /carla                https://kx.studio/Applications:Carla
 Redirect 301 /carla-control        https://kx.studio/Applications:Carla-Control
 
 Redirect 301 /applications  https://kx.studio/Applications
+Redirect 301 /board         https://kx.studio/Board
 Redirect 301 /documentation https://kx.studio/Documentation
 Redirect 301 /donations     https://kx.studio/Donations
 Redirect 301 /downloads     https://kx.studio/Downloads

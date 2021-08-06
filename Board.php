@@ -7,12 +7,17 @@ include_once("includes/header.php");
 ?>
 
 <script type="text/javascript">
-function resizeIframe()
-{
-    document.domain = board.kx.studio;
+function resizeIframe() {
     var board = document.getElementById("iframe-board");
-    var height = board.contentWindow.document.body.scrollHeight;
-    board.style.height = height;
+
+    window.addEventListener("message", function(event) {
+        if (event.origin !== "https://board.kx.studio")
+            return;
+        var height = parseInt(event.data);
+        board.style.height = height + "px";
+    }, false);
+
+    board.contentWindow.postMessage("hi", "https://board.kx.studio/");
 }
 </script>
 <noscript>
@@ -25,7 +30,7 @@ function resizeIframe()
 <iframe
     id="iframe-board"
     src="https://board.kx.studio/public/board/f062a2b1cf34806109a3936a9373b8f044f0e0ab4ede4f1e2bf76195af27"
-    style="display:block;width:100%;min-height:300px;height:calc(100% - 30px);border:none;padding:0;margin:0;"
+    style="display:block;width:100%;min-height:300px;height:100%;border:none;padding:0;margin:0;"
     onload="resizeIframe()"
 />
 
