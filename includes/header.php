@@ -111,6 +111,20 @@ function isMobile() {
             }
         }
     </style>
+<?php } else if ($PAGE_TYPE == "DEVELOPMENT") { ?>
+    <!-- Special Development CSS -->
+    <style type="text/css">
+        h3 > a,
+        b > a {
+            color: #F0F0F0 !important;
+        }
+        p {
+            margin: 0.25em 15px !important;
+        }
+        pre {
+            font-size: 1.25em !important;
+        }
+    </style>
 <?php } else if ($PAGE_TYPE == "DONATIONS") { ?>
     <style type="text/css">
         html > body .liberapay-btn {
