@@ -114,15 +114,27 @@ function isMobile() {
 <?php } else if ($PAGE_TYPE == "DEVELOPMENT") { ?>
     <!-- Special Development CSS -->
     <style type="text/css">
-        h3 > a,
-        b > a {
+        h3 > a {
             color: #F0F0F0 !important;
         }
-        p {
+        .changeset p {
             margin: 0.25em 15px !important;
+            font-weight: lighter;
         }
-        pre {
-            font-size: 1.25em !important;
+        .changeset a {
+            font-weight: normal;
+        }
+        .changeset b {
+            font-weight: bold;
+        }
+        .changeset b > a {
+            color: #F0F0F0 !important;
+        }
+        .changeset pre {
+            font-size: 1.4em !important;
+            background-color: unset;
+            border: none;
+            margin: 0.5em 1em;
         }
     </style>
 <?php } else if ($PAGE_TYPE == "DONATIONS") { ?>
@@ -318,6 +330,7 @@ function isMobile() {
                     </div>
                 </li>
                 <li id="item-board"><a href="<?php echo $ROOT; ?>/Board">Board</a></li>
+                <li id="item-development"><a href="<?php echo $ROOT; ?>/Development">Development</a></li>
                 <li id="item-documentation"><a href="<?php echo $ROOT; ?>/Documentation">Documentation</a></li>
                 <li id="item-downloads"><a href="<?php echo $ROOT; ?>/Downloads">Downloads</a></li>
                 <li id="item-donate"><a href="<?php echo $ROOT; ?>/Donations">Donations</a></li>

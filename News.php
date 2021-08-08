@@ -9,6 +9,41 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.3.2 has been released</span><br/>
+    On <i>2021-08-08</i> by<i> falkTX</i>
+</p>
+
+<p>
+    This is a bugfix for Carla version v2.3 series, mostly fixing a few regressions with the previous release.
+</p>
+
+<h3>Changelog</h3>
+<ul>
+    <li>Add 32x32 icon</li>
+    <li>Do not show --gdb in usage/help when not installed system-wide</li>
+    <li>Fix default SF2 search path</li>
+    <li>Fix keyboard focus for bridges on macOS</li>
+    <li>Fix X11-UIs related regressions in v2.3.1</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla".<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+&nbsp;
+
+<p>
+    As always, if you appreciate the kind of work I do, please
+    <a href="https://kx.studio/Donations">consider a donation</a>.<br/>
+    Thank you in advance for your support, and stay safe out there!<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (July 2021)</span><br/>
     On <i>2021-07-31</i> by<i> falkTX</i>
 </p>

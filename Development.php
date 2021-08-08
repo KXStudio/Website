@@ -16,6 +16,13 @@ function print_feed_title($title) {
     $title = strstr($title, ':', true);
     echo strrchr($title, ' ');
 }
+function print_content($content) {
+    $content2 = strstr($content, 'Signed-off-by', true);
+    if (! $content2) {
+        $content2 = $content;
+    }
+    echo trim($content2);
+}
 
 $feed = new SimplePie();
 $feed->set_cache_location("/home/falktx/bin/simplepie/cache");
@@ -68,7 +75,7 @@ foreach ($feed->get_items() as $item):
         if ($lastdate != null) { ?>  <hr/> <?php }
         $lastdate = $date;
 ?>
-<h3 id="<?php echo $date ?>"># <a href="#<?php echo $date ?>"><?php echo $item->get_gmdate('F j, Y') ?></a></h3>
+<h3 id="<?php echo $date ?>">&sect; <a href="#<?php echo $date ?>"><?php echo $item->get_gmdate('F j, Y') ?></a></h3>
 <?php
     }
 ?>
@@ -85,12 +92,7 @@ foreach ($feed->get_items() as $item):
         <!-- <?php echo $item->get_title(); ?></a> -->
         in
         <b><?php print_feed_title($item->get_feed()->get_title()); ?></b>
-<?php
-        $content = $item->get_content(true);
-        if ($content) { ?>
-        <br/>
-        <?php echo $content; 
-        } ?>
+        <div class="box box-description"><?php print_content($item->get_content(true)); ?></div>
     </p>
 </div>
 
