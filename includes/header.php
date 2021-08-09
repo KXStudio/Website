@@ -79,6 +79,7 @@ function isMobile() {
         }
         #board-colors ul {
             display: inline-flex;
+            flex-wrap: wrap;
             flex: 1;
             list-style: none inside;
             margin-right: 8px;
