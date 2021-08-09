@@ -62,6 +62,11 @@ $feed->set_feed_url(ARRAY(
     'https://github.com/falkTX/protrekkr/commits/master.atom',
     'https://github.com/jackaudio/jack2/commits/master.atom',
     'https://github.com/jackaudio/jack2-releases/commits/master.atom',
+    'https://github.com/KXStudio/Artwork/commits/master.atom',
+    'https://github.com/KXStudio/KXStudio/commits/master.atom',
+    'https://github.com/KXStudio/LV2-Extensions/commits/master.atom',
+    'https://github.com/KXStudio/Repository/commits/master.atom',
+    'https://github.com/KXStudio/Website/commits/master.atom',
 ));
 $feed->init(); // or die($feed->error());
 $feed->handle_content_type();
