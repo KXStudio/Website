@@ -305,7 +305,7 @@ function isMobile() {
             <a id="header-home" href="<?php echo $ROOT; ?>/">Home</a>
             <ul id="global-navigation">
                 <li id="item-news"><a href="<?php echo $ROOT; ?>/News">News</a></li>
-                <li id="item-soft" class="item-menu">
+                <li id="item-soft" class="item-menu<?php if ($PAGE_SOURCE_1[0] == "/Applications" || $PAGE_SOURCE_1[0] == "/Plugins") { ?> selected<?php } ?>">
                     <?php if (isMobile()) { ?>
                     <span>Software &#9660;</span>
                     <?php } else { ?>
@@ -316,7 +316,7 @@ function isMobile() {
                         <p><a href="<?php echo $ROOT; ?>/Plugins"><img src="<?php echo $ROOT; ?>/images/ico_distrho.png" alt=""/> &nbsp; Plugins</a></p>
                     </div>
                 </li>
-                <li id="item-repos" class="item-menu">
+                <li id="item-repos" class="item-menu<?php if ($PAGE_SOURCE_1[0] == "/Repositories") { ?> selected<?php } ?>">
                     <?php if (isMobile()) { ?>
                     <span>Repositories &#9660;</span>
                     <?php } else { ?>
@@ -330,11 +330,21 @@ function isMobile() {
                         <p><a href="<?php echo $ROOT; ?>/Repositories:Extras">Extras</a></p>
                     </div>
                 </li>
-                <li id="item-board"><a href="<?php echo $ROOT; ?>/Board">Board</a></li>
-                <li id="item-development"><a href="<?php echo $ROOT; ?>/Development">Development</a></li>
-                <li id="item-documentation"><a href="<?php echo $ROOT; ?>/Documentation">Documentation</a></li>
-                <li id="item-downloads"><a href="<?php echo $ROOT; ?>/Downloads">Downloads</a></li>
-                <li id="item-donate"><a href="<?php echo $ROOT; ?>/Donations">Donations</a></li>
+                <li id="item-board" class="<?php if ($PAGE_SOURCE_1[0] == "/Board") { ?>selected<?php } ?>">
+                    <a href="<?php echo $ROOT; ?>/Board">Board</a>
+                </li>
+                <li id="item-development" class="<?php if ($PAGE_SOURCE_1[0] == "/Development") { ?>selected<?php } ?>">
+                    <a href="<?php echo $ROOT; ?>/Development">Development</a>
+                </li>
+                <li id="item-documentation" class="<?php if ($PAGE_SOURCE_1[0] == "/Documentation") { ?>selected<?php } ?>">
+                    <a href="<?php echo $ROOT; ?>/Documentation">Documentation</a>
+                </li>
+                <li id="item-downloads" class="<?php if ($PAGE_SOURCE_1[0] == "/Downloads") { ?>selected<?php } ?>">
+                    <a href="<?php echo $ROOT; ?>/Downloads">Downloads</a>
+                </li>
+                <li id="item-donate" class="<?php if ($PAGE_SOURCE_1[0] == "/Donations") { ?>selected<?php } ?>">
+                    <a href="<?php echo $ROOT; ?>/Donations">Donations</a>
+                </li>
             </ul>
         </div>
     </div>
