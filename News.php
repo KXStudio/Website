@@ -9,6 +9,107 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla Plugin Host v2.4.0 is here</span><br/>
+    On <i>2021-08-20</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, this is the announcement of the 2.4.0 version of the Carla Plugin Host.<br/>
+    If you do not know, Carla is a fully-featured cross-platform audio plugin host, which can also run as a plugin.
+</p>
+<p>
+    This release was initially meant to be 2.3.3 but there are some small new features so treating it as bugfix would be misleading.<br/>
+    Semantically-speaking, new stuff means new version, so 2.4 it is.<br/>
+    I was going to wait a bit more until a release, but it is Ubuntu feature freeze time, so got to go with what is available now in order to make it.<br/>
+    Anyway, let's go through the (small) release highlights.
+</p>
+
+<table><tr><td width="40%">
+<a href="/screenshots/news/carla-2.4_classic-skin.png">
+    <img src="/screenshots/news/carla-2.4_classic-skin.png" style="max-width:100%;height:auto;" alt="audiofile"/>
+</a>
+</td><td width="60%">
+<h3>Option to use classic skin by default</h3>
+<p>
+    Who doesn't like a little bit of nostalgia?<br/>
+    Reminiscent of its v1.x days, the "classic" rack skin can now be made into the default.<br/>
+    So now you can be on latest Carla with all the new stuff, but still feel retro. :D
+</p>
+<p>
+    The dry/wet and volume controls are only accessible through the built-in plugin edit dialog,<br/>
+    but in return the whole rack takes less screen space.
+</p>
+</td></tr></table>
+
+<br/>
+
+<table><tr><td width="40%">
+<a href="/screenshots/news/carla-2.4_lv2-gtk-windows.png">
+    <img src="/screenshots/news/carla-2.4_lv2-gtk-windows.png" style="max-width:100%;height:auto;" alt="lv2-gtk-windows"/>
+</a>
+</td><td width="60%">
+<h3>LV2 Gtk UIs on any system</h3>
+<p>
+    After some changes on how Carla handles its Gtk UI bridges, it is now possible to build and use them on any system.<br/>
+    Behind the scenes instead of directly linking against Gtk libraries,
+    the Carla Gtk UI bridge will open the Gtk library/DLL to find the needed symbols in order to get a working Gtk setup.<br/>
+    This doesn't change the behaviour on Linux, but allows to use Gtk-based UIs on systems like Windows and macOS.<br/>
+    Its usefulness is a bit questionable, my main reason to change this was to be able to adapt to new Gtk versions more easily, but it has nice side effects.
+</p>
+<p>
+    Currently there are no LV2 plugins released on macOS or Windows that make use of such a UI, but could change soon via
+    <a href="https://github.com/DISTRHO/PawPaw" target="_blank">PawPaw</a>.<br/>
+    I have been doing some tests and at least amsynth and Invada are possible to get working with their full UIs.<br/>
+    Later on I will if and how it could be possible to package such plugins with their UIs.
+</p>
+</td></tr></table>
+
+<br/>
+
+<h3>Full changelog</h3>
+<ul>
+    <li>Add option to use classic skin by default</li>
+    <li>Add support for lv2 ui gtk bridges on any system</li>
+    <li>Set display scale factor for carla-bridge-*/carla-single standalone usage (on macOS and X11 systems)</li>
+    <li>Fix Linux VST3 plugin GUIs crash on close</li>
+    <li>Fix build under msys2 (will not force static binaries)</li>
+    <li>Fix keyboard focus for bridges on macOS (2nd attempt)</li>
+    <li>Fix canvas icon in settings to be high-dpi compatible</li>
+    <li>Fix wrong scale factor of plugin GUIs under macOS</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla".<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<h3>Notes for users</h3>
+<p>
+    This was already the case for v2.2 and v2.3 but it is worth reiterating:<br/>
+    When using JACK2, the canvas - plugin integrations requires at least JACK2 v1.9.13.<br/>
+    This is because Carla relies on JACK meta-data in order to store information about each plugin/client,
+    and meta-data was only added to JACK2 in version 1.9.13.<br/>
+    Alternatively, you can use JACK1 instead of JACK2, which has meta-data support since a long time.<br/>
+    Note that the <a href="/Repositories:Extras">"extras" KXStudio repository</a> (which provides an updated JACK2) supports both Ubuntu 18.04 and 20.04.<br/>
+    The UbuntuStudio backports PPA also provides updated JACK2 packages.
+</p>
+<p>
+    There are no official Linux binary builds for v2.4 at this point.<br/>
+    Carla v2.4 is provided in the KXStudio repositories and in many official Linux distribution repositories too anyway.
+</p>
+
+&nbsp;
+
+<p>
+    As always, if you appreciate the kind of work I do, please
+    <a href="https://kx.studio/Donations">consider a donation</a>.<br/>
+    Thank you in advance for your support, and stay safe out there!<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.3.2 has been released</span><br/>
     On <i>2021-08-08</i> by<i> falkTX</i>
 </p>
