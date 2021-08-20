@@ -59,7 +59,7 @@ include_once("includes/header.php");
     Currently there are no LV2 plugins released on macOS or Windows that make use of such a UI, but could change soon via
     <a href="https://github.com/DISTRHO/PawPaw" target="_blank">PawPaw</a>.<br/>
     I have been doing some tests and at least amsynth and Invada are possible to get working with their full UIs.<br/>
-    Later on I will if and how it could be possible to package such plugins with their UIs.
+    Later on I will see if and how it could be possible to package such plugins with their UIs.
 </p>
 </td></tr></table>
 
