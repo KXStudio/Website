@@ -20,7 +20,7 @@ include_once("includes/header.php");
     <a href="https://kx.studio/News/?action=view&url=carla-plugin-host-v240-is-here" target="_blank">two Carla releases</a>.<br/>
     Mostly bugfixes as expected, the new stuff was all very minor compared to past releases.<br/>
     A few additonal things were added/fixed in Carla already since then, but all still very minor.<br/>
-    Whatever is ready by next release day (October 15) will be what gets in next, just to get a nice page of releases going.
+    Whatever is ready by next release day (October 15) will be what gets in next, just to get a nice pace of releases going.
 </p>
 
 <h3>More (final?) DPF updates</h3>
@@ -56,7 +56,7 @@ include_once("includes/header.php");
 
 <h4>sofd improvements</h4>
 <p>
-    Some care given to the
+    Some care was given to the
     <a href="https://github.com/x42/sofd/" target="_blank">sofd module</a>
     used by DPF as fallback X11 file browser dialog.<br/>
     It serves us well enough because it generally works fine, but never looked that great in my opinion..<br/>
