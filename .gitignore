@@ -7,3 +7,4 @@ repo/*
 !repo/screenshots/
 !repo/generate-repo-page.sh
 _insert-value.sh
+.DS_Store

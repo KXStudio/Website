@@ -9,6 +9,93 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (August 2021)</span><br/>
+    On <i>2021-08-31</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, another one of those monthly reports about the KXStudio project is here.<br/>
+    This month we had
+    <a href="https://kx.studio/News/?action=view&url=carla-232-has-been-released" target="_blank">not one</a>
+    but
+    <a href="https://kx.studio/News/?action=view&url=carla-plugin-host-v240-is-here" target="_blank">two Carla releases</a>.<br/>
+    Mostly bugfixes as expected, the new stuff was all very minor compared to past releases.<br/>
+    A few additonal things were added/fixed in Carla already since then, but all still very minor.<br/>
+    Whatever things are ready by next release day (October 15) will be what gets in next, just to get a nice page of releases going.
+</p>
+
+<h3>More (final?) DPF updates</h3>
+<p>
+    DPF got a lot of attention once again.<br/>
+    It is now on a state where I can focus on bugfixes rather than new things, even though I still want to try official SVG support.<br/>
+    Everything that was in the previous DPF (that is, the git master branch) should now be in the develop branch.<br/>
+    I am confident enough in this that made a new "main" branch to be the default clone target (I will keep the old master branch untouched, as there are a few minor things that can't be made backwards compatible).
+</p>
+<p>
+    Something that got a fair bit of attention was high-dpi support.<br/>
+    Previously DPF read the scale factor from the host (if provided, most do not) but now it can also figure it out on its own as fallback.<br/>
+    There was a lot of back and forth until it was verified to work on all major OSes and formats.<br/>
+    I also updated the DPF-Plugins project so that all plugins contained within it support this.<br/>
+    Even though some being bitmap-based causes their UI to look blurry, at least they will appear in the correct size.
+</p>
+<p>
+    <img src="/screenshots/news/dpf-plugins-big-2021-08.png" alt="dpf-plugins-big"/>
+</p>
+<p>
+    More work that is worth mentioning is some care given to the sofd module used by DPF as fallback X11 file browser dialog.<br/>
+    It has served us well, because it generally works fine, but never looked that great in my opinion..<br/>
+    So I spent some time to change its colors a bit to follow a more traditional/usual approach (plus dark theme).<br/>
+    And then on top make it work nicely for high-dpi setups too.<br/>
+    Not everyone uses dark themes, so this needs a light theme option too, not sure yet if it can be chosen automatically.<br/>
+    Personally I think it looks much better, but tastes are subjective. Anyway, the differences can be seen below:
+</p>
+
+picture here
+
+<p>
+    As a final thing to mention for DPF, the last item that needed attention before the rework being in feature-parity with old branch, is external UI support.<br/>
+    The old branch didn't support this fully, but there was some experimental stuff in place.<br/>
+    Now it is back again, with a little more documentation and better support - it should eventually be an official DPF feature.<br/>
+    You can follow its discussion and progress ..here.. and because everyone likes screenshots, here is one as a quick test of mpv running as the external UI:
+</p>
+
+picture here
+
+<h3>ProM revived</h3>
+<p>
+    One little plugin I made quite some years ago but left it aside due to difficulties in packaging was ProM.<br/>
+    ProM is basically projectM in plugin form, on top of DPF.<br/>
+    It allows you to have old-school milkdrop-like visualizations on your DAW/host, it is an audio plugin after all.<br/>
+    After a little fighting over building projectM correctly (directly in ProM source, aka "vendored"), I can now say it builds and runs on at least GNU/Linux, macOS and Windows.<br/>
+    Taking from last month's automatic build setup, binaries are automatically generated for these 3 OSes directly from GitHub.<br/>
+    To make Linux distribution packagers happy, the option to build against system-provided libprojectm is still present, and should work even better now as it finds the shared data prefix to use via pkg-config.
+</p>
+
+<h3>Website updates</h3>
+<p>
+    Worth of a little note, I updated the kx.studio website to better work in smaller screens, or vertical ones, or both like in mobile phones.<br/>
+    The content itself is mostly unchanged, still need to tackle that (specially documentation, there is a lot of old stuff there).<br/>
+    They typically call this "responsive design".<br/>
+    The news part I didn't update, as otherwise it would break RSS readers, and the top menu needs to become of one those "hamburguer"-style things when width is low. A task for later.
+</p>
+<p>
+    A final website update worth mentioning is the addition of the board and development pages.<br/>
+    As people sometimes wonder what I have been doing lately (specially important for those that give out donations, thanks for that by the way!)
+    the board view is now integrated into the site. I added color descriptions there too.<br/>
+    Hopefully that makes everything more clear, and more visible too of course.
+</p>
+
+<p>&nbsp;</p>
+
+<p>
+    That is all for now.<br/>
+    If you appreciate the kind of work I do, please
+    <a href="https://kx.studio/Donations">consider a donation</a>.<br/>
+    Thank you in advance for your support, and stay safe out there!<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla Plugin Host v2.4.0 is here</span><br/>
     On <i>2021-08-20</i> by<i> falkTX</i>
 </p>
