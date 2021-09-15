@@ -37,6 +37,7 @@ $feed->set_feed_url(ARRAY(
     'https://github.com/DISTRHO/JuicePlugins/commits/master.atom',
     'https://github.com/DISTRHO/Kars/commits/master.atom',
     'https://github.com/DISTRHO/Mini-Series/commits/master.atom',
+    'https://github.com/DISTRHO/Nekobi/commits/master.atom',
     'https://github.com/DISTRHO/MVerb/commits/master.atom',
     'https://github.com/DISTRHO/ndc-Plugs/commits/master.atom',
     'https://github.com/DISTRHO/OneKnob-Series/commits/main.atom',
