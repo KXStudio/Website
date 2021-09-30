@@ -3,4 +3,5 @@ Disallow: /.git/
 Disallow: /.gitignore
 Disallow: /.htaccess
 Disallow: /donate/*
+Disallow: /Paste/repo/
 Disallow: /paste/repo/
