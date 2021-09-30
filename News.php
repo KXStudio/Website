@@ -9,6 +9,83 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (September 2021)</span><br/>
+    On <i>2021-09-30</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, it is time for yet another one of those monthly reports about the KXStudio project.<br/>
+    In case you missed it last month, there are now dedicated
+    <a href="https://kx.studio/Board" target="_blank">KXStudio Board</a>
+    and
+    <a href="https://kx.studio/Development" target="_blank">KXStudio Development</a>
+    pages.<br/>
+    These serve to give a quick overview of the work being planned and the one actively being done.<br/>
+    Note that I typically remove stuff from the "done" column of the board a few days into the start of each month.
+</p>
+
+<h3>VST3 for DPF</h3>
+<p>
+    The first new thing worth mentioning is the substantial work for VST3 in
+    <a target="_blank" href="https://github.com/DISTRHO/DPF">DPF</a>
+    made this month.<br/>
+    Though it is still in a state I consider alpha at the moment, everything that is crucial is implemented:
+    from audio, midi, time position, parameters, programs, state, latency and gui.<br/>
+    Not recommended to release anything based on this yet, as there are memory leaks and the GUI only works on Linux at the moment (and known to break REAPER due to not plugging into the host runloop yet).
+</p>
+<p>
+    This VST3 implementation uses
+    <a target="_blank" href="https://github.com/DISTRHO/DPF/tree/develop/distrho/src/travesty">custom C-compatible API headers</a>
+    instead of the official SDK, so that we can have commercial plugins while not being tied to Steinberg and its restrictive licensing.<br/>
+    There is a lot of boilerplate code to implement for stuff that the SDK typically does for you, and it is still pretty unclean, but works for now for testing.
+</p>
+<p>
+    Worth noting that there is a clear DSP / UI separation for this VST3-compatible DPF implementation.<br/>
+    Instead of the UI having direct access to the DSP side and just calling functions, everything is passed through a VST3 "connection point" as messages.<br/>
+    There is something in place to support hosts that do not provide the "connection point" interfaces, so everything still works there too.
+</p>
+<p>
+    I expect to finalize the VST3 support already in October as there does not seem to be any technical limitation or blocker,
+    it is just time needed to implement all the things.<br/>
+    Sadly VST3 only officially specifies support for Linux, macOS and Windows.<br/>
+    DPF can build for more systems than just these 3, so I
+    <a target="_blank" href="https://github.com/steinbergmedia/vst3sdk/issues/86">made a question/request upstream</a>
+    for how to tackle the issue.
+</p>
+
+<h3>Other DPF updates</h3>
+<p>
+    In other DPF news, I began experimenting with supporting
+    <a target="_blank" href="https://github.com/ocornut/imgui">Dear ImGui</a>
+    as a widget implementation.<br/>
+    Everything already works except drawing on the correct position with high-dpi, there are some weird quirks to figure out in regards to the OpenGL viewport.<br/>
+    The target is to allow to use ImGui for the full plugin gui or just as a subwidget.
+</p>
+<p>
+    <img src="/screenshots/news/imgui-widgets-2021-09.png" alt="imgui-widgets"/>
+</p>
+<p>
+    Other worthy mentions on DPF world are the
+    <a target="_blank" href="https://github.com/DISTRHO/DPF/blob/develop/FEATURES.md">FEATURES</a>
+    and
+    <a target="_blank" href="https://github.com/DISTRHO/DPF/blob/develop/LICENSING.md">LICENSING</a> 
+    table, which should help people decide if DPF is worthy for them or not.<br/>
+    As you might know, DPF is liberally licensed (under ISC) so that it can be used for commercial plugins without restrictions.<br/>
+    Hopefully clearing the license situation helps on that side of things.
+</p>
+
+<p>&nbsp;</p>
+
+<p>
+    That is all for now.<br/>
+    There are some bug-fix releases planned, but that will be something for October.<br/>
+    If you appreciate the kind of work I do, please
+    <a href="https://kx.studio/Donations">consider a donation</a>.<br/>
+    Thank you in advance for your support, and stay safe out there!<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (August 2021)</span><br/>
     On <i>2021-08-31</i> by<i> falkTX</i>
 </p>
