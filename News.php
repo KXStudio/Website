@@ -9,6 +9,239 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (October 2021)</span><br/>
+    On <i>2021-10-31</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, another one of those monthly reports about the KXStudio project is here.<br/>
+    As you might have seen a few days ago we had
+    <a href="https://kx.studio/News/?action=view&url=carla-241-has-been-released" target="_blank">v2.4.1 Carla release</a>.<br/>
+    I was hoping to do a JACK2 release as well, but was busy with other things and did not have it ready on it. Next time then.
+</p>
+
+<h3>DPF + VST3 on pause</h3>
+<p>
+    While VST3 support in DPF has advanced enough to load already in quite a few hosts,
+    I got personally annoyed with it after finding out the way I did the UI/DSP separation is just completely wrong. :(<br/>
+    Working with the internals of VST3 has been quite frustrating, so just taking a little break from it.<br/>
+    Currently still going with the target of finalizing VST3 support in DPF (at least in beta-like status) by the end of the year.
+</p>
+<p>
+    I want to say, dealing with VST3 internals has made me appreciate LV2 even more.<br/>
+    VST3 has some good design choices and ideas, but parts of it are also just awful and non-sensical.<br/>
+    Hopefully after the initial implementation is done we do not have to change it much.
+</p>
+
+<h3>ImGui rendering issues fixed</h3>
+<p>
+    Last month I reported about
+    <a href="https://github.com/ocornut/imgui" target="_blank">Dear ImGui</a>
+    being integrated as a DPF widget, with only some high-dpi rendering issues remaining.<br/>
+    Happy to report that this is finalized and tested to work on a couple of different configurations.<br/>
+    I might do a quick plugin set from porting existing audio software to DPF, as a way to 100% verify ImGui in DPF.<br/>
+    But for now Ildaeil (more on that below) has served as a nice test-case.
+</p>
+
+<h3>JSFX as plugin type in Carla</h3>
+<p>
+    Jean Pierre Cimalando has started work on adding
+    <a href="https://www.reaper.fm/sdk/js/js.php" target="_blank">JSFX "plugin"</a> support
+    for Carla.<br/>
+    JSFX has nothing to do with JavaScript, but rather it originally comes from REAPER's extended audio processing capabilities.<br/>
+    They have defined a format for writing audio plugins that can be written and compiled on the fly.<br/>
+    This work from Jean is not yet complete, but great progress has already been made.<br/>
+    It is likely to end up on the next Carla release.
+</p>
+
+<h3>A little new test-project: Ildaeil</h3>
+<p>
+    One crucial point for me accepting JSFX support in Carla was that it couldn't be limited to just Carla.<br/>
+    But this support being added directly in Carla doesn't help with that.. or does it?
+</p>
+<p>
+    Announcing <b>Ildaeil</b>! (sorta.. read on)<br/>
+    In case you do not know,
+    <a href="https://www.zrythm.org/en/" target="_blank">Zrythm</a>
+    is using Carla as backend to deal with non-LV2 plugins.<br/>
+    Some of the things it uses were never properly tested in Carla or any other software, making it hard to fix bugs.<br/>
+    This combined with wanting JSFX on more hosts than just Carla and ImGui now fully working in DPF
+    has gave me enough motivation to try out a new project that would just combine everything into one.<br/>
+    This project is called "Ildaeil".
+</p>
+<p>
+    <a href="https://github.com/DISTRHO/Ildaeil" target="_blank">Ildaeil</a>
+    is basically Carla as a minified plugin, where instead of running the full GUI you have a super minimal GUI and set of features.<br/>
+    It uses DPF for the plugin-side (ie, to be an LV2, VST2 and VST3 plugin) and then Carla for the plugin hosting side.
+    A bridge between the 2 worlds, basically.<br/>
+    For now I made it so that it lists the available LV2 plugins on the system and allows to load 1 from the list, embedding its custom GUI if possible.
+</p>
+
+<p>
+    <img src="/screenshots/news/ildaeil-2021-10.png" alt="ildaeil"/>
+</p>
+
+
+<p>
+    This is not really an announcement because I have not yet decided the full scope of the project.<br/>
+    There are a LOT of things it could do, but then it becomes quite the work to maintain.<br/>
+    If you want to give it a try, feel free.<br/>
+    But reports are welcome, feature requests are not (at this point).
+</p>
+
+<h3>Separating JACK tools from JACK1 and JACK2</h3>
+<p>
+    For a very long time I have been meaning to merge back the changes done in JACK examples and tools from JACK2 back to JACK1.<br/>
+    Back in
+    ....
+    <a href="_________" target="_blank">_________</a>
+
+    I stated that help on this would be appreciated, but not much has happened since then.<br/>
+    Now that PipeWire is slowly becoming a thing, this is becoming crucial.
+</p>
+<p>
+    For distributions like Arch that do not typically split packages (hypothetically) installing pipewire-jack would remove jack2 and replace it with PipeWire's version.<br/>
+    But the tools like <b>jack_connect</b>, <b>jack_wait</b>, etc are part of the jack2 package, not pipewire-jack.<br/>
+    Installing pipewire-jack would (hypothetically) remove these tools.<br/>
+    There are quite a few set ups out there that rely on them, so a solution is needed here.
+</p>
+<p>
+    David Runge has started the effort of
+
+    splitting these tools from the JACK repositories
+    <a href="_________" target="_blank">_________</a>
+
+    into a new one.<br/>
+    The idea is that JACK will no longer ship with them, and they become an extra set of tools to install separately.<br/>
+    This allows to switch between JACK versions (JACK1, JACK2 or PipeWire) and keep the same exact set of tools.
+</p>
+<p>
+    We will need to have new JACK1 and JACK2 versions that remove these tools before the new project can be officially tagged and released.<br/>
+    More news on this soon.
+</p>
+
+
+ildaeil
+
+jack separate tools initiated by Dave
+
+
+<h3>More (final?) DPF updates</h3>
+<p>
+    DPF got a lot of attention once again.<br/>
+    It is now on a state where I can focus on bugfixes rather than new things,
+    even though I still want to try official SVG support.<br/>
+    Everything that was in the previous DPF (that is, the git
+    <a href="https://github.com/DISTRHO/DPF/tree/master/" target="_blank">master branch</a>)
+    should now be in the develop branch.<br/>
+    I am confident enough in this that made a new
+    <a href="https://github.com/DISTRHO/DPF/tree/main" target="_blank">"main" branch</a>
+    to be the default clone target (I will keep the old master branch untouched, as there are a few minor things that can't be made backwards compatible).
+</p>
+
+<h4>Fixing high-dpi support</h4>
+<p>
+    Something that got a fair bit of attention was high-dpi support.<br/>
+    Previously DPF read the scale factor from the host (if provided, most do not) but now it can also figure it out on its own as fallback.<br/>
+    There was a lot of
+    <a href="https://github.com/DISTRHO/DPF/pull/301" target="_blank">back and forth</a>
+    until
+    <a href="https://github.com/DISTRHO/DPF/issues/308" target="_blank">it was verified</a>
+    to
+    <a href="https://github.com/DISTRHO/DPF/issues/311" target="_blank">work on all major OSes and formats</a>.<br/>
+    I also updated the DPF-Plugins project so that all plugins contained within it support this.<br/>
+    Even though some being bitmap-based causes their UI to look blurry, at least they will appear in the correct size.<br/>
+    You can see them in the screenshot below.
+</p>
+<p>
+    <img src="/screenshots/news/dpf-plugins-big-2021-08.png" alt="dpf-plugins-big"/>
+</p>
+
+<h4>sofd improvements</h4>
+<p>
+    Some care was given to the
+    <a href="https://github.com/x42/sofd/" target="_blank">sofd module</a>
+    used by DPF as fallback X11 file browser dialog.<br/>
+    It serves us well enough because it generally works fine, but never looked that great in my opinion..<br/>
+    I spent some time to change its colors a bit to follow a more traditional/usual approach, plus a dark theme because yes.<br/>
+    And then on top make it work nicely for high-dpi setups too.<br/>
+    Not everyone uses dark themes, so there needs to be a light theme option too, not sure yet if it can be chosen automatically.<br/>
+    Personally I think it looks much better, but tastes are subjective. Anyway, the differences can be seen below:<br/>
+    (will submit the changes upstream after all the DPF file dialog stuff is finalized and stable)
+</p>
+<p>
+    <img src="/screenshots/news/sofd-compare-2021-08.png" alt="sofd-compare"/>
+</p>
+
+<h4>External UI</h4>
+<p>
+    As a final thing to mention for DPF, the last item that needed attention before the rework being in feature-parity with old branch, is external UI support.<br/>
+    The idea being that we can reuse DPF APIs and plugin export support but do the UI stuff completely separately - be it separate process or a custom implementation.<br/>
+    As long as it is in a way the plugin host expects things (ie, X11 window on Linux) things should just work..
+</p>
+<p>
+    The old DPF master branch didn't support this fully, but there was some experimental stuff in place.<br/>
+    Now it is back again, with a little
+    <a href="https://github.com/DISTRHO/DPF/blob/main/distrho/extra/ExternalWindow.hpp#L37" target="_blank">more documentation</a>
+    and better support - it should eventually be an official DPF feature.<br/>
+    You can follow its discussion and progress
+    <a href="https://github.com/DISTRHO/DPF/issues/313" target="_blank">here</a>
+    and because everyone likes screenshots, here is one as a quick test of mpv running as the external UI:
+</p>
+<p>
+    <img src="/screenshots/news/external-ui-mpv-2021-08.png" alt="external-ui-mpv"/>
+</p>
+
+<h3>ProM revived</h3>
+<p>
+    One little plugin I made quite some years ago but left it aside due to difficulties in packaging was
+    <a href="https://github.com/DISTRHO/ProM/" target="_blank">ProM</a>.<br/>
+    ProM is basically
+    <a href="https://github.com/projectM-visualizer/projectm/" target="_blank">projectM</a>
+    in plugin form, on top of DPF.<br/>
+    It allows you to have old-school milkdrop-like visualizations on your DAW/host, it is an audio plugin after all.<br/>
+    After a little fighting over building projectM correctly (directly in ProM source, aka "vendored"),
+    I can now say it builds and runs on at least GNU/Linux, macOS and Windows.<br/>
+    Taking from
+    <a href="https://kx.studio/News/?action=view&url=kxstudio-monthly-report-july-2021" target="_blank">last month's automatic build setup</a>,
+    binaries are
+    <a href="https://github.com/DISTRHO/ProM/actions" target="_blank">automatically generated for these 3 OSes directly from GitHub</a>.<br/>
+    To make Linux distribution packagers happy, the option to build against system-provided libprojectM is still present,
+    and should work even better now as it finds the shared data prefix to use via pkg-config.
+</p>
+<p>
+    <img src="/screenshots/news/prom-revival-2021-08.png" alt="prom-revival"/>
+</p>
+
+<h3>Website updates</h3>
+<p>
+    Worth of a little note, I updated the kx.studio website to better work in smaller screens, or vertical ones, or both like in mobile phones.<br/>
+    The content itself is mostly unchanged, still need to tackle that (specially documentation, there is a lot of old stuff there).<br/>
+    They typically call this "responsive design" I guess.<br/>
+    The news part I didn't update, as otherwise it would break RSS readers, and the top menu needs to become of one those "hamburguer"-style things when width is low. A task for later.
+</p>
+<p>
+    A final website update worth mentioning is the addition of the
+    <a href="https://kx.studio/Board" target="_blank">board</a>
+    and
+    <a href="https://kx.studio/Development" target="_blank">development</a>
+    pages.<br/>
+    As people sometimes wonder what I have been doing lately (specially important for those that give out donations, thanks for that by the way!)
+    the board view is now integrated into the site. I added color descriptions there too.<br/>
+    Hopefully that makes everything more clear, and more visible too of course.
+</p>
+
+<p>&nbsp;</p>
+
+<p>
+    That is all for now.<br/>
+    If you appreciate the kind of work I do, please
+    <a href="https://kx.studio/Donations">consider a donation</a>.<br/>
+    Thank you in advance for your support, and stay safe out there!<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.4.1 has been released</span><br/>
     On <i>2021-10-15</i> by<i> falkTX</i>
 </p>
