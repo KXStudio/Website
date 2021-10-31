@@ -65,7 +65,7 @@ include_once("includes/header.php");
     is using Carla as backend to deal with non-LV2 plugins.<br/>
     Some of the things it uses were never properly tested in Carla or any other software, making it hard to fix bugs.<br/>
     This combined with wanting JSFX on more hosts than just Carla and ImGui now fully working in DPF
-    has gave me enough motivation to try out a new project that would just combine everything into one.<br/>
+    has given me enough motivation to try out a new project that would just combine everything into one.<br/>
     This project is called "Ildaeil".
 </p>
 <p>
