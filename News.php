@@ -9,6 +9,181 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (November + December 2021)</span><br/>
+    On <i>2021-12-31</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, these is yet another one of those monthly reports about the KXStudio project.<br/>
+    But this time I also want to give a little overview of 2021 as a year.<br/>
+    There was no November month report, due to me being busy with moving to a new place and a few other personal things.<br/>
+    This month though there are a few things to report on.
+</p>
+
+    <a href="" target="_blank">
+    </a>
+
+<h3>DPF and VST3 work resumes</h3>
+<p>
+    After a little break on the VST3 implementation in DPF, I went back and
+    <a href="https://github.com/DISTRHO/DPF/commit/2d916332ff773db629ef9211ac3b3a8a5a428ea0" target="_blank">reworked a few things</a>
+    that were clearly done wrong.<br/>
+    It is still considered experimental, but already works much better than before.<br/>
+    For example, UI to DSP parameter changes works properly now, which was not the case before in some hosts (including reaper).
+</p>
+<p>
+    Once complete, DPF based plugins will be one of the few that implement the whole component vs edit-controller separation.<br/>
+    This might prove quite valuable in the future, specially after hosts also implement the same.<br/>
+    We need to come back to this after I natively implement VST3 support in Carla.
+</p>
+<p>
+    Just as before, I am keeping a TODO list of items
+    <a href="https://github.com/DISTRHO/DPF/blob/develop/distrho/src/DistrhoPluginVST3.cpp#L39" target="_blank">near the top of the relevant source code</a>
+    file for VST3. The same also
+    <a href="https://github.com/DISTRHO/DPF/blob/develop/distrho/src/DistrhoUIVST3.cpp#L24" target="_blank">applies to the UI side</a>.<br/>
+    The super short summary is that most common things already work, with only optional buses, MIDI CC handling and minor details missing.<br/>
+    We don't get VST3 support finalized in DPF during 2021, but it shouldn't take that much longer now.
+</p>
+
+<h3>Continuing: Separating JACK tools from JACK1 and JACK2</h3>
+<p>
+    Mentioned last time was the effort of
+    <a href="https://kx.studio/News/?action=view&url=kxstudio-monthly-report-october-2021" target="_blank">splitting the example-clients and tools</a>
+    from the JACK repositories into a new one repository/project.<br/>
+    I have been working with David Runge on this (or better said,
+    <a href="https://github.com/jackaudio/jack-example-tools/issues/9" target="_blank">he has been doing most of the work</a>)
+    with me reviewing each set of changes to each file on by one.<br/>
+    We are nearly finished, with only 1 file remaining.
+</p>
+<p>
+    Afterwards there is still some work to be done on the build setup and testing the whole thing,
+    but it is good to see things progressing on this area that was being sadly neglected for many years.<br/>
+    If everything goes well, no one will notice a thing!<br/>
+    Maintenance is a lot of work that goes unnoticed, fun stuff..
+</p>
+
+<h3>Python 3.10 and updated PyQt woes</h3>
+<p>
+    I do not know exactly the change that triggered it, but with newer versions of python and PyQt, pretty much all my tools that use PyQt are broken.<br/>
+    The community was quite helpful on
+    <a href="https://github.com/falkTX/Carla/pull/1550" target="_blank">fixing some Carla</a>
+    <a href="https://github.com/falkTX/Carla/pull/1551" target="_blank">issues themselves</a>
+    without my direct intervention (as I do not run a rolling-release Linux distribution, I am not directly affected).<br/>
+    With this a new release of Carla is needed, the same for Cadence but that remains unfixed for the time being.
+</p>
+
+<h3>Cardinal, the Rack!</h3>
+<p>
+    A new project has
+    <a href="https://github.com/DISTRHO/Cardinal/issues/1" target="_blank">brewing behind the scenes</a>
+    for more or less 3 months now.<br/>
+    It was not in my plans when 2021 started, specially since quite a few other things needed more attention..<br/>
+    But this was one of these things that is just impossible to put down as an idea.<br/>
+    In fact, lack of attention in Carla and JACK lately are due to this project, it is simply too exciting.
+</p>
+<p>
+    The quick history of the project is that, after
+    <a href="https://vcvrack.com/" target="_blank">VCV Rack</a>
+    <a href="https://github.com/VCVRack/Rack/tree/v2" target="_blank"> v2 source code was made public</a>,
+    I began wondering if that codebase could be used for building an open-source plugin
+    (unlike the official product, which is closed-source and commercial).<br/>
+    After finding out that VCV's official plugin would only support VST2 and still only the same 3 base architectures (Linux, macOS and Windows 64bit),
+    also how the whole thing would supposedly work - loading modules from the library just like in the standalone - 
+    I was quite disappointed with the whole thing.<br/>
+    Rack is something that always interested me, but I was put off from the (to put it mildly) abrasive attitude towards open-source ideas and Linux packaging.<br/>
+    Running as standalone was also not that fun for me, I personally want to create synths and have those integrated in a DAW/sequencer workflow.
+</p>
+<p>
+    There was a project called
+    <a href="https://github.com/bsp2/VeeSeeVSTRack" target="_blank">VeeSeeVSTRack</a>
+    that also attempted an open-source plugin version of Rack, but it had some serious drawbacks:
+</p>
+<ul>
+    <li>Needs heavy changes to Rack source, which would have to be regularly maintained in order to keep up with upstream</li>
+    <li>All included modules need to be patched a fair bit just to work with it</li>
+    <li>Custom written plugin format support (so it only supported VST2)</li>
+    <li>Custom written OS-level Window handling (only supporting Windows and Linux/X11)</li>
+</ul>
+<p>
+    While the idea in general great, there was a not insignificant amount of work needed to maintain it.<br/>
+    If attempting something like this, would be best to not make the same "mistakes", and think about the whole deal on the long term.<br/>
+    With that in mind, the Cardinal project:
+</p>
+<ul>
+    <li>Does not fork Rack's source code, instead it uses it as submodule, replacing only a few critical functions and files</li>
+    <li>Besides internal modules, 3rd-party ones can be linked as-is with only changes to not use <i>osdialog</i> due to its event-blocking nature</li>
+    <li>Relies on DPF for plugin format support, so we get JACK, LV2 and VST2 from the start, VST3 in progress</li>
+    <li>Also relies on DPF for OS-level Window handling, so it works on macOS too (and eventually Haiku)</li>
+</ul>
+<p>
+    Similar to VeeSeeVSTRack, Cardinal builds the entire module collection as part of one binary and uses the host audio thread to drive the engine.<br/>
+    This means no online library access or external module loading, which is quite intentional.<br/>
+    More information on the
+    <a href="https://github.com/DISTRHO/Cardinal#why" target="_blank">"why" section of Cardinal's README</a>.
+</p>
+<p>
+    The obvious question that might be in the air is what to make of the official Rack Pro plugin.<br/>
+    To which I say - <b>if you enjoy Cardinal, go buy Rack Pro!</b><br/>
+    Cardinal would not exist without VCV Rack, so it is for our best interest that Rack lives on for a long while.<br/>
+    Also they serve different purposes:<br/>
+    <b>Cardinal</b> is open-source modules only, all integrated into 1 binary.<br/>
+    <b>Rack Pro</b> is just like the standalone with online library access, commercial modules etc. And obviously the official product too.<br/>
+    The Cardinal project includes a
+    <a href="https://github.com/DISTRHO/Cardinal/blob/main/doc/DIFFERENCES.md" target="_blank">table of differences between itself and Rack Pro</a>,
+    in case you want to go into deeper technical details.
+</p>
+<p>
+    Cardinal should be considered beta-state at the moment.<br/>
+    While it already works quite well (except for a few known bugs as typical), there are a few missing pieces and license situation to sort out in detail.<br/>
+    A lot of Rack module developers started coding because of it,
+    so without fully understanding artwork and source code license implications quite a few of them just copied what others were doing.<br/>
+    And this is the problem, Rack itself contains non-commercial and even non-derivatives clauses for its artwork.<br/>
+    A lot of developers copied the non-commercial clause without thinking too much about it, which makes them quite tricky if not impossible to package in a Linux distribution.<br/>
+    Before tagging v1.0, I want to sort out these details first, to ensure everything is done not only legally but also respectfully.<br/>
+    Already started this on
+    <a href="https://github.com/DISTRHO/Cardinal/blob/main/doc/LICENSES.md" target="_blank">this document</a>,
+    which greatly helps in giving an overview of the used source code and artwork licenses.
+</p>
+<p>
+    Before moving on, here's a screenshot, because everyone likes those. :)
+</p>
+<p>
+    <img src="/screenshots/news/cardinal-2021-12.png" alt="cardinal"/>
+</p>
+
+<h3>Many other DPF additions</h3>
+<p>
+    While working on Cardinal, DPF got a real stress-test for some of its features.<br/>
+    Some were missing and needed to be added in order to make Cardinal work proper, some were found to be broken.<br/>
+    In no particular order, these changes were made in DPF to accommodate for Cardinal:
+</p>
+<ul>
+    <li>Add clipboard (copy &amp; paste) support</li>
+    <li>Add cursor support</li>
+    <li>Add file dialog save support (used to be only loading allowed)</li>
+    <li>Add "desktop portal" DBus service support for providing native file browser dialogs on Linux</li>
+    <li>Add APIs around finding the bundle path of the plugin</li>
+    <li>Allow LTO (Link-Time-Optimization) build</li>
+    <li>Auto-creating macOS VST2 bundle from build step, instead of needing to run a script</li>
+    <li>Many fixes around file browser dialog support</li>
+    <li>Many fixes around VST2 keyboard input (WIP)</li>
+</ul>
+<p>
+    The only missing feature at the moment is drag&amp;drop support, but that needs an implementation on pugl's side first.<br/>
+    Once that side is done, I already have a plugin in which to test it the functionality, so it should be pretty quick.
+</p>
+
+<p>&nbsp;</p>
+
+<p>
+    And that is all for now.<br/>
+    If you appreciate the kind of work I do, please
+    <a href="https://kx.studio/Donations">consider a donation</a>.<br/>
+    Thank you in advance for your support, happy holidays and a happy new year!<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (October 2021)</span><br/>
     On <i>2021-10-31</i> by<i> falkTX</i>
 </p>
