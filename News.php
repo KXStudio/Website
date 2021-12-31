@@ -19,9 +19,6 @@ include_once("includes/header.php");
     This month though there are a few things to report on.
 </p>
 
-    <a href="" target="_blank">
-    </a>
-
 <h3>DPF and VST3 work resumes</h3>
 <p>
     After a little break on the VST3 implementation in DPF, I went back and
