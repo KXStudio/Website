@@ -9,13 +9,49 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; DPF-Plugins v1.5 released</span><br/>
+    On <i>2022-01-16</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, a new release of DPF-Plugins is here.<br/>
+    DPF-Plugins is a collection of DPF-based plugins, including Kars, MVerb and Nekobi.<br/>
+    This is mostly a bugfix release, keeping up with the cool kids for regular releases.<br/>
+</p>
+<p>
+    Changelog:
+</p>
+<ul>
+    <li>Initial experimental VST3 support</li>
+    <li>Add bottom-right resize handle in glBars and ProM, needed in plugin formats that can't do host-side resizing<br/>
+(ProM resize handle is invisible but still works, known issue)</li>
+    <li>Some plugin GUIs can use Cairo instead of OpenGL, if OpenGL is not available at build time</li>
+    <li>Standalones no longer require JACK, instead detecting at runtime if it is available</li>
+    <li>Standalones will now use RtAudio for native audio device access in case JACK is not available</li>
+    <li>ProM now ships with (optional) vendored libprojectM in case it is not available as system library</li>
+    <li>ProM now sets up and uses OpenGL3 context instead of OpenGL2 forward compatibility mode, fixing usage on macOS and Windows</li>
+    <li>Fix modal about dialogs</li>
+    <li>Fix more High-DPI related issues</li>
+    <li>Fix OpenGL context swap on GUI deletion, needed on hosts using OpenGL</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/DPF-Plugins/releases/tag/v1.5" target="_blank">
+          https://github.com/DISTRHO/DPF-Plugins/releases/tag/v1.5</a>.<br/>
+    The plugins are released as LADSPA, DSSI, LV2, VST2, VST3 and JACK standalone.<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (November + December 2021)</span><br/>
     On <i>2021-12-31</i> by<i> falkTX</i>
 </p>
 <p>
-    Hello all, these is yet another one of those monthly reports about the KXStudio project.<br/>
+    Hello all, this is yet another one of those monthly reports about the KXStudio project.<br/>
     But this time I also want to give a little overview of 2021 as a year.<br/>
-    There was no November month report, due to me being busy with moving to a new place and a few other personal things.<br/>
+    There was no November monthly report, due to me being busy with moving to a new place and a few other personal things.<br/>
     This month though there are a few things to report on.
 </p>
 
@@ -45,10 +81,10 @@ include_once("includes/header.php");
 <p>
     Mentioned last time was the effort of
     <a href="https://kx.studio/News/?action=view&url=kxstudio-monthly-report-october-2021" target="_blank">splitting the example-clients and tools</a>
-    from the JACK repositories into a new one repository/project.<br/>
+    from the JACK repositories into a new repository/project.<br/>
     I have been working with David Runge on this (or better said,
     <a href="https://github.com/jackaudio/jack-example-tools/issues/9" target="_blank">he has been doing most of the work</a>)
-    with me reviewing each set of changes to each file on by one.<br/>
+    with me reviewing each set of changes to each file one by one.<br/>
     We are nearly finished, with only 1 file remaining.
 </p>
 <p>
@@ -70,7 +106,7 @@ include_once("includes/header.php");
 
 <h3>Cardinal, the Rack!</h3>
 <p>
-    A new project has
+    A new project has been
     <a href="https://github.com/DISTRHO/Cardinal/issues/1" target="_blank">brewing behind the scenes</a>
     for more or less 3 months now.<br/>
     It was not in my plans when 2021 started, specially since quite a few other things needed more attention..<br/>
@@ -126,7 +162,7 @@ include_once("includes/header.php");
     <b>Rack Pro</b> is just like the standalone with online library access, commercial modules etc. And obviously the official product too.<br/>
     The Cardinal project includes a
     <a href="https://github.com/DISTRHO/Cardinal/blob/main/doc/DIFFERENCES.md" target="_blank">table of differences between itself and Rack Pro</a>,
-    in case you want to go into deeper technical details.
+    in case you want to go deeper into technical details.
 </p>
 <p>
     Cardinal should be considered beta-state at the moment.<br/>
