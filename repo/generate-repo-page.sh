@@ -146,7 +146,7 @@ for PACKAGE in ${PACKAGES[@]}; do
     # screenshot
     SCREENSHOT=${PACKAGE}
     if [ ! -f "./screenshots/${SCREENSHOT}.png" ]; then
-        SCREENSHOT=$(echo "${SCREENSHOT}" | sed "s/-lv2//g" | sed "s/-vst//g")
+        SCREENSHOT=$(echo "${SCREENSHOT}" | sed "s/-lv2//g" | sed "s/-vst//g" | sed "s/-vst2//g" | sed "s/-vst3//g")
         if [ ! -f "./screenshots/${SCREENSHOT}.png" ]; then
             SCREENSHOT=""
         fi
