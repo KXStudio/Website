@@ -9,6 +9,189 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Cardinal 22.02 is now released</span><br/>
+    On <i>2022-02-14</i> by<i> falkTX</i>
+</p>
+<p>
+    It is finally here, the first release of <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>.<br/>
+    Has been slowly brewing behind the scenes, and now ready for the masses.<br/>
+    First, some introductions...
+</p>
+<p>
+    <img src="/repo/screenshots/cardinal.png" alt="cardinal"/>
+</p>
+<p>
+    <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
+    is a free and open-source virtual modular synthesizer plugin.<br/>
+    It is based on the popular <a href="https://github.com/VCVRack/Rack/" target="_blank">VCV Rack</a>
+    but with a focus on being a fully self-contained plugin version.
+</p>
+<p>
+    Cardinal was created first and foremost as a way to have Rack as a proper open-source audio plugin.<br/>
+    A proper audio plugin should be self-contained as much as possible, as to not interfere with the DAW/Host. Loading external modules clearly goes against this idea.<br/>
+    Not to mention being <b>open-source</b>, otherwise we are at the mercy of the wishes of a company for what we can and cannot do, which is not that great...<br/>
+    (in case you were not aware, VCV's Rack plugin version, called "Rack Pro", is a commercial closed-source product)
+</p>
+<p>
+    It needs to be said that Cardinal project and its authors do not wish anything bad to the original/official Rack project.<br/>
+    In fact, Cardinal wouldn't exist if not for Rack v2 release. (which has many needed things to make a plugin version work)<br/>
+
+    Cardinal and Rack should be able to co-exist friendly and peacefully, as they clearly have different targets.<br/>
+    It is likely most people will prefer to use Rack Pro for its official support and its big module collection (including commercial ones).<br/>
+
+    A feature comparison between Cardinal and Rack Pro can be seen
+    <a href="https://github.com/DISTRHO/Cardinal/blob/main/docs/DIFFERENCES.md" target="_blank">here</a>.
+</p>
+<p>
+    With that out of the way, let's go through a quick overview.
+</p>
+
+<h3>Plugin variants</h3>
+<p>
+    Cardinal provides 3 plugin variants - <b>Main</b>, <b>Synth</b> and <b>FX</b>.<br/>
+    They are all equivalent in performance and behaviour, with only the IO and metadata that changes.<br/>
+    This is because some hosts are very strict on which plugins are allowed as instruments vs FX, so separate variants of the same plugin are needed.<br/>
+</p>
+<p>
+    <b>FX</b> and <b>Synth</b> variants both have 2 audio outputs, while <b>Main</b> has 8.<br/>
+    All variants have MIDI input and output support.
+</p>
+<p>
+    <b>Main</b> provides 8 audio inputs and outputs and 10 CV inputs and outputs.<br/>
+    Note that due to VST2 format not supporting CV ports, this variant is not available for VST2.
+</p>
+<p>
+    <b>Synth</b> provides 2 audio outputs but no audio inputs or CV ports.<br/>
+    Plugin type is set as "instrument".
+</p>
+<p>
+    And finally <b>FX</b> provides 2 audio inputs and outputs, but no CV ports.<br/>
+    Plugin type is set as regular "effect".
+</p>
+
+<h3>Included modules</h3>
+<p>
+    At the moment the following 3rd-party modules are provided:
+</p>
+<ul>
+    <a href="https://github.com/netboy3/21kHz-rack-plugins" target="_blank"><li>21kHz</a></li>
+    <a href="https://github.com/jhoar/AmalgamatedHarmonics" target="_blank"><li>Amalgamated Harmonics</a></li>
+    <a href="https://github.com/AriaSalvatrice/AriaModules" target="_blank"><li>Aria Salvatrice</a></li>
+    <a href="https://github.com/VCVRack/AudibleInstruments" target="_blank"><li>Audible Instruments</a></li>
+    <a href="https://github.com/NikolaiVChr/Autinn" target="_blank"><li>Autinn</a></li>
+    <a href="https://github.com/baconpaul/BaconPlugs" target="_blank"><li>Bacon Music</a></li>
+    <a href="https://github.com/sebastien-bouffier/Bidoo" target="_blank"><li>Bidoo</a></li>
+    <a href="https://github.com/bogaudio/BogaudioModules" target="_blank"><li>Bogaudio</a></li>
+    <a href="https://github.com/cfoulc/cf" target="_blank"><li>cf</a></li>
+    <a href="https://github.com/jatinchowdhury18/ChowDSP-VCV/" target="_blank"><li>ChowDSP</a></li>
+    <a href="https://github.com/SVModular/DrumKit/" target="_blank"><li>DrumKit</a></li>
+    <a href="https://github.com/VCVRack/ESeries" target="_blank"><li>E-Series</a></li>
+    <a href="https://github.com/expertsleepersltd/vcvrack-encoders" target="_blank"><li>ExpertSleepers Encoders</a></li>
+    <a href="https://github.com/EaterOfSheep/Extratone" target="_blank"><li>Extratone</a></li>
+    <a href="https://github.com/RCameron93/FehlerFabrik" target="_blank"><li>Fehler Fabrik</a></li>
+    <a href="https://github.com/gluethegiant/gtg-rack" target="_blank"><li>Glue the Giant</a></li>
+    <a href="https://github.com/dbgrande/GrandeModular" target="_blank"><li>Grande</a></li>
+    <a href="https://github.com/mhetrick/hetrickcv" target="_blank"><li>HetrickCV</a></li>
+    <a href="https://github.com/nysthi/ihtsyn" target="_blank"><li>ihtsyn</a></li>
+    <a href="https://github.com/MarcBoule/ImpromptuModular" target="_blank"><li>Impromptu</a></li>
+    <a href="https://github.com/jeremywen/JW-Modules/" target="_blank"><li>JW-Modules</a></li>
+    <a href="https://github.com/SteveRussell33/LifeFormModular" target="_blank"><li>LifeFormModular</a></li>
+    <a href="https://github.com/mgunyho/Little-Utils" target="_blank"><li>Little Utils</a></li>
+    <a href="https://github.com/LomasModules/LomasModules" target="_blank"><li>Lomas Modules</a></li>
+    <a href="https://github.com/VegaDeftwing/LyraeModules" target="_blank"><li>Lyrae Modules</a></li>
+    <a href="https://github.com/MarcBoule/MindMeldModular" target="_blank"><li>MindMeld</a></li>
+    <a href="https://github.com/JustMog/Mog-VCV" target="_blank"><li>Mog</a></li>
+    <a href="https://github.com/mschack/VCV-Rack-Plugins" target="_blank"><li>mscHack</a></li>
+    <a href="https://github.com/SteveRussell33/Prism" target="_blank"><li>Prism</a></li>
+    <a href="https://github.com/n0jo/rackwindows" target="_blank"><li>rackwindows</a></li>
+    <a href="https://github.com/SteveRussell33/repelzen" target="_blank"><li>repelzen</a></li>
+    <a href="https://gitlab.com/sonusdept/sonusmodular" target="_blank"><li>Sonus Modular</a></li>
+    <a href="https://github.com/ValleyAudio/ValleyRackFree" target="_blank"><li>Valley</a></li>
+    <a href="https://github.com/mhampton/ZetaCarinaeModules" target="_blank"><li>ZetaCarinae</a></li>
+    <a href="https://github.com/zezic/ZZC" target="_blank"><li>ZZC</a></li>
+</ul>
+<p>
+    Additionally Cardinal
+    <a href="https://github.com/DISTRHO/Cardinal/blob/main/docs/CARDINAL-MODULES.md" target="_blank">provides its own modules</a>
+     for DAW/Host automation, time position and internal plugin hosting.
+</p>
+
+<h3>Current status and future plans</h3>
+<p>
+    With the exception of a few bugs, Cardinal can be considered stable.<br/>
+    Though currently the following should be noted:
+</p>
+<ul>
+    <li>Keyboard input does not always work in some hosts <a href="https://github.com/DISTRHO/Cardinal/issues/24" target="_blank">#24</a></li>
+    <li>VST3 support incomplete/experimental <a href="https://github.com/DISTRHO/Cardinal/issues/41" target="_blank">#41</a></li>
+    <li>Windows 32bit builds do not work well <a href="https://github.com/DISTRHO/Cardinal/issues/80" target="_blank">#80</a></li>
+</ul>
+<p>
+    A parameter expander module was not ready on time for this release, but will come soon in a future release.<br/>
+    <a href="https://github.com/VCVRack/Fundamental" target="_blank">Fundamental</a>
+    is on a similar situation, there are some artwork license issues that prevent us from using Fundamental exactly as we want.<br/>
+    We plan to redo Fundamental's panel graphics in a more liberal license, so it then can be included in Cardinal.
+</p>
+<p>
+    There are a few modules we want to add, but they are being evaluated carefully as going forward anything we add in Cardinal needs to remain there forever, for backwards compatibility.<br/>
+    They must also have a GPLv3+ compatible license, which not all of them do.<br/>
+    Not to mention a clear artwork/graphics license... it is amazing how many of these projects do not care or understand about software licenses :(<br/>
+    Overall it makes packaging quite difficult, so it is natural that new modules are not added as fast as we wished for.
+</p>
+<p>
+    Something I hope to try soon is an alternative way to handle MIDI to CV conversion, as I don't like the way Rack does it at the moment.<br/>
+    The current Cardinal "core" modules follow the same exact approach as the official Rack, to make the transition easier,
+    but some kind of "MIDI v2" modules will be done eventually.
+</p>
+
+<h3>Contributing</h3>
+<p>
+    If you like the project and want to help out, there are basic building instructions
+    <a href="https://github.com/DISTRHO/Cardinal/blob/main/docs/BUILDING.md" target="_blank">here</a>,<br/>
+    And an overview of the source code is available
+    <a href="https://github.com/DISTRHO/Cardinal/blob/main/docs/OVERVIEW.md" target="_blank">here</a>.<br/>
+</p>
+<p>
+    Currently we are all on <b>#cardinal</b> IRC room in irc.libera.chat server.<br/>
+    Come join us in your favorite IRC client or through a Matrix bridge.
+</p>
+<p>
+    Installing new modules on an existing Cardinal binary is not possible at run-time, but we can add new modules to the build.<br/>
+    Details on this are available
+    <a href="https://github.com/DISTRHO/Cardinal/discussions/28" target="_blank">here</a>.<br/>
+    Also check
+    <a href="https://github.com/DISTRHO/Cardinal/wiki/Possible-modules-to-include" target="_blank">this wiki page</a>
+    where we discuss possible modules to include.
+</p>
+
+<h3>Installing and using</h3>
+<p>
+    Install instructions are available on
+    <a href="https://github.com/DISTRHO/Cardinal/wiki/Install" target="_blank">this wiki page</a>.<br/>
+    If you are using the KXStudio repositories you can simply install <b>cardinal-lv2</b>, <b>cardinal-vst2</b> or <b>cardinal-vst3</b> packages as usual.<br/>
+    Consult the wiki page linked above for details on other distributions, or otherwise use the prebuilt binaries on the
+    <a href="https://github.com/DISTRHO/Cardinal/releases" target="_blank">Cardinal releases</a> page.
+</p>
+<p>
+    There is no Cardinal official media content as of yet,
+    but if you are looking for tutorials just look for "VCV Rack" stuff which pretty much applies to Cardinal unchanged.<br/>
+    Some modules will appear slightly different, or not be available, but the overall idea on how to use it is the same.
+</p>
+<p>
+    A few CC-0 / public domain Cardinal patches are present
+    <a href="https://github.com/DISTRHO/Cardinal/tree/main/patches" target="_blank">directly in the source code</a>.<br/>
+    You can use those as your starting point, they are fully free to do what you want with.
+</p>
+<p>
+    And that is it, go download, install and have fun!<br/>
+    If you find an issue or want to request a potentially useful feature, please use the
+    <a href="https://github.com/DISTRHO/Cardinal/issues" target="_blank">Cardinal issue tracker</a>.<br/>
+    And happy Valentine's day too. \o/
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; DPF-Plugins v1.5 released</span><br/>
     On <i>2022-01-16</i> by<i> falkTX</i>
 </p>
