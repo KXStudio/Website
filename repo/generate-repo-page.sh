@@ -120,6 +120,10 @@ for PACKAGE in ${PACKAGES[@]}; do
     fi
 
     PACKAGE_DATA=$(has_data_package "${PACKAGE}" && echo "${PACKAGE}-data" || echo)
+    if [ -z "${PACKAGE_DATA}" ] && echo "${PACKAGE}" | grep -q -- \-; then
+        PACKAGE_MAIN=$(echo "${PACKAGE}" | cut -d '-' -f 1)
+        PACKAGE_DATA=$(has_data_package "${PACKAGE_MAIN}" && echo "${PACKAGE_MAIN}-data" || echo)
+    fi
     PACKAGE_DESCRIPTION=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Description: ","")')
     PACKAGE_PROVIDES=$(echo "${PACKAGE_DETAILS}" | awk 'sub("Provides: ","")')
     PACKAGE_SIZE=$(echo "${PACKAGE_DETAILS}" | grep -v "Installed-Size:" | awk 'sub("Size: ","")')
