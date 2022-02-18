@@ -9,6 +9,37 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; WineASIO v1.1.0 released</span><br/>
+    On <i>2022-02-18</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, a new release of WineASIO is here.<br/>
+    This is mostly for Wine >= 6.5 compatibility, and a few small fixes here and there.<br/>
+    Check the <a href="https://github.com/wineasio/wineasio/commits/master" target="_blank">git log</a> for the precise changes.
+</p>
+<p>
+    Details are explained in the <a href="https://github.com/wineasio/wineasio/tree/master#wine--65" target="_blank">README file</a>,
+    but in short we now need to build an extra fake dll and use full paths when calling <b><code>regsvr32</code></b>.<br/>
+    Where we previously needed:<br/>
+    <b><code>wine64 regsvr32 wineasio.dll</code></b>
+    <br/>
+    Now we require the full path, on Ubuntu for example it is:<br/>
+    <b><code>wine64 regsvr32 /usr/lib/x86_64-linux-gnu/wine/x86_64-windows/wineasio.dll</code></b>
+</p>
+<p>
+    As was the case with v1.0.0, there are no pre-compiled binaries for WineASIO, though it is available as a package in the KXStudio repositories.<br/>
+    You can find this v1.1.0 release at <a href="https://github.com/wineasio/wineasio/releases/tag/v1.1.0" target="_blank">github.com/wineasio/wineasio</a>.
+</p>
+<p>
+    Small warning: WineASIO is not compatible with PipeWire.<br/>
+    This is
+    <a href="https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/1495" target="_blank">under investigation</a>,
+    it is not known at this point why it does not work for PipeWire's JACK implementation.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Cardinal 22.02 is now released</span><br/>
     On <i>2022-02-14</i> by<i> falkTX</i>
 </p>
