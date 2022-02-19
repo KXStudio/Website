@@ -9,6 +9,79 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.4.2 has been released</span><br/>
+    On <i>2022-02-19</i> by<i> falkTX</i>
+</p>
+
+<p>
+    This is a bugfix release for Carla version v2.4 series, with some extra user-experience related minor changes.
+</p>
+<p>
+    <img src="/screenshots/carla.png" alt="carla"/>
+</p>
+<p>
+    <a href="https://kx.studio/carla" class="external free" rel="nofollow" target="_blank">Carla</a>
+    is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
+    It has some nice features like automation of parameters via MIDI CC (and send output back as MIDI too) and full OSC control.<br/>
+</p>
+<h3>Fixes</h3>
+<ul>
+    <li>Fix a few crashes with JACK applications inside Carla</li>
+    <li>Fix build on non-supported systems by JUCE</li>
+    <li>Fix crash when LV2 X11 UI has non-mapped child window</li>
+    <li>Fix compatibility with Python 3.10</li>
+    <li>Fix default SF2/3 path</li>
+    <li>Fix LV2 UI resizing on macOS</li>
+    <li>Fix missing VST3 plugins not being searched recursively</li>
+    <li>Disable GraphicsScene indexing method to prevent crashes</li>
+    <li>Ensure custom data state save and restore always match</li>
+</ul>
+
+<h3>Changes</h3>
+<ul>
+    <li>Add "[carla]" prefix to printed messages</li>
+    <li>Add appdata metadata information</li>
+    <li>Add notice when Carla needs to be restarted after an LV2 rescan</li>
+    <li>Add VST3 Windows common files to the default path (required by the latest VST3 spec)</li>
+    <li>Default to JACK backend if pipewire-jack replacement is installed</li>
+    <li>Implement dry/wet, volume and balance on JUCE hosted plugins</li>
+    <li>Reload audio file if sample rate changes</li>
+    <li>Use temporary files for big custom data values in bridges</li>
+</ul>
+
+<h3>Changes for using Carla as library</h3>
+<ul>
+    <li>Add 8 CV, 32 IO and 64 IO CarlaPatchbay variants</li>
+    <li>Add audio port hints to backend, starting with lv2 sidechain</li>
+    <li>Add static plugin build target</li>
+    <li>Add WITH_LTO build option, disabled by default</li>
+    <li>Allow setting a custom C++ namespace</li>
+    <li>More work on experimental embed plugin UIs, now also possible on plugin bridges</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla".<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<h3>Notes for users</h3>
+<p>
+    This was already the case for v2.2 and v2.3 but it is worth reiterating:<br/>
+    When using JACK2, the canvas - plugin integrations requires at least JACK2 v1.9.13.<br/>
+    This is because Carla relies on JACK meta-data in order to store information about each plugin/client,
+    and meta-data was only added to JACK2 in version 1.9.13.<br/>
+    Alternatively, you can use JACK1 instead of JACK2, which has meta-data support since a long time.
+</p>
+<p>
+    Also there are still no official Linux binary builds for v2.4.2.<br/>
+    Carla v2.4.2 is provided in the KXStudio repositories and in many official Linux distribution repositories anyway.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; WineASIO v1.1.0 released</span><br/>
     On <i>2022-02-18</i> by<i> falkTX</i>
 </p>
