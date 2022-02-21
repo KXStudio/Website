@@ -30,7 +30,7 @@ include_once("includes/header.php");
 <p>
     <a href="https://github.com/DISTRHO/Ildaeil" target="_blank"><b>Ildaeil</b></a>
     is mini-plugin host working as a plugin allowing one-to-one plugin format reusage.<br/>
-    The idea is to load it as a plugin inside your DAW and then other the "real" plugin inside Ildaeil.<br/>
+    The idea is to load it as a plugin inside your DAW and then the other "real" plugin inside Ildaeil.<br/>
     This allows, for example, a VST3 host to load LV2 plugins.
 </p>
 <p>
