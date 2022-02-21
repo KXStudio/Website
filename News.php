@@ -14,7 +14,7 @@ include_once("includes/header.php");
 </p>
 
 <p>
-    This is a bugfix release for Carla version v2.4 series, with some extra user-experience related minor changes.
+    This is a bugfix release for Carla version v2.4 series, with some extra user-experience related changes.
 </p>
 <p>
     <img src="/screenshots/carla.png" alt="carla"/>
