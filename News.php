@@ -9,6 +9,113 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Ildaeil v1.0 released</span><br/>
+    On <i>2022-02-21</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, another release is here, this time it is
+    <a href="https://github.com/DISTRHO/Ildaeil" target="_blank">Ildaeil</a>.<br/>
+    Something that was initially done as a test for
+    <a href="https://github.com/falkTX/Carla" target="_blank">Carla</a>
+    and
+    <a href="https://github.com/ocornut/imgui" target="_blank">ImGui</a>
+    usage within
+    <a href="https://github.com/DISTRHO/DPF" target="_blank">DPF</a>,
+    but turns out to be actually quite useful!<br/>
+    To those that are not up to date on KXStudio developments, let's recap this little new project...<br/>
+</p>
+<p>
+    <img src="/repo/screenshots/ildaeil.png" alt="ildaeil"/>
+</p>
+<p>
+    <a href="https://github.com/DISTRHO/Ildaeil" target="_blank"><b>Ildaeil</b></a>
+    is mini-plugin host working as a plugin allowing one-to-one plugin format reusage.<br/>
+    The idea is to load it as a plugin inside your DAW and then other the "real" plugin inside Ildaeil.<br/>
+    This allows, for example, a VST3 host to load LV2 plugins.
+</p>
+<p>
+    For the more technically-minded people, this is basically a combination of
+    <a href="https://github.com/falkTX/Carla" target="_blank">Carla</a>,
+    <a href="https://github.com/DISTRHO/DPF" target="_blank">DPF</a>
+    and
+    <a href="https://github.com/DISTRHO/DPF-Widgets" target="_blank">DPF-Widgets</a>.<br/>
+    There is some small code of its own for handling the drawing of the plugin list, generic GUI and offset the embed GUIs,
+    but everything else is done by these other projects.<br/>
+    Nothing that Ildaeil does is special, that Carla can't do, but using Carla means always having to deal with an extra window.<br/>
+    When wanting to load a single LV2 plugin on a non-LV2 supported host for example, this becomes quite cumbersome.<br/>
+    With a little bit of glue code to tie up Carla, DPF and a little GUI, this project becomes possible.
+</p>
+
+<h3>Example</h3>
+<p>
+    Here is an example, loading the LV2-specific plugin
+    <a href="https://github.com/Dougal-s/Aether" target="_blank">Aether</a>
+    inside
+    <a href="https://www.renoise.com/" target="_blank">Renoise</a>, which does not support LV2 plugins.
+</p>
+<p>
+    <img src="/screenshots/news/ildaeil-renoise-aether.png" alt="ildaeil-renoise-aether"/>
+</p>
+<p>
+    You can see more of these screenshots
+    <a href="https://github.com/DISTRHO/Ildaeil/tree/v1.0#screenshots" target="_blank">here</a>.
+</p>
+
+<h3>Details</h3>
+<p>
+    The Ildaeil name comes from the korean 일대일, which means "one to one".<br/>
+    It is one plugin exposed to the host (Ildaeil itself) and one plugin loaded inside Ildaeil.
+</p>
+<p>
+    When open, Ildaeil will show a list of plugins to pick from or the plugin editor if one is already selected.<br/>
+    If the plugin provides an embedable UI, Ildaeil show will that by default, otherwise it shows a generic parameter list.<br/>
+    Toggling between generic vs custom/embed view is possible.<br/>
+    In the case of a plugin providing a custom UI that is not embedable, Ildaeil will show the generic view by default.<br/>
+    You can press "Show Custom GUI" to open the plugin UI in an external window.<br/>
+</p>
+
+<p>
+    For version 1.0, this is what we have:
+</p>
+<ul>
+    <li>Available as JACK/Standalone, LV2, VST2 and VST3 (with VST3 being experimental)</li>
+    <li>Can load internal (from Carla) and LV2 plugins</li>
+    <li>Comes in Synth, FX and MIDI variants</li>
+    <li>LV2 plugins can run in-process or bridged</li>
+    <li>Works on macOS, Windows and Linux/X11 systems</li>
+</ul>
+
+<p>
+    And these are the current limitations:
+</p>
+<ul>
+    <li>Plugin parameters are not exposed to the host</li>
+    <li>UI is not resizable by the host</li>
+</ul>
+<p>
+    Later on, in theory, it should be able to load the other plugin formats supported by Carla
+    (that being LADSPA, DSSI, VST2, VST3 and AU).<br/>
+    There are some technical limitations that prevent this from happening right now,
+    Carla will need some backend changes before this can happen.
+</p>
+<p>
+    Note that exposing the parameters to the host is not in the immediate plans.
+</p>
+
+<h3>Downloads</h3>
+<p>
+    There are pre-compiled binaries for Linux, macOS and Windows which can downloaded at
+      <a href="https://github.com/DISTRHO/Ildaeil/releases/tag/v1.0" target="_blank">
+          https://github.com/DISTRHO/Ildaeil/releases/tag/v1.0</a>.<br/>
+    You can also find it in the KXStudio repositories as <b>ildaeil</b> package.<br/>
+</p>
+<p>
+    Have fun!
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.4.2 has been released</span><br/>
     On <i>2022-02-19</i> by<i> falkTX</i>
 </p>
