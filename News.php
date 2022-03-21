@@ -9,6 +9,72 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Cardinal 22.03 released</span><br/>
+    On <i>2022-03-21</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, a new release of Cardinal is here.<br/>
+    This brings quite a few new extra modules, updates the existing ones and adds a few nice features as requested by users.<br/>
+    This is what changed compared to the (initial) 22.02 release:
+</p>
+<ul>
+    <li>Add Windows installer, shipping with optional Carla Plugin Host integration and JACK Standalone</li>
+    <li>Add AudioUnit plugin format for macOS</li>
+    <li>Fix build for HaikuOS (only headless possible for now)</li>
+    <li>Fix crash in headless build when loading certain modules</li>
+    <li>Fix GUI resize in high-dpi systems</li>
+    <li>Fix Host MIDI-CC channel pressure and pitchbend interfering with CCs</li>
+    <li>Fix repaints in macOS, allow to set update rate limit (only works in some hosts)</li>
+    <li>Fix VST2 keyboard input always in uppercase in some hosts</li>
+    <li>Force 32bit alignment for vectorized operations, fixes 32bit build</li>
+    <li>Initial bypass implementation, MIDI only for now</li>
+    <li>Make host audio meters independent from each other</li>
+    <li>Merge CardinalFX and CardinalSynth VST2 folders as single Cardinal.vst</li>
+    <li>Update VCV Rack base to v2.1</li>
+</ul>
+
+<h3>New modules</h3>
+<p>
+    There's quite a few modules in this release, below follows a link to each project.<br/>
+    Same as in the previous release, all modules were checked for compatibility with GPLv3+ license.
+    More details <a href="https://github.com/DISTRHO/Cardinal/blob/main/docs/LICENSES.md" target="_blank">here</a>.
+</p>
+<ul>
+    <a href="https://github.com/8Mode/8Mode-VCV_Modules" target="_blank"><li>8Mode</a></li>
+    <a href="https://github.com/aaronstatic/AaronStatic_modules" target="_blank"><li>Aaron Static</a></li>
+    <a href="https://github.com/algoritmarte/AlgoritmarteVCVPlugin" target="_blank"><li>AlgoritmArte</a></li>
+    <a href="https://github.com/AnimatedCircuits/RackModules" target="_blank"><li>Animated Circuits</a></li>
+    <a href="https://github.com/CardinalModules/ArableInstruments" target="_blank"><li>Arable Instruments</a></li>
+    <a href="https://github.com/kauewerner/Axioma" target="_blank"><li>Axioma</a></li>
+    <a href="https://github.com/VCVRack/Befaco" target="_blank"><li>Befaco</a></li>
+    <a href="https://github.com/catronomix/catro-modulo" target="_blank"><li>Catro/Modulo</a></li>
+    <a href="https://github.com/jensschulze/GoodSheperd" target="_blank"><li>GoodSheperd</a></li>
+    <a href="https://gitlab.com/hampton-harmonics/hampton-harmonics-modules" target="_blank"><li>Hampton Harmonics</a></li>
+    <a href="https://github.com/janne808/kocmoc-rack-modules" target="_blank"><li>kocmoc</a></li>
+    <a href="https://github.com/grough/lilac-loop-vcv" target="_blank"><li>Lilac Loop</a></li>
+    <a href="https://github.com/martin-lueders/ML_modules" target="_blank"><li>ML Modules</a></li>
+    <a href="https://github.com/MockbaTheBorg/MockbaModular" target="_blank"><li>Mockba Modular</a></li>
+    <a href="https://github.com/netboy3/MSM-vcvrack-plugin" target="_blank"><li>MSM</a></li>
+    <a href="https://github.com/mhetrick/nonlinearcircuits" target="_blank"><li>Nonlinear Circuits</a></li>
+    <a href="https://github.com/RareBreeds/Orbits" target="_blank"><li>Orbits</a></li>
+    <a href="https://github.com/CardinalModules/ArableInstruments" target="_blank"><li>Parable Instruments</a></li>
+    <a href="https://github.com/patheros/PathSetModules" target="_blank"><li>Path Set</a></li>
+    <a href="https://github.com/aptrn/stocaudio-modules" target="_blank"><li>stocaudio</a></li>
+    <a href="https://github.com/clone45/voxglitch" target="_blank"><li>Voxglitch</a></li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Cardinal/releases/tag/22.03" target="_blank">
+          https://github.com/DISTRHO/Cardinal/releases/tag/22.03</a>.<br/>
+    Cardinal is released as LV2, VST2 and VST3 plugin, plus AudioUnit and JACK standalone for certain systems.<br/>
+    The VST3 version is still considered experimental, prefer to use LV2 or VST2 if possible at this time.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Ildaeil v1.0 released</span><br/>
     On <i>2022-02-21</i> by<i> falkTX</i>
 </p>
