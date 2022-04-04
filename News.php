@@ -46,8 +46,8 @@ include_once("includes/header.php");
 <h3>Downloads</h3>
 <p>
     The source code plus Linux, macOS and Windows binaries can be downloaded at
-      <a href="https://github.com/DISTRHO/Cardinal/releases/tag/22.03" target="_blank">
-          https://github.com/DISTRHO/Cardinal/releases/tag/22.03</a>.<br/>
+      <a href="https://github.com/DISTRHO/Cardinal/releases/tag/22.04" target="_blank">
+          https://github.com/DISTRHO/Cardinal/releases/tag/22.04</a>.<br/>
     Cardinal is released as LV2, VST2 and VST3 plugin, plus AudioUnit and JACK standalone for certain systems.<br/>
     The VST3 version is still considered experimental, prefer to use LV2 or VST2 if possible at this time.
 </p>
