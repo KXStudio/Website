@@ -9,6 +9,52 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Cardinal 22.04 released</span><br/>
+    On <i>2022-04-04</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, yet another release of <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a> is here,
+    this time focused on bugfixes.<br/>
+    <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
+    is a free and open-source virtual modular synthesizer plugin.<br/>
+    It is based on the popular <a href="https://github.com/VCVRack/Rack/" target="_blank">VCV Rack</a>
+    but with a focus on being a fully self-contained plugin version.
+</p>
+<p>
+    <img src="/repo/screenshots/cardinal.png" alt="cardinal"/>
+</p>
+<p>
+    Changelog:
+</p>
+<ul>
+    <li>Add Interverb demo patch (in source code)</li>
+    <li>Add retrigger to Host-MIDI</li>
+    <li>Do not show resize handle on JACK Standalone</li>
+    <li>Fix and enable ChowDSP Credit module</li>
+    <li>Fix potential noise burts on load with ihtsyn MVerb-based modules</li>
+    <li>Fix messed up graphics on Windows with High-DPI screens</li>
+    <li>Fix resources not found on some Windows systems (by not relying on environment variables)</li>
+    <li>Fix several Windows UTF-16 issues</li>
+    <li>Fix X11 file dialogs not appearing on some systems (auto-activate needed DBus portal)</li>
+    <li>Fix VST3 state under some hosts</li>
+    <li>Make JACK Standalone more useful on Windows (log to console when possible, show error dialog if JACK not running)</li>
+    <li>Optimizations to core modules and headless build</li>
+    <li>Refresh default template, add FX and Synth specific template variants</li>
+    <li>Tweak Host-MIDI default parameters</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Cardinal/releases/tag/22.03" target="_blank">
+          https://github.com/DISTRHO/Cardinal/releases/tag/22.03</a>.<br/>
+    Cardinal is released as LV2, VST2 and VST3 plugin, plus AudioUnit and JACK standalone for certain systems.<br/>
+    The VST3 version is still considered experimental, prefer to use LV2 or VST2 if possible at this time.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Cardinal 22.03 released</span><br/>
     On <i>2022-03-21</i> by<i> falkTX</i>
 </p>
