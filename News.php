@@ -9,6 +9,61 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.4.3 has been released</span><br/>
+    On <i>2022-02-19</i> by<i> falkTX</i>
+</p>
+
+<p>
+    This is a small bugfix release for the Carla v2.4 series.
+</p>
+<p>
+    <img src="/screenshots/carla.png" alt="carla"/>
+</p>
+<p>
+    <a href="https://kx.studio/carla" class="external free" rel="nofollow" target="_blank">Carla</a>
+    is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
+    It has some nice features like automation of parameters via MIDI CC (and send output back as MIDI too) and full OSC control.<br/>
+</p>
+<h3>Fixes</h3>
+<ul>
+    <li>Fix build for Alpine Linux and BSD</li>
+    <li>Fix integration with internal Qt toolbar visibility state</li>
+    <li>Fix plugin search (regression from 2.4.2)</li>
+    <li>Fix several Windows UTF-16 issues</li>
+</ul>
+
+<h3>Build related changes</h3>
+<ul>
+    <li>Add -fno-gnu-unique to default build flags</li>
+    <li>Implement VERBOSE make flag</li>
+    <li>Make build compatible with LTO, now enabled on official macOS/Windows binaries</li>
+    <li>Replace CARLA_EXPORT macro with separate API / PLUGIN export options</li>
+    <li>Set new X-NSM-Exec desktop file property</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla".<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<h3>Notes for users</h3>
+<p>
+    This was already the case for v2.2 and v2.3 but it is worth reiterating:<br/>
+    When using JACK2, the canvas - plugin integrations requires at least JACK2 v1.9.13.<br/>
+    This is because Carla relies on JACK meta-data in order to store information about each plugin/client,
+    and meta-data was only added to JACK2 in version 1.9.13.<br/>
+    Alternatively, you can use JACK1 instead of JACK2, which has meta-data support since a long time.
+</p>
+<p>
+    Also there are still no official Linux binary builds for v2.4.3.<br/>
+    Carla v2.4.3 is provided in the KXStudio repositories and in many official Linux distribution repositories anyway.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Cardinal 22.04 released</span><br/>
     On <i>2022-04-04</i> by<i> falkTX</i>
 </p>
