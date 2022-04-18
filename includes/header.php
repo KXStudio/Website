@@ -384,7 +384,7 @@ function isMobile() {
 <?php } else if ($PAGE_TYPE == "DOWNLOADS") { ?>
                     <li><a href="#Binaries">Binaries</a></li>
                     <li><a href="#SourceCode">Source Code</a></li>
-                    <li><a href="#Artwork">Artwork</a></li>
+                    <li><a href="#Repositories">Repositories</a></li>
 <?php } else if ($PAGE_TYPE == "PASTE") { ?>
                     <li><a href="<?php echo $ROOT; ?>/Paste" title="Create new paste">New Paste</a></li>
     <?php if ($show_paste && ! $is_error) { ?>
