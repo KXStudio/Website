@@ -14,16 +14,14 @@ include_once("includes/versions.php");
     </p>
     <p class="p_extra_spaced">
         <b>Linux Downloads:</b><br/>
-        &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/cadence/Cadence-0.8.1-linux32.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence </a> (32bit, version 0.8.1)<br/>
-        &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/cadence/Cadence-0.8.1-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence </a> (64bit, version 0.8.1)<br/>
+<!--         &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/cadence/Cadence-0.8.1-linux32.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank"> -->
+<!--               <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence </a> (32bit, version 0.8.1)<br/> -->
+<!--         &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/cadence/Cadence-0.8.1-linux64.tar.xz/download" class="external text a_bigger_text" rel="nofollow" target="_blank"> -->
+<!--               <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence </a> (64bit, version 0.8.1)<br/> -->
         &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/v<?php echo $VERSION_CARLA_OLD; ?>Carla_<?php echo $VERSION_CARLA_OLD; ?>-linux32.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (32bit, version <?php echo $VERSION_CARLA_OLD; ?>, requires Qt 5.9 or higher)<br/>
         &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/v<?php echo $VERSION_CARLA_OLD; ?>/Carla_<?php echo $VERSION_CARLA_OLD; ?>-linux64.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (64bit, version <?php echo $VERSION_CARLA_OLD; ?>, requires Qt 5.9 or higher)<br/>
-        &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/festige/festige-1.0.2-x86.tar.gz/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_festige.png" alt="" class="img_text_align"/> FeSTige </a> (32bit, version 1.0.2)<br/>
     </p>
     <p class="p_extra_spaced">
         <b>MacOS Downloads:</b><br/>
@@ -34,8 +32,8 @@ include_once("includes/versions.php");
     </p>
     <p class="p_extra_spaced">
         <b>Windows Downloads:</b><br/>
-        &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/cadence/Cadence-0.8.1-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence </a> (32bit, version 0.8.1)<br/>
+<!--         &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/cadence/Cadence-0.8.1-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank"> -->
+<!--               <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence </a> (32bit, version 0.8.1)<br/> -->
         &nbsp;<a href="https://github.com/falkTX/Carla-Releases/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla-<?php echo $VERSION_CARLA_MAJ; ?>-win32.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (32bit, version <?php echo $VERSION_CARLA; ?>)<br/>
         &nbsp;<a href="https://github.com/falkTX/Carla-Releases/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla-<?php echo $VERSION_CARLA_MAJ; ?>-win64.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
@@ -55,15 +53,14 @@ include_once("includes/versions.php");
     </p>
     <p class="p_extra_spaced">
         <b>Downloads:</b><br/>
-        &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/cadence/Cadence-0.8.1-src.tar.bz2/download" class="external free a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence </a> (version 0.8.1)<br/>
+<!--         &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/cadence/Cadence-0.8.1-src.tar.bz2/download" class="external free a_bigger_text" rel="nofollow" target="_blank"> -->
+<!--               <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence </a> (version 0.8.1)<br/> -->
         &nbsp;<a href="https://github.com/falkTX/Carla/archive/v<?php echo $VERSION_CARLA; ?>.tar.gz" class="external free a_bigger_text" rel="nofollow" target="_blank">
               <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (version <?php echo $VERSION_CARLA; ?>)<br/>
-        &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/festige/festige-1.0.2-src.tar.gz/download" class="external free a_bigger_text" rel="nofollow" target="_blank">
-              <img src="images/ico_festige.png" alt="" class="img_text_align"/> FeSTige </a> (version 1.0.2)<br/>
     </p>
 </ul>
 
+<!--
 <hr/>
 
 <ul id="Artwork" name="Artwork">
@@ -91,6 +88,7 @@ include_once("includes/versions.php");
               <img src="images/ico_kxstudio.png" alt="" class="img_text_align"/> KXStudio Artwork</a> (version 2012-12-22)
     </p>
 </ul>
+-->
 
 <p><br/></p>
 
