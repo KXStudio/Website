@@ -327,7 +327,6 @@ function isMobile() {
                         <p><a href="<?php echo $ROOT; ?>/Repositories:Applications">Applications (in Repo)</a></p>
                         <p><a href="<?php echo $ROOT; ?>/Repositories:Plugins">Plugins (in Repo)</a></p>
                         <p><a href="<?php echo $ROOT; ?>/Repositories:FAQ">FAQ</a></p>
-                        <p><a href="<?php echo $ROOT; ?>/Repositories:Extras">Extras</a></p>
                     </div>
                 </li>
                 <li id="item-board" class="<?php if ($PAGE_SOURCE_1[0] == "/Board") { ?>selected<?php } ?>">
