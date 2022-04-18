@@ -16,6 +16,7 @@ PACKAGES_BLACKLIST=("carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" 
 PACKAGES_WHITELIST=("cadence" "catia" "claudia" "impro-visor")
 PACKAGES_SEPARATE_DATA=("hybridreverb2")
 PACKAGES_BASE_URL="http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/"
+PACKAGES_BASE_HTTPS="https://launchpad.net/~kxstudio-debian/+archive//${REPO_TARGET}/+files/"
 
 rm -f Packages.gz Packages
 mkdir -p pool-cache
@@ -226,33 +227,33 @@ for PACKAGE in ${PACKAGES[@]}; do
 
     if echo "${PACKAGE_FILENAME}" | grep -q "carla-bridge-win64_"; then
         # amd64
-        echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME}\" target=\"_blank\">amd64</a>&nbsp;&nbsp;"
+        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_FILENAME}\" target=\"_blank\">amd64</a>&nbsp;&nbsp;"
         # i386
         PACKAGE_FILENAME_ARCHED=$(echo "${PACKAGE_FILENAME}" | sed "s/-win64_/-win32_/g" | sed "s/_amd64.deb/_i386.deb/g")
-        echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME_ARCHED}\" target=\"_blank\">i386</a>&nbsp;&nbsp;(install both)"
+        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_FILENAME_ARCHED}\" target=\"_blank\">i386</a>&nbsp;&nbsp;(install both)"
 
     elif echo "${PACKAGE_FILENAME}" | grep -q "carla-vst-wine_"; then
         # amd64
-        echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME}\" target=\"_blank\">amd64</a>&nbsp;&nbsp;"
+        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_FILENAME}\" target=\"_blank\">amd64</a>&nbsp;&nbsp;"
         # i386
         PACKAGE_FILENAME_ARCHED=$(echo "${PACKAGE_FILENAME}" | sed "s/_amd64.deb/_i386.deb/g")
-        echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME_ARCHED}\" target=\"_blank\">i386</a>&nbsp;&nbsp;"
+        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_FILENAME_ARCHED}\" target=\"_blank\">i386</a>&nbsp;&nbsp;"
 
     elif echo "${PACKAGE_FILENAME}" | grep -q "wineasio_"; then
         # amd64
         PACKAGE_FILENAME_ARCHED=$(echo "${PACKAGE_FILENAME}" | sed "s/wineasio_/wineasio-amd64_/g")
-        echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME_ARCHED}\" target=\"_blank\">amd64</a>&nbsp;&nbsp;"
+        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_FILENAME_ARCHED}\" target=\"_blank\">amd64</a>&nbsp;&nbsp;"
         # i386
         PACKAGE_FILENAME_ARCHED=$(echo "${PACKAGE_FILENAME}" | sed "s/wineasio_/wineasio-i386_/g" | sed "s/_amd64.deb/_i386.deb/g")
-        echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME_ARCHED}\" target=\"_blank\">i386</a>&nbsp;&nbsp;"
+        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_FILENAME_ARCHED}\" target=\"_blank\">i386</a>&nbsp;&nbsp;"
 
     elif echo "${PACKAGE_FILENAME}" | grep -q "_all.deb"; then
-        echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME}\" target=\"_blank\">all</a>&nbsp;&nbsp;"
+        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_FILENAME}\" target=\"_blank\">all</a>&nbsp;&nbsp;"
 
     else
         for ARCH in ${PACKAGES_ARCHS[@]}; do
             PACKAGE_FILENAME_ARCHED=$(echo "${PACKAGE_FILENAME}" | sed "s/_amd64.deb/_${ARCH}.deb/g")
-            echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME_ARCHED}\" target=\"_blank\">${ARCH}</a>&nbsp;&nbsp;"
+            echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_FILENAME_ARCHED}\" target=\"_blank\">${ARCH}</a>&nbsp;&nbsp;"
         done
     fi
 
@@ -262,7 +263,7 @@ for PACKAGE in ${PACKAGES[@]}; do
         else
             PACKAGE_FILENAME_DATA=$(echo "${PACKAGE_FILENAME}" | sed "s|/${PACKAGE}_|/${PACKAGE_DATA}_|g" | sed "s/_amd64.deb/_all.deb/g")
         fi
-        echo "<a href=\"${PACKAGES_BASE_URL}${PACKAGE_FILENAME_DATA}\" target=\"_blank\">data</a>"
+        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_FILENAME_DATA}\" target=\"_blank\">data</a>"
     fi
     echo "</td></tr>"
     echo "</table></div></div>"

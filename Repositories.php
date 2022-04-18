@@ -5,22 +5,28 @@ $PAGE_SOURCE_1 = ARRAY("/Repositories");
 $PAGE_SOURCE_2 = ARRAY("Repositories");
 include_once("includes/header.php");
 
-$DEBIAN_PACKAGE     = "kxstudio-repos_10.0.3_all.deb";
+$DEBIAN_PACKAGE     = "kxstudio-repos_11.0.1_all.deb";
 $DEBIAN_PACKAGE_URL = "https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/" . $DEBIAN_PACKAGE;
 ?>
 
 <div class="box box-description">
     <p>
-        The KXStudio repositories support all Debian versions since <b>10 (Buster)</b> and Ubuntu <b>18.04 (Bionic)</b> or above including Ubuntu 20.04.<br/>
-        They should work on all Debian-based distributions and variants.<br/>
-        A computer running intel-based 32bit or 64bit with SSE2 is required,
-        or alternatively an ARM-based system (32bit with neon-vfpv4 or 64bit).
+        The KXStudio repositories support all Debian versions since <b>11 (Bookworm)</b> and Ubuntu <b>20.04 (Focal)</b> or above including Ubuntu 22.04.<br/>
+        They should work on all Debian-based distributions and variants.
     </p>
     <p>
-        Once you have the repos installed, you can either manually install individual packages from them or
-            add the meta-packages to automatically install large sets of recommended packages.<br/>
+        The only real requirement is it being a computer capable of running <b>x86_64</b> (pretty much everything nowadays)
+        or an ARM-based system, which can be <b>armhf</b> (ARM 32bit with neon-vfpv4) or <b>aarch64</b> (ARM 64bit).<br/>
+        Legacy i686 systems (PCs that cannot do 64bit) are not supported.
+    </p>
+    <p>
+        Once you have the repositories enabled, you should first update the software sources (using your preferred GUI or simply running <b>sudo apt update</b>),<br/>
+        then either manually install individual packages or the meta-packages to automatically get large sets of audio tools and plugins.<br/>
         See the <a href="<?php echo $ROOT; ?>/Documentation:Repository:Meta-Packages">Meta-Packages</a> page for more details.<br/>
-        In either case, we always recommend to install the <b>kxstudio-default-settings</b> package after enabling the repositories.
+    </p>
+    <p>
+        We recommend to install the <b>kxstudio-default-settings</b> package after enabling the repositories.<br/>
+        This will put in place a few system tweaks useful for audio, these include for example, minimizing swap usage and increasing maximum number of open files.
     </p>
     <p>
         You might also want to check:
@@ -52,9 +58,6 @@ $DEBIAN_PACKAGE_URL = "https://launchpad.net/~kxstudio-debian/+archive/kxstudio/
 <pre>
 <span style="color: rgb(110, 110, 110);"># Install required dependencies if needed</span>
 sudo apt-get install apt-transport-https gpgv
-
-<span style="color: rgb(110, 110, 110);"># Remove legacy repos</span>
-sudo dpkg --purge kxstudio-repos-gcc5
 
 <span style="color: rgb(110, 110, 110);"># Download package file</span>
 wget <?php echo $DEBIAN_PACKAGE_URL . "\n"; ?>

@@ -10,8 +10,8 @@ include_once("includes/header.php");
     <p>
         This section lists the audio plugins available in the repositories.<br/>
         Click on the thumbnail to see the full-size image.<br/>
-        Individual deb files can be downloaded, requiring at least Debian 10 / Ubuntu 18.04 or superior.<br/>
-        If a "data" download is listed, it needs to be installed first before the architecture-dependent one.
+        Individual deb files can be downloaded, requiring at least Debian 11 / Ubuntu 20.04 or superior.<br/>
+        <b>If a "data" download is listed, it needs to be installed first before the architecture-dependent one</b>.
     </p>
     <p>
         You might also want to check:

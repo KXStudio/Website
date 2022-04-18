@@ -22,32 +22,34 @@ include_once("includes/header.php");
 
 <h5>How do I activate the KXStudio repos?</h5>
 <p>
-Just follow the instructions <a href="<?php echo $ROOT; ?>/Repositories">here</a>.
+    Just follow the instructions <a href="<?php echo $ROOT; ?>/Repositories">here</a>.
 </p>
 
 <h5>What computer systems are supported?</h5>
 <p>
-Any Debian or Ubuntu based system, running GNU/Linux.<br/>
-For Debian, version 10 (Buster) is required; on Ubuntu, 18.04 (Bionic).<br/>
-<br style="line-height:0.5em"/>
-Intel-based and ARM-based systems are supported, 32 and 64bit for both.<br/>
-For Intel-based systems a SSE2 capable CPU is required, while for ARM systems it is a neon-vfpv4 capable CPU.
+    Any modern Debian or Ubuntu based system, running GNU/Linux.<br/>
+    For Debian, version 11 (Bookworm) is required; on Ubuntu, 20.04 (Focal).<br/>
+    Anything more recent than this should be compatible.<br/>
+    <br style="line-height:0.5em"/>
+    The only real requirement is it being a computer capable of running <b>x86_64</b> (pretty much everything nowadays)
+    or an ARM-based system, which can be <b>armhf</b> (ARM 32bit with neon-vfpv4) or <b>aarch64</b> (ARM 64bit).<br/>
+    Legacy i686 systems (PCs that cannot do 64bit) are not supported.
 </p>
 
 <h5>I found an issue with a package, where can I report it?</h5>
 <p>
-Bug reports and package requests should be posted in the Github tracker
-  <a href="https://github.com/KXStudio/Repository/issues" target="_blank">here</a>.
+    Bug reports and package requests should be posted in the Github tracker
+    <a href="https://github.com/KXStudio/Repository/issues" target="_blank">here</a>.
 </p>
 
 <h5>Can I make a request for this new awesome-super-great application?</h5>
 <p>
-You can, but it will likely not be answered. The KXStudio repositories focus on audio plugins, not general applications.
+    You can, but it will likely not be answered. The KXStudio repositories focus on audio plugins, not general applications.
 </p>
 
 <h5>Why are applications not the focus for the KXStudio repos?</h5>
 <p>
-A few reasons actually:
+    A few reasons actually:
 </p>
 <ul>
   <li>Applications can easily have flatpaks, snaps or whatever.<br/>
@@ -61,13 +63,13 @@ A few reasons actually:
 
 <h5>Why are plugins tricky for general distributions?</h5>
 <p>
-As you likely already know, we run a lot of audio plugins at the same time, all in the same process space.
-If a single plugin misbehaves or crashes, it usually brings down the entire host or DAW.<br/>
+    As you likely already know, we run a lot of audio plugins at the same time, all in the same process space.
+    If a single plugin misbehaves or crashes, it usually brings down the entire host or DAW.<br/>
 </p>
 <p>
-So it is vital that we build the plugins in a way to minimize issues.
-They must be self-contained and never conflict with each other (as much as possible anyway).
-This entails, for example:
+    So it is vital that we build the plugins in a way to minimize issues.
+    They must be self-contained and never conflict with each other (as much as possible anyway).
+    This entails, for example:
 </p>
 <ul>
   <li><b>Building all plugin code and its dependencies with hidden symbols</b>, so only the plugin-format-defined entry-points are visible within a shared object.<br/>
@@ -92,10 +94,10 @@ This entails, for example:
 
 <h5>Why are packages prefixed with "5:" that bumps it over regular packages from other sources?</h5>
 <p>
-This is for protection of those running the KXStudio repositories in rolling-release style distributions.<br/>
-An update from the distribution which does not follow KXStudio rules is a potential source of issues (see the points above).<br/>
-Better to have something stable that you know won't break during updates.<br/>
-(The focus on plugins in the repos means it is much less work to maintain them, and this critical. The KXStudio repos should be up-to-date as much as possible)
+    This is for protection of those running the KXStudio repositories in rolling-release style distributions.<br/>
+    An update from the distribution which does not follow KXStudio rules is a potential source of issues (see the points above).<br/>
+    Better to have something stable that you know won't break during updates.<br/>
+    (The focus on plugins in the repos means it is much less work to maintain them, and this critical. The KXStudio repos should be up-to-date as much as possible)
 </p>
 
 <p><br/></p>
