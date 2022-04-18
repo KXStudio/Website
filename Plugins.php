@@ -46,27 +46,6 @@ include_once("includes/header.php");
 
 <hr/>
 
-<h3><span class="mw-headline" id="dssi-vst"> dssi-vst </span></h3>
-<p>
-    This was initially a fork of dssi-vst, based on "k_amlie"'s code updates (to make it more RT friendly),
-    with a few additional fixes including:
-</p>
-<ul>
-    <li>Enabled compiler optimizations where possible (ie, -O2 -ffast-math etc)</li>
-    <li>Implemented time-pos support, by using a dummy jack-client (only works if host uses JACK + Transport)</li>
-    <li>Implemented custom data/chunk, unofficial DSSI stuff (supported in Carla and a few other hosts)</li>
-    <li>Fixed UI re-opening after being closed</li>
-    <li>Update vestige header, to make more plugins load</li>
-</ul>
-<p>
-    falkTX is now the maintainer of this project.<br/>
-    The source code is available
-    <a href="https://github.com/falkTX/dssi-vst" class="external text" rel="nofollow" target="_blank">
-        here</a>.
-</p>
-
-<hr/>
-
 <h3><span class="mw-headline" id="fluidplug"> FluidPlug </span></h3>
 <p>
     FluidPlug uses SoundFonts as LV2 plugins via FluidSynth.<br/>
