@@ -27,7 +27,7 @@ include_once("includes/header.php");
 <h5>What computer systems are supported?</h5>
 <p>
     Any modern Debian or Ubuntu based system, running GNU/Linux.<br/>
-    For Debian, version 11 (Bookworm) is required; on Ubuntu, 20.04 (Focal).<br/>
+    For Debian, version 12 (Bookworm) is required; on Ubuntu, 20.04 (Focal).<br/>
     Anything more recent than this should be compatible.<br/>
     <br style="line-height:0.5em"/>
     The only real requirement is it being a computer capable of running <b>x86_64</b> (pretty much everything nowadays)
