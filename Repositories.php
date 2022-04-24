@@ -55,8 +55,11 @@ $DEBIAN_PACKAGE_URL = "https://launchpad.net/~kxstudio-debian/+archive/kxstudio/
     You can install it manually by running this:<br/>
 </p>
 <pre>
+<span style="color: rgb(110, 110, 110);"># Update software sources</span>
+sudo apt-get update
+
 <span style="color: rgb(110, 110, 110);"># Install required dependencies if needed</span>
-sudo apt-get install apt-transport-https gpgv
+sudo apt-get install apt-transport-https gpgv wget
 
 <span style="color: rgb(110, 110, 110);"># Download package file</span>
 wget <?php echo $DEBIAN_PACKAGE_URL . "\n"; ?>
