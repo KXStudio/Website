@@ -52,6 +52,10 @@ function isMobile() {
     <meta name="theme-color" content="#111111">
     <meta name="viewport" content="width=device-width">
 
+    <meta property="og:site_name" content="KXStudio" />
+    <meta property="og:title" content="<?php echo $PAGE_TITLE; ?>" />
+    <meta property="og:type" content="website" />
+
     <link rel="copyright" href="https://creativecommons.org/publicdomain/zero/1.0/" />
     <link rel="stylesheet" href="<?php echo $ROOT; ?>/css/style.fluid.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php echo $ROOT; ?>/css/style.css" type="text/css" media="screen" />

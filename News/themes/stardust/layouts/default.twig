@@ -9,7 +9,7 @@
     {% if (post.title) %}
     <title>$post.title | KXStudio News</title>
     <meta name="description" content="$post.title | KXStudio News" />
-    <meta property="og:description" content="${ post.caption }" />
+    <meta property="og:description" content="${ post.body | strip_tags | normalize | strip | truncate(70) }" />
     <meta property="og:site_name" content="KXStudio News" />
     <meta property="og:title" content="$post.title" />
     <meta property="og:type" content="website" />
