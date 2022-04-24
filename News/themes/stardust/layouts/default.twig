@@ -6,7 +6,7 @@
     <meta http-equiv="imagetoolbar" content="no" />
     <![endif]-->
 
-    <title>KXStudio News</title>
+    {% if (post.title) %}<title>$post.title | KXStudio News</title>{% else %}<title>KXStudio News</title>{% endif %}
 
     <meta name="theme-color" content="#111111">
     <meta name="viewport" content="width=device-width">
