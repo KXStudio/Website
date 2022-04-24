@@ -48,6 +48,7 @@ function isMobile() {
 
     <title><?php echo $PAGE_TITLE; ?></title>
 
+    <meta name="description" content="<?php echo $PAGE_TITLE; ?>" />
     <meta name="theme-color" content="#111111">
     <meta name="viewport" content="width=device-width">
 
