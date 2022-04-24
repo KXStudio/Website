@@ -11,7 +11,7 @@ $DEBIAN_PACKAGE_URL = "https://launchpad.net/~kxstudio-debian/+archive/kxstudio/
 
 <div class="box box-description">
     <p>
-        The KXStudio repositories support all Debian versions since <b>12 (Bookworm)</b> and Ubuntu <b>20.04 (Focal)</b> or above including Ubuntu 22.04.<br/>
+        The KXStudio repositories support all Debian versions since <b>11 (Bullseye)</b> and Ubuntu <b>20.04 (Focal)</b> or above including Ubuntu 22.04.<br/>
         They should work on all Debian-based distributions and variants.
     </p>
     <p>
