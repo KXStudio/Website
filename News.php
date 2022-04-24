@@ -9,6 +9,139 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Changes in KXStudio repositories</span><br/>
+    On <i>2022-04-24</i> by<i> falkTX</i>
+</p>
+
+<p>
+    For the impatient ones, the too-long-didn't-read short summary is:
+</p>
+<ul>
+    <li>Minimum required version to use the KXStudio repositories is now 20.04 / Focal or Debian 11 / Bookworm</li>
+    <li>i386 / 32bit systems are no longer supported</li>
+    <li>"Extras" repository has been marked as deprecated and should no longer be used</li>
+</ul>
+
+<h3>Updating base version to 20.04 / focal</h3>
+
+<p>
+    As Ubuntu 22.04 was just announced, I began to do work on the KXStudio repositories once again.<br/>
+    They were using Ubuntu 18.04 as base for all builds, which is getting old now and only has 1 more year of support.<br/>
+    That last part is important - when 18.04 goes end-of-line, no new
+    <a href="https://help.launchpad.net/Packaging/PPA" class="external free" rel="nofollow" target="_blank">Launchpad PPA</a>
+    builds are possible.<br/>
+    And since the KXStudio project relies on those its packages, I need to update the base version from time to time in order to be able to keep building things.
+</p>
+<p>
+    If you need to ask why using PPAs and not something else, there just isn't another service that can do all that is required (that I know of).<br/>
+    <a href="https://build.opensuse.org/" class="external free" rel="nofollow" target="_blank">OpenSUSE's Open Build System</a>
+    is similar, but it cannot handle the inter-dependency of the different sub-repositories.<br/>
+    For example, a "toolchain" repo is used on all builds but not exported to the user, so it is safe to update things like cmake and meson only for the repository builds without breaking the user's system/packages.
+</p>
+<p>
+    The extreme alternative would be to move to ArchLinux and their new
+    <a href="https://github.com/osam-cologne/archlinux-proaudio/blob/master/ANNOUNCEMENT.md" class="external free" rel="nofollow" target="_blank">Unofficial Pro-Audio Package Repository</a>,
+    and while tempting, I think a lot of users would be disappointed and sad with that call.<br/>
+    And hosting the entire build setup myself is not going to happen, I do not have the capacity or funds for such a thing.
+</p>
+<p>
+    But back to the topic at hand, moving up on the base version for KXStudio package builds means the user-facing minimum version also goes up.
+</p>
+<p>
+    So as of today <b>the minimum required version to use the KXStudio repositories is 20.04 / Focal or Debian 11 / Bookworm</b>.<br/>
+    Newly installed systems can no longer use the old variant of the KXStudio repositories.<br/>
+    The old 18.04-base packages are not going to be updated anymore.
+</p>
+
+<h3>Issues with i386 builds</h3>
+
+<p>
+    On 20.04 onwards, Ubuntu has disabled i386 PPA builds for all packages except those that are part of 20.04 release.<br/>
+    The move to 20.04 as repository base is already taking place and I did quite a few tests to try and workaround the build limitation, but from what I can tell it is just not possible.<br/>
+    This means <b>the KXStudio repositories will no longer provide i386 packages</b>.
+</p>
+<p>
+    Everything else will keep working, including armhf and arm64 packages.<br/>
+    Hopefully there are ways to still build a few 32bit things like wineasio and carla wine bridges, but those will be 64bit packages just with 32bit libraries.<br/>
+    I did not actually test for this yet, more news on it soon.
+</p>
+
+<h3>Deprecated repositories</h3>
+
+<p>
+    The lack of i386 package builds makes it impossible to build system libraries as was the case for the
+    <a href="https://kx.studio/Repositories:Extras">"Extras" repository</a>.<br/>
+    Without such packages it becomes pointless, so the <b>"Extras" repository has been marked as deprecated and should no longer be used</b>.
+</p>
+<p>
+    Somewhat related, the KXStudio "Music" sub-repository served no real use in the end.<br/>
+    And since now seems to be the time for cleanup and breakage, this one was marked as deprecated too.
+</p>
+<p>
+    Such deprecations make <b>apt</b> very unhappy, and it will begin complaining something like this:<br/>
+</p>
+<pre>
+E: Repository 'http://ppa.launchpad.net/kxstudio-debian/music/ubuntu bionic InRelease' changed its 'Label' value from 'Music' to 'Deprecated'
+N: This must be accepted explicitly before updates for this repository can be applied. See apt-secure(8) manpage for details.
+</pre>
+<p>
+    Just cleanup the apt list cache and the errors go away, like this:<br/>
+</p>
+<p>
+    <code>
+    &nbsp;sudo rm -f /var/lib/apt/lists/*
+    </code>
+</p>
+<p>
+    If you were using the "Extras" repository and now have issues because JACK can not be installed or updated,
+    you will need to revert it to the version from your official distribution repositories.<br/>
+    Run this to fix it, replacing "focal" by the linux distribution version label that applies to your case:<br/>
+</p>
+<p>
+    <code>
+    &nbsp;sudo apt-get update<br/>
+    &nbsp;sudo apt-get install libjack-jackd2-0/focal libjack-jackd2-0:i386/focal jackd2/focal
+    </code>
+</p>
+
+<h3>Final notes</h3>
+
+<p>
+    I realize this will make a few people sad, if the i386 builds were something you were relying on.<br/>
+    It pains me too, as this kinda encourages throwing away old usable hardware that cannot do 64bit.<br/>
+    Moving away from Debian base is not something I want to do at this point, but keeping 18.04 as base is not sustainable, as builds for it will soon stop working.<br/>
+    And doing full custom repositories is a massive endeavour, something I don't have the time and resources (or patience) for.<br/>
+    In the end, I am grateful to still be able to push new builds.
+</p>
+<p>
+    Speaking of new builds, those will still take a bit to appear, as I have decided to do things a bit better this time.<br/>
+    Using Ubuntu 20.04 as base allows to update the "debian format" to 13 which simplifies the builds, all packages are being converted one by one.<br/>
+    Also, I am uploading all
+    <a href="https://github.com/KXStudio/Repository/tree/master/sources" class="external free" rel="nofollow" target="_blank">debian source details on a public git repo</a>,
+    as a backup/precaution measure and also to more easily allow others to see how packages in the KXStudio repositories are done.<br/>
+    I do not really expect contributions that way, but more transparency is always nice.<br/>
+</p>
+<p>
+    Based on previous work done for
+    <a href="https://github.com/DISTRHO/DPF-Plugins/blob/289bd3e0af17aea5849ebafa28ed1c609db68369/.github/workflows/build.yml#L358" class="external free" rel="nofollow" target="_blank">continous-testing in Carla and DPF</a>,
+    I want to setup similar runtime tests for all plugins before they get pushed into the repositories.<br/>
+    Compared to just a few years ago, testing plugins is now much easier,
+    with Carla having a dedicated command-line test mode,
+    <a href="https://lv2plug.in/pages/validating-lv2-data.html" class="external free" rel="nofollow" target="_blank">LV2 validation tools</a>
+    becoming better and even
+    <a href="https://open-music-kontrollers.ch/lv2/lv2lint/#" class="external free" rel="nofollow" target="_blank">lv2lint</a>
+    that performs runtime tests.
+</p>
+<p>
+    I still want to finalize a few things in
+    <a href="https://github.com/DISTRHO/Cardinal" class="external free" rel="nofollow" target="_blank">Cardinal</a>
+    before going full-force on the repositories, but that side is almost done now, so very soon my attention can go back to packaging.<br/>
+    Good times ahead!
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.4.3 has been released</span><br/>
     On <i>2022-02-19</i> by<i> falkTX</i>
 </p>
