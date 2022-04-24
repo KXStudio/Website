@@ -17,7 +17,7 @@ include_once("includes/header.php");
     For the impatient ones, the too-long-didn't-read short summary is:
 </p>
 <ul>
-    <li>Minimum required version to use the KXStudio repositories is now 20.04 / Focal or Debian 11 / Bookworm</li>
+    <li>Minimum required version to use the KXStudio repositories is now 20.04 / Focal or Debian 12 / Bookworm</li>
     <li>i386 / 32bit systems are no longer supported</li>
     <li>"Extras" repository has been marked as deprecated and should no longer be used</li>
 </ul>
@@ -48,7 +48,7 @@ include_once("includes/header.php");
     But back to the topic at hand, moving up on the base version for KXStudio package builds means the user-facing minimum version also goes up.
 </p>
 <p>
-    So as of today <b>the minimum required version to use the KXStudio repositories is 20.04 / Focal or Debian 11 / Bookworm</b>.<br/>
+    So as of today <b>the minimum required version to use the KXStudio repositories is 20.04 / Focal or Debian 12 / Bookworm</b>.<br/>
     Newly installed systems can no longer use the old variant of the KXStudio repositories.<br/>
     The old 18.04-base packages are not going to be updated anymore.
 </p>
