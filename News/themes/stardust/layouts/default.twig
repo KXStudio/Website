@@ -6,8 +6,18 @@
     <meta http-equiv="imagetoolbar" content="no" />
     <![endif]-->
 
-    {% if (post.title) %}<title>$post.title | KXStudio News</title>{% else %}<title>KXStudio News</title>{% endif %}
-    {% if (post.title) %}<meta name="description" content="$post.title | KXStudio News" />{% else %}<meta name="description" content="KXStudio News" />{% endif %}
+    {% if (post.title) %}
+    <title>$post.title | KXStudio News</title>
+    <meta name="description" content="$post.title | KXStudio News" />
+    <meta property="og:description" content="${ post.body }" />
+    <meta property="og:site_name" content="KXStudio News" />
+    <meta property="og:title" content="$post.title" />
+    <meta property="og:type" content="website" />
+    <meta property="article:published_time" content="${ post.created_at | strftime("%Y-%m-%dT%H:%M:%S+00:00") }" />
+    {% else %}
+    <title>KXStudio News</title>
+    <meta name="description" content="KXStudio News" />
+    {% endif %}
 
     <meta name="theme-color" content="#111111">
     <meta name="viewport" content="width=device-width">
