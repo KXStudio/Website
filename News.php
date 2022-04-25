@@ -9,6 +9,21 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Correction: Changes in KXStudio repositories</span><br/>
+    On <i>2022-04-25</i> by<i> falkTX</i>
+</p>
+<p>
+    This is a quick correction to <a href="https://kx.studio/News/?action=view&url=changes-in-kxstudio-repositories-2">yesterday's post regarding changes in the KXStudio repositories</a>.<br/>
+    I mentioned that the minimum required version was Debian 12 / Bookworm.<br/>
+    This is incorrect, the minimum is actually Debian 11 / Bullseye.
+</p>
+<p>
+    Apologies for the lapse, have a good day! :)
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Changes in KXStudio repositories</span><br/>
     On <i>2022-04-24</i> by<i> falkTX</i>
 </p>
@@ -17,7 +32,7 @@ include_once("includes/header.php");
     For the impatient ones, the too-long-didn't-read short summary is:
 </p>
 <ul>
-    <li>Minimum required version to use the KXStudio repositories is now 20.04 / Focal or Debian 12 / Bookworm</li>
+    <li>Minimum required version to use the KXStudio repositories is now 20.04 / Focal or Debian 11 / Bullseye</li>
     <li>i386 / 32bit systems are no longer supported</li>
     <li>"Extras" repository has been marked as deprecated and should no longer be used</li>
 </ul>
@@ -30,7 +45,7 @@ include_once("includes/header.php");
     That last part is important - when 18.04 goes end-of-line, no new
     <a href="https://help.launchpad.net/Packaging/PPA" class="external free" rel="nofollow" target="_blank">Launchpad PPA</a>
     builds are possible.<br/>
-    And since the KXStudio project relies on those its packages, I need to update the base version from time to time in order to be able to keep building things.
+    And since the KXStudio project relies on those for its packages, I need to update the base version from time to time in order to be able to keep building things.
 </p>
 <p>
     If you need to ask why using PPAs and not something else, there just isn't another service that can do all that is required (that I know of).<br/>
@@ -48,7 +63,7 @@ include_once("includes/header.php");
     But back to the topic at hand, moving up on the base version for KXStudio package builds means the user-facing minimum version also goes up.
 </p>
 <p>
-    So as of today <b>the minimum required version to use the KXStudio repositories is 20.04 / Focal or Debian 12 / Bookworm</b>.<br/>
+    So as of today <b>the minimum required version to use the KXStudio repositories is 20.04 / Focal or Debian 11 / Bullseye</b>.<br/>
     Newly installed systems can no longer use the old variant of the KXStudio repositories.<br/>
     The old 18.04-base packages are not going to be updated anymore.
 </p>
