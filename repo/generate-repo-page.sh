@@ -16,7 +16,7 @@ PACKAGES_BLACKLIST=("carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" 
 PACKAGES_WHITELIST=("cadence" "catia" "claudia" "impro-visor")
 PACKAGES_SEPARATE_DATA=("hybridreverb2")
 PACKAGES_BASE_URL="http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/"
-PACKAGES_BASE_HTTPS="https://launchpad.net/~kxstudio-debian/+archive//${REPO_TARGET}/+files/"
+PACKAGES_BASE_HTTPS="https://launchpad.net/~kxstudio-debian/+archive/${REPO_TARGET}/+files/"
 
 rm -f Packages.gz Packages
 mkdir -p pool-cache
@@ -261,9 +261,9 @@ for PACKAGE in ${PACKAGES[@]}; do
 
     if [ -n "${PACKAGE_DATA}" ]; then
         if has_separate_data_package ${PACKAGE}; then
-            PACKAGE_BASENAME_DATA=$(echo "${PACKAGE_BASENAME}" | sed "s|/${PACKAGE}|/${PACKAGE_DATA}|g" | sed "s/_amd64.deb/_all.deb/g")
+            PACKAGE_BASENAME_DATA=$(echo "${PACKAGE_BASENAME}" | sed "s|${PACKAGE}|${PACKAGE_DATA}|g" | sed "s/_amd64.deb/_all.deb/g")
         else
-            PACKAGE_BASENAME_DATA=$(echo "${PACKAGE_BASENAME}" | sed "s|/${PACKAGE}_|/${PACKAGE_DATA}_|g" | sed "s/_amd64.deb/_all.deb/g")
+            PACKAGE_BASENAME_DATA=$(echo "${PACKAGE_BASENAME}" | sed "s|${PACKAGE}_|${PACKAGE_DATA}_|g" | sed "s/_amd64.deb/_all.deb/g")
         fi
         echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME_DATA}\" target=\"_blank\">data</a>"
     fi
