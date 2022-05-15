@@ -9,6 +9,107 @@ include_once("includes/header.php");
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
 <p>
+    <span style="font-size: 20px">&gt; Cardinal 22.05 has been released</span><br/>
+    On <i>2022-05-15</i> by<i> falkTX</i>
+</p>
+
+<p>
+    Hello everyone, yet another release of <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a> is here.<br/>
+    <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
+    is a free and open-source virtual modular synthesizer plugin.<br/>
+    It is based on the popular <a href="https://github.com/VCVRack/Rack/" target="_blank">VCV Rack</a>
+    but with a focus on being a fully self-contained plugin version.
+</p>
+<p>
+    This is a big update with not just bug-fixes but also new modules and a few behaviour changes too.<br/>
+    Particularly interesting for existing Rack users is the inclusion of the popular Fundamental modules,
+    though in customized fashion.<br/>
+    A new
+    <a href="https://github.com/DISTRHO/Cardinal/blob/main/docs/CARDINAL-MODULES.md#audio-to-cv-pitch" target="_blank">Audio to CV Pitch</a>
+    module also makes a debut, based on
+    <a href="https://github.com/DISTRHO/PitchTrackingSeries" target="_blank">DISTRHO PitchTrackingSeries</a>
+    which was a shared effort for
+    <a href="https://moddevices.com/guitar-synth/" target="_blank">pushing the feature into hardware units</a>.
+</p>
+<p>
+    <img src="/screenshots/news/cardinal-fundamental.png" alt="cardinal-fundamental"/>
+</p>
+
+<a href="" target="_blank"></a>
+
+<h3>Changelog</h3>
+<ul>
+    <li>Add macos-intel build (smaller in size and better fit for intel-based macs)</li>
+    <li>Add main <a href="https://forum.moddevices.com/t/cardinal/7287/81" target="_blank">Cardinal variant for MOD builds</a></li>
+    <li>Add <a href="https://github.com/DISTRHO/Cardinal/blob/main/docs/CARDINAL-MODULES.md#audio-to-cv-pitch" target="_blank">Audio to CV Pitch</a> Core module</li>
+    <li>Fix buffer size not always correct in the Audio Unit plugin</li>
+    <li>Force UI keyboard focus (delayed focus grab after UI is open)</li>
+    <li>Mute audio output if bypassed</li>
+    <li>Remap Ctrl key + mouse clicks to right-click on macOS to better deal with its silly "one button" UX</li>
+    <li>Store a few more properties as plugin state, including favorites</li>
+</ul>
+
+<h3>Added plugins</h3>
+<ul>
+    <li><a href="https://github.com/CardinalModules/Fundamental" target="_blank">Fundamental</a> (fork with custom panels)</li>
+    <li><a href="https://github.com/knchaffin/Meander" target="_blank">Meander</a></li>
+    <li><a href="https://github.com/VegaDeftwing/PinkTromboneVCV" target="_blank">PinkTrombone</a></li>
+    <li><a href="https://gitlab.com/unlessgames/unless_modules" target="_blank">unless_modules</a></li>
+    <li><a href="https://github.com/korfuri/WhatTheRack" target="_blank">WhatTheRack</a></li>
+</ul>
+
+<h3>Updated modules</h3>
+<ul>
+    <li><a href="https://github.com/jhoar/AmalgamatedHarmonics" target="_blank">Amalgamated Harmonics</a></li>
+    <li><a href="https://github.com/CardinalModules/AudibleInstruments" target="_blank">Audible Instruments</a></li>
+    <li><a href="https://github.com/VCVRack/Befaco" target="_blank">Befaco</a> (adds Channel Strip)</li>
+    <li><a href="https://github.com/sebastien-bouffier/Bidoo" target="_blank">Bidoo</a></li>
+    <li><a href="https://github.com/bogaudio/BogaudioModules" target="_blank">BogaudioModules</a></li>
+    <li><a href="https://github.com/jatinchowdhury18/ChowDSP-VCV/" target="_blank">ChowDSP</a></li>
+    <li><a href="https://github.com/dbgrande/GrandeModular" target="_blank">GrandeModular</a> (adds VCA4)</li>
+    <li><a href="https://github.com/MarcBoule/ImpromptuModular" target="_blank">ImpromptuModular</a> (adds Sygen and Variations)</li>
+    <li><a href="https://github.com/MarcBoule/MindMeldModular" target="_blank">MindMeldModular</a></li>
+    <li><a href="https://github.com/patheros/PathSetModules" target="_blank">Path Set</a> (adds GlassPane, Nudge and ShiftyExpander)</li>
+    <li><a href="https://github.com/SteveRussell33/Prism" target="_blank">Prism</a></li>
+    <li><a href="https://github.com/SteveRussell33/repelzen" target="_blank">repelzen</a></li>
+    <li><a href="https://github.com/clone45/voxglitch" target="_blank">Voxglitch</a> (adds GrooveBox)</li>
+    <li><a href="https://github.com/ValleyAudio/ValleyRackFree" target="_blank">ValleyAudio</a></li>
+</ul>
+
+<h3>Module fixes</h3>
+<ul>
+    <li>Fix Core Audio2 meters stuck state when both L &amp; R are disconnected</li>
+    <li>Fix Core Blank panel tags</li>
+    <li>Fix Core Host-MIDI-Map flooding console logs in case of error (only print the same error once)</li>
+    <li>Fix Core Host-Time reset trigger for hosts with non-static buffer sizes</li>
+    <li>Fix DrumKit Sequencer memory corruption</li>
+    <li>Fix mscHack PingPong filter cutoff value when loaded without GUI</li>
+</ul>
+
+<h3>Extra Notes</h3>
+<p>
+    For packagers: fftw3f is now an optional dependency, required for "Audio to CV Pitch" module.<br/>
+    The module will built if fftw3f is available during build, otherwise disabled.
+</p>
+<p>
+    The "lv2export" stuff has been reworked and works now, includes 3 test plugins.<br/>
+    This allows to export individual modules as single lv2 plugins, with very minimal binaries and no UI.<br/>
+    For now it is still quite experimental, just to mess around with.<br/>
+    Future releases might enable them by default, still undecided.
+</p>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Cardinal/releases/tag/22.05" target="_blank">
+          https://github.com/DISTRHO/Cardinal/releases/tag/22.05</a>.<br/>
+    Cardinal is released as LV2, VST2 and VST3 plugin, plus AudioUnit and JACK standalone for certain systems.<br/>
+    The VST3 version is still considered experimental, prefer to use LV2 or VST2 if possible at this time.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Correction: Changes in KXStudio repositories</span><br/>
     On <i>2022-04-25</i> by<i> falkTX</i>
 </p>
