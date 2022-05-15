@@ -35,8 +35,6 @@ include_once("includes/header.php");
     <img src="/screenshots/news/cardinal-fundamental.png" alt="cardinal-fundamental"/>
 </p>
 
-<a href="" target="_blank"></a>
-
 <h3>Changelog</h3>
 <ul>
     <li>Add macos-intel build (smaller in size and better fit for intel-based macs)</li>
