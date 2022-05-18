@@ -42,26 +42,6 @@ include_once("includes/header.php");
     Whereas the specific plugin format packages are more complete, they will install all individual packages that contain plugins in that format.
 </p>
 
-<h3><span class="mw-headline" id="RecommendedPackageList">Recommended Meta-Package List</span></h3>
-<p>
-    These are for packages that come from the Debian/Ubuntu repositories, not the KXStudio ones.<br/>
-    In a tree-like view, the recommended meta-packages are setup like this:
-</p>
-<ul>
-    <li>kxstudio-recommended-all<ul>
-        <li>kxstudio-recommended-audio</li>
-        <li>kxstudio-recommended-audio-plugins
-            <ul>
-                <li>kxstudio-recommended-audio-plugins-ladspa</li>
-                <li>kxstudio-recommended-audio-plugins-dssi</li>
-                <li>kxstudio-recommended-audio-plugins-lv2</li>
-            </ul>
-        </li>
-        <li>kxstudio-recommended-graphics</li>
-        <li>kxstudio-recommended-video</li>
-    </ul></li>
-</ul>
-
 <h3><span class="mw-headline" id="Notes">Notes</span></h3>
 <p>
     The 'meta-audio-plugins-collection' package is an alternative to installing all plugins at once.<br/>
@@ -73,10 +53,6 @@ include_once("includes/header.php");
       are not part of the specific '*-audio-plugins-*' packages.<br/>
     This is because installing those will install additional plugin formats and/or full applications.<br/>
     To ensure, for example, that you get all possible LV2 plugins from KXStudio, install 'meta-audio-plugins' and 'meta-audio-plugins-lv2'.
-</p>
-<p>
-    The 'recommended-audio' recommends 'recommended-audio-plugins'.<br/>
-    Depending on your distro this might be treated as a dependency.
 </p>
 
 <p><br/></p>
