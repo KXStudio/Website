@@ -19,9 +19,31 @@ include_once("includes/header.php");
     </ul>
 </div>
 
-<h5>How do I activate the KXStudio repos?</h5>
+<h5>How do I activate the KXStudio repositories?</h5>
 <p>
     Just follow the instructions <a href="<?php echo $ROOT; ?>/Repositories">here</a>.
+</p>
+
+<h5>How do I remove/uninstall the KXStudio repositories?</h5>
+<p>
+    Simply uninstall the kxstudio-repos package with the "purge" option, like so:
+</p>
+<pre>
+sudo apt-get purge kxstudio-repos
+</pre>
+<p>
+    Due to how Debian packages work, uninstalling a package does not remove its <b>/etc</b> content, as these are treated as system configuration files.<br/>
+    We must use the <b>purge</b> option in order to delete such files.<br/>
+    Note that this operation will not uninstall or downgrade individual packages.
+</p>
+
+<h5>I upgraded my OS and can no longer install KXStudio packages</h5>
+<p>
+    It is common for Ubuntu (and maybe others) to disable or even automatically modify external repository files when upgrading to a new version.<br/>
+    This leads to the KXStudio repositories no longer being setup properly.
+</p>
+<p>
+    Simply uninstall (using "purge", see above) and reinstall the KXStudio repositories again.
 </p>
 
 <h5>What computer systems are supported?</h5>
@@ -46,7 +68,7 @@ include_once("includes/header.php");
     You can, but it will likely not be answered. The KXStudio repositories focus on audio plugins, not general applications.
 </p>
 
-<h5>Why are applications not the focus for the KXStudio repos?</h5>
+<h5>Why are applications not the focus for the KXStudio repositories?</h5>
 <p>
     A few reasons actually:
 </p>
@@ -84,7 +106,7 @@ include_once("includes/header.php");
       Checking for denormals on each buffer cycle is not cost-free for the CPU, but we can setup things so that they don't even happen to begin with!<br/>
       This can be achieved by activating specific build flags (<i>-ffast-math -mfpmath=sse</i>) and set a few CPU flags in the audio thread.<br/>
       Some plugins include such flags as part of their build rules, but not all.<br/>
-      Packages in the KXStudio repos have all these flags active (all plugin builds, plus audio threads set the needed CPU flags),
+      Packages in the KXStudio repositories have all these flags active (all plugin builds, plus audio threads set the needed CPU flags),
       so denormals become a thing of the past. :)<br/>
       <br style="line-height:0.5em"/>
       Something to note is that distributions like Debian, which want to keep support for old hardware, cannot enable this.
@@ -96,7 +118,8 @@ include_once("includes/header.php");
     This is for protection of those running the KXStudio repositories in rolling-release style distributions.<br/>
     An update from the distribution which does not follow KXStudio rules is a potential source of issues (see the points above).<br/>
     Better to have something stable that you know won't break during updates.<br/>
-    (The focus on plugins in the repos means it is much less work to maintain them, and this critical. The KXStudio repos should be up-to-date as much as possible)
+    (The focus on plugins in the repositories means it is much less work to maintain them, and this critical.
+    The KXStudio repositories should be up-to-date as much as possible)
 </p>
 
 <p><br/></p>
