@@ -23,8 +23,14 @@ mkdir -p pool-cache
 
 wget -q http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/dists/bionic/main/binary-amd64/Packages.gz
 gzip -d Packages.gz
+mv Packages Packages.bionic
 
-PACKAGES=$(cat Packages | grep "Package: " | sed "s/Package: //g" | sort)
+wget -q http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/dists/focal/main/binary-amd64/Packages.gz
+gzip -d Packages.gz
+mv Packages Packages.focal
+
+cat Packages.bionic Packages.focal > Packages
+PACKAGES=$(cat Packages | grep "Package: " | sed "s/Package: //g" | sort | uniq)
 
 function is_blacklisted() {
     local TEST="${1}"
@@ -254,6 +260,9 @@ for PACKAGE in ${PACKAGES[@]}; do
 
     else
         for ARCH in ${PACKAGES_ARCHS[@]}; do
+            if [ "${ARCH}" = "i386" ] && (cat Packages.focal | grep -q "Package: ${PACKAGE}"); then
+                continue
+            fi
             PACKAGE_BASENAME_ARCHED=$(echo "${PACKAGE_BASENAME}" | sed "s/_amd64.deb/_${ARCH}.deb/g")
             echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME_ARCHED}\" target=\"_blank\">${ARCH}</a>&nbsp;&nbsp;"
         done
