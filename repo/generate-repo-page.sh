@@ -260,7 +260,7 @@ for PACKAGE in ${PACKAGES[@]}; do
 
     else
         for ARCH in ${PACKAGES_ARCHS[@]}; do
-            if [ "${ARCH}" = "i386" ] && (cat Packages.focal | grep -q "Package: ${PACKAGE}"); then
+            if [ "${ARCH}" = "i386" ] && (cat Packages.focal | grep -x -q "Package: ${PACKAGE}"); then
                 continue
             fi
             PACKAGE_BASENAME_ARCHED=$(echo "${PACKAGE_BASENAME}" | sed "s/_amd64.deb/_${ARCH}.deb/g")
