@@ -16,15 +16,17 @@ include_once("includes/header.php");
 </p>
 <p>
     Hello all, it has been a while since the last time I wrote one of the "monthly" reports, but now back again.<br/>
-    Typically I would write about stuff that was happening behind-the-scenes or to be released soon, but last couple of months have been mostly releases of stuff that was already in progress and was reported on already, or quick enough releases that could be done in a single month.<br/>
+    Typically I would write about stuff that was happening behind-the-scenes or to be released soon,<br/>
+    but last couple of months have been mostly releases of stuff that was already in progress and was reported on already, or quick enough releases that could be done in a single month.<br/>
     Also, there was 
     <a href="https://kx.studio/News/?action=view&url=cardinal-2202-is-now-released" target="_blank">quite</a>
     a
     <a href="https://kx.studio/News/?action=view&url=cardinal-2203-released" target="_blank">lot</a>
     of
     <a href="https://kx.studio/News/?action=view&url=cardinal-2204-released" target="_blank">Cardinal</a>,
-    like, a
-    <a href="https://kx.studio/News/?action=view&url=cardinal-2205-has-been-released" target="_blank">lot of it</a>. :)
+    like
+    <a href="https://kx.studio/News/?action=view&url=cardinal-2205-has-been-released" target="_blank">a lot </a>
+    of it. :)
 </p>
 
 <h3>Continuing with efforts torwards VST3</h3>
@@ -35,15 +37,15 @@ include_once("includes/header.php");
     As a way to learn more about VST3 specifics, and also because 
     <a href="https://github.com/obsproject/obs-studio/discussions/5074" target="_blank">I promised to do so</a>,
     I began doing a host-side implementation for 
-    <a href="https://github.com/falkTX/Carla" target="_blank"></a>Carla.
+    <a href="https://github.com/falkTX/Carla" target="_blank">Carla</a>.
 </p>
 <p>
-    While<a href="https://github.com/falkTX/Carla" target="_blank"></a>Carla can already do VST3 plugins,
+    While <a href="https://github.com/falkTX/Carla" target="_blank">Carla</a> can already do VST3 plugins,
     it relies on
-    <a href="https://github.com/juce-framework/JUCE/" target="_blank"></a>JUCE 
+    <a href="https://github.com/juce-framework/JUCE/" target="_blank">JUCE</a> 
     for it which I am not totally happy with.<br/>
     Having JUCE built on Carla + Linux just to get VST3 support is something that has always bothered me.<br/>
-    Because Linux does not have a concept of OS-level event loop, a special way of mixing Qt and JUCE is in place, and feels very dirty.<br/>
+    Because Linux does not have the concept of a OS-level event loop, a special way of mixing Qt and JUCE is in place, and feels very dirty.<br/>
     There are other technical reasons for disliking the approach, but I will skip the details here.
 </p>
 <p>
@@ -55,7 +57,7 @@ include_once("includes/header.php");
 <h3>Carla related things</h3>
 <p>
     Speaking of Carla, I merged the Jean Pierre Cimalando's
-    <a href="https://github.com/falkTX/Carla/pull/1529" target="_blank"></a>JSFX plugin support pull request,
+    <a href="https://github.com/falkTX/Carla/pull/1529" target="_blank">JSFX</a> plugin support pull request,
     though still in the process of cleaning things up (in particular non-x64 builds are broken at the moment).<br/>
     Next release will have the feature enabled, which also propagates to stuff like
     <a href="https://github.com/DISTRHO/Ildaeil" target="_blank">Ildaeil</a>
@@ -65,12 +67,13 @@ include_once("includes/header.php");
 <p>
     Also on Carla, I updated the in-tree JUCE to version 7.<br/>
     JUCE 7 can now host LV2 plugins too, but for that I will keep Carla's native implementation which is more complete (JUCE does not support CV ports or external UIs, for example).<br/>
-    The update to JUCE also serves to help bring JUCE-based plugins into DISTRHO-Ports and KXStudio packaging, since I reuse the same JUCE version for everything.<br/>
+    The update to JUCE also serves to help bring JUCE-based plugins into
+    <a href="https://github.com/DISTRHO/DISTRHO-Ports" target="_blank">DISTRHO-Ports</a>
+    and KXStudio packaging, since I reuse the same JUCE version for everything.<br/>
     My
     <a href="https://github.com/DISTRHO/JUCE/commits/juce7" target="_blank">usual set of patches</a>
-    are complete now, and everything was ready to update
-    <a href="https://github.com/DISTRHO/DISTRHO-Ports" target="_blank"></a>DISTRHO-Ports main branch to it except it 
-    <a href="https://github.com/mtytel/vital/issues/31" target="_blank"></a>completely breaks Vital[ium] :/
+    are complete now, and everything was ready to update DISTRHO-Ports main branch to it except it 
+    <a href="https://github.com/mtytel/vital/issues/31" target="_blank">completely breaks Vital[ium]</a> :/
 </p>
 <p>
     The best approach is likely to have Vitalium be separate from DISTRHO-Ports, but setting that up takes a fair bit of time, so we won't see that so soon.<br/>
@@ -82,7 +85,7 @@ include_once("includes/header.php");
     This is important for the JSFX support, for possibily having their custom GUIs.<br/>
     I will probably skip them for the first Carla version with JSFX enabled, but it is good to have this in place early so there are less blockers for the implementation.<br/>
     The update also means being able to refresh the
-    <a href="https://github.com/falkTX/Carla-Plugins/tree/develop" target="_blank"></a>DPF-based internal plugins,
+    <a href="https://github.com/falkTX/Carla-Plugins/tree/develop" target="_blank">DPF-based internal plugins</a>,
     which have been ignored for a while.
 </p>
 <p>
@@ -90,14 +93,14 @@ include_once("includes/header.php");
 <h3>Sassy Spreadsheet and Scope</h3>
 <p>
     A little fancy tool caught my attention recently - the 
-    <a href="https://sol-hsa.itch.io/sassy" target="_blank"></a>sassy spreadsheet.<br/>
+    <a href="https://sol-hsa.itch.io/sassy" target="_blank">sassy spreadsheet</a>.<br/>
     It was 
     <a href="https://sol-hsa.itch.io/sassy/devlog/356586/sassy-open-sourced" target="_blank">recently open-sourced</a>
     and with the GUI widgets being familiar (it uses 
-    <a href="https://github.com/ocornut/imgui" target="_blank"></a>imgui
+    <a href="https://github.com/ocornut/imgui" target="_blank">imgui</a>
     ) there were very high chances of it working on Linux.<br/>
     There were no official Linux builds or ways to build for Linux, but 
-    <a href="https://github.com/jarikomppa/sassy/pull/1" target="_blank"></a>not for long!<br/>
+    <a href="https://github.com/jarikomppa/sassy/pull/1" target="_blank">not for long</a>!<br/>
     So while we can build and run it now, sadly any operation results in a crash :(<br/>
     Did some investigation but couldn't find why, author also couldn't tell.
 </p>
@@ -117,9 +120,9 @@ include_once("includes/header.php");
     I should have expected that..<br/>
     It is great that we catch things early, but that also means updates can be blocked because of it.<br/>
     Sometimes errors are 
-    <a href="https://github.com/sadko4u/lsp-plugins/issues/253" target="_blank"></a>falsely 
-    <a href="https://github.com/sadko4u/lsp-plugins/issues/254" target="_blank"></a>reported, but sometimes 
-    <a href="https://github.com/lsp-plugins/lsp-plugins-crossover/issues/2" target="_blank"></a>actual plugin issues 
+    <a href="https://github.com/sadko4u/lsp-plugins/issues/253" target="_blank">falsely</a> 
+    <a href="https://github.com/sadko4u/lsp-plugins/issues/254" target="_blank">reported</a>, but sometimes 
+    <a href="https://github.com/lsp-plugins/lsp-plugins-crossover/issues/2" target="_blank">actual plugin issues</a> 
     are found too.<br/>
     Kind of a pain to deal with when things fail, though in the long term it is for the best.
 </p>
