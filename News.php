@@ -97,12 +97,12 @@ include_once("includes/header.php");
     It was 
     <a href="https://sol-hsa.itch.io/sassy/devlog/356586/sassy-open-sourced" target="_blank">recently open-sourced</a>
     and with the GUI widgets being familiar (it uses 
-    <a href="https://github.com/ocornut/imgui" target="_blank">imgui</a>
-    ) there were very high chances of it working on Linux.<br/>
+    <a href="https://github.com/ocornut/imgui" target="_blank">imgui</a>)
+    there were very high chances of it working on Linux.<br/>
     There were no official Linux builds or ways to build for Linux, but 
     <a href="https://github.com/jarikomppa/sassy/pull/1" target="_blank">not for long</a>!<br/>
     So while we can build and run it now, sadly any operation results in a crash :(<br/>
-    Did some investigation but couldn't find why, author also couldn't tell.
+    I did some investigation but couldn't find why, author also couldn't tell.
 </p>
 <p>
     That said, because it is based on imgui and I have worked with it and implemented in a few places, I wondered about taking advantage of it..<br/>
@@ -146,7 +146,7 @@ include_once("includes/header.php");
 <ul>
     <li>airwindows-lv2 added (version 1.3)
     <li>dragonfly-reverb updated to 3.2.6
-    <li>lsp-plugins updated to 1.2.0
+    <li>lsp-plugins updated to 1.2.1
 </ul>
 
 <p>&nbsp;</p>
