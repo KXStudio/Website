@@ -8,6 +8,153 @@ include_once("includes/header.php");
 
 <p><b>THIS IS A FAKE PAGE, KXSTUDIO NEWS USES A DYNAMIC MODULE NOW</b></p>
 
+<a href="" target="_blank"></a>
+
+<p>
+    <span style="font-size: 20px">&gt; KXStudio Monthly Report (May 2022)</span><br/>
+    On <i>2022-05-31</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, it has been a while since the last time I wrote one of the "monthly" reports, but now back again.<br/>
+    Typically I would write about stuff that was happening behind-the-scenes or to be released soon, but last couple of months have been mostly releases of stuff that was already in progress and was reported on already, or quick enough releases that could be done in a single month.<br/>
+    Also, there was 
+    <a href="https://kx.studio/News/?action=view&url=cardinal-2202-is-now-released" target="_blank">quite</a>
+    a
+    <a href="https://kx.studio/News/?action=view&url=cardinal-2203-released" target="_blank">lot</a>
+    of
+    <a href="https://kx.studio/News/?action=view&url=cardinal-2204-released" target="_blank">Cardinal</a>,
+    like, a
+    <a href="https://kx.studio/News/?action=view&url=cardinal-2205-has-been-released" target="_blank">lot of it</a>. :)
+</p>
+
+<h3>Continuing with efforts torwards VST3</h3>
+<p>
+    VST3 support in
+    <a href="https://github.com/DISTRHO/DPF" target="_blank">DPF</a>
+    is not going as quickly as I hoped, with the last few details being hard to get right.<br/>
+    As a way to learn more about VST3 specifics, and also because 
+    <a href="https://github.com/obsproject/obs-studio/discussions/5074" target="_blank">I promised to do so</a>,
+    I began doing a host-side implementation for 
+    <a href="https://github.com/falkTX/Carla" target="_blank"></a>Carla.
+</p>
+<p>
+    While<a href="https://github.com/falkTX/Carla" target="_blank"></a>Carla can already do VST3 plugins,
+    it relies on
+    <a href="https://github.com/juce-framework/JUCE/" target="_blank"></a>JUCE 
+    for it which I am not totally happy with.<br/>
+    Having JUCE built on Carla + Linux just to get VST3 support is something that has always bothered me.<br/>
+    Because Linux does not have a concept of OS-level event loop, a special way of mixing Qt and JUCE is in place, and feels very dirty.<br/>
+    There are other technical reasons for disliking the approach, but I will skip the details here.
+</p>
+<p>
+    Do note that, alike for VST2, I will keep using VST3 through JUCE for macOS and Windows.<br/>
+    Mostly because I rarely use those systems, so overall it is safer to rely on JUCE for them.<br/>
+    Maybe at some point the Carla VST3 implementation will be good enough to consider enabling the native approach on those systems too, but that can take a while.
+</p>
+
+<h3>Carla related things</h3>
+<p>
+    Speaking of Carla, I merged the Jean Pierre Cimalando's
+    <a href="https://github.com/falkTX/Carla/pull/1529" target="_blank"></a>JSFX plugin support pull request,
+    though still in the process of cleaning things up (in particular non-x64 builds are broken at the moment).<br/>
+    Next release will have the feature enabled, which also propagates to stuff like
+    <a href="https://github.com/DISTRHO/Ildaeil" target="_blank">Ildaeil</a>
+    and its use in
+    <a href="https://github.com/DISTRHO/Cardinal/blob/main/docs/CARDINAL-MODULES.md#ildaeil" target="_blank">Cardinal</a>. :D
+</p>
+<p>
+    Also on Carla, I updated the in-tree JUCE to version 7.<br/>
+    JUCE 7 can now host LV2 plugins too, but for that I will keep Carla's native implementation which is more complete (JUCE does not support CV ports or external UIs, for example).<br/>
+    The update to JUCE also serves to help bring JUCE-based plugins into DISTRHO-Ports and KXStudio packaging, since I reuse the same JUCE version for everything.<br/>
+    My
+    <a href="https://github.com/DISTRHO/JUCE/commits/juce7" target="_blank">usual set of patches</a>
+    are complete now, and everything was ready to update
+    <a href="https://github.com/DISTRHO/DISTRHO-Ports" target="_blank"></a>DISTRHO-Ports main branch to it except it 
+    <a href="https://github.com/mtytel/vital/issues/31" target="_blank"></a>completely breaks Vital[ium] :/
+</p>
+<p>
+    The best approach is likely to have Vitalium be separate from DISTRHO-Ports, but setting that up takes a fair bit of time, so we won't see that so soon.<br/>
+    Perhaps the updated Vital source (whenever that drops..) will have better compatibility with newer JUCE versions, unknown at this point.<br/>
+    In any case, updates to DISTRHO-Ports are blocked at the moment because of this, but there is enough to do on other projects anyway.
+</p>
+<p>
+    Still on Carla, I also updated its in-tree DPF, bringing over the UI code restructure from a while ago.<br/>
+    This is important for the JSFX support, for possibily having their custom GUIs.<br/>
+    I will probably skip them for the first Carla version with JSFX enabled, but it is good to have this in place early so there are less blockers for the implementation.<br/>
+    The update also means being able to refresh the
+    <a href="https://github.com/falkTX/Carla-Plugins/tree/develop" target="_blank"></a>DPF-based internal plugins,
+    which have been ignored for a while.
+</p>
+<p>
+
+<h3>Sassy Spreadsheet and Scope</h3>
+<p>
+    A little fancy tool caught my attention recently - the 
+    <a href="https://sol-hsa.itch.io/sassy" target="_blank"></a>sassy spreadsheet.<br/>
+    It was 
+    <a href="https://sol-hsa.itch.io/sassy/devlog/356586/sassy-open-sourced" target="_blank">recently open-sourced</a>
+    and with the GUI widgets being familiar (it uses 
+    <a href="https://github.com/ocornut/imgui" target="_blank"></a>imgui
+    ) there were very high chances of it working on Linux.<br/>
+    There were no official Linux builds or ways to build for Linux, but 
+    <a href="https://github.com/jarikomppa/sassy/pull/1" target="_blank"></a>not for long!<br/>
+    So while we can build and run it now, sadly any operation results in a crash :(<br/>
+    Did some investigation but couldn't find why, author also couldn't tell.
+</p>
+<p>
+    That said, because it is based on imgui and I have worked with it and implemented in a few places, I wondered about taking advantage of it..<br/>
+    Can we take the very nice and properly behaving scope and use it somewhere else?<br/>
+    Yes we can. Yay for open-source!
+</p>
+<p>
+    <img src="/screenshots/news/sassy-scope-cardinal.png" alt="sassy-scope-cardinal"/>
+</p>
+
+<h3>KXStudio Repositories</h3>
+<p>
+    On Repository related updates, I finally began to update some packages.<br/>
+    This really goes slow compared to previous times, as the newly introduced automated plugin tests fail.<br/>
+    I should have expected that..<br/>
+    It is great that we catch things early, but that also means updates can be blocked because of it.<br/>
+    Sometimes errors are 
+    <a href="https://github.com/sadko4u/lsp-plugins/issues/253" target="_blank"></a>falsely 
+    <a href="https://github.com/sadko4u/lsp-plugins/issues/254" target="_blank"></a>reported, but sometimes 
+    <a href="https://github.com/lsp-plugins/lsp-plugins-crossover/issues/2" target="_blank"></a>actual plugin issues 
+    are found too.<br/>
+    Kind of a pain to deal with when things fail, though in the long term it is for the best.
+</p>
+<p>
+    Because it was just too old and even non-working for some users, the use of the external, non-PPA based repository has been removed.<br/>
+    This basically means the the removal of the ardour package from the KXStudio repositories.<br/>
+    My idea for it was to update it to version 7 and find a way to automate the whole split build (amd64, armhf and arm64 packages).<br/>
+    Easier said than done, and there is too much I am doing already, it is hard to justify maintaining an extra repository just for a few packages.<br/>
+    Apologies for taking so long for taking a decision on this, I always hope to be able to do everything and more, but always fall short.<br/>
+    Doing less things is fine too.
+</p>
+<p>
+    Another small removal is the "recommended" meta-packages, which I had setup as a way for users to easily install a few extra useful programs from outside the KXStudio repositories.<br/>
+    Turns out, making a meta-package that can properly depend/install things across many debian versions and variants is hard.<br/>
+    Packages get removed or renamed, and makes a whole mess of optional dependencies that is just best to simply not care about.<br/>
+    And so it is now.
+</p>
+<p>
+    Related to actual package updates, we have these for this month:
+</p>
+<ul>
+    <li>airwindows-lv2 added (version 1.3)
+    <li>dragonfly-reverb updated to 3.2.6
+    <li>lsp-plugins updated to 1.2.0
+</ul>
+
+<p>&nbsp;</p>
+
+<p>
+    That is all for now, see you next time!
+</p>
+
+
+<hr/>
+
 <p>
     <span style="font-size: 20px">&gt; Cardinal 22.05 has been released</span><br/>
     On <i>2022-05-15</i> by<i> falkTX</i>
