@@ -12,7 +12,7 @@ if [ -z "${REPO_TARGET}" ]; then
 fi
 
 PACKAGES_ARCHS=("amd64" "arm64" "armhf" "i386")
-PACKAGES_BLACKLIST=("carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" "lv2vst" "wineasio-amd64")
+PACKAGES_BLACKLIST=("carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" "jalv" "lv2vst" "wineasio-amd64")
 PACKAGES_WHITELIST=("cadence" "catia" "claudia" "impro-visor")
 PACKAGES_SEPARATE_DATA=("hybridreverb2")
 PACKAGES_BASE_URL="http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/"
