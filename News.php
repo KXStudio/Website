@@ -11,6 +11,31 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Cadence 0.9.2 release</span><br/>
+    On <i>2022-06-19</i> by<i> falkTX</i>
+</p>
+<p>
+    Cadence 0.9.2
+      <a target="_blank" href="https://github.com/falkTX/Cadence/releases/tag/v0.9.2">has just been tagged</a>.<br/>
+    No new features have been added to the code-base.<br/>
+    The release is focused on fixing compatibility with new systems, specially for Python 3.10.<br/>
+</p>
+<p>
+    This release is quite late, all things considered.<br/>
+    Until a few days ago I was still running an Ubuntu 20.04 based OS, so I couldn't reproduce any crashes.<br/>
+    A few people submitted fixes for Python 3.10 compatibility, but I did not want to tag a new release before running a few tests myself.<br/>
+    I am now on a Ubuntu 22.04 based OS, so finally I was able to reproduce the reported issues and fix any extra ones that popped up.
+</p>
+<p>
+    I still hope to give Cadence an overhaul, splitting into separate projects so it is easier to manage and package.<br/>
+    The project started 12 years ago, there is some ugly code in there, nowadays I would have done a lot of stuff there differently.<br/>
+    Splitting Cadence into subprojects will also help on this overhaul, because it is less code to update and maintain each time.<br/>
+    But in any case, it is not something that will happen now, more like an idea/plan for later.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Monthly Report (May 2022)</span><br/>
     On <i>2022-05-31</i> by<i> falkTX</i>
 </p>
