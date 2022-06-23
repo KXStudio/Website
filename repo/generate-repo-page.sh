@@ -57,6 +57,10 @@ function is_whitelisted() {
 function has_data_package() {
     local TEST="${1}-data"
     local PACKAGE
+    # FIXME remove after 1 year
+    if [ ${TEST} = "lsp-plugins-data" ]; then
+        return 1
+    fi
     for PACKAGE in ${PACKAGES[@]}; do
         if [ ${TEST} = ${PACKAGE} ]; then
             return 0
