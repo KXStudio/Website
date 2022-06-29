@@ -11,6 +11,72 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Cardinal 22.06 released</span><br/>
+    On <i>2022-06-29</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, yet another release of <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a> is here,
+    this time focused on bugfixes.<br/>
+    <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
+    is a free and open-source virtual modular synthesizer plugin.<br/>
+    It is based on the popular <a href="https://github.com/VCVRack/Rack/" target="_blank">VCV Rack</a>
+    but with a focus on being a fully self-contained plugin version.
+</p>
+<p>
+    <img src="/screenshots/news/cardinal-22.06.png" alt="cardinal"/>
+</p>
+<h3>Module changes</h3>
+<ul>
+    <li><a href="https://github.com/AScustomWorks/AS" target="_blank">Add AS modules</a></li>
+    <li><a href="https://github.com/gosub/forsitan-modulare" target="_blank">Add forsitan modulare</a></li>
+    <li><a href="https://github.com/Ahineya/vcv-myth-plugin" target="_blank">Add Myth modules</a></li>
+    <li>Add <a href="https://github.com/DISTRHO/Cardinal/blob/main/docs/CARDINAL-MODULES.md#host-parameters-map" target="_blank">Host Parameters Map</a> core module</li>
+    <li>Add <a href="https://github.com/DISTRHO/Cardinal/blob/main/docs/CARDINAL-MODULES.md#sassy-scope" target="_blank">Sassy Scope</a> core module</li>
+    <li>Implement JSFX plugin support in Ildaeil</li>
+    <li>Implement custom plugin GUIs for internal Ildaeil plugins</li>
+    <li>Make Host Parameters smoothing optional</li>
+    <li>Fix Fundamental flipped noise outputs</li>
+    <li>Fix Fundamental wavetable garbage reads</li>
+    <li>Fix Host Time trigger (tolerate max 2 frames of deviation, dont trigger on tick == 0)</li>
+    <li>Fix Lilac export file dialog</li>
+    <li>Update voxglitch</li>
+</ul>
+
+<h3>Cardinal core changes</h3>
+<ul>
+    <li>Fix FX and Synth VST3 versions not running under Ableton Live</li>
+    <li>Fix macOS universal installer for M1/M2systems without rosetta2</li>
+    <li>Fix mouse up event for imgui based widgets</li>
+    <li>Fix scroll speed on macOS</li>
+    <li>Fix VST2 plugin cleanup (crash on close)</li>
+    <li>Fix VST3 MIDI CC input handling</li>
+    <li>Fix VST3 UI initial size</li>
+    <li>Fix VST3 UI resizing from host side</li>
+    <li>Fix X11 file browser dialog not picking files with special characters or spaces</li>
+    <li>Implement glfwCreateStandardCursor, allowing custom cursors from modules</li>
+    <li>Show demo patches in file menu</li>
+    <li>Several optimizations</li>
+    <li>Update to Rack 2.1.1</li>
+</ul>
+
+<h3>Other changes</h3>
+<ul>
+    <li>Add VT_-_Jupiter_Ascent.vcv demo patch</li>
+    <li>Change synth template to use Fundamental instead of Bogaudio modules</li>
+    <li>Implement more details for lv2 export (category, unipolar/bipolar CV, lights as control outputs)</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Cardinal/releases/tag/22.06" target="_blank">
+          https://github.com/DISTRHO/Cardinal/releases/tag/22.06</a>.<br/>
+    Cardinal is released as LV2, VST2 and VST3 plugin, plus AudioUnit and JACK standalone for certain systems.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Cadence 0.9.2 release</span><br/>
     On <i>2022-06-19</i> by<i> falkTX</i>
 </p>
