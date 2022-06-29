@@ -16,7 +16,7 @@ include_once("includes/header.php");
 </p>
 <p>
     Hello everyone, yet another release of <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a> is here,
-    this time focused on bugfixes.<br/>
+    with a few new modules and a bunch of bugfixes.<br/>
     <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
     is a free and open-source virtual modular synthesizer plugin.<br/>
     It is based on the popular <a href="https://github.com/VCVRack/Rack/" target="_blank">VCV Rack</a>
@@ -32,8 +32,8 @@ include_once("includes/header.php");
     <li><a href="https://github.com/Ahineya/vcv-myth-plugin" target="_blank">Add Myth modules</a></li>
     <li>Add <a href="https://github.com/DISTRHO/Cardinal/blob/main/docs/CARDINAL-MODULES.md#host-parameters-map" target="_blank">Host Parameters Map</a> core module</li>
     <li>Add <a href="https://github.com/DISTRHO/Cardinal/blob/main/docs/CARDINAL-MODULES.md#sassy-scope" target="_blank">Sassy Scope</a> core module</li>
-    <li>Implement JSFX plugin support in Ildaeil</li>
     <li>Implement custom plugin GUIs for internal Ildaeil plugins</li>
+    <li>Implement JSFX plugin support in Ildaeil</li>
     <li>Make Host Parameters smoothing optional</li>
     <li>Fix Fundamental flipped noise outputs</li>
     <li>Fix Fundamental wavetable garbage reads</li>
