@@ -11,6 +11,118 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Cardinal 22.07 released</span><br/>
+    On <i>2022-07-15</i> by<i> falkTX</i>
+</p>
+<p>
+    Greetings everyone, we have another release of <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>,
+    mostly with bugfixes and a new surprise feature.<br/>
+    <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
+    is a free and open-source virtual modular synthesizer plugin.<br/>
+    It is based on the popular <a href="https://github.com/VCVRack/Rack/" target="_blank">VCV Rack</a>
+    but with a focus on being a fully self-contained plugin version.
+</p>
+<p>
+    The main changes on this release are related to keyboard input focus and VST3 fixes.<br/>
+    For the keyboard input issue (basically in some hosts it was/is impossible to type in anything) I created a
+    <a href="https://github.com/DISTRHO/Cardinal/issues/304" target="_blank">meta-issue to track all other issues</a>,
+    with a table for each DAW, OS and plugin varant being tested.<br/>
+    This helped me understand the situation better, which is pretty much:
+</p>
+<ul>
+    <li>Linux/X11 support is hit or miss, depends on how well the DAW supports Linux, those that give proper attention to Linux generally work fine</li>
+    <li>macOS support is almost a non-issue, every DAW works except REAPER that does not give focus automatically to the UI but we can easily work around it</li>
+    <li>Windows is a mess</li>
+</ul>
+<p>
+    While I was in the process of testing for Windows, I broke my desktop PC, actual broken hardware.. oops :/<br/>
+    So that got cut short, but I still added in a way that supposedly works better.<br/>
+    Previously the UI would try to give itself focus shortly after appearing on screen, obviously this didn't work as lots of users still reported not being able to type anything.<br/>
+    Now the UI will try to get keyboard input focus on every mouse press, which yes it is a bit ugly but let's see if that works.
+</p>
+<p>
+    More attention was given to the VST3 version, specially testing in many new DAWs.<br/>
+    It is very frustrating with VST3 as pretty much all DAWs initialize the plugin and UI in a different way. For example:
+</p>
+<ul>
+    <li>Cubase creates an Edit Controller instance using the "FUnknown" uid type (only Steinberg DAWs do this, everyone else uses the proper Component/Controller uid types)</li>
+    <li>Some DAWs (Ableton and Steinberg stuff at least) refuse to load plugins with separate Component and Edit Controller, even though this is an official VST3 feature</li>
+    <li>Some DAWs require a valid initial size before attaching the UI (resulting in 0x0 UI size if not provided), while others don't care</li>
+    <li>The way to have access to the "Host Context" varies between hosts, with Cardinal (using
+    <a href="https://github.com/DISTRHO/DPF" target="_blank">DPF</a>) now having 5 places where it can possibly come from</li>
+</ul>
+<p>
+    I was meant to have a relase of
+    <a href="https://github.com/DISTRHO/DPF-Plugins" target="_blank">DPF-Plugins</a>
+    today alongside Cardinal, but due to finding so many VST3 related issues I decided to postpone it.
+</p>
+
+<h3>On the Browser</h3>
+<p>
+    One of the big highlights of this release, which may come as a surprise if you are not following the project too closely, is the whole of Cardinal running directly in a Web Browser.<br/>
+    Yes it is a thing, and yes it works. You can try it at <a href="https://cardinal.kx.studio/" target="_blank">cardinal.kx.studio</a>.<br/>
+    (Requires web-assembly support with SIMD, WebMIDI only works in Chrome-based browsers)
+</p>
+<p>
+    <img src="/screenshots/news/cardinal-22.07.png" alt="cardinal"/>
+</p>
+<p>
+    This was mostly meant as a research effort from my side to see how feasible it would be to run
+    <a href="https://github.com/DISTRHO/DPF" target="_blank">DPF-based plugins</a>
+    on the browser, using
+    <a href="https://emscripten.org/" target="_blank">emscripten</a>
+    to compile things into web-assembly.<br/>
+    By my own surprise, the initial tests proved quite sucessful so I ended up going all the way in.
+</p>
+<p>
+    It is still not complete, for example clipboard support is missing, and I noticed a few crashes, so it should still be considered experimental.<br/>
+    Most of the crashes comes from Rack code and modules never having supported a 32bit build, which is the web-assembly target.<br/>
+    Still, as Cardinal already had some work done for Linux and Windows 32bit support, most things just work as-is in the end.<br/>
+</p>
+<p>
+    It is awesome, and perhaps ridiculous too, that this is even a thing that can exist and work so well.<br/>
+    Starting with 22.07, wasm (web-assembly) builds are going to be part of the release binaries, and in the nightly/action builds too.
+</p>
+<p>
+    Note that I purposefully did not use the new AudioWorklet APIs, as that requires special server setup.<br/>
+    Everything is single-threaded but in turn it all works by simply hosting the files as-is.<br/>
+    If you want to build it yourself, just setup <a href="https://emscripten.org/" target="_blank">emscripten</a> and use <pre>make USE_GLES2=true</pre>
+</p>
+<p>
+    No source code modifications are necessary.<br/>
+    Build has only been successfully made within a Linux host.
+</p>
+
+<h3>Changelog</h3>
+<ul>
+    <li>Adjust view menu similar to VCV Rack 2.1.2</li>
+    <li>Allow building using OpenGL ES2 (with <i>USE_GLES=true</i> build flag, disables glBars module)</li>
+    <li>Do not install JACK standalone on Windows by default</li>
+    <li>Fix example patches not working as templates</li>
+    <li>Fix file dialogs not working in macos-intel builds</li>
+    <li>Fix missing opus as supported extension in audio file module</li>
+    <li>Fix missing time information in AU version (regression in 22.06)</li>
+    <li>Fix VST3 keyboard input through host keycodes</li>
+    <li>Fix VST3 not loading under Cubase</li>
+    <li>Fix VST3 UI not appearing under Studio One</li>
+    <li>Give keyboard focus to UI on each mouse click</li>
+    <li>Make X11 clipboard handling more robust</li>
+    <li>Update all modules that use file browser dialogs</li>
+    <li>Update internal Cardinal async file dialog API to add default filename</li>
+    <li>Update to Rack 2.1.2</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Cardinal/releases/tag/22.07" target="_blank">
+          https://github.com/DISTRHO/Cardinal/releases/tag/22.07</a>.<br/>
+    Cardinal is released as LV2, VST2 and VST3 plugin, plus AudioUnit and JACK standalone for certain systems.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Cardinal 22.06 released</span><br/>
     On <i>2022-06-29</i> by<i> falkTX</i>
 </p>
