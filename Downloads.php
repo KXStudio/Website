@@ -25,8 +25,6 @@ include_once("includes/versions.php");
 </p>
 <p class="p_extra_spaced">
   <b>MacOS Downloads:</b><br/>
-  &nbsp;<a href="https://github.com/falkTX/Carla-Releases/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla-<?php echo $VERSION_CARLA_MAJ; ?>-macos.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
-        <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (compatible build, version <?php echo $VERSION_CARLA; ?>, requires macOS 10.8 or higher)<br/>
   &nbsp;<a href="https://github.com/falkTX/Carla-Releases/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla-<?php echo $VERSION_CARLA_MAJ; ?>-macos-universal.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
         <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (universal build, version <?php echo $VERSION_CARLA; ?>, requires macOS 10.12 or higher)<br/>
 </p>
