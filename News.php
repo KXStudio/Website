@@ -11,6 +11,76 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.4.4 and 2.5.0 released</span><br/>
+    On <i>2022-07-16</i> by<i> falkTX</i>
+</p>
+
+<p>
+    Hello again everyone, it is 2 Carla releases on the same day!
+</p>
+<p>
+    <a href="https://kx.studio/carla" class="external free" rel="nofollow" target="_blank">Carla</a>
+    is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
+    It has some nice features like automation of parameters via MIDI CC (and send output back as MIDI too) and full OSC control.
+</p>
+<p>
+    The reason for 2 releases is so there is an update to the 2.4.x series, being shipped in some Linux distributions that do not update packages to new versions.<br/>
+    Hopefully the bugfix is possible to push-through for such cases.<br/>
+    The <a href="https://github.com/falkTX/Carla/releases/tag/v2.4.4" target="_blank">2.4.4 version</a> does not have prebuilt binaries, it is meant only for those building from source.<br/>
+    For the <a href="https://github.com/falkTX/Carla/releases/tag/v2.5.0" target="_blank">2.5.0 version</a>, we have a couple new things.
+</p>
+
+<h3>JSFX</h3>
+<p>
+    JSFX (those nice little FX from REAPER) make an appearance, contributed by Jean Pierre Cimalando.<br/>
+    Alike LV2 handling on Carla, you do not need to manually scan for these, Carla will automatically find them if you have some paths set.<br/>
+    If you have run REAPER before, you most likely will have a bunch of new plugins available to use right away.<br/>
+    Note that custom UIs for those are not supported yet, to be implemented later.
+</p>
+
+<h3>SDL engine driver</h3>
+<p>
+    A new engine driver makes an apparance, for SDL (both v1 and v2) which is handy when building for systems where neither JACK or RtAudio works.<br/>
+    The main targets for this driver are HaikuOS and Web-Assembly, the latter one which has already been verified to work.<br/>
+    I am sure there will still be more tweaks needed, but at least audio should now work on HaikuOS too. I will investigate more in depth later.
+</p>
+
+<h3>Updated core modules</h3>
+<p>
+    And finally, built-in DPF and JUCE have been updated to their latest versions.<br/>
+    This required changing some deep internal code to match the updated APIs, so it cannot be pushed as bugfix.
+</p>
+
+<h3>Changelog</h3>
+<p>
+    That is mostly it for now, there are a few other minor changes and fixes too, changelog follows below.
+</p>
+<ul>
+    <li>Add JSFX plugin support</li>
+    <li>Add SDL engine driver</li>
+    <li>Adapt engine code to allow single-threaded web-assembly builds</li>
+    <li>Fix macOS installer to run without rosetta2</li>
+    <li>Do not use -fno-gnu-unique on BSD</li>
+    <li>Fix inaccurate MIDI CC rounding</li>
+    <li>Fix one more python3.10 compatibility issue</li>
+    <li>Fix one more Windows UTF-16 issue</li>
+    <li>Support mod:volts as LV2 unit</li>
+    <li>Update dependency list in INSTALL.md</li>
+    <li>Use full driver settings dialog if opened via menu and engine is not running</li>
+    <li>Update built-in DPF</li>
+    <li>Update built-in JUCE to 7.0.1</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla".<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Cardinal 22.07 released</span><br/>
     On <i>2022-07-15</i> by<i> falkTX</i>
 </p>
@@ -52,7 +122,7 @@ include_once("includes/header.php");
     <a href="https://github.com/DISTRHO/DPF" target="_blank">DPF</a>) now having 5 places where it can possibly come from</li>
 </ul>
 <p>
-    I was meant to have a relase of
+    I was meant to have a release of
     <a href="https://github.com/DISTRHO/DPF-Plugins" target="_blank">DPF-Plugins</a>
     today alongside Cardinal, but due to finding so many VST3 related issues I decided to postpone it.
 </p>
