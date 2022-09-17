@@ -26,7 +26,9 @@ include_once("includes/header.php");
     is an automatic audio mastering plugin for live-streaming, podcasting and internet radio stations.<br/>
     It takes care of master levels and "polishes" the sound with a chain of effects while introducing no latency.<br/>
     <a href="https://github.com/trummerschlunk/master_me" target="_blank">master_me</a>
-    is closely modeled after the audio chain of Klaus Scheuermann's mastering studio in Berlin, Germany.
+    is closely modeled after the audio chain of Klaus Scheuermann's mastering studio in Berlin, Germany.<br/>
+    See <a href="https://github.com/trummerschlunk/master_me" target="_blank">https://github.com/trummerschlunk/master_me</a>
+    for more details on the project, including documentation.
 </p>
 <p>
     Klaus is main author of this plugin, using faust to set up the various DSP components and also to generate an audio plugin.<br/>
@@ -39,7 +41,7 @@ include_once("includes/header.php");
 <p>
     <a href="https://github.com/trummerschlunk/master_me" target="_blank">master_me</a>
     is now at version 1.1.0 actually, as we found a few bugs shortly after release which were important enough to hold before going on sharing/"marketing" the plugin.<br/>
-    The plugin was actually quite valuable in ironing out some issues from DPF side, specially for dealing with VST3.
+    The plugin was actually quite valuable in ironing out some issues from DPF side, specially for dealing with VST3.<br/>
     So future releases of DPF-based plugins will improve because of, and we get a cool new plugin too. Good stuff :)
 </p>
 
