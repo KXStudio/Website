@@ -11,6 +11,52 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Introducing master_me</span><br/>
+    On <i>2022-09-18</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, this is a release announcement/introduction for a new audio plugin:
+    <a href="https://github.com/trummerschlunk/master_me" target="_blank">master_me</a>.
+</p>
+<p>
+    <img src="/repo/screenshots/master-me.png" alt="master-me"/>
+</p>
+<p>
+    <a href="https://github.com/trummerschlunk/master_me" target="_blank">master_me</a>
+    is an automatic audio mastering plugin for live-streaming, podcasting and internet radio stations.<br/>
+    It takes care of master levels and "polishes" the sound with a chain of effects while introducing no latency.<br/>
+    <a href="https://github.com/trummerschlunk/master_me" target="_blank">master_me</a>
+    is closely modeled after the audio chain of Klaus Scheuermann's mastering studio in Berlin, Germany.
+</p>
+<p>
+    Klaus is main author of this plugin, using faust to set up the various DSP components and also to generate an audio plugin.<br/>
+    Using faust provided tools was deemed not enough, as there was a wish for something more custom, specially on the GUI side.<br/>
+    I was contacted to help with this part, so obviously I went with
+    <a href="https://github.com/DISTRHO/DPF" target="_blank">DPF</a>
+    for dealing with all the plugin implementation details.<br/>
+    And that is how we got here :)
+</p>
+<p>
+    <a href="https://github.com/trummerschlunk/master_me" target="_blank">master_me</a>
+    is now at version 1.1.0 actually, as we found a few bugs shortly after release which were important enough to hold before going on sharing/"marketing" the plugin.<br/>
+    The plugin was actually quite valuable in ironing out some issues from DPF side, specially for dealing with VST3.
+    So future releases of DPF-based plugins will improve because of, and we get a cool new plugin too. Good stuff :)
+</p>
+
+<h3>Downloads</h3>
+<p>
+    There are pre-compiled binaries for Linux, macOS and Windows which can downloaded at
+      <a href="https://github.com/trummerschlunk/master_me/releases" target="_blank">
+          https://github.com/trummerschlunk/master_me/releases</a>.<br/>
+    You can also find it in the KXStudio repositories as <b>master-me</b> package.<br/>
+</p>
+<p>
+    Enjoy and have fun!
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.4.4 and 2.5.0 released</span><br/>
     On <i>2022-07-16</i> by<i> falkTX</i>
 </p>
