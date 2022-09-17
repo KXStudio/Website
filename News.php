@@ -19,7 +19,7 @@ include_once("includes/header.php");
     <a href="https://github.com/trummerschlunk/master_me" target="_blank">master_me</a>.
 </p>
 <p>
-    <img src="/repo/screenshots/master-me.png" alt="master-me"/>
+    <img src="/screenshots/news/master-me.png" alt="master-me"/>
 </p>
 <p>
     <a href="https://github.com/trummerschlunk/master_me" target="_blank">master_me</a>
