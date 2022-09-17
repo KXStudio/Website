@@ -42,7 +42,7 @@ include_once("includes/header.php");
     <a href="https://github.com/trummerschlunk/master_me" target="_blank">master_me</a>
     is now at version 1.1.0 actually, as we found a few bugs shortly after release which were important enough to hold before going on sharing/"marketing" the plugin.<br/>
     The plugin was actually quite valuable in ironing out some issues from DPF side, specially for dealing with VST3.<br/>
-    So future releases of DPF-based plugins will improve because of, and we get a cool new plugin too. Good stuff :)
+    So future releases of DPF-based plugins will improve because of it, and we get a cool new plugin too. Good stuff :)
 </p>
 
 <h3>Downloads</h3>
