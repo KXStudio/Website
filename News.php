@@ -11,6 +11,67 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Cardinal 22.09 released</span><br/>
+    On <i>2022-09-19</i> by<i> falkTX</i>
+</p>
+<p>
+    Greetings everyone, we have yet another release of <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>,
+    with a good set of bugfixes and a few nice to have features.<br/>
+    <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
+    is a free and open-source virtual modular synthesizer plugin.<br/>
+    It is based on the popular <a href="https://github.com/VCVRack/Rack/" target="_blank">VCV Rack</a>
+    but with a focus on being a fully self-contained plugin version.
+</p>
+<p>
+    The main changes for this release, besides the fixes, are a dark vs light mode switch, CardinalNative build, finishing VST3 support and an initial CLAP version.<br/>
+    There are a couple of new module collections and updates to existing ones too.
+</p>
+<p>
+    <img src="/screenshots/news/cardinal-22.09.png" alt="cardinal"/>
+</p>
+
+<h3>Changelog</h3>
+<ul>
+    <li>Add CardinalNative standalone build (uses native audio from the system instead of JACK)</li>
+    <li>Add CLAP plugin version (fx and synth variants only, for now)</li>
+    <li>Add dark mode switch in View menu, enabled by default</li>
+    <li>Add readme and license to zip/tar releases</li>
+    <li>Add linux-riscv64 build</li>
+    <li>Add -Wno-format-security to build flags</li>
+    <li>Fix AU plugin crash when host does not provide time signature (x64 auval)</li>
+    <li>Fix AU plugin not updating for buffer-size and sample-rate changes</li>
+    <li>Fix VST2 crash when removing 1 of many similar instances</li>
+    <li>Fix VST2 and VST3 initial UI size in some hosts</li>
+    <li>Fix VST3 remaining issues and mark it as stable (only CV ports need attention, but not Host/DAW that I know implements these)</li>
+    <li>Fix memory corruption and leaks when loading and removing modules</li>
+    <li>Fix Bidoo not saving non-parameter data</li>
+    <li>Fix Bidoo limonade crashing when canceling its save dialog</li>
+    <li>Fix Ildaeil log sliders, allow mono input plugins</li>
+    <li>Fix/remove stray Carla module from "DRMR - Interverb.vcv" example patch</li>
+    <li>Split main variant audio IO in 4 stereo groups</li>
+</ul>
+
+<h3>Module changes</h3>
+<ul>
+    <li>Add alefsbits</li>
+    <li>Add dBiz</li>
+    <li>Add H4N4</li>
+    <li>Update AS</li>
+    <li>Update MindMeld</li>
+    <li>Update PathSet</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Cardinal/releases/tag/22.09" target="_blank">
+          https://github.com/DISTRHO/Cardinal/releases/tag/22.09</a>.<br/>
+    Cardinal is released as LV2, VST2, VST3 and CLAP plugin, plus AudioUnit and JACK standalone for certain systems.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Introducing master_me</span><br/>
     On <i>2022-09-18</i> by<i> falkTX</i>
 </p>
