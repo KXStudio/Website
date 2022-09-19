@@ -42,7 +42,7 @@ include_once("includes/header.php");
     <li>Fix AU plugin not updating for buffer-size and sample-rate changes</li>
     <li>Fix VST2 crash when removing 1 of many similar instances</li>
     <li>Fix VST2 and VST3 initial UI size in some hosts</li>
-    <li>Fix VST3 remaining issues and mark it as stable (only CV ports need attention, but not Host/DAW that I know implements these)</li>
+    <li>Fix VST3 remaining issues and mark it as stable (only CV ports need attention, but no Host/DAW that I know implements these)</li>
     <li>Fix memory corruption and leaks when loading and removing modules</li>
     <li>Fix Bidoo not saving non-parameter data</li>
     <li>Fix Bidoo limonade crashing when canceling its save dialog</li>
