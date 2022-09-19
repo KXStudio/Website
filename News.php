@@ -53,9 +53,9 @@ include_once("includes/header.php");
 
 <h3>Module changes</h3>
 <ul>
-    <li>Add alefsbits</li>
-    <li>Add dBiz</li>
-    <li>Add H4N4</li>
+    <li><a href="https://github.com/alefnull/alefsbits" target="_blank">Add alefsbits</a></li>
+    <li><a href="https://github.com/dBiz/dBiz" target="_blank">Add dBiz</a></li>
+    <li><a href="https://github.com/hannakoppelaar/h4n4-modules" target="_blank">Add H4N4</a></li>
     <li>Update AS</li>
     <li>Update MindMeld</li>
     <li>Update PathSet</li>
