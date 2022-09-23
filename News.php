@@ -11,6 +11,52 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Ildaeil v1.1 released</span><br/>
+    On <i>2022-09-23</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, a new release of
+    <a href="https://github.com/DISTRHO/Ildaeil" target="_blank"><b>Ildaeil</b></a>
+    is here.<br/>
+    <a href="https://github.com/DISTRHO/Ildaeil" target="_blank"><b>Ildaeil</b></a>
+    is mini-plugin host working as a plugin, allowing one-to-one plugin format reusage.<br/>
+    The idea is to load it as a plugin inside your DAW and then the other "real" plugin inside Ildaeil.<br/>
+    This allows, for example, a VST3 host to load LV2 plugins.
+</p>
+<p>
+    The main changes here are JSFX "plugin" host support, fixing the VST3 implementation and adding a CLAP version.
+</p>
+<p>
+    <img src="/repo/screenshots/ildaeil.png" alt="ildaeil"/>
+</p>
+<p>
+    Full changelog:
+</p>
+<ul>
+    <li>Add linux-riscv64 builds</li>
+    <li>Add source tarball (containing offline buildable source)</li>
+    <li>Can now host JSFX "plugins"</li>
+    <li>Fix all known VST3 issues</li>
+    <li>Fix build for web-assembly</li>
+    <li>Fix handling of LV2 plugins with path parameter</li>
+    <li>Fix high-dpi LV2 UIs for certain systems</li>
+    <li>Fix log sliders</li>
+    <li>Ildaeil as CLAP plugin</li>
+    <li>Use same bundle/folder for VST2 plugins on Linux and Windows</li>
+    <li>Update internal Carla to v2.5.1</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Ildaeil/releases/tag/v1.1" target="_blank">
+          https://github.com/DISTRHO/Ildaeil/releases/tag/v1.1</a>.<br/>
+    Ildaeil is released CLAP, LV2, VST2 and VST3 plugin, plus JACK Standalone for some systems.<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Cardinal 22.09 released</span><br/>
     On <i>2022-09-19</i> by<i> falkTX</i>
 </p>
