@@ -11,6 +11,43 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.5.1 released</span><br/>
+    On <i>2022-09-30</i> by<i> falkTX</i>
+</p>
+
+<p>
+    Hello again everyone, a new Carla release is here, v2.5.1 which brings a couple of fixes to the v2.5 series.
+</p>
+<p>
+    <a href="https://kx.studio/carla" class="external free" rel="nofollow" target="_blank">Carla</a>
+    is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
+    It has some nice features like automation of parameters via MIDI CC (and send output back as MIDI too) and full OSC control.
+</p>
+
+<h3>Changelog</h3>
+<ul>
+    <li>Do not set scale factor for LV2 plugin UIs on macOS</li>
+    <li>Fix external MIDI connections for JUCE engine driver</li>
+    <li>Fix a few memory leaks and runtime issues</li>
+    <li>Fix several race conditions</li>
+    <li>Fix logic around engine driver listings</li>
+    <li>Fix position of external patchbay graph nodes not being restored when switching from internal to external</li>
+    <li>Fix RISC-V builds</li>
+    <li>Fix win32 bridge builds on win64 systems (forcing usage of i686-w64-mingw32 if needed)</li>
+    <li>Ignore some compiler warnings from Qt side</li>
+    <li>Use an outer frame for carla-lv2 outgoing events</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla".<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Ildaeil v1.1 released</span><br/>
     On <i>2022-09-23</i> by<i> falkTX</i>
 </p>
