@@ -35,6 +35,7 @@ $feed->set_feed_url(ARRAY(
     'https://github.com/DISTRHO/DPF-Widgets/commits/main.atom',
     'https://github.com/DISTRHO/Cardinal/commits/main.atom',
     'https://github.com/DISTRHO/glBars/commits/master.atom',
+    'https://github.com/DISTRHO/Ildaeil/commits/main.atom',
     'https://github.com/DISTRHO/JuicePlugins/commits/master.atom',
     'https://github.com/DISTRHO/Kars/commits/master.atom',
     'https://github.com/DISTRHO/Mini-Series/commits/master.atom',
