@@ -11,6 +11,98 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Ildaeil v1.2 released</span><br/>
+    On <i>2022-10-15</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone, a new release of
+    <a href="https://github.com/DISTRHO/Ildaeil" target="_blank"><b>Ildaeil</b></a>
+    is here.<br/>
+    <a href="https://github.com/DISTRHO/Ildaeil" target="_blank"><b>Ildaeil</b></a>
+    is mini-plugin host working as a plugin, allowing one-to-one plugin format reusage.<br/>
+    The idea is to load it as a plugin inside your DAW and then the other "real" plugin inside Ildaeil.<br/>
+    This allows, for example, a VST3 host to load LV2 plugins.
+</p>
+<p>
+    The main changes this time are being able to load arbitrary files as plugins and CLAP hosting.<br/>
+    On the plugin type combo-box you now have "Load from file..." option, which will open a file-browser to select a plugin or music file.<br/>
+    This allows, for example, to load CLAP and VST2 plugins.<br/>
+    It is a semi-temporary measure while the auto-plugin scanning is not yet in place.
+</p>
+<p>
+    The CLAP hosting, as everything in Ildaeil, comes from Carla side too.<br/>
+    It should be considered experimental for now and will be part of Carla 2.6.0 update later.
+</p>
+<p>
+    There are also quite a few CLAP plugin related fixes, and details on X11 UIs changed to better support NTK-based ones.
+</p>
+<p>
+    <img src="/screenshots/news/ildaeil-1.2.png" alt="ildaeil-1.2"/>
+</p>
+
+<p>
+    Full changelog:
+</p>
+<ul>
+    <li>Allow loading arbitrary files/binaries as plugins</li>
+    <li>Add extra plugin bridges to release binaries (32bit plugins on 64bit systems, Wine stuff in Linux 64bit)</li>
+    <li>Improve compatibility with some X11 UIs (breaks recursion)</li>
+    <li>Fix loading LV2 path parameters via "Open File..." button</li>
+    <li>Several fixes to CLAP plugin variant</li>
+    <li>Use system-wide Carla binaries when not found inside plugin bundle</li>
+    <li>Update to latest Carla, with initial experimental CLAP hosting</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Ildaeil/releases/tag/v1.2" target="_blank">
+          https://github.com/DISTRHO/Ildaeil/releases/tag/v1.2</a>.<br/>
+    Ildaeil is released as CLAP, LV2, VST2 and VST3 plugin, plus JACK Standalone for some systems.<br/>
+</p>
+
+<hr/>
+
+<p>
+    <span style="font-size: 20px">&gt; Carla 2.5.2 released</span><br/>
+    On <i>2022-10-15</i> by<i> falkTX</i>
+</p>
+
+<p>
+    Hello again everyone, it is release day again!<br/>
+    Let's start with
+    <a href="https://kx.studio/carla" class="external free" rel="nofollow" target="_blank">Carla</a>.
+</p>
+<p>
+    <a href="https://kx.studio/carla" class="external free" rel="nofollow" target="_blank">Carla</a>
+    is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
+    It has some nice features like automation of parameters via MIDI CC (and send output back as MIDI too) and full OSC control.
+</p>
+<p>
+    This update backports fixes from the main development branch into the stable 2.5 series.<br/>
+    Nothing too big or serious, just a regular bug-fix update.<br/>
+    The more substantial stuff will come for 2.6.0, still a few months away.
+</p>
+
+<h3>Changelog</h3>
+<ul>
+    <li>Fix includedir/libdir variables in pkg-config files</li>
+    <li>Fix LV2 plugins sending MIDI events out of order when using MIDI mapping for control output ports</li>
+    <li>Fix VST2 all-notes/sound-off events after re-activation</li>
+    <li>Fix "use outer frame for carla-lv2" from v2.5.1</li>
+    <li>Correct jackbridge build flags, prevent LTO from being used in wine stuff</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla".<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.5.1 released</span><br/>
     On <i>2022-09-30</i> by<i> falkTX</i>
 </p>
