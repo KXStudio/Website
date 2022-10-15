@@ -11,6 +11,55 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Cardinal 22.10 released</span><br/>
+    On <i>2022-10-15</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello hello! We have yet another release,
+    <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
+    22.10, with mostly bugfixes this time.<br/>
+    <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
+    is a free and open-source virtual modular synthesizer plugin.<br/>
+    It is based on the popular <a href="https://github.com/VCVRack/Rack/" target="_blank">VCV Rack</a>
+    but with a focus on being a fully self-contained plugin version.
+</p>
+<p>
+    There are no 3rd-party module changes or updates this time around, the release is more or less the combination of changes from 22.09 until today.<br/>
+    Fixes are significant enough to warrant a new release, so here we are.
+</p>
+<p>
+    The only actual new feature comes from a sync of the internal Ildaeil with the just released
+    <a href="https://kx.studio/News/?action=view&url=ildaeil-v12-released">version 1.2</a> of it,
+    which allows to load arbitrary files as plugins.<br/>
+    For Cardinal this means it is easier to host VST2 and CLAP plugins without having to rely on an external Carla window (which typically needs to be installed separately too).
+</p>
+<p>
+    <img src="/screenshots/news/cardinal-22.10.png" alt="cardinal"/>
+</p>
+
+<h3>Changelog</h3>
+<ul>
+    <li>Allow Ildaeil loading arbitrary files/binaries as plugins</li>
+    <li>Fix headless build</li>
+    <li>Fix Host Time step not triggering under certain conditions</li>
+    <li>Fix missing CardinalNative during "make install"</li>
+    <li>Fix missing MIDI support in CardinalNative Windows builds</li>
+    <li>Remove superfulous modules in falkTX_-_Divide-no-Conquer.vcv example patch</li>
+    <li>Several fixes to CLAP plugin version</li>
+    <li>Update internal Carla to latest, brings initial experimental CLAP hosting</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Cardinal/releases/tag/22.10" target="_blank">
+          https://github.com/DISTRHO/Cardinal/releases/tag/22.10</a>.<br/>
+    Cardinal is released as LV2, VST2, VST3 and CLAP plugin, plus AudioUnit and JACK standalone for certain systems.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Ildaeil v1.2 released</span><br/>
     On <i>2022-10-15</i> by<i> falkTX</i>
 </p>
