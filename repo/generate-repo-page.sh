@@ -159,7 +159,7 @@ for PACKAGE in ${PACKAGES[@]}; do
     # screenshot
     SCREENSHOT=${PACKAGE}
     if [ ! -f "./screenshots/${SCREENSHOT}.png" ]; then
-        SCREENSHOT=$(echo "${SCREENSHOT}" | sed "s/-lv2//g" | sed "s/-vst2//g" | sed "s/-vst3//g" | sed "s/-vst//g")
+        SCREENSHOT=$(echo "${SCREENSHOT}" | sed "s/-lv2//g" | sed "s/-vst2//g" | sed "s/-vst3//g" | sed "s/-vst//g" | sed "s/-clap//g")
         if [ ! -f "./screenshots/${SCREENSHOT}.png" ]; then
             SCREENSHOT=""
         fi
@@ -231,6 +231,9 @@ for PACKAGE in ${PACKAGES[@]}; do
             fi
             if echo "${PACKAGE_PROVIDES}" | grep -q vst3-plugin; then
                 echo "VST3 "
+            fi
+            if echo "${PACKAGE_PROVIDES}" | grep -q clap-plugin; then
+                echo "CLAP "
             fi
             echo "</td></tr>"
         fi
