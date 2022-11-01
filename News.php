@@ -11,6 +11,47 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; DPF-Plugins v1.6 released</span><br/>
+    On <i>2022-01-16</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, a new release of <a href="https://github.com/DISTRHO/DPF-Plugins" target="_blank">DPF-Plugins</a> is here.<br/>
+    DPF-Plugins is a collection of DPF-based plugins, including Kars, MVerb and Nekobi.<br/>
+    This release brings some fixes alongside finishing the VST3 versions and adds CLAP support.<br/>
+</p>
+<p>
+    General changelog:
+</p>
+<ul>
+    <li>Add linux-riscv64 builds to release binaries</li>
+    <li>Fix / stabilize VST3 support</li>
+    <li>Initial CLAP support</li>
+    <li>Set audio port configuration for all plugins</li>
+    <li>Set VST3 categories in a few more plugins</li>
+    <li>Update to latest DPF</li>
+</ul>
+<p>
+    Plugin specific changes:
+</p>
+<ul>
+    <li>Kars: Fix playback after a sample rate change</li>
+    <li>Nekobi: Fix deadlock when receiving a MIDI message bigger than 3 bytes</li>
+    <li>Nekobi: Make waveform slider behave as a button</li>
+    <li>ProM: Fix invalid context (GL compat instead of GL3) in some setups</li>
+    <li>ProM: Force keyboard focus on click</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/DPF-Plugins/releases/tag/v1.6" target="_blank">
+          https://github.com/DISTRHO/DPF-Plugins/releases/tag/v1.6</a>.<br/>
+    The plugins are released as LADSPA, DSSI, LV2, VST2, VST3, CLAP and JACK standalone.<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Cardinal 22.10 released</span><br/>
     On <i>2022-10-15</i> by<i> falkTX</i>
 </p>
