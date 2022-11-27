@@ -11,6 +11,75 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Cardinal 22.11 released</span><br/>
+    On <i>2022-11-27</i> by<i> falkTX</i>
+</p>
+<p>
+    Hi everyone, we have another
+    <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
+    release, 22.11, with a very welcome change and important bugfixes.<br/>
+    <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
+    is a free and open-source virtual modular synthesizer plugin.<br/>
+    It is based on the popular <a href="https://github.com/VCVRack/Rack/" target="_blank">VCV Rack</a>
+    but with a focus on being a fully self-contained plugin version.
+</p>
+<p>
+    Contributed by
+    <a href="https://github.com/vitreo12" target="_blank">Francesco Cameli</a>
+    we now have modules processing order based on cable connections rather than when they were first added to the Rack.<br/>
+    With this, there is now a guarantee that no single sample feedback is introduced between cable connections,
+    unless feedback connections are in place or modules have internal buffering.
+</p>
+<p>
+    As an example, Francesco provided a simple patch that plays a sine wave through a sequence of 54 modules to measure the difference of the starting signal with the end one.<br/>
+    As it can be seen below, with the old implementation there was definitely a delay introduced by the connections<br/>
+    (since the audio engine steps through the modules in the order in which they were created, ignoring which modules should come first according to the cable connections)
+</p>
+<p>
+    <img src="/screenshots/news/cardinal-22.11a.png" alt="cardinal"/>
+</p>
+    With the new implementation the signal flow now correctly shows a null sum between the starting signal and the end one:
+</p>
+<p>
+    <img src="/screenshots/news/cardinal-22.11b.png" alt="cardinal"/>
+</p>
+<p>
+    Other important changes are fixes to VST3 multi-IO, CLAP having a multi-IO variant, and macOS Intel builds working much better.
+</p>
+
+<h3>Main Changelog</h3>
+<ul>
+    <li>Add classic subtractive polysynth example/demo patch</li>
+    <li>Automatically reset modules processing order according to cable connections, reducing latency and jitter</li>
+    <li>Enable CLAP "main" variant (multi-IO audio now implemented, CV ports still TODO)</li>
+    <li>Fix CLAP audio port types (now set as stereo, fixes loading under Anklang)</li>
+    <li>Fix memory alignment issues for macOS Intel platform</li>
+    <li>Fix out of bounds read on host audio 2 meters</li>
+    <li>Fix VST3 non-main ports not receiving audio</li>
+    <li>Make macOS native standalone behaving like Linux and Windows regarding buffer-size changes</li>
+    <li>Mark LV2 CV ports as optional</li>
+    <li>Only use simde, drop sse2neon (following VCV Rack's approach to ARM binaries)</li>
+</ul>
+
+<h3>Module changes</h3>
+<ul>
+    <li>Add RebelTech</li>
+    <li>Update Meander</li>
+    <li>Fix crashes when loading patches with Macro Oscillator 2</li>
+    <li>Fix out of bounds read in DrumKit modules</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Cardinal/releases/tag/22.11" target="_blank">
+          https://github.com/DISTRHO/Cardinal/releases/tag/22.11</a>.<br/>
+    Cardinal is released as LV2, VST2, VST3 and CLAP plugin, plus AudioUnit and JACK standalone for certain systems.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; DPF-Plugins v1.6 released</span><br/>
     On <i>2022-01-16</i> by<i> falkTX</i>
 </p>
