@@ -81,7 +81,7 @@ include_once("includes/header.php");
 
 <p>
     <span style="font-size: 20px">&gt; DPF-Plugins v1.6 released</span><br/>
-    On <i>2022-01-16</i> by<i> falkTX</i>
+    On <i>2022-11-01</i> by<i> falkTX</i>
 </p>
 <p>
     Hello everyone, a new release of <a href="https://github.com/DISTRHO/DPF-Plugins" target="_blank">DPF-Plugins</a> is here.<br/>
