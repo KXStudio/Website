@@ -11,6 +11,74 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Cardinal 22.12 released</span><br/>
+    On <i>2022-12-20</i> by<i> falkTX</i>
+</p>
+<p>
+    Greetings everyone, we have yet another release of <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>,
+    this with some great module additions.<br/>
+    <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
+    is a free and open-source virtual modular synthesizer plugin.<br/>
+    It is based on the popular <a href="https://github.com/VCVRack/Rack/" target="_blank">VCV Rack</a>
+    but with a focus on being a fully self-contained plugin version.
+</p>
+<p>
+    The main changes for this release are new modules (Sapphire, Stoermelder Pack-one and Surge-XT) and web-assembly related fixes.<br/>
+    Highly requested and specially interesting for users are the brand new Surge-XT modules, see
+<a href="https://www.youtube.com/watch?v=8MavXLbI50A" target="_blank">Omri Cohen's video</a> for a cool overview of what they can do.<br/>
+    As usual there are a few module updates too.
+</p>
+<p>
+    <img src="/screenshots/news/cardinal-22.12.png" alt="cardinal"/>
+</p>
+
+<h3>Changelog</h3>
+<ul>
+    <li>Add portable standalone Windows binaries</li>
+    <li>Add JTB Waves example/demo patch</li>
+    <li>Fix SSE not being enabled in pffft for 32bit builds</li>
+    <li>Improve docs for building Windows binaries</li>
+    <li>Stop using LTO for macos-universal builds</li>
+</ul>
+
+<h3>Module changes</h3>
+<ul>
+    <li>Add Sapphire</li>
+    <li>Add Stoermelder Pack-one</li>
+    <li>Add Surge-XT</li>
+    <li>Update BaconPlugs</li>
+    <li>Update Befaco</li>
+    <li>Update MindMeld</li>
+    <li>Update PathSet</li>
+</ul>
+
+<h3>Module changes</h3>
+<ul>
+    <li>Add Web-assembly build instructions</li>
+    <li>Enable brotli compression on release files</li>
+    <li>Enable emscripten --use-preload-cache flag, improves browser cache</li>
+    <li>Fix keyboard input having wrong keys</li>
+    <li>Fix mouse lock on chrome-based browsers</li>
+    <li>Fix versioning</li>
+</ul>
+
+<h3>Special Notes</h3>
+<ul>
+    <li>Building now requires a compiler compatible with C++17</li>
+    <li>Windows builds now require 0x0600/Vista, needed for Surge</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Cardinal/releases/tag/22.12" target="_blank">
+          https://github.com/DISTRHO/Cardinal/releases/tag/22.12</a>.<br/>
+    Cardinal is released as LV2, VST2, VST3 and CLAP plugin, plus AudioUnit and JACK/Standalone for certain systems.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Cardinal 22.11 released</span><br/>
     On <i>2022-11-27</i> by<i> falkTX</i>
 </p>
