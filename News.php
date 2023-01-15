@@ -100,7 +100,7 @@ include_once("includes/header.php");
 </p>
 <p>
     As an example, Francesco provided a simple patch that plays a sine wave through a sequence of 54 modules to measure the difference of the starting signal with the end one.<br/>
-    As it can be seen below, with the old implementation there was definitely a delay introduced by the connections<br/>
+    As it can be seen below, with the old implementation there was definitely a delay introduced by the connections.<br/>
     (since the audio engine steps through the modules in the order in which they were created, ignoring which modules should come first according to the cable connections)
 </p>
 <p>
@@ -118,7 +118,7 @@ include_once("includes/header.php");
 <h3>Main Changelog</h3>
 <ul>
     <li>Add classic subtractive polysynth example/demo patch</li>
-    <li>Automatically reset modules processing order according to cable connections, reducing latency and jitter</li>
+    <li>Automatically reset modules processing order according to cable connections</li>
     <li>Enable CLAP "main" variant (multi-IO audio now implemented, CV ports still TODO)</li>
     <li>Fix CLAP audio port types (now set as stereo, fixes loading under Anklang)</li>
     <li>Fix memory alignment issues for macOS Intel platform</li>
