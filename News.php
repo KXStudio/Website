@@ -11,6 +11,46 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.5.3 released</span><br/>
+    On <i>2023-01-15</i> by<i> falkTX</i>
+</p>
+
+<p>
+    Hello everyone, it is release day again, sorta..<br/>
+    This time we have a single update for
+    <a href="https://kx.studio/carla" class="external free" rel="nofollow" target="_blank">Carla</a>.
+</p>
+<p>
+    <a href="https://kx.studio/carla" class="external free" rel="nofollow" target="_blank">Carla</a>
+    is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
+    It has some nice features like automation of parameters via MIDI CC (and send output back as MIDI too) and full OSC control.
+</p>
+<p>
+    Same as last time for v2.5.2, this update backports fixes from the main development branch into the stable 2.5 series.<br/>
+    The more substantial stuff will come for 2.6.0, still a few months away.
+</p>
+
+<h3>Changelog</h3>
+<ul>
+    <li>Always set time frame information for JUCE hosted plugins</li>
+    <li>Fix canvaspreview out-of-bounds panning for patchbay</li>
+    <li>Fix receiving LV2 atoms bigger than 32kB</li>
+    <li>Fix peak metering reading values out of bounds</li>
+    <li>Fix missing &lt;/li&gt; code in about information string</li>
+    <li>Support the more verbose LV2 MIDI CC definitions</li>
+    <li>Use SDL driver by default on Haiku</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla".<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Cardinal 22.12 released</span><br/>
     On <i>2022-12-20</i> by<i> falkTX</i>
 </p>
