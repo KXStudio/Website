@@ -11,6 +11,73 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Cardinal 23.02 released</span><br/>
+    On <i>2023-02-28</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone, it is time for another <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a> release.<br/>
+    <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
+    is a free and open-source virtual modular synthesizer plugin.<br/>
+    It is based on the popular <a href="https://github.com/VCVRack/Rack/" target="_blank">VCV Rack</a>
+    but with a focus on being a fully self-contained plugin version.
+</p>
+<p>
+    <img src="/screenshots/news/cardinal-23.02.png" alt="cardinal"/>
+</p>
+<p>
+    The main change for this release is the introduction of a "Mini" variant.<br/>
+    This is a special variant with a very small, hand-picked module selection and limited IO (2 audio ports plus 5 CV).<br/>
+    There are 2 main reasons for this variant to exist:
+</p>
+<ul>
+    <li>make it easier for users new to the modular world to get a working setup, by only having some of the best possible modules available to choose from</li>
+    <li>hand-pick modules that are simple enough to work reliably in a remote setup</li>
+</ul>
+<p>
+    For now the list of selected modules is quite small, intentionally. We will add a few more as the need appears.<br/>
+    All included modules support polyphony, reducing confusion for new users not yet used to mono vs poly approach in Rack/Cardinal.<br/>
+    <br/>
+    The 2nd reason (only having simple modules) is needed in order to support DSP/UI separation.<br/>
+    Having this in place means we can run the DSP on a different machine than the UI.<br/>
+    This is particularly interesting for running Cardinal on embed systems, being controlled remotely via web browser or native desktop application.<br/>
+    Already doable with LV2 from 23.02 onwards, later on this will be made possible on standalone too.
+</p>
+<p>
+    There are a few module updates too, and some important bug fixes too, see the changelog below.
+</p>
+
+<h3>Changelog</h3>
+<ul>
+    <li>Add Mini variant (very few hand-picked modules, with separate DSP/UI under LV2)
+    <li>Add wasm-noopt build, needed for some web browsers
+    <li>Add CardinalMIDI variant for AU (same as CardinalFX but has different tag)
+    <li>Allow to build without SSE optimizations (using `NOSIMD=true`)
+    <li>Check /usr and /usr/local directories for existing Carla tools on macOS
+    <li>Do not reset Host MIDI pitch when receiving an all-notes-off event
+    <li>Fix display of Host CV in non-main variants
+    <li>Fix LV2 not reacting to buffer-size changes
+    <li>Fix VST3 "SDK" versioning to be more officially compatible
+    <li>Remove the `NOPLUGINS` build option
+    <li>Several performance optimizations</li>
+</ul>
+
+<h3>Module changes</h3>
+<ul>
+    <li>Update Grande Modular to 2.7.2</li>
+    <li>Update Surge XT to 2.1.3</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Cardinal/releases/tag/23.02" target="_blank">
+          https://github.com/DISTRHO/Cardinal/releases/tag/23.02</a>.<br/>
+    Cardinal is released as LV2, VST2, VST3 and CLAP plugin, plus AudioUnit and JACK/Standalone for certain systems.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.5.3 released</span><br/>
     On <i>2023-01-15</i> by<i> falkTX</i>
 </p>
@@ -92,7 +159,7 @@ include_once("includes/header.php");
     <li>Update PathSet</li>
 </ul>
 
-<h3>Module changes</h3>
+<h3>Web-assembly related changes</h3>
 <ul>
     <li>Add Web-assembly build instructions</li>
     <li>Enable brotli compression on release files</li>
