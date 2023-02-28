@@ -22,9 +22,6 @@ include_once("includes/header.php");
     but with a focus on being a fully self-contained plugin version.
 </p>
 <p>
-    <img src="/screenshots/news/cardinal-23.02.png" alt="cardinal"/>
-</p>
-<p>
     The main change for this release is the introduction of a "Mini" variant.<br/>
     This is a special variant with a very small, hand-picked module selection and limited IO (2 audio ports plus 5 CV).<br/>
     There are 2 main reasons for this variant to exist:
@@ -45,9 +42,11 @@ include_once("includes/header.php");
     Later on this will be made possible on standalone too.
 </p>
 <p>
+    <img src="/screenshots/news/cardinal-23.02.png" alt="cardinal"/>
+</p>
+<p>
     There are a few module updates too, and some important bug fixes too, see the changelog below.
 </p>
-
 <h3>Changelog</h3>
 <ul>
     <li>Add Mini variant (very few hand-picked modules, with separate DSP/UI under LV2)
