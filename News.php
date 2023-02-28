@@ -40,7 +40,9 @@ include_once("includes/header.php");
     The 2nd reason (only having simple modules) is needed in order to support DSP/UI separation.<br/>
     Having this in place means we can run the DSP on a different machine than the UI.<br/>
     This is particularly interesting for running Cardinal on embed systems, being controlled remotely via web browser or native desktop application.<br/>
-    Already doable with LV2 from 23.02 onwards, later on this will be made possible on standalone too.
+    Already doable with LV2 from 23.02 onwards, used for
+      <a href="https://forum.mod.audio/t/distrho-cardinal-mini/9262" target="_blank">MOD Audio builds</a> (as seen in the screenshot).<br/>
+    Later on this will be made possible on standalone too.
 </p>
 <p>
     There are a few module updates too, and some important bug fixes too, see the changelog below.
