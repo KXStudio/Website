@@ -11,6 +11,37 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.5.4 released</span><br/>
+    On <i>2023-03-13</i> by<i> falkTX</i>
+</p>
+
+<p>
+    Hello again everyone, a new Carla release is here, v2.5.4 which brings a couple of fixes to the v2.5 series.
+</p>
+<p>
+    <a href="https://kx.studio/carla" class="external free" rel="nofollow" target="_blank">Carla</a>
+    is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
+    It has some nice features like automation of parameters via MIDI CC (and send output back as MIDI too) and full OSC control.
+</p>
+
+<h3>Changelog</h3>
+<ul>
+    <li>Fix crash/regression when using LV2 plugins without worker extension</li>
+    <li>Fix compat with PyQt >= PyQt 5.15.8</li>
+    <li>Fix macOS build</li>
+    <li>Simplify JACK event handling, now using a single queue on the main thread</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla".<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Cardinal 23.02 released</span><br/>
     On <i>2023-02-28</i> by<i> falkTX</i>
 </p>
