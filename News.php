@@ -11,6 +11,74 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Introducing AIDA-X</span><br/>
+    On <i>2023-04-25</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello everyone, I would like to introduce a new audio plugin -
+    <a href="https://github.com/AidaDSP/AIDA-X" target="_blank">AIDA-X</a>.
+</p>
+<p>
+    <img src="/screenshots/news/introducing-aida-x.png" alt="AIDA-X"/>
+</p>
+<p>
+    <a href="https://github.com/AidaDSP/AIDA-X" target="_blank">AIDA-X</a>
+    is an Amp Model Player, it loads models of AI trained music gear which you can then play in real-time.<br/>
+    Its main intended use is to provide high fidelity simulations of amplifiers.<br/>
+    However, it is also possible to run entire signal chains consisting of any combination of amp, cab, dist, drive, fuzz, boost and eq.<br/>
+    See <a href="https://github.com/AidaDSP/AIDA-X" target="_blank">https://github.com/AidaDSP/AIDA-X</a>
+    for more details on the project, including documentation and downloads.
+</p>
+<p>
+    Behind the scenes AIDA-X uses
+    <a href="https://github.com/jatinchowdhury18/RTNeural" target="_blank">RTNeural</a>,
+    which does the heavy lifting for model processing.<br/>
+    Similar to
+    <a href="https://kx.studio/News/?action=view&url=introducing-masterme" target="_blank">master_me</a>,
+    I did the desktop plugin related code so it obviously uses
+    <a href="https://github.com/DISTRHO/DPF" target="_blank">DPF</a>
+    for the cross-platform and plugin format support details.<br/>
+</p>
+<p>
+    This new plugin comes out of an effort from me, <a href="https://aidadsp.github.io/" target="_blank">AIDA-DSP</a> and <a href="https://mod.audio/" target="_blank">MOD Audio</a>.<br/>
+    Initially AIDA-DSP folks did the work to get <a href="https://github.com/jatinchowdhury18/RTNeural" target="_blank">RTNeural</a> working as its own embed-focused LV2 plugin,
+    together with figuring out the AI training details.<br/>
+    The initial idea was to have an LV2/MOD-specific plugin that would serve as "generic model loader", this is the <a href="https://github.com/AidaDSP/aidadsp-lv2" target="_blank">aidadsp-lv2</a> project.<br/>
+    As part of my work for MOD Audio, I helped to get this LV2 plugin in a bit better shape and integrated on the platform.<br/>
+    You can see a nice, extensive discussion with Jatin (RTNeural's main author) regarding how to best approach a "load it all" with it
+    <a href="https://github.com/jatinchowdhury18/RTNeural/pull/88" target="_blank">here</a>.
+</p>
+<p>
+    With all pieces in place the LV2 embed plugin was/is working quite well inside MOD units and other low-spec devices, but LV2 is not yet a widely supported format...<br/>
+    We did not want to have it as a niche plugin, the technology around it is getting a lot of attention lately because of how damn cool it is.<br/>
+    I took the initiative to make a desktop plugin for AIDA-DSP, based on DPF as usual, and then we built on top of that.
+</p>
+
+<h3>Model Training and Downloads</h3>
+<p>
+    If you are interesting on capturing/training your own models, MOD Audio has created a dedicated
+    <a href="https://mod.audio/aida-x-modeling-guide" target="_blank">Modeling Guide page</a>.<br/>
+    There's a dedicated space for sharing and discussing all things related to Amp Models in the <a href="https://forum.mod.audio/c/neural/62" target="_blank">MOD Forum's Neural Modelling section</a>.<br/>
+</p>
+
+<h3>Plugin Downloads</h3>
+<p>
+    There are pre-compiled binaries for Linux, macOS and Windows which can downloaded at
+      <a href="https://github.com/AidaDSP/AIDA-X/releases" target="_blank">
+          https://github.com/AidaDSP/AIDA-X/releases</a>.<br/>
+    You can also find it in the KXStudio repositories as <b>aida-x</b> package.
+</p>
+<p>
+    And you can also try it live online at <a href="https://mod.audio/aida-x-online/" target="_blank">mod.audio/aida-x-online</a>,
+    though this last option uses pre-recorded audio loops instead of real audio input.
+</p>
+<p>
+    Enjoy and have fun!
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.5.4 released</span><br/>
     On <i>2023-03-13</i> by<i> falkTX</i>
 </p>
