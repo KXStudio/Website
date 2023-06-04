@@ -25,16 +25,16 @@ include_once("includes/versions.php");
 </p>
 <p class="p_extra_spaced">
   <b>MacOS Downloads:</b><br/>
-  &nbsp;<a href="https://github.com/falkTX/Carla-Releases/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla-<?php echo $VERSION_CARLA_MAJ; ?>-macos-universal.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
+  &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla-<?php echo $VERSION_CARLA_MAJ; ?>-macos-universal.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
         <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (universal build, version <?php echo $VERSION_CARLA; ?>, requires macOS 10.12 or higher)<br/>
 </p>
 <p class="p_extra_spaced">
   <b>Windows Downloads:</b><br/>
 <!--         &nbsp;<a href="http://sourceforge.net/projects/kxstudio/files/Releases/cadence/Cadence-0.8.1-win32.zip/download" class="external text a_bigger_text" rel="nofollow" target="_blank"> -->
 <!--               <img src="images/ico_cadence.png" alt="" class="img_text_align"/> Cadence </a> (32bit, version 0.8.1)<br/> -->
-  &nbsp;<a href="https://github.com/falkTX/Carla-Releases/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla-<?php echo $VERSION_CARLA_MAJ; ?>-win32.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+  &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla-<?php echo $VERSION_CARLA_MAJ; ?>-win32.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
         <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (32bit, version <?php echo $VERSION_CARLA; ?>)<br/>
-  &nbsp;<a href="https://github.com/falkTX/Carla-Releases/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla-<?php echo $VERSION_CARLA_MAJ; ?>-win64.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+  &nbsp;<a href="https://github.com/falkTX/Carla/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla-<?php echo $VERSION_CARLA_MAJ; ?>-win64.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
         <img src="images/ico_carla.png" alt="" class="img_text_align"/> Carla2 </a> (64bit, version <?php echo $VERSION_CARLA; ?>)<br/>
 </p>
 

@@ -39,13 +39,13 @@ include_once("includes/versions.php");
         <a href="https://github.com/falkTX/Carla/releases/download/v<?php echo $VERSION_CARLA_OLD; ?>/Carla_<?php echo $VERSION_CARLA_OLD; ?>-linux64.tar.xz" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Linux 64bit</a> (requires Qt 5.9 or higher)<br/>
     <img src="images/ico_mac.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla-Releases/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla-<?php echo $VERSION_CARLA_MAJ; ?>-macos-universal.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla-<?php echo $VERSION_CARLA_MAJ; ?>-macos-universal.dmg" class="external text a_bigger_text" rel="nofollow" target="_blank">
          MacOS universal build</a> (requires macOS 10.12 or higher)<br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla-Releases/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla-<?php echo $VERSION_CARLA_MAJ; ?>-win32.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla-<?php echo $VERSION_CARLA_MAJ; ?>-win32.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 32bit</a><br/>
     <img src="images/ico_windows.png" alt="" class="img_text_align_spaced"/>
-        <a href="https://github.com/falkTX/Carla-Releases/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla-<?php echo $VERSION_CARLA_MAJ; ?>-win64.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
+        <a href="https://github.com/falkTX/Carla/releases/download/v<?php echo $VERSION_CARLA; ?>/Carla-<?php echo $VERSION_CARLA_MAJ; ?>-win64.zip" class="external text a_bigger_text" rel="nofollow" target="_blank">
          Windows 64bit</a><br/>
 </p>
 <p>

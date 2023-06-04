@@ -11,6 +11,44 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.5.5 released</span><br/>
+    On <i>2023-06-04</i> by<i> falkTX</i>
+</p>
+
+<p>
+    Hello again everyone, a new Carla release is here, v2.5.5 which brings a couple of fixes to the v2.5 series and internal tweaks for its future integration in <a href="https://obsproject.com/" target="_blank">OBS</a>.<br/>
+    Worth noting that future releases of <a href="https://github.com/DISTRHO/Cardinal/" target="_blank">Cardinal</a> and <a href="https://github.com/DISTRHO/Ildaeil/" target="_blank">Ildaeil</a> will depend on this version (or later) for their audio plugin discovery support.
+</p>
+<p>
+    <a href="https://kx.studio/carla" class="external free" rel="nofollow" target="_blank">Carla</a>
+    is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
+    It has some nice features like automation of parameters via MIDI CC (and send output back as MIDI too) and full OSC control.
+</p>
+
+<h3>Changelog</h3>
+<ul>
+    <li>Allow IPC during plugin discovery (controlled by external tools)</li>
+    <li>Expose a few extra APIs in carla-utils library</li>
+    <li>Install extra carla-utils related headers during `make install`</li>
+    <li>Fix invalid/empty LV2 paths for compatibility with lilv</li>
+    <li>Fix LV2 plugin state for plugin bridges</li>
+    <li>Fix showing engine device settings on systems without JACK</li>
+    <li>Fix usage with LMMS on Windows</li>
+    <li>Remove use of `REAL_BUILD` macro, no longer needed</li>
+    <li>Tweaks for integration in OBS</li>
+    <li>Other minor fixes and cleanup</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla".<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Introducing AIDA-X</span><br/>
     On <i>2023-04-25</i> by<i> falkTX</i>
 </p>
