@@ -16,13 +16,8 @@ include_once("includes/header.php");
 </p>
 
 <p>
-    Hello again everyone, a new Carla release is here, v2.5.5 which brings a couple of fixes to the v2.5 series and internal tweaks for its future integration in <a href="https://obsproject.com/" target="_blank">OBS</a>.<br/>
+    Hello again everyone, a new release for the <a href="https://kx.studio/carla" class="external free" rel="nofollow" target="_blank">Carla Plugin Host</a> is here, v2.5.5 which brings a couple of fixes to the v2.5 series and internal tweaks for its future integration in <a href="https://obsproject.com/" target="_blank">OBS</a>.<br/>
     Worth noting that future releases of <a href="https://github.com/DISTRHO/Cardinal/" target="_blank">Cardinal</a> and <a href="https://github.com/DISTRHO/Ildaeil/" target="_blank">Ildaeil</a> will depend on this version (or later) for their audio plugin discovery support.
-</p>
-<p>
-    <a href="https://kx.studio/carla" class="external free" rel="nofollow" target="_blank">Carla</a>
-    is an audio plugin host, with support for many audio drivers and plugin formats.<br/>
-    It has some nice features like automation of parameters via MIDI CC (and send output back as MIDI too) and full OSC control.
 </p>
 
 <h3>Changelog</h3>
