@@ -130,7 +130,7 @@ include_once("includes/header.php");
 <ul>
     <li>Add persistent storage (automatic on save, can be manually triggered via File menu)</li>
     <li>Add local (browser-side) patch loading via File menu (under "Open local patch")</li>
-    <li>Automaticly load no-simd version on browsers that do not support web-simd</li>
+    <li>Automatically load no-simd version on browsers that do not support web-simd</li>
     <li>Disable cursor lock by default</li>
 </ul>
 
