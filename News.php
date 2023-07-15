@@ -11,6 +11,58 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Ildaeil v1.3 released</span><br/>
+    On <i>2022-10-15</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone, a new release of
+    <a href="https://github.com/DISTRHO/Ildaeil" target="_blank"><b>Ildaeil</b></a>
+    is here.<br/>
+    <a href="https://github.com/DISTRHO/Ildaeil" target="_blank"><b>Ildaeil</b></a>
+    is mini-plugin host working as a plugin, allowing one-to-one plugin format reusage.<br/>
+    The idea is to load it as a plugin inside your DAW and then the other "real" plugin inside Ildaeil.<br/>
+    This allows, for example, a VST3 host to load LV2 plugins and vice-versa.
+</p>
+<p>
+    The main changes this time are automatic binary plugin scanning, exposing plugin presets and simplified standalone.<br/>
+    The automatic binary plugin scanning makes Ildaeil able to quickly list and load even more plugins than before.<br/>
+    Scanned plugins are cached so the scan only happens once per plugin (or until its binary is updated).
+</p>
+<p>
+    For the standalone, Ildaeil now has a single standalone variant instead of the old FX/Synth/MIDI separate programs.<br/>
+    In order to make this work in a more generic way, buttons for "enable midi" and "enable input" are shown when viewing a plugin's generic UI.<br/>
+    Also related to this, an online version is available at <a href="https://ildaeil.kx.studio/" target="_blank">ildaeil.kx.studio</a>,
+    used for doing experiments with realtime audio and plugins on the Web.
+</p>
+<p>
+    <img src="/screenshots/news/ildaeil-1.3.png" alt="ildaeil-1.3"/>
+</p>
+
+<p>
+    Full changelog:
+</p>
+<ul>
+    <li>Add auto-scan of binary plugins (LADSPA, DSSI, VST2, VST3 and CLAP)</li>
+    <li>Add enable-input, enable-midi and buffer-size options for standalone</li>
+    <li>Add macOS standalone to release binaries</li>
+    <li>Add preset selector for plugins that expose them</li>
+    <li>Improve VST3 hosting</li>
+    <li>Initial experimental web version, public instance running at https://ildaeil.kx.studio/</li>
+    <li>Set GUI as resizable when running as standalone</li>
+    <li>Use a single standalone program instead of having Synth/FX/MIDI variants</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Ildaeil/releases/tag/v1.3" target="_blank">
+          https://github.com/DISTRHO/Ildaeil/releases/tag/v1.3</a>.<br/>
+    Ildaeil is released as CLAP, LV2, VST2 and VST3 plugin, plus JACK/Standalone for some systems.<br/>
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.5.5 released</span><br/>
     On <i>2023-06-04</i> by<i> falkTX</i>
 </p>
