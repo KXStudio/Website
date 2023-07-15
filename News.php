@@ -11,6 +11,140 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Cardinal 23.07 released</span><br/>
+    On <i>2023-07-15</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone, it is time for another <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a> release.<br/>
+    <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
+    is a free and open-source virtual modular synthesizer plugin.<br/>
+    It is based on the popular <a href="https://github.com/VCVRack/Rack/" target="_blank">VCV Rack</a>
+    but with a focus on being a fully self-contained plugin version.
+</p>
+<p>
+    There are quite a few nice changes this time, from finally allowing global user settings to improved audio plugin hosting.<br/>
+    Let's go throught the main changes...
+</p>
+
+<h3>Global user settings</h3>
+<p>
+    As per user request Cardinal now defines a user directory for patches, modules settings and other details.<br/>
+    This came as a necessity for the updated Ildaeil module, which needs to store plugin cache between runs.<br/>
+    With this now in place, many things that Cardinal was missing compared to VCV Rack are now enabled, including:
+</p>
+<ul>
+    <li>Allow modules to save and load settings in a known location</li>
+    <li>Allow to save, list and load module presets and general files from a known location</li>
+    <li>Menu action "File" -&gt; "Open recent" is now enabled</li>
+    <li>Menu action "File" -&gt; "Overwrite template" is now enabled</li>
+    <li>Menu action "Help" -&gt; "Open user folder" is now enabled</li>
+    <li>Save and load user settings globally</li>
+</ul>
+<p>
+    Please note that user settings are saved <b>per-variant</b>, so e.g. CardinalSynth and CardinalFX will have differnet settings.<br/>
+    This is 100% intentional, and found to be generally useful - we want to have different base templates and favorites on Synth vs FX.<br/>
+</p>
+<p>
+    Also, something not done on VCV Rack side, a "File" -&gt; "New (factory template)" is now available.<br/>
+    This allows to load the Cardinal's original template instead of the user-saved one.
+</p>
+
+<h3>Ildaeil plugin hosting</h3>
+<p>
+    The Ildaeil module allows to load audio plugins (such as LV2 and VST3) inside Cardinal.<br/>
+    With this update, Ildaeil will automatically scan and list binary plugins, bringing support for LADSPA, DSSI, VST2, VST3 and CLAP.<br/>
+    When supported by the plugin Ildaeil will also show the list of available presets.
+</p>
+<p>
+    <img src="/screenshots/news/cardinal-23.07-ildaeil.png" alt="cardinal+ildaeil"/>
+</p>
+
+<h3>AIDA-X module</h3>
+<p>
+    This releases introduces a new module, a port of the <a href="https://github.com/AidaDSP/AIDA-X" target="_blank">AIDA-X audio plugin</a> (also available separately as a standalone plugin).<br/>
+    AIDA-X is an Amp Model Player leveraging AI and machine learning, with a target of providing high fidelity simulations of guitar amplifiers.<br/>
+    It is also possible to run entire signal chains consisting of any combination of amp, cab, dist, drive, fuzz, boost and eq.
+</p>
+<p>
+    The module loads AIDA-X files that have been trained to match a desired sound output.<br>
+    Right-click on the module and select "Load model file..." to load an AIDA-X model file from disk.
+</p>
+<p>
+    A quick model pack can be downloaded from 
+<a href="https://drive.google.com/drive/folders/18MwNhuo9fjK8hlne6SAdhpGtL4bWsVz-" target="_blank">AIDA DSP's Google Drive folder</a>.<br>
+    Check out the 
+<a href="https://forum.mod.audio/c/neural/62" target="_blank">MOD Forum's Neural Modelling section</a> for an online place for discussion, sharing and all things related to Amp Models.
+</p>
+<p>
+    <img src="/screenshots/news/cardinal-23.07-aida-x.png" alt="cardinal+aida-x"/>
+</p>
+
+<h3>Web browser persistent storage</h3>
+<p>
+    A nice little addition to the Cardinal's online web version (running at <a href="https://cardinal.kx.studio/" target="_blank">cardinal.kx.studio</a> or easily self-hostable) is browser-side peristent storage.<br>
+    This means we are able to locally save patches and user settings on the web version of Cardnal, making it a little bit more useful and not purely a test tool.<br>
+    Previously saved patches can be accessed via "File" -&gt; "Open local patch" menu.
+</p>
+<p>
+    Also on the web version, it will now automatically detect lack of Web-SIMD support and load a non-optimized version of Cardinal.<br>
+    This allows to load Cardinal on Safari and other WebKit based browsers, or any other that does not support Web-SIMD.<br>
+    Worth noting that latest WebKit has finally added support for Web-SIMD, so this is more of a temporary measure until the update is rolled out everywhere.
+</p>
+
+<p>
+    There are a few module updates too, and some important bug fixes too, see the changelog below.
+</p>
+<h3>Changelog</h3>
+<ul>
+    <li>Add AIDA-X module</li>
+    <li>Add Bogaudio AD to mini variant</li>
+    <li>Add (binary) plugin scanning to Ildaeil plugin hosting (LADSPA, DSSI, VST2, VST3 and CLAP)</li>
+    <li>Add plugin presets to Ildaeil, when exposed on the plugin side</li>
+    <li>Add VST2 plugin folder option to Windows installer</li>
+    <li>Allow custom URL for remote instance connections</li>
+    <li>Allow usage of local user directory and configs, expose related options</li>
+    <li>Fix focus to input text dialogs</li>
+    <li>Fix missing menubar cpu usage</li>
+    <li>Invert scroll X direction</li>
+    <li>Rework file menu</li>
+    <li>Update base VCV Rack to v2.3.0</li>
+    <li>Update Sapphire to v2.2.2 (adds Tube Unit)</li>
+    <li>Update MindMeldModular and SurgeXT, for Rack 2.3 compatibility</li>
+</ul>
+
+<p><b>Build related changes</b></p>
+
+<ul>
+    <li>Bump minimum required macOS version to 10.15</li>
+    <li>Fix build with GCC13</li>
+    <li>Fix missing `make install` of mini variant</li>
+    <li>LTO no longer enabled by default for release builds</li>
+    <li>Only enable remote OSC control in headless builds</li>
+    <li>Remove `NOPLUGINS` build option</li>
+    <li>Remove use of `mingw-std-threads`</li>
+    <li>Several optimizations and build tweaks</li>
+</ul>
+
+<p><b>Web version related changes</b></p>
+
+<ul>
+    <li>Add persistent storage (automatic on save, can be manually triggered via File menu)</li>
+    <li>Add local (browser-side) patch loading via File menu (under "Open local patch")</li>
+    <li>Automaticly load no-simd version on browsers that do not support web-simd</li>
+    <li>Disable cursor lock by default</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Cardinal/releases/tag/23.07" target="_blank">
+          https://github.com/DISTRHO/Cardinal/releases/tag/23.07</a>.<br/>
+    Cardinal is released as LV2, VST2, VST3 and CLAP plugin, plus AudioUnit and JACK/Standalone for certain systems.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Ildaeil v1.3 released</span><br/>
     On <i>2023-07-15</i> by<i> falkTX</i>
 </p>
