@@ -12,7 +12,7 @@ include_once("includes/header.php");
 
 <p>
     <span style="font-size: 20px">&gt; Ildaeil v1.3 released</span><br/>
-    On <i>2022-10-15</i> by<i> falkTX</i>
+    On <i>2023-07-15</i> by<i> falkTX</i>
 </p>
 <p>
     Hello again everyone, a new release of
