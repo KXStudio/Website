@@ -15,7 +15,7 @@ include_once("includes/header.php");
     On <i>2023-07-15</i> by<i> falkTX</i>
 </p>
 <p>
-    Hello again everyone, it is time for another <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a> release.<br/>
+    Hello yet again everyone, it is time for another <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a> release.<br/>
     <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
     is a free and open-source virtual modular synthesizer plugin.<br/>
     It is based on the popular <a href="https://github.com/VCVRack/Rack/" target="_blank">VCV Rack</a>
