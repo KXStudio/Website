@@ -11,6 +11,56 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Cardinal 23.09 released</span><br/>
+    On <i>2023-09-17</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone, it is time for another <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a> release.<br/>
+    <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
+    is a free and open-source virtual modular synthesizer plugin.<br/>
+    It is based on the popular <a href="https://github.com/VCVRack/Rack/" target="_blank">VCV Rack</a>
+    but with a focus on being a fully self-contained plugin version.
+</p>
+<p>
+    The main change for this release is making the OSC remote control an official feature, with some initial documentation <a href="https://github.com/DISTRHO/Cardinal/blob/main/docs/OSC-REMOTE-CONTROL.md" target="_blank">here</a>.<br/>
+    Then also the usual set of fixes and a few module updates.<br/>
+    As an extra, Cardinal has its own website now, living at <a href="https://cardinal.kx.studio/" target="_blank">cardinal.kx.studio</a> with the online/wasm version still accessible by clicking "Try Live".
+</p>
+<h3>Changelog</h3>
+<ul>
+    <li>Add OSC Remote control</li>
+    <li>Do not try to save and load module info per project, its a global setting since 22.07</li>
+    <li>Fix a few missing details in macOS app bundles</li>
+    <li>Fix Cardinal Mini window title after loading patches</li>
+    <li>Fix crash when pressing F9 (used internally for generating screenshots)</li>
+    <li>Fix crash when window creation fails (e.g. running headless)</li>
+    <li>Fix headless build when OpenGL is available (but unused since it is headless)</li>
+    <li>Fix stuck notes in CardinalNative MIDI handling</li>
+    <li>Fix VST2 parameter changes</li>
+    <li>Proper handling of XDG_DOCUMENTS_DIR</li>
+    <li>Switch to regular/initial welcome patch for web/wasm builds</li>
+</ul>
+
+<h3>Modules related changes</h3>
+<ul>
+    <li>Add EnigmaCurry</li>
+    <li>Audio File Player: Fix resampled playback for some files, many CPU optimizations</li>
+    <li>Ildaeil: Add bridge reload button, in case hosted plugin crashes or times out</li>
+    <li>Ildaeil: List Windows plugins under Linux</li>
+    <li>Update unless_modules</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Cardinal/releases/tag/23.09" target="_blank">
+          https://github.com/DISTRHO/Cardinal/releases/tag/23.09</a>.<br/>
+    Cardinal is released as LV2, VST2, VST3 and CLAP plugin, plus AudioUnit and JACK/Standalone for certain systems.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.5.6 released</span><br/>
     On <i>2023-08-04</i> by<i> falkTX</i>
 </p>
