@@ -11,6 +11,35 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Carla 2.5.7 released</span><br/>
+    On <i>2023-09-30</i> by<i> falkTX</i>
+</p>
+
+<p>
+    Hi everyone, a new release for the <a href="https://kx.studio/carla" class="external free" rel="nofollow" target="_blank">Carla Plugin Host</a> is here, v2.5.7 which includes some important fixes including a regression when used together with the (yet to be released) v2.6.x discovery tools.
+</p>
+
+<h3>Changelog</h3>
+<ul>
+    <li>Fix compatibility of plugin discovery with newer 2.6.x tools</li>
+    <li>Fix crash when using JACK under Linux ARM</li>
+    <li>Fix carla-lv2 pre-run with 0 frames</li>
+    <li>Fix carla-vst GUI for high-dpi screens</li>
+    <li>Fix carla-native-plugin library exported symbols</li>
+    <li>Show custom error message when trying to start JACK driver without JACK</li>
+    <li>Skip special treatment for LADISH (do not set session management hints)</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    To download Carla binaries or source code, jump on over to the <a href="https://kx.studio/Downloads" class="external free" rel="nofollow" target="_blank">KXStudio downloads section</a>.<br/>
+    If you're using the KXStudio repositories, you can simply install "carla".<br/>
+    Bug reports and feature requests are welcome! Jump on over to the <a href="https://github.com/falkTX/Carla" class="external free" rel="nofollow" target="_blank">Carla's Github project</a> page for those.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Cardinal 23.09 released</span><br/>
     On <i>2023-09-17</i> by<i> falkTX</i>
 </p>
