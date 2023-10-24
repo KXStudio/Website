@@ -11,6 +11,51 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Cardinal 23.10 released</span><br/>
+    On <i>2023-10-24</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello again everyone, it is time for another <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a> release.<br/>
+    <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
+    is a free and open-source virtual modular synthesizer plugin.<br/>
+    It is based on the popular <a href="https://github.com/VCVRack/Rack/" target="_blank">VCV Rack</a>
+    but with a focus on being a fully self-contained plugin version.
+</p>
+<p>
+    This is mostly a maintenance update, focused primarily on bug fixes.
+</p>
+<h3>Changelog</h3>
+<ul>
+    <li>Fix clipboard (regression in 23.09)</li>
+    <li>Fix initial OpenGL state for some systems</li>
+    <li>Fix macOS horizontal scroll</li>
+    <li>Fix state save/restore with non-english locales</li>
+    <li>Fix "user dir" on Windows, was causing settings persistence to fail</li>
+    <li>Set main variant as synth type</li>
+    <li>Set X11 window icon for standalone</li>
+    <li>Update to latest
+        <a href="https://github.com/falkTX/Carla" target="_blank">Carla</a>
+        and
+        <a href="https://github.com/DISTRHO/DPF" target="_blank">DPF</a>
+        (which also updates <a href="https://github.com/lv2/pugl/" target="_blank">pugl</a>)</li>
+</ul>
+
+<h3>Modules related changes</h3>
+<ul>
+    <li>Update nonlinearcircuits</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Cardinal/releases/tag/23.10" target="_blank">
+          https://github.com/DISTRHO/Cardinal/releases/tag/23.10</a>.<br/>
+    Cardinal is released as LV2, VST2, VST3 and CLAP plugin, plus AudioUnit and JACK/Standalone for certain systems.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Carla 2.5.7 released</span><br/>
     On <i>2023-09-30</i> by<i> falkTX</i>
 </p>
