@@ -11,6 +11,68 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; Cardinal 24.04 released</span><br/>
+    On <i>2024-04-11</i> by<i> falkTX</i>
+</p>
+<p>
+    Hi everyone, a new release for <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a> is here,
+    24.04 which focuses on updating the base VCV Rack 2.4 and adds quite a few new modules, bringing the module count to 1193.
+</p>
+<p>
+    <a href="https://github.com/DISTRHO/Cardinal" target="_blank">Cardinal</a>
+    is a free and open-source virtual modular synthesizer plugin.<br/>
+    It is based on the popular <a href="https://github.com/VCVRack/Rack/" target="_blank">VCV Rack</a>
+    but with a focus on being a fully self-contained plugin version.
+</p>
+
+<p>
+    <img src="/screenshots/news/cardinal-24.04.png" alt="cardinal"/>
+</p>
+
+<h3>Changelog</h3>
+<ul>
+    <li>HostMIDI: Add option to force gaps between MIDI input notes</li>
+    <li>Fix build with latest liblo</li>
+    <li>Fix Linux VST2 exported symbols</li>
+    <li>Fix MindMeldModular in wasm/web builds</li>
+    <li>Force-redraw of all child widgets on dark mode change</li>
+    <li>Improve Ildaeil/Carla VST3 plugin handling</li>
+    <li>Improve Ildaeil plugin bridge handling for macOS</li>
+    <li>Improve Ildaeil plugin scanning</li>
+    <li>Several fixes for UI size with high-dpi screens</li>
+    <li>Stop using cardinal-specific settings::darkMode</li>
+    <li>Tweak default build flags to better match VCV Rack</li>
+    <li>Update base VCV Rack to v2.4</li>
+    <li>Use DPF for AU support instead of JUCE</li>
+    <li>Use GLES2 render target for linux ARM release builds</li>
+</ul>
+
+<h3>Module updates</h3>
+<ul>
+    <li>Add Computerscare</li>
+    <li>Add CVfunk</li>
+    <li>Add DHE modules</li>
+    <li>Add Starling Via</li>
+    <li>Update Befaco</li>
+    <li>Update GrandeModular</li>
+    <li>Update HetrickCV</li>
+    <li>Update Sapphire</li>
+    <li>Update Surge XT</li>
+    <li>Update unless_modules</li>
+    <li>Update ValleyAudio</li>
+</ul>
+
+<h3>Downloads</h3>
+<p>
+    The source code plus Linux, macOS and Windows binaries can be downloaded at
+      <a href="https://github.com/DISTRHO/Cardinal/releases/tag/24.04" target="_blank">
+          https://github.com/DISTRHO/Cardinal/releases/tag/24.04</a>.<br/>
+    Cardinal is released as CLAP, LV2, VST2 and VST3 plugin, plus AudioUnit and JACK/Standalone for certain systems.
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Cardinal 23.10 released</span><br/>
     On <i>2023-10-24</i> by<i> falkTX</i>
 </p>
