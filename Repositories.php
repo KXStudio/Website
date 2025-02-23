@@ -5,7 +5,7 @@ $PAGE_SOURCE_1 = ARRAY("/Repositories");
 $PAGE_SOURCE_2 = ARRAY("Repositories");
 include_once("includes/header.php");
 
-$DEBIAN_PACKAGE     = "kxstudio-repos_11.1.0_all.deb";
+$DEBIAN_PACKAGE     = "kxstudio-repos_11.2.0_all.deb";
 $DEBIAN_PACKAGE_URL = "https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/" . $DEBIAN_PACKAGE;
 ?>
 
@@ -59,7 +59,7 @@ $DEBIAN_PACKAGE_URL = "https://launchpad.net/~kxstudio-debian/+archive/kxstudio/
 sudo apt-get update
 
 <span style="color: rgb(110, 110, 110);"># Install required dependencies if needed</span>
-sudo apt-get install apt-transport-https gpgv wget
+sudo apt-get install gpgv wget
 
 <span style="color: rgb(110, 110, 110);"># Download package file</span>
 wget <?php echo $DEBIAN_PACKAGE_URL . "\n"; ?>
