@@ -11,6 +11,109 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Project Update (May 2025)</span><br/>
+    On <i>2025-05-31</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, it has been a while since the last project or general update.<br/>
+    Life has been very chaotic and I was not able to pay too much attention to "optional" projects, other things needed priority.<br/>
+    Now with work and housing situation sorted and also some holidays, it is the right time to give some general project update.
+</p>
+
+<h3>Repository status</h3>
+<p>
+    Packages in the KXStudio repositories are a bit outdated now, apologies for that.<br/>
+    I still kept some things updated regularly, like Carla and DPF related packages, plugin adding new plugins I worked on like podcast-plugins.<br/>
+    I will try to update the repositories very soon.
+</p>
+<p>
+    One thing that worries me when looking at possible software updates is the high amount of abandoned projects.<br/>
+    Some use legacy toolkits (like Gtk2 or NTK) and do not work well under high-DPI screens where scaling is required, while others don't even run on newer Linux distributions at all.<br/>
+    I will soon remove some of those.
+</p>
+
+<h3>Small but important updates in-between</h3>
+<p>
+DPF with AU support. semi-sponsored feature required for MOD Audio work, as some contract work wanted AU as one of the supported plugin formats.
+https://www.choptones.com/collections/plugins
+
+New plugin "collection"
+https://github.com/trummerschlunk/PodcastPlugins/
+same setup as done for master_me
+
+Many Cardinal updates
+
+Carla bugfix releases
+</p>
+
+<h3>On-going efforts behind the scenes</h3>
+<p>
+Carla next "major" release, changes so far:
+- native VST3 host implementation improved quite a lot
+- native CLAP host implementation (WIP but mostly working)
+- initial native AU host implementation, not fully working yet
+- plugin discovery has been fully reworked, and implemented in C++
+- JUCE removed yet again
+    - it was mostly used for hardware and VST3 + AU support, which we dont need so much now
+    - JUCE7+ requires a very high C++ version which mismatches carla
+    - keeps breaking API backwards compatibility, without having an LTS version
+    - no longer supporting mingw
+
+Some questions arise:
+- discovery with DB? having discovery dialog open and scanning things every time carla is re-opened (in 2.6.x) is quite annoying, even for me
+- discovery being c++ complicates the build and is the only interactive Qt widget code using C++ (the rest is Python).
+was done in parity with the discovery dialog for OBS, but not as useful now
+
+Ildaeil with updated plugin discovery, much more robust embed setup
+
+WebView for DPF
+</p>
+
+<h3>Cadence project archival</h3>
+<p>
+
+https://github.com/falkTX/j2sc
+
+j2sc is based on the old Cadence also from me (falkTX), but with everything removed except the JACK configuration part.
+I abandoned the Cadence as it was not up to my own standards, it was one of the very first projects I started as a way to learn GUI programming.
+
+Over time Cadence small parts have moved into other projects:
+
+- patchbay canvas code was integrated in [Carla](https://kx.studio/Applications:Carla), where it received many updates
+- [Carla](https://kx.studio/Applications:Carla)'s canvas was branched off into [RaySession](https://github.com/Houston4444/RaySession), which uses the same code as base but with its own style (external project, not my own)
+- [pyjacklib](https://github.com/jackaudio/pyjacklib) became its own project (external project I am helping maintain)
+- [qjackcapture](https://github.com/SpotlightKid/qjackcapture) from the jack render tool (another external project)
+- bigmeter and xycontrollers were added as internal plugins in [Carla](https://kx.studio/Applications:Carla)
+- [WineASIO](https://github.com/wineasio/wineasio/) settings panel
+
+The only big remaining part to still be split off was the jack2/jackdbus settings tool.
+Even if the code is not the best, I find this particular tool to be quite useful, so I continue it through the j2sc project.
+
+</p>
+
+<h3>Future plans</h3>
+<p>
+    It is hard to say for now, often times before when presenting my own plans something ends up happening that gets in the way.
+    That said, these are my **hopes** for the rest of 2025:
+</p>
+<ul>
+    <li>Finalize webview for DPF: an initial implementation is mostly complete, one that requires external file:// access, no embed assets
+    <li>New jack2 release: many important changes have happened since last release
+    <li>More frequent updates to KXStudio repositories
+    <li>Carla 2.6 release: Lots of small details to handle, so likely only happening later in the year
+    <li>Ildaeil 1.x right after
+    <li>More focus on documentation rather than any new projects or features (j2sc being exception, as I need &amp; use it)
+</ul>
+
+<p>&nbsp;</p>
+
+<p>
+    That is all for now, see you next time!
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; Cardinal 24.04 released</span><br/>
     On <i>2024-04-11</i> by<i> falkTX</i>
 </p>
