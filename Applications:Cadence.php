@@ -52,6 +52,10 @@ include_once("includes/header.php");
     <img src="images/ico_arch.png" alt="" class="img_text_align_spaced"/>
         <a href="https://www.archlinux.org/packages/community/x86_64/cadence/" class="external text a_bigger_text" rel="nofollow" target="_blank">
          ArchLinux</a> (Community)<br/>
+    Cadence is available in the Fedora official repositories (with 'Cadence' package name).<br/>
+    <img src="images/ico_fedora.png" alt="" class="img_text_align_spaced"/>
+        <a href="https://src.fedoraproject.org/rpms/Cadence" class="external text a_bigger_text" rel="nofollow" target="_blank">
+         Fedora</a> (Fedora official repository)<br/>
     <img src="images/ico_debian.png" alt="" class="img_text_align_spaced"/>
         <a href="apt://cadence" class="external text a_bigger_text">
          Debian/Ubuntu</a> (via KXStudio repositories)<br/>
