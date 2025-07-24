@@ -11,11 +11,24 @@ if [ -z "${REPO_TARGET}" ]; then
     exit 1
 fi
 
+# supported architectures, i386 will eventually go away once we build everything on "focal"
 PACKAGES_ARCHS=("amd64" "arm64" "armhf" "i386")
-PACKAGES_ABANDONED=("cadence" "catia" "claudia")
+
+# software we know to be abandoned, so we give warning to users to maybe not rely on it so much
+PACKAGES_ABANDONED=("cadence" "cadence-tools" "catia" "claudia")
+
+# stuff to be hidden, for various reasons
 PACKAGES_BLACKLIST=("carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" "jalv" "lv2vst" "wineasio-amd64")
+
+# hidden packages, either abandoned by the author or stuff I no longer use and thus won't maintain updated here
+PACKAGES_HIDDEN=("fluajho" "gladish" "ladish" "non-sequencer" "non-sequencer-git" "patroneo" "vico")
+
+# stuff to always be shown, even when their arch is "all"
 PACKAGES_WHITELIST=("cadence" "catia" "claudia" "impro-visor" "j2sc")
+
+# packages with separate data package, merge into 1 single item
 PACKAGES_SEPARATE_DATA=("hybridreverb2")
+
 PACKAGES_BASE_URL="http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/"
 PACKAGES_BASE_HTTPS="https://launchpad.net/~kxstudio-debian/+archive/${REPO_TARGET}/+files/"
 
@@ -44,10 +57,15 @@ function is_abandoned() {
     return 1
 }
 
-function is_blacklisted() {
+function is_hidden() {
     local TEST="${1}"
     local PACKAGE
     for PACKAGE in ${PACKAGES_BLACKLIST[@]}; do
+        if [ ${TEST} = ${PACKAGE} ]; then
+            return 0
+        fi
+    done
+    for PACKAGE in ${PACKAGES_HIDDEN[@]}; do
         if [ ${TEST} = ${PACKAGE} ]; then
             return 0
         fi
@@ -125,7 +143,7 @@ function get_vcs_page() {
 }
 
 for PACKAGE in ${PACKAGES[@]}; do
-    if is_blacklisted ${PACKAGE} || echo "${PACKAGE}" | grep -q -- "-static"; then
+    if is_hidden ${PACKAGE} || echo "${PACKAGE}" | grep -q -- "-static"; then
         continue
     fi
 
