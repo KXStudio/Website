@@ -220,13 +220,14 @@ function isMobile() {
         .repository-package > div:first-child {
             padding-top: calc(0.5em + 0.5px);
         }
-        .repository-package.abandoned > div:first-child::after {
+        .repository-package.abandoned > div:first-child::before {
             background-color: #ffba10;
             color: black;
             content: "abandoned";
             height: 1rem;
             padding: 4px;
-            position: absolute;
+            position: relative;
+            left: 39px; /*calc(150px / 2 - 72px / 2)*/
         }
         @media only screen and (max-width: 540px) {
           .repository-package {
