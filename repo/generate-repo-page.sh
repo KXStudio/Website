@@ -18,7 +18,7 @@ PACKAGES_ARCHS=("amd64" "arm64" "armhf" "i386")
 PACKAGES_ABANDONED=("ams-lv2" "arctican-plugins-lv2" "arctican-plugins-vst" "arpage" "autotalent" "beatslash-lv2" "easyssp-lv2" "easyssp-vst" "invada-studio-plugins-ladspa" "invada-studio-plugins-lv2" "juced-plugins-lv2" "juced-plugins-vst" "pizmidi-plugins" "teragonaudio-plugins-lv2" "teragonaudio-plugins-vst")
 
 # stuff to be hidden, for various reasons
-PACKAGES_BLACKLIST=("carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" "jalv" "lv2vst" "wineasio-amd64")
+PACKAGES_BLACKLIST=("carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" "jalv" "lv2vst" "wineasio-amd64" "wineasio-i386")
 
 # hidden packages, either abandoned by the author or stuff I no longer use and thus won't maintain updated here
 PACKAGES_HIDDEN=("cadence" "cadence-tools" "catia" "claudia" "fluajho" "gladish" "ladish" "non-sequencer" "non-sequencer-git" "patroneo" "vico")
