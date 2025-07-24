@@ -222,12 +222,13 @@ function isMobile() {
         }
         .repository-package.abandoned > div:first-child::before {
             background-color: #ffba10;
+            border-radius: 4px;
             color: black;
             content: "abandoned";
             height: 1rem;
+            margin-left: 39px; /*calc(150px / 2 - 72px / 2)*/
             padding: 4px;
-            position: relative;
-            left: 39px; /*calc(150px / 2 - 72px / 2)*/
+            position: absolute;
         }
         @media only screen and (max-width: 540px) {
           .repository-package {
