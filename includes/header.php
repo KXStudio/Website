@@ -220,8 +220,7 @@ function isMobile() {
         .repository-package > div:first-child {
             padding-top: calc(0.5em + 0.5px);
         }
-        /*.abandoned*/
-        .repository-package::after {
+        .repository-package.abandoned::after {
             background-color: #ffba10;
             content: "abandoned";
         }
