@@ -12,8 +12,9 @@ if [ -z "${REPO_TARGET}" ]; then
 fi
 
 PACKAGES_ARCHS=("amd64" "arm64" "armhf" "i386")
+PACKAGES_ABANDONED=("cadence" "catia" "claudia")
 PACKAGES_BLACKLIST=("carla-bridge-linux32" "carla-bridge-linux64" "distrho-src" "jalv" "lv2vst" "wineasio-amd64")
-PACKAGES_WHITELIST=("cadence" "catia" "claudia" "impro-visor")
+PACKAGES_WHITELIST=("cadence" "catia" "claudia" "impro-visor" "j2sc")
 PACKAGES_SEPARATE_DATA=("hybridreverb2")
 PACKAGES_BASE_URL="http://ppa.launchpad.net/kxstudio-debian/${REPO_TARGET}/ubuntu/"
 PACKAGES_BASE_HTTPS="https://launchpad.net/~kxstudio-debian/+archive/${REPO_TARGET}/+files/"
@@ -31,6 +32,17 @@ mv Packages Packages.focal
 
 cat Packages.bionic Packages.focal > Packages
 PACKAGES=$(cat Packages | grep "Package: " | sed "s/Package: //g" | sort | uniq)
+
+function is_abandoned() {
+    local TEST="${1}"
+    local PACKAGE
+    for PACKAGE in ${PACKAGES_ABANDONED[@]}; do
+        if [ ${TEST} = ${PACKAGE} ]; then
+            return 0
+        fi
+    done
+    return 1
+}
 
 function is_blacklisted() {
     local TEST="${1}"
@@ -154,7 +166,12 @@ for PACKAGE in ${PACKAGES[@]}; do
         PACKAGE_DESCRIPTION="carla windows bridge"
     fi
 
-    echo "<div class=\"repository-package\" id=\"${PACKAGE}\">"
+    CLASS="repository-package"
+    if is_abandoned ${PACKAGE}; then
+        CLASS+=" abandoned"
+    fi
+
+    echo "<div class=\"${CLASS}\" id=\"${PACKAGE}\">"
 
     # screenshot
     SCREENSHOT=${PACKAGE}
