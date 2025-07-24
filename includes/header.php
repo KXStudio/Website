@@ -220,7 +220,9 @@ function isMobile() {
         .repository-package > div:first-child {
             padding-top: calc(0.5em + 0.5px);
         }
-        .repository-package::after .abandoned {
+        /*.abandoned*/
+        .repository-package::after {
+            background: transparent;
         }
         @media only screen and (max-width: 540px) {
           .repository-package {
