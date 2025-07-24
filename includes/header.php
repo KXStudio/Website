@@ -222,7 +222,8 @@ function isMobile() {
         }
         /*.abandoned*/
         .repository-package::after {
-            background: transparent;
+            background-color: #ffba10;
+            content: "abandoned";
         }
         @media only screen and (max-width: 540px) {
           .repository-package {
