@@ -11,6 +11,42 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Project Update (July 2025)</span><br/>
+    On <i>2025-07-31</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, this is the monthly report for all software things related to KXStudio, DISTRHO &amp; falkTX projects.
+</p>
+
+<h3>New releases</h3>
+<ul>
+    <li>NEW! <a href="https://github.com/falkTX/j2sc/" target="_blank">J2SC project first release which supersedes Cadence</a></li>
+    <li><a href="https://github.com/falkTX/Carla/releases/tag/v2.5.10" target="_blank">Carla updated to 2.5.10</a></li>
+    <li><a href="https://github.com/wineasio/wineasio/releases/tag/v1.3.0" target="_blank">WineASIO updated to 1.3.0</a></li>
+</ul>
+
+<h3>Repository updates</h3>
+<ul>
+    <li>NEW! added j2sc 0.0.1</li>
+    <li>carla updated to 2.5.10</li>
+    <li>wineasio updated to 1.3.0</li>
+</ul>
+
+<h3>Final notes</h3>
+<p>
+    Some applications in the KXStudio Website repositories' pages have been hidden and some plugins have been marked as "abandoned".<br/>
+    Everything is still available to install through "apt-get" though.
+</p>
+
+<p>&nbsp;</p>
+
+<p>
+    That is all for now, see you next month!
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Project Update (June 2025)</span><br/>
     On <i>2025-06-29</i> by<i> falkTX</i>
 </p>
