@@ -285,6 +285,10 @@ for PACKAGE in ${PACKAGES[@]}; do
         # amd64 -> win64
         echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME}\" target=\"_blank\">win64</a>&nbsp;&nbsp;"
 
+    elif echo "${PACKAGE_BASENAME}" | grep -q "carla-vst-wine_"; then
+        # amd64
+        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME}\" target=\"_blank\">amd64</a>&nbsp;&nbsp;"
+
     elif echo "${PACKAGE_BASENAME}" | grep -q "wineasio_"; then
         # amd64
         PACKAGE_BASENAME_ARCHED=$(echo "${PACKAGE_BASENAME}" | sed "s/wineasio_/wineasio-amd64_/g")
