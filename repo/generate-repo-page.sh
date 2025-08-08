@@ -281,23 +281,16 @@ for PACKAGE in ${PACKAGES[@]}; do
     if echo "${PACKAGE_BASENAME}" | grep -q "carla-bridge-win64_"; then
         # i386 -> win32
         PACKAGE_BASENAME_ARCHED=$(echo "${PACKAGE_BASENAME}" | sed "s/-win64_/-win32_/g")
-        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME_ARCHED}\" target=\"_blank\">win32</a>"
+        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME_ARCHED}\" target=\"_blank\">win32</a>&nbsp;&nbsp;"
         # amd64 -> win64
         echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME}\" target=\"_blank\">win64</a>&nbsp;&nbsp;"
-
-    elif echo "${PACKAGE_BASENAME}" | grep -q "carla-vst-wine_"; then
-        # amd64
-        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME}\" target=\"_blank\">amd64</a>&nbsp;&nbsp;"
-        # i386
-        PACKAGE_BASENAME_ARCHED=$(echo "${PACKAGE_BASENAME}" | sed "s/_amd64.deb/_i386.deb/g")
-        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME_ARCHED}\" target=\"_blank\">i386</a>&nbsp;&nbsp;"
 
     elif echo "${PACKAGE_BASENAME}" | grep -q "wineasio_"; then
         # amd64
         PACKAGE_BASENAME_ARCHED=$(echo "${PACKAGE_BASENAME}" | sed "s/wineasio_/wineasio-amd64_/g")
         echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME_ARCHED}\" target=\"_blank\">amd64</a>&nbsp;&nbsp;"
         # i386
-        PACKAGE_BASENAME_ARCHED=$(echo "${PACKAGE_BASENAME}" | sed "s/wineasio_/wineasio-i386_/g" | sed "s/_amd64.deb/_i386.deb/g")
+        PACKAGE_BASENAME_ARCHED=$(echo "${PACKAGE_BASENAME}" | sed "s/wineasio_/wineasio-i386_/g")
         echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME_ARCHED}\" target=\"_blank\">i386</a>&nbsp;&nbsp;"
 
     elif echo "${PACKAGE_BASENAME}" | grep -q "_all.deb"; then
