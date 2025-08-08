@@ -182,6 +182,7 @@ for PACKAGE in ${PACKAGES[@]}; do
     if echo "${PACKAGE_BASENAME}" | grep -q "carla-bridge-win64_"; then
         PACKAGE="carla-bridge-win"
         PACKAGE_DESCRIPTION="carla windows bridge"
+        PACKAGE_DATA=""
     fi
 
     CLASS="repository-package"
@@ -276,11 +277,11 @@ for PACKAGE in ${PACKAGES[@]}; do
     echo "<tr><td>Downloads:</td><td>"
 
     if echo "${PACKAGE_BASENAME}" | grep -q "carla-bridge-win64_"; then
-        # amd64
-        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME}\" target=\"_blank\">amd64</a>&nbsp;&nbsp;"
-        # i386
+        # i386 -> win32
         PACKAGE_BASENAME_ARCHED=$(echo "${PACKAGE_BASENAME}" | sed "s/-win64_/-win32_/g")
-        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME_ARCHED}\" target=\"_blank\">i386</a>&nbsp;&nbsp;(install both)"
+        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME_ARCHED}\" target=\"_blank\">win32</a>"
+        # amd64 -> win64
+        echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME}\" target=\"_blank\">win64</a>&nbsp;&nbsp;"
 
     elif echo "${PACKAGE_BASENAME}" | grep -q "carla-vst-wine_"; then
         # amd64
