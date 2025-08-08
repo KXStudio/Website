@@ -279,7 +279,7 @@ for PACKAGE in ${PACKAGES[@]}; do
         # amd64
         echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME}\" target=\"_blank\">amd64</a>&nbsp;&nbsp;"
         # i386
-        PACKAGE_BASENAME_ARCHED=$(echo "${PACKAGE_BASENAME}" | sed "s/-win64_/-win32_/g" | sed "s/_amd64.deb/_i386.deb/g")
+        PACKAGE_BASENAME_ARCHED=$(echo "${PACKAGE_BASENAME}" | sed "s/-win64_/-win32_/g")
         echo "<a href=\"${PACKAGES_BASE_HTTPS}${PACKAGE_BASENAME_ARCHED}\" target=\"_blank\">i386</a>&nbsp;&nbsp;(install both)"
 
     elif echo "${PACKAGE_BASENAME}" | grep -q "carla-vst-wine_"; then
