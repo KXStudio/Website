@@ -183,6 +183,8 @@ for PACKAGE in ${PACKAGES[@]}; do
         PACKAGE="carla-bridge-win"
         PACKAGE_DESCRIPTION="carla windows bridge"
         PACKAGE_DATA=""
+    elif echo "${PACKAGE_BASENAME}" | grep -q "carla-vst-wine_"; then
+        PACKAGE_DATA=""
     fi
 
     CLASS="repository-package"
