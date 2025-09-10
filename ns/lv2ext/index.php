@@ -8,6 +8,7 @@ include_once("../../includes/header.php");
 
 <ul>
     <li><a href="external-ui">External UI</a></li>
+    <li><a href="props">Properties</a></li>
     <li><a href="programs">Programs</a></li>
     <li><a href="rtmempool">Realtime-Safe Memory Pool</a></li>
 </ul>
