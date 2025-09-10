@@ -14,6 +14,18 @@ include_once("../../includes/header.php");
 <br/>
 </p>
 
+<h3 id="NonAutomatable">non automatable</h3>
+<p>Port should not be automated by the host.</p>
+
+<h3 id="Reset">reset</h3>
+<p>Reset an internal processing plugin state (filters, oscillators, envelopes, lfos, etc) and kill all voices.</p>
+
+<h3 id="TimePositionTicksPerBeat">ticks per beat</h3>
+<p>How many ticks are in a beat.</p>
+
+<h3 id="TransientWindowId">transient window id</h3>
+<p>A window id from the host to be set as transient hint by the plugin.</p>
+
 <hr/>
 
 <p>
