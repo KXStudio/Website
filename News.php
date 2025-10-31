@@ -11,6 +11,33 @@ include_once("includes/header.php");
 <a href="" target="_blank"></a>
 
 <p>
+    <span style="font-size: 20px">&gt; KXStudio Project Update (August-October 2025)</span><br/>
+    On <i>2025-10-31</i> by<i> falkTX</i>
+</p>
+<p>
+    Hello all, this is the monthly report for all software things related to KXStudio, DISTRHO &amp; falkTX projects.
+</p>
+
+<h3>Repository updates</h3>
+<ul>
+    <li>NEW! added hamburger 0.5</li>
+    <li>fabla updated to 1.4.0</li>
+    <li>helio-workstation updated to 3.16</li>
+    <li>infamous-plugins updated to 0.3.2</li>
+    <li>lsp-plugins updated to 1.2.24</li>
+    <li>moony.lv2 updated to 0.40.0</li>
+    <li>sorcer updated to 1.1.3</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>
+    That is all for now, see you next month!
+</p>
+
+<hr/>
+
+<p>
     <span style="font-size: 20px">&gt; KXStudio Project Update (July 2025)</span><br/>
     On <i>2025-07-31</i> by<i> falkTX</i>
 </p>
